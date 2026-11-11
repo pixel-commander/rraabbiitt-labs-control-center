@@ -43,4 +43,17 @@ SOLUTION: In src/components/HybridSearch/HybridSearch.tsx, give type={record.typ
 
 ================================
 
+PROBLEM: Each search is slow because each search starts the full search engine again. For each query, toolkit/hybrid-seat-ranking/tools/project-search.ts does these steps:
+1. It walks the toolkit folders to find the search tool by its ID.
+2. It exports all records from the database to a temporary catalog.json.
+3. It starts a new Python process. The process loads PyTorch and transformers.
+4. It reads all model files to check their hashes. Then it loads the encoder and the reranker.
+5. It makes the embeddings for all records again (262 records x 3 fields). The saved vectors are used only when the live catalog signature is the same as the checkpoint catalog_signature (established_runtime.py, line 95). The live catalog is different, so the saved vectors are not used.
+6. It runs the query. Then the process stops.
+The in-memory cache (_states in established_runtime.py) does not help, because the process stops after each query. Step 5 comes from the code. It was not measured.
+
+SOLUTION: Keep one Python search worker running and send each query to it. The worker loads the models one time. The worker makes the record vectors one time for each catalog signature. Also save the record vectors to disk with the catalog signature as the key, so that the first search after a restart is also fast. To find the slowest step, read the "timing" data in the search result.
+
+================================
+
 NOTE: This change is not a fix for a known problem. In toolkit/tools/refresh-world-database/refresh_world_database.py, stdin now uses "utf-8-sig" (before: "utf-8"). The change lets the script read JSON that starts with a byte order mark. The tool wrapper does not send a byte order mark, so this change does not have an effect in normal operation. Keep it or remove it.

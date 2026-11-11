@@ -1,0 +1,14 @@
+@layer components {
+  .mcp-viewer { padding: var(--space-sm) var(--space-md); }
+  .mcp-viewer svg { vertical-align: middle; margin-inline-end: var(--space-xs); }
+  .mcp-viewer__status { margin-inline-start: var(--space-xs); white-space: nowrap; }
+  .mcp-viewer__layer {
+    position: fixed;
+    inset: 0;
+    z-index: var(--mcp-viewer-z-index, 1000);
+    pointer-events: none;
+  }
+  .mcp-viewer__layer .float-window { pointer-events: auto; }
+  .mcp-viewer__settings { margin: 0; }
+  .mcp-viewer__settings dd { margin: 0; overflow-wrap: anywhere; }
+}

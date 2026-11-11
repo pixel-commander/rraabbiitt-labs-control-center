@@ -1,0 +1,17 @@
+schema: 1
+intent: use
+id: 1793990737711
+name: validateCode
+type: skill
+path: src/components/CodeEditAndView/js/validate-code
+file: validate-code.ts
+owner:
+  id: 1794004818529
+implementation:
+  - id: 1794004818529
+instructions: Call await validateCode({ code, file, language }). Returns
+  diagnostics with severity, message and optional source line/column.
+  JS/TS/JSX/TSX uses the lazily loaded TypeScript transpiler for syntax checks;
+  JSON uses JSON parsing. Other languages return no built-in diagnostics. This
+  is not project-wide semantic type checking; supply
+  CodeEditAndView.handleValidate for that. Code is not executed.

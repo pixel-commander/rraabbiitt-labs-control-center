@@ -1,0 +1,39 @@
+{
+  "id": 1794408970879,
+  "name": "field-ranking",
+  "title": "Field ranking",
+  "description": "Explicit judgments about individual record fields.",
+  "type": "path",
+  "tags": [
+    "learning",
+    "field-ranking"
+  ],
+  "paths": [
+    {
+      "name": "grades",
+      "path": ".",
+      "type": "path"
+    },
+    {
+      "name": "lessons",
+      "path": ".",
+      "type": "path"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "saved-models",
+      "path": ".",
+      "type": "path"
+    }
+  ],
+  "path": "learning/learned-on-site/field-ranking"
+}

@@ -1,0 +1,10 @@
+{
+  "id": 0,
+  "name": "action-rail-left",
+  "title": "action-rail-left",
+  "description": "Left accent rail, 3px at the default border token; lighter background that brightens on hover.",
+  "type": "ui-atom",
+  "tags": ["action"],
+  "created": "2026-09-10",
+  "modified": "2026-09-10"
+}

@@ -1,0 +1,14 @@
+{
+  "name": "action-neg",
+  "title": "Negative action",
+  "description": "Inverse of action-main for this kit: light filled surface with dark text and a contrasting border. Hover and press remain light; .is-active uses a slightly different light background. Includes focus and disabled states.",
+  "type": "ui-atom",
+  "tags": [
+    "action"
+  ],
+  "settings": [],
+  "paths": [],
+  "file": "action-neg.css",
+  "id": 1794247089874,
+  "path": "src/atoms/actions/action-neg"
+}

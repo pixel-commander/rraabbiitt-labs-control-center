@@ -1,0 +1,48 @@
+{
+  "name": "StyleGuide",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../../components/Tooltip/demo/Demo",
+      "path": "../../components/Tooltip/demo/Demo",
+      "type": "import",
+      "file": "StyleGuidePage.tsx"
+    },
+    {
+      "name": "../../components/MessageBox/demo/Demo",
+      "path": "../../components/MessageBox/demo/Demo",
+      "type": "import",
+      "file": "StyleGuidePage.tsx"
+    },
+    {
+      "name": "../../components/SiteNav/demo/Demo",
+      "path": "../../components/SiteNav/demo/Demo",
+      "type": "import",
+      "file": "StyleGuidePage.tsx"
+    },
+    {
+      "name": "../../components/CodeEditAndView/demo/Demo",
+      "path": "../../components/CodeEditAndView/demo/Demo",
+      "type": "import",
+      "file": "StyleGuidePage.tsx"
+    },
+    {
+      "name": "../../components/UiElements/demo/Demo",
+      "path": "../../components/UiElements/demo/Demo",
+      "type": "import",
+      "file": "StyleGuidePage.tsx"
+    },
+    {
+      "name": "../../components/SearchResponses/demo/Demo",
+      "path": "../../components/SearchResponses/demo/Demo",
+      "type": "import",
+      "file": "StyleGuidePage.tsx"
+    },
+    {
+      "name": "../../components/Slider/Slider",
+      "path": "../../components/Slider/Slider",
+      "type": "import",
+      "file": "StyleGuidePage.tsx"
+    }
+  ]
+}

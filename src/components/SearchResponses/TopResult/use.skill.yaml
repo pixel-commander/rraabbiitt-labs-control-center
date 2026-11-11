@@ -1,0 +1,152 @@
+schema: 1
+intent: use
+owner:
+  id: 1794398447056
+id: 1794408972739
+name: TopResult
+title: Use TopResult
+description: Props, defaults and callbacks for TopResult.
+type: skill
+path: C:\rraabbiitt-hq\rraabbiitt-labs-control-center\src\components\SearchResponses\TopResult
+tags: []
+implementation: []
+context: []
+inputs:
+  result_type:
+    type: '"top-result"'
+    required: true
+  container_aton:
+    type: string | undefined
+    required: false
+  container_class:
+    type: string | undefined
+    required: false
+  title:
+    type: ReactNode
+    required: false
+  color:
+    type: string | undefined
+    required: false
+  children:
+    type: ReactNode
+    required: false
+  data:
+    type: unknown
+    required: false
+  className:
+    type: string | undefined
+    required: false
+  handleClick:
+    type: HandlerKey<unknown, SearchResponseAction, void, SearchResponsesProps> | undefined
+    required: false
+  id:
+    type: number | undefined
+    required: false
+  name:
+    type: string | undefined
+    required: false
+  description:
+    type: string | undefined
+    required: false
+  path:
+    type: string | undefined
+    required: false
+  save_path:
+    type: string | undefined
+    required: false
+  save_file:
+    type: string | undefined
+    required: false
+  paths:
+    type: PathsProps[] | undefined
+    required: false
+  date_added:
+    type: number | undefined
+    required: false
+  date_updated:
+    type: number | undefined
+    required: false
+  date_used:
+    type: number | undefined
+    required: false
+  date:
+    type: number | undefined
+    required: false
+  date_start:
+    type: number | undefined
+    required: false
+  date_end:
+    type: number | undefined
+    required: false
+  score:
+    type: number | undefined
+    required: false
+outputs: {}
+instructions: >-
+  Props
+
+  result_type (required): "top-result"
+
+  container_aton (optional): string | undefined
+
+  container_class (optional): string | undefined
+
+  title (optional): ReactNode
+
+  color (optional): string | undefined
+
+  children (optional): ReactNode
+
+  data (optional): unknown
+
+  className (optional): string | undefined
+
+  handleClick (optional): HandlerKey<unknown, SearchResponseAction, void, SearchResponsesProps> |
+  undefined
+
+  id (optional): number | undefined
+
+  name (optional): string | undefined
+
+  description (optional): string | undefined
+
+  path (optional): string | undefined
+
+  save_path (optional): string | undefined
+
+  save_file (optional): string | undefined
+
+  paths (optional): PathsProps[] | undefined
+
+  date_added (optional): number | undefined
+
+  date_updated (optional): number | undefined
+
+  date_used (optional): number | undefined
+
+  date (optional): number | undefined
+
+  date_start (optional): number | undefined
+
+  date_end (optional): number | undefined
+
+
+  Defaults
+
+  container_class="container-side-rail" unless the legacy container_aton is supplied; className="".
+
+
+  Callbacks and prop behavior
+
+  result_type must be top-result when using SearchResponses. title and children accept ReactNode.
+  container_class selects the container; empty string removes it. container_aton is the legacy
+  fallback. color overrides the rail color. handleClick receives (data, "good-vote" | "ok-vote" |
+  "bad-vote" | "rephrase", props).
+
+
+  score is optional. When supplied, it is displayed to two decimals in the left heading slot. Zero
+  is preserved. If omitted, no score box is rendered.
+checks: []
+examples: []
+routes: []
+provenance: []

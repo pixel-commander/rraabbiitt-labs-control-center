@@ -1,0 +1,12 @@
+{
+  "name": "tune-ranking-model",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../../../Tooling.types.ts",
+      "path": "../../../Tooling.types.ts",
+      "type": "import",
+      "file": "tune-ranking-model.ts"
+    }
+  ]
+}

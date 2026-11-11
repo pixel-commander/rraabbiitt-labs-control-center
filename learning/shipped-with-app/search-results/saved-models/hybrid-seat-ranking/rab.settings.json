@@ -1,0 +1,34 @@
+{
+  "id": 1794420950369,
+  "name": "hybrid-seat-ranking",
+  "title": "Shipped Hybrid Search Baseline",
+  "description": "Pinned pretrained encoder and reranker with a zero-feedback established hybrid retrieval checkpoint.",
+  "type": "model",
+  "tags": [
+    "hybrid",
+    "baseline"
+  ],
+  "paths": [
+    {
+      "name": "checkpoints",
+      "path": ".",
+      "type": "path"
+    },
+    {
+      "name": "data",
+      "path": ".",
+      "type": "path"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    }
+  ],
+  "path": "learning/shipped-with-app/search-results/saved-models/hybrid-seat-ranking"
+}

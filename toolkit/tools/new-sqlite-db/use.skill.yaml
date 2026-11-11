@@ -1,0 +1,18 @@
+schema: 1
+intent: use
+id: 1791766641355
+name: use-new-sqlite-db
+title: new sqlite db
+type: skill
+path: toolkit/tools/new-sqlite-db
+file: new-sqlite-db.mjs
+context:
+  - use: 1791940045227
+instructions: Call run(settings) through runner-use-tool. Returns ToolReturn with status
+  complete/error, settings, response or error. Node 24+ is required. path is an existing parent
+  folder; name defaults to db and file to app.sqlite. Creates an empty SQLite placeholder, README,
+  .gitignore and tables/.gitkeep. Refuses an existing folder. No tables, records or indexing.
+implementation:
+  - id: 1791766641354
+owner:
+  id: 1791766641354

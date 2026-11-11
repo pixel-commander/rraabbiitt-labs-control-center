@@ -1,0 +1,30 @@
+Scaffold package rules
+
+2026-10-27: User-requested project registry: new-react-project populates root paths with its explicit type path category settings records. This does not reinstate automatic file inventories; other scaffold records remain unchanged.
+
+2026-10-27: User-requested contract change: do not automatically populate settings paths with generated file inventories, at either project root or nested owners. Preserve explicit template paths. Saved record types inherit optional paths from HouseKeys; finder results remain separate.
+
+- Keep implementation, concrete .types.ts, rab.settings.json, README.txt, and template/ in each scaffold's named folder.
+- Extend shared HouseKeys for props and saved records. Align declared settings, types, and runtime validation.
+- Accept one props object. Preserve supplied valid values and validate before filesystem writes.
+- Return the exact saved record (normally generated rab.settings.json); throw on failures.
+- Refuse existing output. Do not add tracking, timing, receipts, status wrappers, startup, discovery, scans, nested runners, CLI parsers, or post-create registration.
+- Resolve template files relative to the module. Keep supporting implementation in that scaffold folder. Reuse shared project assets by explicit dependency when appropriate.
+- Do not hardcode machine paths or silently add ignore behavior, fallback databases, or automatic scans. Document existing exclusions and ask before changing their meaning.
+- Preserve React conventions: PascalCase component identifiers and output folders; css/ directory and kebab-case CSS filenames/selectors; House grid and data-area conventions.
+- Remove obsolete entrypoints only after updating their references. Do not keep parallel .mjs and .ts scaffold entrypoints.
+
+ID generation: generate numeric timestamps with Date.now() inside the owning
+implementation. Keep a local monotonic counter for same-millisecond batches.
+No separate ID-generator dependency or types. New React projects must assign fresh
+IDs to every nested rab.settings.json, including page records, not only atoms.
+
+2026-10-12: Atom records use type actions/containers/effects/grids, with no
+kind or preset keys. Effects use the same CSS + demo structure as containers.
+Grid-using scaffolds own template/grid.css; do not reach into host src/css.
+new-grid-atom uses the grid input to select its local template.
+
+2026-10-12: Local TypeScript imports include .ts for direct Node execution.
+Destination validation requires absolute paths. Publishing preserves partial
+output on failure; there is no recursive cleanup. Test output belongs outside
+the repo. runner-test-scaffolds exposes all eleven examples in the tracker.

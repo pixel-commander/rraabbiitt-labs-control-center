@@ -1,0 +1,10 @@
+{
+  "name": "grids folder",
+  "title": "rraabbiitt-labs-control-center grids",
+  "description": "the folder where all grids are saved for the rraabbiitt-labs-control-center react project.",
+  "type": "path",
+  "tags": [
+    "grids"
+  ],
+  "path": "src/atoms/grids"
+}

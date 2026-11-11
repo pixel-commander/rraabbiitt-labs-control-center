@@ -1,0 +1,30 @@
+@layer components {
+  .page-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-rows: auto auto;
+    align-items: center;
+    gap: var(--space-sm) var(--space-lg);
+    min-inline-size: 0;
+  }
+  .page-header-label {
+    color: var(--color-muted);
+    grid-column: 1;
+    grid-row: 1;
+    min-inline-size: 0;
+  }
+  .page-header-headline {
+    font-size: var(--page-header-headline-size, 1.8rem);
+    grid-column: 1;
+    grid-row: 2;
+    min-inline-size: 0;
+  }
+  .page-header-headline > :is(h1, h2, h3, h4, h5, h6) {
+    font-size: inherit;
+  }
+  .page-header-right {
+    grid-column: 2;
+    grid-row: 1/-1;
+    min-inline-size: 0;
+  }
+}

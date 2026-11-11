@@ -1,0 +1,45 @@
+{
+  "id": 1794415784087,
+  "name": "tool-usage",
+  "title": "tool-usage",
+  "description": "tool-usage API endpoint.",
+  "type": "api",
+  "tags": [],
+  "paths": [
+    {
+      "name": "database",
+      "type": "database",
+      "path": "../../db/main",
+      "file": "app.sqlite"
+    },
+    {
+      "path": ".",
+      "file": "schema.sql",
+      "type": "sql"
+    },
+    {
+      "path": ".",
+      "file": "finish-tool-usage.ts",
+      "type": "ts"
+    }
+  ],
+  "path": "api/tool-usage",
+  "file": "endpoint.mjs",
+  "settings": [
+    {
+      "name": "id",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "date",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "message",
+      "type": "number",
+      "required": false
+    }
+  ]
+}

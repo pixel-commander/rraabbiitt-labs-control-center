@@ -1,0 +1,37 @@
+@layer atoms {
+  .action-light {
+    color: var(--action-light-color, var(--color-muted));
+    background: var(--action-light-background, var(--color-transparent));
+    border: var(--action-light-border, 1px solid transparent);
+    border-radius: var(--radius-control);
+    font: var(--type-body);
+    text-decoration: none;
+    cursor: pointer;
+    transition:
+      background-color var(--motion-fast),
+      color var(--motion-fast);
+  }
+  .action-light:hover {
+    color: var(--color-main-neg);
+    background: var(--color-secondary-alt);
+  }
+  .action-light:active,
+  .action-light.is-active {
+    color: var(--color-main-neg);
+    background: var(--color-tertiary);
+  }
+  .action-light.is-selected {
+    color: var(--color-main-neg);
+    background: var(--color-tertiary-alt);
+  }
+  .action-light:focus-visible {
+    outline: var(--focus-ring);
+    outline-offset: var(--focus-offset);
+  }
+  .action-light:is(:disabled, [aria-disabled="true"]) {
+    color: var(--color-muted);
+    background: var(--color-secondary);
+    opacity: var(--disabled-opacity);
+    cursor: not-allowed;
+  }
+}

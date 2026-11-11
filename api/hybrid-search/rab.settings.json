@@ -1,0 +1,10 @@
+{
+  "id": 1794415784075,
+  "name": "hybrid-search",
+  "title": "hybrid-search",
+  "description": "hybrid-search API endpoint.",
+  "type": "api",
+  "tags": [],
+  "paths": [],
+  "path": "api/hybrid-search"
+}

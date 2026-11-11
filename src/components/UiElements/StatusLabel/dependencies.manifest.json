@@ -1,0 +1,12 @@
+{
+  "name": "StatusLabel",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../../../HouseKeys.types",
+      "path": "../../../HouseKeys.types",
+      "type": "import",
+      "file": "StatusLabel.types.ts"
+    }
+  ]
+}

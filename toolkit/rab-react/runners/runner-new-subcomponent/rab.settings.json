@@ -1,0 +1,29 @@
+{
+  "id": 1793138966746,
+  "name": "runner-new-subcomponent",
+  "title": "New Subcomponent",
+  "description": "Creates a new subcomponent using the project settings to find its destination. Returns the new settings record and the files created so later steps can use them.",
+  "type": "runner",
+  "path": "toolkit/rab-react/runners/runner-new-subcomponent",
+  "file": "runner-new-subcomponent.ts",
+  "settings": [
+    {
+      "name": "path",
+      "title": "Project root",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "name",
+      "title": "Name",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "save_path",
+      "title": "Destination within project",
+      "type": "string",
+      "required": true
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": 1794420272756,
+  "name": "search-results",
+  "title": "Search results",
+  "description": "Lessons about whether a complete result answers a question.",
+  "type": "path",
+  "tags": [
+    "learning"
+  ],
+  "paths": [
+    {
+      "name": "grades",
+      "path": ".",
+      "type": "path"
+    },
+    {
+      "name": "lessons",
+      "path": ".",
+      "type": "path"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "saved-models",
+      "path": ".",
+      "type": "path"
+    }
+  ],
+  "path": "learning/shipped-with-app/search-results"
+}

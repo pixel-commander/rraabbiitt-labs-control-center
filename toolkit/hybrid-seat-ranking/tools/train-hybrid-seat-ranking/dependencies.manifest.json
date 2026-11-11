@@ -1,0 +1,18 @@
+{
+  "name": "train-hybrid-seat-ranking",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../../../Tooling.types.ts",
+      "path": "../../../Tooling.types.ts",
+      "type": "import",
+      "file": "train-hybrid-seat-ranking.ts"
+    },
+    {
+      "name": "../execute.ts",
+      "path": "../execute.ts",
+      "type": "import",
+      "file": "train-hybrid-seat-ranking.ts"
+    }
+  ]
+}

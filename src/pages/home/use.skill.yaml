@@ -1,0 +1,28 @@
+schema: 1
+intent: use
+owner:
+  id: 1794247089698
+id: 1794408973336
+name: HomePage
+title: Use HomePage
+description: Props, defaults and callbacks for HomePage.
+type: skill
+path: C:\rraabbiitt-hq\rraabbiitt-labs-control-center\src\pages\home
+tags: []
+implementation: []
+context: []
+inputs: {}
+outputs: {}
+instructions: |-
+  Props
+  None.
+
+  Defaults
+  No prop defaults.
+
+  Callbacks and prop behavior
+  No props or callbacks.
+checks: []
+examples: []
+routes: []
+provenance: []

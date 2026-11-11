@@ -1,0 +1,24 @@
+{
+  "name": "CodeViewer",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../hooks/useCodeViewer/useCodeViewer",
+      "path": "../hooks/useCodeViewer/useCodeViewer",
+      "type": "import",
+      "file": "CodeViewer.tsx"
+    },
+    {
+      "name": "../../../../ui/HouseKeys.types",
+      "path": "../../../../ui/HouseKeys.types",
+      "type": "import",
+      "file": "CodeViewer.types.ts"
+    },
+    {
+      "name": "../../../../ui/HouseKeys.types",
+      "path": "../../../../ui/HouseKeys.types",
+      "type": "import",
+      "file": "CodeViewer.types.ts"
+    }
+  ]
+}

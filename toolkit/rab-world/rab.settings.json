@@ -1,0 +1,269 @@
+{
+  "id": 1794409148572,
+  "name": "rab-world",
+  "title": "Rab World",
+  "description": "Local metadata scaffolds and refresh runners.",
+  "type": "path",
+  "tags": [
+    "toolkit",
+    "metadata"
+  ],
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "README.txt",
+      "path": "generators/generate-world-id",
+      "type": "txt"
+    },
+    {
+      "name": "generate-world-id.ts",
+      "path": "generators/generate-world-id",
+      "type": "ts"
+    },
+    {
+      "name": "generate-world-id.types.ts",
+      "path": "generators/generate-world-id",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "generators/generate-world-id",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "generators/generate-world-id",
+      "type": "yaml"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "README.txt",
+      "path": "runners/refresh-settings-json-paths",
+      "type": "txt"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "runners/refresh-settings-json-paths",
+      "type": "json"
+    },
+    {
+      "name": "refresh-settings-json-paths.test.ts",
+      "path": "runners/refresh-settings-json-paths",
+      "type": "ts"
+    },
+    {
+      "name": "refresh-settings-json-paths.ts",
+      "path": "runners/refresh-settings-json-paths",
+      "type": "ts"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "runners/refresh-settings-json-paths",
+      "type": "yaml"
+    },
+    {
+      "name": "run-tools.ts",
+      "path": "runners",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": "runners/runner-refresh-world-json",
+      "type": "txt"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "runners/runner-refresh-world-json",
+      "type": "json"
+    },
+    {
+      "name": "runner-refresh-world-json-fanout.test.ts",
+      "path": "runners/runner-refresh-world-json",
+      "type": "ts"
+    },
+    {
+      "name": "runner-refresh-world-json.test.ts",
+      "path": "runners/runner-refresh-world-json",
+      "type": "ts"
+    },
+    {
+      "name": "runner-refresh-world-json.ts",
+      "path": "runners/runner-refresh-world-json",
+      "type": "ts"
+    },
+    {
+      "name": "runner-refresh-world-json.types.ts",
+      "path": "runners/runner-refresh-world-json",
+      "type": "ts"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "runners/runner-refresh-world-json",
+      "type": "yaml"
+    },
+    {
+      "name": "tool-cli.mjs",
+      "path": "runners",
+      "type": "mjs"
+    },
+    {
+      "name": "README.txt",
+      "path": "scaffolds/new-settings-json",
+      "type": "txt"
+    },
+    {
+      "name": "new-settings-json.mjs",
+      "path": "scaffolds/new-settings-json",
+      "type": "mjs"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "scaffolds/new-settings-json",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "scaffolds/new-settings-json/template",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "scaffolds/new-settings-json",
+      "type": "yaml"
+    },
+    {
+      "name": "README.txt",
+      "path": "scaffolds/new-skill-flow",
+      "type": "txt"
+    },
+    {
+      "name": "new-skill-flow.ts",
+      "path": "scaffolds/new-skill-flow",
+      "type": "ts"
+    },
+    {
+      "name": "new-skill-flow.types.ts",
+      "path": "scaffolds/new-skill-flow",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "scaffolds/new-skill-flow",
+      "type": "json"
+    },
+    {
+      "name": "skill.yaml",
+      "path": "scaffolds/new-skill-flow/template",
+      "type": "yaml"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "scaffolds/new-skill-flow",
+      "type": "yaml"
+    },
+    {
+      "name": "new-world-beacon-json.ts",
+      "path": "scaffolds/new-world-beacon-json",
+      "type": "ts"
+    },
+    {
+      "name": "new-world-beacon-json.types.ts",
+      "path": "scaffolds/new-world-beacon-json",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "scaffolds/new-world-beacon-json",
+      "type": "json"
+    },
+    {
+      "name": "rab.beacon.json",
+      "path": "scaffolds/new-world-beacon-json/template",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "scaffolds/new-world-beacon-json",
+      "type": "yaml"
+    },
+    {
+      "name": "new-world-project-json.ts",
+      "path": "scaffolds/new-world-project-json",
+      "type": "ts"
+    },
+    {
+      "name": "new-world-project-json.types.ts",
+      "path": "scaffolds/new-world-project-json",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "scaffolds/new-world-project-json",
+      "type": "json"
+    },
+    {
+      "name": "rab.project.json",
+      "path": "scaffolds/new-world-project-json/template",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "scaffolds/new-world-project-json",
+      "type": "yaml"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "tools/refresh-beacon-json",
+      "type": "json"
+    },
+    {
+      "name": "refresh-beacon-json.ts",
+      "path": "tools/refresh-beacon-json",
+      "type": "ts"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "tools/refresh-beacon-json",
+      "type": "yaml"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "tools/refresh-project-json",
+      "type": "json"
+    },
+    {
+      "name": "refresh-project-json.ts",
+      "path": "tools/refresh-project-json",
+      "type": "ts"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "tools/refresh-project-json",
+      "type": "yaml"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "tools/refresh-settings-json",
+      "type": "json"
+    },
+    {
+      "name": "refresh-settings-json.ts",
+      "path": "tools/refresh-settings-json",
+      "type": "ts"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "tools/refresh-settings-json",
+      "type": "yaml"
+    }
+  ],
+  "path": "toolkit/rab-world"
+}

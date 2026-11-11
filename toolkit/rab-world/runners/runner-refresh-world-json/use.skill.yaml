@@ -1,0 +1,39 @@
+schema: 1
+intent: use
+id: 1793984711137
+name: runner-refresh-world-json
+title: Refresh world JSON
+owner:
+  id: 1793984711136
+context:
+  - use: 1791940045245
+implementation:
+  - id: 1793984711136
+instructions: >
+  Call run({path, type}, options?). type is world, project, beacon or settings.
+
+  World scans the supplied workspace folder (or containing folder of rab.world.json).
+
+  Project scans the supplied project folder or rab.project.json. Saved paths are not discovery
+  inputs.
+
+  Discovers actual beacon/project files, skipping symlinks, template/templates, node_modules,
+
+  dist, build, coverage, .git and .tmp. Fan out all beacon tools through one parallel tracked
+
+  group; wait for all to settle, then refresh projects deepest-first. Beacon settings paths
+
+  are relative to the nearest discovered project. A failed descendant beacon/project skips
+
+  its ancestor project writes; independent projects continue. In world mode, update rab.world.json
+  after all beacon and project refreshes succeed. Keep non-project entries. Write refreshed project
+  IDs, names, and absolute paths with forward slashes. If any beacon or project refresh fails, leave
+  the world file unchanged. Flat responses preserve plan
+
+  order with parent IDs and per-entry timing. Single beacon/settings types only refresh that target.
+
+  The database and services are not refreshed. No metadata filename is assigned as
+
+  an implementation file; existing self-filename values are removed by the refresh tools.
+path: toolkit/rab-world/runners/runner-refresh-world-json
+file: runner-refresh-world-json.ts

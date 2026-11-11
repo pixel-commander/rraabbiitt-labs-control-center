@@ -1,0 +1,12 @@
+{
+  "name": "export-search-catalog",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../../../Tooling.types.ts",
+      "path": "../../../Tooling.types.ts",
+      "type": "import",
+      "file": "export-search-catalog.ts"
+    }
+  ]
+}

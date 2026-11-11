@@ -1,0 +1,153 @@
+{
+  "schema": 1,
+  "date": 1794421508161,
+  "sequence": 1,
+  "message": 1794421484280,
+  "query": "how do i add an atom?",
+  "id": 1790031603507,
+  "record_key": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-action-atom",
+  "name": "all",
+  "content": {
+    "vote": "up"
+  },
+  "approved": true,
+  "origin": "user",
+  "scope": "saved-message",
+  "lesson_type": "whole-result-relevance",
+  "grade": 1,
+  "source": {
+    "message": {
+      "id": 1794421484280,
+      "name": null,
+      "title": null,
+      "type": "user",
+      "description": "how do i add an atom?",
+      "tags": "[]",
+      "file": null,
+      "path": null,
+      "paths": "[]"
+    },
+    "record": {
+      "id": 1790031603507,
+      "name": "new-action-atom",
+      "title": "Create Action Atom",
+      "type": "tool",
+      "description": "Create an action atom with a demo and settings. Add optional CSS declarations that use shared project tokens.",
+      "tags": "[\"rab-react\", \"scaffold\"]",
+      "file": "new-action-atom",
+      "path": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-action-atom",
+      "paths": "[{\"id\": 1791518659432, \"name\": \"new-action-atom\", \"path\": \"toolkits/rab-react/scaffolds/new-action-atom\", \"file\": \"use.skill.yaml\", \"type\": \"use skill\"}]",
+      "data": {
+        "id": 1790031603507,
+        "name": "new-action-atom",
+        "title": "Create Action Atom",
+        "description": "Create an action atom with a demo and settings. Add optional CSS declarations that use shared project tokens.",
+        "type": "tool",
+        "path": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-action-atom",
+        "file": "new-action-atom",
+        "parent": 1791518327955,
+        "tags": [
+          "rab-react",
+          "scaffold"
+        ],
+        "settings": [
+          {
+            "type": "string",
+            "name": "name",
+            "title": "Atom Name",
+            "description": "Atom name; action- is added once. Repeated leading prefixes are collapsed.",
+            "required": true
+          },
+          {
+            "type": "string",
+            "name": "title",
+            "title": "Title",
+            "description": "Optional display title for the generated action atom; defaults to its name.",
+            "required": false
+          },
+          {
+            "type": "string",
+            "name": "description",
+            "title": "Description",
+            "description": "Optional description for the generated action atom.",
+            "required": false
+          },
+          {
+            "type": "string",
+            "name": "path",
+            "title": "Atoms Folder",
+            "description": "Parent folder that will contain the new named atom folder.",
+            "required": true
+          },
+          {
+            "type": "string",
+            "name": "styles",
+            "title": "Base Skin",
+            "description": "Optional CSS skin declarations using shared project tokens. Components own layout; supply declarations without selectors or braces.",
+            "required": false,
+            "default": ""
+          },
+          {
+            "name": "name_prefix",
+            "type": "string",
+            "description": "Optional namespace prefix placed before the category, such as test-action-name.",
+            "required": false
+          },
+          {
+            "type": "array",
+            "name": "tags",
+            "title": "Tags",
+            "description": "Optional saved record tags.",
+            "required": false
+          }
+        ],
+        "paths": [
+          {
+            "id": 1791518659432,
+            "name": "new-action-atom",
+            "path": "toolkits/rab-react/scaffolds/new-action-atom",
+            "file": "use.skill.yaml",
+            "type": "use skill"
+          }
+        ],
+        "record_key": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-action-atom",
+        "sources": [
+          {
+            "path": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-action-atom/rab.settings.json",
+            "kind": "settings",
+            "sha256": "b314162429e3e33a9abaf5cb092261c670cfe794927516b6d97e56dccb7d57ca"
+          },
+          {
+            "path": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-action-atom/README.txt",
+            "kind": "readme",
+            "sha256": "41166fee8e2597cbeb92299ab61aa884d2caee3c7a57e3e97a9a15eab7c3d3e2"
+          },
+          {
+            "path": "../rraabbiitt-toolkits/toolkits/rab-react/../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-action-atom/use.skill.yaml",
+            "kind": "skill",
+            "sha256": "0a84cdcd63ead686fa4ed44111a615590931ba4fc923690ab3754078283195ed"
+          }
+        ],
+        "skills": [
+          {
+            "id": 1791518659432,
+            "name": "new-action-atom",
+            "title": "New Action Atom",
+            "description": "Creates a action-atom CSS atom with its demo and metadata.",
+            "path": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-action-atom/use.skill.yaml",
+            "instructions": "Pass one props object matching rab.settings.json. Call the TypeScript function exported from new-action-atom.ts. The scaffold validates before writing, refuses an existing destination and returns the saved record. It does not start tracking, discover tools, scan the world or run a CLI.\nSupporting documentation: toolkits/rab-react/scaffolds/new-action-atom/README.txt."
+          }
+        ],
+        "text": "new-action-atom\n\nCreate Action Atom\n\ntool\n\nCreate an action atom with a demo and settings. Add optional CSS declarations that use shared project tokens.\n\nrab-react scaffold\n\nscaffolds/new-action-atom\n\nnew-action-atom\n\nTypeScript entry: new-action-atom.ts\nProps are one object, as declared in rab.settings.json:\n- name (string) required: Atom name; action- is added once. Repeated leading prefixes are collapsed.\n- title (string): Optional display title for the generated action atom; defaults to its name.\n- description (string): Optional description for the generated action atom.\n- path (string) required: Parent folder that will contain the new named atom folder.\n- styles (string): Optional CSS skin declarations using shared project tokens. Components own layout; supply declarations without selectors or braces.\n- name_prefix (string): Optional namespace prefix placed before the category, such as test-action-name.\n- tags (array): Optional saved record tags.\n\nThe implementation validates before writing, uses the template/ directory relative to its module, refuses an existing destination, and returns the exact saved rab.settings.json record. Failures throw. It does not run tracking, startup, discovery, scans, or CLI parsing.\n\n\n2026-10-12: ID generation uses rab-world-v2/generators/generate-world-id\n(ID 1790784702601). No package-local timestamp counter. Copy this declared\ndependency with the toolkit. IDs are monotonic within one loaded generator\ninstance; cross-process uniqueness is not guaranteed.\n\n2026-10-12: Saved records use type for their atom category; no kind or preset\nkeys. Container/effect filenames substitute the atom name to match demo imports.\nThe grid scaffold accepts grid as its template selector, not preset.\n\n2026-10-27: Scaffold publishing does not generate file inventories in settings.paths. File discovery belongs to the runner finder steps.\n\n2026-10-30: Supersedes the earlier ID-generator dependency instructions. IDs\nare now generated with Date.now() in the owning implementation, with local\ncollision handling for batches. No separate generator package is required.\n\n\nnew-action-atom\n\nNew Action Atom\n\nCreates a action-atom CSS atom with its demo and metadata.\n\nPass one props object matching rab.settings.json. Call the TypeScript function exported from new-action-atom.ts. The scaffold validates before writing, refuses an existing destination and returns the saved record. It does not start tracking, discover tools, scan the world or run a CLI.\nSupporting documentation: toolkits/rab-react/scaffolds/new-action-atom/README.txt."
+      }
+    }
+  },
+  "original": {
+    "query": "how do i add an atom?",
+    "message": 1794421484280,
+    "id": 1790031603507,
+    "path": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-action-atom",
+    "name": "all",
+    "content": "{\"vote\":\"up\"}"
+  }
+}

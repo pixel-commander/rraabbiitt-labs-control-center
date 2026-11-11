@@ -1,0 +1,38 @@
+@layer atoms {
+  .container-side-rail {
+    background: var(--color-main-alt);
+    color: var(--color-main-alt-neg);
+    border: var(--border-width) var(--border-style) var(--border-subtle);
+    border-inline-start: 2px solid
+      var(--container-side-rail-color, var(--color-primary));
+    border-radius: var(--radius-control);
+    border-start-start-radius: 0;
+    border-end-start-radius: 0;
+  }
+
+  .container-side-rail:is(.top, .bottom, .right) {
+    border: var(--border-width) var(--border-style) var(--border-subtle);
+    border-radius: var(--radius-control);
+  }
+
+  .container-side-rail.top {
+    border-block-start: 2px solid
+      var(--container-side-rail-color, var(--color-primary));
+    border-start-start-radius: 0;
+    border-start-end-radius: 0;
+  }
+
+  .container-side-rail.bottom {
+    border-block-end: 2px solid
+      var(--container-side-rail-color, var(--color-primary));
+    border-end-start-radius: 0;
+    border-end-end-radius: 0;
+  }
+
+  .container-side-rail.right {
+    border-inline-end: 2px solid
+      var(--container-side-rail-color, var(--color-primary));
+    border-start-end-radius: 0;
+    border-end-end-radius: 0;
+  }
+}

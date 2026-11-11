@@ -1,0 +1,38 @@
+{
+  "id": 1794420272872,
+  "name": "learning",
+  "title": "Learning",
+  "description": "Shipped baseline and installation learning files, grouped by subject.",
+  "type": "path",
+  "tags": [
+    "learning"
+  ],
+  "paths": [
+    {
+      "name": ".gitignore",
+      "path": ".",
+      "type": "gitignore"
+    },
+    {
+      "name": "learned-on-site",
+      "path": ".",
+      "type": "path"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "shipped-with-app",
+      "path": ".",
+      "type": "path"
+    }
+  ],
+  "path": "learning"
+}

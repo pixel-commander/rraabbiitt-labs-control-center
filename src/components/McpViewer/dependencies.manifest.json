@@ -1,0 +1,24 @@
+{
+  "name": "McpViewer",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../../../FloatWindow/FloatWindow.types",
+      "path": "../FloatWindow/FloatWindow.types",
+      "type": "import",
+      "file": "hooks/useMcpViewer/useMcpViewer.ts"
+    },
+    {
+      "name": "../../../rab.world.json",
+      "path": "../../../rab.world.json",
+      "type": "import",
+      "file": "McpViewer.tsx"
+    },
+    {
+      "name": "../FloatWindow/FloatWindow",
+      "path": "../FloatWindow/FloatWindow",
+      "type": "import",
+      "file": "McpViewer.tsx"
+    }
+  ]
+}

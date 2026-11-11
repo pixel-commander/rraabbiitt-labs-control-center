@@ -1,0 +1,101 @@
+{
+  "id": 1789877167204,
+  "name": "new-react-navigation",
+  "title": "Create Navigation",
+  "description": "Create an accessible navigation component from unique ID, name, and destination rows. Add an optional grid and class name.",
+  "type": "tool",
+  "path": "toolkit/rab-react/scaffolds/new-react-navigation",
+  "file": "new-react-navigation",
+  "parent": 1791518327955,
+  "tags": [
+    "rab-react",
+    "scaffold"
+  ],
+  "settings": [
+    {
+      "type": "string",
+      "name": "name",
+      "title": "Navigation Name",
+      "description": "Navigation name in any text style; generated folders and files use PascalCase.",
+      "required": true
+    },
+    {
+      "type": "string",
+      "name": "title",
+      "title": "Title",
+      "description": "Optional display title for the generated React navigation component; defaults to its name.",
+      "required": false
+    },
+    {
+      "type": "string",
+      "name": "description",
+      "title": "Description",
+      "description": "Optional description for the generated React navigation component.",
+      "required": false
+    },
+    {
+      "type": "string",
+      "name": "path",
+      "title": "Components Folder",
+      "required": true
+    },
+    {
+      "type": "array",
+      "name": "rows",
+      "title": "Navigation Rows",
+      "description": "Required nonempty array of unique {id, name, path} records.",
+      "required": true
+    },
+    {
+      "type": "string",
+      "name": "label",
+      "title": "Navigation Label",
+      "required": false,
+      "default": "Main navigation"
+    },
+    {
+      "type": "string",
+      "name": "grid",
+      "title": "Grid",
+      "description": "Optional canonical grid layout; adds data-grid.",
+      "required": false
+    },
+    {
+      "type": "string",
+      "name": "class_name",
+      "title": "Container Class",
+      "description": "Optional class string appended to the base class.",
+      "required": false
+    },
+    {
+      "type": "boolean",
+      "name": "save_as_text",
+      "title": "Save As Text",
+      "description": "Write component source with a .txt extension.",
+      "required": false,
+      "default": false
+    },
+    {
+      "type": "array",
+      "name": "tags",
+      "title": "Tags",
+      "description": "Optional saved record tags.",
+      "required": false
+    }
+  ],
+  "paths": [
+    {
+      "id": 1791518659419,
+      "name": "new-react-navigation",
+      "path": "toolkits/rab-react/scaffolds/new-react-navigation",
+      "file": "use.skill.yaml",
+      "type": "use skill"
+    }
+  ],
+  "skills": [
+    {
+      "id": 1791518659419,
+      "path": "toolkits/rab-react/scaffolds/new-react-navigation/use.skill.yaml"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": 1794395295454,
+  "name": "container-alt",
+  "title": "container-alt",
+  "description": "",
+  "type": "containers",
+  "tags": [
+    "react",
+    "containers"
+  ],
+  "file": "container-alt.css",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-labs-control-center/src/atoms/containers/container-alt",
+  "paths": [
+    {
+      "name": "container-alt.css",
+      "path": ".",
+      "type": "css"
+    },
+    {
+      "name": "Demo.tsx",
+      "path": "demo",
+      "type": "tsx"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    }
+  ]
+}

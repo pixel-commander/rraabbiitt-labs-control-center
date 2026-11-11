@@ -1,0 +1,46 @@
+PROBLEM: Setup does not put records in the database. After "npm run setup", the records table is empty. World Search then stops with "Exported catalog must contain records."
+
+SOLUTION: Run tool 1793210509222 (refresh-world-database) after setup. Add an npm script for this tool, or make "npm run setup" run it. On this machine, the tool added 262 rows (153 records, 109 skills).
+
+================================
+
+PROBLEM: You cannot run a toolkit .ts file directly. "node <tool>.ts" only defines the exported functions. It does not run the tool and it does not show an error. The operator can think that the tool ran.
+
+SOLUTION: Give each tool a command-line entry point, or document the runner that calls a tool by its ID. Make a call that does nothing show an error.
+
+================================
+
+PROBLEM: One shipped model file does not agree with its pinned hash. File: learning/shipped-with-app/search-results/saved-models/hybrid-seat-ranking/data/pretrained/reranker/special_tokens_map.json
+Expected SHA-256: 3c3507f36dff57bce437223db3b3081d1e2b52ec3e56ee55438193ecb2c94dd6
+Actual SHA-256: b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3
+The cause is not line endings. The file contents are different. "npm run test:hybrid-baseline" and World Search both stop on this file. World Search does not work on this machine until you replace the file.
+
+SOLUTION: Replace the file with the file from cross-encoder/ms-marco-MiniLM-L6-v2 at revision 233902d25c440f23af6f7d6e94d2946bac0bee0a. Do not disable the hash check. Run "npm run test:hybrid-baseline" again to make sure that the file is correct.
+
+================================
+
+PROBLEM: The tool caller (runner-use-tool, executeToolById) walks the full toolkit folder tree on each call to find one tool ID. This is too slow when you make many components or tools in a batch.
+
+SOLUTION: Find a tool by its ID in the database. Use "SELECT path, file FROM records WHERE id = ?". Join the result to the project root from rab.world.json. The records table already keeps project-relative paths. When a scaffold or runner makes a new unit, it must also add the database row. If the ID is not in the database, walk the folders one time and add the row.
+
+================================
+
+PROBLEM: refresh-settings-json writes an absolute path into the "path" field of each rab.settings.json. Example: C:/rraabbiitt-labs-control-center/toolkit/... An absolute path stops being correct when you move the project. The tool caller does not use this field. It uses the folder where it found the file.
+
+SOLUTION: Write the path relative to the project root. Make the project root at startup from rab.world.json.
+
+================================
+
+PROBLEM: 29 use.skill.yaml files contain an absolute path from the original machine (C:\rraabbiitt-hq\...). Example: src/components/SearchResponses/ResponseAndRankingCard/use.skill.yaml. "npm run audit:portable" does not find these paths. These paths do not stop tool loading. The tool caller finds the skill file next to the tool. But a person or an agent that reads the skill can use the incorrect path. Priority: low.
+
+SOLUTION: Change the "path" values to project-relative paths. Add use.skill.yaml files to the audit:portable check.
+
+================================
+
+PROBLEM: The search result cards do not show the record type. HybridSearch.tsx did not give the "type" prop to ResponseAndRankingCard.
+
+SOLUTION: In src/components/HybridSearch/HybridSearch.tsx, give type={record.type} to ResponseAndRankingCard. The card now shows "[type] | [name] | id: [id]".
+
+================================
+
+NOTE: This change is not a fix for a known problem. In toolkit/tools/refresh-world-database/refresh_world_database.py, stdin now uses "utf-8-sig" (before: "utf-8"). The change lets the script read JSON that starts with a byte order mark. The tool wrapper does not send a byte order mark, so this change does not have an effect in normal operation. Keep it or remove it.

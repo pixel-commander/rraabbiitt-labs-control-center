@@ -1,0 +1,8 @@
+{
+  "name": "actions folder",
+  "title": "__PROJECT_NAME__ actions",
+  "description": "the folder where all actions are saved for the __PROJECT_NAME__ react project.",
+  "type": "path",
+  "tags": ["actions"],
+  "path": "src\\atoms\\actions"
+}

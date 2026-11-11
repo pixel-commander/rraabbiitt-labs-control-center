@@ -1,0 +1,23 @@
+intent: use
+implementation:
+  - id: 1793210509222
+file: refresh-world-database.ts
+instructions: 'Call the exported run with one HouseKeys settings bag. Optional path selects a
+  project folder; do not include a filename. Omit path to use this project. Example: run({ path:
+  "C:/my-project" }). Requires Python with PyYAML installed. Returns ToolReturn. On success, status
+  is complete and settings is the incoming bag. response.summary.count is the catalog entry count;
+  response.body is a JSON string containing counts.records, counts.skill and catalog; response.path
+  is the database folder. On failure, status is error, settings is the incoming bag, and error
+  describes the failure.'
+name: use-refresh-world-database
+id: 1793210509223
+description: Refresh or reindex search after adding or changing components, tools, records, or
+  skills. Update SQLite from root project folders and exact world toolkit registrations.
+  Existing local copies retain their IDs and take precedence over shared copies. This does not train the model.
+schema: 1
+owner:
+  id: 1793210509222
+title: Refresh world database
+path: toolkit/tools/refresh-world-database
+type: skill
+context: []

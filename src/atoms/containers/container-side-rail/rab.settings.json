@@ -1,0 +1,30 @@
+{
+  "id": 1794395295465,
+  "name": "container-side-rail",
+  "title": "container-side-rail",
+  "description": "",
+  "type": "containers",
+  "tags": [
+    "react",
+    "containers"
+  ],
+  "file": "container-side-rail.css",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-labs-control-center/src/atoms/containers/container-side-rail",
+  "paths": [
+    {
+      "name": "container-side-rail.css",
+      "path": ".",
+      "type": "css"
+    },
+    {
+      "name": "Demo.tsx",
+      "path": "demo",
+      "type": "tsx"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    }
+  ]
+}

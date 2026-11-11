@@ -1,0 +1,1 @@
+World Search at /world-search composes UiElements, SearchResponses, token-based atoms and the imported shared Slider. The page is a local UI preview: model names and trace are examples, not live connection claims. One useWorldSearch hook owns interactions. No inference or MCP execution.

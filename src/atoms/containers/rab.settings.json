@@ -1,0 +1,10 @@
+{
+  "name": "containers folder",
+  "title": "rraabbiitt-labs-control-center containers",
+  "description": "the folder where all containers are saved for the rraabbiitt-labs-control-center react project.",
+  "type": "path",
+  "tags": [
+    "containers"
+  ],
+  "path": "src/atoms/containers"
+}

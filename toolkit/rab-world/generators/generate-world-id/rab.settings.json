@@ -1,0 +1,42 @@
+{
+  "tags": [
+    "rab-world-v2",
+    "generator"
+  ],
+  "id": 1790784702601,
+  "name": "generate-world-id",
+  "title": "Generate World ID",
+  "description": "Create and return a numeric House ID. This generator does not create a registration record.",
+  "type": "tool",
+  "parent": 1791825479795,
+  "path": "toolkit/rab-world/generators/generate-world-id",
+  "file": "generate-world-id.ts",
+  "settings": [],
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "generate-world-id.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "generate-world-id.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

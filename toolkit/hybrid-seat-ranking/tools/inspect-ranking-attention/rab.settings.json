@@ -1,0 +1,36 @@
+{
+  "id": 1793225821360,
+  "name": "inspect-ranking-attention",
+  "title": "Inspect Ranking Attention",
+  "description": "Inspect one attention layer and head for a question and document. Choose active or candidate weights. The report shows tokens and any input truncation.",
+  "type": "tool",
+  "path": "toolkit/hybrid-seat-ranking/tools/inspect-ranking-attention",
+  "file": "inspect-ranking-attention.ts",
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "inspect-ranking-attention.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

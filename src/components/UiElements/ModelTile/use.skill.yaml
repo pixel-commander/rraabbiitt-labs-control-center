@@ -1,0 +1,127 @@
+schema: 1
+intent: use
+owner:
+  id: 1794395295618
+id: 1794408972999
+name: ModelTile
+title: Use ModelTile
+description: Props, defaults and callbacks for ModelTile.
+type: skill
+path: C:\rraabbiitt-hq\rraabbiitt-labs-control-center\src\components\UiElements\ModelTile
+tags: []
+implementation: []
+context: []
+inputs:
+  title:
+    type: ReactNode
+    required: false
+  id:
+    type: number | undefined
+    required: false
+  name:
+    type: string | undefined
+    required: false
+  description:
+    type: string | undefined
+    required: false
+  path:
+    type: string | undefined
+    required: false
+  save_path:
+    type: string | undefined
+    required: false
+  save_file:
+    type: string | undefined
+    required: false
+  paths:
+    type: PathsProps[] | undefined
+    required: false
+  date_added:
+    type: number | undefined
+    required: false
+  date_updated:
+    type: number | undefined
+    required: false
+  date_used:
+    type: number | undefined
+    required: false
+  date:
+    type: number | undefined
+    required: false
+  date_start:
+    type: number | undefined
+    required: false
+  date_end:
+    type: number | undefined
+    required: false
+  status:
+    type: '"success" | "warn" | "error" | "waiting" | undefined'
+    required: false
+  status_color:
+    type: Property.Color | undefined
+    required: false
+  label_color:
+    type: Property.Color | undefined
+    required: false
+  label:
+    type: ReactNode
+    required: false
+  className:
+    type: string | undefined
+    required: false
+outputs: {}
+instructions: >-
+  Props
+
+  title (optional): ReactNode
+
+  id (optional): number | undefined
+
+  name (optional): string | undefined
+
+  description (optional): string | undefined
+
+  path (optional): string | undefined
+
+  save_path (optional): string | undefined
+
+  save_file (optional): string | undefined
+
+  paths (optional): PathsProps[] | undefined
+
+  date_added (optional): number | undefined
+
+  date_updated (optional): number | undefined
+
+  date_used (optional): number | undefined
+
+  date (optional): number | undefined
+
+  date_start (optional): number | undefined
+
+  date_end (optional): number | undefined
+
+  status (optional): "success" | "warn" | "error" | "waiting" | undefined
+
+  status_color (optional): Property.Color | undefined
+
+  label_color (optional): Property.Color | undefined
+
+  label (optional): ReactNode
+
+  className (optional): string | undefined
+
+
+  Defaults
+
+  Inherits StatusLabel defaults: status="success".
+
+
+  Callbacks and prop behavior
+
+  title and label accept ReactNode. status, status_color and label_color have the StatusLabel
+  behavior. className adds wrapper classes. No callbacks.
+checks: []
+examples: []
+routes: []
+provenance: []

@@ -1,0 +1,15 @@
+schema: 1
+intent: use
+id: 1794415784110
+name: new-world-tool
+owner:
+  id: 1794415784109
+implementation:
+  - id: 1794415784109
+instructions: >
+  Supply path (existing destination parent) and name (lowercase hyphenated). Optional
+  file is name.ts, name.js or name.mjs. title and description default only when absent.
+  Returns scaffold ToolReturn with two generated files, both using the same new numeric ID.
+  Existing destinations are refused. Tool input and return types use the House contract.
+  Usage is reported silently after execution with numeric id, date and optional message DB ID.
+  Usage failure is appended to error without changing the tool status or result.

@@ -1,0 +1,65 @@
+REPHRASE AND FEEDBACK
+=====================
+
+Rephrase is available on the top result and every lower-ranked tile.
+The selected record ID stays attached to the message box. Enter wording that
+makes that result correct, then submit. The box names the selected result;
+Cancel rephrase returns it to ordinary search mode.
+
+Submission creates a new numeric-ID user message. It then saves an explicit
+positive lesson for that new wording and selected result. The lesson retains
+the original query, original saved message, selected source rank, new message,
+record ID/key and source snapshot. A lower-ranked rephrase does not approve
+the selected result for the original query or declare the two questions to be
+equivalent. The new question forms its own evidence group.
+
+Top-result rephrase uses the same process as a new message followed by a
+thumbs-up on the selected result. The current UI accepts user-entered wording;
+it does not claim an unconfigured model generated a paraphrase.
+
+Thumbs-down is a negative whole-result lesson for that wording and result.
+The established engine may suppress it out of the returned list. It does not
+apply a global penalty to unrelated queries. Good and OK remain explicit
+positive/partial judgments under the same engine contract.
+
+APPROVED EVIDENCE
+
+Raw approved lessons are saved under:
+  learning/learned-on-site/search-results/lessons/       Direct votes.
+  learning/learned-on-site/question-rephrasing/lessons/ Selected-result wording.
+
+The local learned_lessons.py adapter reads the latest approved judgment per
+question/result and checks the original ID and source text. A location change
+keeps the same identity; current record keys are used after a project move.
+Changed or missing source records are reported as stale evidence. They are not
+silently redirected to another result.
+
+The unchanged established_runtime.search/preview_state evidence interface
+encodes these approved lessons into private query/field evidence for the
+frozen hybrid engine. Whole-result lessons use its existing all-result
+contract. That does not establish which individual field caused the judgment,
+change field weights, or create field-ranking lessons.
+
+The arbitrary HTTP-layer +1/-1 score adjustment has been removed. Returned
+ordering and scores come from the established hybrid engine itself. Exact
+negative lessons use its suppression rule; positive wording can transfer
+through the engine's existing semantic similarity rule.
+
+Lesson records are persistent. The indexed evidence is rebuilt for each
+search process. Removing a lesson removes it from the next evidence rebuild.
+There is no neural weight rollback in this workflow. A later weight-tuning
+job would be a separate operation and would produce a versioned model. Once
+weights change, deleting input data alone would not undo those weight changes.
+
+The current established interface supports 50 distinct question/result lessons.
+Repeated updates retain their original history but use the latest judgment.
+A new 51st pair returns HTTP409 before saving. Search also refuses an oversized
+history rather than truncating it. A supported consolidation process is needed
+to grow beyond this interface limit; none is invented by this change.
+
+SAVE AND FAILURE BEHAVIOR
+
+A save receipt means the raw lesson was saved. It is not a claim that model
+weights were fine-tuned. If search fails after the lesson saves, the UI states
+that the lesson was saved and the search failed. Save failures retain the
+wording for retry. Shipped baseline files remain read-only through this path.

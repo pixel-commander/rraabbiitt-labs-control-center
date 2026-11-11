@@ -1,0 +1,43 @@
+{
+  "id": 1794420272806,
+  "name": "shipped-with-app",
+  "title": "shipped with app",
+  "description": "Manually maintained baseline; read-only through the customer API.",
+  "type": "path",
+  "tags": [
+    "learning"
+  ],
+  "paths": [
+    {
+      "name": "field-ranking",
+      "path": ".",
+      "type": "path"
+    },
+    {
+      "name": "question-rephrasing",
+      "path": ".",
+      "type": "path"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "search-quality-tests",
+      "path": ".",
+      "type": "path"
+    },
+    {
+      "name": "search-results",
+      "path": ".",
+      "type": "path"
+    }
+  ],
+  "path": "learning/shipped-with-app"
+}

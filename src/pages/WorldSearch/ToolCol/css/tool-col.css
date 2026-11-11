@@ -1,0 +1,20 @@
+@layer components {
+  .tool-col {
+    position: relative;
+    overflow: hidden;
+    min-inline-size: 0;
+  }
+  .tool-col.is-closed {
+    max-width: 0;
+  }
+  .tool-col-inner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: max-content;
+  }
+  .tool-col-scroll {
+    min-block-size: 0;
+  }
+}

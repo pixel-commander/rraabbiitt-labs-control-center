@@ -1,0 +1,11 @@
+{
+  "tags": ["rab-react", "scaffold"],
+  "id": "__PROJECT_ID__",
+  "name": "__PROJECT_NAME__",
+  "type": "tool",
+  "paths": {
+    "components": "src/components",
+    "pages": "src/pages",
+    "atoms": "src/atoms"
+  }
+}

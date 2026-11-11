@@ -1,0 +1,17 @@
+schema: 1
+intent: use
+id: 1793181017723
+name: index-world-search-docs
+title: Index world search docs
+description: Refresh the world search index from registered project settings, READMEs and usage skills, preserving trained weights and vocabulary. Run from the project root.
+type: skill
+path: skills/cli/index-world-search-docs
+tags:
+  - cli
+  - index
+  - reindex
+  - search
+implementation: []
+context: []
+instructions: |
+  npm run index

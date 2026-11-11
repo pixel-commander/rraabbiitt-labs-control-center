@@ -1,0 +1,10 @@
+{
+  "name": "pages folder",
+  "title": "rraabbiitt-labs-control-center pages",
+  "description": "the folder where all pages are saved for the rraabbiitt-labs-control-center react project.",
+  "type": "path",
+  "tags": [
+    "pages"
+  ],
+  "path": "src/pages"
+}

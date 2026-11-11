@@ -1,0 +1,21 @@
+schema: 1
+intent: use
+id: 1793126984423
+name: running-the-app
+title: Running the app
+description: CLI for running the app
+type: function
+path: skills/project/cli/running-the-app
+tags:
+  - project
+  - cli
+  - vite
+implementation: []
+context: []
+inputs: {}
+outputs: {}
+instructions: npm run dev
+checks: []
+examples: []
+routes: []
+provenance: []

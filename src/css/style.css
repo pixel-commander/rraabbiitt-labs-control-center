@@ -1,0 +1,69 @@
+@layer tokens, themes, base, grid, atoms, components;
+@layer base {
+  html,
+  body {
+    margin: 0;
+    min-block-size: 100%;
+    background: var(--color-main);
+    color: var(--color-main-alt-neg);
+    font: var(--type-body);
+  }
+  * {
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) transparent;
+  }
+  *::-webkit-scrollbar {
+    width: var(--scrollbar-size);
+    height: var(--scrollbar-size);
+    background: transparent;
+  }
+  *::-webkit-scrollbar-track,
+  *::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+  *::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: var(--radius-container);
+  }
+  *::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover);
+  }
+  #root {
+    min-block-size: 100dvh;
+  }
+  button,
+  textarea,
+  input {
+    font: inherit;
+  }
+  button:focus-visible,
+  a:focus-visible,
+  textarea:focus-visible {
+    outline: var(--focus-ring);
+    outline-offset: var(--focus-offset);
+  }
+  h1,
+  h2,
+  h3 {
+    color: var(--color-main-neg);
+  }
+  textarea {
+    max-inline-size: 100%;
+  }
+}
+@layer components {
+  .site-shell {
+    min-block-size: 100dvh;
+  }
+
+  .site-theme {
+    padding: var(--space-sm) var(--space-lg);
+  }
+  .site-main {
+    min-inline-size: 0;
+  }
+  .site-footer {
+    font: var(--type-code);
+  }
+}

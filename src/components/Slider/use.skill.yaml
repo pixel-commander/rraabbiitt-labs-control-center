@@ -1,0 +1,165 @@
+schema: 1
+intent: use
+owner:
+  id: 1794014810540
+id: 1794014849134
+name: Slider
+title: Use Slider
+description: Props, defaults and callbacks for Slider.
+type: skill
+path: C:\rraabbiitt-hq\rraabbiitt-labs-control-center\src\components\Slider
+tags: []
+implementation: []
+context: []
+inputs:
+  min:
+    type: number | undefined
+    required: false
+  max:
+    type: number | undefined
+    required: false
+  step:
+    type: number | undefined
+    required: false
+  threshold:
+    type: number | undefined
+    required: false
+  value:
+    type: number | undefined
+    required: false
+  label:
+    type: string | undefined
+    required: false
+  color:
+    type: Property.Color | undefined
+    required: false
+  slider_class:
+    type: string | undefined
+    required: false
+  className:
+    type: string | undefined
+    required: false
+  is_disabled:
+    type: boolean | undefined
+    required: false
+  is_visible:
+    type: boolean | undefined
+    required: false
+  handleChange:
+    type: HandlerKey<number, "slider", void, SliderProps> | undefined
+    required: false
+  id:
+    type: number | undefined
+    required: false
+  name:
+    type: string | undefined
+    required: false
+  title:
+    type: string | undefined
+    required: false
+  description:
+    type: string | undefined
+    required: false
+  path:
+    type: string | undefined
+    required: false
+  save_path:
+    type: string | undefined
+    required: false
+  save_file:
+    type: string | undefined
+    required: false
+  paths:
+    type: PathsProps[] | undefined
+    required: false
+  date_added:
+    type: number | undefined
+    required: false
+  date_updated:
+    type: number | undefined
+    required: false
+  date_used:
+    type: number | undefined
+    required: false
+  date:
+    type: number | undefined
+    required: false
+  date_start:
+    type: number | undefined
+    required: false
+  date_end:
+    type: number | undefined
+    required: false
+outputs: {}
+instructions: >-
+  Props
+
+  min (optional): number | undefined
+
+  max (optional): number | undefined
+
+  step (optional): number | undefined
+
+  threshold (optional): number | undefined
+
+  value (optional): number | undefined
+
+  label (optional): string | undefined
+
+  color (optional): Property.Color | undefined
+
+  slider_class (optional): string | undefined
+
+  className (optional): string | undefined
+
+  is_disabled (optional): boolean | undefined
+
+  is_visible (optional): boolean | undefined
+
+  handleChange (optional): HandlerKey<number, "slider", void, SliderProps> | undefined
+
+  id (optional): number | undefined
+
+  name (optional): string | undefined
+
+  title (optional): string | undefined
+
+  description (optional): string | undefined
+
+  path (optional): string | undefined
+
+  save_path (optional): string | undefined
+
+  save_file (optional): string | undefined
+
+  paths (optional): PathsProps[] | undefined
+
+  date_added (optional): number | undefined
+
+  date_updated (optional): number | undefined
+
+  date_used (optional): number | undefined
+
+  date (optional): number | undefined
+
+  date_start (optional): number | undefined
+
+  date_end (optional): number | undefined
+
+
+  Defaults
+
+  min=0; max=100; step=1; value=0; slider_class="slider-main"; className=""; is_disabled=false;
+  is_visible=true.
+
+
+  Callbacks and prop behavior
+
+  value is controlled. handleChange receives (number, "slider", props). min/max bound the value;
+  step controls increments. threshold marks a limit. label names the input; color overrides the
+  accent. is_disabled prevents changes; is_visible=false renders nothing. slider_class selects the
+  slider skin.
+checks: []
+examples: []
+routes: []
+provenance: []

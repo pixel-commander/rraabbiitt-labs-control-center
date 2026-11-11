@@ -1,0 +1,40 @@
+schema: 1
+intent: use
+id: 1793144165307
+name: adding-skills
+title: Add a skill
+description:
+  Write a small usage skill, group shared instructions under one parent,
+  and link it to the thing it explains.
+type: skill
+path: skills/project/adding-skills
+tags:
+  - skills
+  - usage
+  - parent
+  - context
+  - owner
+implementation: []
+context: []
+instructions: |
+  Create use.skill.yaml beside the implementation it explains, or in a named
+  skills folder for a standalone task. Keep it small: how to use the thing,
+  required inputs, and what to do with its return.
+  Include schema: 1, intent: use, a unique numeric skill id, name, title,
+  description, type, project-relative path, and instructions.
+  Preserve an existing ID when editing or moving a skill.
+  When two or more skills share instructions, group them in a folder with one
+  parent use.skill.yaml. Put each child in its own subfolder. Move shared text
+  into the parent; keep only specific steps in each child. Each child references
+  that parent in context using use: <parent timestamp id>, path: <parent skill
+  document path>, and reason. Read and apply the parent first; do not copy its text.
+  For an implementation usage skill, set owner.id to the tool, runner, hook, or
+  other record's House ID and owner.path to its rab.settings.json. Keep the
+  skill's own id distinct from owner.id. Set owner.path to the registration
+  settings file and implementation[].path to the actual code file. Owner means implementation
+  ownership, not the parent skill. A standalone skill may omit owner.
+  Use project-relative references. Verify every reference and matching ID.
+  Reference shared types instead of inventing contracts; explain only this
+  capability's inputs and particular return. Parent instructions hold common rules.
+  Keep the skill within a root-registered path, then run npm run index and check
+  that search returns the skill, its context reference, and its owner when present.

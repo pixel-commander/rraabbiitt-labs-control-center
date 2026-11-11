@@ -1,0 +1,51 @@
+@layer atoms {
+  /* Style :hover, :active and .is-active; keep :active and .is-active nearly identical, with only a slight background variation.
+     Use .is-active for selection; NEVER [data-page='home'] or page-specific selectors for active styling. */
+  .action-neg {
+    color: var(--color-main);
+    background: var(--color-main-neg);
+    border: var(--border-width) var(--border-style) var(--color-muted);
+    border-radius: var(--radius-control);
+    font: var(--type-body);
+    cursor: pointer;
+    transition:
+      background-color var(--motion-fast),
+      color var(--motion-fast),
+      border-color var(--motion-fast);
+    --action-neg-hover-background: var(--color-main-alt-neg);
+    --action-neg-active-background: var(--color-muted);
+    --action-neg-active-color: var(--color-main);
+  }
+
+  .action-neg:hover {
+    background: var(--action-neg-hover-background, var(--color-secondary-alt));
+  }
+
+  .action-neg:active,
+  .action-neg.is-active {
+    color: var(--action-neg-active-color, var(--color-main-neg));
+    background: var(--action-neg-active-background, var(--color-tertiary));
+  }
+
+  .action-neg:focus-visible {
+    outline: var(--action-neg-focus-outline, var(--focus-ring));
+    outline-offset: var(--action-neg-focus-offset, var(--focus-offset));
+  }
+
+  .action-neg:is(:disabled, [aria-disabled="true"]) {
+    color: var(--action-neg-disabled-color, var(--color-muted));
+    background: var(--action-neg-disabled-background, var(--color-secondary));
+    opacity: var(--action-neg-disabled-opacity, var(--disabled-opacity));
+    cursor: not-allowed;
+  }
+}
+
+@layer atoms {
+  .action-neg.is-active {
+    background: color-mix(
+      in srgb,
+      var(--action-neg-active-background) 94%,
+      var(--color-main-neg)
+    );
+  }
+}

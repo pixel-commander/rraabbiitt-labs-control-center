@@ -1,0 +1,144 @@
+schema: 1
+intent: use
+owner:
+  id: 1794395895090
+id: 1794408972779
+name: SiteNav
+title: Use SiteNav
+description: Props, defaults and callbacks for SiteNav.
+type: skill
+path: C:\rraabbiitt-hq\rraabbiitt-labs-control-center\src\components\SiteNav
+tags: []
+implementation: []
+context: []
+inputs:
+  Logo:
+    type: ReactNode
+    required: false
+  name:
+    type: ReactNode
+    required: true
+  Left:
+    type: ReactNode
+    required: false
+  nav_items:
+    type: SiteNavItem[] | undefined
+    required: false
+  Right:
+    type: ReactNode
+    required: false
+  handleClick:
+    type: HandlerKey<SiteNavItem, "site-nav", void, SiteNavProps>
+    required: true
+  selected:
+    type: string | undefined
+    required: false
+  render:
+    type: '((item: SiteNavItem, type: "nav-item") => ReactNode) | undefined'
+    required: false
+  className:
+    type: string | undefined
+    required: false
+  title:
+    type: string | undefined
+    required: false
+  id:
+    type: number | undefined
+    required: false
+  description:
+    type: string | undefined
+    required: false
+  path:
+    type: string | undefined
+    required: false
+  save_path:
+    type: string | undefined
+    required: false
+  save_file:
+    type: string | undefined
+    required: false
+  paths:
+    type: PathsProps[] | undefined
+    required: false
+  date_added:
+    type: number | undefined
+    required: false
+  date_updated:
+    type: number | undefined
+    required: false
+  date_used:
+    type: number | undefined
+    required: false
+  date:
+    type: number | undefined
+    required: false
+  date_start:
+    type: number | undefined
+    required: false
+  date_end:
+    type: number | undefined
+    required: false
+outputs: {}
+instructions: >-
+  Props
+
+  Logo (optional): ReactNode
+
+  name (required): ReactNode
+
+  Left (optional): ReactNode
+
+  nav_items (optional): SiteNavItem[] | undefined
+
+  Right (optional): ReactNode
+
+  handleClick (required): HandlerKey<SiteNavItem, "site-nav", void, SiteNavProps>
+
+  selected (optional): string | undefined
+
+  render (optional): ((item: SiteNavItem, type: "nav-item") => ReactNode) | undefined
+
+  className (optional): string | undefined
+
+  title (optional): string | undefined
+
+  id (optional): number | undefined
+
+  description (optional): string | undefined
+
+  path (optional): string | undefined
+
+  save_path (optional): string | undefined
+
+  save_file (optional): string | undefined
+
+  paths (optional): PathsProps[] | undefined
+
+  date_added (optional): number | undefined
+
+  date_updated (optional): number | undefined
+
+  date_used (optional): number | undefined
+
+  date (optional): number | undefined
+
+  date_start (optional): number | undefined
+
+  date_end (optional): number | undefined
+
+
+  Defaults
+
+  nav_items=[]; className=""; title="Site navigation" for the accessible label when omitted.
+
+
+  Callbacks and prop behavior
+
+  name and handleClick are required. nav_items contain numeric id, ReactNode label, string path,
+  optional title and handleClick. Selection uses selected matching the item path. Item handleClick
+  takes precedence over the main handleClick; callbacks receive (item, "site-nav", props).
+  render(item, "nav-item") replaces item rendering. Logo, Left and Right accept ReactNode.
+checks: []
+examples: []
+routes: []
+provenance: []

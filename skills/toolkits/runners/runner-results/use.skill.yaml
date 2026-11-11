@@ -1,0 +1,31 @@
+schema: 1
+intent: use
+id: 1791940045316
+name: runner-results
+title: Runner results
+description: Read and preserve the shared ordered return.
+type: skill
+path: skills/toolkits/runners/runner-results
+tags:
+  - guidance
+  - toolkits
+implementation: []
+context:
+  - use: 1791940045245
+    path: skills/toolkits/runners/use.skill.yaml
+    reason: Read the parent guidance before this focused branch.
+inputs: {}
+outputs: {}
+instructions:
+  Use the shared result types. The runner returns ordered invocation entries retaining
+  type, identity and ancestry, settings, status, timing, and optional response or error. The source
+  id and per-execution run_id have different meanings and must not replace each other. Preserve the
+  tool's returned data under response according to its contract; keep summaries and affected paths
+  rather than discarding them. Optional values may be absent; do not manufacture empty placeholders
+  or coerce valid false and zero values away. A successful execution can still report domain
+  findings. Inspect nested steps and partial results before describing the workflow as complete. Do
+  not add another persistence or reporting layer.
+checks: []
+examples: []
+routes: []
+provenance: []

@@ -1,0 +1,15 @@
+schema: 1
+intent: use
+id: 1793990737717
+name: saveCodeFile
+type: skill
+path: src/components/CodeEditAndView/js/save-code-file
+file: save-code-file.ts
+owner:
+  id: 1794004818503
+implementation:
+  - id: 1794004818503
+instructions: Call await saveCodeFile({ code, file, language, path? },
+  handleSave). Invokes the supplied handler with the file bag and save-code
+  action. Resolves after the handler completes; throws if no handler is supplied
+  or saving fails. Does not supply a filesystem backend.

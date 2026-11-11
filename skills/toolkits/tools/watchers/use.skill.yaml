@@ -1,0 +1,30 @@
+schema: 1
+intent: use
+id: 1791940045502
+name: watchers
+title: Watchers
+description: Observe a scope with an explicit lifecycle.
+type: skill
+path: skills/toolkits/tools/watchers
+tags:
+  - guidance
+  - toolkits
+implementation: []
+context:
+  - use: 1791940045227
+    path: skills/toolkits/tools/use.skill.yaml
+    reason: Read the parent guidance before this focused branch.
+inputs: {}
+outputs: {}
+instructions:
+  A watcher observes a declared source and responds only to relevant changes. Declare
+  how it starts, stops, filters events and cleans up listeners or resources. Coalesce repeated
+  events where needed and avoid reacting indefinitely to its own output. Keep observation separate
+  from unrequested indexing or execution. Surface operational errors and make shutdown reliable. Any
+  work dispatched from events uses the established shared execution owner rather than a private
+  tracker. Document initial-load behavior and whether starting the watcher itself performs work; do
+  not conceal a startup scan.
+checks: []
+examples: []
+routes: []
+provenance: []

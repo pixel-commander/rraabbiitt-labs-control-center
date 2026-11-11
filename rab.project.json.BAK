@@ -1,0 +1,94 @@
+{
+  "id": 1794247089697,
+  "name": "rraabbiitt-labs-control-center",
+  "title": "rraabbiitt-labs-control-center",
+  "description": "",
+  "type": "project",
+  "tags": [
+    "react",
+    "project"
+  ],
+  "paths": [
+    {
+      "name": "actions folder",
+      "title": "rraabbiitt-labs-control-center actions",
+      "description": "the folder where all actions are saved for the rraabbiitt-labs-control-center react project.",
+      "type": "path",
+      "tags": [
+        "actions"
+      ],
+      "path": "src\\atoms\\actions"
+    },
+    {
+      "name": "containers folder",
+      "title": "rraabbiitt-labs-control-center containers",
+      "description": "the folder where all containers are saved for the rraabbiitt-labs-control-center react project.",
+      "type": "path",
+      "tags": [
+        "containers"
+      ],
+      "path": "src\\atoms\\containers"
+    },
+    {
+      "name": "effects folder",
+      "title": "rraabbiitt-labs-control-center effects",
+      "description": "the folder where all effects are saved for the rraabbiitt-labs-control-center react project.",
+      "type": "path",
+      "tags": [
+        "effects"
+      ],
+      "path": "src\\atoms\\effects"
+    },
+    {
+      "name": "grids folder",
+      "title": "rraabbiitt-labs-control-center grids",
+      "description": "the folder where all grids are saved for the rraabbiitt-labs-control-center react project.",
+      "type": "path",
+      "tags": [
+        "grids"
+      ],
+      "path": "src\\atoms\\grids"
+    },
+    {
+      "name": "components folder",
+      "title": "rraabbiitt-labs-control-center components",
+      "description": "the folder where all components are saved for the rraabbiitt-labs-control-center react project.",
+      "type": "path",
+      "tags": [
+        "components"
+      ],
+      "path": "src\\components"
+    },
+    {
+      "name": "dashboards folder",
+      "title": "rraabbiitt-labs-control-center dashboards",
+      "description": "the folder where all dashboards are saved for the rraabbiitt-labs-control-center react project.",
+      "type": "path",
+      "tags": [
+        "dashboards"
+      ],
+      "path": "src\\dashboards"
+    },
+    {
+      "name": "hooks folder",
+      "title": "rraabbiitt-labs-control-center hooks",
+      "description": "the folder where all hooks are saved for the rraabbiitt-labs-control-center react project.",
+      "type": "path",
+      "tags": [
+        "hooks"
+      ],
+      "path": "src\\hooks"
+    },
+    {
+      "name": "pages folder",
+      "title": "rraabbiitt-labs-control-center pages",
+      "description": "the folder where all pages are saved for the rraabbiitt-labs-control-center react project.",
+      "type": "path",
+      "tags": [
+        "pages"
+      ],
+      "path": "src\\pages"
+    }
+  ],
+  "path": "."
+}

@@ -1,0 +1,10 @@
+{
+  "file": "message-1794421484280-1794421508161-b92548ce-6276-47c6-86d3-c12b76b7eb0d.json",
+  "message": 1794421484280,
+  "id": 1790031603507,
+  "grade": 1,
+  "lesson_type": "whole-result-relevance",
+  "mode": "lexical-fts5",
+  "scope": "saved-message",
+  "neural_training": false
+}

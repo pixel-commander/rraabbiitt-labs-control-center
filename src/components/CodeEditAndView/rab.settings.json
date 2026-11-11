@@ -1,0 +1,277 @@
+{
+  "id": 1793976287997,
+  "name": "CodeEditAndView",
+  "title": "CodeEditAndView",
+  "description": "Code viewing/editing with draft state, diagnostics and validate-before-save handlers.",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "CodeEditAndView.tsx",
+  "path": "src/components/CodeEditAndView",
+  "paths": [
+    {
+      "name": "CodeEditAndView.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "CodeEditAndView.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "CodeViewer.tsx",
+      "path": "CodeViewer",
+      "type": "tsx"
+    },
+    {
+      "name": "CodeViewer.types.ts",
+      "path": "CodeViewer",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": "CodeViewer",
+      "type": "txt"
+    },
+    {
+      "name": "code-viewer.css",
+      "path": "CodeViewer/css",
+      "type": "css"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": "CodeViewer",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "CodeViewer",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "CodeViewer",
+      "type": "yaml"
+    },
+    {
+      "name": "LICENSES.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "code-edit-and-view.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": "Demo.tsx",
+      "path": "demo",
+      "type": "tsx"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "README.txt",
+      "path": "hooks/useCodeEditAndView",
+      "type": "txt"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": "hooks/useCodeEditAndView",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "hooks/useCodeEditAndView",
+      "type": "json"
+    },
+    {
+      "name": "settings.json",
+      "path": "hooks/useCodeEditAndView",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "hooks/useCodeEditAndView",
+      "type": "yaml"
+    },
+    {
+      "name": "useCodeEditAndView.ts",
+      "path": "hooks/useCodeEditAndView",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": "hooks/useCodeViewer",
+      "type": "txt"
+    },
+    {
+      "name": "code-editor.d.ts",
+      "path": "hooks/useCodeViewer",
+      "type": "ts"
+    },
+    {
+      "name": "code-editor.js",
+      "path": "hooks/useCodeViewer",
+      "type": "js"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": "hooks/useCodeViewer",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "hooks/useCodeViewer",
+      "type": "json"
+    },
+    {
+      "name": "settings.json",
+      "path": "hooks/useCodeViewer",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "hooks/useCodeViewer",
+      "type": "yaml"
+    },
+    {
+      "name": "useCodeViewer.ts",
+      "path": "hooks/useCodeViewer",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": "js/save-code-file",
+      "type": "txt"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": "js/save-code-file",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "js/save-code-file",
+      "type": "json"
+    },
+    {
+      "name": "save-code-file.ts",
+      "path": "js/save-code-file",
+      "type": "ts"
+    },
+    {
+      "name": "settings.json",
+      "path": "js/save-code-file",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "js/save-code-file",
+      "type": "yaml"
+    },
+    {
+      "name": "editor-helpers.test.mjs",
+      "path": "js/tests",
+      "type": "mjs"
+    },
+    {
+      "name": "README.txt",
+      "path": "js/validate-code",
+      "type": "txt"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": "js/validate-code",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "js/validate-code",
+      "type": "json"
+    },
+    {
+      "name": "settings.json",
+      "path": "js/validate-code",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "js/validate-code",
+      "type": "yaml"
+    },
+    {
+      "name": "validate-code.ts",
+      "path": "js/validate-code",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ],
+  "settings": [
+    {
+      "name": "code",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "file",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "language",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "initialMode",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "showLineNumbers",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "name": "showMinimap",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "name": "disabled",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "name": "startLine",
+      "type": "number",
+      "required": false
+    },
+    {
+      "name": "tabSize",
+      "type": "number",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+schema: 1
+intent: use
+id: 1793679050189
+name: finding-records
+title: Find components, atoms, and skills
+description: Use search to find project records and read their type and source.
+type: skill
+path: skills/project/search/finding-records
+tags:
+  - project
+  - search
+implementation: []
+context:
+  - use: 1793679050118
+    path: skills/project/search/use.skill.yaml
+    reason: Read the shared search guide first.
+inputs: {}
+outputs: {}
+instructions: >-
+  Enter a question such as "where are components?" or "how do I run the site?". Read the best answer
+  and open other results when needed.
+
+  Each result shows its exact registered type above an icon. The name, ID, and source show which
+  record supplied it. A skill can provide usage instructions.
+
+  The root rab.project.json lists source folders. Components are registered under src/components.
+  Dashboard-owned components can be inside src/dashboards. Read the source path on each result.
+
+  To list actual records, request "list all components" or "find all atoms". If search finds a
+  matching tool, review and confirm it using the tool guide.
+
+  If a new file is missing from search, check its metadata and registered source folder. Run npm run
+  index from the project root after the requested change.
+checks: []
+examples: []
+routes: []
+provenance: []

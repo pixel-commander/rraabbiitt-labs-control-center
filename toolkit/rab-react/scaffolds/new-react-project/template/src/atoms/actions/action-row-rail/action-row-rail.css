@@ -1,0 +1,59 @@
+@layer atoms {
+  /* Style :hover, :active and .is-active; keep :active and .is-active nearly identical, with only a slight background variation.
+     Use .is-active for selection; NEVER [data-page='home'] or page-specific selectors for active styling. */
+  .action-row-rail {
+    color: var(--content-default);
+    background: var(--surface-transparent);
+    border: var(--border-width) var(--border-style) var(--border-subtle);
+    border-radius: 0;
+    font: var(--type-body);
+    cursor: pointer;
+    transition:
+      background-color var(--motion-fast),
+      color var(--motion-fast),
+      border-color var(--motion-fast);
+    --action-row-rail-hover-background: var(--surface-hover);
+    --action-row-rail-active-background: var(--surface-selected);
+    --action-row-rail-active-color: var(--content-default);
+    border-width: 0 0 var(--border-width);
+    border-left: 3px solid transparent;
+  }
+
+  .action-row-rail:hover {
+    background: var(--action-row-rail-hover-background, var(--surface-hover));
+  }
+
+  .action-row-rail:active,
+  .action-row-rail.is-active {
+    color: var(--action-row-rail-active-color, var(--content-strong));
+    background: var(--action-row-rail-active-background, var(--surface-active));
+  }
+
+  .action-row-rail:focus-visible {
+    outline: var(--action-row-rail-focus-outline, var(--focus-ring));
+    outline-offset: var(--action-row-rail-focus-offset, var(--focus-offset));
+  }
+
+  .action-row-rail:is(:disabled, [aria-disabled="true"]) {
+    color: var(--action-row-rail-disabled-color, var(--content-disabled));
+    background: var(
+      --action-row-rail-disabled-background,
+      var(--surface-disabled)
+    );
+    opacity: var(--action-row-rail-disabled-opacity, var(--disabled-opacity));
+    cursor: not-allowed;
+  }
+}
+
+@layer atoms {
+  .action-row-rail.is-active {
+    background: color-mix(
+      in srgb,
+      var(--action-row-rail-active-background) 94%,
+      var(--surface-main)
+    );
+  }
+  .action-row-rail:is(:hover, :active, .is-active) {
+    border-left-color: var(--accent-default);
+  }
+}

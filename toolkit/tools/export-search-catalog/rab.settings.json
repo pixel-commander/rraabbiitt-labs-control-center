@@ -1,0 +1,52 @@
+{
+  "id": 1793676793815,
+  "name": "export-search-catalog",
+  "title": "Export Search Catalog",
+  "description": "Save indexed records and skills as a JSON search catalog. The tool reads the database and does not change it.",
+  "type": "tool",
+  "tags": [
+    "rab-world-v2",
+    "scaffold"
+  ],
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "export-search-catalog.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ],
+  "path": "toolkit/tools/export-search-catalog",
+  "file": "export-search-catalog.ts",
+  "settings": [
+    {
+      "name": "path",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "save_path",
+      "type": "string",
+      "required": true
+    }
+  ]
+}

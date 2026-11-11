@@ -1,0 +1,40 @@
+@layer components {
+  .top-result {
+    min-inline-size: 0;
+    font-size: 1.5em;
+  }
+  .top-result-content {
+    font-size: 1em;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+  }
+  .top-result-heading {
+    align-items: center;
+  }
+  .top-result-score {
+    padding: var(--space-sm);
+    gap: var(--space-2xs);
+    text-align: center;
+    font-size: 1rem;
+  }
+  .top-result-score strong {
+    font-size: 1.25em;
+  }
+  .top-result-score span {
+    font-size: 0.65em;
+  }
+  .top-result-votes {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    justify-content: start;
+    gap: var(--space-lg);
+  }
+  .top-result-votes button {
+    padding: var(--space-xs);
+  }
+  .top-result-title {
+    font: var(--type-code);
+    font-size: 0.8em;
+  }
+}

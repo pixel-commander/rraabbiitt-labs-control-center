@@ -1,0 +1,43 @@
+{
+  "id": 1794420272866,
+  "name": "learned-on-site",
+  "title": "learned on site",
+  "description": "Customer lessons and generated output for this installation.",
+  "type": "path",
+  "tags": [
+    "learning"
+  ],
+  "paths": [
+    {
+      "name": "field-ranking",
+      "path": ".",
+      "type": "path"
+    },
+    {
+      "name": "question-rephrasing",
+      "path": ".",
+      "type": "path"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "search-quality-tests",
+      "path": ".",
+      "type": "path"
+    },
+    {
+      "name": "search-results",
+      "path": ".",
+      "type": "path"
+    }
+  ],
+  "path": "learning/learned-on-site"
+}

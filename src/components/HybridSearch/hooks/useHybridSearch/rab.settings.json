@@ -1,0 +1,50 @@
+{
+  "id": 1794412867606,
+  "name": "useHybridSearch",
+  "title": "useHybridSearch",
+  "description": "",
+  "type": "hook",
+  "tags": [
+    "react",
+    "hook"
+  ],
+  "file": "useHybridSearch.ts",
+  "path": "src/components/HybridSearch/hooks/useHybridSearch",
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "messagesApi.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "searchApi.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    },
+    {
+      "name": "useHybridSearch.ts",
+      "path": ".",
+      "type": "ts"
+    }
+  ]
+}

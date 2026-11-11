@@ -1,0 +1,14 @@
+{
+  "name": "container-main",
+  "title": "Main container",
+  "description": "Default content-panel skin: dark theme gradient, readable text, subtle border and rounded corners. Compose spacing, grid layout and depth effects separately.",
+  "type": "ui-atom",
+  "tags": [
+    "container"
+  ],
+  "settings": [],
+  "paths": [],
+  "file": "container-main.css",
+  "id": 1794247089883,
+  "path": "src/atoms/containers/container-main"
+}

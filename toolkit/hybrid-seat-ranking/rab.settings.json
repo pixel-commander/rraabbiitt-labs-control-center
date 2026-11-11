@@ -1,0 +1,220 @@
+{
+  "id": 1793154927344,
+  "name": "rab-hybrid-seat-ranking",
+  "title": "Hybrid Seat Ranking",
+  "description": "Field-aware record ranking, supervised feedback, rephrases and checkpoint comparisons.",
+  "type": "path",
+  "path": "toolkit/hybrid-seat-ranking",
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "README.txt",
+      "path": "tools/compare-ranking-checkpoints",
+      "type": "txt"
+    },
+    {
+      "name": "compare-ranking-checkpoints.ts",
+      "path": "tools/compare-ranking-checkpoints",
+      "type": "ts"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": "tools/compare-ranking-checkpoints",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "tools/compare-ranking-checkpoints",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "tools/compare-ranking-checkpoints",
+      "type": "yaml"
+    },
+    {
+      "name": "execute.ts",
+      "path": "tools",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": "tools/inspect-ranking-attention",
+      "type": "txt"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": "tools/inspect-ranking-attention",
+      "type": "json"
+    },
+    {
+      "name": "inspect-ranking-attention.ts",
+      "path": "tools/inspect-ranking-attention",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "tools/inspect-ranking-attention",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "tools/inspect-ranking-attention",
+      "type": "yaml"
+    },
+    {
+      "name": "learned_lessons.py",
+      "path": "tools",
+      "type": "py"
+    },
+    {
+      "name": "project-search.ts",
+      "path": "tools",
+      "type": "ts"
+    },
+    {
+      "name": "project_search.py",
+      "path": "tools",
+      "type": "py"
+    },
+    {
+      "name": "README.txt",
+      "path": "tools/search-hybrid-seat-ranking",
+      "type": "txt"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": "tools/search-hybrid-seat-ranking",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "tools/search-hybrid-seat-ranking",
+      "type": "json"
+    },
+    {
+      "name": "search-hybrid-seat-ranking.ts",
+      "path": "tools/search-hybrid-seat-ranking",
+      "type": "ts"
+    },
+    {
+      "name": "search_hybrid_seat_ranking.py",
+      "path": "tools/search-hybrid-seat-ranking",
+      "type": "py"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "tools/search-hybrid-seat-ranking",
+      "type": "yaml"
+    },
+    {
+      "name": "README.txt",
+      "path": "tools/train-field-feedback",
+      "type": "txt"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": "tools/train-field-feedback",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "tools/train-field-feedback",
+      "type": "json"
+    },
+    {
+      "name": "train-field-feedback.ts",
+      "path": "tools/train-field-feedback",
+      "type": "ts"
+    },
+    {
+      "name": "train_field_feedback.py",
+      "path": "tools/train-field-feedback",
+      "type": "py"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "tools/train-field-feedback",
+      "type": "yaml"
+    },
+    {
+      "name": "README.txt",
+      "path": "tools/train-hybrid-seat-ranking",
+      "type": "txt"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": "tools/train-hybrid-seat-ranking",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "tools/train-hybrid-seat-ranking",
+      "type": "json"
+    },
+    {
+      "name": "train-hybrid-seat-ranking.ts",
+      "path": "tools/train-hybrid-seat-ranking",
+      "type": "ts"
+    },
+    {
+      "name": "train_hybrid_seat_ranking.py",
+      "path": "tools/train-hybrid-seat-ranking",
+      "type": "py"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "tools/train-hybrid-seat-ranking",
+      "type": "yaml"
+    },
+    {
+      "name": "README.txt",
+      "path": "tools/tune-ranking-model",
+      "type": "txt"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": "tools/tune-ranking-model",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "tools/tune-ranking-model",
+      "type": "json"
+    },
+    {
+      "name": "tune-ranking-model.ts",
+      "path": "tools/tune-ranking-model",
+      "type": "ts"
+    },
+    {
+      "name": "tune_ranking_model.py",
+      "path": "tools/tune-ranking-model",
+      "type": "py"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "tools/tune-ranking-model",
+      "type": "yaml"
+    },
+    {
+      "name": "worker.py",
+      "path": "tools",
+      "type": "py"
+    }
+  ]
+}

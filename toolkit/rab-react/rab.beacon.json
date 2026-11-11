@@ -1,0 +1,20 @@
+{
+  "id": 1794151925547,
+  "name": "rab-react",
+  "title": "RAB React",
+  "description": "Beacon for this toolkit.",
+  "type": "toolkit",
+  "tags": [
+    "rraabbiitt",
+    "toolkit",
+    "react"
+  ],
+  "paths": [
+    {
+      "name": "local-sources",
+      "path": ".",
+      "type": "path"
+    }
+  ],
+  "path": "toolkit/rab-react"
+}

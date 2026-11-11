@@ -1,0 +1,50 @@
+{
+  "id": 1794398447056,
+  "name": "TopResult",
+  "title": "TopResult",
+  "description": "",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "TopResult.tsx",
+  "path": "src/components/SearchResponses/TopResult",
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "TopResult.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "TopResult.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "top-result.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

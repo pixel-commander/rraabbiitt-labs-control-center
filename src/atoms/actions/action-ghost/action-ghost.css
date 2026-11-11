@@ -1,0 +1,33 @@
+@layer atoms {
+  .action-ghost {
+    color: var(--color-primary);
+    background: var(--color-transparent);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-control);
+    font: var(--type-body);
+    cursor: pointer;
+  }
+  .action-ghost:hover {
+    background: var(--color-secondary-alt);
+  }
+  .action-ghost:active,
+  .action-ghost.is-active {
+    background: var(--color-tertiary);
+    color: var(--color-main-neg);
+  }
+  .action-ghost.is-selected {
+    background: var(--color-tertiary-alt);
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+  .action-ghost:focus-visible {
+    outline: var(--focus-ring);
+    outline-offset: var(--focus-offset);
+  }
+  .action-ghost:is(:disabled, [aria-disabled="true"]) {
+    color: var(--color-muted);
+    background: var(--color-secondary);
+    opacity: var(--disabled-opacity);
+    cursor: not-allowed;
+  }
+}

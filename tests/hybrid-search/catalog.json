@@ -1,0 +1,878 @@
+[
+  {
+    "id": 1789877167204,
+    "name": "new-react-navigation",
+    "title": "Create Navigation",
+    "description": "Create an accessible navigation component from unique ID, name, and destination rows. Add an optional grid and class name.",
+    "type": "tool",
+    "path": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-react-navigation",
+    "file": "new-react-navigation",
+    "record_key": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-react-navigation"
+  },
+  {
+    "id": 1790000000300,
+    "name": "new-react-project",
+    "title": "Create React Project",
+    "description": "Create a React starter project from the supplied name. It includes a Vite setup, home and style guide views, house settings, grid definitions, and example atoms. It does not install packages.",
+    "type": "tool",
+    "path": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-react-project",
+    "file": "new-react-project",
+    "record_key": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-react-project"
+  },
+  {
+    "id": 1790000000401,
+    "name": "new-react-component",
+    "title": "Create React Component",
+    "description": "Create a React component with types, styles, a hook, a demo, and settings. The tool accepts optional grid and class values.",
+    "type": "tool",
+    "path": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-react-component",
+    "file": "new-react-component",
+    "record_key": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-react-component"
+  },
+  {
+    "id": 1790000000402,
+    "name": "new-react-subcomponent",
+    "title": "Create Child Component",
+    "description": "Create a child component in its parent. It includes a type file and styles. Add an optional grid and CSS class.",
+    "type": "tool",
+    "path": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-react-subcomponent",
+    "file": "new-react-subcomponent",
+    "record_key": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-react-subcomponent"
+  },
+  {
+    "id": 1790031603502,
+    "name": "new-container-atom",
+    "title": "Create Container Atom",
+    "description": "Create a container atom with a demo and settings. Add optional CSS declarations that use shared project tokens.",
+    "type": "tool",
+    "path": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-container-atom",
+    "file": "new-container-atom",
+    "record_key": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-container-atom"
+  },
+  {
+    "id": 1790031603507,
+    "name": "new-action-atom",
+    "title": "Create Action Atom",
+    "description": "Create an action atom with a demo and settings. Add optional CSS declarations that use shared project tokens.",
+    "type": "tool",
+    "path": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-action-atom",
+    "file": "new-action-atom",
+    "record_key": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-action-atom"
+  },
+  {
+    "id": 1790031603525,
+    "name": "new-effect-atom",
+    "title": "Create Effect Atom",
+    "description": "Create an effect atom with a demo and settings. Add optional CSS declarations that use shared project tokens.",
+    "type": "tool",
+    "path": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-effect-atom",
+    "file": "new-effect-atom",
+    "record_key": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-effect-atom"
+  },
+  {
+    "id": 1790031603528,
+    "name": "new-grid-atom",
+    "title": "Create Grid Atom",
+    "description": "Create a named grid atom from one supported layout template. The tool saves its grid styles and settings.",
+    "type": "tool",
+    "path": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-grid-atom",
+    "file": "new-grid-atom",
+    "record_key": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-grid-atom"
+  },
+  {
+    "id": 1790784702601,
+    "name": "generate-world-id",
+    "title": "Generate World ID",
+    "description": "Create and return a numeric House ID. This generator does not create a registration record.",
+    "type": "tool",
+    "path": "toolkit/rab-world/generators/generate-world-id",
+    "file": "generate-world-id.ts",
+    "record_key": "toolkit/rab-world/generators/generate-world-id"
+  },
+  {
+    "id": 1791468954599,
+    "name": "new-settings-json",
+    "title": "Create Settings Record",
+    "description": "Create a settings record from the shared template. The tool assigns a new House ID and refuses to replace an existing file.",
+    "type": "tool",
+    "path": "toolkit/rab-world/scaffolds/new-settings-json",
+    "file": "new-settings-json.mjs",
+    "record_key": "toolkit/rab-world/scaffolds/new-settings-json"
+  },
+  {
+    "id": 1791518327961,
+    "name": "scaffolds",
+    "title": "React scaffolds",
+    "description": "Shared usage guidance for the migrated React scaffold packages.",
+    "type": "skill",
+    "path": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds",
+    "file": "use.skill.yaml",
+    "record_key": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/use.skill.yaml"
+  },
+  {
+    "id": 1791518659404,
+    "name": "new-react-component",
+    "title": "New Component",
+    "description": "Creates a React component, types, stylesheet and hook using the supplied values.",
+    "type": "skill",
+    "path": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-react-component",
+    "file": "use.skill.yaml",
+    "record_key": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-react-component/use.skill.yaml"
+  },
+  {
+    "id": 1791518659408,
+    "name": "new-react-subcomponent",
+    "title": "Sub Component",
+    "description": "Creates a structural React subcomponent with optional canonical grid and class string.",
+    "type": "skill",
+    "path": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-react-subcomponent",
+    "file": "use.skill.yaml",
+    "record_key": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-react-subcomponent/use.skill.yaml"
+  },
+  {
+    "id": 1791518659413,
+    "name": "new-react-page",
+    "title": "New Page",
+    "description": "Creates a React page with its stylesheet, hook and content template.",
+    "type": "skill",
+    "path": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-react-page",
+    "file": "use.skill.yaml",
+    "record_key": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-react-page/use.skill.yaml"
+  },
+  {
+    "id": 1791518659419,
+    "name": "new-react-navigation",
+    "title": "New Navigation",
+    "description": "Creates accessible React navigation from unique id, name and path rows.",
+    "type": "skill",
+    "path": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-react-navigation",
+    "file": "use.skill.yaml",
+    "record_key": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-react-navigation/use.skill.yaml"
+  },
+  {
+    "id": 1791518659423,
+    "name": "new-react-dashboard",
+    "title": "New Dashboard",
+    "description": "Creates a self-contained header-main React dashboard.",
+    "type": "skill",
+    "path": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-react-dashboard",
+    "file": "use.skill.yaml",
+    "record_key": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-react-dashboard/use.skill.yaml"
+  },
+  {
+    "id": 1791518659427,
+    "name": "new-react-project",
+    "title": "New React Project",
+    "description": "Creates a local React project from the included template.",
+    "type": "skill",
+    "path": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-react-project",
+    "file": "use.skill.yaml",
+    "record_key": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-react-project/use.skill.yaml"
+  },
+  {
+    "id": 1791518659432,
+    "name": "new-action-atom",
+    "title": "New Action Atom",
+    "description": "Creates a action-atom CSS atom with its demo and metadata.",
+    "type": "skill",
+    "path": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-action-atom",
+    "file": "use.skill.yaml",
+    "record_key": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-action-atom/use.skill.yaml"
+  },
+  {
+    "id": 1791518659436,
+    "name": "new-container-atom",
+    "title": "New Container Atom",
+    "description": "Creates a container-atom CSS atom with its demo and metadata.",
+    "type": "skill",
+    "path": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-container-atom",
+    "file": "use.skill.yaml",
+    "record_key": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-container-atom/use.skill.yaml"
+  },
+  {
+    "id": 1791518659441,
+    "name": "new-effect-atom",
+    "title": "New Effect Atom",
+    "description": "Creates a effect-atom CSS atom with its demo and metadata.",
+    "type": "skill",
+    "path": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-effect-atom",
+    "file": "use.skill.yaml",
+    "record_key": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-effect-atom/use.skill.yaml"
+  },
+  {
+    "id": 1791518659445,
+    "name": "new-grid-atom",
+    "title": "New Grid Atom",
+    "description": "Creates a named CSS grid from one of the included topology presets.",
+    "type": "skill",
+    "path": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-grid-atom",
+    "file": "use.skill.yaml",
+    "record_key": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-grid-atom/use.skill.yaml"
+  },
+  {
+    "id": 1791543035822,
+    "name": "react-component-scaffolds",
+    "title": "react-component-scaffolds",
+    "description": "Shared usage guidance for react-components.",
+    "type": "skill",
+    "path": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/react-components",
+    "file": "use.skill.yaml",
+    "record_key": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/react-components/use.skill.yaml"
+  },
+  {
+    "id": 1791543035829,
+    "name": "css-atom-scaffolds",
+    "title": "css-atom-scaffolds",
+    "description": "Shared usage guidance for css-atoms.",
+    "type": "skill",
+    "path": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/css-atoms",
+    "file": "use.skill.yaml",
+    "record_key": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/css-atoms/use.skill.yaml"
+  },
+  {
+    "id": 1791543035832,
+    "name": "css-atom-skins",
+    "title": "css-atom-skins",
+    "description": "Shared usage guidance for skins.",
+    "type": "skill",
+    "path": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/css-atoms/skins",
+    "file": "use.skill.yaml",
+    "record_key": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/css-atoms/skins/use.skill.yaml"
+  },
+  {
+    "id": 1791543035835,
+    "name": "css-atom-presets",
+    "title": "css-atom-presets",
+    "description": "Shared usage guidance for presets.",
+    "type": "skill",
+    "path": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/css-atoms/presets",
+    "file": "use.skill.yaml",
+    "record_key": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/css-atoms/presets/use.skill.yaml"
+  },
+  {
+    "id": 1791766641354,
+    "name": "new-sqlite-db",
+    "title": "Create SQLite Database",
+    "description": "Create an empty SQLite file and its support folders. It has no tables or records.",
+    "type": "tool",
+    "path": "toolkit/tools/new-sqlite-db",
+    "file": "new-sqlite-db.mjs",
+    "record_key": "toolkit/tools/new-sqlite-db"
+  },
+  {
+    "id": 1791766641355,
+    "name": "use-new-sqlite-db",
+    "title": "new sqlite db",
+    "type": "skill",
+    "path": "toolkit/tools/new-sqlite-db",
+    "file": "use.skill.yaml",
+    "record_key": "toolkit/tools/new-sqlite-db/use.skill.yaml"
+  },
+  {
+    "id": 1791766641356,
+    "name": "new-db-table",
+    "title": "Create Database Table",
+    "description": "Create one empty table with standard House columns in an existing SQLite database. The table has no rows.",
+    "type": "tool",
+    "path": "toolkit/tools/new-db-table",
+    "file": "new-db-table.mjs",
+    "record_key": "toolkit/tools/new-db-table"
+  },
+  {
+    "id": 1791766641357,
+    "name": "use-new-db-table",
+    "title": "new db table",
+    "type": "skill",
+    "path": "toolkit/tools/new-db-table",
+    "file": "use.skill.yaml",
+    "record_key": "toolkit/tools/new-db-table/use.skill.yaml"
+  },
+  {
+    "id": 1791834915266,
+    "name": "generate-world-database",
+    "title": "Create World Database",
+    "description": "Create a new catalog database from the verified template. The tool refuses to replace an existing file.",
+    "type": "tool",
+    "path": "toolkit/tools/generate-world-database",
+    "file": "generate-world-database.ts",
+    "record_key": "toolkit/tools/generate-world-database"
+  },
+  {
+    "id": 1791853637888,
+    "name": "new-skill-flow",
+    "title": "Create Skill Flow",
+    "description": "Create a use or enhance skill file with required metadata. The tool assigns an ID and refuses to replace an existing file.",
+    "type": "tool",
+    "path": "toolkit/rab-world/scaffolds/new-skill-flow",
+    "file": "new-skill-flow.ts",
+    "record_key": "toolkit/rab-world/scaffolds/new-skill-flow"
+  },
+  {
+    "id": 1791853637988,
+    "name": "new-skill-flow",
+    "title": "New skill flow",
+    "description": "Create a standalone YAML skill from the owned template.",
+    "type": "skill",
+    "path": "toolkit/rab-world/scaffolds/new-skill-flow",
+    "file": "use.skill.yaml",
+    "record_key": "toolkit/rab-world/scaffolds/new-skill-flow/use.skill.yaml"
+  },
+  {
+    "id": 1793126984423,
+    "name": "running-the-app",
+    "title": "Running the app",
+    "description": "CLI for running the app",
+    "type": "skill",
+    "path": "skills/project/cli/running-the-app",
+    "file": "use.skill.yaml",
+    "record_key": "skills/project/cli/running-the-app/use.skill.yaml",
+    "instructions": "Run this command from the project root, which contains package.json:\n\nnpm run dev\n\nOpen the URL printed by Vite and choose World Search. The host and port come from this project's current configuration. Stop the server with Ctrl+C.\n"
+  },
+  {
+    "id": 1793138966734,
+    "name": "runner-new-react-project-kit",
+    "title": "New React Project Kit",
+    "description": "Creates a React project, runs npm install, then starts npm run dev. Returns tracked creation, installation and local-server readiness results.",
+    "type": "runner",
+    "path": "../rraabbiitt-toolkits/toolkits/rab-react/runners/runner-new-react-project-kit",
+    "file": "runner-new-react-project-kit.ts",
+    "record_key": "../rraabbiitt-toolkits/toolkits/rab-react/runners/runner-new-react-project-kit"
+  },
+  {
+    "id": 1793138966741,
+    "name": "runner-new-component",
+    "title": "New Component",
+    "description": "Creates a new component using the project settings to find its destination. Returns the new settings record and the files created so later steps can use them.",
+    "type": "runner",
+    "path": "../rraabbiitt-toolkits/toolkits/rab-react/runners/runner-new-component",
+    "file": "runner-new-component.ts",
+    "record_key": "../rraabbiitt-toolkits/toolkits/rab-react/runners/runner-new-component"
+  },
+  {
+    "id": 1793138966746,
+    "name": "runner-new-subcomponent",
+    "title": "New Subcomponent",
+    "description": "Creates a new subcomponent using the project settings to find its destination. Returns the new settings record and the files created so later steps can use them.",
+    "type": "runner",
+    "path": "../rraabbiitt-toolkits/toolkits/rab-react/runners/runner-new-subcomponent",
+    "file": "runner-new-subcomponent.ts",
+    "record_key": "../rraabbiitt-toolkits/toolkits/rab-react/runners/runner-new-subcomponent"
+  },
+  {
+    "id": 1793138966750,
+    "name": "runner-new-atom",
+    "title": "New Atom",
+    "description": "Creates a new atom using the project settings to find its destination. Returns the new settings record and the files created so later steps can use them.",
+    "type": "runner",
+    "path": "../rraabbiitt-toolkits/toolkits/rab-react/runners/runner-new-atom",
+    "file": "runner-new-atom.ts",
+    "record_key": "../rraabbiitt-toolkits/toolkits/rab-react/runners/runner-new-atom"
+  },
+  {
+    "id": 1793138966755,
+    "name": "runner-new-page",
+    "title": "New Page",
+    "description": "Creates a new page using the project settings to find its destination. Returns the new settings record and the files created so later steps can use them.",
+    "type": "runner",
+    "path": "../rraabbiitt-toolkits/toolkits/rab-react/runners/runner-new-page",
+    "file": "runner-new-page.ts",
+    "record_key": "../rraabbiitt-toolkits/toolkits/rab-react/runners/runner-new-page"
+  },
+  {
+    "id": 1793138966759,
+    "name": "runner-new-dashboard",
+    "title": "New Dashboard",
+    "description": "Creates a new dashboard using the project settings to find its destination. Returns the new settings record and the files created so later steps can use them.",
+    "type": "runner",
+    "path": "../rraabbiitt-toolkits/toolkits/rab-react/runners/runner-new-dashboard",
+    "file": "runner-new-dashboard.ts",
+    "record_key": "../rraabbiitt-toolkits/toolkits/rab-react/runners/runner-new-dashboard"
+  },
+  {
+    "id": 1793143585571,
+    "name": "use-runner-new-atom",
+    "title": "New Atom",
+    "type": "skill",
+    "path": "../rraabbiitt-toolkits/toolkits/rab-react/runners/runner-new-atom",
+    "file": "use.skill.yaml",
+    "record_key": "../rraabbiitt-toolkits/toolkits/rab-react/runners/runner-new-atom/use.skill.yaml"
+  },
+  {
+    "id": 1793143585572,
+    "name": "use-runner-new-component",
+    "title": "New Component",
+    "type": "skill",
+    "path": "../rraabbiitt-toolkits/toolkits/rab-react/runners/runner-new-component",
+    "file": "use.skill.yaml",
+    "record_key": "../rraabbiitt-toolkits/toolkits/rab-react/runners/runner-new-component/use.skill.yaml"
+  },
+  {
+    "id": 1793143585573,
+    "name": "use-runner-new-dashboard",
+    "title": "New Dashboard",
+    "type": "skill",
+    "path": "../rraabbiitt-toolkits/toolkits/rab-react/runners/runner-new-dashboard",
+    "file": "use.skill.yaml",
+    "record_key": "../rraabbiitt-toolkits/toolkits/rab-react/runners/runner-new-dashboard/use.skill.yaml"
+  },
+  {
+    "id": 1793143585574,
+    "name": "use-runner-new-page",
+    "title": "New Page",
+    "type": "skill",
+    "path": "../rraabbiitt-toolkits/toolkits/rab-react/runners/runner-new-page",
+    "file": "use.skill.yaml",
+    "record_key": "../rraabbiitt-toolkits/toolkits/rab-react/runners/runner-new-page/use.skill.yaml"
+  },
+  {
+    "id": 1793143585575,
+    "name": "use-runner-new-react-project-kit",
+    "title": "New React Project Kit",
+    "type": "skill",
+    "path": "../rraabbiitt-toolkits/toolkits/rab-react/runners/runner-new-react-project-kit",
+    "file": "use.skill.yaml",
+    "record_key": "../rraabbiitt-toolkits/toolkits/rab-react/runners/runner-new-react-project-kit/use.skill.yaml"
+  },
+  {
+    "id": 1793143585576,
+    "name": "use-runner-new-subcomponent",
+    "title": "New Subcomponent",
+    "type": "skill",
+    "path": "../rraabbiitt-toolkits/toolkits/rab-react/runners/runner-new-subcomponent",
+    "file": "use.skill.yaml",
+    "record_key": "../rraabbiitt-toolkits/toolkits/rab-react/runners/runner-new-subcomponent/use.skill.yaml"
+  },
+  {
+    "id": 1793154927345,
+    "name": "search-hybrid-seat-ranking",
+    "title": "Search Hybrid Records",
+    "description": "Search current records or one saved checkpoint. Results show field scores and training evidence. The tool does not execute records.",
+    "type": "tool",
+    "path": "toolkit/hybrid-seat-ranking/tools/search-hybrid-seat-ranking",
+    "file": "search-hybrid-seat-ranking.ts",
+    "record_key": "toolkit/hybrid-seat-ranking/tools/search-hybrid-seat-ranking"
+  },
+  {
+    "id": 1793154927346,
+    "name": "use-search-hybrid-seat-ranking",
+    "title": "Searches with per-field BM25, frozen semantic and supervised RRF channels plus a relative reranker.",
+    "description": "Searches with per-field BM25, frozen semantic and supervised RRF channels plus a relative reranker.",
+    "type": "skill",
+    "path": "toolkit/hybrid-seat-ranking/tools/search-hybrid-seat-ranking",
+    "file": "use.skill.yaml",
+    "record_key": "toolkit/hybrid-seat-ranking/tools/search-hybrid-seat-ranking/use.skill.yaml"
+  },
+  {
+    "id": 1793154927347,
+    "name": "train-hybrid-seat-ranking",
+    "title": "Build Retrieval Checkpoint",
+    "description": "Build a retrieval checkpoint from approved field feedback. The default mode activates it; candidate mode leaves the active checkpoint unchanged. Pending suggestions remain unapproved.",
+    "type": "tool",
+    "path": "toolkit/hybrid-seat-ranking/tools/train-hybrid-seat-ranking",
+    "file": "train-hybrid-seat-ranking.ts",
+    "record_key": "toolkit/hybrid-seat-ranking/tools/train-hybrid-seat-ranking"
+  },
+  {
+    "id": 1793154927348,
+    "name": "use-train-hybrid-seat-ranking",
+    "title": "Indexes supervised third-channel query/field evidence and saves checkpoints for frozen BM25/semantic/RRF models and reranking.",
+    "description": "Indexes supervised third-channel query/field evidence and saves checkpoints for frozen BM25/semantic/RRF models and reranking.",
+    "type": "skill",
+    "path": "toolkit/hybrid-seat-ranking/tools/train-hybrid-seat-ranking",
+    "file": "use.skill.yaml",
+    "record_key": "toolkit/hybrid-seat-ranking/tools/train-hybrid-seat-ranking/use.skill.yaml"
+  },
+  {
+    "id": 1793154927349,
+    "name": "train-field-feedback",
+    "title": "Save Field Feedback",
+    "description": "Save a human judgment for a query and result field. The tool records approved feedback and builds a retrieval checkpoint.",
+    "type": "tool",
+    "path": "toolkit/hybrid-seat-ranking/tools/train-field-feedback",
+    "file": "train-field-feedback.ts",
+    "record_key": "toolkit/hybrid-seat-ranking/tools/train-field-feedback"
+  },
+  {
+    "id": 1793154927350,
+    "name": "use-train-field-feedback",
+    "title": "Records an explicit user field judgment or rephrase and trains supervised field/query evidence.",
+    "description": "Records an explicit user field judgment or rephrase and trains supervised field/query evidence.",
+    "type": "skill",
+    "path": "toolkit/hybrid-seat-ranking/tools/train-field-feedback",
+    "file": "use.skill.yaml",
+    "record_key": "toolkit/hybrid-seat-ranking/tools/train-field-feedback/use.skill.yaml"
+  },
+  {
+    "id": 1793210509222,
+    "name": "refresh-world-database",
+    "title": "Refresh Search Catalog",
+    "description": "Update the search database from registered source locations. Keep row IDs, remove stale rows, and do not train a model.",
+    "type": "tool",
+    "path": "toolkit/tools/refresh-world-database",
+    "file": "refresh-world-database.ts",
+    "record_key": "toolkit/tools/refresh-world-database"
+  },
+  {
+    "id": 1793210509223,
+    "name": "use-refresh-world-database",
+    "title": "Refresh world database",
+    "description": "Refresh or reindex search after adding or changing components, tools, records, or skills. Update the SQLite database from folders in root rab.project.json. This does not train the model.",
+    "type": "skill",
+    "path": "toolkit/tools/refresh-world-database",
+    "file": "use.skill.yaml",
+    "record_key": "toolkit/tools/refresh-world-database/use.skill.yaml"
+  },
+  {
+    "id": 1793213000002,
+    "name": "runner-use-tool",
+    "title": "Search, load, and run a RAB World tool",
+    "description": "Searches registered tools and runners by query, loads a selected tool's current registration and adjacent skill instructions by House ID, or executes a selected registered tool or runner. Uses runner-tooling-and-tracking through runTools for flat ordered execution records.",
+    "type": "runner",
+    "path": "toolkit/rab-world/runners/runner-use-tool",
+    "file": "runner-use-tool.ts",
+    "record_key": "toolkit/rab-world/runners/runner-use-tool"
+  },
+  {
+    "id": 1793221495963,
+    "name": "tune-ranking-model",
+    "title": "Tune Ranking Model",
+    "description": "Train cross-encoder weights from reviewed answer grades. The tool saves a candidate. Activation is a separate step after evaluation.",
+    "type": "tool",
+    "path": "toolkit/hybrid-seat-ranking/tools/tune-ranking-model",
+    "file": "tune-ranking-model.ts",
+    "record_key": "toolkit/hybrid-seat-ranking/tools/tune-ranking-model"
+  },
+  {
+    "id": 1793221495964,
+    "name": "use-tune-ranking-model",
+    "title": "Fine-tune ranking model",
+    "description": "Fine-tune the local cross-encoder ranking model from reviewed graded answers. Retain versioned training chunks, exact dataset snapshots, changed model weights, held-out evaluation, progress, disk sizes and candidate checkpoints. Read status without inference; activate only candidates passing evaluation.",
+    "type": "skill",
+    "path": "toolkit/hybrid-seat-ranking/tools/tune-ranking-model",
+    "file": "use.skill.yaml",
+    "record_key": "toolkit/hybrid-seat-ranking/tools/tune-ranking-model/use.skill.yaml"
+  },
+  {
+    "id": 1793225821352,
+    "name": "compare-ranking-checkpoints",
+    "title": "Compare Ranking Checkpoints",
+    "description": "Compare active and candidate search results for one saved tuning run. The report uses the same catalog and judged answers. It does not activate a candidate.",
+    "type": "tool",
+    "path": "toolkit/hybrid-seat-ranking/tools/compare-ranking-checkpoints",
+    "file": "compare-ranking-checkpoints.ts",
+    "record_key": "toolkit/hybrid-seat-ranking/tools/compare-ranking-checkpoints"
+  },
+  {
+    "id": 1793225821360,
+    "name": "inspect-ranking-attention",
+    "title": "Inspect Ranking Attention",
+    "description": "Inspect one attention layer and head for a question and document. Choose active or candidate weights. The report shows tokens and any input truncation.",
+    "type": "tool",
+    "path": "toolkit/hybrid-seat-ranking/tools/inspect-ranking-attention",
+    "file": "inspect-ranking-attention.ts",
+    "record_key": "toolkit/hybrid-seat-ranking/tools/inspect-ranking-attention"
+  },
+  {
+    "id": 1793225862869,
+    "name": "use-compare-ranking-checkpoints",
+    "title": "compare-ranking-checkpoints",
+    "description": "Compare active and candidate search rankings on the same saved catalog and held-out whole-answer judgments. Reports gains and regressions without activation.",
+    "type": "skill",
+    "path": "toolkit/hybrid-seat-ranking/tools/compare-ranking-checkpoints",
+    "file": "use.skill.yaml",
+    "record_key": "toolkit/hybrid-seat-ranking/tools/compare-ranking-checkpoints/use.skill.yaml"
+  },
+  {
+    "id": 1793225862870,
+    "name": "use-inspect-ranking-attention",
+    "title": "inspect-ranking-attention",
+    "description": "Inspect one cross-encoder attention layer/head for a question and answer using active or candidate weights. Returns token labels and measured attention, with explicit truncation.",
+    "type": "skill",
+    "path": "toolkit/hybrid-seat-ranking/tools/inspect-ranking-attention",
+    "file": "use.skill.yaml",
+    "record_key": "toolkit/hybrid-seat-ranking/tools/inspect-ranking-attention/use.skill.yaml"
+  },
+  {
+    "id": 1793225862871,
+    "name": "use-runner-use-tool",
+    "description": "Search for, inspect, and invoke a registered RAB World tool or runner.",
+    "type": "skill",
+    "path": "toolkit/rab-world/runners/runner-use-tool",
+    "file": "use.skill.yaml",
+    "record_key": "toolkit/rab-world/runners/runner-use-tool/use.skill.yaml"
+  },
+  {
+    "id": 1793617400001,
+    "name": "use-generate-world-database",
+    "title": "Generate world database",
+    "type": "skill",
+    "path": "toolkit/tools/generate-world-database",
+    "file": "use.skill.yaml",
+    "record_key": "toolkit/tools/generate-world-database/use.skill.yaml"
+  },
+  {
+    "id": 1793676793815,
+    "name": "export-search-catalog",
+    "title": "Export Search Catalog",
+    "description": "Save indexed records and skills as a JSON search catalog. The tool reads the database and does not change it.",
+    "type": "tool",
+    "path": "toolkit/tools/export-search-catalog",
+    "file": "export-search-catalog.ts",
+    "record_key": "toolkit/tools/export-search-catalog"
+  },
+  {
+    "id": 1793676793915,
+    "name": "use-export-search-catalog",
+    "title": "export-search-catalog",
+    "description": "Export indexed records and skills as a search catalog.",
+    "type": "skill",
+    "path": "toolkit/tools/export-search-catalog",
+    "file": "use.skill.yaml",
+    "record_key": "toolkit/tools/export-search-catalog/use.skill.yaml"
+  },
+  {
+    "id": 1793979336055,
+    "name": "new-world-beacon-json",
+    "title": "Create Beacon Record",
+    "description": "Create a beacon record from its template. The tool assigns an ID and refuses to replace an existing file.",
+    "type": "tool",
+    "path": "toolkit/rab-world/scaffolds/new-world-beacon-json",
+    "file": "new-world-beacon-json.ts",
+    "record_key": "toolkit/rab-world/scaffolds/new-world-beacon-json"
+  },
+  {
+    "id": 1793979336057,
+    "name": "new-world-beacon-json",
+    "title": "New world beacon JSON",
+    "description": "Create a settings-shaped rab.beacon.json in a folder.",
+    "type": "skill",
+    "path": "toolkit/rab-world/scaffolds/new-world-beacon-json",
+    "file": "use.skill.yaml",
+    "record_key": "toolkit/rab-world/scaffolds/new-world-beacon-json/use.skill.yaml"
+  },
+  {
+    "id": 1793981262988,
+    "name": "refresh-project-json",
+    "title": "Refresh Project Records",
+    "description": "Refresh project entries from beacon files in the selected folder. Keep entries that do not match a discovered beacon.",
+    "type": "tool",
+    "path": "toolkit/rab-world/tools/refresh-project-json",
+    "file": "refresh-project-json.ts",
+    "record_key": "toolkit/rab-world/tools/refresh-project-json"
+  },
+  {
+    "id": 1793981262992,
+    "name": "refresh-project-json",
+    "title": "Refresh project JSON",
+    "description": "Refresh beacon summaries while preserving unmatched configured path destinations.",
+    "type": "skill",
+    "path": "toolkit/rab-world/tools/refresh-project-json",
+    "file": "use.skill.yaml",
+    "record_key": "toolkit/rab-world/tools/refresh-project-json/use.skill.yaml"
+  },
+  {
+    "id": 1793981262996,
+    "name": "refresh-beacon-json",
+    "title": "Refresh Beacon Records",
+    "description": "Refresh beacon entries from settings files in the selected folder. Keep the beacon ID and store absolute source paths.",
+    "type": "tool",
+    "path": "toolkit/rab-world/tools/refresh-beacon-json",
+    "file": "refresh-beacon-json.ts",
+    "record_key": "toolkit/rab-world/tools/refresh-beacon-json"
+  },
+  {
+    "id": 1793981262998,
+    "name": "refresh-beacon-json",
+    "title": "Refresh beacon JSON",
+    "description": "Refresh absolute beacon paths from settings files found recursively.",
+    "type": "skill",
+    "path": "toolkit/rab-world/tools/refresh-beacon-json",
+    "file": "use.skill.yaml",
+    "record_key": "toolkit/rab-world/tools/refresh-beacon-json/use.skill.yaml"
+  },
+  {
+    "id": 1793981263000,
+    "name": "refresh-settings-json",
+    "title": "Refresh Settings Record",
+    "description": "Refresh settings entries from files in the selected folder. Keep the settings ID and replace the entry list.",
+    "type": "tool",
+    "path": "toolkit/rab-world/tools/refresh-settings-json",
+    "file": "refresh-settings-json.ts",
+    "record_key": "toolkit/rab-world/tools/refresh-settings-json"
+  },
+  {
+    "id": 1793981263002,
+    "name": "refresh-settings-json",
+    "title": "Refresh settings JSON",
+    "description": "Replace settings paths with all files found recursively.",
+    "type": "skill",
+    "path": "toolkit/rab-world/tools/refresh-settings-json",
+    "file": "use.skill.yaml",
+    "record_key": "toolkit/rab-world/tools/refresh-settings-json/use.skill.yaml"
+  },
+  {
+    "id": 1793984237830,
+    "name": "new-world-project-json",
+    "title": "Create Project Record",
+    "description": "Create a project record from its template. The tool assigns an ID and refuses to replace an existing file.",
+    "type": "tool",
+    "path": "toolkit/rab-world/scaffolds/new-world-project-json",
+    "file": "new-world-project-json.ts",
+    "record_key": "toolkit/rab-world/scaffolds/new-world-project-json"
+  },
+  {
+    "id": 1793984237831,
+    "name": "new-world-project-json",
+    "title": "New world project JSON",
+    "description": "Create a settings-shaped rab.project.json in a folder.",
+    "type": "skill",
+    "path": "toolkit/rab-world/scaffolds/new-world-project-json",
+    "file": "use.skill.yaml",
+    "record_key": "toolkit/rab-world/scaffolds/new-world-project-json/use.skill.yaml"
+  },
+  {
+    "id": 1793984711136,
+    "name": "runner-refresh-world-json",
+    "title": "Refresh world JSON",
+    "description": "Refresh discovered beacons and projects. In world mode, update rab.world.json after all refreshes succeed.",
+    "type": "runner",
+    "path": "toolkit/rab-world/runners/runner-refresh-world-json",
+    "file": "runner-refresh-world-json.ts",
+    "record_key": "toolkit/rab-world/runners/runner-refresh-world-json"
+  },
+  {
+    "id": 1793984711137,
+    "name": "runner-refresh-world-json",
+    "title": "Refresh world JSON",
+    "type": "skill",
+    "path": "toolkit/rab-world/runners/runner-refresh-world-json",
+    "file": "use.skill.yaml",
+    "record_key": "toolkit/rab-world/runners/runner-refresh-world-json/use.skill.yaml"
+  },
+  {
+    "id": 1793987131753,
+    "name": "refresh-settings-json-paths",
+    "title": "Refresh settings JSON paths",
+    "description": "Find all rab.settings.json files recursively, refresh each, and return their collected tool results.",
+    "type": "runner",
+    "path": "toolkit/rab-world/runners/refresh-settings-json-paths",
+    "file": "refresh-settings-json-paths.ts",
+    "record_key": "toolkit/rab-world/runners/refresh-settings-json-paths"
+  },
+  {
+    "id": 1793987131754,
+    "name": "refresh-settings-json-paths",
+    "title": "Refresh settings JSON paths",
+    "type": "skill",
+    "path": "toolkit/rab-world/runners/refresh-settings-json-paths",
+    "file": "use.skill.yaml",
+    "record_key": "toolkit/rab-world/runners/refresh-settings-json-paths/use.skill.yaml"
+  },
+  {
+    "id": 1794005588365,
+    "name": "generate-dependencies.manifest-json",
+    "title": "Build Import Manifest",
+    "description": "List relative imports that lead outside each selected component. The tool writes a manifest in each component folder. It does not resolve modules.",
+    "type": "tool",
+    "path": "../rraabbiitt-toolkits/toolkits/rab-react/tools/generate-dependencies.manifest-json",
+    "file": "generate-dependencies.manifest-json.ts",
+    "record_key": "../rraabbiitt-toolkits/toolkits/rab-react/tools/generate-dependencies.manifest-json"
+  },
+  {
+    "id": 1794005588366,
+    "name": "generate-dependencies.manifest-json",
+    "title": "Generate dependency manifests",
+    "description": "Overwrite component manifests with outward relative imports.",
+    "type": "skill",
+    "path": "../rraabbiitt-toolkits/toolkits/rab-react/tools/generate-dependencies.manifest-json",
+    "file": "use.skill.yaml",
+    "record_key": "../rraabbiitt-toolkits/toolkits/rab-react/tools/generate-dependencies.manifest-json/use.skill.yaml"
+  },
+  {
+    "id": 1794366620615,
+    "name": "runner-render-factory-composition",
+    "title": "Render factory composition",
+    "description": "Creates a component through the registered component runner, then replaces its returned JSX and stylesheet with generated composition strings.",
+    "type": "runner",
+    "path": "../rraabbiitt-toolkits/toolkits/rab-react/runners/runner-render-factory-composition",
+    "file": "runner-render-factory-composition.ts",
+    "record_key": "../rraabbiitt-toolkits/toolkits/rab-react/runners/runner-render-factory-composition"
+  },
+  {
+    "id": 1794366698969,
+    "name": "runner-render-factory-composition",
+    "title": "Render factory composition",
+    "type": "skill",
+    "path": "../rraabbiitt-toolkits/toolkits/rab-react/runners/runner-render-factory-composition",
+    "file": "use.skill.yaml",
+    "record_key": "../rraabbiitt-toolkits/toolkits/rab-react/runners/runner-render-factory-composition/use.skill.yaml"
+  },
+  {
+    "id": 1794409021587,
+    "name": "new-settings-json",
+    "title": "Create settings",
+    "description": "Create one settings record.",
+    "type": "skill",
+    "path": "toolkit/rab-world/scaffolds/new-settings-json",
+    "file": "use.skill.yaml",
+    "record_key": "toolkit/rab-world/scaffolds/new-settings-json/use.skill.yaml"
+  },
+  {
+    "id": 1794409148594,
+    "name": "generate-world-id",
+    "title": "Generate ID",
+    "description": "Generate one numeric House ID.",
+    "type": "skill",
+    "path": "toolkit/rab-world/generators/generate-world-id",
+    "file": "use.skill.yaml",
+    "record_key": "toolkit/rab-world/generators/generate-world-id/use.skill.yaml"
+  },
+  {
+    "id": 1794415784109,
+    "name": "new-world-tool",
+    "title": "New World Tool",
+    "description": "Generate a tool implementation and settings with automatic best-effort usage reporting.",
+    "type": "tool",
+    "path": "toolkit/scaffolds/new-world-tool",
+    "file": "new-world-tool.mjs",
+    "record_key": "toolkit/scaffolds/new-world-tool"
+  },
+  {
+    "id": 1794415784110,
+    "name": "new-world-tool",
+    "type": "skill",
+    "path": "toolkit/scaffolds/new-world-tool",
+    "file": "use.skill.yaml",
+    "record_key": "toolkit/scaffolds/new-world-tool/use.skill.yaml"
+  },
+  {
+    "id": 1794415890515,
+    "name": "runner-world-tooling",
+    "title": "World Tooling Runner",
+    "description": "Execute an array of runs with each tool return and numeric start/end timestamps.",
+    "type": "runner",
+    "path": "toolkit/runners/runner-world-tooling",
+    "file": "runner-world-tooling.ts",
+    "record_key": "toolkit/runners/runner-world-tooling"
+  },
+  {
+    "id": 1830000000001,
+    "name": "new-react-page",
+    "title": "Create Page",
+    "description": "Create a page component with styles, a hook, and initial content. Supplied children take precedence over the content value.",
+    "type": "tool",
+    "path": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-react-page",
+    "file": "new-react-page",
+    "record_key": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-react-page"
+  },
+  {
+    "id": 1830000000006,
+    "name": "new-react-dashboard",
+    "title": "Create Dashboard",
+    "description": "Create a dashboard with a header and main area. The current template includes styles and a hook and supports one layout.",
+    "type": "tool",
+    "path": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-react-dashboard",
+    "file": "new-react-dashboard",
+    "record_key": "../rraabbiitt-toolkits/toolkits/rab-react/scaffolds/new-react-dashboard"
+  }
+]

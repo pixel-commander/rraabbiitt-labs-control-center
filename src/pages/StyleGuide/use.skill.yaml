@@ -1,0 +1,28 @@
+schema: 1
+intent: use
+owner:
+  id: 1794247089699
+id: 1794408973383
+name: StyleGuidePage
+title: Use StyleGuidePage
+description: Props, defaults and callbacks for StyleGuidePage.
+type: skill
+path: C:\rraabbiitt-hq\rraabbiitt-labs-control-center\src\pages\StyleGuide
+tags: []
+implementation: []
+context: []
+inputs: {}
+outputs: {}
+instructions: |-
+  Props
+  None.
+
+  Defaults
+  No prop defaults.
+
+  Callbacks and prop behavior
+  No props or callbacks.
+checks: []
+examples: []
+routes: []
+provenance: []

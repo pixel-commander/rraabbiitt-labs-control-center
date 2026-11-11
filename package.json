@@ -1,0 +1,39 @@
+{
+  "name": "rraabbiitt-labs-control-center",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "test:hybrid-baseline": "node tests/hybrid-search/run-baseline.mjs",
+    "preview": "vite preview",
+    "setup": "node scripts/setup.mjs",
+    "db:setup": "node db/setup.mjs",
+    "ranker:setup": "pwsh -NoProfile -File packages/portable-search-ranker/setup.ps1",
+    "ranker:uninstall": "node scripts/uninstall-ranker.mjs",
+    "ranker:search": "node scripts/ranker.mjs",
+    "ranker:search:example": "node scripts/ranker.mjs --catalog data/catalog.example.json --base",
+    "mcp": "node scripts/mcp.mjs",
+    "hybrid:setup": "node scripts/setup-hybrid.mjs",
+    "audit:portable": "node scripts/audit-portability.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/node": "^2.1.2",
+    "@modelcontextprotocol/server": "^2.4.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "yaml": "^2.9.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@vitejs/plugin-react": "5.2.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.0"
+  }
+}

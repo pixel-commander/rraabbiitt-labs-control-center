@@ -1,0 +1,30 @@
+schema: 1
+intent: use
+id: 1791940045421
+name: finders
+title: Finders
+description: Locate and return matching subjects without modifying them.
+type: skill
+path: skills/toolkits/tools/finders
+tags:
+  - guidance
+  - toolkits
+implementation: []
+context:
+  - use: 1791940045227
+    path: skills/toolkits/tools/use.skill.yaml
+    reason: Read the parent guidance before this focused branch.
+inputs: {}
+outputs: {}
+instructions:
+  A finder locates subjects within an explicit scope using its declared matching rules.
+  Read the intended source of truth and do not silently substitute a filesystem scan for a database
+  lookup. Use query consistently where that is the declared search field. Return matching House path
+  or record values with enough identity and location to use the result. No matches is a valid empty
+  result, distinct from an inaccessible source or malformed request. Preserve ordering and
+  pagination when promised. Do not alter records, refresh indexes or execute the found subjects as a
+  side effect.
+checks: []
+examples: []
+routes: []
+provenance: []

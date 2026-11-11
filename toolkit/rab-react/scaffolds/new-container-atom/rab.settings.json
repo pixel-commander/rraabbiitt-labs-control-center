@@ -1,0 +1,80 @@
+{
+  "id": 1790031603502,
+  "name": "new-container-atom",
+  "title": "Create Container Atom",
+  "description": "Create a container atom with a demo and settings. Add optional CSS declarations that use shared project tokens.",
+  "type": "tool",
+  "path": "toolkit/rab-react/scaffolds/new-container-atom",
+  "file": "new-container-atom",
+  "parent": 1791518327955,
+  "tags": [
+    "rab-react",
+    "scaffold"
+  ],
+  "settings": [
+    {
+      "type": "string",
+      "name": "name",
+      "title": "Atom Name",
+      "description": "Atom name; container- is added once. Repeated leading prefixes are collapsed.",
+      "required": true
+    },
+    {
+      "type": "string",
+      "name": "title",
+      "title": "Title",
+      "description": "Optional display title for the generated container atom; defaults to its name.",
+      "required": false
+    },
+    {
+      "type": "string",
+      "name": "description",
+      "title": "Description",
+      "description": "Optional description for the generated container atom.",
+      "required": false
+    },
+    {
+      "type": "string",
+      "name": "path",
+      "title": "Atoms Folder",
+      "description": "Parent folder that will contain the new named atom folder.",
+      "required": true
+    },
+    {
+      "type": "string",
+      "name": "styles",
+      "title": "Base Skin",
+      "description": "Optional CSS skin declarations using shared project tokens. Components own layout; supply declarations without selectors or braces.",
+      "required": false,
+      "default": ""
+    },
+    {
+      "name": "name_prefix",
+      "type": "string",
+      "description": "Optional namespace prefix placed before the category, such as test-action-name.",
+      "required": false
+    },
+    {
+      "type": "array",
+      "name": "tags",
+      "title": "Tags",
+      "description": "Optional saved record tags.",
+      "required": false
+    }
+  ],
+  "paths": [
+    {
+      "id": 1791518659436,
+      "name": "new-container-atom",
+      "path": "toolkits/rab-react/scaffolds/new-container-atom",
+      "file": "use.skill.yaml",
+      "type": "use skill"
+    }
+  ],
+  "skills": [
+    {
+      "id": 1791518659436,
+      "path": "toolkits/rab-react/scaffolds/new-container-atom/use.skill.yaml"
+    }
+  ]
+}

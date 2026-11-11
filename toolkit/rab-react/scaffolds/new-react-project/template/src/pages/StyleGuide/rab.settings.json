@@ -1,0 +1,9 @@
+{
+  "id": 0,
+  "name": "StyleGuide",
+  "title": "Style Guide",
+  "description": "Style Guide page",
+  "file": "StyleGuidePage.tsx",
+  "type": "tool",
+  "tags": ["rab-react", "scaffold"]
+}

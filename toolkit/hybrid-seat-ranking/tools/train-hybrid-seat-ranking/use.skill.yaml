@@ -1,0 +1,35 @@
+schema: 1
+intent: use
+id: 1793154927348
+name: use-train-hybrid-seat-ranking
+title: Indexes supervised third-channel query/field evidence and saves checkpoints for frozen
+  BM25/semantic/RRF models and reranking.
+description: Indexes supervised third-channel query/field evidence and saves checkpoints for frozen
+  BM25/semantic/RRF models and reranking.
+type: skill
+path: toolkit/hybrid-seat-ranking/tools/train-hybrid-seat-ranking
+file: use.skill.yaml
+owner:
+  id: 1793154927347
+implementation:
+  - id: 1793154927347
+instructions: Send the shared settings bag as JSON on stdin; read ToolReturn from stdout. Training
+  accepts no required input fields. The established engine combines field-specific SQLite FTS5 BM25,
+  frozen Sentence Transformers semantic ranks and supervised query/field evidence as three per-field
+  RRF channels (k=60), then reranks the top 15 with a pinned CrossEncoder. Field weights remain name
+  2.0, title 1.5 and description 1.25; type weight is 1.0 when enabled. Training indexes examples
+  without fine-tuning either pretrained model. Checkpoint manifests pin both model revisions and
+  SHA-256 assets. Until an established checkpoint is active, select content.engine=established
+  explicitly. Optional content JSON supports mode candidate/live and include_suggestions. Use
+  candidate with include_suggestions=true for pending LLM/inferred labels; it does not change
+  active.json or approve suggestions. Only explicit mode live activates. Create the model .venv,
+  install requirements.txt and run setup.py for both local model assets; set TOOL_LEARNER_PYTHON to
+  that Python. MLflow tracking is local at models/hybrid-seat-ranking/data/mlflow/mlflow.db; open
+  http://127.0.0.1:5001 for its local UI. Registry versions point to checkpoint artifacts, not
+  runnable pyfunc models. Read training-template/README.txt for supported query/positive_keys
+  import, provenance and review. Keep evaluation questions/reports out of author packets. A
+  human-declared same-question rephrase group transfers only existing approved field judgments;
+  unjudged fields remain unapproved. A direct judgment on a field/query overrides inherited group
+  evidence. Checkpoint-derived aliases use origin=user:rephrase-group and source_query; these are
+  not extra human feedback database votes. Cloud-generated aliases cannot claim this provenance and
+  remain pending.

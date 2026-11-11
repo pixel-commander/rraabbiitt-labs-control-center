@@ -1,0 +1,13 @@
+{
+  "id": 1794247089871,
+  "name": "action-ghost",
+  "title": "action-ghost",
+  "description": "Muted default skin with the default navigation skin on hover.",
+  "type": "ui-atom",
+  "tags": [
+    "action"
+  ],
+  "created": "2026-09-17",
+  "modified": "2026-09-17",
+  "path": "src/atoms/actions/action-ghost"
+}

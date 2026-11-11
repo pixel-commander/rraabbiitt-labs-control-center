@@ -1,0 +1,78 @@
+{
+  "schema": 1,
+  "date": 1794423957928,
+  "sequence": 3,
+  "message": 1794423933741,
+  "query": "how do i run the app?",
+  "id": 1793126984423,
+  "record_key": "skills/project/cli/running-the-app/use.skill.yaml",
+  "name": "all",
+  "content": {
+    "vote": "up"
+  },
+  "approved": true,
+  "origin": "user",
+  "scope": "query-result",
+  "lesson_type": "whole-result-relevance",
+  "grade": 1,
+  "source": {
+    "message": {
+      "id": 1794423933741,
+      "name": null,
+      "title": null,
+      "type": "user",
+      "description": "how do i run the app?",
+      "tags": "[]",
+      "file": null,
+      "path": null,
+      "paths": "[]"
+    },
+    "record": {
+      "id": 1793126984423,
+      "name": "running-the-app",
+      "title": "Running the app",
+      "type": "skill",
+      "description": "CLI for running the app",
+      "tags": "[\"project\", \"cli\", \"vite\"]",
+      "file": "use.skill.yaml",
+      "path": "skills/project/cli/running-the-app",
+      "paths": "[]",
+      "data": {
+        "id": 1793126984423,
+        "name": "running-the-app",
+        "title": "Running the app",
+        "description": "CLI for running the app",
+        "tags": [
+          "project",
+          "cli",
+          "vite"
+        ],
+        "context": [],
+        "intent": "use",
+        "outputs": {},
+        "type": "skill",
+        "path": "skills/project/cli/running-the-app",
+        "file": "use.skill.yaml",
+        "record_key": "skills/project/cli/running-the-app/use.skill.yaml",
+        "text": "running-the-app\n\nRunning the app\n\nCLI for running the app\n\nnpm run dev",
+        "sources": [
+          {
+            "path": "skills/project/cli/running-the-app/use.skill.yaml",
+            "kind": "skill",
+            "sha256": "617d68eba02c87d9ac2fa1b2fc6cb76513cfa303058061fc242ab2988926d79f"
+          }
+        ],
+        "skills": [],
+        "instructions": "npm run dev"
+      }
+    }
+  },
+  "original": {
+    "query": "how do i run the app?",
+    "message": 1794423933741,
+    "id": 1793126984423,
+    "path": "skills/project/cli/running-the-app/use.skill.yaml",
+    "name": "all",
+    "content": "{\"vote\":\"up\"}"
+  }
+}

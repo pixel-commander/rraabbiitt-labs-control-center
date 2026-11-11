@@ -1,0 +1,20 @@
+schema: 1
+intent: use
+id: 1794413738403
+name: portable-search-dashboard-mcp
+type: skill
+owner:
+  id: 1794413738402
+implementation:
+  - id: 1794413738402
+context:
+  - use: 1793225862871
+    reason: Search, inspect and execute registered tools by numeric House ID.
+instructions: >
+  Start with npm run mcp from the project root. The root rab.world.json is the
+  only path configuration source. Connect a Streamable HTTP MCP client to /mcp
+  on its configured host and port. use_tool takes query for search, id for
+  inspection, or id and content (JSON settings object string) for execution.
+  Toolkit roots are supplied by the server, never by client tool arguments.
+  Set MCP_TOKEN for bearer authentication. For an HTTPS reverse proxy, register
+  mcp.url in the root world file and set MCP_TOKEN; the public URL is not created by this server.

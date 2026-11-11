@@ -1,0 +1,141 @@
+schema: 1
+intent: use
+owner:
+  id: 1794398974533
+id: 1794408972904
+name: IconButton
+title: Use IconButton
+description: Props, defaults and callbacks for IconButton.
+type: skill
+path: C:\rraabbiitt-hq\rraabbiitt-labs-control-center\src\components\UiElements\IconButton
+tags: []
+implementation: []
+context: []
+inputs:
+  children:
+    type: ReactNode
+    required: false
+  Icon:
+    type: ReactNode
+    required: false
+  type:
+    type: '"add" | undefined'
+    required: false
+  disabled:
+    type: boolean | undefined
+    required: false
+  action_atom:
+    type: string | undefined
+    required: false
+  handleClick:
+    type: HandlerKey<MouseEvent<HTMLButtonElement, globalThis.MouseEvent>, "icon-button", void,
+      IconButtonProps> | undefined
+    required: false
+  className:
+    type: string | undefined
+    required: false
+  id:
+    type: number | undefined
+    required: false
+  name:
+    type: string | undefined
+    required: false
+  title:
+    type: string | undefined
+    required: false
+  description:
+    type: string | undefined
+    required: false
+  path:
+    type: string | undefined
+    required: false
+  save_path:
+    type: string | undefined
+    required: false
+  save_file:
+    type: string | undefined
+    required: false
+  paths:
+    type: PathsProps[] | undefined
+    required: false
+  date_added:
+    type: number | undefined
+    required: false
+  date_updated:
+    type: number | undefined
+    required: false
+  date_used:
+    type: number | undefined
+    required: false
+  date:
+    type: number | undefined
+    required: false
+  date_start:
+    type: number | undefined
+    required: false
+  date_end:
+    type: number | undefined
+    required: false
+outputs: {}
+instructions: >-
+  Props
+
+  children (optional): ReactNode
+
+  Icon (optional): ReactNode
+
+  type (optional): "add" | undefined
+
+  disabled (optional): boolean | undefined
+
+  action_atom (optional): string | undefined
+
+  handleClick (optional): HandlerKey<MouseEvent<HTMLButtonElement, globalThis.MouseEvent>,
+  "icon-button", void, IconButtonProps> | undefined
+
+  className (optional): string | undefined
+
+  id (optional): number | undefined
+
+  name (optional): string | undefined
+
+  title (optional): string | undefined
+
+  description (optional): string | undefined
+
+  path (optional): string | undefined
+
+  save_path (optional): string | undefined
+
+  save_file (optional): string | undefined
+
+  paths (optional): PathsProps[] | undefined
+
+  date_added (optional): number | undefined
+
+  date_updated (optional): number | undefined
+
+  date_used (optional): number | undefined
+
+  date (optional): number | undefined
+
+  date_start (optional): number | undefined
+
+  date_end (optional): number | undefined
+
+
+  Defaults
+
+  disabled=false; action_atom="action-main"; className="".
+
+
+  Callbacks and prop behavior
+
+  children is the text. Icon accepts ReactNode and takes precedence over type. type currently
+  accepts add. Supply Icon or type. handleClick receives (mouseEvent, "icon-button", props);
+  disabled prevents it. title supplies the title and accessible label. action_atom accepts an action
+  class.
+checks: []
+examples: []
+routes: []
+provenance: []

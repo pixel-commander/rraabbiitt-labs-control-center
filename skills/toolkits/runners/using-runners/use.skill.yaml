@@ -1,0 +1,31 @@
+schema: 1
+intent: use
+id: 1791940045269
+name: using-runners
+title: Using runners
+description: Prepare and execute an existing workflow.
+type: skill
+path: skills/toolkits/runners/using-runners
+tags:
+  - guidance
+  - toolkits
+implementation: []
+context:
+  - use: 1791940045245
+    path: skills/toolkits/runners/use.skill.yaml
+    reason: Read the parent guidance before this focused branch.
+inputs: {}
+outputs: {}
+instructions:
+  Discover the existing registered workflow and read its declared inputs and attached
+  skills. Choose the correct scope and destination before execution. Supply a complete input object
+  without renaming shared keys. Assemble the skills for each step in prerequisite-first order and
+  resolve missing references before use. Inspect the ordered plan, distinguishing tool execution
+  from model instruction steps. Execute through the configured shared runner host. Read every
+  returned step and its error or findings before claiming completion. Do not assume a host supports
+  model execution merely because the plan can describe it. Resume or retry only according to the
+  workflow's declared behavior; preserve completed work and avoid repeating side effects blindly.
+checks: []
+examples: []
+routes: []
+provenance: []

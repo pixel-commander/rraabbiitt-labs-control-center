@@ -1,0 +1,22 @@
+schema: 1
+intent: use
+owner:
+  id: 1790784702601
+id: 1794409148594
+name: generate-world-id
+title: Generate ID
+description: Generate one numeric House ID.
+type: function
+path: C:\rraabbiitt-hq\rraabbiitt-labs-control-center\toolkit\rab-world\generators\generate-world-id
+tags: []
+implementation: []
+context: []
+inputs: {}
+outputs: {}
+instructions: Call generateWorldId with an omitted argument or an empty settings object. Other keys
+  are rejected. Returns {id:number}. IDs increase monotonically within the current module instance.
+  No callbacks or file writes.
+checks: []
+examples: []
+routes: []
+provenance: []

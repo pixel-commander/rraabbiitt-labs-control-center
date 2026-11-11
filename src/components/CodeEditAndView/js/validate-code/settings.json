@@ -1,0 +1,11 @@
+{
+  "id": 1793990737709,
+  "name": "validateCode",
+  "title": "validateCode",
+  "description": "Call await validateCode({ code, file, language }).",
+  "type": "function",
+  "path": "src/components/CodeEditAndView/js/validate-code",
+  "file": "validate-code.ts",
+  "settings": [],
+  "paths": []
+}

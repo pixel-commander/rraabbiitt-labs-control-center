@@ -1,0 +1,66 @@
+{
+  "name": "HybridSearch",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../../../MessageBox/hooks/useMessageProvider/useMessageProvider",
+      "path": "../MessageBox/hooks/useMessageProvider/useMessageProvider",
+      "type": "import",
+      "file": "hooks/useHybridSearch/useHybridSearch.ts"
+    },
+    {
+      "name": "../../../SearchResponses/SearchResponses.types",
+      "path": "../SearchResponses/SearchResponses.types",
+      "type": "import",
+      "file": "hooks/useHybridSearch/useHybridSearch.ts"
+    },
+    {
+      "name": "../UiElements/UiElements",
+      "path": "../UiElements/UiElements",
+      "type": "import",
+      "file": "HybridSearch.tsx"
+    },
+    {
+      "name": "../SearchResponses/SearchResponses",
+      "path": "../SearchResponses/SearchResponses",
+      "type": "import",
+      "file": "HybridSearch.tsx"
+    },
+    {
+      "name": "../../pages/WorldSearch/ToolCol/ToolCol",
+      "path": "../../pages/WorldSearch/ToolCol/ToolCol",
+      "type": "import",
+      "file": "HybridSearch.tsx"
+    },
+    {
+      "name": "../../pages/WorldSearch/css/world-search.css",
+      "path": "../../pages/WorldSearch/css/world-search.css",
+      "type": "import",
+      "file": "HybridSearch.tsx"
+    },
+    {
+      "name": "../../MessageBox/MessageBox",
+      "path": "../MessageBox/MessageBox",
+      "type": "import",
+      "file": "SearchMessageBox/SearchMessageBox.tsx"
+    },
+    {
+      "name": "../../MessageBox/MessageBox.types",
+      "path": "../MessageBox/MessageBox.types",
+      "type": "import",
+      "file": "SearchMessageBox/SearchMessageBox.types.ts"
+    },
+    {
+      "name": "../../SearchResponses/ChatBubble/ChatBubble",
+      "path": "../SearchResponses/ChatBubble/ChatBubble",
+      "type": "import",
+      "file": "SearchResponseBubble/SearchResponseBubble.tsx"
+    },
+    {
+      "name": "../../SearchResponses/ChatBubble/ChatBubble.types",
+      "path": "../SearchResponses/ChatBubble/ChatBubble.types",
+      "type": "import",
+      "file": "SearchResponseBubble/SearchResponseBubble.types.ts"
+    }
+  ]
+}

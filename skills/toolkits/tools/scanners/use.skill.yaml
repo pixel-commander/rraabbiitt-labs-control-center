@@ -1,0 +1,30 @@
+schema: 1
+intent: use
+id: 1791940045452
+name: scanners
+title: Scanners
+description: Walk a declared scope and collect or explicitly index records.
+type: skill
+path: skills/toolkits/tools/scanners
+tags:
+  - guidance
+  - toolkits
+implementation: []
+context:
+  - use: 1791940045227
+    path: skills/toolkits/tools/use.skill.yaml
+    reason: Read the parent guidance before this focused branch.
+inputs: {}
+outputs: {}
+instructions:
+  A scanner walks the selected scope and reports discovered subjects and per-path
+  problems. Respect declared exclusions and symlink behavior; do not broaden from a project root to
+  a drive. State whether the specific scanner only returns an inventory or explicitly persists an
+  index. Preserve record IDs during discovery and refresh. Keep valid results distinguishable from
+  incomplete or failed paths, and do not infer complete totals from partial inspection. Destructive
+  rebuild behavior must be part of the declared operation. Scanning must be requested rather than
+  hidden inside an unrelated lookup. The shared runner owns tracking.
+checks: []
+examples: []
+routes: []
+provenance: []

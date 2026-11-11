@@ -1,0 +1,18 @@
+{
+  "name": "ResponseAndRankingCard",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../../../HouseKeys.types",
+      "path": "../../../HouseKeys.types",
+      "type": "import",
+      "file": "ResponseAndRankingCard.types.ts"
+    },
+    {
+      "name": "../SearchResponses.types",
+      "path": "../SearchResponses.types",
+      "type": "import",
+      "file": "ResponseAndRankingCard.types.ts"
+    }
+  ]
+}

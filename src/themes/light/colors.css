@@ -1,0 +1,84 @@
+@layer themes {
+  [data-theme="light"] {
+    color-scheme: light;
+
+    /* Color slots. Each -neg value contrasts with its matching slot. */
+    --color-main: #f0f6f7;
+    --color-main-neg: #080b0d;
+    --color-main-alt: #ffffff;
+    --color-main-alt-neg: #25444d;
+    --color-primary: #00798c;
+    --color-primary-neg: #ffffff;
+    --color-primary-alt: #006376;
+    --color-primary-alt-neg: #ffffff;
+    --color-secondary: #e7f0f2;
+    --color-secondary-neg: #25444d;
+    --color-secondary-alt: #e4f3f5;
+    --color-secondary-alt-neg: #25444d;
+    --color-tertiary: #cee7ec;
+    --color-tertiary-neg: #25444d;
+    --color-tertiary-alt: #dbf3f6;
+    --color-tertiary-alt-neg: #25444d;
+    --color-muted: #526c75;
+    --color-muted-neg: #f0f6f7;
+    --color-inverse: var(--color-main-neg);
+    --color-inverse-neg: var(--color-main);
+    --color-transparent: transparent;
+
+    --status-success: #15803d;
+    --status-warning: #a7470c;
+    --status-error: #b91c1c;
+    --status-muted: var(--color-muted);
+
+    /* Derived border and component defaults. */
+    --border-subtle: color-mix(
+      in srgb,
+      var(--color-main-neg) 8%,
+      var(--color-main)
+    );
+    --border-default: color-mix(
+      in srgb,
+      var(--color-main-neg) 16%,
+      var(--color-main)
+    );
+    --border-strong: var(--color-primary);
+    --border-focus: var(--color-primary);
+    --border-danger: var(--status-error);
+    --container-main-background: var(--color-main-alt);
+    --container-main-border: 1px solid var(--border-subtle);
+    --slider-thumb: var(--color-primary);
+    --slider-warning: var(--status-warning);
+    --status-color: var(--color-primary);
+    --status-label-color: var(--color-primary);
+    --elevation-inset: none;
+    --elevation-float: none;
+
+    /* Compatibility for imported shared components. Local code uses color slots. */
+    --surface-transparent: var(--color-transparent);
+    --surface-app: var(--color-main);
+    --surface-main: var(--color-main-alt);
+    --surface-inset: var(--color-secondary);
+    --surface-float: var(--color-main-alt);
+    --surface-hover: var(--color-secondary-alt);
+    --surface-active: var(--color-tertiary);
+    --surface-selected: var(--color-tertiary-alt);
+    --surface-disabled: var(--color-secondary);
+    --content-strong: var(--color-main-neg);
+    --content-default: var(--color-main-alt-neg);
+    --content-muted: var(--color-muted);
+    --content-disabled: var(--color-muted);
+    --content-inverse: var(--color-main);
+    --content-accent: var(--color-primary);
+    --accent-default: var(--color-primary);
+    --accent-hover: var(--color-primary-alt);
+    --accent-secondary: var(--color-primary);
+    --accent-soft: var(--color-tertiary-alt);
+    --success-default: var(--status-success);
+    --danger-default: var(--status-error);
+    --content-danger: var(--status-error);
+    --color-primary-rgb: 0, 121, 140;
+    --color-secondary-rgb: var(--color-primary-rgb);
+    --color-tertiary-rgb: var(--color-primary-rgb);
+    --color-quaternary-rgb: 167, 71, 12;
+  }
+}

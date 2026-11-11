@@ -1,0 +1,81 @@
+@layer components {
+  .code-viewer {
+    --code-viewer-background: var(--surface-inset, var(--surface-main));
+    --code-viewer-color: var(--content-default);
+    --code-viewer-muted: var(--content-muted, var(--content-default));
+    --code-viewer-border: var(--border-default);
+    --code-viewer-accent: var(--accent-secondary, var(--accent-default));
+    --code-viewer-active: var(--surface-float, var(--surface-main));
+    --code-viewer-error: var(--border-danger);
+    --code-viewer-keyword: var(--accent-default);
+    --code-viewer-string: var(--accent-secondary, var(--content-default));
+    --code-viewer-number: var(--border-danger, var(--accent-default));
+    --code-viewer-property: var(--accent-secondary, var(--content-default));
+    --code-viewer-font: var(--font-mono, ui-monospace, monospace);
+    --code-viewer-font-size: 0.875rem;
+    --code-viewer-line-height: 1.6;
+    --code-viewer-padding: var(--space-md, 0.75rem);
+    --code-viewer-minimap-width: 6rem;
+    min-inline-size: 0;
+    min-block-size: 0;
+    block-size: 100%;
+    overflow: hidden;
+    color: var(--code-viewer-color);
+    background: var(--code-viewer-background);
+    border: var(--border-width, 1px) solid var(--code-viewer-border);
+    border-radius: var(--radius-control, 0.25rem);
+  }
+  .code-viewer[data-inline="true"] { block-size: auto; }
+  .code-viewer__surface { min-inline-size: 0; min-block-size: 0; overflow: hidden; }
+  .code-viewer__minimap-column {
+    inline-size: var(--code-viewer-minimap-width);
+    min-block-size: 0;
+    overflow: hidden;
+    border-inline-start: var(--border-width, 1px) solid var(--code-viewer-border);
+  }
+  .code-viewer__minimap {
+    position: relative;
+    overflow: hidden;
+    cursor: crosshair;
+    touch-action: none;
+    user-select: none;
+  }
+  .code-viewer__map-lines { width: 100%; height: 100%; display: block; opacity: 0.6; color: var(--code-viewer-muted); }
+  .code-viewer__map-window {
+    position: absolute;
+    inset-inline: 0;
+    min-height: 2px;
+    pointer-events: none;
+    border: 1px solid var(--code-viewer-accent);
+    background: color-mix(in srgb, var(--code-viewer-accent) 12%, transparent);
+  }
+  .code-viewer__minimap:focus-visible { outline: var(--focus-ring); outline-offset: -2px; }
+  .code-viewer__help { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+}
+
+/* CodeMirror owns the leaf editor layout and injects unlayered base styles.
+   Scope these token overrides to this component so they can override that base. */
+.code-viewer .cm-editor { height: 100%; min-height: 0; background: transparent; color: var(--code-viewer-color); }
+.code-viewer[data-inline="true"] .cm-editor { height: auto; }
+.code-viewer .cm-scroller {
+  overflow: auto;
+  font-family: var(--code-viewer-font);
+  font-size: var(--code-viewer-font-size);
+  line-height: var(--code-viewer-line-height);
+}
+.code-viewer .cm-content { padding-block: var(--code-viewer-padding); caret-color: var(--code-viewer-color); }
+.code-viewer .cm-line { padding-inline: var(--code-viewer-padding); }
+.code-viewer .cm-gutters { background: var(--code-viewer-background); color: var(--code-viewer-muted); border-color: var(--code-viewer-border); }
+.code-viewer .cm-activeLine, .code-viewer .cm-activeLineGutter { background: var(--code-viewer-active); }
+.code-viewer .cm-cursor { border-left-color: var(--code-viewer-color); }
+.code-viewer .cm-selectionBackground,
+.code-viewer .cm-focused .cm-selectionBackground { background: color-mix(in srgb, var(--code-viewer-accent) 35%, transparent); }
+.code-viewer .cm-focused { outline: var(--focus-ring); outline-offset: -2px; }
+.code-viewer .cm-panels, .code-viewer .cm-tooltip { color: var(--code-viewer-color); background: var(--code-viewer-background); border-color: var(--code-viewer-border); }
+.code-viewer .cm-textfield, .code-viewer .cm-button { font: inherit; color: var(--code-viewer-color); background: var(--code-viewer-background); border-color: var(--code-viewer-border); }
+.code-viewer .code-viewer__token--keyword { color: var(--code-viewer-keyword); }
+.code-viewer .code-viewer__token--string { color: var(--code-viewer-string); }
+.code-viewer .code-viewer__token--comment { color: var(--code-viewer-muted); font-style: italic; }
+.code-viewer .code-viewer__token--number { color: var(--code-viewer-number); }
+.code-viewer .code-viewer__token--property { color: var(--code-viewer-property); }
+.code-viewer .code-viewer__token--selector { color: var(--code-viewer-accent); }

@@ -1,0 +1,30 @@
+schema: 1
+intent: use
+id: 1791940045355
+name: checkers
+title: Checkers
+description: Validate selected subjects without repairing them.
+type: skill
+path: skills/toolkits/tools/checkers
+tags:
+  - guidance
+  - toolkits
+implementation: []
+context:
+  - use: 1791940045227
+    path: skills/toolkits/tools/use.skill.yaml
+    reason: Read the parent guidance before this focused branch.
+inputs: {}
+outputs: {}
+instructions:
+  A checker inspects explicitly selected subjects against declared rules. It reports
+  findings using the established subject and finding keys and preserves the subject's identity and
+  location. Findings describe what failed, where and why; they are domain data even when execution
+  succeeded. Do not write repairs, generate replacements, change IDs or mutate the subjects.
+  Distinguish inability to inspect a subject from a completed check that found a problem. Keep scope
+  and exclusions explicit. Return the category's declared collection or envelope through the shared
+  execution owner; do not add tracking.
+checks: []
+examples: []
+routes: []
+provenance: []

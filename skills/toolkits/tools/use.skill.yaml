@@ -1,0 +1,32 @@
+schema: 1
+intent: use
+id: 1791940045227
+name: tools
+title: Tools
+description: Shared input, output and ownership rules for a single capability.
+type: skill
+path: skills/toolkits/tools
+tags:
+  - guidance
+  - toolkits
+implementation: []
+context:
+  - use: 1791940045207
+    path: skills/toolkits/use.skill.yaml
+    reason: Read the parent guidance before this focused branch.
+inputs: {}
+outputs: {}
+instructions:
+  A tool owns one bounded capability, its declared input props, implementation and
+  domain return. Accept one named input object, reuse House keys and shared types, and validate
+  required values at the boundary. Preserve supplied optional values. Report domain findings
+  separately from operational failures. Follow the category's return contract and any documented
+  direct-return exception; do not infer a new envelope from an outdated example. Keep source
+  templates, private helpers and documentation within the tool's owning folder. Do not discover
+  unrelated capabilities or start tracking implicitly. The shared runner owns execution records,
+  timing and persistence. A concrete tool skill references the relevant category skill; category
+  guidance stops at the category and has no forward links to implementations.
+checks: []
+examples: []
+routes: []
+provenance: []

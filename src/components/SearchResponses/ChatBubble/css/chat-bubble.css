@@ -1,0 +1,55 @@
+@layer components {
+  .chat-bubble {
+    width: max-content;
+    max-width: 100%;
+    padding: 0.5em 0;
+    min-inline-size: 0;
+  }
+  .chat-bubble.left {
+    margin-left: 0;
+    margin-right: auto;
+    padding-right: 10%;
+  }
+  .chat-bubble.right {
+    margin-left: auto;
+    margin-right: 0;
+    padding-left: 10%;
+  }
+  .chat-bubble-inner {
+    grid-auto-rows: auto;
+    min-inline-size: 0;
+  }
+  .chat-bubble-title,
+  .chat-bubble-content,
+  .chat-bubble-footer {
+    min-inline-size: 0;
+    overflow-wrap: anywhere;
+  }
+  .chat-bubble.left .chat-bubble-title,
+  .chat-bubble.left .chat-bubble-footer {
+    text-align: left;
+  }
+  .chat-bubble.right .chat-bubble-title,
+  .chat-bubble.right .chat-bubble-footer {
+    text-align: right;
+  }
+  .chat-bubble-title time {
+    margin-inline-start: var(--space-sm);
+  }
+  .chat-bubble-content {
+    font-size: 1rem;
+    border-radius: var(--radius-xl);
+  }
+  .chat-bubble.left .chat-bubble-content {
+    border-bottom-left-radius: 0;
+  }
+  .chat-bubble.right .chat-bubble-content {
+    border-bottom-right-radius: 0;
+  }
+}
+@layer atoms {
+  .chat-bubble-title {
+    color: var(--color-muted);
+    font: var(--type-code);
+  }
+}

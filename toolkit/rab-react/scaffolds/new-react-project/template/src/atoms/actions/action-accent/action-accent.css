@@ -1,0 +1,62 @@
+@layer atoms {
+  /* Style :hover, :active and .is-active; keep :active and .is-active nearly identical, with only a slight background variation.
+     Use .is-active for selection; NEVER [data-page='home'] or page-specific selectors for active styling. */
+  .action-accent {
+    color: var(--content-inverse);
+    background: var(--accent-default);
+    border: var(--border-width) var(--border-style) var(--accent-default);
+    border-radius: var(--radius-control);
+    font: var(--type-body);
+    cursor: pointer;
+    transition:
+      background-color var(--motion-fast),
+      color var(--motion-fast),
+      border-color var(--motion-fast);
+    --action-accent-hover-background: color-mix(
+      in srgb,
+      var(--accent-default) 85%,
+      var(--content-strong)
+    );
+    --action-accent-active-background: color-mix(
+      in srgb,
+      var(--accent-default) 85%,
+      var(--surface-app)
+    );
+    --action-accent-active-color: var(--content-inverse);
+  }
+
+  .action-accent:hover {
+    background: var(--action-accent-hover-background, var(--surface-hover));
+  }
+
+  .action-accent:active,
+  .action-accent.is-active {
+    color: var(--action-accent-active-color, var(--content-strong));
+    background: var(--action-accent-active-background, var(--surface-active));
+  }
+
+  .action-accent:focus-visible {
+    outline: var(--action-accent-focus-outline, var(--focus-ring));
+    outline-offset: var(--action-accent-focus-offset, var(--focus-offset));
+  }
+
+  .action-accent:is(:disabled, [aria-disabled="true"]) {
+    color: var(--action-accent-disabled-color, var(--content-disabled));
+    background: var(
+      --action-accent-disabled-background,
+      var(--surface-disabled)
+    );
+    opacity: var(--action-accent-disabled-opacity, var(--disabled-opacity));
+    cursor: not-allowed;
+  }
+}
+
+@layer atoms {
+  .action-accent.is-active {
+    background: color-mix(
+      in srgb,
+      var(--action-accent-active-background) 94%,
+      var(--surface-main)
+    );
+  }
+}

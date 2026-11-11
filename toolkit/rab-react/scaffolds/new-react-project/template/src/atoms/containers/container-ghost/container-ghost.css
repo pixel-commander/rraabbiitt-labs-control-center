@@ -1,0 +1,8 @@
+@layer atoms {
+  .container-ghost {
+    color: var(--content-default);
+    background: var(--surface-transparent);
+    border: none;
+    border-radius: var(--radius-container);
+  }
+}

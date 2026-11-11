@@ -1,0 +1,11 @@
+{
+  "file": "message-1794424062714-1794424111068-f0a2fa92-7d2f-4cab-9795-fe253d4aa75b.json",
+  "message": 1794424062714,
+  "id": 1793996465585,
+  "grade": 1,
+  "lesson_type": "whole-result-relevance",
+  "mode": "hybrid",
+  "scope": "query-result",
+  "learning": "established-supervised-evidence",
+  "neural_training": false
+}

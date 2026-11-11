@@ -1,0 +1,12 @@
+{
+  "name": "new-db-table",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../new-sqlite-db/database-tools.mjs",
+      "path": "../new-sqlite-db/database-tools.mjs",
+      "type": "import",
+      "file": "new-db-table.mjs"
+    }
+  ]
+}

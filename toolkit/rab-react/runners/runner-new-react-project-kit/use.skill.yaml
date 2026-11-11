@@ -1,0 +1,27 @@
+id: 1793143585575
+schema: 1
+intent: use
+name: use-runner-new-react-project-kit
+title: New React Project Kit
+path: toolkits/rab-react/runners/runner-new-react-project-kit
+file: use.skill.yaml
+instructions: Call run with the shared ToolsProps bag. path is an existing parent folder or caller
+  project root; name is the new project name. A parent folder does not need rab.project.json. Use
+  save_path when supplied, otherwise the registered projects destination, otherwise the parent
+  folder itself. save_path is relative to path. Existing malformed project settings remain an error.
+  If title is absent, convert name into space-separated title case for the saved project title and
+  generated Shell header. Preserve an explicitly supplied title. Returns the shared RunnerReturn
+  (flat RunResponse[] with per-entry timing). Each tool response contains the created settings
+  HouseKeys, path, file and a paths array listing every file created. After successful creation, run
+  npm install in the returned project directory, then npm run dev only if installation succeeds.
+  Both are tracked steps implemented directly in runner-new-react-project-kit.ts, not separately
+  registered tools. Dev runs hidden in the background; its step completes after the printed local
+  URL responds with HTTP success. response.body contains command, PID and URL; response.paths
+  identifies stdout/stderr logs under the project's .tmp folder. Failures retain generated files and
+  logs; dependent steps report skipped errors. Installation can access the network and run package
+  lifecycle scripts. No database writes or automatic component chaining. Direct scaffold calls
+  remain generation-only.
+owner:
+  id: 1793138966734
+implementation:
+  - id: 1793138966734

@@ -1,0 +1,18 @@
+{
+  "name": "Tooltip",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../SmartTooltip/SmartTooltip",
+      "path": "../SmartTooltip/SmartTooltip",
+      "type": "import",
+      "file": "Tooltip.tsx"
+    },
+    {
+      "name": "../SmartTooltip/SmartTooltip.types",
+      "path": "../SmartTooltip/SmartTooltip.types",
+      "type": "import",
+      "file": "Tooltip.types.ts"
+    }
+  ]
+}

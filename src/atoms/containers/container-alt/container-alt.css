@@ -1,0 +1,8 @@
+@layer atoms {
+  .container-alt {
+    background: var(--color-secondary);
+    color: var(--color-main-alt-neg);
+    border: var(--border-width) var(--border-style) var(--border-subtle);
+    border-radius: var(--radius-control);
+  }
+}

@@ -1,0 +1,19 @@
+schema: 1
+intent: use
+id: 1793990737729
+name: useCodeEditAndView
+type: skill
+path: src/components/CodeEditAndView/hooks/useCodeEditAndView
+file: useCodeEditAndView.ts
+owner:
+  id: 1794004818408
+implementation:
+  - id: 1794004818408
+instructions: Call useCodeEditAndView(props) inside React. Accepts
+  CodeEditAndViewProps and returns draft, saved baseline, dirty/mode/pending
+  state, diagnostics/messages, and change/revert/navigate/setMode/validate/save
+  actions. Initial code or a new file/path loads a document; echoes of emitted
+  changes preserve the saved baseline. Syntax errors block saving.
+  handleValidate provides optional project checks; handleSave provides
+  persistence. Errors become state and stale validation is discarded. No code
+  executes.

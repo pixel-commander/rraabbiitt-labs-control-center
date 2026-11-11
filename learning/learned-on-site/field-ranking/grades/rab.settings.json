@@ -1,0 +1,23 @@
+{
+  "id": 1794420272848,
+  "name": "grades",
+  "title": "Field ranking: grades",
+  "description": "The grades location for field-ranking in learned-on-site.",
+  "type": "path",
+  "tags": [
+    "learning"
+  ],
+  "paths": [
+    {
+      "name": ".gitkeep",
+      "path": ".",
+      "type": "gitkeep"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    }
+  ],
+  "path": "learning/learned-on-site/field-ranking/grades"
+}

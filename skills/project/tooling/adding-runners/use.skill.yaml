@@ -1,0 +1,29 @@
+schema: 1
+intent: use
+id: 1793143987360
+name: adding-runners
+title: Add a runner
+description:
+  Create a runner that builds an ordered array of tool calls and returns
+  their results and timing.
+type: skill
+path: skills/project/tooling/adding-runners
+tags:
+  - project
+  - toolkits
+  - runners
+implementation: []
+context:
+  - use: 1793144147315
+    path: skills/project/tooling/use.skill.yaml
+    reason: Apply the shared tooling instructions before this child skill.
+instructions: |
+  Create toolkits/<toolkit>/runners/<runner-name>/ using the parent instructions.
+  Use RunnersProps, RunnerCallbacks, and RunnerReturn from
+  toolkits/Runner.types.ts. Build an ordered RunProps array of
+  { type: 'tool', name, settings } and pass it with the executor and options to runTools from
+  toolkits/rab-world/runners/run-tools.ts. Use its async plan factory for preparation.
+  Return runTools directly: it delegates to runner-tooling-and-tracking, which
+  owns waiting statuses, invocation IDs, per-entry date_start/date_end and
+  update snapshots. RunnerReturn is the flat RunResponse[] itself. Do not nest trackers or
+  duplicate tool logic. Use type: runner in the capability settings.

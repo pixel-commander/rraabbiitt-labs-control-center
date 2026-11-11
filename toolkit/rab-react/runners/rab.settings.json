@@ -1,0 +1,12 @@
+{
+  "name": "react runners folder",
+  "title": "world demo React runners",
+  "description": "Runners that use the project paths to create React projects, components, subcomponents, atoms, pages, and dashboards.",
+  "type": "path",
+  "tags": [
+    "react",
+    "runners"
+  ],
+  "path": "toolkit/rab-react/runners",
+  "id": 1793143585570
+}

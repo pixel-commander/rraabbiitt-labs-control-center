@@ -1,0 +1,23 @@
+{
+  "id": 1794420272785,
+  "name": "grades",
+  "title": "Field ranking: grades",
+  "description": "The grades location for field-ranking in shipped-with-app.",
+  "type": "path",
+  "tags": [
+    "learning"
+  ],
+  "paths": [
+    {
+      "name": ".gitkeep",
+      "path": ".",
+      "type": "gitkeep"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    }
+  ],
+  "path": "learning/shipped-with-app/field-ranking/grades"
+}

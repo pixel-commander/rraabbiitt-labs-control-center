@@ -1,0 +1,176 @@
+{
+  "schema": 1,
+  "date": 1794424029202,
+  "sequence": 4,
+  "message": 1794423997027,
+  "query": "what is the popup window component name?",
+  "id": 1793996465585,
+  "record_key": "src/components/FloatWindow",
+  "name": "all",
+  "content": {
+    "vote": "up"
+  },
+  "approved": true,
+  "origin": "user",
+  "scope": "query-result",
+  "lesson_type": "whole-result-relevance",
+  "grade": 1,
+  "source": {
+    "message": {
+      "id": 1794423997027,
+      "name": null,
+      "title": null,
+      "type": "user",
+      "description": "what is the popup window component name?",
+      "tags": "[]",
+      "file": null,
+      "path": null,
+      "paths": "[]"
+    },
+    "record": {
+      "id": 1793996465585,
+      "name": "FloatWindow",
+      "title": "FloatWindow",
+      "type": "component",
+      "description": "Controlled floating content window with parent-bounded move and resize gestures and close requests.",
+      "tags": "[\"react\", \"component\"]",
+      "file": "FloatWindow.tsx",
+      "path": "src/components/FloatWindow",
+      "paths": "[{\"name\": \"FloatWindow.tsx\", \"path\": \".\", \"type\": \"tsx\"}, {\"name\": \"FloatWindow.types.ts\", \"path\": \".\", \"type\": \"ts\"}, {\"name\": \"README.txt\", \"path\": \".\", \"type\": \"txt\"}, {\"name\": \"float-window.css\", \"path\": \"css\", \"type\": \"css\"}, {\"name\": \".gitkeep\", \"path\": \"demo\", \"type\": \"\"}, {\"name\": \"Demo.tsx\", \"path\": \"demo\", \"type\": \"tsx\"}, {\"name\": \"dependencies.manifest.json\", \"path\": \".\", \"type\": \"json\"}, {\"name\": \"rab.settings.json\", \"path\": \".\", \"type\": \"json\"}, {\"name\": \"use.skill.yaml\", \"path\": \".\", \"type\": \"yaml\"}]",
+      "data": {
+        "id": 1793996465585,
+        "name": "FloatWindow",
+        "title": "FloatWindow",
+        "description": "Controlled floating content window with parent-bounded move and resize gestures and close requests.",
+        "type": "component",
+        "tags": [
+          "react",
+          "component"
+        ],
+        "file": "FloatWindow.tsx",
+        "path": "src/components/FloatWindow",
+        "source_report_id": 1793899448938,
+        "paths": [
+          {
+            "name": "FloatWindow.tsx",
+            "path": ".",
+            "type": "tsx"
+          },
+          {
+            "name": "FloatWindow.types.ts",
+            "path": ".",
+            "type": "ts"
+          },
+          {
+            "name": "README.txt",
+            "path": ".",
+            "type": "txt"
+          },
+          {
+            "name": "float-window.css",
+            "path": "css",
+            "type": "css"
+          },
+          {
+            "name": ".gitkeep",
+            "path": "demo",
+            "type": ""
+          },
+          {
+            "name": "Demo.tsx",
+            "path": "demo",
+            "type": "tsx"
+          },
+          {
+            "name": "dependencies.manifest.json",
+            "path": ".",
+            "type": "json"
+          },
+          {
+            "name": "rab.settings.json",
+            "path": ".",
+            "type": "json"
+          },
+          {
+            "name": "use.skill.yaml",
+            "path": ".",
+            "type": "yaml"
+          }
+        ],
+        "settings": [
+          {
+            "type": "text",
+            "name": "title"
+          },
+          {
+            "type": "text",
+            "name": "children"
+          },
+          {
+            "type": "text",
+            "name": "className"
+          },
+          {
+            "type": "text",
+            "name": "container_class"
+          },
+          {
+            "type": "text",
+            "name": "header_class"
+          },
+          {
+            "type": "object",
+            "name": "rect"
+          },
+          {
+            "type": "checkbox",
+            "name": "open"
+          },
+          {
+            "type": "checkbox",
+            "name": "canDrag"
+          },
+          {
+            "type": "checkbox",
+            "name": "canResize"
+          }
+        ],
+        "record_key": "src/components/FloatWindow",
+        "sources": [
+          {
+            "path": "src/components/FloatWindow/rab.settings.json",
+            "kind": "settings",
+            "sha256": "be9cf484c68a62c91c689f7e3ef2146dd74cd703c572dc0968915018222eb256"
+          },
+          {
+            "path": "src/components/FloatWindow/README.txt",
+            "kind": "readme",
+            "sha256": "38ba419b9e75b2dece41034236e4d398c29f5078813cd964adb18d51068ce91f"
+          },
+          {
+            "path": "src/components/FloatWindow/use.skill.yaml",
+            "kind": "skill",
+            "sha256": "8d33b2a8be0d29c66c75598b55eb71b12155c00871cb4f1104302ac353089451"
+          }
+        ],
+        "skills": [
+          {
+            "id": 1794417083882,
+            "name": "use-float-window",
+            "path": "src/components/FloatWindow/use.skill.yaml",
+            "instructions": "Render FloatWindow inside a positioned parent with a defined height. Pass rect as x,y,width,height in pixels. Parent owns rect and open; apply handleChange values on move/resize and handleClose to hide. Supports title, actions, children, canDrag, canResize, className and HouseKeys. No persistence or application state."
+          }
+        ],
+        "text": "FloatWindow\n\nFloatWindow\n\ncomponent\n\nControlled floating content window with parent-bounded move and resize gestures and close requests.\n\nreact component\n\nsrc/components/FloatWindow\n\nFloatWindow\n===========\n\nControlled floating content window with parent-bounded move and resize gestures and close requests.\n\nImplementation: FloatWindow.tsx\nExports: FloatWindow\n\nRender this component with the props below. Application data and persistence remain with the caller.\n\nCustomization\n-------------\nUI classes can be overridden via theme tokens, component tokens, supplied className/container_class/cell_class/event_class props where exposed, or CSS in a parent/external stylesheet. Use only the class props declared by this implementation. The component base class stays in place. An omitted container_class uses the implementation default; an empty string deliberately removes that default. Parent CSS can target the component base class and its documented child classes. Put stylesheet overrides after defaults or in the overrides layer. Tokens must be applied to the component element when it defines its own defaults. Plain functions do not render containers; style the elements supplied to them.\n\nSizing\n------\nThe caller supplies available layout space. Scroll regions require a bounded grid track and min-block-size: 0. Preview-only dimensions belong in demo files, not reusable component defaults.\n\nPublic types\n------------\nimport type { ReactNode } from \"react\";\nimport type { HouseKeys, HandlerKey } from \"../../HouseKeys.types\";\nimport type { WindowRect } from \"../../hooks/useWindowGesture/useWindowGesture\";\nexport interface FloatWindowProps extends Omit<HouseKeys, \"title\"> {\n  title?: ReactNode;\n  children?: ReactNode;\n  className?: string;\n  container_class?: string;\n  header_class?: string;\n  rect: WindowRect;\n  open?: boolean;\n  canDrag?: boolean;\n  canResize?: boolean;\n  actions?: ReactNode;\n  handleChange?: HandlerKey<WindowRect, \"move\" | \"resize\", void>;\n  handleClose?: HandlerKey<undefined, \"close\", void>;\n}\n\n\nUsage skill\n-----------\nname: use-float-window\ntype: skill\npath: src/components/FloatWindow\nfile: use.skill.yaml\ninstructions: >-\n  Render FloatWindow inside a positioned parent with a defined height. Pass rect\n  as x,y,width,height in pixels. Parent owns rect and open; apply handleChange\n  values on move/resize and handleClose to hide. Supports title, actions, children,\n  canDrag, canResize, className and HouseKeys. No persistence or application state.\n\n\nuse-float-window\n\n\n\n\n\nRender FloatWindow inside a positioned parent with a defined height. Pass rect as x,y,width,height in pixels. Parent owns rect and open; apply handleChange values on move/resize and handleClose to hide. Supports title, actions, children, canDrag, canResize, className and HouseKeys. No persistence or application state."
+      }
+    }
+  },
+  "original": {
+    "query": "what is the popup window component name?",
+    "message": 1794423997027,
+    "id": 1793996465585,
+    "path": "src/components/FloatWindow",
+    "name": "all",
+    "content": "{\"vote\":\"up\"}"
+  }
+}

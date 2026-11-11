@@ -1,0 +1,28 @@
+{
+  "id": 1794420272752,
+  "name": "saved-models",
+  "title": "Search results: saved-models",
+  "description": "The saved-models location for search-results in shipped-with-app.",
+  "type": "path",
+  "tags": [
+    "learning"
+  ],
+  "paths": [
+    {
+      "name": ".gitkeep",
+      "path": ".",
+      "type": "gitkeep"
+    },
+    {
+      "name": "hybrid-seat-ranking",
+      "path": ".",
+      "type": "path"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    }
+  ],
+  "path": "learning/shipped-with-app/search-results/saved-models"
+}

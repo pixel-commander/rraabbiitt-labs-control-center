@@ -1,0 +1,134 @@
+schema: 1
+intent: use
+owner:
+  id: 1794404369434
+id: 1794408972671
+name: ResponseAndRankingCard
+title: Use ResponseAndRankingCard
+description: Props, defaults and callbacks for ResponseAndRankingCard.
+type: skill
+path: C:\rraabbiitt-hq\rraabbiitt-labs-control-center\src\components\SearchResponses\ResponseAndRankingCard
+tags: []
+implementation: []
+context: []
+inputs:
+  title:
+    type: ReactNode
+    required: false
+  rank:
+    type: number | undefined
+    required: false
+  score:
+    type: number | undefined
+    required: false
+  action_class:
+    type: string | undefined
+    required: false
+  data:
+    type: unknown
+    required: false
+  handleClick:
+    type: HandlerKey<unknown, ResponseAndRankingAction, void, ResponseAndRankingCardProps> | undefined
+    required: false
+  className:
+    type: string | undefined
+    required: false
+  id:
+    type: number | undefined
+    required: false
+  name:
+    type: string | undefined
+    required: false
+  description:
+    type: string | undefined
+    required: false
+  path:
+    type: string | undefined
+    required: false
+  save_path:
+    type: string | undefined
+    required: false
+  save_file:
+    type: string | undefined
+    required: false
+  paths:
+    type: PathsProps[] | undefined
+    required: false
+  date_added:
+    type: number | undefined
+    required: false
+  date_updated:
+    type: number | undefined
+    required: false
+  date_used:
+    type: number | undefined
+    required: false
+  date:
+    type: number | undefined
+    required: false
+  date_start:
+    type: number | undefined
+    required: false
+  date_end:
+    type: number | undefined
+    required: false
+outputs: {}
+instructions: >-
+  Props
+
+  title (optional): ReactNode
+
+  rank (optional): number | undefined
+
+  score (optional): number | undefined
+
+  action_class (optional): string | undefined
+
+  data (optional): unknown
+
+  handleClick (optional): HandlerKey<unknown, ResponseAndRankingAction, void,
+  ResponseAndRankingCardProps> | undefined
+
+  className (optional): string | undefined
+
+  id (optional): number | undefined
+
+  name (optional): string | undefined
+
+  description (optional): string | undefined
+
+  path (optional): string | undefined
+
+  save_path (optional): string | undefined
+
+  save_file (optional): string | undefined
+
+  paths (optional): PathsProps[] | undefined
+
+  date_added (optional): number | undefined
+
+  date_updated (optional): number | undefined
+
+  date_used (optional): number | undefined
+
+  date (optional): number | undefined
+
+  date_start (optional): number | undefined
+
+  date_end (optional): number | undefined
+
+
+  Defaults
+
+  rank=1; score=0; title=name; action_class="action-outline"; className="".
+
+
+  Callbacks and prop behavior
+
+  rank and score are numbers; score displays two decimals. name is metadata text; id is numeric;
+  title accepts ReactNode. action_class styles Rephrase only; hand-vote buttons have no action atom. handleClick receives (data,
+  "good-vote" | "ok-vote" | "bad-vote" | "rephrase", props).
+checks: []
+examples: []
+routes: []
+provenance: []

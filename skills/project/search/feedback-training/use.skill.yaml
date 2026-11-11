@@ -1,0 +1,42 @@
+schema: 1
+intent: use
+id: 1793679050322
+name: feedback-training
+title: Teach search with feedback
+description: Use result feedback and rephrasing to improve ranking from reviewed examples.
+type: skill
+path: skills/project/search/feedback-training
+tags:
+  - project
+  - search
+implementation: []
+context:
+  - use: 1793679050118
+    path: skills/project/search/use.skill.yaml
+    reason: Read the shared search guide first.
+inputs: {}
+outputs: {}
+instructions: >-
+  Search for a real question. Use the result feedback controls to judge how well a result matches
+  it. Use Rephrase when a result needs a better wording for that question. Review the target record
+  and field before saving.
+
+  Saved feedback goes to models/hybrid-seat-ranking/data/feedback.sqlite. Feedback creates and
+  activates a new checkpoint with reviewed examples. A checkpoint is a saved model state. If
+  activation fails, the feedback transaction is rolled back.
+
+  Normal feedback uses the pinned pretrained encoder. It does not train the encoder weights. The
+  active checkpoint is selected by models/hybrid-seat-ranking/checkpoints/active.json.
+
+  The Train page provides model and training controls. Reranker fine-tuning is a separate action. It
+  needs enough reviewed training and held-out examples. Held-out examples check the result and are
+  not used to fit weights. If there are too few, training reports an error without activating a new
+  model.
+
+  Run npm run index after changing source records. Indexing updates searchable data; it does not
+  replace feedback training. Keep the catalog, feedback, checkpoints, and pretrained files when
+  moving the project.
+checks: []
+examples: []
+routes: []
+provenance: []

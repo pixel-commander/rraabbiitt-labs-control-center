@@ -1,0 +1,23 @@
+{
+  "id": 1794420272766,
+  "name": "lessons",
+  "title": "Question rephrasing: lessons",
+  "description": "The lessons location for question-rephrasing in shipped-with-app.",
+  "type": "path",
+  "tags": [
+    "learning"
+  ],
+  "paths": [
+    {
+      "name": ".gitkeep",
+      "path": ".",
+      "type": "gitkeep"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    }
+  ],
+  "path": "learning/shipped-with-app/question-rephrasing/lessons"
+}

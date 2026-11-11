@@ -1,0 +1,36 @@
+schema: 1
+intent: use
+id: 1791518659432
+name: new-action-atom
+title: New Action Atom
+description: Creates a action-atom CSS atom with its demo and metadata.
+type: function
+path: toolkits/rab-react/scaffolds/new-action-atom
+file: use.skill.yaml
+tags: []
+implementation:
+  - id: 1790031603507
+context:
+  - use: 1791940045476
+    reason: Shared category contract, inherited before concrete implementation guidance.
+inputs:
+  settings:
+    description: rab.settings.json
+outputs:
+  return:
+    description: The generated rab.settings.json record, with its absolute destination path and
+      generated file paths.
+instructions: >-
+  Pass one props object matching rab.settings.json. Call the TypeScript function exported from
+  new-action-atom.ts. The scaffold validates before writing, refuses an existing destination and
+  returns the saved record. It does not start tracking, discover tools, scan the world or run a CLI.
+
+  Supporting documentation: toolkits/rab-react/scaffolds/new-action-atom/README.txt.
+checks: []
+examples: []
+routes: []
+provenance:
+  - id: 1790031603507
+    reason: Supporting document, not an executable skill dependency.
+owner:
+  id: 1790031603507

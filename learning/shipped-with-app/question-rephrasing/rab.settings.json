@@ -1,0 +1,38 @@
+{
+  "id": 1794420272778,
+  "name": "question-rephrasing",
+  "title": "Question rephrasing",
+  "description": "Approved new wording paired with a selected correct result, retaining the original message context.",
+  "type": "path",
+  "tags": [
+    "learning"
+  ],
+  "paths": [
+    {
+      "name": "grades",
+      "path": ".",
+      "type": "path"
+    },
+    {
+      "name": "lessons",
+      "path": ".",
+      "type": "path"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "saved-models",
+      "path": ".",
+      "type": "path"
+    }
+  ],
+  "path": "learning/shipped-with-app/question-rephrasing"
+}

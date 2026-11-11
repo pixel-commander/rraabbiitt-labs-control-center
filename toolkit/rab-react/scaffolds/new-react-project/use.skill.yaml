@@ -1,0 +1,36 @@
+schema: 1
+intent: use
+id: 1791518659427
+name: new-react-project
+title: New React Project
+description: Creates a local React project from the included template.
+type: function
+path: toolkits/rab-react/scaffolds/new-react-project
+file: use.skill.yaml
+tags: []
+implementation:
+  - id: 1790000000300
+context:
+  - use: 1791940045476
+    reason: Shared category contract, inherited before concrete implementation guidance.
+inputs:
+  settings:
+    description: rab.project.json
+outputs:
+  return:
+    description: The generated rab.project.json record, with its absolute destination path and generated
+      file paths.
+instructions: >-
+  Pass one props object matching rab.settings.json. Call the TypeScript function exported from
+  new-react-project.ts. The scaffold validates before writing, refuses an existing destination and
+  returns the saved record. It does not start tracking, discover tools, scan the world or run a CLI.
+
+  Supporting documentation: toolkits/rab-react/scaffolds/new-react-project/README.txt.
+checks: []
+examples: []
+routes: []
+provenance:
+  - id: 1790000000300
+    reason: Supporting document, not an executable skill dependency.
+owner:
+  id: 1790000000300

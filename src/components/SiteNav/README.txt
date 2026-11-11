@@ -1,0 +1,10 @@
+SiteNav
+The middle scroll-x wrapper uses the shared dragScroll utility after mount and disposes its listeners and momentum on unmount. Defaults: flick=true, smooth=true, sensitivity=3. Native touch scrolling is preserved; mouse drags suppress the subsequent click after movement crosses four pixels.
+Props extend HouseKeys: Left?: ReactNode, Right?: ReactNode, nav_items?: SiteNavItem[] (default []), selected?: path string, render?: (item, "nav-item") => ReactNode, className?: string. handleClick is required and receives (item, "site-nav", complete incoming props).
+SiteNavItem extends HouseKeys: numeric id, label ReactNode, path string, optional title string and optional handleClick with the same callback signature. An item callback runs first, followed by the required parent callback. The parent owns navigation and selection. Plain activation prevents native navigation; modified clicks retain normal anchor behavior.
+render supplies link contents, including valid null/false/zero/empty results, while SiteNav owns the accessible anchor, click contract and is-selected/aria-current state. Undefined selected means no selection; an empty selected string can match an empty path.
+Root composes site-nav and container-main with incoming className. Uses registered sides grid, areas left/main/right; narrow layout stacks in grid.css. Item skin is action-light. Overrides: theme tokens, --action-light-color/background/border, incoming className, or parent CSS. No custom props are spread to DOM. No internal state, I/O, or business logic.
+Demo uses URL variables for its selection and shows default rendering plus a custom renderer.
+
+Logo is an optional ReactNode. name is a required ReactNode and widens HouseKeys.name. The left area contains the logo, name and optional Left content. No logo wrapper is rendered for undefined, null or false Logo. Branding is center aligned. Logo and its content use height:100% and width:auto. The right area contains a center-aligned flex wrapper with gap-base. Both flex layouts are explicitly requested for SiteNav.
+

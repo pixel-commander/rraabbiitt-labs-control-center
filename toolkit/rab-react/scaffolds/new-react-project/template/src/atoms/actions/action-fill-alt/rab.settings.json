@@ -1,0 +1,10 @@
+{
+  "id": 0,
+  "name": "action-fill-alt",
+  "title": "action-fill-alt",
+  "description": "Secondary blue filled action with a subtle vertical gradient that reverses on hover.",
+  "type": "ui-atom",
+  "tags": ["action"],
+  "created": "2026-09-15",
+  "modified": "2026-09-15"
+}

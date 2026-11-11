@@ -1,0 +1,12 @@
+{
+  "name": "container-ghost",
+  "title": "Ghost container",
+  "description": "Transparent container skin that blends into its parent, with normal readable text and no visible border. Layout, spacing and interactive styles are supplied separately.",
+  "type": "ui-atom",
+  "tags": [
+    "container"
+  ],
+  "settings": [],
+  "paths": [],
+  "file": "container-ghost.css"
+}

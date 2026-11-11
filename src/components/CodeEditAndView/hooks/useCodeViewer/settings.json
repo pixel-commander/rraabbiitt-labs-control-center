@@ -1,0 +1,22 @@
+{
+  "id": 1793990737720,
+  "name": "useCodeViewer",
+  "title": "useCodeViewer",
+  "description": "Owns the local editor lifecycle, viewport and minimap.",
+  "type": "hook",
+  "path": "src/components/CodeEditAndView/hooks/useCodeViewer",
+  "file": "useCodeViewer.ts",
+  "settings": [],
+  "paths": [
+    {
+      "name": "code-editor.js",
+      "path": ".",
+      "type": "js"
+    },
+    {
+      "name": "code-editor.d.ts",
+      "path": ".",
+      "type": "ts"
+    }
+  ]
+}

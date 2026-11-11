@@ -1,0 +1,10 @@
+{
+  "name": "dashboards folder",
+  "title": "rraabbiitt-labs-control-center dashboards",
+  "description": "the folder where all dashboards are saved for the rraabbiitt-labs-control-center react project.",
+  "type": "path",
+  "tags": [
+    "dashboards"
+  ],
+  "path": "src/dashboards"
+}

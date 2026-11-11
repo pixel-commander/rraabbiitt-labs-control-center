@@ -1,0 +1,3 @@
+Style an action's selected state with .is-active.
+NEVER use [data-page='home'] or other page-specific attribute selectors to style active state.
+The component applies .is-active from its active state; the action atom owns the styling.

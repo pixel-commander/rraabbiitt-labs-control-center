@@ -1,0 +1,99 @@
+{
+  "id": 1793996465585,
+  "name": "FloatWindow",
+  "title": "FloatWindow",
+  "description": "Controlled floating content window with parent-bounded move and resize gestures and close requests.",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "FloatWindow.tsx",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-labs-control-center/src/components/FloatWindow",
+  "source_report_id": 1793899448938,
+  "paths": [
+    {
+      "name": "FloatWindow.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "FloatWindow.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "float-window.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": ".gitkeep",
+      "path": "demo",
+      "type": ""
+    },
+    {
+      "name": "Demo.tsx",
+      "path": "demo",
+      "type": "tsx"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ],
+  "settings": [
+    {
+      "type": "text",
+      "name": "title"
+    },
+    {
+      "type": "text",
+      "name": "children"
+    },
+    {
+      "type": "text",
+      "name": "className"
+    },
+    {
+      "type": "text",
+      "name": "container_class"
+    },
+    {
+      "type": "text",
+      "name": "header_class"
+    },
+    {
+      "type": "object",
+      "name": "rect"
+    },
+    {
+      "type": "checkbox",
+      "name": "open"
+    },
+    {
+      "type": "checkbox",
+      "name": "canDrag"
+    },
+    {
+      "type": "checkbox",
+      "name": "canResize"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+schema: 1
+intent: use
+name: use-inspect-ranking-attention
+title: inspect-ranking-attention
+description: Inspect one cross-encoder attention layer/head for a question and answer using active
+  or candidate weights. Returns token labels and measured attention, with explicit truncation.
+type: skill
+path: toolkit/hybrid-seat-ranking/tools/inspect-ranking-attention
+file: use.skill.yaml
+owner:
+  id: 1793225821360
+instructions: Use the shared settings bag and preserve settings on return. content is JSON with run
+  (relative tuning run). Also requires query, document, layer and head (zero-based integers); source
+  active or candidate. Maximum 6000 input characters and 128 tokens; reports truncation. Saves
+  attention-inspections/<id>.json. No automatic inference during status reads. Returns response.body
+  JSON. Delegates to the existing isolated Python process owner; only runners add tracking. Never
+  activates a candidate or changes feedback. Inspect one cross-encoder attention layer/head for a
+  question and answer using active or candidate weights. Returns token labels and measured
+  attention, with explicit truncation.
+id: 1793225862870

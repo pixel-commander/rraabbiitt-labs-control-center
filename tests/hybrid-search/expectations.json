@@ -1,0 +1,55 @@
+{
+  "schema": 1,
+  "date": 1794423559694,
+  "description": "Frozen system toolkit records only; no project documents, customer messages or learned lessons.",
+  "records": 89,
+  "catalog_sha256": "3232fba08b1dc669473c9615c421848f6b1a8499c78f068f82fabf6638274997",
+  "checkpoint": "1794201063837438200",
+  "engine_sha256": "58ef4f90dcb51d7d942ce25a198d171c750ec5ff84034e30968ebb69611f60ce",
+  "cases": [
+    {
+      "query": "how do i make a component?",
+      "expected_id": 1793138966741,
+      "max_rank": 1
+    },
+    {
+      "query": "how do i make a new component?",
+      "expected_id": 1793138966741,
+      "max_rank": 1
+    },
+    {
+      "query": "generate-world-id",
+      "expected_id": 1790784702601,
+      "max_rank": 3
+    },
+    {
+      "query": "export search catalog",
+      "expected_id": 1793676793815,
+      "max_rank": 3
+    },
+    {
+      "query": "create sqlite database",
+      "expected_id": 1791766641354,
+      "max_rank": 3
+    },
+    {
+      "query": "inspect ranking attention",
+      "expected_id": 1793225821360,
+      "max_rank": 3
+    },
+    {
+      "query": "what is the cli to run the app",
+      "expected_id": 1793126984423,
+      "max_rank": 1,
+      "instructions_include": "npm run dev"
+    }
+  ],
+  "additions": [
+    {
+      "id": 1793126984423,
+      "date": 1794423559694,
+      "source": "skills/project/cli/running-the-app/use.skill.yaml",
+      "source_sha256": "bdc38f7fb8a629a7b814fac4c4872c29d44125daa38bf222166c16e666d9c3b3"
+    }
+  ]
+}

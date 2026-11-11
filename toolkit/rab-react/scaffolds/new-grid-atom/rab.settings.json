@@ -1,0 +1,80 @@
+{
+  "id": 1790031603528,
+  "name": "new-grid-atom",
+  "title": "Create Grid Atom",
+  "description": "Create a named grid atom from one supported layout template. The tool saves its grid styles and settings.",
+  "type": "tool",
+  "path": "toolkit/rab-react/scaffolds/new-grid-atom",
+  "file": "new-grid-atom",
+  "parent": 1791518327955,
+  "tags": [
+    "rab-react",
+    "scaffold"
+  ],
+  "settings": [
+    {
+      "type": "string",
+      "name": "name",
+      "title": "Atom Name",
+      "description": "Lowercase kebab-case data-grid name.",
+      "required": true
+    },
+    {
+      "type": "string",
+      "name": "title",
+      "title": "Title",
+      "description": "Optional display title for the generated grid atom; defaults to its name.",
+      "required": false
+    },
+    {
+      "type": "string",
+      "name": "description",
+      "title": "Description",
+      "description": "Optional description for the generated grid atom.",
+      "required": false
+    },
+    {
+      "type": "string",
+      "name": "path",
+      "title": "Atoms Folder",
+      "description": "Parent folder that will contain the new named atom folder.",
+      "required": true
+    },
+    {
+      "type": "select",
+      "name": "grid",
+      "title": "Source Preset",
+      "description": "Existing template used to create the named atom.",
+      "required": false,
+      "default": "grid-dashboard",
+      "options": [
+        "grid-dashboard",
+        "grid-dashboard-alt",
+        "grid-test",
+        "grid-test-1"
+      ]
+    },
+    {
+      "type": "array",
+      "name": "tags",
+      "title": "Tags",
+      "description": "Optional saved record tags.",
+      "required": false
+    }
+  ],
+  "paths": [
+    {
+      "id": 1791518659445,
+      "name": "new-grid-atom",
+      "path": "toolkits/rab-react/scaffolds/new-grid-atom",
+      "file": "use.skill.yaml",
+      "type": "use skill"
+    }
+  ],
+  "skills": [
+    {
+      "id": 1791518659445,
+      "path": "toolkits/rab-react/scaffolds/new-grid-atom/use.skill.yaml"
+    }
+  ]
+}

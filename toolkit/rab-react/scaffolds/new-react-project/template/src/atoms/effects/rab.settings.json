@@ -1,0 +1,8 @@
+{
+  "name": "effects folder",
+  "title": "__PROJECT_NAME__ effects",
+  "description": "the folder where all effects are saved for the __PROJECT_NAME__ react project.",
+  "type": "path",
+  "tags": ["effects"],
+  "path": "src\\atoms\\effects"
+}

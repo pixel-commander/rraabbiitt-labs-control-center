@@ -1,0 +1,8 @@
+{
+  "name": "hooks folder",
+  "title": "__PROJECT_NAME__ hooks",
+  "description": "the folder where all hooks are saved for the __PROJECT_NAME__ react project.",
+  "type": "path",
+  "tags": ["hooks"],
+  "path": "src\\hooks"
+}

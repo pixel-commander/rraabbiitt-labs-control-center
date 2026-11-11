@@ -1,0 +1,158 @@
+schema: 1
+intent: use
+owner:
+  id: 1794395295573
+id: 1794408972707
+name: SearchResponses
+title: Use SearchResponses
+description: Props, defaults and callbacks for SearchResponses.
+type: skill
+path: C:\rraabbiitt-hq\rraabbiitt-labs-control-center\src\components\SearchResponses
+tags: []
+implementation: []
+context: []
+inputs:
+  container_aton:
+    type: string | undefined
+    required: false
+  container_class:
+    type: string | undefined
+    required: false
+  title:
+    type: ReactNode
+    required: false
+  color:
+    type: string | undefined
+    required: false
+  children:
+    type: ReactNode
+    required: false
+  data:
+    type: unknown
+    required: false
+  className:
+    type: string | undefined
+    required: false
+  handleClick:
+    type: HandlerKey<unknown, VoteType, void, SearchResponsesProps> | undefined
+    required: false
+  id:
+    type: number | undefined
+    required: false
+  name:
+    type: string | undefined
+    required: false
+  description:
+    type: string | undefined
+    required: false
+  path:
+    type: string | undefined
+    required: false
+  save_path:
+    type: string | undefined
+    required: false
+  save_file:
+    type: string | undefined
+    required: false
+  paths:
+    type: PathsProps[] | undefined
+    required: false
+  date_added:
+    type: number | undefined
+    required: false
+  date_updated:
+    type: number | undefined
+    required: false
+  date_used:
+    type: number | undefined
+    required: false
+  date:
+    type: number | undefined
+    required: false
+  date_start:
+    type: number | undefined
+    required: false
+  date_end:
+    type: number | undefined
+    required: false
+  result_type:
+    type: '"top-result" | "search-response"'
+    required: true
+  side:
+    type: '"left" | "right" | undefined'
+    required: false
+  score:
+    type: number | undefined
+    required: false
+outputs: {}
+instructions: >-
+  Props
+
+  container_aton (optional): string | undefined
+
+  container_class (optional): string | undefined
+
+  title (optional): ReactNode
+
+  color (optional): string | undefined
+
+  children (optional): ReactNode
+
+  data (optional): unknown
+
+  className (optional): string | undefined
+
+  handleClick (optional): HandlerKey<unknown, VoteType, void, SearchResponsesProps> | undefined
+
+  id (optional): number | undefined
+
+  name (optional): string | undefined
+
+  description (optional): string | undefined
+
+  path (optional): string | undefined
+
+  save_path (optional): string | undefined
+
+  save_file (optional): string | undefined
+
+  paths (optional): PathsProps[] | undefined
+
+  date_added (optional): number | undefined
+
+  date_updated (optional): number | undefined
+
+  date_used (optional): number | undefined
+
+  date (optional): number | undefined
+
+  date_start (optional): number | undefined
+
+  date_end (optional): number | undefined
+
+  result_type (required): "top-result" | "search-response"
+
+  side (optional): "left" | "right" | undefined
+
+
+  Defaults
+
+  result_type is required. Top-result uses TopResult defaults; search-response uses ChatBubble
+  defaults.
+
+
+  Callbacks and prop behavior
+
+  result_type="top-result" accepts the response title, children, container_class, legacy
+  container_aton, color and vote props. Its handleClick receives (data, "good-vote" | "ok-vote" |
+  "bad-vote", props). result_type="search-response" requires date as numeric milliseconds and
+  children; side accepts left or right. Use title, Footer, model_class and user_class for the
+  bubble. status accepts sent/read only on left; right always displays User and has no status.
+
+
+  score is optional. When supplied, it is displayed to two decimals in the left heading slot. Zero
+  is preserved. If omitted, no score box is rendered.
+checks: []
+examples: []
+routes: []
+provenance: []

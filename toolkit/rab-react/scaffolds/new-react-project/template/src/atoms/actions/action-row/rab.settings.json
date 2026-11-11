@@ -1,0 +1,12 @@
+{
+  "name": "action-row",
+  "title": "Row action",
+  "description": "Flat row skin with readable text, transparent background, square corners and a bottom divider. Hover highlights the row; press and .is-active use closely related selected backgrounds. Components decide row layout and size.",
+  "type": "ui-atom",
+  "tags": [
+    "action"
+  ],
+  "settings": [],
+  "paths": [],
+  "file": "action-row.css"
+}

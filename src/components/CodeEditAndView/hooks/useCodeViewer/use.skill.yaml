@@ -1,0 +1,17 @@
+schema: 1
+intent: use
+id: 1793990737721
+name: useCodeViewer
+type: skill
+path: src/components/CodeEditAndView/hooks/useCodeViewer
+file: useCodeViewer.ts
+owner:
+  id: 1794004818442
+implementation:
+  - id: 1794004818442
+instructions: Call useCodeViewer(props) inside CodeViewer. Owns the local
+  vendored editor lifecycle, controlled document synchronization, viewport
+  reporting and sampled minimap. Returns root/editor/canvas refs and minimap
+  navigation handlers. The caller owns code and persistence. Callbacks receive
+  data, type and the full CodeViewerProps bag. No source code executes and no
+  external editor service runs.

@@ -1,0 +1,18 @@
+{
+  "name": "ModelTile",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../StatusLabel/StatusLabel",
+      "path": "../StatusLabel/StatusLabel",
+      "type": "import",
+      "file": "ModelTile.tsx"
+    },
+    {
+      "name": "../StatusLabel/StatusLabel.types",
+      "path": "../StatusLabel/StatusLabel.types",
+      "type": "import",
+      "file": "ModelTile.types.ts"
+    }
+  ]
+}

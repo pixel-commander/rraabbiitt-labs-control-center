@@ -1,0 +1,15 @@
+@layer tokens, themes, base, grid, atoms, components;
+
+html,
+body {
+  display: grid;
+  height: 100dvh;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  display: grid;
+}

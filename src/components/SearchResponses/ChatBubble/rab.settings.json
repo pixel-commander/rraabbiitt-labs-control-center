@@ -1,0 +1,50 @@
+{
+  "id": 1794401889543,
+  "name": "ChatBubble",
+  "title": "ChatBubble",
+  "description": "",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "ChatBubble.tsx",
+  "path": "src/components/SearchResponses/ChatBubble",
+  "paths": [
+    {
+      "name": "ChatBubble.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "ChatBubble.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "chat-bubble.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

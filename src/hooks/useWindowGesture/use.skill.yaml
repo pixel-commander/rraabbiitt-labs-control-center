@@ -1,0 +1,15 @@
+name: use-window-gesture
+type: skill
+path: src/hooks/useWindowGesture
+file: use.skill.yaml
+instructions: >-
+  Call useWindowGesture(rootRef, options) from a React component. Options
+  contain the controlled rect, viewport boolean (default false, bounds use
+  offsetParent), handleChange(rect, move-or-resize), and optional
+  handleEnd(rect, gestureType). Attach begin(event, move-or-resize,
+  optionalInitialRect) to a drag handle. Pointer capture and listeners are
+  cleaned up on release, cancellation, target disappearance or unmount. This
+  hook emits geometry; the parent owns the rect.
+owner:
+  id: 1793996745750
+id: 1794417083886

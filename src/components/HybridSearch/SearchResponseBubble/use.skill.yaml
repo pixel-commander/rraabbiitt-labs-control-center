@@ -1,0 +1,142 @@
+schema: 1
+intent: use
+owner:
+  id: 1794412867637
+id: 1794413032150
+name: SearchResponseBubble
+title: Use SearchResponseBubble
+description: Props, defaults and callbacks.
+type: function
+path: C:\rraabbiitt-hq\rraabbiitt-labs-control-center\src\components\HybridSearch\SearchResponseBubble
+tags: []
+implementation: []
+context:
+  - use: 1794408972639
+inputs:
+  date:
+    type: number
+    required: true
+  title:
+    type: ReactNode
+    required: false
+  children:
+    type: ReactNode
+    required: true
+  Footer:
+    type: ReactNode
+    required: false
+  user_class:
+    type: string | undefined
+    required: false
+  model_class:
+    type: string | undefined
+    required: false
+  className:
+    type: string | undefined
+    required: false
+  id:
+    type: number | undefined
+    required: false
+  name:
+    type: string | undefined
+    required: false
+  description:
+    type: string | undefined
+    required: false
+  path:
+    type: string | undefined
+    required: false
+  save_path:
+    type: string | undefined
+    required: false
+  save_file:
+    type: string | undefined
+    required: false
+  paths:
+    type: PathsProps[] | undefined
+    required: false
+  date_added:
+    type: number | undefined
+    required: false
+  date_updated:
+    type: number | undefined
+    required: false
+  date_used:
+    type: number | undefined
+    required: false
+  date_start:
+    type: number | undefined
+    required: false
+  date_end:
+    type: number | undefined
+    required: false
+  side:
+    type: '"left" | "right" | undefined'
+    required: false
+  status:
+    type: '"sent" | "read" | undefined'
+    required: false
+outputs: {}
+instructions: >-
+  Props
+
+  date (required): number
+
+  title (optional): ReactNode
+
+  children (required): ReactNode
+
+  Footer (optional): ReactNode
+
+  user_class (optional): string | undefined
+
+  model_class (optional): string | undefined
+
+  className (optional): string | undefined
+
+  id (optional): number | undefined
+
+  name (optional): string | undefined
+
+  description (optional): string | undefined
+
+  path (optional): string | undefined
+
+  save_path (optional): string | undefined
+
+  save_file (optional): string | undefined
+
+  paths (optional): PathsProps[] | undefined
+
+  date_added (optional): number | undefined
+
+  date_updated (optional): number | undefined
+
+  date_used (optional): number | undefined
+
+  date_start (optional): number | undefined
+
+  date_end (optional): number | undefined
+
+  side (optional): "left" | "right" | undefined
+
+  status (optional): "sent" | "read" | undefined
+
+
+  Defaults
+
+  side="left"; status="sent" for left messages; user_class="container-alt";
+  model_class="container-alt"; className="". Left title defaults to Model; right title always
+  displays User.
+
+
+  Callbacks and prop behavior
+
+  date is required numeric milliseconds. children is required message content. side accepts left or
+  right. title is shown on left; right always displays User. Both show the time. Footer accepts
+  ReactNode. status accepts sent or read on left only. user_class styles right content; model_class
+  styles left content. No callbacks.
+checks: []
+examples: []
+routes: []
+provenance: []

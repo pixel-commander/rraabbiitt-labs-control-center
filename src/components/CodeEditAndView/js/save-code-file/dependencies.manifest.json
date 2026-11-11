@@ -1,0 +1,12 @@
+{
+  "name": "save-code-file",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../../CodeEditAndView.types",
+      "path": "../../CodeEditAndView.types",
+      "type": "import",
+      "file": "save-code-file.ts"
+    }
+  ]
+}

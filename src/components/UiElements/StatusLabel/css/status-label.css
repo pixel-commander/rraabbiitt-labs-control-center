@@ -1,0 +1,35 @@
+@layer components {
+  .status-label {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    align-items: center;
+    justify-items: start;
+    min-inline-size: 0;
+  }
+  .status-label-label {
+    overflow-wrap: anywhere;
+    color: var(--status-label-color, var(--color-primary));
+    font: var(--type-code);
+    letter-spacing: 0.1em;
+  }
+  .status-label-dot {
+    color: var(--status-color, var(--color-primary));
+    font-size: 8px;
+  }
+  .status-label.status-success {
+    --status-color: var(--status-success);
+    --status-label-color: var(--status-success);
+  }
+  .status-label.status-warn {
+    --status-color: var(--status-warning);
+    --status-label-color: var(--status-warning);
+  }
+  .status-label.status-error {
+    --status-color: var(--status-error);
+    --status-label-color: var(--status-error);
+  }
+  .status-label.status-waiting {
+    --status-color: var(--status-muted);
+    --status-label-color: var(--status-muted);
+  }
+}

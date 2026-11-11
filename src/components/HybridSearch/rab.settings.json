@@ -1,0 +1,145 @@
+{
+  "id": 1794412867605,
+  "name": "HybridSearch",
+  "title": "HybridSearch",
+  "description": "Built-in hybrid search feature",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "HybridSearch.tsx",
+  "path": "src/components/HybridSearch",
+  "paths": [
+    {
+      "name": "HybridSearch.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "HybridSearch.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "README.txt",
+      "path": "SearchMessageBox",
+      "type": "txt"
+    },
+    {
+      "name": "SearchMessageBox.tsx",
+      "path": "SearchMessageBox",
+      "type": "tsx"
+    },
+    {
+      "name": "SearchMessageBox.types.ts",
+      "path": "SearchMessageBox",
+      "type": "ts"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": "SearchMessageBox",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "SearchMessageBox",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "SearchMessageBox",
+      "type": "yaml"
+    },
+    {
+      "name": "README.txt",
+      "path": "SearchResponseBubble",
+      "type": "txt"
+    },
+    {
+      "name": "SearchResponseBubble.tsx",
+      "path": "SearchResponseBubble",
+      "type": "tsx"
+    },
+    {
+      "name": "SearchResponseBubble.types.ts",
+      "path": "SearchResponseBubble",
+      "type": "ts"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": "SearchResponseBubble",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "SearchResponseBubble",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "SearchResponseBubble",
+      "type": "yaml"
+    },
+    {
+      "name": "hybrid-search.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "README.txt",
+      "path": "hooks/useHybridSearch",
+      "type": "txt"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": "hooks/useHybridSearch",
+      "type": "json"
+    },
+    {
+      "name": "messagesApi.ts",
+      "path": "hooks/useHybridSearch",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "hooks/useHybridSearch",
+      "type": "json"
+    },
+    {
+      "name": "searchApi.ts",
+      "path": "hooks/useHybridSearch",
+      "type": "ts"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "hooks/useHybridSearch",
+      "type": "yaml"
+    },
+    {
+      "name": "useHybridSearch.ts",
+      "path": "hooks/useHybridSearch",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "useMcpViewer",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../../../FloatWindow/FloatWindow.types",
+      "path": "../../../FloatWindow/FloatWindow.types",
+      "type": "import",
+      "file": "useMcpViewer.ts"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+schema: 1
+intent: use
+id: 1793221495964
+name: use-tune-ranking-model
+title: Fine-tune ranking model
+description: Fine-tune the local cross-encoder ranking model from reviewed graded answers. Retain
+  versioned training chunks, exact dataset snapshots, changed model weights, held-out evaluation,
+  progress, disk sizes and candidate checkpoints. Read status without inference; activate only
+  candidates passing evaluation.
+type: skill
+path: toolkit/hybrid-seat-ranking/tools/tune-ranking-model
+file: use.skill.yaml
+owner:
+  id: 1793221495963
+implementation:
+  - id: 1793221495963
+instructions: >
+  Use the shared settings bag and canonical ToolReturn/RunnerReturn. name=status reads progress,
+  chunks, sizes and reports without inference. name=fine-tune updates cross-encoder weights using
+  BCEWithLogits on reviewed whole-answer grades 1/0.5/0. content JSON: epochs 1..10 default 1,
+  batch_size 1..16 default 4, learning_rate >0 <=0.001 default 0.00002, start_from current or
+  pretrained. Rephrase families stay in one split. Retain chunk.json/examples.json under
+  models/hybrid-seat-ranking/data/training-chunks/id/version, dataset.json/report.json/model under
+  tuning/run. Unreviewed or incomplete labels do not become invented whole-record grades. Frozen
+  embedding encoder is unchanged. Candidate does not activate automatically. name=activate with
+  content.run activates only an evaluation-passing candidate with unchanged parent/catalog/feedback.
+  Evaluation covers held-out judged answers, not full-catalog recall. JSON stdout; diagnostics
+  stderr. Runner uses the canonical runner-tooling-and-tracking owner through runTools. Python uses
+  the existing model venv or TOOL_LEARNER_PYTHON; no absolute project path is embedded. Optional
+  content.landscape boolean defaults false. When true, loss_landscape.py records the initial weights
+  and each optimizer step on a fixed deterministic probe of up to eight training examples, in
+  evaluation mode. It samples a 9 by 9 full-parameter two-direction slice through initial weights,
+  restores trained weights exactly, and saves tuning/run/landscape.json (probe, SHA-256, axes
+  descriptions, grid losses, projected positions, actual probe losses and off-plane residuals). Axis
+  directions are the first two independent optimizer displacements; missing directions use seeded
+  orthogonal fallback. Extra CPU time and memory are required. Progress stage landscape has
+  landscape_done/landscape_total. Status returns saved landscape data with its run. The trajectory
+  is a projection, not evidence of convergence or better search. No landscape is synthesized for old
+  runs.
+
+  Training diagnostics: content.diagnostics boolean defaults true. Saves loss-history.json (fixed
+  train/test evaluation at step 0 and after every update with dropout disabled) and
+  gradient-history.json (up to 2048 deterministically sampled gradients per group, 24 log10
+  absolute-magnitude bins [-12,0], full group norms, global norm and clipping threshold before
+  optimizer update). Sampling and evaluation do not change weights. Status exposes these optional
+  records; old runs display Not recorded. Current held-out labels act as validation, not a fresh
+  final test if used repeatedly for tuning.
+
+  Comparison and attention are separate on-demand tools/runners: compare-ranking-checkpoints and
+  inspect-ranking-attention. Both retain the settings bag. Comparison uses the run frozen catalog
+  and positive whole-answer test labels, does not turn field-only labels into whole-answer
+  judgments, and never labels unjudged results wrong. It compares full pipeline configs (including
+  their saved shortlist sizes), not isolated model weights. Attention uses a separate eager model,
+  supports active/candidate source, reports truncated input at 128 tokens, saves exact input and
+  matrix locally. Search telemetry reports sequential stages, nested retrieval-pass breakdowns,
+  catalog/model preparation and Python request time; it excludes HTTP transport/browser rendering.

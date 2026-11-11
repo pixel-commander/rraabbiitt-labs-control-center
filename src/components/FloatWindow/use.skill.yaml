@@ -1,0 +1,13 @@
+name: use-float-window
+type: skill
+path: src/components/FloatWindow
+file: use.skill.yaml
+instructions: >-
+  Render FloatWindow inside a positioned parent with a defined height. Pass rect
+  as x,y,width,height in pixels. Parent owns rect and open; apply handleChange
+  values on move/resize and handleClose to hide. Supports title, actions,
+  children, canDrag, canResize, className and HouseKeys. No persistence or
+  application state.
+owner:
+  id: 1793996465585
+id: 1794417083882

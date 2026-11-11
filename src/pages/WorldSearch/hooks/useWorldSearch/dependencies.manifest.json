@@ -1,0 +1,12 @@
+{
+  "name": "useWorldSearch",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../../../../components/HybridSearch/hooks/useHybridSearch/useHybridSearch",
+      "path": "../../../../components/HybridSearch/hooks/useHybridSearch/useHybridSearch",
+      "type": "import",
+      "file": "useWorldSearch.ts"
+    }
+  ]
+}

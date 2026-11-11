@@ -1,0 +1,35 @@
+schema: 1
+intent: use
+id: 1793679050118
+name: search
+title: How does search work?
+description: How HybridSearchModel finds answers, shows their source, and offers tools.
+type: skill
+path: skills/project/search
+tags:
+  - project
+  - search
+implementation: []
+context: []
+inputs: {}
+outputs: {}
+instructions: >-
+  Search reads the indexed SQLite catalog. The root rab.project.json defines the database and
+  source folders.
+
+  Enter a question or request on /search. Search compares the name, title, and description of
+  records. It combines word matches with meaning matches from a pretrained encoder. A reranker
+  checks leading results. Feedback examples can change ranking.
+
+  The answer comes from a project record or skill. It is not a new answer written by a chat model.
+  Check the type, source path, name, and ID. The score is a ranking value, not a chance that the
+  answer is correct.
+
+  Search does not index files at startup. Run npm run index after source or skill changes. Indexing
+  updates the catalog; it does not train model weights.
+
+  Read the focused child guide for finding records, confirming tools, or giving feedback.
+checks: []
+examples: []
+routes: []
+provenance: []

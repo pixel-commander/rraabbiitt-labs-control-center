@@ -1,0 +1,27 @@
+schema: 1
+intent: use
+id: 1793127075008
+name: viewing-the-app
+title: Viewing the app
+description: Open the running control center in a browser.
+type: function
+path: skills/project/viewing-the-app
+tags:
+  - project
+  - browser
+implementation: []
+context:
+  - use: 1793126984423
+    reason: Start the app before viewing it in a browser.
+inputs: {}
+outputs:
+  body:
+    type: string
+    source:
+      id: 1794413596312
+      key: url
+instructions: http://127.0.0.1:5181/world-search
+checks: []
+examples: []
+routes: []
+provenance: []

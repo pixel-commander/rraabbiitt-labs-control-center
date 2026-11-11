@@ -1,0 +1,30 @@
+schema: 1
+intent: use
+id: 1791940045245
+name: runners
+title: Runners
+description: Compose ordered steps under one shared execution owner.
+type: skill
+path: skills/toolkits/runners
+tags:
+  - guidance
+  - toolkits
+implementation: []
+context:
+  - use: 1791940045207
+    path: skills/toolkits/use.skill.yaml
+    reason: Read the parent guidance before this focused branch.
+inputs: {}
+outputs: {}
+instructions:
+  A runner coordinates a workflow of tool work, model instructions or nested workflows.
+  Declare the ordered plan and pass each step only its intended settings. Keep domain work in the
+  corresponding capability rather than duplicating it in the runner. Attach the skills and rules
+  relevant to each step; assembled guidance is instruction text, not an automatic command. Use the
+  shared runner for invocation identity, ordering, ancestry, timing, states and result recording.
+  Preserve source record IDs. Follow the leaf guides for usage, adding runners, results and states.
+  Do not start independent trackers or invent a second return format.
+checks: []
+examples: []
+routes: []
+provenance: []

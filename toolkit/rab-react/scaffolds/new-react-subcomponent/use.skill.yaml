@@ -1,0 +1,38 @@
+schema: 1
+intent: use
+id: 1791518659408
+name: new-react-subcomponent
+title: Sub Component
+description: Creates a structural React subcomponent with optional canonical grid and class string.
+type: function
+path: toolkits/rab-react/scaffolds/new-react-subcomponent
+file: use.skill.yaml
+tags: []
+implementation:
+  - id: 1790000000402
+context:
+  - use: 1791940045476
+    reason: Shared category contract, inherited before concrete implementation guidance.
+inputs:
+  settings:
+    description: rab.settings.json
+outputs:
+  return:
+    description: The generated rab.settings.json record, with its absolute destination path and
+      generated file paths.
+instructions: >-
+  Pass one props object matching rab.settings.json. Call the TypeScript function exported from
+  new-react-subcomponent.ts. The scaffold validates before writing, refuses an existing destination
+  and returns the saved record. Name input in any text style is normalized to PascalCase for
+  generated folders and files. It does not start tracking, discover tools, scan the world or run a
+  CLI.
+
+  Supporting documentation: toolkits/rab-react/scaffolds/new-react-subcomponent/README.txt.
+checks: []
+examples: []
+routes: []
+provenance:
+  - id: 1790000000402
+    reason: Supporting document, not an executable skill dependency.
+owner:
+  id: 1790000000402

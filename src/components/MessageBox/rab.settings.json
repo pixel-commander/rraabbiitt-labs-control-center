@@ -1,0 +1,115 @@
+{
+  "id": 1794399461744,
+  "name": "MessageBox",
+  "title": "MessageBox",
+  "description": "",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "MessageBox.tsx",
+  "path": "src/components/MessageBox",
+  "paths": [
+    {
+      "name": "MessageBox.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "MessageBox.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "message-box.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": ".gitkeep",
+      "path": "demo",
+      "type": ""
+    },
+    {
+      "name": "Demo.tsx",
+      "path": "demo",
+      "type": "tsx"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "README.txt",
+      "path": "hooks/useMessageBox",
+      "type": "txt"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": "hooks/useMessageBox",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "hooks/useMessageBox",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "hooks/useMessageBox",
+      "type": "yaml"
+    },
+    {
+      "name": "useMessageBox.ts",
+      "path": "hooks/useMessageBox",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": "hooks/useMessageProvider",
+      "type": "txt"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": "hooks/useMessageProvider",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "hooks/useMessageProvider",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "hooks/useMessageProvider",
+      "type": "yaml"
+    },
+    {
+      "name": "useMessageProvider.ts",
+      "path": "hooks/useMessageProvider",
+      "type": "ts"
+    },
+    {
+      "name": "useMessageProvider.types.ts",
+      "path": "hooks/useMessageProvider",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

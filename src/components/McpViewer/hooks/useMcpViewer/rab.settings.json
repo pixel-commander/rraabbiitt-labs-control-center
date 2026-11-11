@@ -1,0 +1,40 @@
+{
+  "id": 1794417147127,
+  "name": "useMcpViewer",
+  "title": "useMcpViewer",
+  "description": "Own MCP popup geometry, visibility, focus and connection status.",
+  "type": "hook",
+  "tags": [
+    "react",
+    "hook"
+  ],
+  "file": "useMcpViewer.ts",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-labs-control-center/src/components/McpViewer/hooks/useMcpViewer",
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    },
+    {
+      "name": "useMcpViewer.ts",
+      "path": ".",
+      "type": "ts"
+    }
+  ]
+}

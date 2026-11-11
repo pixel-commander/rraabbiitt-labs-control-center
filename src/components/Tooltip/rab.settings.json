@@ -1,0 +1,60 @@
+{
+  "id": 1794399859295,
+  "name": "Tooltip",
+  "title": "Tooltip",
+  "description": "",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "Tooltip.tsx",
+  "path": "src/components/Tooltip",
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "Tooltip.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "Tooltip.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "tooltip.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": ".gitkeep",
+      "path": "demo",
+      "type": ""
+    },
+    {
+      "name": "Demo.tsx",
+      "path": "demo",
+      "type": "tsx"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

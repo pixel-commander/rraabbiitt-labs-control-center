@@ -1,0 +1,11 @@
+{
+  "id": 1793990737728,
+  "name": "useCodeEditAndView",
+  "title": "useCodeEditAndView",
+  "description": "Call useCodeEditAndView(props) inside React.",
+  "type": "hook",
+  "path": "src/components/CodeEditAndView/hooks/useCodeEditAndView",
+  "file": "useCodeEditAndView.ts",
+  "settings": [],
+  "paths": []
+}

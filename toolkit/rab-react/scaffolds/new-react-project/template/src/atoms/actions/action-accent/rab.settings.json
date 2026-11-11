@@ -1,0 +1,12 @@
+{
+  "name": "action-accent",
+  "title": "Accent action",
+  "description": "High-emphasis accent-filled action with dark contrast text and an accent border. Hover brightens the accent; press and .is-active stay accent-colored with a slight background variation. Includes focus and disabled states.",
+  "type": "ui-atom",
+  "tags": [
+    "action"
+  ],
+  "settings": [],
+  "paths": [],
+  "file": "action-accent.css"
+}

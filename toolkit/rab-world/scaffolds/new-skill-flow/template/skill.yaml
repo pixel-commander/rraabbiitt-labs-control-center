@@ -1,0 +1,22 @@
+schema: 1
+intent: use
+owner:
+  id: __OWNER_ID__
+  path: __OWNER_SETTINGS_PATH__
+id: __STAMP_ID__
+name: "name"
+title: "title"
+description: __DESCRIPTION__
+type: function
+path: __PATH__
+tags: []
+implementation: []
+context: []
+inputs: {}
+outputs: {}
+instructions: |
+  Describe only this owner's behavior and how to use it.
+checks: []
+examples: []
+routes: []
+provenance: []

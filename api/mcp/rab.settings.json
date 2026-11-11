@@ -1,0 +1,16 @@
+{
+  "id": 1794413738402,
+  "name": "portable-search-dashboard-mcp",
+  "title": "Portable Hybrid Search Dashboard MCP",
+  "description": "HTTP MCP access to tools registered in the root world file.",
+  "type": "mcp-server",
+  "path": "api/mcp",
+  "file": "server.mjs",
+  "paths": [
+    {
+      "path": ".",
+      "file": "use.skill.yaml",
+      "type": "use skill"
+    }
+  ]
+}

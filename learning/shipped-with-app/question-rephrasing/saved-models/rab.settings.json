@@ -1,0 +1,23 @@
+{
+  "id": 1794420272773,
+  "name": "saved-models",
+  "title": "Question rephrasing: saved-models",
+  "description": "The saved-models location for question-rephrasing in shipped-with-app.",
+  "type": "path",
+  "tags": [
+    "learning"
+  ],
+  "paths": [
+    {
+      "name": ".gitkeep",
+      "path": ".",
+      "type": "gitkeep"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    }
+  ],
+  "path": "learning/shipped-with-app/question-rephrasing/saved-models"
+}

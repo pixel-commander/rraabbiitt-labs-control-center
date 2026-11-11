@@ -1,0 +1,19 @@
+schema: 1
+intent: use
+id: 1793984237831
+name: new-world-project-json
+title: New world project JSON
+description: Create a settings-shaped rab.project.json in a folder.
+context:
+  - use: 1791940045476
+    reason: Shared scaffold contract.
+owner:
+  id: 1793984237830
+implementation:
+  - id: 1793984237830
+instructions: Call run({ path, name, ...props }) with one HouseKeys bag. path is the destination
+  folder and name is required; both must be nonempty strings. Optional title, description, type,
+  tags, paths and id are preserved. Returns the saved rab.project.json record directly, including
+  its generated ID when id was absent. An existing destination file or invalid input throws.
+path: toolkit/rab-world/scaffolds/new-world-project-json
+file: new-world-project-json.ts

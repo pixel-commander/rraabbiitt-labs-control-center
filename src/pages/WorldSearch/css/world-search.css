@@ -1,0 +1,204 @@
+@layer components {
+  .site-shell:has(.world-search) {
+    block-size: 100dvh;
+  }
+  .world-search {
+    padding: var(--space-2xl);
+    block-size: 100%;
+    min-block-size: 0;
+  }
+  .world-search-heading {
+    align-items: center;
+    gap: var(--space-2xs) var(--space-lg);
+  }
+  .world-search h1 {
+    margin: 0;
+    line-height: 1.15;
+    font-weight: 500;
+    letter-spacing: -0.06em;
+  }
+  .world-search h2 {
+    font: var(--type-code);
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    margin: 0 0 var(--space-lg);
+  }
+  .world-search h3 {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  .world-search p {
+    line-height: 1.8;
+  }
+  .world-search-columns {
+    min-inline-size: 0;
+  }
+  .world-search-tool-col {
+    --world-search-tool-width: 40rem;
+    width: var(--world-search-tool-width);
+  }
+  .world-search-tool-col .tool-col-scroll {
+    width: var(--world-search-tool-width);
+  }
+  .world-search-tool-col .response-and-ranking-card-title {
+    font-size: 1.2rem;
+  }
+  .world-search-tool-col .response-and-ranking-card-meta {
+    font-size: 0.95rem;
+  }
+  .world-search-tool-col h2 {
+    font-size: 0.9rem;
+  }
+  .world-search-skill-instructions {
+    margin: 0;
+    padding-top: var(--space-base);
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    font: inherit;
+  }
+  .world-search-models {
+    inline-size: 14rem;
+    align-content: space-between;
+    gap: var(--space-2xl);
+  }
+  .world-search-panel {
+    padding: var(--space-xl);
+    min-inline-size: 0;
+  }
+  .world-search-panel.world-search-conversation {
+    padding-bottom: 0;
+  }
+  .world-search-model-list {
+    gap: var(--space-sm);
+  }
+  .world-search-model {
+    padding: var(--space-md);
+    text-align: left;
+    width: 100%;
+  }
+  .world-search-new {
+    padding: var(--space-md);
+    inline-size: 100%;
+    margin-top: var(--space-xl);
+  }
+  .world-search-inspector {
+    inline-size: 20rem;
+    align-content: start;
+    gap: var(--space-2xl);
+  }
+  .world-search-trace {
+    padding: var(--space-lg);
+    display: grid;
+    gap: var(--space-sm);
+  }
+  .world-search-trace code {
+    overflow-wrap: anywhere;
+    font: var(--type-code);
+  }
+  .world-search-sliders {
+    gap: var(--space-lg);
+  }
+  .world-search-persona {
+    resize: vertical;
+    inline-size: 100%;
+    min-block-size: 9rem;
+    padding: var(--space-md);
+    font: var(--type-code);
+  }
+  .world-search-save {
+    margin-top: var(--space-sm);
+    padding: var(--space-xs);
+  }
+  .world-search-user {
+    padding: var(--space-sm) 0 var(--space-xl);
+  }
+  .world-search-user p {
+    font-size: 0.95rem;
+  }
+  .world-search-messages {
+    display: grid;
+    min-block-size: 0;
+  }
+  .world-search-messages-scroll {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-block-size: 0;
+  }
+  .world-search-messages-scroll > * {
+    flex-shrink: 0;
+  }
+  .world-search-messages-scroll > :first-child {
+    margin-top: auto;
+  }
+  .world-search-conversation-footer {
+    justify-items: center;
+  }
+  .world-search-vote {
+    display: block;
+    min-block-size: 1.5rem;
+    margin-top: var(--space-sm);
+    font: var(--type-code);
+  }
+  .world-search-tools {
+    justify-self: start;
+    padding: var(--space-sm);
+  }
+  .world-search-footer {
+    gap: var(--space-lg);
+    font: var(--type-code);
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+  }
+  .world-search-sr {
+    position: absolute;
+    inline-size: 1px;
+    block-size: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+  @media (max-width: 1150px) {
+    .world-search-tool-col {
+      --world-search-tool-width: 32rem;
+    }
+    .world-search {
+      padding: var(--space-lg);
+    }
+    .world-search-inspector {
+      inline-size: 16rem;
+    }
+    .world-search-models {
+      inline-size: 12rem;
+    }
+    .world-search-panel {
+      padding: var(--space-lg);
+    }
+  }
+  @media (max-width: 768px) {
+    .world-search-tool-col {
+      --world-search-tool-width: 100%;
+      width: 100%;
+      min-block-size: 24rem;
+    }
+    .world-search-tool-col .tool-col-inner {
+      width: 100%;
+    }
+    .world-search-models,
+    .world-search-inspector {
+      inline-size: auto;
+    }
+    .world-search-conversation {
+      min-block-size: 38rem;
+    }
+    .world-search-heading .page-header-right {
+      display: none;
+    }
+    .world-search-footer {
+      display: block;
+    }
+    .world-search-footer span {
+      display: block;
+      margin-top: var(--space-xs);
+    }
+  }
+}

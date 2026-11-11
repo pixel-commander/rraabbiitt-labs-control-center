@@ -1,0 +1,31 @@
+schema: 1
+intent: use
+id: 1793126984416
+name: installing-packages
+title: Installing packages
+description: CLI for installing packages
+type: function
+path: skills/project/cli/installing-packages
+tags:
+  - project
+  - cli
+  - npm
+implementation: []
+context: []
+inputs: {}
+outputs: {}
+instructions: >-
+  Run commands from the project root (the folder containing package.json), using Node.js 24 or
+  newer.
+
+  Run npm install to install the project dependencies.
+
+  To add a runtime dependency, run npm install <package>. For a development dependency, run npm
+  install -D <package>. Replace <package> with the requested package name.
+
+  Keep the resulting package.json and package-lock.json changes together. If installation fails,
+  report the npm error; after adding a package, run npm run build to check the project.
+checks: []
+examples: []
+routes: []
+provenance: []

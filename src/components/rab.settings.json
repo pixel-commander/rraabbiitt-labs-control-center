@@ -1,0 +1,10 @@
+{
+  "name": "components folder",
+  "title": "rraabbiitt-labs-control-center components",
+  "description": "the folder where all components are saved for the rraabbiitt-labs-control-center react project.",
+  "type": "path",
+  "tags": [
+    "components"
+  ],
+  "path": "src/components"
+}

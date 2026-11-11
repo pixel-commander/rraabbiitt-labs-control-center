@@ -1,0 +1,8 @@
+{
+  "name": "dashboards folder",
+  "title": "__PROJECT_NAME__ dashboards",
+  "description": "the folder where all dashboards are saved for the __PROJECT_NAME__ react project.",
+  "type": "path",
+  "tags": ["dashboards"],
+  "path": "src\\dashboards"
+}

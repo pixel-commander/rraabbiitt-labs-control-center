@@ -1,0 +1,92 @@
+schema: 1
+intent: use
+owner:
+  id: 1794413032084
+id: 1794413032111
+name: useMessageProvider
+title: Use useMessageProvider
+description: Props, defaults and callbacks.
+type: function
+path: C:\rraabbiitt-hq\rraabbiitt-labs-control-center\src\components\MessageBox\hooks\useMessageProvider
+tags: []
+implementation: []
+context: []
+inputs:
+  place_holder:
+    type: string | undefined
+    required: false
+  container_class:
+    type: string | undefined
+    required: false
+  submit_class:
+    type: string | undefined
+    required: false
+  children:
+    type: ReactNode
+    required: false
+  className:
+    type: string | undefined
+    required: false
+  value:
+    type: string | undefined
+    required: false
+  handleChange:
+    type: HandlerKey<string, "message-box", void, MessageBoxProps> | undefined
+    required: false
+  handleSubmit:
+    type: HandlerKey<string, "message-box", void, MessageBoxProps>
+    required: true
+  id:
+    type: number | undefined
+    required: false
+  name:
+    type: string | undefined
+    required: false
+  title:
+    type: string | undefined
+    required: false
+  description:
+    type: string | undefined
+    required: false
+  path:
+    type: string | undefined
+    required: false
+  save_path:
+    type: string | undefined
+    required: false
+  save_file:
+    type: string | undefined
+    required: false
+  paths:
+    type: PathsProps[] | undefined
+    required: false
+  date_added:
+    type: number | undefined
+    required: false
+  date_updated:
+    type: number | undefined
+    required: false
+  date_used:
+    type: number | undefined
+    required: false
+  date:
+    type: number | undefined
+    required: false
+  date_start:
+    type: number | undefined
+    required: false
+  date_end:
+    type: number | undefined
+    required: false
+outputs: {}
+instructions: "Props: the message-box prop bag; handleSubmit is required. value optionally controls
+  the message; handleChange is optional. Defaults: empty local message, unless value is supplied.
+  Callbacks: returned handleChange(text, type = message-box, bag = props) updates an uncontrolled
+  message and forwards the change callback. Returned handleSubmit(text = message, type =
+  message-box, bag = props) trims text, rejects blank input, invokes the submit callback with the
+  complete supplied bag, and clears only an uncontrolled message. Returns message, handleChange and
+  handleSubmit."
+checks: []
+examples: []
+routes: []
+provenance: []

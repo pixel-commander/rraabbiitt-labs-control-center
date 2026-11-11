@@ -1,0 +1,82 @@
+DASHBOARD SEARCH SETUP
+======================
+
+ACTIVE WORLD SEARCH
+
+World Search uses the established hybrid engine in:
+  packages/hybrid-search-runtime/models/hybrid-seat-ranking/
+
+The adjacent world-embedding folder is part of the same local package.
+The engine uses per-field BM25, semantic retrieval, reciprocal-rank fusion,
+and the pinned cross-encoder. The adapter exports indexed records from
+this project's registered db/main/app.sqlite. User messages use that database.
+No sibling HQ folder is required by the supported app workflow.
+
+INSTALL AND START
+
+Use Node 24 or newer and Python 3.12 or newer. Python 3.14.5 was verified here.
+From this folder:
+  npm ci
+  npm run setup
+  npm run audit:portable
+  npm run test:hybrid-baseline
+  npm run dev
+
+Setup creates .venv, installs the active runtime dependencies, and creates
+missing database tables. It retains existing rows. Package installation needs
+registry access. Setup does not download model assets or train a model.
+Retain the shipped model files when you transfer the project.
+
+The UI, API, and MCP endpoint share the Vite server. rab.world.json holds the
+URL and port. Its root path is '.'. Startup resolves the actual containing
+folder. Local runtime locations are relative to that folder. Setup selects
+.venv/Scripts/python.exe on Windows or .venv/bin/python elsewhere.
+
+WHAT TO KEEP
+
+Keep the project source, toolkit, skills, database schema/setup, learning files,
+and packages/hybrid-search-runtime together. All imported UI code is local.
+Retain the database if you need its saved messages and records. A fresh install
+can create an empty database, then refresh its source records through registered
+tool 1793210509222. This reads local source; it does not train the model.
+
+Model assets and learning files are not ignored by the project .gitignore.
+Dependency environments, node_modules, dist, Python caches, and .tmp are ignored.
+Reinstall dependencies after moving to another machine. Do not transfer .venv.
+Temporary request catalogs and test reports stay under this project's .tmp.
+
+LEARNING
+
+learning/shipped-with-app contains the shipped baseline.
+learning/learned-on-site contains this installation's approved feedback.
+Both separate search-results, question-rephrasing, field-ranking, and
+search-quality-tests into lessons, grades, and saved-models.
+Read learning/README.txt for the actual file formats and write ownership.
+
+Current votes and selected-result rephrases become supervised search evidence.
+They do not update neural weights. The shipped model remains read-only through
+the app adapter. Retained legacy train/tune toolkit entries are source copies;
+they are not an enabled weight-training integration. Do not use them as proof
+that a training job or candidate activation is connected.
+
+SEPARATE OPTIONAL PORTABLE CLI
+
+packages/portable-search-ranker is an independent CLI copy. It does not power
+World Search. Its setup uses PowerShell 7 on Windows:
+  npm run ranker:setup
+  npm run ranker:search:example -- "find the chat settings page" --device cpu
+
+That optional installer can download its own model files. It uses a separate
+package environment. RANKER_PATH and RANKER_PYTHON are explicit CLI overrides;
+the default package and interpreter are local. They are not required by the app.
+
+npm run ranker:uninstall -- --dry-run previews removal of that optional CLI's
+installed environment and model cache. It does not uninstall the active hybrid
+engine or remove the learning folder. Use ranker:setup to restore that CLI.
+
+TRANSFER CHECK
+
+The frozen seven-query baseline does not use the application database or site
+lessons. It verifies the supplied model before project data is connected.
+Live search must also be checked with the local database and API. A baseline
+pass alone does not establish a working UI, persistence, or feedback connection.

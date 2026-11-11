@@ -1,0 +1,16 @@
+{
+  "id": 1794423287648,
+  "name": "skills",
+  "title": "Project Skills",
+  "description": "Discover source metadata within this project's skills folder.",
+  "type": "beacon",
+  "tags": [],
+  "paths": [
+    {
+      "name": "skills-sources",
+      "path": ".",
+      "type": "path"
+    }
+  ],
+  "path": "skills"
+}

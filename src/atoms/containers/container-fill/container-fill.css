@@ -1,0 +1,11 @@
+@layer atoms {
+  .container-fill {
+    color: var(--container-fill-color, var(--color-primary-neg));
+    background: var(--container-fill-background, var(--color-primary));
+    border: var(
+      --container-fill-border,
+      var(--border-width) var(--border-style) var(--color-primary)
+    );
+    border-radius: var(--radius-container);
+  }
+}

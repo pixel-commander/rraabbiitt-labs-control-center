@@ -1,0 +1,8 @@
+{
+  "name": "containers folder",
+  "title": "__PROJECT_NAME__ containers",
+  "description": "the folder where all containers are saved for the __PROJECT_NAME__ react project.",
+  "type": "path",
+  "tags": ["containers"],
+  "path": "src\\atoms\\containers"
+}

@@ -1,0 +1,45 @@
+@layer components {
+  .style-guide {
+    padding: var(--space-2xl);
+    max-inline-size: 78rem;
+    margin-inline: auto;
+  }
+  .style-guide h1 {
+    font-size: 2.5rem;
+    margin: 0.4rem 0;
+  }
+  .style-guide h2 {
+    font-size: 1.3rem;
+    margin: 0;
+  }
+  .style-guide h3 {
+    font: var(--type-code);
+    margin: 0 0 var(--space-sm);
+  }
+  .style-guide p {
+    margin: var(--space-sm) 0 var(--space-lg);
+  }
+  .style-guide-swatch {
+    block-size: 4rem;
+    border-radius: var(--radius-control);
+    margin-bottom: var(--space-sm);
+  }
+  .style-guide code {
+    overflow-wrap: anywhere;
+    font: var(--type-code);
+  }
+  .style-guide-sample {
+    padding: var(--space-xl);
+  }
+  .style-guide-action-list button {
+    padding: var(--space-md);
+  }
+  .style-guide-kicker {
+    font: var(--type-code);
+  }
+  @media (max-width: 600px) {
+    .style-guide {
+      padding: var(--space-lg);
+    }
+  }
+}

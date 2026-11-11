@@ -1,0 +1,41 @@
+{
+  "id": 1793138966750,
+  "name": "runner-new-atom",
+  "title": "New Atom",
+  "description": "Creates a new atom using the project settings to find its destination. Returns the new settings record and the files created so later steps can use them.",
+  "type": "runner",
+  "path": "toolkit/rab-react/runners/runner-new-atom",
+  "file": "runner-new-atom.ts",
+  "settings": [
+    {
+      "name": "path",
+      "title": "Project root",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "name",
+      "title": "Name",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "save_path",
+      "title": "Destination within project",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "type",
+      "title": "Atom type",
+      "type": "string",
+      "required": true,
+      "options": [
+        "container",
+        "action",
+        "effect",
+        "grid"
+      ]
+    }
+  ]
+}

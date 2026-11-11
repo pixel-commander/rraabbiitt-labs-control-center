@@ -1,0 +1,12 @@
+{
+  "name": "mcp",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../../toolkit/rab-world/runners/runner-use-tool/runner-use-tool.ts",
+      "path": "../../toolkit/rab-world/runners/runner-use-tool/runner-use-tool.ts",
+      "type": "import",
+      "file": "server.mjs"
+    }
+  ]
+}

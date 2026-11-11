@@ -1,0 +1,37 @@
+{
+  "id": 1794395295506,
+  "name": "action-text-link",
+  "title": "action-text-link",
+  "description": "",
+  "type": "actions",
+  "tags": ["react", "actions"],
+  "file": "action-text-link.css",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-labs-control-center/src/atoms/actions/action-text-link",
+  "paths": [
+    {
+      "name": "RULE.TXT",
+      "path": ".",
+      "type": "TXT"
+    },
+    {
+      "name": "RULES.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "action-text-link.css",
+      "path": ".",
+      "type": "css"
+    },
+    {
+      "name": "Demo.tsx",
+      "path": "demo",
+      "type": "tsx"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    }
+  ]
+}

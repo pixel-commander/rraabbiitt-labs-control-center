@@ -1,0 +1,45 @@
+{
+  "id": 1794412867627,
+  "name": "SearchMessageBox",
+  "title": "SearchMessageBox",
+  "description": "Search presentation adapter",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "SearchMessageBox.tsx",
+  "path": "src/components/HybridSearch/SearchMessageBox",
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "SearchMessageBox.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "SearchMessageBox.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "hooks folder",
+  "title": "rraabbiitt-labs-control-center hooks",
+  "description": "the folder where all hooks are saved for the rraabbiitt-labs-control-center react project.",
+  "type": "path",
+  "tags": [
+    "hooks"
+  ],
+  "path": "src/hooks"
+}

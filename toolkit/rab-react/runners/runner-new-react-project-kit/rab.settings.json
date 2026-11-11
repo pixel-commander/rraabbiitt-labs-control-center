@@ -1,0 +1,36 @@
+{
+  "id": 1793138966734,
+  "name": "runner-new-react-project-kit",
+  "title": "New React Project Kit",
+  "description": "Creates a React project, runs npm install, then starts npm run dev. Returns tracked creation, installation and local-server readiness results.",
+  "type": "runner",
+  "path": "toolkit/rab-react/runners/runner-new-react-project-kit",
+  "file": "runner-new-react-project-kit.ts",
+  "settings": [
+    {
+      "name": "title",
+      "title": "Display title",
+      "type": "string",
+      "required": false,
+      "description": "Defaults to the project name converted to title case for the Shell header."
+    },
+    {
+      "name": "path",
+      "title": "Parent folder or project root",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "name",
+      "title": "Name",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "save_path",
+      "title": "Destination relative to parent",
+      "type": "string",
+      "required": false
+    }
+  ]
+}

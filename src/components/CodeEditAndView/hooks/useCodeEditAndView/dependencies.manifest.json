@@ -1,0 +1,30 @@
+{
+  "name": "useCodeEditAndView",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../../CodeEditAndView.types",
+      "path": "../../CodeEditAndView.types",
+      "type": "import",
+      "file": "useCodeEditAndView.ts"
+    },
+    {
+      "name": "../../CodeViewer/CodeViewer.types",
+      "path": "../../CodeViewer/CodeViewer.types",
+      "type": "import",
+      "file": "useCodeEditAndView.ts"
+    },
+    {
+      "name": "../../js/validate-code/validate-code",
+      "path": "../../js/validate-code/validate-code",
+      "type": "import",
+      "file": "useCodeEditAndView.ts"
+    },
+    {
+      "name": "../../js/save-code-file/save-code-file",
+      "path": "../../js/save-code-file/save-code-file",
+      "type": "import",
+      "file": "useCodeEditAndView.ts"
+    }
+  ]
+}

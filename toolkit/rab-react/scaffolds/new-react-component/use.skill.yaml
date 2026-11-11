@@ -1,0 +1,37 @@
+schema: 1
+intent: use
+id: 1791518659404
+name: new-react-component
+title: New Component
+description: Creates a React component, types, stylesheet and hook using the supplied values.
+type: function
+path: toolkits/rab-react/scaffolds/new-react-component
+file: use.skill.yaml
+tags: []
+owner:
+  id: 1790000000401
+implementation:
+  - id: 1790000000401
+context:
+  - use: 1791940045476
+    reason: Shared category contract, inherited before concrete implementation guidance.
+inputs:
+  settings:
+    description: rab.settings.json
+outputs:
+  return:
+    description: The generated rab.settings.json record, with its absolute destination path and
+      generated file paths.
+instructions: >-
+  Pass one props object matching rab.settings.json. Call the TypeScript function exported from
+  new-react-component.ts. The scaffold validates before writing, refuses an existing destination and
+  returns the saved record. Name input in any text style is normalized to PascalCase for generated
+  folders and files. It does not start tracking, discover tools, scan the world or run a CLI.
+
+  Supporting documentation: toolkits/rab-react/scaffolds/new-react-component/README.txt.
+checks: []
+examples: []
+routes: []
+provenance:
+  - id: 1790000000401
+    reason: Supporting document, not an executable skill dependency.

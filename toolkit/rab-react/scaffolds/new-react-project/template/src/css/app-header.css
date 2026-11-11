@@ -1,0 +1,15 @@
+@layer components {
+  .project-header__brand {
+    align-self: center;
+    min-inline-size: 0;
+  }
+  .project-header__name {
+    margin: 0;
+    overflow-wrap: anywhere;
+  }
+  .project-header__controls {
+    align-items: center;
+    justify-self: end;
+    min-inline-size: 0;
+  }
+}

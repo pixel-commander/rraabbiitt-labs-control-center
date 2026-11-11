@@ -1,0 +1,12 @@
+{
+  "name": "action-main",
+  "title": "Main action",
+  "description": "Default action skin with a dark filled surface, readable text, subtle border and rounded corners. Hover brightens the surface; press and .is-active use closely related selected backgrounds. Includes focus and disabled states.",
+  "type": "ui-atom",
+  "tags": [
+    "action"
+  ],
+  "settings": [],
+  "paths": [],
+  "file": "action-main.css"
+}

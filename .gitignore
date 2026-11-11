@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.tmp/
+
+# Local Python runtime and caches. Model assets and training data are tracked.
+.venv/
+__pycache__/
+*.pyc
+packages/portable-search-ranker/data/catalog.json

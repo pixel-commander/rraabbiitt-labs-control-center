@@ -1,0 +1,30 @@
+schema: 1
+intent: use
+id: 1791543035832
+name: css-atom-skins
+title: css-atom-skins
+description: Shared usage guidance for skins.
+type: function
+path: toolkits/rab-react/scaffolds/css-atoms/skins
+file: use.skill.yaml
+tags:
+  - toolkits
+  - rab-react
+  - scaffolds
+  - css-atoms
+  - skins
+  - react
+  - shared-guidance
+implementation: []
+context:
+  - use: 1791940045476
+    reason: Shared category contract, inherited before concrete implementation guidance.
+  - use: 1791543035829
+inputs: {}
+outputs: {}
+instructions: Pass styles as declaration text only, without selectors or braces; omit it or pass an
+  empty string for template defaults. Use the leaf tool result to locate the CSS and demo files.
+checks: []
+examples: []
+routes: []
+provenance: []

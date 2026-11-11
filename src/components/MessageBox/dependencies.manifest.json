@@ -1,0 +1,12 @@
+{
+  "name": "MessageBox",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../../../ui/HouseKeys.types",
+      "path": "../../../ui/HouseKeys.types",
+      "type": "import",
+      "file": "MessageBox.types.ts"
+    }
+  ]
+}

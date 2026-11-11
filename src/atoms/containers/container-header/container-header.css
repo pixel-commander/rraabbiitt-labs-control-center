@@ -1,0 +1,8 @@
+@layer atoms {
+  .container-header {
+    color: var(--color-main-neg);
+    background: var(--color-main-alt);
+    border: none;
+    border-bottom: var(--border-width) var(--border-style) var(--border-default);
+  }
+}

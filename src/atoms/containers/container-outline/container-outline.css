@@ -1,0 +1,8 @@
+@layer atoms {
+  .container-outline {
+    background: var(--color-transparent);
+    color: var(--color-main-alt-neg);
+    border: var(--border-width) var(--border-style) var(--color-muted);
+    border-radius: var(--radius-container);
+  }
+}

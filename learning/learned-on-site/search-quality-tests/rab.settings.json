@@ -1,0 +1,39 @@
+{
+  "id": 1794408970910,
+  "name": "search-quality-tests",
+  "title": "Search quality tests",
+  "description": "Test questions, expected answers and measured search quality.",
+  "type": "path",
+  "tags": [
+    "learning",
+    "search-quality-tests"
+  ],
+  "paths": [
+    {
+      "name": "grades",
+      "path": ".",
+      "type": "path"
+    },
+    {
+      "name": "lessons",
+      "path": ".",
+      "type": "path"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "saved-models",
+      "path": ".",
+      "type": "path"
+    }
+  ],
+  "path": "learning/learned-on-site/search-quality-tests"
+}

@@ -1,0 +1,61 @@
+{
+  "id": 1792432275473,
+  "name": "SmartTooltip",
+  "title": "SmartTooltip",
+  "description": "Pointer-following tooltip with React content, viewport-aware placement, and a body portal that escapes clipped containers.",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "settings": [],
+  "paths": [
+    {
+      "name": "README.md",
+      "path": ".",
+      "type": "md"
+    },
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "SmartTooltip.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "SmartTooltip.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "smart-tooltip.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": "Demo.tsx",
+      "path": "demo",
+      "type": "tsx"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ],
+  "path": "src/components/SmartTooltip",
+  "file": "SmartTooltip.tsx"
+}

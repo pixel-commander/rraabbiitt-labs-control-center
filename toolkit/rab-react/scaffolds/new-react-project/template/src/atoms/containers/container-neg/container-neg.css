@@ -1,0 +1,11 @@
+@layer atoms {
+  .container-neg {
+    color: var(--container-neg-color, var(--content-inverse));
+    background: var(--container-neg-background, var(--content-strong));
+    border: var(
+      --container-neg-border,
+      var(--border-width) var(--border-style) var(--content-muted)
+    );
+    border-radius: var(--radius-container);
+  }
+}

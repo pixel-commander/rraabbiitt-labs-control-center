@@ -1,0 +1,24 @@
+schema: 1
+intent: use
+owner:
+  id: 1794399461745
+id: 1794413032161
+name: useMessageBox
+title: Use useMessageBox
+description: Hook usage.
+type: function
+path: C:\rraabbiitt-hq\rraabbiitt-labs-control-center\src\components\MessageBox\hooks\useMessageBox
+tags: []
+implementation: []
+context:
+  - use: 1794413032111
+inputs: {}
+outputs: {}
+instructions: "Props: complete message-box props; handleSubmit is required. Defaults: uncontrolled
+  empty message, or supplied value. Returns inputId, value, handleChange(event) for the textarea,
+  handleKeyDown(event) for Enter submission (Shift+Enter adds a new line; IME composition does not submit), and handleSubmit(event) for the form. The event adapters delegate to the message provider;
+  callbacks receive text, message-box and the complete incoming props bag."
+checks: []
+examples: []
+routes: []
+provenance: []

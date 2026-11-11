@@ -1,0 +1,45 @@
+{
+  "id": 1794412867637,
+  "name": "SearchResponseBubble",
+  "title": "SearchResponseBubble",
+  "description": "Search presentation adapter",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "SearchResponseBubble.tsx",
+  "path": "src/components/HybridSearch/SearchResponseBubble",
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "SearchResponseBubble.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "SearchResponseBubble.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "UiElements",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../../../HouseKeys.types",
+      "path": "../../HouseKeys.types",
+      "type": "import",
+      "file": "IconButton/IconButton.types.ts"
+    },
+    {
+      "name": "../../../HouseKeys.types",
+      "path": "../../HouseKeys.types",
+      "type": "import",
+      "file": "PageHeader/PageHeader.types.ts"
+    },
+    {
+      "name": "../../../HouseKeys.types",
+      "path": "../../HouseKeys.types",
+      "type": "import",
+      "file": "StatusLabel/StatusLabel.types.ts"
+    },
+    {
+      "name": "../../HouseKeys.types",
+      "path": "../../HouseKeys.types",
+      "type": "import",
+      "file": "UiElements.types.ts"
+    }
+  ]
+}

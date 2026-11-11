@@ -1,0 +1,11 @@
+{
+  "id": 1793990737715,
+  "name": "saveCodeFile",
+  "title": "saveCodeFile",
+  "description": "Call await saveCodeFile({ code, file, language, path? }, handleSave).",
+  "type": "function",
+  "path": "src/components/CodeEditAndView/js/save-code-file",
+  "file": "save-code-file.ts",
+  "settings": [],
+  "paths": []
+}

@@ -1,0 +1,186 @@
+schema: 1
+intent: use
+owner:
+  id: 1793976287997
+id: 1793990737735
+name: CodeEditAndView
+title: Use CodeEditAndView
+description: Props, defaults and callbacks for CodeEditAndView.
+type: skill
+path: C:\rraabbiitt-hq\rraabbiitt-labs-control-center\src\components\CodeEditAndView
+tags: []
+implementation: []
+context: []
+inputs:
+  code:
+    type: string | undefined
+    required: false
+  file:
+    type: string | undefined
+    required: false
+  language:
+    type: string | undefined
+    required: false
+  initialMode:
+    type: '"view" | "edit" | undefined'
+    required: false
+  showLineNumbers:
+    type: boolean | undefined
+    required: false
+  showMinimap:
+    type: boolean | undefined
+    required: false
+  startLine:
+    type: number | undefined
+    required: false
+  tabSize:
+    type: number | undefined
+    required: false
+  disabled:
+    type: boolean | undefined
+    required: false
+  className:
+    type: string | undefined
+    required: false
+  container_class:
+    type: string | undefined
+    required: false
+  children:
+    type: ReactNode
+    required: false
+  handleChange:
+    type: 'HandlerKey<{ code: string; }, "code-change", void> | undefined'
+    required: false
+  handleValidate:
+    type: HandlerKey<CodeFile, "validate-code", CodeDiagnostic[] | Promise<CodeDiagnostic[]>> | undefined
+    required: false
+  handleSave:
+    type: HandlerKey<CodeFile, "save-code", void | Promise<void>> | undefined
+    required: false
+  id:
+    type: number | undefined
+    required: false
+  name:
+    type: string | undefined
+    required: false
+  title:
+    type: string | undefined
+    required: false
+  description:
+    type: string | undefined
+    required: false
+  path:
+    type: string | undefined
+    required: false
+  save_path:
+    type: string | undefined
+    required: false
+  save_file:
+    type: string | undefined
+    required: false
+  paths:
+    type: PathsProps[] | undefined
+    required: false
+  date_added:
+    type: number | undefined
+    required: false
+  date_updated:
+    type: number | undefined
+    required: false
+  date_used:
+    type: number | undefined
+    required: false
+  date:
+    type: number | undefined
+    required: false
+  date_start:
+    type: number | undefined
+    required: false
+  date_end:
+    type: number | undefined
+    required: false
+outputs: {}
+instructions: >-
+  Props
+
+  code (optional): string | undefined
+
+  file (optional): string | undefined
+
+  language (optional): string | undefined
+
+  initialMode (optional): "view" | "edit" | undefined
+
+  showLineNumbers (optional): boolean | undefined
+
+  showMinimap (optional): boolean | undefined
+
+  startLine (optional): number | undefined
+
+  tabSize (optional): number | undefined
+
+  disabled (optional): boolean | undefined
+
+  className (optional): string | undefined
+
+  container_class (optional): string | undefined
+
+  children (optional): ReactNode
+
+  handleChange (optional): HandlerKey<{ code: string; }, "code-change", void> | undefined
+
+  handleValidate (optional): HandlerKey<CodeFile, "validate-code", CodeDiagnostic[] |
+  Promise<CodeDiagnostic[]>> | undefined
+
+  handleSave (optional): HandlerKey<CodeFile, "save-code", void | Promise<void>> | undefined
+
+  id (optional): number | undefined
+
+  name (optional): string | undefined
+
+  title (optional): string | undefined
+
+  description (optional): string | undefined
+
+  path (optional): string | undefined
+
+  save_path (optional): string | undefined
+
+  save_file (optional): string | undefined
+
+  paths (optional): PathsProps[] | undefined
+
+  date_added (optional): number | undefined
+
+  date_updated (optional): number | undefined
+
+  date_used (optional): number | undefined
+
+  date (optional): number | undefined
+
+  date_start (optional): number | undefined
+
+  date_end (optional): number | undefined
+
+
+  Defaults
+
+  code=""; file="untitled.tsx"; language comes from the file extension; initialMode="edit";
+  showLineNumbers=true; showMinimap=true; startLine=1; tabSize=2; disabled=false.
+
+
+  Callbacks and prop behavior
+
+  code supplies the document; file, language and path identify it. initialMode accepts view/edit.
+  showLineNumbers, showMinimap, startLine and tabSize configure display. disabled blocks
+  edits/actions. container_class and className add classes; children is optional content.
+  handleChange receives ({code}, "code-change"). handleValidate receives ({code,file,language,path},
+  "validate-code") and returns diagnostics or a Promise of diagnostics. A diagnostic has message,
+  severity error/warning and optional line/column. handleSave receives ({code,file,language,path},
+  "save-code") and may return a Promise. Resolve after persistence; throw/reject to report failure
+  and keep the draft. Syntax errors prevent saving. These callbacks currently receive no third props
+  argument.
+checks: []
+examples: []
+routes: []
+provenance: []

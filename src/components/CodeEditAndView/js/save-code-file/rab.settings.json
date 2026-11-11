@@ -1,0 +1,44 @@
+{
+  "id": 1794004818503,
+  "name": "save-code-file",
+  "title": "save-code-file",
+  "description": "save-code-file: function implementation. See README.txt for the exported contract and integration.",
+  "type": "function",
+  "tags": [
+    "function"
+  ],
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "save-code-file.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ],
+  "path": "src/components/CodeEditAndView/js/save-code-file",
+  "file": "save-code-file.ts"
+}

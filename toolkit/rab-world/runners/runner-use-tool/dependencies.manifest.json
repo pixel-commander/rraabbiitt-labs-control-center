@@ -1,0 +1,24 @@
+{
+  "name": "runner-use-tool",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../../../Tooling.types.ts",
+      "path": "../../../Tooling.types.ts",
+      "type": "import",
+      "file": "runner-use-tool.ts"
+    },
+    {
+      "name": "../../../Runner.types.ts",
+      "path": "../../../Runner.types.ts",
+      "type": "import",
+      "file": "runner-use-tool.ts"
+    },
+    {
+      "name": "../run-tools.ts",
+      "path": "../run-tools.ts",
+      "type": "import",
+      "file": "runner-use-tool.ts"
+    }
+  ]
+}

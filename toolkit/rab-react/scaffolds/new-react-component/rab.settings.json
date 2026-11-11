@@ -1,0 +1,84 @@
+{
+  "id": 1790000000401,
+  "name": "new-react-component",
+  "title": "Create React Component",
+  "description": "Create a React component with types, styles, a hook, a demo, and settings. The tool accepts optional grid and class values.",
+  "type": "tool",
+  "path": "toolkit/rab-react/scaffolds/new-react-component",
+  "file": "new-react-component",
+  "parent": 1791518327955,
+  "tags": [
+    "rab-react",
+    "scaffold"
+  ],
+  "settings": [
+    {
+      "type": "string",
+      "name": "name",
+      "title": "Component Name",
+      "description": "Component name in any text style; generated folders and files use PascalCase.",
+      "required": true
+    },
+    {
+      "type": "string",
+      "name": "title",
+      "title": "Title",
+      "description": "Optional display title for the generated React component; defaults to its name.",
+      "required": false
+    },
+    {
+      "type": "string",
+      "name": "description",
+      "title": "Description",
+      "description": "Optional description for the generated React component.",
+      "required": false
+    },
+    {
+      "type": "string",
+      "name": "path",
+      "title": "Location",
+      "description": "Folder that will contain the component folder.",
+      "required": true
+    },
+    {
+      "type": "boolean",
+      "name": "save_as_text",
+      "title": "Save As Text",
+      "description": "Save the generated component as .txt for testing.",
+      "required": false,
+      "default": false
+    },
+    {
+      "type": "string",
+      "name": "grid",
+      "title": "Grid",
+      "description": "Optional canonical grid layout from the shared grid catalog. Use none or an empty value to skip.",
+      "required": false,
+      "ask": true
+    },
+    {
+      "type": "string",
+      "name": "class_name",
+      "title": "Container Class",
+      "description": "Optional class string appended to the base class; no class resolver is available.",
+      "required": false,
+      "ask": true
+    },
+    {
+      "type": "array",
+      "name": "tags",
+      "title": "Tags",
+      "description": "Optional saved record tags.",
+      "required": false
+    }
+  ],
+  "paths": [
+    {
+      "id": 1791518659404,
+      "name": "new-react-component",
+      "path": "toolkits/rab-react/scaffolds/new-react-component",
+      "file": "use.skill.yaml",
+      "type": "use skill"
+    }
+  ]
+}

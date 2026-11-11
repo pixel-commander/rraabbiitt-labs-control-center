@@ -1,0 +1,10 @@
+{
+  "name": "actions folder",
+  "title": "rraabbiitt-labs-control-center actions",
+  "description": "the folder where all actions are saved for the rraabbiitt-labs-control-center react project.",
+  "type": "path",
+  "tags": [
+    "actions"
+  ],
+  "path": "src/atoms/actions"
+}

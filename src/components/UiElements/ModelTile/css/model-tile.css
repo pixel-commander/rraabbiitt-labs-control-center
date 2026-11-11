@@ -1,0 +1,13 @@
+@layer components {
+  .model-tile {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: var(--space-sm);
+    text-align: left;
+    align-content: center;
+  }
+  .model-tile-title {
+    font-size: 0.9em;
+    overflow-wrap: anywhere;
+  }
+}

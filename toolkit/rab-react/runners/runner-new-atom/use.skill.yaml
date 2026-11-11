@@ -1,0 +1,18 @@
+id: 1793143585571
+schema: 1
+intent: use
+name: use-runner-new-atom
+title: New Atom
+path: toolkits/rab-react/runners/runner-new-atom
+file: use.skill.yaml
+instructions: Call run with the shared ToolsProps bag. path is the caller project root; name is the
+  new item name. Destinations come from root rab.project.json paths. save_path is an optional
+  project-relative destination and is required for a subcomponent parent. Atom type must be
+  container, action, effect, or grid. Returns the shared RunnerReturn (flat RunResponse[] with
+  per-entry timing). Each tool response contains the created settings HouseKeys, path, file and a
+  paths array listing every file created. No dependency installation, database writes, or automatic
+  component chaining.
+owner:
+  id: 1793138966750
+implementation:
+  - id: 1793138966750

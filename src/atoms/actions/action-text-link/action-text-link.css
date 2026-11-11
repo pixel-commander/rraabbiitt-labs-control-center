@@ -1,0 +1,13 @@
+@layer atoms {
+  .action-text-link {
+    color: var(--action-text-link-color, var(--color-primary));
+    text-decoration: none;
+  }
+  a.action-text-link:hover {
+    color: var(--action-text-link-hover-color, var(--color-primary-alt));
+  }
+  a.action-text-link:focus-visible {
+    outline: var(--focus-ring);
+    outline-offset: var(--focus-offset);
+  }
+}

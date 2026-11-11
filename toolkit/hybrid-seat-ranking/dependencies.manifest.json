@@ -1,0 +1,60 @@
+{
+  "name": "hybrid-seat-ranking",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../../../Tooling.types.ts",
+      "path": "../Tooling.types.ts",
+      "type": "import",
+      "file": "tools/compare-ranking-checkpoints/compare-ranking-checkpoints.ts"
+    },
+    {
+      "name": "../../Tooling.types.ts",
+      "path": "../Tooling.types.ts",
+      "type": "import",
+      "file": "tools/execute.ts"
+    },
+    {
+      "name": "../../../Tooling.types.ts",
+      "path": "../Tooling.types.ts",
+      "type": "import",
+      "file": "tools/inspect-ranking-attention/inspect-ranking-attention.ts"
+    },
+    {
+      "name": "../../tools/export-search-catalog/export-search-catalog.ts",
+      "path": "../tools/export-search-catalog/export-search-catalog.ts",
+      "type": "import",
+      "file": "tools/project-search.ts"
+    },
+    {
+      "name": "../../Tooling.types.ts",
+      "path": "../Tooling.types.ts",
+      "type": "import",
+      "file": "tools/project-search.ts"
+    },
+    {
+      "name": "../../../Tooling.types.ts",
+      "path": "../Tooling.types.ts",
+      "type": "import",
+      "file": "tools/search-hybrid-seat-ranking/search-hybrid-seat-ranking.ts"
+    },
+    {
+      "name": "../../../Tooling.types.ts",
+      "path": "../Tooling.types.ts",
+      "type": "import",
+      "file": "tools/train-field-feedback/train-field-feedback.ts"
+    },
+    {
+      "name": "../../../Tooling.types.ts",
+      "path": "../Tooling.types.ts",
+      "type": "import",
+      "file": "tools/train-hybrid-seat-ranking/train-hybrid-seat-ranking.ts"
+    },
+    {
+      "name": "../../../Tooling.types.ts",
+      "path": "../Tooling.types.ts",
+      "type": "import",
+      "file": "tools/tune-ranking-model/tune-ranking-model.ts"
+    }
+  ]
+}

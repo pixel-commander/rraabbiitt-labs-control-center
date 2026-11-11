@@ -1,0 +1,145 @@
+schema: 1
+intent: use
+owner:
+  id: 1794412867627
+id: 1794413032142
+name: SearchMessageBox
+title: Use SearchMessageBox
+description: Props, defaults and callbacks.
+type: function
+path: C:\rraabbiitt-hq\rraabbiitt-labs-control-center\src\components\HybridSearch\SearchMessageBox
+tags: []
+implementation: []
+context:
+  - use: 1794408972586
+inputs:
+  place_holder:
+    type: string | undefined
+    required: false
+  container_class:
+    type: string | undefined
+    required: false
+  submit_class:
+    type: string | undefined
+    required: false
+  children:
+    type: ReactNode
+    required: false
+  className:
+    type: string | undefined
+    required: false
+  value:
+    type: string | undefined
+    required: false
+  handleChange:
+    type: HandlerKey<string, "message-box", void, MessageBoxProps> | undefined
+    required: false
+  handleSubmit:
+    type: HandlerKey<string, "message-box", void, MessageBoxProps>
+    required: true
+  id:
+    type: number | undefined
+    required: false
+  name:
+    type: string | undefined
+    required: false
+  title:
+    type: string | undefined
+    required: false
+  description:
+    type: string | undefined
+    required: false
+  path:
+    type: string | undefined
+    required: false
+  save_path:
+    type: string | undefined
+    required: false
+  save_file:
+    type: string | undefined
+    required: false
+  paths:
+    type: PathsProps[] | undefined
+    required: false
+  date_added:
+    type: number | undefined
+    required: false
+  date_updated:
+    type: number | undefined
+    required: false
+  date_used:
+    type: number | undefined
+    required: false
+  date:
+    type: number | undefined
+    required: false
+  date_start:
+    type: number | undefined
+    required: false
+  date_end:
+    type: number | undefined
+    required: false
+outputs: {}
+instructions: >-
+  Props
+
+  place_holder (optional): string | undefined
+
+  container_class (optional): string | undefined
+
+  submit_class (optional): string | undefined
+
+  children (optional): ReactNode
+
+  className (optional): string | undefined
+
+  value (optional): string | undefined
+
+  handleChange (optional): HandlerKey<string, "message-box", void, MessageBoxProps> | undefined
+
+  handleSubmit (required): HandlerKey<string, "message-box", void, MessageBoxProps>
+
+  id (optional): number | undefined
+
+  name (optional): string | undefined
+
+  title (optional): string | undefined
+
+  description (optional): string | undefined
+
+  path (optional): string | undefined
+
+  save_path (optional): string | undefined
+
+  save_file (optional): string | undefined
+
+  paths (optional): PathsProps[] | undefined
+
+  date_added (optional): number | undefined
+
+  date_updated (optional): number | undefined
+
+  date_used (optional): number | undefined
+
+  date (optional): number | undefined
+
+  date_start (optional): number | undefined
+
+  date_end (optional): number | undefined
+
+
+  Defaults
+
+  place_holder="Search your world…"; container_class="container-outline";
+  submit_class="action-filled"; className=""; omitted value uses an empty local draft.
+
+
+  Callbacks and prop behavior
+
+  handleSubmit is required and receives (trimmedText, "message-box", props). Blank input does not
+  submit. handleChange receives (text, "message-box", props). Supply value plus handleChange for
+  controlled input; clear value after submission. children fills the lower-left area.
+checks: []
+examples: []
+routes: []
+provenance: []

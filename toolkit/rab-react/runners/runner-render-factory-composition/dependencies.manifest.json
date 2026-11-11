@@ -1,0 +1,54 @@
+{
+  "name": "runner-render-factory-composition",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../../../../Tooling.types.ts",
+      "path": "../../../../Tooling.types.ts",
+      "type": "import",
+      "file": "runner-render-factory-composition.ts"
+    },
+    {
+      "name": "../../../../Runner.types.ts",
+      "path": "../../../../Runner.types.ts",
+      "type": "import",
+      "file": "runner-render-factory-composition.ts"
+    },
+    {
+      "name": "../../../rab-world/runners/run-tools.ts",
+      "path": "../../../rab-world/runners/run-tools.ts",
+      "type": "import",
+      "file": "runner-render-factory-composition.ts"
+    },
+    {
+      "name": "../../../rab-world/tools/refresh-settings-json/refresh-settings-json.ts",
+      "path": "../../../rab-world/tools/refresh-settings-json/refresh-settings-json.ts",
+      "type": "import",
+      "file": "runner-render-factory-composition.ts"
+    },
+    {
+      "name": "../../tools/generate-dependencies.manifest-json/generate-dependencies.manifest-json.ts",
+      "path": "../../tools/generate-dependencies.manifest-json/generate-dependencies.manifest-json.ts",
+      "type": "import",
+      "file": "runner-render-factory-composition.ts"
+    },
+    {
+      "name": "../run-react-scaffold.ts",
+      "path": "../run-react-scaffold.ts",
+      "type": "import",
+      "file": "runner-render-factory-composition.ts"
+    },
+    {
+      "name": "../../scaffolds/new-react-component/scaffold.ts",
+      "path": "../../scaffolds/new-react-component/scaffold.ts",
+      "type": "import",
+      "file": "runner-render-factory-composition.ts"
+    },
+    {
+      "name": "../resolve-runner.ts",
+      "path": "../resolve-runner.ts",
+      "type": "import",
+      "file": "runner-render-factory-composition.ts"
+    }
+  ]
+}

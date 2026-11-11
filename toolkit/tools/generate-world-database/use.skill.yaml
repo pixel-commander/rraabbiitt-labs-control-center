@@ -1,0 +1,18 @@
+schema: 1
+intent: use
+id: 1793617400001
+name: use-generate-world-database
+title: Generate world database
+type: skill
+path: toolkit/tools/generate-world-database
+file: generate-world-database.ts
+context:
+  - use: 1791940045227
+instructions: Call run(settings) through runner-use-tool. Returns ToolReturn with status
+  complete/error, settings, response or error. Node 24+ is required. path must be an absolute
+  destination directory. file defaults to catalog.sqlite. Copies the verified local catalog template
+  and refuses an existing file. Does not populate the catalog or register the output.
+implementation:
+  - id: 1791834915266
+owner:
+  id: 1791834915266

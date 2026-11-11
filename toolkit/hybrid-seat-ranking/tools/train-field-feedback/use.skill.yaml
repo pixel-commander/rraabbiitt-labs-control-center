@@ -1,0 +1,35 @@
+schema: 1
+intent: use
+id: 1793154927350
+name: use-train-field-feedback
+title: Records an explicit user field judgment or rephrase and trains supervised field/query evidence.
+description: Records an explicit user field judgment or rephrase and trains supervised field/query evidence.
+type: skill
+path: toolkit/hybrid-seat-ranking/tools/train-field-feedback
+file: use.skill.yaml
+owner:
+  id: 1793154927349
+implementation:
+  - id: 1793154927349
+instructions: Send the shared settings bag as JSON on stdin; read ToolReturn from stdout. query is
+  the original question, path is the original result record key, name is all/name/title/description,
+  and optional id is the selected correct record House ID. content is JSON with vote up/part/down,
+  correction for down, or rephrase for another wording. An up vote with id resolves the selected
+  record and trains its actual field value. Rephrases inherit the prior judgment and selected ID.
+  The established runtime saves the judgment as approved supervised evidence in the third
+  field/query RRF channel. The pinned Sentence Transformers encoder and CrossEncoder are frozen;
+  neither is fine-tuned. For the exact approved field correction on the same query, the CrossEncoder
+  modifier is bypassed only for that field. After successful feedback the existing hook
+  automatically reruns the same query, refreshes the answer/ranking and shows `Trained · retested`
+  with rank change when known; it preserves panel URL and markup. Settings are returned unchanged;
+  source records are not edited. Immediate training is only for explicit user judgments. Supplied
+  content.origin must be user and review_status approved when present. LLM suggestions belong in
+  pending candidate batches. save_path selects the project root; absent it uses the registered HQ
+  root. Model state resolves through that project rab.world.json, normally
+  .rab/models/hybrid-seat-ranking. Feedback SQLite, training chunks and checkpoints remain outside
+  the toolkit. Only use rephrase to declare another wording equivalent to the same question when
+  that equivalence is explicitly user-declared. The trainer transfers only field judgments already
+  approved in that query group; it never approves an unjudged field. A direct judgment on the same
+  field and rephrased wording overrides inherited labels. Derived checkpoint examples use
+  origin=user:rephrase-group and source_query but are not additional feedback database votes.
+  Cloud-generated aliases cannot claim this provenance and remain pending.

@@ -1,0 +1,12 @@
+{
+  "name": "action-outline",
+  "title": "Outline action",
+  "description": "Transparent action with an accent outline and accent text. Hover adds a soft accent tint; press and .is-active use closely related accent-tinted backgrounds. Includes focus and disabled states.",
+  "type": "ui-atom",
+  "tags": [
+    "action"
+  ],
+  "settings": [],
+  "paths": [],
+  "file": "action-outline.css"
+}

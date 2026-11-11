@@ -1,0 +1,11 @@
+{
+  "name": "scaffolds folder",
+  "title": "world demo scaffolds",
+  "description": "This is where the world demo keeps scaffolds for creating React project files, including components, subcomponents, pages, and atoms. Look here for the templates and creation code that give new files their starting structure.",
+  "type": "path",
+  "tags": [
+    "scaffolds"
+  ],
+  "path": "toolkit/rab-react/scaffolds",
+  "id": 1793143585577
+}

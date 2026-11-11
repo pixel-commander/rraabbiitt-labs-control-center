@@ -1,0 +1,18 @@
+{
+  "name": "train-field-feedback",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../../../Tooling.types.ts",
+      "path": "../../../Tooling.types.ts",
+      "type": "import",
+      "file": "train-field-feedback.ts"
+    },
+    {
+      "name": "../project-search.ts",
+      "path": "../project-search.ts",
+      "type": "import",
+      "file": "train-field-feedback.ts"
+    }
+  ]
+}

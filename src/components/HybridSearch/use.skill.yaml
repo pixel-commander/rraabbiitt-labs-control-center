@@ -1,0 +1,20 @@
+schema: 1
+intent: use
+owner:
+  id: 1794412867605
+id: 1794413032134
+name: HybridSearch
+title: Use HybridSearch
+description: Props, defaults and callbacks.
+type: function
+path: C:\rraabbiitt-hq\rraabbiitt-labs-control-center\src\components\HybridSearch
+tags: []
+implementation: []
+context: []
+inputs: {}
+outputs: {}
+instructions: "Props: none. Saves submitted user messages before calling the registered hybrid search API. Shows the top result title and description in the main header and remaining ranked cards in the right scroll. Explicit votes save whole-result lessons tied to the saved message and query. Callbacks: none accepted. Errors are displayed; no preview results substitute for failed requests."
+checks: []
+examples: []
+routes: []
+provenance: []

@@ -1,0 +1,28 @@
+schema: 1
+intent: use
+id: 1793154927346
+name: use-search-hybrid-seat-ranking
+title: Searches with per-field BM25, frozen semantic and supervised RRF channels plus a relative reranker.
+description: Searches with per-field BM25, frozen semantic and supervised RRF channels plus a relative reranker.
+type: skill
+path: toolkit/hybrid-seat-ranking/tools/search-hybrid-seat-ranking
+file: use.skill.yaml
+owner:
+  id: 1793154927345
+implementation:
+  - id: 1793154927345
+instructions: >-
+  Call run({query, path?}). query is required. path is the project root containing
+  rab.world.json and defaults to this dashboard. The registered model baseline,
+  shared runtime code, and Python executable are resolved from current world
+  records. The single catalog database is resolved from rab.project.json.
+  This binding accepts search only; omit content or supply an empty JSON object.
+  It returns ranked response.paths, summary and the unchanged hybrid evidence
+  body. IDs and record keys are preserved. Search does not execute results,
+  train weights, initialize state, or write the shipped baseline. Customer
+  lessons use the separate feedback API. Missing runtime/assets produce an
+  error; no lexical-only fallback runs.
+
+# Skill presentation: top skill returns return_type skill, body is display text,
+# and evidence retains the original engine JSON. URL bindings use world ID/url.
+

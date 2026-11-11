@@ -1,0 +1,25 @@
+{
+  "settings": [
+    {
+      "title": "Optional database or project path",
+      "name": "path",
+      "type": "string",
+      "required": false
+    }
+  ],
+  "file": "refresh-world-database.ts",
+  "name": "refresh-world-database",
+  "id": 1793210509222,
+  "description": "Update the search database from registered source locations. Keep row IDs, remove stale rows, and do not train a model.",
+  "title": "Refresh Search Catalog",
+  "path": "toolkit/tools/refresh-world-database",
+  "type": "tool",
+  "tags": [
+    "search",
+    "index",
+    "reindex",
+    "refresh",
+    "skills",
+    "database"
+  ]
+}

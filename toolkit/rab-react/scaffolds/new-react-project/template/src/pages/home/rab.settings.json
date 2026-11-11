@@ -1,0 +1,9 @@
+{
+  "id": 0,
+  "name": "home",
+  "title": "Home Page",
+  "description": "Main home page",
+  "file": "HomePage.tsx",
+  "type": "tool",
+  "tags": ["rab-react", "scaffold"]
+}

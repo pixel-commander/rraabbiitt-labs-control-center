@@ -1,0 +1,32 @@
+{
+  "id": 1794415784096,
+  "name": "file-system",
+  "title": "File System API",
+  "description": "",
+  "type": "beacon",
+  "tags": [],
+  "paths": [
+    {
+      "id": 1794415784083,
+      "name": "read-file",
+      "type": "settings",
+      "path": "read-file",
+      "file": "rab.settings.json"
+    },
+    {
+      "id": 1794415784085,
+      "name": "save-file",
+      "type": "settings",
+      "path": "save-file",
+      "file": "rab.settings.json"
+    },
+    {
+      "id": 1794415784086,
+      "name": "list-files",
+      "type": "settings",
+      "path": "list-files",
+      "file": "rab.settings.json"
+    }
+  ],
+  "path": "api/file-system"
+}

@@ -1,0 +1,32 @@
+{
+  "id": 1794415890515,
+  "name": "runner-world-tooling",
+  "title": "World Tooling Runner",
+  "description": "Execute an array of runs with each tool return and numeric start/end timestamps.",
+  "type": "runner",
+  "path": "toolkit/runners/runner-world-tooling",
+  "file": "runner-world-tooling.ts",
+  "settings": [
+    {
+      "name": "runs",
+      "type": "array",
+      "required": true
+    }
+  ],
+  "paths": [
+    {
+      "path": ".",
+      "file": "runner-world-tooling.ts",
+      "type": "ts"
+    },
+    {
+      "path": ".",
+      "file": "rab.settings.json",
+      "type": "json"
+    }
+  ],
+  "tags": [
+    "rab-world-v2",
+    "scaffold"
+  ]
+}

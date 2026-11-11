@@ -1,0 +1,12 @@
+{
+  "name": "container-neg",
+  "title": "Negative container",
+  "description": "Negative of container-main: a light theme surface with dark inverse text, a contrasting border and rounded corners. Use for panels that invert the main surface; layout and spacing remain separate.",
+  "type": "ui-atom",
+  "tags": [
+    "container"
+  ],
+  "settings": [],
+  "paths": [],
+  "file": "container-neg.css"
+}

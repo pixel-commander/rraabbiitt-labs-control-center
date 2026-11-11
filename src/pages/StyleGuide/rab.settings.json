@@ -1,0 +1,65 @@
+{
+  "id": 1794247089699,
+  "name": "StyleGuide",
+  "title": "Style Guide",
+  "description": "Style Guide page",
+  "file": "StyleGuidePage.tsx",
+  "type": "tool",
+  "tags": [
+    "rab-react",
+    "scaffold"
+  ],
+  "path": "src/pages/StyleGuide",
+  "paths": [
+    {
+      "name": "StyleGuidePage.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "StyleGuidePage.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": "components",
+      "type": "txt"
+    },
+    {
+      "name": ".gitkeep",
+      "path": "css",
+      "type": ""
+    },
+    {
+      "name": "style-guide.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": ".gitkeep",
+      "path": "hooks",
+      "type": ""
+    },
+    {
+      "name": ".gitkeep",
+      "path": "js",
+      "type": ""
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

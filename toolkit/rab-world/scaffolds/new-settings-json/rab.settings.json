@@ -1,0 +1,76 @@
+{
+  "id": 1791468954599,
+  "title": "Create Settings Record",
+  "type": "tool",
+  "settings": [
+    {
+      "required": true,
+      "type": "string",
+      "name": "path"
+    },
+    {
+      "required": true,
+      "type": "string",
+      "name": "name"
+    },
+    {
+      "required": true,
+      "type": "string",
+      "name": "title"
+    },
+    {
+      "required": true,
+      "type": "string",
+      "name": "description"
+    },
+    {
+      "required": true,
+      "type": "string",
+      "name": "type"
+    },
+    {
+      "name": "tags",
+      "type": "array"
+    },
+    {
+      "name": "paths",
+      "type": "array"
+    }
+  ],
+  "name": "new-settings-json",
+  "path": "toolkit/rab-world/scaffolds/new-settings-json",
+  "tags": [
+    "rab-world-v2",
+    "scaffold"
+  ],
+  "description": "Create a settings record from the shared template. The tool assigns a new House ID and refuses to replace an existing file.",
+  "file": "new-settings-json.mjs",
+  "parent": 1791471030628,
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "new-settings-json.mjs",
+      "path": ".",
+      "type": "mjs"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "template",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

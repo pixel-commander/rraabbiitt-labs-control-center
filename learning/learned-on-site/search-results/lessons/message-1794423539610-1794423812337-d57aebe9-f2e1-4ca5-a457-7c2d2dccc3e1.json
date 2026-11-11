@@ -1,0 +1,77 @@
+{
+  "schema": 1,
+  "date": 1794423812337,
+  "sequence": 2,
+  "message": 1794423539610,
+  "query": "how do i view the app?",
+  "id": 1793126984423,
+  "record_key": "skills/project/cli/running-the-app/use.skill.yaml",
+  "name": "all",
+  "content": {
+    "vote": "part"
+  },
+  "approved": true,
+  "origin": "user",
+  "scope": "query-result",
+  "lesson_type": "whole-result-relevance",
+  "grade": 0.5,
+  "source": {
+    "message": {
+      "id": 1794423539610,
+      "name": null,
+      "title": null,
+      "type": "user",
+      "description": "how do i view the app?",
+      "tags": "[]",
+      "file": null,
+      "path": null,
+      "paths": "[]"
+    },
+    "record": {
+      "id": 1793126984423,
+      "name": "running-the-app",
+      "title": "Running the app",
+      "type": "skill",
+      "description": "CLI for running the app",
+      "tags": "[\"project\", \"cli\", \"vite\"]",
+      "file": "use.skill.yaml",
+      "path": "skills/project/cli/running-the-app",
+      "paths": "[]",
+      "data": {
+        "id": 1793126984423,
+        "name": "running-the-app",
+        "title": "Running the app",
+        "description": "CLI for running the app",
+        "tags": [
+          "project",
+          "cli",
+          "vite"
+        ],
+        "context": [],
+        "intent": "use",
+        "type": "skill",
+        "path": "skills/project/cli/running-the-app",
+        "file": "use.skill.yaml",
+        "record_key": "skills/project/cli/running-the-app/use.skill.yaml",
+        "text": "running-the-app\n\nRunning the app\n\nCLI for running the app\n\nRun this command from the project root, which contains package.json:\n\nnpm run dev\n\nOpen the URL printed by Vite and choose World Search. The host and port come from this project's current configuration. Stop the server with Ctrl+C.\n",
+        "sources": [
+          {
+            "path": "skills/project/cli/running-the-app/use.skill.yaml",
+            "kind": "skill",
+            "sha256": "bdc38f7fb8a629a7b814fac4c4872c29d44125daa38bf222166c16e666d9c3b3"
+          }
+        ],
+        "skills": [],
+        "instructions": "Run this command from the project root, which contains package.json:\n\nnpm run dev\n\nOpen the URL printed by Vite and choose World Search. The host and port come from this project's current configuration. Stop the server with Ctrl+C.\n"
+      }
+    }
+  },
+  "original": {
+    "query": "how do i view the app?",
+    "message": 1794423539610,
+    "id": 1793126984423,
+    "path": "skills/project/cli/running-the-app/use.skill.yaml",
+    "name": "all",
+    "content": "{\"vote\":\"part\"}"
+  }
+}

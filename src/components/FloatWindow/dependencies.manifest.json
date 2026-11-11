@@ -1,0 +1,24 @@
+{
+  "name": "FloatWindow",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../../hooks/useWindowGesture/useWindowGesture",
+      "path": "../../hooks/useWindowGesture/useWindowGesture",
+      "type": "import",
+      "file": "FloatWindow.tsx"
+    },
+    {
+      "name": "../../HouseKeys.types",
+      "path": "../../HouseKeys.types",
+      "type": "import",
+      "file": "FloatWindow.types.ts"
+    },
+    {
+      "name": "../../hooks/useWindowGesture/useWindowGesture",
+      "path": "../../hooks/useWindowGesture/useWindowGesture",
+      "type": "import",
+      "file": "FloatWindow.types.ts"
+    }
+  ]
+}

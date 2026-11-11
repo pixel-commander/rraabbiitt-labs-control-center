@@ -1,0 +1,40 @@
+{
+  "id": 1794395295488,
+  "name": "action-filled",
+  "title": "action-filled",
+  "description": "",
+  "type": "actions",
+  "tags": [
+    "react",
+    "actions"
+  ],
+  "file": "action-filled.css",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-labs-control-center/src/atoms/actions/action-filled",
+  "paths": [
+    {
+      "name": "RULE.TXT",
+      "path": ".",
+      "type": "TXT"
+    },
+    {
+      "name": "RULES.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "action-filled.css",
+      "path": ".",
+      "type": "css"
+    },
+    {
+      "name": "Demo.tsx",
+      "path": "demo",
+      "type": "tsx"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    }
+  ]
+}

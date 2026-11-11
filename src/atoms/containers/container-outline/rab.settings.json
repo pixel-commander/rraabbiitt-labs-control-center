@@ -1,0 +1,30 @@
+{
+  "id": 1794395295440,
+  "name": "container-outline",
+  "title": "container-outline",
+  "description": "",
+  "type": "containers",
+  "tags": [
+    "react",
+    "containers"
+  ],
+  "file": "container-outline.css",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-labs-control-center/src/atoms/containers/container-outline",
+  "paths": [
+    {
+      "name": "container-outline.css",
+      "path": ".",
+      "type": "css"
+    },
+    {
+      "name": "Demo.tsx",
+      "path": "demo",
+      "type": "tsx"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    }
+  ]
+}

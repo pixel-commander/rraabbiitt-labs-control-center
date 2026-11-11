@@ -1,0 +1,57 @@
+@layer atoms {
+  /* Style :hover, :active and .is-active; keep :active and .is-active nearly identical, with only a slight background variation.
+     Use .is-active for selection; NEVER [data-page='home'] or page-specific selectors for active styling. */
+  .action-outline {
+    color: var(--color-primary);
+    background: var(--color-transparent);
+    border: var(--border-width) var(--border-style) var(--color-primary);
+    border-radius: var(--radius-control);
+    font: var(--type-body);
+    cursor: pointer;
+    transition:
+      background-color var(--motion-fast),
+      color var(--motion-fast),
+      border-color var(--motion-fast);
+    --action-outline-hover-background: var(--color-tertiary-alt);
+    --action-outline-active-background: var(--color-tertiary-alt);
+    --action-outline-active-color: var(--color-primary);
+  }
+
+  .action-outline:hover {
+    background: var(
+      --action-outline-hover-background,
+      var(--color-secondary-alt)
+    );
+  }
+
+  .action-outline:active,
+  .action-outline.is-active {
+    color: var(--action-outline-active-color, var(--color-main-neg));
+    background: var(--action-outline-active-background, var(--color-tertiary));
+  }
+
+  .action-outline:focus-visible {
+    outline: var(--action-outline-focus-outline, var(--focus-ring));
+    outline-offset: var(--action-outline-focus-offset, var(--focus-offset));
+  }
+
+  .action-outline:is(:disabled, [aria-disabled="true"]) {
+    color: var(--action-outline-disabled-color, var(--color-muted));
+    background: var(
+      --action-outline-disabled-background,
+      var(--color-secondary)
+    );
+    opacity: var(--action-outline-disabled-opacity, var(--disabled-opacity));
+    cursor: not-allowed;
+  }
+}
+
+@layer atoms {
+  .action-outline.is-active {
+    background: color-mix(
+      in srgb,
+      var(--action-outline-active-background) 94%,
+      var(--color-main-alt)
+    );
+  }
+}

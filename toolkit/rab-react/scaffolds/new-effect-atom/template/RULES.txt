@@ -1,0 +1,2 @@
+Effect atoms own reusable visual effects. Use shared theme tokens.
+Components own layout, sizing and spacing. No preset is selected automatically.

@@ -1,0 +1,82 @@
+{
+  "id": 1830000000001,
+  "name": "new-react-page",
+  "title": "Create Page",
+  "description": "Create a page component with styles, a hook, and initial content. Supplied children take precedence over the content value.",
+  "type": "tool",
+  "path": "toolkit/rab-react/scaffolds/new-react-page",
+  "file": "new-react-page",
+  "parent": 1791518327955,
+  "tags": [
+    "rab-react",
+    "scaffold"
+  ],
+  "settings": [
+    {
+      "type": "string",
+      "name": "name",
+      "title": "Page Name",
+      "description": "React page name in any text style; generated folders and files use PascalCase.",
+      "required": true
+    },
+    {
+      "type": "string",
+      "name": "title",
+      "title": "Title",
+      "description": "Optional display title for the generated React page; defaults to its name.",
+      "required": false
+    },
+    {
+      "type": "string",
+      "name": "description",
+      "title": "Description",
+      "description": "Optional description for the generated React page.",
+      "required": false
+    },
+    {
+      "type": "string",
+      "name": "path",
+      "title": "Pages Location",
+      "description": "Optional pages folder. Defaults to the loaded project's configured pages path or src/pages.",
+      "required": true
+    },
+    {
+      "type": "string",
+      "name": "content",
+      "title": "Initial Content",
+      "description": "Default text; supplied children take precedence.",
+      "required": false,
+      "default": ""
+    },
+    {
+      "type": "boolean",
+      "name": "save_as_text",
+      "title": "Save As Text",
+      "description": "Text output for tests.",
+      "required": false,
+      "default": false
+    },
+    {
+      "type": "array",
+      "name": "tags",
+      "title": "Tags",
+      "description": "Optional saved record tags.",
+      "required": false
+    }
+  ],
+  "paths": [
+    {
+      "id": 1791518659413,
+      "name": "new-react-page",
+      "path": "toolkits/rab-react/scaffolds/new-react-page",
+      "file": "use.skill.yaml",
+      "type": "use skill"
+    }
+  ],
+  "skills": [
+    {
+      "id": 1791518659413,
+      "path": "toolkits/rab-react/scaffolds/new-react-page/use.skill.yaml"
+    }
+  ]
+}

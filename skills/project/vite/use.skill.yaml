@@ -1,0 +1,32 @@
+schema: 1
+intent: use
+id: 1793723655465
+name: configure vite startup
+title: Configure Vite startup for the local app
+description: How Vite finds the startup model Python environment and database and loads the local API plugins.
+type: skill
+path: skills/project/vite
+tags:
+  - vite
+  - startup
+  - model
+  - api
+implementation:
+  - path: vite.config.mjs
+context:
+  - use: 1793126984423
+    path: skills/project/cli/running-the-app/use.skill.yaml
+    reason: Use the app launch command to verify startup.
+inputs: {}
+outputs: {}
+instructions:
+  Edit vite.config.mjs at the project root. It reads the root rab.project.json when
+  Vite starts. Keep exactly one path entry named "startup model". Vite uses its folder to find the
+  platform-specific Python executable under .venv and sets TOOL_LEARNER_PYTHON before importing the
+  API plugins. This lookup selects the Python environment. The model settings file is separate. The
+  "database" entry supplies the database folder and filename. After changing startup settings,
+  launch a fresh Vite process and check the affected API route.
+checks: []
+examples: []
+routes: []
+provenance: []

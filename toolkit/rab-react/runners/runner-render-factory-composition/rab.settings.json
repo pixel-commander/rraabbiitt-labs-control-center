@@ -1,0 +1,81 @@
+{
+  "id": 1794366620615,
+  "name": "runner-render-factory-composition",
+  "title": "Render factory composition",
+  "description": "Creates a component through the registered component runner, then replaces its returned JSX and stylesheet with generated composition strings.",
+  "type": "runner",
+  "tags": [
+    "react",
+    "factory",
+    "composition",
+    "component",
+    "runner"
+  ],
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "replace-return.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "runner-render-factory-composition.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ],
+  "path": "toolkit/rab-react/runners/runner-render-factory-composition",
+  "file": "runner-render-factory-composition.ts",
+  "settings": [
+    {
+      "name": "type",
+      "type": "select",
+      "options": [
+        "component"
+      ]
+    },
+    {
+      "name": "name",
+      "type": "text"
+    },
+    {
+      "name": "title",
+      "type": "text"
+    },
+    {
+      "name": "description",
+      "type": "text"
+    },
+    {
+      "name": "path",
+      "type": "text"
+    },
+    {
+      "name": "code",
+      "type": "text"
+    },
+    {
+      "name": "css",
+      "type": "text"
+    }
+  ]
+}

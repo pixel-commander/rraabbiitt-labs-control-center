@@ -1,0 +1,36 @@
+{
+  "id": 1794418952090,
+  "name": "search-records",
+  "title": "Search Records API",
+  "description": "Registered hybrid search tool dispatch and explicit whole-result lessons saved only to learning/learned-on-site/search-results/lessons.",
+  "type": "api",
+  "tags": [
+    "search",
+    "hybrid",
+    "feedback"
+  ],
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "REPHRASE.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "search-records.mjs",
+      "path": ".",
+      "type": "mjs"
+    }
+  ],
+  "path": "api/search-records",
+  "file": "search-records.mjs"
+}

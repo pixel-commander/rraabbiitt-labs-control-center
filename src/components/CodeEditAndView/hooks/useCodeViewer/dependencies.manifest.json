@@ -1,0 +1,12 @@
+{
+  "name": "useCodeViewer",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../../CodeViewer/CodeViewer.types",
+      "path": "../../CodeViewer/CodeViewer.types",
+      "type": "import",
+      "file": "useCodeViewer.ts"
+    }
+  ]
+}

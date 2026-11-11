@@ -1,0 +1,6 @@
+@layer components {
+  .ui-elements {
+    gap: var(--space-lg);
+    min-inline-size: 0;
+  }
+}

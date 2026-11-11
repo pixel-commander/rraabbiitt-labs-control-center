@@ -1,0 +1,22 @@
+{
+  "id": 1794415784077,
+  "name": "messages",
+  "title": "messages",
+  "description": "messages API endpoint.",
+  "type": "api",
+  "tags": [],
+  "paths": [
+    {
+      "path": ".",
+      "name": "messages.mjs",
+      "type": "mjs"
+    },
+    {
+      "path": ".",
+      "name": "README.txt",
+      "type": "txt"
+    }
+  ],
+  "path": "api/messages",
+  "file": "messages.mjs"
+}

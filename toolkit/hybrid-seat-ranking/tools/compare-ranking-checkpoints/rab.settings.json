@@ -1,0 +1,36 @@
+{
+  "id": 1793225821352,
+  "name": "compare-ranking-checkpoints",
+  "title": "Compare Ranking Checkpoints",
+  "description": "Compare active and candidate search results for one saved tuning run. The report uses the same catalog and judged answers. It does not activate a candidate.",
+  "type": "tool",
+  "path": "toolkit/hybrid-seat-ranking/tools/compare-ranking-checkpoints",
+  "file": "compare-ranking-checkpoints.ts",
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "compare-ranking-checkpoints.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

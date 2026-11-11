@@ -1,0 +1,23 @@
+{
+  "id": 1794420272788,
+  "name": "saved-models",
+  "title": "Field ranking: saved-models",
+  "description": "The saved-models location for field-ranking in shipped-with-app.",
+  "type": "path",
+  "tags": [
+    "learning"
+  ],
+  "paths": [
+    {
+      "name": ".gitkeep",
+      "path": ".",
+      "type": "gitkeep"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    }
+  ],
+  "path": "learning/shipped-with-app/field-ranking/saved-models"
+}

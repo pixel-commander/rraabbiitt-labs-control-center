@@ -1,0 +1,10 @@
+{
+  "name": "effects folder",
+  "title": "rraabbiitt-labs-control-center effects",
+  "description": "the folder where all effects are saved for the rraabbiitt-labs-control-center react project.",
+  "type": "path",
+  "tags": [
+    "effects"
+  ],
+  "path": "src/atoms/effects"
+}

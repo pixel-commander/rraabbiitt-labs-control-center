@@ -1,0 +1,22 @@
+schema: 1
+intent: use
+owner:
+  id: 1794395693982
+id: 1794413032168
+name: useWorldSearch
+title: Use useWorldSearch
+description: Hook usage.
+type: function
+path: C:\rraabbiitt-hq\rraabbiitt-labs-control-center\src\pages\WorldSearch\hooks\useWorldSearch
+tags: []
+implementation: []
+context:
+  - use: 1794413032125
+inputs: {}
+outputs: {}
+instructions: "Props: none. Defaults: built-in search preview. Returns the same feature state and
+  actions as the referenced hook. This is a compatibility alias with no separate state."
+checks: []
+examples: []
+routes: []
+provenance: []

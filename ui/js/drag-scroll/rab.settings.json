@@ -1,0 +1,46 @@
+{
+  "name": "drag-scroll",
+  "title": "Drag scroll",
+  "type": "function",
+  "description": "Vanilla pointer drag scrolling with optional flick momentum and smooth programmatic scrolling.",
+  "path": "ui/js/drag-scroll",
+  "file": "drag-scroll.js",
+  "id": 1793996047838,
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "Demo.tsx",
+      "path": "demo",
+      "type": "tsx"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "drag-scroll.d.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "drag-scroll.js",
+      "path": ".",
+      "type": "js"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

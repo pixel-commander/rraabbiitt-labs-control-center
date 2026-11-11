@@ -1,0 +1,4 @@
+[
+  {"id": 17, "type": "page", "name": "chat-settings", "title": "Chat settings", "description": "Configure model and conversation behavior"},
+  {"id": 22, "type": "page", "name": "billing-history", "title": "Billing history", "description": "Review invoices and payment history"}
+]

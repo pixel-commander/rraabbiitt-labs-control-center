@@ -1,0 +1,24 @@
+{
+  "name": "CodeEditAndView",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../../../ui/HouseKeys.types",
+      "path": "../../../ui/HouseKeys.types",
+      "type": "import",
+      "file": "CodeEditAndView.types.ts"
+    },
+    {
+      "name": "../../../../ui/HouseKeys.types",
+      "path": "../../../ui/HouseKeys.types",
+      "type": "import",
+      "file": "CodeViewer/CodeViewer.types.ts"
+    },
+    {
+      "name": "../../../../ui/HouseKeys.types",
+      "path": "../../../ui/HouseKeys.types",
+      "type": "import",
+      "file": "CodeViewer/CodeViewer.types.ts"
+    }
+  ]
+}

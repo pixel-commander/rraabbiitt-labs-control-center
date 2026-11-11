@@ -1,0 +1,157 @@
+{
+  "schema": 1,
+  "date": 1794424142812,
+  "sequence": 7,
+  "message": 1794424062714,
+  "query": "what is the name of the popup window component/",
+  "id": 1794417147126,
+  "record_key": "src/components/McpViewer",
+  "name": "all",
+  "content": {
+    "vote": "part"
+  },
+  "approved": true,
+  "origin": "user",
+  "scope": "query-result",
+  "lesson_type": "whole-result-relevance",
+  "grade": 0.5,
+  "source": {
+    "message": {
+      "id": 1794424062714,
+      "name": null,
+      "title": null,
+      "type": "user",
+      "description": "what is the name of the popup window component/",
+      "tags": "[]",
+      "file": null,
+      "path": null,
+      "paths": "[]"
+    },
+    "record": {
+      "id": 1794417147126,
+      "name": "McpViewer",
+      "title": "McpViewer",
+      "type": "component",
+      "description": "Application-owned, prop-free MCP settings popup button.",
+      "tags": "[\"react\", \"component\"]",
+      "file": "McpViewer.tsx",
+      "path": "src/components/McpViewer",
+      "paths": "[{\"name\": \"McpViewer.tsx\", \"path\": \".\", \"type\": \"tsx\"}, {\"name\": \"McpViewer.types.ts\", \"path\": \".\", \"type\": \"ts\"}, {\"name\": \"README.txt\", \"path\": \".\", \"type\": \"txt\"}, {\"name\": \"mcp-viewer.css\", \"path\": \"css\", \"type\": \"css\"}, {\"name\": \".gitkeep\", \"path\": \"demo\", \"type\": \"\"}, {\"name\": \"Demo.tsx\", \"path\": \"demo\", \"type\": \"tsx\"}, {\"name\": \"dependencies.manifest.json\", \"path\": \".\", \"type\": \"json\"}, {\"name\": \"README.txt\", \"path\": \"hooks/useMcpViewer\", \"type\": \"txt\"}, {\"name\": \"rab.settings.json\", \"path\": \"hooks/useMcpViewer\", \"type\": \"json\"}, {\"name\": \"use.skill.yaml\", \"path\": \"hooks/useMcpViewer\", \"type\": \"yaml\"}, {\"name\": \"useMcpViewer.ts\", \"path\": \"hooks/useMcpViewer\", \"type\": \"ts\"}, {\"name\": \"rab.settings.json\", \"path\": \".\", \"type\": \"json\"}, {\"name\": \"use.skill.yaml\", \"path\": \".\", \"type\": \"yaml\"}]",
+      "data": {
+        "id": 1794417147126,
+        "name": "McpViewer",
+        "title": "McpViewer",
+        "description": "Application-owned, prop-free MCP settings popup button.",
+        "type": "component",
+        "tags": [
+          "react",
+          "component"
+        ],
+        "file": "McpViewer.tsx",
+        "path": "src/components/McpViewer",
+        "paths": [
+          {
+            "name": "McpViewer.tsx",
+            "path": ".",
+            "type": "tsx"
+          },
+          {
+            "name": "McpViewer.types.ts",
+            "path": ".",
+            "type": "ts"
+          },
+          {
+            "name": "README.txt",
+            "path": ".",
+            "type": "txt"
+          },
+          {
+            "name": "mcp-viewer.css",
+            "path": "css",
+            "type": "css"
+          },
+          {
+            "name": ".gitkeep",
+            "path": "demo",
+            "type": ""
+          },
+          {
+            "name": "Demo.tsx",
+            "path": "demo",
+            "type": "tsx"
+          },
+          {
+            "name": "dependencies.manifest.json",
+            "path": ".",
+            "type": "json"
+          },
+          {
+            "name": "README.txt",
+            "path": "hooks/useMcpViewer",
+            "type": "txt"
+          },
+          {
+            "name": "rab.settings.json",
+            "path": "hooks/useMcpViewer",
+            "type": "json"
+          },
+          {
+            "name": "use.skill.yaml",
+            "path": "hooks/useMcpViewer",
+            "type": "yaml"
+          },
+          {
+            "name": "useMcpViewer.ts",
+            "path": "hooks/useMcpViewer",
+            "type": "ts"
+          },
+          {
+            "name": "rab.settings.json",
+            "path": ".",
+            "type": "json"
+          },
+          {
+            "name": "use.skill.yaml",
+            "path": ".",
+            "type": "yaml"
+          }
+        ],
+        "record_key": "src/components/McpViewer",
+        "sources": [
+          {
+            "path": "src/components/McpViewer/rab.settings.json",
+            "kind": "settings",
+            "sha256": "8b236e8f1506903dd2293e5fc5e769321aa756da46d2246dcf81bd1c984ef320"
+          },
+          {
+            "path": "src/components/McpViewer/README.txt",
+            "kind": "readme",
+            "sha256": "2e9a6b813901d97763afb630fd6365a745b5fb79865f375ad38ab3030d136f8f"
+          },
+          {
+            "path": "src/components/McpViewer/use.skill.yaml",
+            "kind": "skill",
+            "sha256": "d6070e1168bdc2b21488335b68e857411c39997a1c52e45c46f657c9c1ffdda3"
+          }
+        ],
+        "skills": [
+          {
+            "id": 1794417387696,
+            "name": "McpViewer",
+            "path": "src/components/McpViewer/use.skill.yaml",
+            "instructions": "Render without props. Shows live MCP health and opens the root world MCP settings in a movable, resizable FloatWindow. Close or Escape hides it and returns focus to the opener. No settings are edited.\n"
+          }
+        ],
+        "text": "McpViewer\n\nMcpViewer\n\ncomponent\n\nApplication-owned, prop-free MCP settings popup button.\n\nreact component\n\nsrc/components/McpViewer\n\nMcpViewer\n\nProp-free, application-owned MCP status button. Render <McpViewer />.\nReads only mcp from the project root rab.world.json. Shows the MCP health state.\nOpen displays those settings in the local FloatWindow; drag its header, resize\nits corner, close with the close button or Escape. Focus returns to the opener.\nNo form, editing or persistence. Popup geometry/visibility belong to useMcpViewer.\n\nSkin is composed from action-light and the existing atoms stylesheet. Structure\nis in css/mcp-viewer.css. External CSS may target .mcp-viewer and its parts.\n--mcp-viewer-z-index controls the portal layer; action-light theme tokens control\nbutton skin, --status-success/warning/error control connection state.\nThere are no supplied props, callbacks or part-class props.\n\nHealth uses /api/mcp/health on the same origin as the site. Vite dev and preview\nhost MCP and the API on the port configured in root rab.world.json.\nAn unavailable server shows Disconnected.\n\n\nMcpViewer\n\n\n\n\n\nRender without props. Shows live MCP health and opens the root world MCP settings in a movable, resizable FloatWindow. Close or Escape hides it and returns focus to the opener. No settings are edited.\n"
+      }
+    }
+  },
+  "original": {
+    "query": "what is the name of the popup window component/",
+    "message": 1794424062714,
+    "id": 1794417147126,
+    "path": "src/components/McpViewer",
+    "name": "all",
+    "content": "{\"vote\":\"part\"}"
+  }
+}

@@ -1,0 +1,19 @@
+schema: 1
+intent: use
+id: 1791766641357
+name: use-new-db-table
+title: new db table
+type: skill
+path: toolkit/tools/new-db-table
+file: new-db-table.mjs
+context:
+  - use: 1791940045227
+instructions: Call run(settings) through runner-use-tool. Returns ToolReturn with status
+  complete/error, settings, response or error. Node 24+ is required. path is an existing database
+  folder; file defaults to app.sqlite; name is the new SQL table. Creates the standard House columns
+  in a transaction. Refuses existing schema objects. Does not add records or migrations.
+  response.body is JSON containing verified column details.
+implementation:
+  - id: 1791766641356
+owner:
+  id: 1791766641356

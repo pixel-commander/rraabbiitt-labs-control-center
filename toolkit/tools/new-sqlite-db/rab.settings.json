@@ -1,0 +1,71 @@
+{
+  "id": 1791766641354,
+  "name": "new-sqlite-db",
+  "title": "Create SQLite Database",
+  "description": "Create an empty SQLite file and its support folders. It has no tables or records.",
+  "type": "tool",
+  "path": "toolkit/tools/new-sqlite-db",
+  "file": "new-sqlite-db.mjs",
+  "tags": [
+    "rab-world",
+    "database",
+    "sqlite"
+  ],
+  "settings": [
+    {
+      "name": "path",
+      "type": "string",
+      "title": "Parent Folder",
+      "description": "Existing parent folder for the new layout.",
+      "required": true
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "title": "Folder Name",
+      "description": "New folder name, default db.",
+      "required": false,
+      "default": "db"
+    },
+    {
+      "name": "file",
+      "type": "string",
+      "title": "Database File",
+      "description": "Plain .sqlite or .db filename.",
+      "required": false,
+      "default": "app.sqlite"
+    }
+  ],
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "database-tools.mjs",
+      "path": ".",
+      "type": "mjs"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "new-sqlite-db.mjs",
+      "path": ".",
+      "type": "mjs"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

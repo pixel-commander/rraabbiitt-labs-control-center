@@ -1,0 +1,195 @@
+schema: 1
+intent: use
+owner:
+  id: 1793990174762
+id: 1793990737743
+name: CodeViewer
+title: Use CodeViewer
+description: Props, defaults and callbacks for CodeViewer.
+type: skill
+path: C:\rraabbiitt-hq\rraabbiitt-labs-control-center\src\components\CodeEditAndView\CodeViewer
+tags: []
+implementation: []
+context: []
+inputs:
+  code:
+    type: string
+    required: true
+  language:
+    type: string | undefined
+    required: false
+  mode:
+    type: '"view" | "edit" | undefined'
+    required: false
+  inline:
+    type: boolean | undefined
+    required: false
+  showLineNumbers:
+    type: boolean | undefined
+    required: false
+  showMinimap:
+    type: boolean | undefined
+    required: false
+  startLine:
+    type: number | undefined
+    required: false
+  activeLine:
+    type: number | undefined
+    required: false
+  tabSize:
+    type: number | undefined
+    required: false
+  disabled:
+    type: boolean | undefined
+    required: false
+  diagnostics:
+    type: CodeDiagnostic[] | undefined
+    required: false
+  className:
+    type: string | undefined
+    required: false
+  container_class:
+    type: string | undefined
+    required: false
+  style:
+    type: CSSProperties | undefined
+    required: false
+  aria-label:
+    type: string | undefined
+    required: false
+  handleChange:
+    type: 'HandlerKey<{ code: string; }, "code-change", void, CodeViewerProps> | undefined'
+    required: false
+  handleClick:
+    type: 'HandlerKey<{ line: number; }, "line-click" | "minimap-navigate", void, CodeViewerProps> |
+      undefined'
+    required: false
+  id:
+    type: number | undefined
+    required: false
+  name:
+    type: string | undefined
+    required: false
+  title:
+    type: string | undefined
+    required: false
+  description:
+    type: string | undefined
+    required: false
+  path:
+    type: string | undefined
+    required: false
+  save_path:
+    type: string | undefined
+    required: false
+  save_file:
+    type: string | undefined
+    required: false
+  paths:
+    type: PathsProps[] | undefined
+    required: false
+  date_added:
+    type: number | undefined
+    required: false
+  date_updated:
+    type: number | undefined
+    required: false
+  date_used:
+    type: number | undefined
+    required: false
+  date:
+    type: number | undefined
+    required: false
+  date_start:
+    type: number | undefined
+    required: false
+  date_end:
+    type: number | undefined
+    required: false
+outputs: {}
+instructions: >-
+  Props
+
+  code (required): string
+
+  language (optional): string | undefined
+
+  mode (optional): "view" | "edit" | undefined
+
+  inline (optional): boolean | undefined
+
+  showLineNumbers (optional): boolean | undefined
+
+  showMinimap (optional): boolean | undefined
+
+  startLine (optional): number | undefined
+
+  activeLine (optional): number | undefined
+
+  tabSize (optional): number | undefined
+
+  disabled (optional): boolean | undefined
+
+  diagnostics (optional): CodeDiagnostic[] | undefined
+
+  className (optional): string | undefined
+
+  container_class (optional): string | undefined
+
+  style (optional): CSSProperties | undefined
+
+  aria-label (optional): string | undefined
+
+  handleChange (optional): HandlerKey<{ code: string; }, "code-change", void, CodeViewerProps> |
+  undefined
+
+  handleClick (optional): HandlerKey<{ line: number; }, "line-click" | "minimap-navigate", void,
+  CodeViewerProps> | undefined
+
+  id (optional): number | undefined
+
+  name (optional): string | undefined
+
+  title (optional): string | undefined
+
+  description (optional): string | undefined
+
+  path (optional): string | undefined
+
+  save_path (optional): string | undefined
+
+  save_file (optional): string | undefined
+
+  paths (optional): PathsProps[] | undefined
+
+  date_added (optional): number | undefined
+
+  date_updated (optional): number | undefined
+
+  date_used (optional): number | undefined
+
+  date (optional): number | undefined
+
+  date_start (optional): number | undefined
+
+  date_end (optional): number | undefined
+
+
+  Defaults
+
+  language="tsx"; mode="view"; inline=false; showLineNumbers=true; showMinimap=true; startLine=1;
+  tabSize=2; disabled=false; diagnostics=[]. aria-label defaults to Code editor in edit mode and
+  Code in view mode.
+
+
+  Callbacks and prop behavior
+
+  code is required. mode accepts view/edit. language selects syntax. inline, showLineNumbers,
+  showMinimap, startLine, activeLine, tabSize, disabled and diagnostics configure the viewer.
+  diagnostics entries contain message, severity error/warning and optional line/column.
+  container_class, className, style and aria-label customize display. handleChange receives ({code},
+  "code-change", props). handleClick receives ({line}, "line-click" | "minimap-navigate", props).
+checks: []
+examples: []
+routes: []
+provenance: []

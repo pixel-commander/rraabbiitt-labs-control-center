@@ -1,0 +1,33 @@
+schema: 1
+intent: use
+id: 1791518327961
+name: scaffolds
+title: React scaffolds
+description: Shared usage guidance for the migrated React scaffold packages.
+type: function
+path: toolkits/rab-react/scaffolds
+file: use.skill.yaml
+tags:
+  - rab-react
+  - scaffolds
+implementation: []
+context: []
+inputs: {}
+outputs: {}
+instructions: >-
+  Read the selected scaffold's README and rab.settings.json. Call its TypeScript function with one
+  props object. The scaffold returns its saved rab.settings.json record. Failures throw. The shared
+  runner owns tracking; scaffolds do not start tracking or scan afterward.
+
+  Supporting documentation: toolkits/rab-react/scaffolds/README.txt,
+  toolkits/rab-react/scaffolds/RULES.txt.
+checks: []
+examples: []
+routes: []
+provenance:
+  - id: 1793143585577
+    reason: Supporting document, not an executable skill dependency.
+  - id: 1793143585577
+    reason: Supporting document, not an executable skill dependency.
+owner:
+  id: 1793143585577

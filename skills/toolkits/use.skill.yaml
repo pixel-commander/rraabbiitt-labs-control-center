@@ -1,0 +1,30 @@
+schema: 1
+intent: use
+id: 1791940045207
+name: toolkits
+title: Shared toolkit flow
+description: Shared shape, House keys and execution ownership for all toolkits.
+type: skill
+path: skills/toolkits
+tags:
+  - guidance
+  - toolkits
+implementation: []
+context: []
+inputs: {}
+outputs: {}
+instructions:
+  "A toolkit groups related capabilities into category folders, with one owning folder
+  for each concrete tool or runner. Use House keys consistently: id, name, title, description, type,
+  tags, path, file and paths retain their declared meanings. Extend shared types only for
+  capability-specific fields; optional fields remain optional. Identity names the record, while
+  invocation identity names one execution. Preserve record IDs across reads, scans and refreshes.
+  Read the capability's declared input, return and failure behavior before invoking it. Tools
+  perform bounded domain work; runners compose work. All execution and tracking use the shared
+  owning runner. Do not add a second tracker inside a tool or another workflow. Skills are
+  standalone YAML guidance and do not need settings JSON. Follow only the parent context chain for
+  shared guidance; parent skills do not enumerate or load their children."
+checks: []
+examples: []
+routes: []
+provenance: []

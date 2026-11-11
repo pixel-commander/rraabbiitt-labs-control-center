@@ -1,0 +1,65 @@
+{
+  "id": 1791766641356,
+  "name": "new-db-table",
+  "title": "Create Database Table",
+  "description": "Create one empty table with standard House columns in an existing SQLite database. The table has no rows.",
+  "type": "tool",
+  "path": "toolkit/tools/new-db-table",
+  "file": "new-db-table.mjs",
+  "tags": [
+    "rab-world",
+    "database",
+    "sqlite"
+  ],
+  "settings": [
+    {
+      "name": "path",
+      "type": "string",
+      "title": "Database Folder",
+      "description": "Folder containing the existing SQLite file.",
+      "required": true
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "title": "Table Name",
+      "description": "Lowercase table name using letters, digits and underscores.",
+      "required": true
+    },
+    {
+      "name": "file",
+      "type": "string",
+      "title": "Database File",
+      "description": "Plain .sqlite or .db filename.",
+      "required": false,
+      "default": "app.sqlite"
+    }
+  ],
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "new-db-table.mjs",
+      "path": ".",
+      "type": "mjs"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

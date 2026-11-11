@@ -1,0 +1,53 @@
+{
+  "id": 1794415784105,
+  "name": "api",
+  "title": "Dashboard API",
+  "description": "",
+  "type": "beacon",
+  "tags": [],
+  "paths": [
+    {
+      "id": 1794415784096,
+      "name": "file-system",
+      "type": "beacon",
+      "path": "file-system",
+      "file": "rab.beacon.json"
+    },
+    {
+      "id": 1794415784075,
+      "name": "hybrid-search",
+      "type": "settings",
+      "path": "hybrid-search",
+      "file": "rab.settings.json"
+    },
+    {
+      "id": 1794415784077,
+      "name": "messages",
+      "type": "settings",
+      "path": "messages",
+      "file": "rab.settings.json"
+    },
+    {
+      "id": 1794415784082,
+      "name": "records",
+      "type": "settings",
+      "path": "records",
+      "file": "rab.settings.json"
+    },
+    {
+      "id": 1794413738402,
+      "name": "mcp",
+      "type": "settings",
+      "path": "mcp",
+      "file": "rab.settings.json"
+    },
+    {
+      "id": 1794415784087,
+      "name": "tool-usage",
+      "type": "settings",
+      "path": "tool-usage",
+      "file": "rab.settings.json"
+    }
+  ],
+  "path": "api"
+}

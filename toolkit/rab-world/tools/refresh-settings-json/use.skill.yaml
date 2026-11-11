@@ -1,0 +1,25 @@
+schema: 1
+intent: use
+id: 1793981263002
+name: refresh-settings-json
+title: Refresh settings JSON
+description: Replace settings paths with all files found recursively.
+owner:
+  id: 1793981263000
+implementation:
+  - id: 1793981263000
+context:
+  - use: 1791940045227
+    reason: Shared tool contract.
+instructions: Call the exported run({ path }) with one HouseKeys settings bag. path is required and
+  names the folder containing rab.settings.json; do not include the filename. ID-only lookup is not
+  available yet. Returns ToolReturn. On success, status is complete, settings is the incoming bag,
+  and response contains the updated saved JSON record. response.paths contains file entries with
+  name (filename), path (containing folder relative to the rab.settings.json folder, without the
+  filename; dot for files directly in that folder), and type (extension without the dot).
+  response.summary.count is the number of paths. response.id is the saved record ID; an absent or
+  null ID is assigned automatically, and an existing ID is retained. On failure, status is error,
+  settings is the incoming bag, and error describes the failure. response.path is updated to the
+  target JSON file's actual absolute containing folder, without the filename.
+path: toolkit/rab-world/tools/refresh-settings-json
+file: refresh-settings-json.ts

@@ -1,0 +1,10 @@
+schema: 1
+intent: use
+id: 1794417387696
+name: McpViewer
+owner:
+  id: 1794417147126
+implementation:
+  - id: 1794417147126
+instructions: >
+  Render without props. Shows live MCP health and opens the root world MCP settings in a movable, resizable FloatWindow. Close or Escape hides it and returns focus to the opener. No settings are edited.

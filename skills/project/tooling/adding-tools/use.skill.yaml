@@ -1,0 +1,26 @@
+schema: 1
+intent: use
+id: 1793143987359
+name: adding-tools
+title: Add a tool
+description:
+  Create a tool in a toolkit, using the shared input and return contracts,
+  and pair it with a small usage skill.
+type: skill
+path: skills/project/tooling/adding-tools
+tags:
+  - project
+  - toolkits
+  - tools
+implementation: []
+context:
+  - use: 1793144147315
+    path: skills/project/tooling/use.skill.yaml
+    reason: Apply the shared tooling instructions before this child skill.
+instructions: |
+  Create toolkits/<toolkit>/tools/<tool-name>/ using the parent instructions.
+  Import Tool, ToolsProps, and ToolReturn from toolkits/Tooling.types.ts.
+  Return status, settings, response, and error when needed. Response uses HouseKeys
+  with summary, body, and paths as applicable. Do not introduce per-tool types.
+  Timing belongs to the runner. Use type: tool in the capability settings.
+  See toolkits/rab-world/tools/scan-path-records/scan-path-records.ts for an example.

@@ -1,0 +1,31 @@
+schema: 1
+intent: use
+id: 1791940045292
+name: adding-new-runners
+title: Adding runners
+description: Define composition without duplicating domain tools or tracking.
+type: skill
+path: skills/toolkits/runners/adding-new-runners
+tags:
+  - guidance
+  - toolkits
+implementation: []
+context:
+  - use: 1791940045245
+    path: skills/toolkits/runners/use.skill.yaml
+    reason: Read the parent guidance before this focused branch.
+inputs: {}
+outputs: {}
+instructions:
+  Check for a suitable existing workflow before creating another. Give the runner one
+  owning folder, a clear purpose and typed declared inputs. Define ordered steps using existing
+  registered capabilities and preserve their identities and input contracts. Attach relevant
+  high-level or leaf skills to the step that needs them. Keep dependencies and branch decisions
+  explicit. Let the shared runner assign invocation IDs, parent links, timing and recording. Do not
+  wrap the same work in additional tracking runners. Validate the plan before effects, document
+  failure and retry behavior, and test with temporary destinations outside the project. Preserve the
+  established host composition interface.
+checks: []
+examples: []
+routes: []
+provenance: []

@@ -1,0 +1,8 @@
+@layer components {
+  .hybrid-search {
+    min-inline-size: 0;
+  }
+  .world-search-result-header {
+    min-inline-size: 0;
+  }
+}

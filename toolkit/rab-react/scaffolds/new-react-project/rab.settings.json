@@ -1,0 +1,66 @@
+{
+  "id": 1790000000300,
+  "name": "new-react-project",
+  "title": "Create React Project",
+  "description": "Create a React starter project from the supplied name. It includes a Vite setup, home and style guide views, house settings, grid definitions, and example atoms. It does not install packages.",
+  "type": "tool",
+  "path": "toolkit/rab-react/scaffolds/new-react-project",
+  "file": "new-react-project",
+  "parent": 1791518327955,
+  "tags": [
+    "rab-react",
+    "scaffold"
+  ],
+  "settings": [
+    {
+      "type": "string",
+      "name": "name",
+      "title": "Project Name",
+      "description": "Project name.",
+      "required": true
+    },
+    {
+      "type": "string",
+      "name": "path",
+      "title": "Parent Folder",
+      "description": "Folder that will contain the project.",
+      "required": true
+    },
+    {
+      "type": "string",
+      "name": "title",
+      "title": "Title",
+      "description": "Optional project display title.",
+      "required": false
+    },
+    {
+      "type": "string",
+      "name": "description",
+      "title": "Description",
+      "description": "Optional project description.",
+      "required": false
+    },
+    {
+      "type": "array",
+      "name": "tags",
+      "title": "Tags",
+      "description": "Optional record tags.",
+      "required": false
+    }
+  ],
+  "paths": [
+    {
+      "id": 1791518659427,
+      "name": "new-react-project",
+      "path": "toolkits/rab-react/scaffolds/new-react-project",
+      "file": "use.skill.yaml",
+      "type": "use skill"
+    }
+  ],
+  "skills": [
+    {
+      "id": 1791518659427,
+      "path": "toolkits/rab-react/scaffolds/new-react-project/use.skill.yaml"
+    }
+  ]
+}

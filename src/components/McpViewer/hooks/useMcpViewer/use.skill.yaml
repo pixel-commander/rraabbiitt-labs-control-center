@@ -1,0 +1,10 @@
+schema: 1
+intent: use
+id: 1794417387697
+name: useMcpViewer
+owner:
+  id: 1794417147127
+implementation:
+  - id: 1794417147127
+instructions: >
+  Call with no arguments. Returns open, rect, status, refs and click/change/close actions. One owner stores interaction state. Health requests cancel on unmount and poll every 30 seconds.

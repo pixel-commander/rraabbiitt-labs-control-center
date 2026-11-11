@@ -1,0 +1,16 @@
+{
+  "name": "container-metal",
+  "title": "container-metal",
+  "description": "Machined-metal panel skin: a lighter theme-based gradient, readable text, a defined border and rounded corners. Includes focus-visible and disabled states; layout and spacing remain separate.",
+  "type": "ui-atom",
+  "tags": [
+    "container"
+  ],
+  "created": "2026-09-14",
+  "modified": "2026-09-14",
+  "file": "container-metal.css",
+  "parent": 1791575875326,
+  "paths": [],
+  "id": 1794247089884,
+  "path": "src/atoms/containers/container-metal"
+}

@@ -1,0 +1,32 @@
+schema: 1
+intent: use
+id: 1793144147315
+name: tooling
+title: Add toolkit capabilities
+description:
+  Shared instructions for adding tools and runners, including HouseKeys,
+  metadata, usage skills, and indexing.
+type: skill
+path: skills/project/tooling
+tags:
+  - toolkits
+  - tools
+  - runners
+  - housekeys
+implementation: []
+context: []
+instructions: |
+  Apply these shared instructions before the child skill.
+  Create the capability folder with its implementation, README.txt,
+  rab.project.json, and a small use.skill.yaml explaining its usage.
+  Reuse HouseKeys from src/HouseKeys.types.ts and the existing shared tool/runner
+  types. Preserve supplied bag values, including false, zero, and empty strings.
+  Use numeric timestamp IDs; preserve existing IDs. Give the capability settings
+  name, title, description, type, project-relative path, actual filename, and input
+  settings. Give its usage skill a separate timestamp ID, owner.id and owner.path
+  pointing to the capability settings, and implementation[].path pointing to code.
+  Keep owner for implementation ownership; context references shared parent skills.
+  For project destinations, read the caller root's rab.project.json paths and
+  keep resolved paths inside that project. Register the containing capability
+  folder in root paths when missing. Verify the actual output, then run npm run
+  index from the project root. The child skill defines its specific return contract.

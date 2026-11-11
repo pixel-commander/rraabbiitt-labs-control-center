@@ -1,0 +1,30 @@
+{
+  "id": 1794005588365,
+  "name": "generate-dependencies.manifest-json",
+  "title": "Build Import Manifest",
+  "description": "List relative imports that lead outside each selected component. The tool writes a manifest in each component folder. It does not resolve modules.",
+  "type": "tool",
+  "path": "toolkit/rab-react/tools/generate-dependencies.manifest-json",
+  "file": "generate-dependencies.manifest-json.ts",
+  "settings": [
+    {
+      "name": "path",
+      "type": "string",
+      "required": false,
+      "description": "One component folder. Supply path and/or paths."
+    },
+    {
+      "name": "paths",
+      "type": "array",
+      "required": false,
+      "description": "Component folder records: [{ path }]."
+    }
+  ],
+  "paths": [
+    {
+      "path": "toolkits/rab-react/tools/generate-dependencies.manifest-json",
+      "file": "use.skill.yaml",
+      "type": "use skill"
+    }
+  ]
+}

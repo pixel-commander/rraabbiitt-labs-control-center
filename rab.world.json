@@ -1,0 +1,68 @@
+{
+  "id": 1794413596312,
+  "name": "portable-search-dashboard",
+  "title": "Portable Hybrid Search Dashboard",
+  "description": "Local world for the labs control center.",
+  "path": ".",
+  "paths": [
+    {
+      "id": 1794420272872,
+      "name": "learning",
+      "type": "path",
+      "path": "learning",
+      "file": "rab.settings.json"
+    },
+    {
+      "name": "toolkit",
+      "type": "beacon",
+      "path": "toolkit",
+      "id": 1794423287652,
+      "file": "rab.beacon.json"
+    },
+    {
+      "id": 1794415784105,
+      "name": "api",
+      "type": "beacon",
+      "path": "api",
+      "file": "rab.beacon.json"
+    },
+    {
+      "name": "search-python",
+      "type": "path",
+      "path": ".venv/Scripts",
+      "file": "python.exe"
+    },
+    {
+      "id": 1794420950369,
+      "name": "hybrid-seat-ranking",
+      "type": "model",
+      "path": "learning/shipped-with-app/search-results/saved-models/hybrid-seat-ranking",
+      "file": "rab.settings.json"
+    },
+    {
+      "name": "hybrid-seat-ranking-runtime",
+      "type": "path",
+      "path": "packages/hybrid-search-runtime/models/hybrid-seat-ranking"
+    },
+    {
+      "id": 1794423287648,
+      "name": "skills",
+      "type": "beacon",
+      "path": "skills",
+      "file": "rab.beacon.json"
+    }
+  ],
+  "toolkits": [
+    {
+      "path": "toolkit"
+    }
+  ],
+  "mcp": {
+    "id": 1794413738402,
+    "path": "api/mcp",
+    "file": "server.mjs",
+    "host": "127.0.0.1",
+    "port": 5181
+  },
+  "url": "http://127.0.0.1:5181/world-search"
+}

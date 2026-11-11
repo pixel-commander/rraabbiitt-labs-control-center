@@ -1,0 +1,31 @@
+schema: 1
+intent: use
+id: 1791940045400
+name: generators
+title: Generators
+description: Produce derived values or content from declared inputs.
+type: skill
+path: skills/toolkits/tools/generators
+tags:
+  - guidance
+  - toolkits
+implementation: []
+context:
+  - use: 1791940045227
+    path: skills/toolkits/tools/use.skill.yaml
+    reason: Read the parent guidance before this focused branch.
+inputs: {}
+outputs: {}
+instructions:
+  A generator produces derived records, values or content from explicit inputs. Reuse
+  House fields and the category's declared output shape. Keep generation separate from unrelated
+  discovery, execution and persistence. If the generator saves output, require and honor its
+  declared destination; otherwise return the result without writing. Preserve supplied identities
+  unless generating a new identity is the explicit purpose. Report the generated content or records
+  rather than an unrelated success wrapper. Validate deterministic transformations with
+  representative inputs, including absent optional values and empty collections. The shared runner
+  owns execution tracking.
+checks: []
+examples: []
+routes: []
+provenance: []

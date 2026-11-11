@@ -1,0 +1,34 @@
+{
+  "name": "useWorldSearch",
+  "type": "hook",
+  "file": "useWorldSearch.ts",
+  "id": 1794395693982,
+  "path": "src/pages/WorldSearch/hooks/useWorldSearch",
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    },
+    {
+      "name": "useWorldSearch.ts",
+      "path": ".",
+      "type": "ts"
+    }
+  ]
+}

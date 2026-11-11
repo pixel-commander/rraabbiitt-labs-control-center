@@ -1,0 +1,84 @@
+{
+  "id": 1830000000006,
+  "name": "new-react-dashboard",
+  "title": "Create Dashboard",
+  "description": "Create a dashboard with a header and main area. The current template includes styles and a hook and supports one layout.",
+  "type": "tool",
+  "path": "toolkit/rab-react/scaffolds/new-react-dashboard",
+  "file": "new-react-dashboard",
+  "parent": 1791518327955,
+  "tags": [
+    "rab-react",
+    "scaffold"
+  ],
+  "settings": [
+    {
+      "type": "string",
+      "name": "name",
+      "title": "Dashboard Page Name",
+      "description": "Dashboard page name in any text style; generated folders and files use PascalCase.",
+      "required": true
+    },
+    {
+      "name": "path",
+      "type": "string",
+      "required": true,
+      "description": "Destination parent folder."
+    },
+    {
+      "type": "string",
+      "name": "layout",
+      "title": "Layout",
+      "description": "Supported dashboard grid topology.",
+      "required": false,
+      "default": "header-main",
+      "options": [
+        "header-main"
+      ]
+    },
+    {
+      "type": "string",
+      "name": "title",
+      "title": "Title",
+      "description": "Optional page heading.",
+      "required": false
+    },
+    {
+      "type": "string",
+      "name": "description",
+      "title": "Description",
+      "description": "Optional page description.",
+      "required": false
+    },
+    {
+      "type": "string",
+      "name": "content",
+      "title": "Content",
+      "description": "Optional initial main content.",
+      "required": false,
+      "default": ""
+    },
+    {
+      "type": "array",
+      "name": "tags",
+      "title": "Tags",
+      "description": "Optional saved record tags.",
+      "required": false
+    }
+  ],
+  "paths": [
+    {
+      "id": 1791518659423,
+      "name": "new-react-dashboard",
+      "path": "toolkits/rab-react/scaffolds/new-react-dashboard",
+      "file": "use.skill.yaml",
+      "type": "use skill"
+    }
+  ],
+  "skills": [
+    {
+      "id": 1791518659423,
+      "path": "toolkits/rab-react/scaffolds/new-react-dashboard/use.skill.yaml"
+    }
+  ]
+}

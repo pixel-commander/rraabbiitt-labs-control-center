@@ -1,0 +1,18 @@
+{
+  "name": "search-hybrid-seat-ranking",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../../../Tooling.types.ts",
+      "path": "../../../Tooling.types.ts",
+      "type": "import",
+      "file": "search-hybrid-seat-ranking.ts"
+    },
+    {
+      "name": "../project-search.ts",
+      "path": "../project-search.ts",
+      "type": "import",
+      "file": "search-hybrid-seat-ranking.ts"
+    }
+  ]
+}

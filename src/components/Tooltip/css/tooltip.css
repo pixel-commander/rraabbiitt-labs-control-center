@@ -1,0 +1,10 @@
+@layer components {
+  /* Let the supplied atom own skin instead of the shared component's default skin. */
+  .tooltip.tooltip-with-container {
+    background: revert-layer;
+    color: revert-layer;
+    border: revert-layer;
+    border-radius: revert-layer;
+    box-shadow: revert-layer;
+  }
+}

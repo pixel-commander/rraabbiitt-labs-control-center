@@ -1,0 +1,18 @@
+{
+  "name": "compare-ranking-checkpoints",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../../../Tooling.types.ts",
+      "path": "../../../Tooling.types.ts",
+      "type": "import",
+      "file": "compare-ranking-checkpoints.ts"
+    },
+    {
+      "name": "../tune-ranking-model/tune-ranking-model.ts",
+      "path": "../tune-ranking-model/tune-ranking-model.ts",
+      "type": "import",
+      "file": "compare-ranking-checkpoints.ts"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": 1794247089698,
+  "name": "home",
+  "title": "Home Page",
+  "description": "Main home page",
+  "file": "HomePage.tsx",
+  "type": "tool",
+  "tags": [
+    "rab-react",
+    "scaffold"
+  ],
+  "path": "src/pages/home",
+  "paths": [
+    {
+      "name": "HomePage.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "HomePage.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": "components",
+      "type": "txt"
+    },
+    {
+      "name": ".gitkeep",
+      "path": "css",
+      "type": ""
+    },
+    {
+      "name": ".gitkeep",
+      "path": "hooks",
+      "type": ""
+    },
+    {
+      "name": ".gitkeep",
+      "path": "js",
+      "type": ""
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

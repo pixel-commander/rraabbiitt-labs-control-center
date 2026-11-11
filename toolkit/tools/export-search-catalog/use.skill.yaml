@@ -1,0 +1,19 @@
+schema: 1
+intent: use
+id: 1793676793915
+name: use-export-search-catalog
+title: export-search-catalog
+description: Export indexed records and skills as a search catalog.
+type: skill
+path: toolkit/tools/export-search-catalog
+file: export-search-catalog.ts
+owner:
+  id: 1793676793815
+context:
+  - use: 1791940045227
+implementation:
+  - id: 1793676793815
+instructions: Call run({ path, save_path }) with the full database file path and output JSON file
+  path; these inputs currently include filenames. Returns ToolReturn with status complete, the
+  incoming settings bag, response.path identifying the saved catalog and response.summary.count
+  giving the exported row count. Failure returns status error and error.

@@ -1,0 +1,12 @@
+{
+  "name": "Slider",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../../../ui/HouseKeys.types",
+      "path": "../../../ui/HouseKeys.types",
+      "type": "import",
+      "file": "Slider.types.ts"
+    }
+  ]
+}

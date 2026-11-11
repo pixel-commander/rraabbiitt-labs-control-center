@@ -1,0 +1,17 @@
+schema: 1
+id: 1794366698969
+intent: use
+name: runner-render-factory-composition
+title: Render factory composition
+owner:
+  id: 1794366620615
+implementation:
+  - id: 1794366620615
+instructions: Call run with one settings bag. type must be component. Supply name and path as the
+  component runner's HouseKeys, plus code as one JSX root element and css as a stylesheet string.
+  title, description, save_path and tags pass through. The runner resolves component runner ID
+  1793138966741 from the registered catalog. It scaffolds the component, then replaces only its
+  return expression and imported stylesheet. Existing props, imports, type definitions and default
+  assignments remain in place. Pass the generated component id to update its return and CSS without
+  rerunning the scaffold. Other types fail before creating files. Returns the flat RunnerReturn
+  receipts from the component runner and write step.

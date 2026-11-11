@@ -1,0 +1,30 @@
+schema: 1
+intent: use
+id: 1791543035822
+name: react-component-scaffolds
+title: react-component-scaffolds
+description: Shared usage guidance for react-components.
+type: function
+path: toolkits/rab-react/scaffolds/react-components
+file: use.skill.yaml
+tags:
+  - toolkits
+  - rab-react
+  - scaffolds
+  - react-components
+  - react
+  - shared-guidance
+implementation: []
+context:
+  - use: 1791940045476
+    reason: Shared category contract, inherited before concrete implementation guidance.
+  - use: 1791518327961
+inputs: {}
+outputs: {}
+instructions: Use a capitalized React name and an explicit destination parent path. Omit grid or
+  pass an empty string to skip it; otherwise select a name present in css/grid.css. Use
+  save_as_text:true for .txt output. Locate the source using the returned folder and file.
+checks: []
+examples: []
+routes: []
+provenance: []

@@ -1,0 +1,14 @@
+{
+  "name": "action-row-rail",
+  "title": "Row rail action",
+  "description": "Flat row skin with a bottom divider and a leading accent rail on hover, press and .is-active. The rail is transparent at rest. Selected backgrounds vary slightly between press and .is-active; components own layout.",
+  "type": "ui-atom",
+  "tags": [
+    "action"
+  ],
+  "settings": [],
+  "paths": [],
+  "file": "action-row-rail.css",
+  "id": 1794247089878,
+  "path": "src/atoms/actions/action-row-rail"
+}

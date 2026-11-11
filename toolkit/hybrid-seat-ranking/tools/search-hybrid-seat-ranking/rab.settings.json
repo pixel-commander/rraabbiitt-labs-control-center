@@ -1,0 +1,60 @@
+{
+  "id": 1793154927345,
+  "name": "search-hybrid-seat-ranking",
+  "title": "Search Hybrid Records",
+  "description": "Search current records or one saved checkpoint. Results show field scores and training evidence. The tool does not execute records.",
+  "type": "tool",
+  "path": "toolkit/hybrid-seat-ranking/tools/search-hybrid-seat-ranking",
+  "file": "search-hybrid-seat-ranking.ts",
+  "settings": [
+    {
+      "name": "query",
+      "type": "string",
+      "required": true
+    },
+    {
+      "required": false,
+      "title": "JSON options; see usage skill",
+      "type": "string",
+      "name": "content"
+    },
+    {
+      "name": "path",
+      "type": "string",
+      "required": false,
+      "description": "Project root containing rab.world.json; defaults to this HQ checkout."
+    }
+  ],
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "search-hybrid-seat-ranking.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "search_hybrid_seat_ranking.py",
+      "path": ".",
+      "type": "py"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

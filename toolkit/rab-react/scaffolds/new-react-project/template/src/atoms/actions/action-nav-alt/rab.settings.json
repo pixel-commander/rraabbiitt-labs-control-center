@@ -1,0 +1,10 @@
+{
+  "id": 0,
+  "name": "action-nav-alt",
+  "title": "action-nav-alt",
+  "description": "Navigation action with a 3px bottom border and secondary-blue hover highlight.",
+  "type": "ui-atom",
+  "tags": ["action"],
+  "created": "2026-09-15",
+  "modified": "2026-09-15"
+}

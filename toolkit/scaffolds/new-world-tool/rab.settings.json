@@ -1,0 +1,40 @@
+{
+  "id": 1794415784109,
+  "name": "new-world-tool",
+  "title": "New World Tool",
+  "description": "Generate a tool implementation and settings with automatic best-effort usage reporting.",
+  "type": "tool",
+  "tags": [
+    "scaffold"
+  ],
+  "paths": [],
+  "path": "toolkit/scaffolds/new-world-tool",
+  "file": "new-world-tool.mjs",
+  "settings": [
+    {
+      "name": "path",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "file",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "description",
+      "type": "string",
+      "required": false
+    }
+  ]
+}

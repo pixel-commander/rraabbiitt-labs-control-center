@@ -1,0 +1,41 @@
+schema: 1
+intent: use
+id: 1793679050255
+name: confirming-tools
+title: Run a tool from search
+description: Review and confirm a matching tool before search runs it.
+type: skill
+path: skills/project/search/confirming-tools
+tags:
+  - project
+  - search
+implementation: []
+context:
+  - use: 1793679050118
+    path: skills/project/search/use.skill.yaml
+    reason: Read the shared search guide first.
+inputs: {}
+outputs: {}
+instructions: >-
+  Enter an action request such as "list all components" or "add component". Search can offer a tool
+  when the best result is a tool, runner, or a skill owned by one. Action detection uses request
+  words and the ranked result. It is not a separate trained intent model.
+
+  Read the proposed tool type, source, and settings. Fill required fields. Check the destination
+  before a file-creation tool runs. Select Confirm and run to execute it. Cancel closes the proposal
+  without running it.
+
+  The proposal step reads tool metadata and instructions. It does not execute the proposed tool. The
+  server requires confirmation and a one-use token. A proposal expires after 10 minutes. Search
+  again if it expires.
+
+  Execution uses the existing tool dispatcher and shared runner. Results appear below the
+  confirmation form. A runner can return several steps. If a step fails, read the error before
+  trying again.
+
+  New components use the registered React scaffold. Preserve existing record IDs. Use paths from the
+  target root rab.project.json.
+checks: []
+examples: []
+routes: []
+provenance: []

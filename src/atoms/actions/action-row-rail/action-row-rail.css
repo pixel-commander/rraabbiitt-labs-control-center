@@ -1,0 +1,62 @@
+@layer atoms {
+  /* Style :hover, :active and .is-active; keep :active and .is-active nearly identical, with only a slight background variation.
+     Use .is-active for selection; NEVER [data-page='home'] or page-specific selectors for active styling. */
+  .action-row-rail {
+    color: var(--color-main-alt-neg);
+    background: var(--color-transparent);
+    border: var(--border-width) var(--border-style) var(--border-subtle);
+    border-radius: 0;
+    font: var(--type-body);
+    cursor: pointer;
+    transition:
+      background-color var(--motion-fast),
+      color var(--motion-fast),
+      border-color var(--motion-fast);
+    --action-row-rail-hover-background: var(--color-secondary-alt);
+    --action-row-rail-active-background: var(--color-tertiary-alt);
+    --action-row-rail-active-color: var(--color-main-alt-neg);
+    border-width: 0 0 var(--border-width);
+    border-left: 3px solid transparent;
+  }
+
+  .action-row-rail:hover {
+    background: var(
+      --action-row-rail-hover-background,
+      var(--color-secondary-alt)
+    );
+  }
+
+  .action-row-rail:active,
+  .action-row-rail.is-active {
+    color: var(--action-row-rail-active-color, var(--color-main-neg));
+    background: var(--action-row-rail-active-background, var(--color-tertiary));
+  }
+
+  .action-row-rail:focus-visible {
+    outline: var(--action-row-rail-focus-outline, var(--focus-ring));
+    outline-offset: var(--action-row-rail-focus-offset, var(--focus-offset));
+  }
+
+  .action-row-rail:is(:disabled, [aria-disabled="true"]) {
+    color: var(--action-row-rail-disabled-color, var(--color-muted));
+    background: var(
+      --action-row-rail-disabled-background,
+      var(--color-secondary)
+    );
+    opacity: var(--action-row-rail-disabled-opacity, var(--disabled-opacity));
+    cursor: not-allowed;
+  }
+}
+
+@layer atoms {
+  .action-row-rail.is-active {
+    background: color-mix(
+      in srgb,
+      var(--action-row-rail-active-background) 94%,
+      var(--color-main-alt)
+    );
+  }
+  .action-row-rail:is(:hover, :active, .is-active) {
+    border-left-color: var(--color-primary);
+  }
+}

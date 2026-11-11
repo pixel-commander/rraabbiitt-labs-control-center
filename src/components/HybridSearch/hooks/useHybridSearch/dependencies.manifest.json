@@ -1,0 +1,24 @@
+{
+  "name": "useHybridSearch",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../../../MessageBox/hooks/useMessageProvider/useMessageProvider",
+      "path": "../../../MessageBox/hooks/useMessageProvider/useMessageProvider",
+      "type": "import",
+      "file": "useHybridSearch.ts"
+    },
+    {
+      "name": "../../../SearchResponses/SearchResponses.types",
+      "path": "../../../SearchResponses/SearchResponses.types",
+      "type": "import",
+      "file": "useHybridSearch.ts"
+    },
+    {
+      "name": "../../../../HouseKeys.types",
+      "type": "import",
+      "file": "messagesApi.ts",
+      "path": "../../../../HouseKeys.types"
+    }
+  ]
+}

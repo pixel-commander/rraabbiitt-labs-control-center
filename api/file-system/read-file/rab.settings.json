@@ -1,0 +1,10 @@
+{
+  "id": 1794415784083,
+  "name": "read-file",
+  "title": "file-system/read-file",
+  "description": "file-system/read-file API endpoint.",
+  "type": "api",
+  "tags": [],
+  "paths": [],
+  "path": "api/file-system/read-file"
+}

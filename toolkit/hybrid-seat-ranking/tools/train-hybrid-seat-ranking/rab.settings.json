@@ -1,0 +1,49 @@
+{
+  "id": 1793154927347,
+  "name": "train-hybrid-seat-ranking",
+  "title": "Build Retrieval Checkpoint",
+  "description": "Build a retrieval checkpoint from approved field feedback. The default mode activates it; candidate mode leaves the active checkpoint unchanged. Pending suggestions remain unapproved.",
+  "type": "tool",
+  "path": "toolkit/hybrid-seat-ranking/tools/train-hybrid-seat-ranking",
+  "file": "train-hybrid-seat-ranking.ts",
+  "settings": [
+    {
+      "required": false,
+      "title": "JSON options; see usage skill",
+      "type": "string",
+      "name": "content"
+    }
+  ],
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "train-hybrid-seat-ranking.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "train_hybrid_seat_ranking.py",
+      "path": ".",
+      "type": "py"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

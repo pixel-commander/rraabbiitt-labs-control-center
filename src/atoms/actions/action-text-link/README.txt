@@ -1,0 +1,1 @@
+Inline color class for anchors and spans. No underline, display, padding, border, background or button skin. Default color comes from --color-primary; override --action-text-link-color. Anchors retain native focus and navigation; hover uses --action-text-link-hover-color / --color-primary-alt.

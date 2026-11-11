@@ -1,0 +1,10 @@
+{
+  "id": 1794415784082,
+  "name": "records",
+  "title": "records",
+  "description": "records API endpoint.",
+  "type": "api",
+  "tags": [],
+  "paths": [],
+  "path": "api/records"
+}

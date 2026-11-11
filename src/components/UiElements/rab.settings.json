@@ -1,0 +1,200 @@
+{
+  "id": 1794395295542,
+  "name": "UiElements",
+  "title": "UiElements",
+  "description": "",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "UiElements.tsx",
+  "path": "src/components/UiElements",
+  "paths": [
+    {
+      "name": "IconButton.tsx",
+      "path": "IconButton",
+      "type": "tsx"
+    },
+    {
+      "name": "IconButton.types.ts",
+      "path": "IconButton",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": "IconButton",
+      "type": "txt"
+    },
+    {
+      "name": "icon-button.css",
+      "path": "IconButton/css",
+      "type": "css"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": "IconButton",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "IconButton",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "IconButton",
+      "type": "yaml"
+    },
+    {
+      "name": "ModelTile.tsx",
+      "path": "ModelTile",
+      "type": "tsx"
+    },
+    {
+      "name": "ModelTile.types.ts",
+      "path": "ModelTile",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": "ModelTile",
+      "type": "txt"
+    },
+    {
+      "name": "model-tile.css",
+      "path": "ModelTile/css",
+      "type": "css"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": "ModelTile",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "ModelTile",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "ModelTile",
+      "type": "yaml"
+    },
+    {
+      "name": "PageHeader.tsx",
+      "path": "PageHeader",
+      "type": "tsx"
+    },
+    {
+      "name": "PageHeader.types.ts",
+      "path": "PageHeader",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": "PageHeader",
+      "type": "txt"
+    },
+    {
+      "name": "page-header.css",
+      "path": "PageHeader/css",
+      "type": "css"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": "PageHeader",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "PageHeader",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "PageHeader",
+      "type": "yaml"
+    },
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "README.txt",
+      "path": "StatusLabel",
+      "type": "txt"
+    },
+    {
+      "name": "StatusLabel.tsx",
+      "path": "StatusLabel",
+      "type": "tsx"
+    },
+    {
+      "name": "StatusLabel.types.ts",
+      "path": "StatusLabel",
+      "type": "ts"
+    },
+    {
+      "name": "status-label.css",
+      "path": "StatusLabel/css",
+      "type": "css"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": "StatusLabel",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "StatusLabel",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "StatusLabel",
+      "type": "yaml"
+    },
+    {
+      "name": "UiElements.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "UiElements.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "ui-elements.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": ".gitkeep",
+      "path": "demo",
+      "type": ""
+    },
+    {
+      "name": "Demo.tsx",
+      "path": "demo",
+      "type": "tsx"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

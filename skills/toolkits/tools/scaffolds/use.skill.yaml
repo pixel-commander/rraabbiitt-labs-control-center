@@ -1,0 +1,32 @@
+schema: 1
+intent: use
+id: 1791940045476
+name: scaffolds
+title: Scaffolds
+description: Create a declared structure from its owned template.
+type: skill
+path: skills/toolkits/tools/scaffolds
+tags:
+  - guidance
+  - toolkits
+implementation: []
+context:
+  - use: 1791940045227
+    path: skills/toolkits/tools/use.skill.yaml
+    reason: Read the parent guidance before this focused branch.
+inputs: {}
+outputs: {}
+instructions:
+  "A scaffold creates the requested folder and files from its own template using
+  declared inputs and an explicit destination. Validate before writing, preserve supplied values,
+  and obey the declared existing-destination policy. Keep template sources separate from generated
+  output. Generate a new record identity only when creating a new record, then retain it in the
+  saved metadata and returned record. Return the saved record or receipts exactly as the scaffold
+  contract declares; the shared host handles its documented direct-return exception. Verify actual
+  output paths and files before downstream editing. This guide ends at the category: the concrete
+  scaffold's skill supplies its inputs, template details and verification steps by referencing this
+  guide as context."
+checks: []
+examples: []
+routes: []
+provenance: []

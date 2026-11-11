@@ -1,0 +1,18 @@
+{
+  "name": "SearchMessageBox",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../../MessageBox/MessageBox",
+      "path": "../../MessageBox/MessageBox",
+      "type": "import",
+      "file": "SearchMessageBox.tsx"
+    },
+    {
+      "name": "../../MessageBox/MessageBox.types",
+      "path": "../../MessageBox/MessageBox.types",
+      "type": "import",
+      "file": "SearchMessageBox.types.ts"
+    }
+  ]
+}

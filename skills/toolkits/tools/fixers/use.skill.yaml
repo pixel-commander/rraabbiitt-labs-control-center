@@ -1,0 +1,31 @@
+schema: 1
+intent: use
+id: 1791940045376
+name: fixers
+title: Fixers
+description: Repair an explicitly selected problem and report changes.
+type: skill
+path: skills/toolkits/tools/fixers
+tags:
+  - guidance
+  - toolkits
+implementation: []
+context:
+  - use: 1791940045227
+    path: skills/toolkits/tools/use.skill.yaml
+    reason: Read the parent guidance before this focused branch.
+inputs: {}
+outputs: {}
+instructions:
+  "A fixer changes only the selected problem while preserving unrelated content and
+  established identities. Honor its declared preview or dry-run mode: proposed changes are not
+  completed writes. Inspect the subjects before mutation, use a consistent mapping when references
+  change, and report both applied repairs and unresolved findings. Preserve equivalent checker
+  subject and finding keys. Operational read or write failures must surface with available partial
+  results; do not report success when execution failed. Avoid silent scope expansion, destructive
+  broad rewrites or duplicate tracking. Verify repaired behavior using the relevant existing checker
+  or inspection."
+checks: []
+examples: []
+routes: []
+provenance: []

@@ -1,0 +1,106 @@
+@layer components {
+  .code-edit-and-view {
+    --code-edit-and-view-border: var(--border-default);
+    --code-edit-and-view-background: var(--surface-main);
+    --code-edit-and-view-error: var(--border-danger);
+    min-inline-size: 0;
+    block-size: 100%;
+    min-block-size: 0;
+  }
+  .code-edit-and-view__toolbar {
+    align-items: center;
+    gap: var(--space-sm);
+    padding-block: var(--space-sm);
+  }
+  .code-edit-and-view__actions {
+    gap: var(--space-xs);
+  }
+  .code-edit-and-view__actions button {
+    padding: var(--space-xs) var(--space-sm);
+    cursor: pointer;
+  }
+  .code-edit-and-view__actions button[aria-pressed="true"] {
+  }
+  .code-edit-and-view__actions button:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+  .code-edit-and-view__actions button:focus-visible {
+  }
+  .code-edit-and-view__status {
+    padding-block: var(--space-sm);
+    font-size: 0.875rem;
+  }
+  .code-edit-and-view__content {
+    min-block-size: 0;
+    min-inline-size: 0;
+  }
+  .code-edit-and-view__content > .code-viewer {
+    block-size: 100%;
+    min-block-size: 0;
+  }
+  .code-edit-and-view__error,
+  .code-edit-and-view__diagnostics [data-severity="error"] {
+  }
+  .code-edit-and-view__diagnostics {
+    padding-inline-start: var(--space-xl);
+  }
+  @media (max-width: 650px) {
+    .code-edit-and-view__toolbar[data-cols] {
+      --grid-column-count: 1;
+    }
+  }
+}
+
+@layer components {
+  .code-edit-and-view__diagnostics button {
+    text-align: start;
+    cursor: pointer;
+  }
+  .code-edit-and-view__diagnostics button:focus-visible {
+  }
+}
+
+@layer components {
+  :where(.code-edit-and-view) {
+    color: var(--content-default);
+    background: var(--code-edit-and-view-background);
+  }
+  :where(.code-edit-and-view .code-edit-and-view__actions button) {
+    color: var(--content-default);
+    background: var(--surface-inset);
+    border: 1px solid var(--code-edit-and-view-border);
+    border-radius: var(--radius-control);
+  }
+  :where(
+    .code-edit-and-view
+      .code-edit-and-view__actions
+      button[aria-pressed="true"]
+  ) {
+    border-color: var(--accent-default);
+    background: var(--accent-soft);
+  }
+  :where(
+    .code-edit-and-view .code-edit-and-view__actions button:focus-visible
+  ) {
+    outline: var(--focus-ring);
+  }
+  :where(.code-edit-and-view .code-edit-and-view__error),
+  :where(
+    .code-edit-and-view
+      .code-edit-and-view__diagnostics
+      [data-severity="error"]
+  ) {
+    color: var(--code-edit-and-view-error);
+  }
+  :where(.code-edit-and-view .code-edit-and-view__diagnostics button) {
+    color: inherit;
+    background: transparent;
+    border: 0;
+  }
+  :where(
+    .code-edit-and-view .code-edit-and-view__diagnostics button:focus-visible
+  ) {
+    outline: var(--focus-ring);
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": 1793138966759,
+  "name": "runner-new-dashboard",
+  "title": "New Dashboard",
+  "description": "Creates a new dashboard using the project settings to find its destination. Returns the new settings record and the files created so later steps can use them.",
+  "type": "runner",
+  "path": "toolkit/rab-react/runners/runner-new-dashboard",
+  "file": "runner-new-dashboard.ts",
+  "settings": [
+    {
+      "name": "path",
+      "title": "Project root",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "name",
+      "title": "Name",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "save_path",
+      "title": "Destination within project",
+      "type": "string",
+      "required": false
+    }
+  ]
+}

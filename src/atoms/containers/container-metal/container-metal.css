@@ -1,0 +1,33 @@
+@layer atoms {
+  .container-metal {
+    color: var(--container-metal-color, var(--color-main-alt-neg));
+    background: var(
+      --container-metal-background,
+      linear-gradient(
+        180deg,
+        color-mix(in srgb, var(--color-main-alt) 55%, var(--color-main-alt)),
+        var(--color-main-alt)
+      )
+    );
+    border: var(
+      --container-metal-border,
+      var(--border-width) var(--border-style) var(--border-default)
+    );
+    border-radius: var(--container-metal-radius, var(--radius-container));
+    box-shadow: var(--container-metal-shadow, none);
+  }
+
+  .container-metal:focus-visible {
+    outline: var(--container-metal-focus-outline, var(--focus-ring));
+    outline-offset: var(--container-metal-focus-offset, var(--focus-offset));
+  }
+
+  .container-metal:is(:disabled, [aria-disabled="true"]) {
+    color: var(--container-metal-disabled-color, var(--color-muted));
+    background: var(
+      --container-metal-disabled-background,
+      var(--color-secondary)
+    );
+    opacity: var(--container-metal-disabled-opacity, var(--disabled-opacity));
+  }
+}

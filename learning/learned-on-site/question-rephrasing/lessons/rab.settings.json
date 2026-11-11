@@ -1,0 +1,23 @@
+{
+  "id": 1794420272831,
+  "name": "lessons",
+  "title": "Question rephrasing: lessons",
+  "description": "The lessons location for question-rephrasing in learned-on-site.",
+  "type": "path",
+  "tags": [
+    "learning"
+  ],
+  "paths": [
+    {
+      "name": ".gitkeep",
+      "path": ".",
+      "type": "gitkeep"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    }
+  ],
+  "path": "learning/learned-on-site/question-rephrasing/lessons"
+}

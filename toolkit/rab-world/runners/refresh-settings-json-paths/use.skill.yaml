@@ -1,0 +1,20 @@
+schema: 1
+intent: use
+id: 1793987131754
+name: refresh-settings-json-paths
+title: Refresh settings JSON paths
+path: toolkit/rab-world/runners/refresh-settings-json-paths
+file: refresh-settings-json-paths.ts
+owner:
+  id: 1793987131753
+implementation:
+  - id: 1793987131753
+context:
+  - use: 1791940045245
+instructions: Call run({ path }, options?) with one shared RunnersProps bag. path is the folder to
+  search recursively, including the folder itself. Finds all exact rab.settings.json filenames and
+  calls refresh-settings-json on each containing folder. Symbolic links and junctions are skipped.
+  Returns a flat RunnerReturn array containing every tool return with settings, status, response or
+  error and shared invocation/timing fields. Each successful response contains the saved settings
+  record and its relative file paths. A failed tool call does not prevent later locations from being
+  refreshed. No matches returns []. Invalid folder input throws before executing tools.

@@ -1,0 +1,55 @@
+{
+  "id": 1793221495963,
+  "name": "tune-ranking-model",
+  "title": "Tune Ranking Model",
+  "description": "Train cross-encoder weights from reviewed answer grades. The tool saves a candidate. Activation is a separate step after evaluation.",
+  "type": "tool",
+  "path": "toolkit/hybrid-seat-ranking/tools/tune-ranking-model",
+  "file": "tune-ranking-model.ts",
+  "settings": [
+    {
+      "name": "name",
+      "type": "string",
+      "required": false,
+      "title": "status | fine-tune (default) | activate"
+    },
+    {
+      "name": "content",
+      "type": "string",
+      "required": false,
+      "title": "JSON: epochs, batch_size, learning_rate, start_from; activate takes run"
+    }
+  ],
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "tune-ranking-model.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "tune_ranking_model.py",
+      "path": ".",
+      "type": "py"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "name": "grids folder",
+  "title": "__PROJECT_NAME__ grids",
+  "description": "the folder where all grids are saved for the __PROJECT_NAME__ react project.",
+  "type": "path",
+  "tags": ["grids"],
+  "path": "src\\atoms\\grids"
+}

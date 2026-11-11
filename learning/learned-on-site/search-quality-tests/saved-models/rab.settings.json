@@ -1,0 +1,23 @@
+{
+  "id": 1794420272862,
+  "name": "saved-models",
+  "title": "Search quality tests: saved-models",
+  "description": "The saved-models location for search-quality-tests in learned-on-site.",
+  "type": "path",
+  "tags": [
+    "learning"
+  ],
+  "paths": [
+    {
+      "name": ".gitkeep",
+      "path": ".",
+      "type": "gitkeep"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    }
+  ],
+  "path": "learning/learned-on-site/search-quality-tests/saved-models"
+}

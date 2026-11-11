@@ -1,0 +1,16 @@
+{
+  "id": 1794423287652,
+  "name": "toolkit",
+  "title": "Project Toolkits",
+  "description": "Discover source metadata within this project's toolkit folder.",
+  "type": "beacon",
+  "tags": [],
+  "paths": [
+    {
+      "name": "toolkit-sources",
+      "path": ".",
+      "type": "path"
+    }
+  ],
+  "path": "toolkit"
+}

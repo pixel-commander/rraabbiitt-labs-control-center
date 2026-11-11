@@ -1,0 +1,56 @@
+@layer components {
+  .response-and-ranking-card {
+    min-inline-size: 0;
+    align-items: start;
+  }
+  .response-and-ranking-card-heading {
+    align-items: center;
+    padding-block: var(--space-sm) var(--space-lg);
+    border-bottom: var(--border-width) solid var(--border-default);
+  }
+  .response-and-ranking-card-rank {
+    font-size: 1.4em;
+  }
+  .response-and-ranking-card-meta {
+    font-size: 0.7em;
+    color: var(--color-muted);
+    overflow-wrap: anywhere;
+  }
+  .response-and-ranking-card-name {
+    color: var(--color-primary);
+  }
+  .response-and-ranking-card-title {
+    font-weight: 700;
+    overflow-wrap: anywhere;
+  }
+  .response-and-ranking-card-score {
+    padding: var(--space-sm);
+    text-align: center;
+    gap: var(--space-2xs);
+  }
+  .response-and-ranking-card-score strong {
+    font-size: 1.25em;
+  }
+  .response-and-ranking-card-score span {
+    font-size: 0.65em;
+  }
+  .response-and-ranking-card-actions {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    justify-content: start;
+    width: max-content;
+    max-width: 100%;
+  }
+  .response-and-ranking-card-actions button {
+    padding: var(--space-sm);
+  }
+  .response-and-ranking-card-vote {
+    background: transparent;
+    border: 0;
+    color: inherit;
+  }
+  .response-and-ranking-card-vote:disabled {
+    cursor: default;
+  }
+}

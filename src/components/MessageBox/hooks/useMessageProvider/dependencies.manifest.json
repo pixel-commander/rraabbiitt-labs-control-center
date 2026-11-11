@@ -1,0 +1,12 @@
+{
+  "name": "useMessageProvider",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../../MessageBox.types",
+      "path": "../../MessageBox.types",
+      "type": "import",
+      "file": "useMessageProvider.types.ts"
+    }
+  ]
+}

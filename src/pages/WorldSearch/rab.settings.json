@@ -1,0 +1,105 @@
+{
+  "id": 1794395343357,
+  "name": "WorldSearch",
+  "title": "WorldSearch",
+  "description": "",
+  "type": "page",
+  "tags": [
+    "react",
+    "page"
+  ],
+  "file": "WorldSearchPage.tsx",
+  "path": "src/pages/WorldSearch",
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "README.txt",
+      "path": "ToolCol",
+      "type": "txt"
+    },
+    {
+      "name": "ToolCol.tsx",
+      "path": "ToolCol",
+      "type": "tsx"
+    },
+    {
+      "name": "ToolCol.types.ts",
+      "path": "ToolCol",
+      "type": "ts"
+    },
+    {
+      "name": "tool-col.css",
+      "path": "ToolCol/css",
+      "type": "css"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": "ToolCol",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "ToolCol",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "ToolCol",
+      "type": "yaml"
+    },
+    {
+      "name": "WorldSearchPage.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "world-search.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "README.txt",
+      "path": "hooks/useWorldSearch",
+      "type": "txt"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": "hooks/useWorldSearch",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "hooks/useWorldSearch",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "hooks/useWorldSearch",
+      "type": "yaml"
+    },
+    {
+      "name": "useWorldSearch.ts",
+      "path": "hooks/useWorldSearch",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

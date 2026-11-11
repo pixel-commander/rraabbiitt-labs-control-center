@@ -1,0 +1,271 @@
+LEARNING AND WORLD SEARCH STORAGE REPORT
+2026-11-11
+
+LEARNING FOLDERS
+learning/{shipped-with-app,learned-on-site}/ contains matching subjects:
+search-results, question-rephrasing, field-ranking, search-quality-tests.
+Each subject contains lessons/, grades/, saved-models/.
+
+Shipped content is maintained manually here. Customer feedback cannot select
+it as a write destination. This is enforced by the feedback API contract;
+no operating-system file permissions were changed.
+
+lessons: actual teaching inputs. grades: measured evaluation results.
+saved-models: actual trained model versions, with provenance and changes.
+No lessons, evaluation grades, or model files were fabricated during setup.
+The portable ranker pins pretrained encoder/reranker revisions in source;
+its own models folder contains no downloaded model files. The hybrid connection
+now bundles the existing HQ pinned assets in learning/shipped-with-app/
+search-results/saved-models/hybrid-seat-ranking. All 19 model asset hashes
+were verified. Only the zero-feedback baseline was copied; no HQ customer
+feedback, catalog, or trained examples were copied. Internal asset directories
+were shortened to encoder/ and reranker/ for Windows path-length support.
+No training or model download ran. Real model inference verified the connection.
+
+WHAT CUSTOMER FEEDBACK SAVES
+learning/learned-on-site/search-results/lessons/message-*.json:
+one immutable event per explicit whole-result vote, retaining the query,
+saved message ID, original record ID/key, vote, grade, numeric date,
+sequence, approval/source markers, original request and source snapshots.
+This is a whole-result relevance lesson, not a judgment of individual fields.
+
+lessons/processing-state/message-ID.json: derived latest-vote lexical state.
+lessons/processing-state/receipts/: derived save/processing receipts.
+These are neither evaluation grades nor trained models. Immutable events
+remain authoritative. A derived-write failure returns warnings.
+
+Current feedback adds a separate saved-message adjustment to the hybrid score
+for the same saved message/query. Original hybrid_score and evidence remain.
+It does not update neural weights, identify an authenticated
+user, consolidate global learning, or generate trainer-ready exports.
+Rephrasing and field-ranking have separate lesson locations; this change
+does not implement new writers or trainers for those subjects.
+Quality-test inputs remain separate from training inputs.
+
+DATABASE AND SERVER
+db/main/app.sqlite is the one application database, registered by
+rab.project.json. records contains source-indexed metadata and skills;
+messages contains submitted user text and its supplied numeric ID.
+docs, runs, tool_calls and tool_usage retain their own table contracts.
+SQLite full-text search spans the indexed application collections.
+Automatic tool usage saves tool ID, numeric date and optional message ID.
+
+Root rab.world.json remains the path source of truth and registers learning.
+Site, API and MCP share its host/port. Vite forwards /api/*; the MCP HTTP
+handler mounts message and search endpoints behind its host/origin/token
+checks. Search now calls registered hybrid tool 1793154927345 through the
+existing tool dispatcher. Its local exporter reads this project's records
+database. The engine uses pinned sentence embeddings, per-field BM25, RRF
+and a cross-encoder reranker. The FTS substitution was removed; tool failure
+returns an error. The world registers the shared HQ engine and working HQ
+Python environment, plus the project's own read-only shipped baseline.
+This configuration currently depends on the registered sibling HQ runtime
+and Python environment; transfer must provide those dependencies explicitly.
+
+UI
+The first search result's tool information is displayed in the main area's
+header, outside the conversation scroll, using the existing TopResult panel.
+It has no chat-bubble wrapper or timestamp. Remaining ranked tiles
+are children of .tool-col-scroll.scroll-y within
+.tool-col.is-open.world-search-tool-col. The misplaced center placeholder
+was removed. Tiles display the API's actual score and pass whole-result
+votes with the saved message/query context. The existing model selector
+remains a demo; it does not select a connected inference runtime.
+
+MIGRATION AND LOCAL FILES
+Old ml-training held no actual lessons, grades or models. Its 32 original
+metadata/instruction/marker files are preserved byte-for-byte under HQ
+.tmp/learning-migration/original-ml-training. Four subject IDs were retained;
+unused generic folder IDs were retired without reuse. Current metadata
+inventories and README instructions were updated for learning/.
+Installation-generated learning data and the live database are Git-ignored.
+Transfer required installation data separately. HQ .tmp contains verification
+fixtures, original hashes/mapping and server logs; these are work artifacts.
+
+VERIFICATION
+Learning verification: all three votes; saved source/IDs; message isolation;
+selected vote restoration; fixed customer destination; shipped-write selector
+rejection; unchanged shipped sentinel; derived state and receipts; 35 metadata
+locations resolving; 32 original hashes preserved; four subject IDs retained.
+Fixture: HQ .tmp/learning-migration/verify.mjs (isolated from live app data).
+Browser: query 'search' saved as message 1794420416538, displayed 20 results;
+right scroller overflow auto, client height 494, content height 2692;
+placeholder absent. No live feedback vote or training lesson was created.
+Shared HTTP routes: health 200; invalid search 400; absent message 404,
+with the expected API envelopes. These checks do not create records.
+Production build passes; existing large-chunk warning remains.
+The learning fixture above verified the earlier lexical implementation before
+the hybrid correction. Its lexical search assertions are not evidence for
+the new hybrid path; writer preservation and read-only baseline checks remain
+separately documented in the connection verification receipts.
+
+HYBRID CONNECTION VERIFICATION
+Direct registered-tool inference completed with method
+bm25-sentence-transformers-rrf. Shared-site HTTP verification reused saved
+message 1794420733883 ('how do i run the app'), returned HTTP200, status
+complete, mode hybrid and 10 ranked results in 16.6 seconds. Every result
+had the hybrid method, finite ranking score and feature evidence; none had
+an FTS-only fts_rank. Top result1793213000002. This proves actual runtime
+connection; it is not a claim that baseline relevance is satisfactory.
+Receipts: HQ .tmp/hybrid-search-connection/direct-search.json and
+site-response.json. The HTTP check did not create a message or feedback
+lesson; normal tool usage reporting records tool executions.
+Cold requests currently launch Python and encode the current catalog; the
+connection is correct but no persistent-worker performance work was done.
+Browser verification of 'how do I use MessageBox' completed through the live
+UI: top result 'Use MessageBox' title and description in the main header,
+remaining nine hybrid-ranked results in the right scroller. No feedback was
+submitted during this check. Missing tool registration separately returns503
+and no result list, verifying there is no FTS fallback.
+
+NOT IMPLEMENTED BY THIS STEP
+Project-specific training, lesson exporters, baseline model comparisons and
+fine-tuning. No model-selection inference integration for the demo LLM tiles.
+
+CATALOG CONNECTION CORRECTION
+The prior runtime checks proved inference ran but missed a catalog defect:
+world.toolkits registered rab-react, while the local indexer read only project
+folders. New Component runner1793138966741 was absent, so it could not rank.
+The indexer now includes exact registered toolkit folders within HQ, preserving
+IDs and preferring existing local copies when IDs overlap. Removed registrations
+fall out of the next source-managed refresh. The learning project entry now
+indexes its folder contents instead of only its root settings file.
+Refresh returned235records(153settings/82skills),no warnings. New Component
+is present with its original ID and current source location. The exact saved
+query 'how do i make a new component?' then ranked that runner first through
+the shared HTTP API(method bm25-sentence-transformers-rrf,score0.1537362970,
+10results,15seconds). No query boost, optimizer update or training was used.
+Receipt: HQ .tmp/hybrid-search-connection/component-query.json.
+The original wording 'how do i make a component?' was also submitted through
+the live browser UI and returned New Component as the top header result, with
+the remaining ranked component/page tools in the right scroll. This verifies
+both supplied question variants against the corrected catalog.
+
+PORTABLE SHIPPED BASELINE CHECK
+Run npm run test:hybrid-baseline before connecting project data after transfer.
+tests/hybrid-search holds a frozen88-record system/toolkit catalog with original
+IDs, a catalog/engine hash manifest, six fixed query expectations and runner.
+No project database, project documents, messages or learned-on-site lessons are
+loaded. No site server or training is required. Model/runtime/Python locations
+come from the current world registrations; install dependencies on the receiving
+machine and update those registered locations explicitly.
+All six checks passed against the actual frozen pretrained model. Both component
+questions require New Component1793138966741 first. ID generation, catalog export,
+SQLite database creation and attention inspection require their expected original
+ID in the top3; all actually ranked first. Pinned assets and all shipped files
+were hash-verified unchanged. No fixtures or expectations are rewritten by tests.
+Receipt: HQ .tmp/hybrid-search-baseline/report.json. Nonzero exit indicates a
+failure or missing dependency. The check is a regression baseline, not a claim
+of general relevance quality. Test labels are never training lessons.
+
+REPHRASE, NEGATIVE FEEDBACK AND DELIVERY UPDATE
+Top and lower-ranked results now expose Rephrase. The message box retains the
+selected result and original query/message/rank while accepting new wording.
+Submission saves a new user message and a positive selected-result lesson.
+A lower-ranked result is not approved for the original question. Unchanged
+wording for a lower result is rejected. Cancel clears the selected target.
+Direct votes persist in learned-on-site/search-results/lessons; rephrases in
+learned-on-site/question-rephrasing/lessons. Raw messages and source snapshots
+retain original House IDs. Receipts are saved under processing-state/receipts.
+
+Approved lessons now feed the unchanged established engine's private evidence
+interface. No HTTP-layer +1/-1 score adjustment remains. Thumbs-down can remove
+a result for that wording; actual tests showed unrelated query scores and order
+unchanged. The selected lower result became top for its new approved wording.
+This is supervised evidence indexing with frozen neural weights, not fine-tuning.
+The current interface cap is 50 distinct question/result pairs; adding another
+returns409 before saving. History is never silently truncated. There is no
+lesson delete/disable UI yet. Version-retention automation was not implemented.
+
+Tests used isolated HQ.tmp fixtures and actual pinned model inference. No test
+lesson was written into live customer folders. The portable fixed-system
+baseline separately passed6/6 without the project DB or customer lessons.
+Build passed; existing large editor/TypeScript chunk warning remains.
+
+UI activity uses separate left Searching and found-result bubbles with Sent/Read
+footers. The actual top result stays above. User bubbles align right; model
+bubbles align left in the main conversation area. ToolCol is twice as wide.
+Card titles/metadata are larger; score and hand-button sizes are unchanged.
+Score is at the left heading position, with no right score column. Hand buttons
+have no action atom/background/border; buttons use global cursor:pointer.
+
+SKILLS AND TOOLKIT BEACONS
+skills/rab.beacon.json ID1794423287648 and toolkit/rab.beacon.json ID1794423287652
+were created with the owning scaffold and registered in project/world paths.
+No root settings record replaces these beacons. Operational world.toolkits
+locations remain unchanged. The indexer follows exact nested beacon paths,
+guards cycles/containment, and excludes unregistered siblings. Fixture tests
+for discovery, removal and escaping paths passed. Refresh returned235 records.
+
+The old screenshot's Running the app skill is NOT present in the inspected HQ
+source/catalog. No original ID or instructions were fabricated. The user was
+asked for its source location. This missing-content regression remains open.
+Returned skill records now display their actual instructions beneath the result
+summary. Passing six system checks does not establish complete old-site parity.
+
+IMPORTED SKILLS MERGE AND CLI REGRESSION
+The user explicitly supplied C:\hybrid-search-model\skills and requested merging
+its contents beside skills/data-base. Imported27 skill YAML files under cli/,
+project/,toolkits/ with original IDs preserved. Initial copies were byte-verified.
+The original root settings record was archived as source metadata in HQ.tmp,
+not installed over the project skills beacon. Existing data-base was retained.
+Source and destination README guidance were merged with provenance labels.
+
+Running the app1793126984423 and Viewing the app1793127075008 are now present.
+Their IDs remain unchanged. Their old hardcoded5180/search instructions were
+adapted to the current project's Vite-printed URL and World Search navigation;
+original copies are retained in HQ.tmp/skills-import. The viewing skill refers
+to the running skill by numeric ID. Catalog refresh returned262 records with
+109 indexed skills. The earlier missing-source condition is resolved by the
+user-authorized import. Runtime result verification follows separately.
+
+FINAL BASELINE AND SKILL PRESENTATION UPDATE
+The portable suite now has89 frozen records and7 fixed cases. Only the imported
+Running the app skill was added to the original88 records; the six original
+expectations were retained. All7 checks passed with the expected ID first,
+including the exact CLI question and its npm run dev instructions. This suite
+still does not load project databases or installation lessons.
+
+Live browser verification of 'what is the cli to run the app?' returned Running
+the app1793126984423 first and rendered its instructions. Top Rephrase selected
+Running the app; lower-tile Rephrase selected Viewing the app1793127075008 in
+the message box. No live teaching lesson was submitted during UI verification.
+
+At the user's subsequent direction, ToolReturn now supports skill. A top skill
+is returned as return_type=skill through the registered search tool and HTTP API.
+Its display text is response.body; unchanged ranking evidence is retained in
+response.evidence. Running the app's display text is exactly npm run dev.
+Viewing the app references the current world's numeric ID and url field in
+its outputs body binding. rab.world.json.url stores the configured site URL
+including port and route. Original skill IDs remain unchanged. Field bindings
+are retained during skill indexing. The skill UI displays returned body only.
+
+Feedback progress now appears in a left model-style bubble using local state,
+not the messages table. Sent/Read remains the small footer status. No new DB
+rows are added for progress or fixed search activity labels.
+
+Contract checks confirmed exact command text, dynamic URL/port resolution,
+evidence retention, rejected mismatched world references, and unchanged
+non-skill returns. Broader return-type changes remain outside this scope.
+
+TopResult now accepts optional score and displays it on the left of the heading,
+matching ranked cards. The search page supplies the actual hybrid ranking score.
+Zero is preserved. TypeScript passed after this change.
+
+
+FINAL LIVE URL/SCORE CHECK
+The live question 'how do I view the app in a browser?' returned Viewing the
+app1793127075008 first. The top body displayed only the registered URL
+http://127.0.0.1:5181/world-search, and the score0.16 appeared in the left
+heading box. Rephrase selection produced a local left status bubble; cancel
+returned the input to ordinary search mode. No teaching lesson was submitted.
+Screenshot: HQ .tmp/rephrase-learning/final-ui.png.
+
+
+GIT TRACKING POLICY UPDATE
+At the user's request, model and learning files are no longer ignored. Removed
+learned-on-site exclusions and portable model/train/feedback exclusions.
+Verified all114 current learning files are trackable (175.4MiB), plus model,
+train.jsonl and feedback.jsonl paths. Dependencies, environments, builds and
+temporary artifacts remain ignored. No files were staged or committed.
+

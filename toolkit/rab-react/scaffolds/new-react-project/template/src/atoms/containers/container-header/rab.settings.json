@@ -1,0 +1,12 @@
+{
+  "name": "container-header",
+  "title": "Header container",
+  "description": "Header-band skin with an elevated theme surface, strong text and a subtle bottom divider. Does not impose positioning, height, padding or grid layout.",
+  "type": "ui-atom",
+  "tags": [
+    "container"
+  ],
+  "settings": [],
+  "paths": [],
+  "file": "container-header.css"
+}

@@ -1,0 +1,90 @@
+{
+  "id": 1790000000402,
+  "name": "new-react-subcomponent",
+  "title": "Create Child Component",
+  "description": "Create a child component in its parent. It includes a type file and styles. Add an optional grid and CSS class.",
+  "type": "tool",
+  "path": "toolkit/rab-react/scaffolds/new-react-subcomponent",
+  "file": "new-react-subcomponent",
+  "parent": 1791518327955,
+  "tags": [
+    "rab-react",
+    "scaffold"
+  ],
+  "settings": [
+    {
+      "type": "string",
+      "name": "name",
+      "title": "Component Name",
+      "description": "Child component name in any text style; generated folders and files use PascalCase.",
+      "required": true
+    },
+    {
+      "type": "string",
+      "name": "title",
+      "title": "Title",
+      "description": "Optional display title for the generated child React component; defaults to its name.",
+      "required": false
+    },
+    {
+      "type": "string",
+      "name": "description",
+      "title": "Description",
+      "description": "Optional description for the generated child React component.",
+      "required": false
+    },
+    {
+      "type": "string",
+      "name": "path",
+      "title": "Parent Path",
+      "description": "Resolved parent component folder; normally supplied by Magic Box or a previous receipt.",
+      "required": true
+    },
+    {
+      "type": "boolean",
+      "name": "save_as_text",
+      "title": "Save As Text",
+      "description": "Save generated output as .txt for testing.",
+      "required": false,
+      "default": false
+    },
+    {
+      "type": "string",
+      "name": "grid",
+      "title": "Grid",
+      "description": "Optional canonical grid layout from the shared grid catalog. Use none or an empty value to skip.",
+      "required": false,
+      "ask": true
+    },
+    {
+      "type": "string",
+      "name": "class_name",
+      "title": "Container Class",
+      "description": "Optional class string appended to the base class; no class resolver is available.",
+      "required": false,
+      "ask": true
+    },
+    {
+      "type": "array",
+      "name": "tags",
+      "title": "Tags",
+      "description": "Optional saved record tags.",
+      "required": false
+    }
+  ],
+  "paths": [
+    {
+      "id": 1791518659408,
+      "name": "new-react-subcomponent",
+      "path": "toolkits/rab-react/scaffolds/new-react-subcomponent",
+      "file": "use.skill.yaml",
+      "type": "use skill"
+    }
+  ],
+  "skills": [
+    {
+      "id": 1791518659408,
+      "path": "toolkits/rab-react/scaffolds/new-react-subcomponent/use.skill.yaml"
+    }
+  ]
+}

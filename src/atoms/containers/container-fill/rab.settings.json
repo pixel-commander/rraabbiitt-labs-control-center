@@ -1,0 +1,30 @@
+{
+  "id": 1794400072527,
+  "name": "container-fill",
+  "title": "container-fill",
+  "description": "",
+  "type": "containers",
+  "tags": [
+    "react",
+    "containers"
+  ],
+  "file": "container-fill.css",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-labs-control-center/src/atoms/containers/container-fill",
+  "paths": [
+    {
+      "name": "container-fill.css",
+      "path": ".",
+      "type": "css"
+    },
+    {
+      "name": "Demo.tsx",
+      "path": "demo",
+      "type": "tsx"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    }
+  ]
+}

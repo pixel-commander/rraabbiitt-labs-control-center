@@ -1,0 +1,32 @@
+schema: 1
+intent: use
+id: 1791940045335
+name: runner-states
+title: Runner states
+description: Interpret execution states separately from findings.
+type: skill
+path: skills/toolkits/runners/runner-states
+tags:
+  - guidance
+  - toolkits
+implementation: []
+context:
+  - use: 1791940045245
+    path: skills/toolkits/runners/use.skill.yaml
+    reason: Read the parent guidance before this focused branch.
+inputs: {}
+outputs: {}
+instructions:
+  "Use the shared execution status values: waiting, complete and error. Waiting means no
+  terminal result has been recorded; a started invocation may have date_start before it has
+  date_end. A UI running indicator can derive from timing but must not invent a stored status value.
+  Complete means execution returned successfully; inspect response findings and optional diagnostics
+  separately. Error means execution failed and requires its error message and any preserved partial
+  results. Do not represent a validation finding as an operational failure unless the capability
+  contract defines that behavior. Do not claim canceled, paused or skipped states are supported
+  without an explicit host contract. A failed child must remain visible in the parent workflow
+  result."
+checks: []
+examples: []
+routes: []
+provenance: []

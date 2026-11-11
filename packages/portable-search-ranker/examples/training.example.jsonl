@@ -1,0 +1,4 @@
+{"query":"find the chat settings page","document":"Type: page\nName: chat-settings\nTitle: Chat settings\nDescription: Configure model and conversation behavior","grade":1}
+{"query":"find the chat settings page","document":"Type: page\nName: billing-history\nTitle: Billing history\nDescription: Review invoices and payment history","grade":0}
+{"query":"how do I change the model temperature","document":"Type: tool\nName: update-chat-options\nTitle: Update chat options\nDescription: Set temperature, top_p, top_k, and repeat penalty","grade":1}
+{"query":"how do I change the model temperature","document":"Type: page\nName: billing-history\nTitle: Billing history\nDescription: Review invoices and payment history","grade":0}

@@ -1,0 +1,18 @@
+schema: 1
+intent: use
+name: use-compare-ranking-checkpoints
+title: compare-ranking-checkpoints
+description: Compare active and candidate search rankings on the same saved catalog and held-out
+  whole-answer judgments. Reports gains and regressions without activation.
+type: skill
+path: toolkit/hybrid-seat-ranking/tools/compare-ranking-checkpoints
+file: use.skill.yaml
+owner:
+  id: 1793225821352
+instructions: Use the shared settings bag and preserve settings on return. content is JSON with run
+  (relative tuning run). Uses frozen dataset.catalog and positive scope=record test labels; unjudged
+  results are not wrong. Saves ranking-comparison.json. Returns response.body JSON. Delegates to the
+  existing isolated Python process owner; only runners add tracking. Never activates a candidate or
+  changes feedback. Compare active and candidate search rankings on the same saved catalog and
+  held-out whole-answer judgments. Reports gains and regressions without activation.
+id: 1793225862869

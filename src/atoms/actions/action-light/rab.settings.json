@@ -1,0 +1,10 @@
+{
+  "id": 1794395916209,
+  "name": "action-light",
+  "title": "action-light",
+  "description": "",
+  "type": "actions",
+  "tags": ["react", "actions"],
+  "file": "action-light.css",
+  "path": "src/atoms/actions/action-light"
+}

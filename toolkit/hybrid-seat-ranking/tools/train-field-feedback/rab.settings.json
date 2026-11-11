@@ -1,0 +1,75 @@
+{
+  "id": 1793154927349,
+  "name": "train-field-feedback",
+  "title": "Save Field Feedback",
+  "description": "Save a human judgment for a query and result field. The tool records approved feedback and builds a retrieval checkpoint.",
+  "type": "tool",
+  "path": "toolkit/hybrid-seat-ranking/tools/train-field-feedback",
+  "file": "train-field-feedback.ts",
+  "settings": [
+    {
+      "name": "query",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "path",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "content",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "id",
+      "title": "Selected correct record ID",
+      "type": "number",
+      "required": false
+    },
+    {
+      "title": "Project root (state owner)",
+      "required": false,
+      "type": "string",
+      "name": "save_path"
+    }
+  ],
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "train-field-feedback.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "train_field_feedback.py",
+      "path": ".",
+      "type": "py"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

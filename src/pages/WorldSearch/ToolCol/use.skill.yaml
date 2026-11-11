@@ -1,0 +1,117 @@
+schema: 1
+intent: use
+owner:
+  id: 1794404078377
+id: 1794408973434
+name: ToolCol
+title: Use ToolCol
+description: Props, defaults and callbacks for ToolCol.
+type: skill
+path: C:\rraabbiitt-hq\rraabbiitt-labs-control-center\src\pages\WorldSearch\ToolCol
+tags: []
+implementation: []
+context: []
+inputs:
+  children:
+    type: ReactNode
+    required: false
+  className:
+    type: string | undefined
+    required: false
+  is_open:
+    type: boolean | undefined
+    required: false
+  id:
+    type: number | undefined
+    required: false
+  name:
+    type: string | undefined
+    required: false
+  title:
+    type: string | undefined
+    required: false
+  description:
+    type: string | undefined
+    required: false
+  path:
+    type: string | undefined
+    required: false
+  save_path:
+    type: string | undefined
+    required: false
+  save_file:
+    type: string | undefined
+    required: false
+  paths:
+    type: PathsProps[] | undefined
+    required: false
+  date_added:
+    type: number | undefined
+    required: false
+  date_updated:
+    type: number | undefined
+    required: false
+  date_used:
+    type: number | undefined
+    required: false
+  date:
+    type: number | undefined
+    required: false
+  date_start:
+    type: number | undefined
+    required: false
+  date_end:
+    type: number | undefined
+    required: false
+outputs: {}
+instructions: >-
+  Props
+
+  children (optional): ReactNode
+
+  className (optional): string | undefined
+
+  is_open (optional): boolean | undefined
+
+  id (optional): number | undefined
+
+  name (optional): string | undefined
+
+  title (optional): string | undefined
+
+  description (optional): string | undefined
+
+  path (optional): string | undefined
+
+  save_path (optional): string | undefined
+
+  save_file (optional): string | undefined
+
+  paths (optional): PathsProps[] | undefined
+
+  date_added (optional): number | undefined
+
+  date_updated (optional): number | undefined
+
+  date_used (optional): number | undefined
+
+  date (optional): number | undefined
+
+  date_start (optional): number | undefined
+
+  date_end (optional): number | undefined
+
+
+  Defaults
+
+  is_open=false; children=null; className="".
+
+
+  Callbacks and prop behavior
+
+  children is the scrolling content. is_open controls visibility: true adds is-open; false adds
+  is-closed. className adds wrapper classes. No callbacks.
+checks: []
+examples: []
+routes: []
+provenance: []

@@ -1,0 +1,50 @@
+{
+  "id": 1793990174762,
+  "name": "CodeViewer",
+  "title": "Code viewer",
+  "description": "Controlled code surface with highlighting, gutter, minimap and diagnostic markers.",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "CodeViewer.tsx",
+  "path": "src/components/CodeEditAndView/CodeViewer",
+  "paths": [
+    {
+      "name": "CodeViewer.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "CodeViewer.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "code-viewer.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

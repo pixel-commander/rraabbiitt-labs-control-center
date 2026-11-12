@@ -13,3 +13,16 @@
     justify-self: end;
   }
 }
+
+@layer components {
+  .icon-settings-pulse {
+    animation: icon-settings-pulse 1.8s ease-in-out infinite;
+  }
+  @keyframes icon-settings-pulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .icon-settings-pulse { animation: none; }
+  }
+}

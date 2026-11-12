@@ -1,3 +1,6 @@
+import { DatabaseSync } from "node:sqlite";
+import { projectRoot, withinProject } from "../../../../scripts/world.mjs";
+import { executeTool as refreshCatalog } from "../../../tools/refresh-world-database/refresh-world-database.ts";
 import { readFile, realpath, readdir } from "node:fs/promises";
 import { spawn } from "node:child_process";
 import { isAbsolute, relative, resolve, sep, win32 } from "node:path";
@@ -80,6 +83,58 @@ async function readToolkitRegistrations(
       }
     };
     await visit(root);
+  }
+  return records;
+}
+
+/** Resolve IDs through the catalog, then trust only current metadata inside supplied roots. */
+async function indexedRegistrations(toolkits: unknown, id?: number): Promise<ToolRegistration[]> {
+  if (!Array.isArray(toolkits)) throw new Error("rab_world.toolkits is missing or invalid.");
+  const roots: string[] = [];
+  for (const toolkit of toolkits) {
+    if (!toolkit || typeof toolkit.path !== "string" || !isAbsolute(toolkit.path))
+      throw new Error("Each rab_world toolkit requires an absolute path.");
+    roots.push(await realpath(toolkit.path));
+  }
+  if (!roots.length) return [];
+  const config = JSON.parse((await readFile(resolve(projectRoot, "rab.project.json"), "utf8")).replace(/^\uFEFF/, ""));
+  const entries = config.paths.filter((row: {name: string}) => row.name === "database");
+  if (entries.length !== 1) throw new Error("Register exactly one catalog database.");
+  const database = resolve(projectRoot, entries[0].path, entries[0].file);
+  if (!withinProject(projectRoot, await realpath(database))) throw new Error("Catalog database escapes this world.");
+  const load = async () => {
+    const db = new DatabaseSync(database, { readOnly: true });
+    let rows;
+    try {
+      rows = id === undefined
+        ? db.prepare("SELECT id,path FROM records WHERE type IN ('tool','runner')").all()
+        : db.prepare("SELECT id,path FROM records WHERE id = ? AND type IN ('tool','runner')").all(id);
+    } finally { db.close(); }
+    const records: ToolRegistration[] = [];
+    for (const row of rows) {
+      const folder = resolve(projectRoot, String(row.path));
+      const root = roots.find(root => isWithin(root, folder));
+      if (!root) continue;
+      try {
+        const actual = await realpath(folder);
+        if (!isWithin(root, actual)) throw new Error("Indexed tool resolves outside its toolkit.");
+        const record = JSON.parse((await readFile(resolve(actual, "rab.settings.json"), "utf8")).replace(/^\uFEFF/, ""));
+        if (record.id !== row.id || !["tool", "runner"].includes(record.type)) continue;
+        if (typeof record.file !== "string" || typeof record.name !== "string") throw new Error("Invalid indexed tool registration.");
+        records.push({ ...record, path: actual, root });
+      } catch (error) {
+        if ((error as NodeJS.ErrnoException).code !== "ENOENT") throw error;
+      }
+    }
+    return records;
+  };
+  let records = await load();
+  if (!records.length) {
+    const refreshed = await refreshCatalog({path: projectRoot});
+    if (refreshed.status !== "complete") throw new Error(refreshed.error || "Catalog refresh failed.");
+    records = await load();
+    // Explicitly supplied toolkits outside this world's source registration remain supported.
+    if (!records.length) records = (await readToolkitRegistrations(toolkits)).filter(row => id === undefined || row.id === id);
   }
   return records;
 }
@@ -249,7 +304,7 @@ export const run = async (
     );
   }
 
-  const registrations = await readToolkitRegistrations(settings.toolkits);
+  const registrations = await indexedRegistrations(settings.toolkits, hasId ? settings.id : undefined);
   if (hasQuery) {
     const query = settings.query!.trim().toLowerCase();
     if (!query) throw new Error("Supply a nonempty search query.");
@@ -421,7 +476,7 @@ export const run = async (
 };
 
 export async function executeToolById(id: number, settings: Record<string, unknown>, toolkits: {path: string}[]): Promise<ToolReturn> {
-  const records = await readToolkitRegistrations(toolkits);
+  const records = await indexedRegistrations(toolkits, id);
   const record = records.find(record => record.id === id);
   if (!record) throw new Error(`Unregistered tool ID ${id}`);
   return executeRegisteredTool(record, settings);

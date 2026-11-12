@@ -1,0 +1,30 @@
+{
+  "id": 1794444448187,
+  "name": "favorites",
+  "title": "Favorites API",
+  "description": "Save and remove favorite indexed records by their numeric House ID.",
+  "type": "api",
+  "tags": [
+    "rab-world-v2",
+    "scaffold"
+  ],
+  "paths": [
+    {
+      "name": "favorites.mjs",
+      "path": ".",
+      "type": "mjs"
+    },
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ],
+  "path": "api/favorites",
+  "file": "favorites.mjs"
+}

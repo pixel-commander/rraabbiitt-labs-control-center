@@ -18,3 +18,6 @@ instructions: >
   Toolkit roots are supplied by the server, never by client tool arguments.
   Set MCP_TOKEN for bearer authentication. For an HTTPS reverse proxy, register
   mcp.url in the root world file and set MCP_TOKEN; the public URL is not created by this server.
+
+  Programmatic start() and createRequestHandler() take no arguments and load
+  the root world configuration internally at startup.

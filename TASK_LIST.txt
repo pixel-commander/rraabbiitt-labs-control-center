@@ -1,0 +1,8 @@
+TASK LIST
+
+Current tasks:
+1. COMPLETE: Fix the issues reported in __open-issues/portibility/PROBLEMS.txt.
+   Verification and limits: __open-issues/portibility/RESOLUTION.txt.
+2. Add the project root folder to MCP for cloud, LLM, and Dumbot use.
+   Resolve the root from rab.world.json. Define the required access before implementation.
+   Dumbot details: pending the user's explanation.

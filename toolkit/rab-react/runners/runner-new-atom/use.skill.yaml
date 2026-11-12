@@ -2,7 +2,7 @@ id: 1793143585571
 schema: 1
 intent: use
 name: use-runner-new-atom
-title: New Atom
+title: How to make a new atom
 path: toolkits/rab-react/runners/runner-new-atom
 file: use.skill.yaml
 instructions: Call run with the shared ToolsProps bag. path is the caller project root; name is the

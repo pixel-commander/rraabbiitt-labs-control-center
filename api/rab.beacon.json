@@ -47,6 +47,13 @@
       "type": "settings",
       "path": "tool-usage",
       "file": "rab.settings.json"
+    },
+    {
+      "id": 1794444448187,
+      "name": "favorites",
+      "type": "settings",
+      "path": "favorites",
+      "file": "rab.settings.json"
     }
   ],
   "path": "api"

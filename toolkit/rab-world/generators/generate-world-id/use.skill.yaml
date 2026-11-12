@@ -7,7 +7,7 @@ name: generate-world-id
 title: Generate ID
 description: Generate one numeric House ID.
 type: function
-path: C:\rraabbiitt-hq\rraabbiitt-labs-control-center\toolkit\rab-world\generators\generate-world-id
+path: toolkit/rab-world/generators/generate-world-id
 tags: []
 implementation: []
 context: []

@@ -5,6 +5,8 @@ import type { ResponseAndRankingAction } from "../../../SearchResponses/Response
 import { saveSearchMessage } from "./messagesApi";
 import {
   searchRecords,
+  getFavorites,
+  saveFavorite,
   saveSearchFeedback,
   saveSearchRephrase,
   type SearchRecord,
@@ -51,7 +53,10 @@ export const useHybridSearch = () => {
     top_result: null as SearchRecord | null,
     skill_text: null as string | null,
     results: [] as SearchRecord[],
+    raw_return: null as unknown,
     feedback: {} as Record<number, VoteType>,
+    favorites: {} as Record<number, boolean>,
+    favorites_loading: true,
     searching: false,
     saving: false,
     rephrase: null as {
@@ -73,6 +78,15 @@ export const useHybridSearch = () => {
       "Be a practical coding partner. Match my casual tone, stay useful, and answer the task directly.",
     saved: true,
   });
+  useEffect(() => {
+    let active = true;
+    getFavorites().then(ids => {
+      if (active) setState(value => ({...value, favorites: Object.fromEntries(ids.map(id => [id, true])), favorites_loading: false}));
+    }).catch(error => {
+      if (active) setState(value => ({...value, favorites_loading: false, error: error instanceof Error ? error.message : String(error)}));
+    });
+    return () => {active = false;};
+  }, []);
   const inFlight = useRef(false);
   const request = useRef(0);
   const draft = useRef("");
@@ -101,6 +115,7 @@ export const useHybridSearch = () => {
       top_result: null,
       skill_text: null,
       results: [],
+      raw_return: null,
       feedback: {},
     }));
     try {
@@ -138,6 +153,7 @@ export const useHybridSearch = () => {
       setState((current) => ({
         ...current,
         results: response.paths,
+        raw_return: response.raw_return,
         top_result: response.paths[0] ?? null,
         feedback: savedVotes(response),
         mode: response.mode ?? "hybrid",
@@ -192,6 +208,20 @@ export const useHybridSearch = () => {
       typeof record.record_key !== "string"
     )
       return;
+    if (type === "favorite") {
+      inFlight.current = true;
+      setState(value => ({...value, saving: true, error: ""}));
+      try {
+        const saved = await saveFavorite(record.id, !searchState.favorites[record.id]);
+        setState(value => ({...value, favorites: {...value.favorites, [saved.id]: saved.favorite}}));
+      } catch (error) {
+        setState(value => ({...value, error: error instanceof Error ? error.message : String(error)}));
+      } finally {
+        inFlight.current = false;
+        setState(value => ({...value, saving: false}));
+      }
+      return;
+    }
     if (type === "rephrase") {
       provider.handleChange(current.query);
       draft.current = current.query;
@@ -232,6 +262,7 @@ export const useHybridSearch = () => {
       setState((value) => ({
         ...value,
         results: response.paths,
+        raw_return: response.raw_return,
         top_result: response.paths[0] ?? null,
         feedback: { ...value.feedback, ...savedVotes(response) },
         mode: response.mode ?? "hybrid",
@@ -285,6 +316,7 @@ export const useHybridSearch = () => {
       top_result: null,
       skill_text: null,
       results: [],
+      raw_return: null,
       feedback: {},
       rephrase: null,
       vote: "",

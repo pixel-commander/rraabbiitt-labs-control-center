@@ -1,3 +1,4 @@
+import { projectRoot, withinProject } from "../../../../scripts/world.mjs";
 import { runToolCli } from "../../runners/tool-cli.mjs";
 import { generateWorldId } from "../../generators/generate-world-id/generate-world-id.ts";
 import { readFile, mkdir, writeFile } from "node:fs/promises";
@@ -33,7 +34,8 @@ export async function createSettings(input = {}) {
   };
 }
 export async function newSettingsJson(input = {}) {
-  const folder = path.resolve(text(input.path, "path"));
+  const folder = path.resolve(projectRoot, text(input.path, "path"));
+  if (!withinProject(projectRoot, folder)) throw Error("Settings must stay inside this world.");
   const file = input.fileName ?? "rab.settings.json";
   if (
     typeof file !== "string" ||
@@ -41,7 +43,7 @@ export async function newSettingsJson(input = {}) {
     !file.endsWith(".json")
   )
     throw new TypeError("fileName must be a JSON filename");
-  const settings = { ...(await createSettings(input)), path: folder, file };
+  const settings = { ...(await createSettings(input)), path: path.relative(projectRoot, folder).replaceAll("\\", "/") || ".", file };
   await mkdir(folder, { recursive: true });
   const output = path.join(folder, file);
   await writeFile(output, JSON.stringify(settings, null, 2) + "\n", {

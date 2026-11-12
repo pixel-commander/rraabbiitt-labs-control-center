@@ -2,7 +2,7 @@ id: 1793143585573
 schema: 1
 intent: use
 name: use-runner-new-dashboard
-title: New Dashboard
+title: How to make a new dashboard
 path: toolkits/rab-react/runners/runner-new-dashboard
 file: use.skill.yaml
 instructions: Call run with the shared ToolsProps bag. path is the caller project root; name is the

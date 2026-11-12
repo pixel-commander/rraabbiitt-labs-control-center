@@ -7,7 +7,7 @@ name: Slider
 title: Use Slider
 description: Props, defaults and callbacks for Slider.
 type: skill
-path: C:\rraabbiitt-hq\rraabbiitt-labs-control-center\src\components\Slider
+path: src/components/Slider
 tags: []
 implementation: []
 context: []

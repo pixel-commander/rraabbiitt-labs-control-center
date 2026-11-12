@@ -1,3 +1,4 @@
+import { RabbitHead } from "../RabbitHead/RabbitHead";
 import { SearchMessageBox } from "./SearchMessageBox/SearchMessageBox";
 import { Fragment } from "react";
 import { SearchResponseBubble } from "./SearchResponseBubble/SearchResponseBubble";
@@ -29,6 +30,9 @@ export const HybridSearch = () => {
       data-grid="header-main"
       data-gap="section"
     >
+      <div className="world-search-background" aria-hidden="true">
+        <RabbitHead transparentBg interactive={false} followMouse autoMotion={false} wheelZoom={false} zoom={2} panX={0.75} panY={-0.45} />
+      </div>
       <div data-area="header">
         <PageHeader
           className="world-search-heading"
@@ -100,15 +104,14 @@ export const HybridSearch = () => {
               New search
             </IconButton>
           </div>
-          <div>
-            <h2>WORKSPACE</h2>
-            <a href="/style-guide" className="action-text-link">
-              Explore the style guide ↗
-            </a>
-            <p className="world-search-muted">
-              Choose a model. Search your world.
-            </p>
-          </div>
+          <section className="world-search-return" data-grid="header-main" aria-label="Full search return">
+            <h2 data-area="header">Search return</h2>
+            <div data-area="main" className="scroll-y" tabIndex={0}>
+              <pre className="world-search-return-json">{state.raw_return == null
+                ? "Submit a search to view its return."
+                : JSON.stringify(state.raw_return, null, 2)}</pre>
+            </div>
+          </section>
         </aside>
         <section
           data-area="main"
@@ -122,12 +125,16 @@ export const HybridSearch = () => {
               <SearchResponses
                 result_type="top-result"
                 className="world-search-current-result"
+                id={state.top_result.id}
+                name={state.top_result.name}
+                type={state.top_result.type}
                 title={state.top_result.title}
-                  score={state.top_result.ranking?.score ?? state.top_result.score ?? 0}
+                score={state.top_result.ranking?.score ?? state.top_result.score ?? 0}
                 data={state.top_result}
                 handleClick={handleClick}
-                disabled={state.searching || state.saving}
+                disabled={state.searching || state.saving || state.favorites_loading}
                 vote={state.feedback[state.top_result.id]}
+                favorite={state.favorites[state.top_result.id] ?? false}
               >
                 {state.skill_text !== null ? (
                   <pre className="world-search-skill-instructions">
@@ -254,8 +261,9 @@ export const HybridSearch = () => {
                 score={record.ranking?.score ?? record.score ?? 0}
                 data={record}
                 handleClick={handleClick}
-                disabled={state.searching || state.saving}
+                disabled={state.searching || state.saving || state.favorites_loading}
                 vote={state.feedback[record.id]}
+                favorite={state.favorites[record.id] ?? false}
               />
             ))}
             {!state.searching && state.results.length < 2 && (

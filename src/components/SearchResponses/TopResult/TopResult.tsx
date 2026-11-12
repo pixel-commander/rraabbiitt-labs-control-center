@@ -1,82 +1,34 @@
 import type { CSSProperties } from "react";
-import type { VoteType } from "../SearchResponses.types";
+import { ResponseAndRankingCard } from "../ResponseAndRankingCard/ResponseAndRankingCard";
 import type { TopResultProps } from "./TopResult.types";
 import "./css/top-result.css";
+
 export const TopResult = (props: TopResultProps) => {
   const {
     container_class = props.container_aton === undefined
-      ? "container-side-rail"
+      ? "container-main"
       : props.container_aton,
-    title,
-    score,
     color,
-    children,
     className = "",
   } = props;
+
   return (
     <article
-      data-cols="1"
-      className={[
-        "top-result",
-        "pad-base",
-        "gap-base",
-        container_class,
-        className,
-      ]
-        .filter(Boolean)
-        .join(" ")}
-      style={
-        color === undefined
-          ? undefined
-          : ({ "--container-side-rail-color": color } as CSSProperties)
-      }
-    >
-      {(title !== undefined || score !== undefined) && (
-        <header data-grid={score !== undefined ? "side-left" : undefined}
-          data-cols={score === undefined ? "1" : undefined} data-gap="content"
-          className="top-result-heading">
-          {score !== undefined && (
-            <div data-area="side" data-cols="1" className="top-result-score container-outline"
-              aria-label={`Score ${score}`}>
-              <strong>{score.toFixed(2)}</strong>
-              <span>score</span>
-            </div>
-          )}
-          {title !== undefined && <div data-area="main" className="top-result-title">{title}</div>}
-        </header>
+      className={["top-result", className].filter(Boolean).join(" ")}
+      style={color === undefined ? undefined : (
+        { "--container-side-rail-color": color } as CSSProperties
       )}
-      <div className="top-result-content">{children}</div>
-      <footer className="top-result-votes" aria-label="Rate response">
-        {(
-          [
-            ["good-vote", "Good"],
-            ["ok-vote", "OK"],
-            ["bad-vote", "Bad"],
-          ] as [VoteType, string][]
-        ).map(([type, label]) => (
-          <button
-            type="button"
-            className={["action-light", props.vote === type ? "is-active" : ""]
-              .filter(Boolean)
-              .join(" ")}
-            key={type}
-            disabled={props.disabled}
-            aria-pressed={props.vote === type}
-            onClick={() => props.handleClick?.(props.data, type, props)}
-            aria-label={label + " response"}
-          >
-            {label}
-          </button>
-        ))}
-        <button
-          type="button"
-          className="action-light"
-          disabled={props.disabled}
-          onClick={() => props.handleClick?.(props.data, "rephrase", props)}
-        >
-          Rephrase
-        </button>
-      </footer>
+    >
+      <div className="top-result-rail top-result-rail-top" aria-hidden="true" />
+      <div className="top-result-rail top-result-rail-left" aria-hidden="true" />
+      <ResponseAndRankingCard
+        {...props}
+        container_class={container_class}
+        className="top-result-main"
+        handleClick={(data, type) => props.handleClick?.(data, type, props)}
+      />
+      <div className="top-result-rail top-result-rail-right" aria-hidden="true" />
+      <div className="top-result-rail top-result-rail-bottom" aria-hidden="true" />
     </article>
   );
 };

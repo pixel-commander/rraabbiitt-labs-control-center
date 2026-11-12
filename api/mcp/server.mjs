@@ -1,4 +1,7 @@
+import { handleFavorites } from "../favorites/favorites.mjs";
+import { stopSearchWorkers } from "../../toolkit/hybrid-seat-ranking/tools/search-worker.ts";
 import { createServer } from "node:http";
+import { loadWorld } from "../../scripts/world.mjs";
 import { timingSafeEqual } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
@@ -34,7 +37,18 @@ const inputSchema = z
       });
   });
 
-export async function createRequestHandler(world) {
+async function readWorld() {
+  const world = await loadWorld();
+  return { ...world, toolkits: world.toolkits.map(entry => ({
+    ...entry, path: resolve(world.path, entry.path),
+  })) };
+}
+
+export async function createRequestHandler() {
+  return buildRequestHandler(await readWorld());
+}
+
+async function buildRequestHandler(world) {
   const { host, port } = world.mcp;
   if (
     host !== "127.0.0.1" ||
@@ -91,6 +105,10 @@ export async function createRequestHandler(world) {
     const pathname = new URL(req.url, `http://${host}:${port}`).pathname;
     if (pathname === "/api/search-records" || pathname.startsWith("/api/search-records/")) {
       await handleSearchRecords(world, req, res, new URL(req.url, `http://${host}:${port}`));
+      return;
+    }
+    if (pathname.startsWith("/api/favorites/")) {
+      await handleFavorites(world, req, res, new URL(req.url, `http://${host}:${port}`));
       return;
     }
     if (pathname.startsWith("/api/messages/")) {
@@ -185,14 +203,16 @@ export async function createRequestHandler(world) {
     }
   };
   handler.close = () => {
+    stopSearchWorkers();
     for (const server of connections) void server.close();
   };
   return handler;
 }
 
-export async function start(world) {
+export async function start() {
+  const world = await readWorld();
   const { host, port } = world.mcp;
-  const handler = await createRequestHandler(world);
+  const handler = await buildRequestHandler(world);
   const http = createServer(handler);
   await new Promise((resolve, reject) => {
     http.once("error", reject);

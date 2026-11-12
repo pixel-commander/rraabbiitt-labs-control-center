@@ -7,7 +7,7 @@ name: CodeEditAndView
 title: Use CodeEditAndView
 description: Props, defaults and callbacks for CodeEditAndView.
 type: skill
-path: C:\rraabbiitt-hq\rraabbiitt-labs-control-center\src\components\CodeEditAndView
+path: src/components/CodeEditAndView
 tags: []
 implementation: []
 context: []

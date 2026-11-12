@@ -7,7 +7,7 @@ name: ModelTile
 title: Use ModelTile
 description: Props, defaults and callbacks for ModelTile.
 type: skill
-path: C:\rraabbiitt-hq\rraabbiitt-labs-control-center\src\components\UiElements\ModelTile
+path: src/components/UiElements/ModelTile
 tags: []
 implementation: []
 context: []

@@ -2,9 +2,15 @@
   .container-side-rail {
     background: var(--color-main-alt);
     color: var(--color-main-alt-neg);
+    --container-side-rail-bevel:
+      inset 0 1px 0 var(--container-side-rail-bevel-light, rgba(255, 255, 255, 0.16)),
+      inset -1px -1px 0 var(--container-side-rail-bevel-dark, rgba(0, 0, 0, 0.42));
+    box-shadow:
+      var(--container-side-rail-bevel),
+      var(--effect-float-shadow, 0 0 0 transparent);
     border: var(--border-width) var(--border-style) var(--border-subtle);
     border-inline-start: 2px solid
-      var(--container-side-rail-color, var(--color-primary));
+      var(--container-side-rail-color, var(--color-tertiary));
     border-radius: var(--radius-control);
     border-start-start-radius: 0;
     border-end-start-radius: 0;
@@ -34,5 +40,15 @@
       var(--container-side-rail-color, var(--color-primary));
     border-start-end-radius: 0;
     border-end-end-radius: 0;
+  }
+}
+
+@layer atoms {
+  @supports (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px)) {
+    .container-side-rail.--bg-filter {
+      background: color-mix(in srgb, var(--color-main-alt) var(--bg-filter-opacity, 65%), transparent);
+      -webkit-backdrop-filter: blur(var(--bg-filter-blur, 12px));
+      backdrop-filter: blur(var(--bg-filter-blur, 12px));
+    }
   }
 }

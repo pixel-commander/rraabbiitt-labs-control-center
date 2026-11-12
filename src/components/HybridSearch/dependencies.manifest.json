@@ -3,6 +3,18 @@
   "type": "dependencies",
   "paths": [
     {
+      "name": "../../../../HouseKeys.types",
+      "path": "../../HouseKeys.types",
+      "type": "import",
+      "file": "hooks/useHybridSearch/messagesApi.ts"
+    },
+    {
+      "name": "../../../../HouseKeys.types",
+      "path": "../../HouseKeys.types",
+      "type": "import",
+      "file": "hooks/useHybridSearch/searchApi.ts"
+    },
+    {
       "name": "../../../MessageBox/hooks/useMessageProvider/useMessageProvider",
       "path": "../MessageBox/hooks/useMessageProvider/useMessageProvider",
       "type": "import",
@@ -15,6 +27,18 @@
       "file": "hooks/useHybridSearch/useHybridSearch.ts"
     },
     {
+      "name": "../../../SearchResponses/ResponseAndRankingCard/ResponseAndRankingCard.types",
+      "path": "../SearchResponses/ResponseAndRankingCard/ResponseAndRankingCard.types",
+      "type": "import",
+      "file": "hooks/useHybridSearch/useHybridSearch.ts"
+    },
+    {
+      "name": "../RabbitHead/RabbitHead",
+      "path": "../RabbitHead/RabbitHead",
+      "type": "import",
+      "file": "HybridSearch.tsx"
+    },
+    {
       "name": "../UiElements/UiElements",
       "path": "../UiElements/UiElements",
       "type": "import",
@@ -23,6 +47,12 @@
     {
       "name": "../SearchResponses/SearchResponses",
       "path": "../SearchResponses/SearchResponses",
+      "type": "import",
+      "file": "HybridSearch.tsx"
+    },
+    {
+      "name": "../SearchResponses/ResponseAndRankingCard/ResponseAndRankingCard",
+      "path": "../SearchResponses/ResponseAndRankingCard/ResponseAndRankingCard",
       "type": "import",
       "file": "HybridSearch.tsx"
     },

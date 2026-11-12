@@ -3,6 +3,9 @@
 The pretrained language encoder is frozen. Training indexes approved field/query
 pairs and pending candidate pairs; it does not pretend to fine-tune that encoder.
 """
+import os
+import tempfile
+import zipfile
 import hashlib
 import json
 import sqlite3
@@ -96,8 +99,36 @@ class State:
             self.example_vectors = saved['examples'].copy()
             self.positive_vectors = saved['positives'].copy()
             self.record_vectors = saved['records'].copy()
+        cache = None
+        self.vector_source = 'checkpoint' if vectors is not None else 'computed'
+        cache_root = getattr(api, 'VECTOR_CACHE_ROOT', None)
+        if vectors is None and cache_root is not None:
+            key = hashlib.sha256(json.dumps([signature(catalog), [r.get('id') for r in catalog], self.config['model']], sort_keys=True).encode()).hexdigest()
+            cache = Path(cache_root) / (key + '.npz')
+            try:
+                with np.load(cache, allow_pickle=False) as saved_cache:
+                    candidate = saved_cache['fields']
+                    if candidate.shape != (len(catalog), len(FIELDS), self.example_vectors.shape[-1]) or not np.isfinite(candidate).all():
+                        raise ValueError('Invalid cached vector shape or values')
+                    vectors = candidate.copy()
+                    self.vector_source = 'disk'
+            except (OSError, ValueError, KeyError, EOFError, zipfile.BadZipFile):
+                pass  # This is disposable derived data, never the model checkpoint.
+        vector_started = time.perf_counter()
         self.engine = FieldRetriever(catalog, self.encode, field_weights=self.config['field_weights'],
                                      vectors=vectors, include_type=self.config.get('include_type', False))
+        if cache is not None and self.vector_source == 'computed':
+            cache.parent.mkdir(parents=True, exist_ok=True)
+            temporary = None
+            try:
+                with tempfile.NamedTemporaryFile(dir=cache.parent, suffix='.npz', delete=False) as output:
+                    temporary = Path(output.name)
+                    np.savez(output, fields=self.engine.vectors)
+                os.replace(temporary, cache)
+            finally:
+                if temporary is not None:
+                    temporary.unlink(missing_ok=True)
+        self.vector_build_ms = round((time.perf_counter() - vector_started)*1000, 2)
         self.examples = api.read(folder/'examples.json')
         self.records = api.read(folder/'record-examples.json')
         self.reranker = reranker(api.ROOT,self.config['reranker']) if self.config.get('reranker') else None
@@ -208,13 +239,15 @@ class State:
 
 
 def state(api, folder, catalog):
-    key = (str(api.ROOT.resolve()), str(folder), signature(catalog))
-    if key not in _states:
+    key = (str(api.ROOT.resolve()), str(folder), hashlib.sha256(json.dumps(catalog, sort_keys=True).encode()).hexdigest(), (folder/'engine.json').stat().st_mtime_ns)
+    reused = key in _states
+    if not reused:
         _states[key] = State(api, folder, catalog)
         if len(_states)>4:
             _, old = _states.popitem(last=False)
             old.engine.close()
     _states.move_to_end(key)
+    _states[key].cache_reused = reused
     return _states[key]
 
 
@@ -281,6 +314,7 @@ def search(api, query, checkpoint=None, preview_steps=None):
         if target and not any(target in ''.join(lexical_tokens(r.get('name',''))) for r in catalog):
             return dict(paths=[], summary=dict(count=0), body=json.dumps(dict(intent='locate', evidence=[], execution=False, reason='No matching named record.')))
     current = state(api, folder, catalog)
+    vector_cache = dict(source="memory" if current.cache_reused else current.vector_source, build_ms=0 if current.cache_reused else current.vector_build_ms)
     if preview_steps is not None:
         current = preview_state(current, preview_steps)
     request_clock.mark("Catalog and model state")
@@ -322,7 +356,7 @@ def search(api, query, checkpoint=None, preview_steps=None):
         evidence.append(dict(path=record['path'],file=record.get('file',''),fields=details))
     return dict(paths=matches,summary=dict(count=len(matches)),body=json.dumps(dict(intent='describe',
         method=KIND,checkpoint=str(folder.relative_to(api.ROOT)),field_weights=current.config['field_weights'],
-        evidence=evidence,execution=False,seat_prediction=seat_evidence,seat_ranking_enabled=False,**({'timing':dict(scored['timing'],request=request_clock.export(scope='Python search; excludes HTTP transport and browser rendering'))} if checkpoint is None else {}))))
+        evidence=evidence,vector_cache=vector_cache,execution=False,seat_prediction=seat_evidence,seat_ranking_enabled=False,**({'timing':dict(scored['timing'],request=request_clock.export(scope='Python search; excludes HTTP transport and browser rendering'))} if checkpoint is None else {}))))
 
 
 def prepare(api, catalog, feedback, options, parent, inherited=None):

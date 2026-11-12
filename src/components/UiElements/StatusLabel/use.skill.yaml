@@ -7,7 +7,7 @@ name: StatusLabel
 title: Use StatusLabel
 description: Props, defaults and callbacks for StatusLabel.
 type: skill
-path: C:\rraabbiitt-hq\rraabbiitt-labs-control-center\src\components\UiElements\StatusLabel
+path: src/components/UiElements/StatusLabel
 tags: []
 implementation: []
 context: []

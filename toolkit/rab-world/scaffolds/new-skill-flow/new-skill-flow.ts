@@ -1,6 +1,7 @@
 import type { Tool as UsageTool, ToolReturn as UsageToolReturn } from "../../../Tooling.types.ts";
 import { readFile, mkdir, writeFile } from "node:fs/promises";
-import { resolve, join } from "node:path";
+import { projectRoot, withinProject } from "../../../../scripts/world.mjs";
+import { relative, resolve, join } from "node:path";
 import { parse, stringify } from "yaml";
 import { generateWorldId } from "../../generators/generate-world-id/generate-world-id.ts";
 import type { Tool } from "../../../Tooling.types.ts";
@@ -70,11 +71,13 @@ export async function newSkillFlow(
       ([key, value]) => key !== "file" && value !== undefined,
     ),
   );
+  const folder = resolve(projectRoot, input.path);
+  if (!withinProject(projectRoot, folder)) throw Error("Skills must stay inside this world.");
   const record = {
     ...template,
     ...supplied,
     id: input.id ?? generateWorldId().id,
-    path: resolve(input.path),
+    path: relative(projectRoot, folder).replaceAll("\\", "/") || ".",
     intent,
     tags: input.tags ?? [],
     owner,
@@ -83,9 +86,9 @@ export async function newSkillFlow(
     provenance,
   } as NewSkillFlowRecord;
   if (!input.owner) delete record.owner;
-  await mkdir(record.path, { recursive: true });
+  await mkdir(folder, { recursive: true });
   await writeFile(
-    join(record.path, file),
+    join(folder, file),
     stringify(record, { lineWidth: 100 }),
     { flag: "wx" },
   );

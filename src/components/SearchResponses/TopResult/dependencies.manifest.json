@@ -3,8 +3,8 @@
   "type": "dependencies",
   "paths": [
     {
-      "name": "../SearchResponses.types",
-      "path": "../SearchResponses.types",
+      "name": "../ResponseAndRankingCard/ResponseAndRankingCard",
+      "path": "../ResponseAndRankingCard/ResponseAndRankingCard",
       "type": "import",
       "file": "TopResult.tsx"
     },

@@ -7,7 +7,7 @@ name: SiteNav
 title: Use SiteNav
 description: Props, defaults and callbacks for SiteNav.
 type: skill
-path: C:\rraabbiitt-hq\rraabbiitt-labs-control-center\src\components\SiteNav
+path: src/components/SiteNav
 tags: []
 implementation: []
 context: []

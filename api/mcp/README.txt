@@ -34,3 +34,10 @@ the public hostname through Host/Origin validation. This server does not
 create a public tunnel, change firewall rules, or configure cloud accounts.
 Clients must support Streamable HTTP and, when enabled, bearer authentication.
 OAuth discovery and legacy HTTP+SSE transport are not implemented.
+
+SERVER CONFIGURATION OWNERSHIP
+
+start() and createRequestHandler() take no configuration arguments. The server
+loads the root rab.world.json through the shared world loader on startup.
+It resolves toolkit paths against that file's containing folder. The launcher
+and Vite use the same world file to locate the server and configure their ports.

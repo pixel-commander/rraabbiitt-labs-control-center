@@ -7,7 +7,7 @@ name: SearchMessageBox
 title: Use SearchMessageBox
 description: Props, defaults and callbacks.
 type: function
-path: C:\rraabbiitt-hq\rraabbiitt-labs-control-center\src\components\HybridSearch\SearchMessageBox
+path: src/components/HybridSearch/SearchMessageBox
 tags: []
 implementation: []
 context:

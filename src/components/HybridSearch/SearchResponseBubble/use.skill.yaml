@@ -7,7 +7,7 @@ name: SearchResponseBubble
 title: Use SearchResponseBubble
 description: Props, defaults and callbacks.
 type: function
-path: C:\rraabbiitt-hq\rraabbiitt-labs-control-center\src\components\HybridSearch\SearchResponseBubble
+path: src/components/HybridSearch/SearchResponseBubble
 tags: []
 implementation: []
 context:

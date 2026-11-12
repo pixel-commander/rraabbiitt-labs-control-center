@@ -7,7 +7,7 @@ name: SmartTooltip
 title: Use SmartTooltip
 description: Props, defaults and callbacks for SmartTooltip.
 type: skill
-path: C:\rraabbiitt-hq\rraabbiitt-labs-control-center\src\components\SmartTooltip
+path: src/components/SmartTooltip
 tags: []
 implementation: []
 context: []

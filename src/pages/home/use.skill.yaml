@@ -7,7 +7,7 @@ name: HomePage
 title: Use HomePage
 description: Props, defaults and callbacks for HomePage.
 type: skill
-path: C:\rraabbiitt-hq\rraabbiitt-labs-control-center\src\pages\home
+path: src/pages/home
 tags: []
 implementation: []
 context: []

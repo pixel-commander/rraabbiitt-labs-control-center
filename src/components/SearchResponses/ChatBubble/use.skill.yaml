@@ -7,7 +7,7 @@ name: ChatBubble
 title: Use ChatBubble
 description: Props, defaults and callbacks for ChatBubble.
 type: skill
-path: C:\rraabbiitt-hq\rraabbiitt-labs-control-center\src\components\SearchResponses\ChatBubble
+path: src/components/SearchResponses/ChatBubble
 tags: []
 implementation: []
 context: []

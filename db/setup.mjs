@@ -1,20 +1,27 @@
 import { ensureSearchSchema } from "../toolkit/tools/refresh-world-database/ensure-search-schema.ts";
 import { DatabaseSync } from "node:sqlite";
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readFileSync, copyFileSync, mkdirSync, constants } from "node:fs";
 import { run as newDatabase } from "../toolkit/tools/new-sqlite-db/new-sqlite-db.mjs";
 import { run as newTable } from "../toolkit/tools/new-db-table/new-db-table.mjs";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
 
 const folder = fileURLToPath(new URL("./main/", import.meta.url));
-const tables = ["records", "messages", "docs", "tool_calls", "runs"];
+const tables = ["records", "messages", "docs", "tool_calls", "runs", "favorites"];
 if (!existsSync(folder)) {
+  const base = fileURLToPath(new URL("./base/app.sqlite", import.meta.url));
+  if (existsSync(base)) {
+    mkdirSync(folder);
+    // Exclusive copy: never replace an existing working database, even in a race.
+    copyFileSync(base, path.join(folder, "app.sqlite"), constants.COPYFILE_EXCL);
+  } else {
   const result = await newDatabase({
     path: path.dirname(folder),
     name: "main",
     file: "app.sqlite",
   });
   if (result.status !== "complete") throw new Error(result.error);
+  }
 }
 if (!existsSync(path.join(folder, "app.sqlite"))) {
   throw new Error(

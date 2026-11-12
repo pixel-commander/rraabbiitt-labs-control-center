@@ -1,3 +1,4 @@
+import { Demo as RabbitHeadDemo } from "../../components/RabbitHead/demo/Demo";
 import { Demo as TooltipDemo } from "../../components/Tooltip/demo/Demo";
 import { Demo as MessageBoxDemo } from "../../components/MessageBox/demo/Demo";
 import { Demo as SiteNavDemo } from "../../components/SiteNav/demo/Demo";
@@ -35,6 +36,10 @@ export const StyleGuidePage = () => {
           Open World Search ↗
         </a>
       </header>
+      <section id="rabbit-head" data-cols="1" data-gap="content">
+        <h2>RabbitHead</h2>
+        <RabbitHeadDemo />
+      </section>
       <section id="mcp-viewer" data-cols="1" data-gap="content">
         <h2>McpViewer</h2>
         <McpViewer />

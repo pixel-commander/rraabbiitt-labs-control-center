@@ -1,40 +1,68 @@
 @layer components {
   .top-result {
+    display: grid;
+    grid-template-columns: 5px minmax(0, 1fr) 5px;
+    grid-template-rows: 2px auto 3px;
     min-inline-size: 0;
     font-size: 1.5em;
   }
-  .top-result-content {
+  .top-result-main {
+    --effect-float:
+      inset 0 0 64px 16px rgba(0, 0, 0, 0.42),
+      var(--elevation-float);
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .top-result .response-and-ranking-card-content {
     font-size: 1em;
     line-height: 1.8;
     overflow-wrap: anywhere;
   }
-  .top-result-heading {
-    align-items: center;
-  }
-  .top-result-score {
-    padding: var(--space-sm);
-    gap: var(--space-2xs);
-    text-align: center;
-    font-size: 1rem;
-  }
-  .top-result-score strong {
+  .top-result .response-and-ranking-card-title {
     font-size: 1.25em;
   }
-  .top-result-score span {
-    font-size: 0.65em;
+  .top-result .response-and-ranking-card-actions,
+  .top-result .response-and-ranking-card-score {
+    font-size: 1rem;
   }
-  .top-result-votes {
+  .top-result-rail {
     display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    justify-content: start;
-    gap: var(--space-lg);
+    place-items: center;
+    min-block-size: 0;
+    min-inline-size: 0;
   }
-  .top-result-votes button {
-    padding: var(--space-xs);
+  .top-result-rail::before {
+    content: "";
+    display: block;
+    background: var(--container-side-rail-color, var(--color-tertiary));
   }
-  .top-result-title {
-    font: var(--type-code);
-    font-size: 0.8em;
+  .top-result-rail-left {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .top-result-rail-right {
+    grid-column: 3;
+    grid-row: 2;
+  }
+  .top-result-rail-left::before,
+  .top-result-rail-right::before {
+    inline-size: 5px;
+    block-size: 50%;
+  }
+  .top-result-rail-top {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .top-result-rail-top::before {
+    inline-size: 60%;
+    block-size: 2px;
+  }
+  .top-result-rail-bottom {
+    grid-column: 2;
+    grid-row: 3;
+  }
+  .top-result-rail-bottom::before {
+    inline-size: 20%;
+    block-size: 3px;
   }
 }

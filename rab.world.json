@@ -62,7 +62,7 @@
     "path": "api/mcp",
     "file": "server.mjs",
     "host": "127.0.0.1",
-    "port": 5181
+    "port": 5183
   },
-  "url": "http://127.0.0.1:5181/world-search"
+  "url": "http://127.0.0.1:5183/world-search"
 }

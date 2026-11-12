@@ -16,6 +16,16 @@
     color: var(--color-muted);
     overflow-wrap: anywhere;
   }
+  .response-and-ranking-card-type-icon {
+    display: inline-block;
+    margin-inline-end: var(--space-xs);
+    vertical-align: middle;
+    line-height: 1;
+    font-size: 1.4em;
+  }
+  .response-and-ranking-card-type-icon svg {
+    display: block;
+  }
   .response-and-ranking-card-name {
     color: var(--color-primary);
   }
@@ -35,6 +45,10 @@
     font-size: 0.65em;
   }
   .response-and-ranking-card-actions {
+    align-items: center;
+    min-inline-size: 0;
+  }
+  .response-and-ranking-card-votes {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
@@ -50,7 +64,34 @@
     border: 0;
     color: inherit;
   }
+  .response-and-ranking-card-favorite {
+    display: grid;
+    place-items: center;
+    font-size: 1.3em;
+  }
+  .response-and-ranking-card-favorite.is-selected {
+    color: var(--status-warning);
+  }
+  .response-and-ranking-card-favorite.is-selected svg {
+    fill: currentColor;
+  }
   .response-and-ranking-card-vote:disabled {
     cursor: default;
+  }
+}
+
+@layer components {
+  .smart-tooltip.ranking-tooltip {
+    max-inline-size: min(20rem, calc(100vw - 24px));
+    padding: var(--space-lg);
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: left;
+  }
+  .ranking-tooltip .smart-tooltip-title {
+    margin-block-end: var(--space-sm);
+    padding-block-end: var(--space-sm);
+    font-size: 1.1em;
+    line-height: 1.3;
   }
 }

@@ -2,7 +2,7 @@ schema: 1
 id: 1794366698969
 intent: use
 name: runner-render-factory-composition
-title: Render factory composition
+title: How to render a factory composition
 owner:
   id: 1794366620615
 implementation:

@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1793984711137
 name: runner-refresh-world-json
-title: Refresh world JSON
+title: How to refresh world JSON
 owner:
   id: 1793984711136
 context:

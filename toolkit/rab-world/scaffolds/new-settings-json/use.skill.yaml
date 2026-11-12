@@ -7,7 +7,7 @@ name: new-settings-json
 title: Create settings
 description: Create one settings record.
 type: function
-path: C:\rraabbiitt-hq\rraabbiitt-labs-control-center\toolkit\rab-world\scaffolds\new-settings-json
+path: toolkit/rab-world/scaffolds/new-settings-json
 tags: []
 implementation: []
 context: []
@@ -16,7 +16,7 @@ outputs: {}
 instructions: Supply path, name, title, description and type as nonempty strings. Optional tags is a
   string array; paths is an array. Call newSettingsJson(props) to create rab.settings.json, or
   createSettings(props) for metadata only. fileName optionally chooses a plain JSON filename.
-  Existing files are refused. A numeric ID is generated. The saved record is returned.
+  Existing files are refused. A numeric ID is generated. The saved record is returned. Its path is relative to rab.world.json.
 checks: []
 examples: []
 routes: []

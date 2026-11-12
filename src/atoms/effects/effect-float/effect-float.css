@@ -3,3 +3,12 @@
     --effect-float: var(--elevation-float);
   }
 }
+
+@layer atoms {
+  .effect-float {
+    --effect-float-shadow: var(--effect-float);
+    box-shadow:
+      var(--container-side-rail-bevel, 0 0 0 transparent),
+      var(--effect-float-shadow);
+  }
+}

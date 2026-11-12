@@ -7,15 +7,22 @@ name: useHybridSearch
 title: Use useHybridSearch
 description: Props, defaults and callbacks.
 type: function
-path: C:\rraabbiitt-hq\rraabbiitt-labs-control-center\src\components\HybridSearch\hooks\useHybridSearch
+path: src/components/HybridSearch/hooks/useHybridSearch
 tags: []
 implementation: []
 context: []
 inputs: {}
 outputs: {}
-instructions: "Props: none. Saves submitted user text before hybrid search with its message ID. handleChange(key,value) changes a feature field; handleSubmit(text,type,bag) saves and searches; handleClick(data,action) saves an explicit whole-result vote then refreshes ranking, or selects a result for user-entered rephrasing. In rephrase mode submission saves a new message and a positive lesson for that selected result, not the original query. handleReset clears the displayed session without deleting persisted history. Returns message, state, actions, messagesRef and handleScroll. Errors are visible; no preview fallback runs. Model tiles remain demo controls."
+instructions: 'Props: none. Saves submitted user text before hybrid search with its message ID.
+  handleChange(key,value) changes a feature field; handleSubmit(text,type,bag) saves and searches;
+  handleClick(data,action) saves an explicit whole-result vote then refreshes ranking, or selects a
+  result for user-entered rephrasing. In rephrase mode submission saves a new message and a positive
+  lesson for that selected result, not the original query. handleReset clears the displayed session
+  without deleting persisted history. Returns message, state, actions, messagesRef and handleScroll.
+  Errors are visible; no preview fallback runs. Model tiles remain demo controls. Loads persisted
+  favorites on mount. handleClick(data, "favorite") saves or removes the record by ID through the
+  favorites API, updates state.favorites, and does not train or refresh ranking.'
 checks: []
 examples: []
 routes: []
 provenance: []
-

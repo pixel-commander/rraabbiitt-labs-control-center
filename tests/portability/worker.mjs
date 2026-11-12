@@ -1,0 +1,58 @@
+import assert from "node:assert/strict";
+import {mkdtemp, mkdir, writeFile, readFile, rm} from "node:fs/promises";
+import {resolve, relative, isAbsolute} from "node:path";
+import {searchWorker, stopSearchWorkers} from "../../toolkit/hybrid-seat-ranking/tools/search-worker.ts";
+import {executeTool as exportCatalog} from "../../toolkit/tools/export-search-catalog/export-search-catalog.ts";
+import {projectRoot, loadWorld} from "../../scripts/world.mjs";
+const temporaryRoot=resolve(projectRoot,".tmp/portability-tests");
+await mkdir(temporaryRoot,{recursive:true});
+const folder=await mkdtemp(resolve(temporaryRoot,"worker-"));
+const world=await loadWorld();
+const location=name=>world.paths.find(row=>row.name===name);
+const model=resolve(projectRoot,location("hybrid-seat-ranking").path);
+const python=resolve(projectRoot,location("search-python").path,location("search-python").file);
+const script=resolve(projectRoot,"toolkit/hybrid-seat-ranking/tools/project_search.py");
+const catalog=resolve(folder,"catalog.json");
+const reports=[];
+const call=async(label,settings={query:"how do i make a new component?"})=>{
+ const started=performance.now();
+ const result=await searchWorker(projectRoot,model,python,script,catalog,settings);
+ assert.equal(result.status,"complete",result.error);
+ const body=JSON.parse(result.response.body);
+ const row={label,ms:Math.round(performance.now()-started),worker:body.worker,cache:body.vector_cache,top:result.response.paths[0].id};
+ reports.push(row);console.log(JSON.stringify(row));return {result,body};
+};
+try {
+ const exported=await exportCatalog({path:resolve(projectRoot,"db/main/app.sqlite"),save_path:catalog});
+ assert.equal(exported.status,"complete",exported.error);
+ const records=JSON.parse(await readFile(catalog,"utf8"));
+ const first=await call("first");
+ const warm=await call("warm");
+ assert.equal(warm.body.worker.pid,first.body.worker.pid);
+ assert.equal(warm.body.vector_cache.source,"memory");
+ assert.equal(warm.result.response.paths[0].id,first.result.response.paths[0].id);
+ records[0].description += " Catalog invalidation test " + Date.now();
+ await writeFile(catalog,JSON.stringify(records));
+ const changed=await call("changed-searchable-content");
+ assert.equal(changed.body.vector_cache.source,"computed");
+ assert.equal(changed.body.worker.pid,first.body.worker.pid);
+ records[0].instructions="Updated instructions for the same search fields.";
+ await writeFile(catalog,JSON.stringify(records));
+ const metadata=await call("changed-instructions");
+ assert.equal(metadata.body.vector_cache.source,"disk");
+ const bad=await searchWorker(projectRoot,model,python,script,catalog,{query:"test",content:'{"unsupported":true}'});
+ assert.equal(bad.status,"error");
+ const afterBad=await call("after-invalid-request");
+ assert.equal(afterBad.body.worker.pid,first.body.worker.pid);
+ stopSearchWorkers();
+ const restarted=await call("restart");
+ assert.notEqual(restarted.body.worker.pid,first.body.worker.pid);
+ assert.equal(restarted.body.vector_cache.source,"disk");
+ assert.equal(restarted.result.response.paths[0].id,metadata.result.response.paths[0].id);
+ await writeFile(resolve(temporaryRoot,"worker-report.json"),JSON.stringify({status:"PASS",reports},null,2));
+} finally {
+ stopSearchWorkers();
+ const child=relative(temporaryRoot,folder);
+ if(!child || child.startsWith("..") || isAbsolute(child)) throw Error("Unsafe test cleanup");
+ await rm(folder,{recursive:true,force:true});
+}

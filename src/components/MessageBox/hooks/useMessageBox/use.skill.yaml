@@ -7,7 +7,7 @@ name: useMessageBox
 title: Use useMessageBox
 description: Hook usage.
 type: function
-path: C:\rraabbiitt-hq\rraabbiitt-labs-control-center\src\components\MessageBox\hooks\useMessageBox
+path: src/components/MessageBox/hooks/useMessageBox
 tags: []
 implementation: []
 context:

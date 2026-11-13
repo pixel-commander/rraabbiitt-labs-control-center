@@ -1,0 +1,13 @@
+{
+  "id": 1794536966393,
+  "name": "StatusIcon",
+  "title": "StatusIcon",
+  "description": "Compact status icon action with primary, success, warning and error presets.",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "StatusIcon.tsx",
+  "path": "src/components/UiElements/StatusIcon"
+}

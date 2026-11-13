@@ -130,7 +130,10 @@ async function indexedRegistrations(toolkits: unknown, id?: number): Promise<Too
   };
   let records = await load();
   if (!records.length) {
-    const refreshed = await refreshCatalog({path: projectRoot});
+    const [refreshed] = await runTools(
+      [{ id: 1793210509222, name: "refresh-world-database", type: "tool", settings: { path: projectRoot } }],
+      step => refreshCatalog(step.settings),
+    );
     if (refreshed.status !== "complete") throw new Error(refreshed.error || "Catalog refresh failed.");
     records = await load();
     // Explicitly supplied toolkits outside this world's source registration remain supported.
@@ -453,7 +456,8 @@ export const run = async (
       [
         {
           type: "tool" as const,
-          name: "execute-tool",
+          id: registration?.id,
+          name: registration?.name ?? "execute-tool",
           settings: executionSettings,
         },
       ],
@@ -475,6 +479,7 @@ export const run = async (
   return [...loading, ...execution];
 };
 
+/** Raw executor for runnerWorldTooling only; application entry points use run. */
 export async function executeToolById(id: number, settings: Record<string, unknown>, toolkits: {path: string}[]): Promise<ToolReturn> {
   const records = await indexedRegistrations(toolkits, id);
   const record = records.find(record => record.id === id);

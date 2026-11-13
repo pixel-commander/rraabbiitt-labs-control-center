@@ -254,3 +254,5 @@ Vertical position
 panY defaults to 0. Use a negative value to move up and a positive value to
 move down. Set it directly or through settings.view.panY. A direct prop takes
 priority. The runtime view command also accepts panY.
+
+Runtime circuits overrides also accept coreColor and glowColor (hex strings) for independent arc core and halo colors. Omitted colors retain the existing circuit tint; circuits(null) clears the overrides.

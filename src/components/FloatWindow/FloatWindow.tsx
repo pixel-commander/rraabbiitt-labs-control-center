@@ -2,13 +2,14 @@ import { useRef } from "react";
 import type { FloatWindowProps } from "./FloatWindow.types";
 import { useWindowGesture } from "../../hooks/useWindowGesture/useWindowGesture";
 import "./css/float-window.css";
+import "../../atoms/containers/container-dropdown/container-dropdown.css";
 export const FloatWindow = (props: FloatWindowProps) => {
   const {
     rect,
     title = "Preview",
     children,
     className = "",
-    container_class = "container-main",
+    container_class = "container-dropdown",
     header_class = "container-neg",
     open = true,
     canDrag = true,

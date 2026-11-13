@@ -19,6 +19,24 @@
       "path": "../FloatWindow/FloatWindow",
       "type": "import",
       "file": "McpViewer.tsx"
+    },
+    {
+      "name": "../UiElements/StatusLabel/StatusLabel",
+      "path": "../UiElements/StatusLabel/StatusLabel",
+      "type": "import",
+      "file": "McpViewer.tsx"
+    },
+    {
+      "name": "../UiElements/PageHeader/PageHeader",
+      "path": "../UiElements/PageHeader/PageHeader",
+      "type": "import",
+      "file": "McpViewer.tsx"
+    },
+    {
+      "name": "../ToggleSection/ToggleSection",
+      "path": "../ToggleSection/ToggleSection",
+      "type": "import",
+      "file": "McpViewer.tsx"
     }
   ]
 }

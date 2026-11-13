@@ -47,4 +47,10 @@ export async function newReactDashboard(
     "pages",
   ]);
 }
-export const run = newReactDashboard;
+export const run = async (settings: NewReactDashboardProps) => {
+  try {
+    return { return_type: "scaffold", status: "complete", settings, response: await newReactDashboard(settings) };
+  } catch (error) {
+    return { return_type: "scaffold", status: "error", settings, error: error instanceof Error ? error.message : String(error) };
+  }
+};

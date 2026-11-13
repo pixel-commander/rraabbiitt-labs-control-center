@@ -1,0 +1,17 @@
+@layer components {
+  .status-icon-control { display: inline-flex; }
+  .status-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: var(--space-sm) var(--space-md);
+    white-space: nowrap;
+  }
+  .status-icon .icon-button-icon { order: -1; display: inline-flex; }
+  .status-icon .status-icon-indicator { display: inline-flex; }
+  .status-icon .status-label-label { display: none; }
+  .status-icon--busy .status-label-dot { animation: icon-settings-pulse 1.8s ease-in-out infinite; }
+  @media (prefers-reduced-motion: reduce) {
+    .status-icon--busy .status-label-dot { animation: none; }
+  }
+}

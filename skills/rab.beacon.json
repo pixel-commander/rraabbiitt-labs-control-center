@@ -5,12 +5,6 @@
   "description": "Discover source metadata within this project's skills folder.",
   "type": "beacon",
   "tags": [],
-  "paths": [
-    {
-      "name": "skills-sources",
-      "path": ".",
-      "type": "path"
-    }
-  ],
-  "path": "skills"
+  "paths": [],
+  "path": "X:/rraabbiitt-labs-control-center/skills"
 }

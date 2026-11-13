@@ -11,3 +11,4 @@ const { start } = await import(
 );
 process.chdir(world.path);
 await start();
+                        

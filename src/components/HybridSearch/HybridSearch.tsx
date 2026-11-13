@@ -1,4 +1,3 @@
-import { RabbitHead } from "../RabbitHead/RabbitHead";
 import { SearchMessageBox } from "./SearchMessageBox/SearchMessageBox";
 import { Fragment } from "react";
 import { SearchResponseBubble } from "./SearchResponseBubble/SearchResponseBubble";
@@ -34,9 +33,6 @@ export const HybridSearch = (props: HybridSearchProps) => {
       data-grid="header-main"
       data-gap="section"
     >
-      {!isDumbot && <div className="world-search-background" aria-hidden="true">
-        <RabbitHead transparentBg interactive={false} followMouse autoMotion={false} wheelZoom={false} zoom={2} panX={0.75} panY={-0.45} />
-      </div>}
       <div data-area="header">
         <PageHeader
           className="world-search-heading"
@@ -60,9 +56,7 @@ export const HybridSearch = (props: HybridSearchProps) => {
         className="world-search-columns"
       >
         {isDumbot ? (
-          <aside data-area="left" className="dum-bot-placeholder" aria-label="DumBot placeholder" data-cols="1" data-rows="1">
-            <RabbitHead transparentBg interactive={false} followMouse autoMotion={false} wheelZoom={false} zoom={1.25} panX={0} panY={0.1} />
-          </aside>
+          <div data-area="left" className="dum-bot-placeholder" aria-hidden="true" />
         ) : (<aside
           data-area="left"
           className="container-main world-search-panel world-search-models pad-xs"

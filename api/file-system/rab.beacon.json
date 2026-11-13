@@ -7,26 +7,26 @@
   "tags": [],
   "paths": [
     {
+      "id": 1794415784086,
+      "name": "list-files",
+      "type": "api",
+      "tags": [],
+      "path": "X:/rraabbiitt-labs-control-center/api/file-system/list-files"
+    },
+    {
       "id": 1794415784083,
       "name": "read-file",
-      "type": "settings",
-      "path": "read-file",
-      "file": "rab.settings.json"
+      "type": "api",
+      "tags": [],
+      "path": "X:/rraabbiitt-labs-control-center/api/file-system/read-file"
     },
     {
       "id": 1794415784085,
       "name": "save-file",
-      "type": "settings",
-      "path": "save-file",
-      "file": "rab.settings.json"
-    },
-    {
-      "id": 1794415784086,
-      "name": "list-files",
-      "type": "settings",
-      "path": "list-files",
-      "file": "rab.settings.json"
+      "type": "api",
+      "tags": [],
+      "path": "X:/rraabbiitt-labs-control-center/api/file-system/save-file"
     }
   ],
-  "path": "api/file-system"
+  "path": "X:/rraabbiitt-labs-control-center/api/file-system"
 }

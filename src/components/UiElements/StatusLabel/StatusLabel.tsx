@@ -9,7 +9,7 @@ export const StatusLabel = (props: StatusLabelProps) => {
     className = "",
   } = props;
   return (
-    <div
+    <span
       className={[
         "status-label",
         !status_color ? `status-${status}` : "",
@@ -31,6 +31,6 @@ export const StatusLabel = (props: StatusLabelProps) => {
       >
         {label}
       </span>
-    </div>
+    </span>
   );
 };

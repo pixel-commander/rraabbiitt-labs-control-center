@@ -1,6 +1,7 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { runTools } from "./run-tools.ts";
 
 const isInputObject = (value) =>
   value !== null && typeof value === "object" && !Array.isArray(value);
@@ -33,14 +34,22 @@ const parseInput = async (args) => {
   return input;
 };
 
-/** Run a tool's direct function as a CLI and print its domain return unchanged. */
+/** Submit direct CLI invocations to the existing runner, retaining the CLI response shape. */
 export async function runToolCli(url, execute) {
   if (!process.argv[1] || path.resolve(process.argv[1]) !== fileURLToPath(url))
     return;
 
   try {
     const settings = await parseInput(process.argv.slice(2));
-    const response = await execute(settings);
+    const folder = path.dirname(fileURLToPath(url));
+    const registration = JSON.parse(await readFile(path.join(folder, "rab.settings.json"), "utf8"));
+    if (registration.type !== "tool" || !Number.isSafeInteger(registration.id))
+      throw new Error("Direct tool CLI requires a registered numeric tool ID.");
+    const results = await runTools(
+      [{ id: registration.id, name: registration.name, type: "tool", settings }],
+      step => execute(step.settings),
+    );
+    const response = results.at(-1);
     process.stdout.write(`${JSON.stringify(response ?? null, null, 2)}\n`);
     if (response?.status === "error") process.exitCode = 1;
   } catch (error) {

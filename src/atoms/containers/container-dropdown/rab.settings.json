@@ -1,0 +1,13 @@
+{
+  "id": 1794537900544,
+  "name": "container-dropdown",
+  "title": "container-dropdown",
+  "description": "Translucent gradient dropdown surface with backdrop blur and a subtle border.",
+  "type": "containers",
+  "tags": [
+    "react",
+    "containers"
+  ],
+  "file": "container-dropdown.css",
+  "path": "src/atoms/containers/container-dropdown"
+}

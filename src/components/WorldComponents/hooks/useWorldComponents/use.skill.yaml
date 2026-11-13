@@ -1,0 +1,9 @@
+schema: 1
+intent: use
+id: 1794536548615
+name: useWorldComponents
+owner:
+  id: 1794536548613
+implementation:
+  - id: 1794536548613
+instructions: Generated starter; update with the implemented contract before use.

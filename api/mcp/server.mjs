@@ -1,4 +1,6 @@
 import { handleFavorites } from "../favorites/favorites.mjs";
+import { readUsage } from "../tool-usage/endpoint.mjs";
+import { createWorldRefreshHandler } from "../world-refresh.mjs";
 import { stopSearchWorkers } from "../../toolkit/hybrid-seat-ranking/tools/search-worker.ts";
 import { createServer } from "node:http";
 import { loadWorld } from "../../scripts/world.mjs";
@@ -49,6 +51,7 @@ export async function createRequestHandler() {
 }
 
 async function buildRequestHandler(world) {
+  const refreshWorldHandler = createWorldRefreshHandler(world);
   const { host, port } = world.mcp;
   if (
     host !== "127.0.0.1" ||
@@ -84,6 +87,7 @@ async function buildRequestHandler(world) {
     }
   }
   const connections = new Set();
+  const activity = [];
   const send = (res, status, value) => {
     res.writeHead(status, { "Content-Type": "application/json" });
     res.end(JSON.stringify(value));
@@ -103,6 +107,7 @@ async function buildRequestHandler(world) {
       }
     }
     const pathname = new URL(req.url, `http://${host}:${port}`).pathname;
+    if (pathname === "/api/world/refresh") return refreshWorldHandler(req, res);
     if (pathname === "/api/search-records" || pathname.startsWith("/api/search-records/")) {
       await handleSearchRecords(world, req, res, new URL(req.url, `http://${host}:${port}`));
       return;
@@ -113,6 +118,11 @@ async function buildRequestHandler(world) {
     }
     if (pathname.startsWith("/api/messages/")) {
       await handleMessages(world, req, res, new URL(req.url, `http://${host}:${port}`));
+      return;
+    }
+    if (pathname === "/api/tool-usage" && req.method === "GET") {
+      const result = await readUsage(world);
+      send(res, result.code, result.body);
       return;
     }
     if (pathname === "/api/tool-usage" && usage) {
@@ -145,6 +155,7 @@ async function buildRequestHandler(world) {
         status: "ok",
         name: world.name,
         transport: "streamable-http",
+        activity: [...activity].reverse(),
       });
       return;
     }
@@ -158,6 +169,7 @@ async function buildRequestHandler(world) {
       return;
     }
     // Each request owns its server and transport, including concurrent clients.
+    let requestEvent;
     const server = new McpServer({
       name: world.name,
       title: world.title,
@@ -177,7 +189,15 @@ async function buildRequestHandler(world) {
         },
       },
       async (input) => {
-        const result = await run({ ...input, toolkits: world.toolkits });
+        const result = await run({ ...input, toolkits: world.toolkits }, {
+          update: steps => {
+            if (requestEvent) requestEvent.runs = steps.map(step => ({
+              id: step.id, name: step.name, status: step.status,
+              date_start: step.date_start, date_end: step.date_end,
+              error: step.error,
+            }));
+          },
+        });
         return {
           content: [{ type: "text", text: JSON.stringify(result) }],
           isError: result.some((step) => step.status === "error"),
@@ -195,7 +215,32 @@ async function buildRequestHandler(world) {
     });
     try {
       await server.connect(transport);
-      await transport.handleRequest(req, res);
+      const chunks = [];
+      let size = 0;
+      for await (const chunk of req) {
+        size += chunk.length;
+        if (size > 1024 * 1024) {
+          send(res, 413, { error: "MCP request exceeds 1 MB." });
+          return;
+        }
+        chunks.push(chunk);
+      }
+      let body;
+      try { body = JSON.parse(Buffer.concat(chunks).toString("utf8")); }
+      catch { send(res, 400, { error: "Supply valid JSON." }); return; }
+      const event = {
+        time: new Date().toISOString(),
+        method: typeof body.method === "string" ? body.method : "unknown",
+        client: String(body.params?.clientInfo?.name ?? req.headers["x-mcp-client-name"] ?? "Unidentified client").slice(0, 120),
+        tool: body.method === "tools/call" ? String(body.params?.name ?? "") : undefined,
+        toolId: body.method === "tools/call" ? body.params?.arguments?.id : undefined,
+        status: "received",
+      };
+      activity.push(event);
+      requestEvent = event;
+      if (activity.length > 50) activity.shift();
+      res.once("finish", () => { event.status = `HTTP ${res.statusCode}`; });
+      await transport.handleRequest(req, res, body);
     } catch (error) {
       console.error("[labs-mcp]", error.message);
       if (!res.headersSent) send(res, 500, { error: "MCP request failed." });

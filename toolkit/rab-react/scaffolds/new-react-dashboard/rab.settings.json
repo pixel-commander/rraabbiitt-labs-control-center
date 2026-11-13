@@ -5,7 +5,7 @@
   "description": "Create a dashboard with a header and main area. The current template includes styles and a hook and supports one layout.",
   "type": "tool",
   "path": "toolkit/rab-react/scaffolds/new-react-dashboard",
-  "file": "new-react-dashboard",
+  "file": "new-react-dashboard.ts",
   "parent": 1791518327955,
   "tags": [
     "rab-react",

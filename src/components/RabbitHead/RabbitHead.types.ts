@@ -36,6 +36,8 @@ export interface RabbitDustSettings {
 }
 
 export interface RabbitCircuitsSettings {
+  coreColor?: RabbitHeadColor;
+  glowColor?: RabbitHeadColor;
   on?: boolean;
   density?: number;
   count?: number;
@@ -154,6 +156,8 @@ export interface RabbitHeadRendererProps {
   autoCircuits?: boolean;
   circuitRate?: number;
   circuitGlow?: number;
+  circuitCoreColor?: RabbitHeadColor;
+  circuitGlowColor?: RabbitHeadColor;
   circuitJumps?: number;
   circuitHold?: number;
   circuitDir?: number;

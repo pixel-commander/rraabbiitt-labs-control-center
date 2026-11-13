@@ -13,7 +13,7 @@ implementation: []
 context: []
 inputs: {}
 outputs: {}
-instructions: 'Props: optional mode (hybrid by default or dumbot), HouseKeys and className. DumBot mode ranks DB-pairs and slots, hides grading and lets users select a result to fill requirements. Saves submitted user text before hybrid search with its message ID.
+instructions: 'Props: optional mode (hybrid by default or dumbot), HouseKeys and className. Optional rabbitEffects is a parent-owned ref populated by the background head handleReady callback; the existing query handleChange enables seven circuit arcs while text changes and clears the override one second after typing stops or on unmount. DumBot mode ranks DB-pairs and slots, hides grading and lets users select a result to fill requirements. Saves submitted user text before hybrid search with its message ID.
   handleChange(key,value) changes a feature field; handleSubmit(text,type,bag) saves and searches;
   handleClick(data,action) saves an explicit whole-result vote then refreshes ranking, or selects a
   result for user-entered rephrasing. In rephrase mode submission saves a new message and a positive

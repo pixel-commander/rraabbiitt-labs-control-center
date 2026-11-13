@@ -1,0 +1,6 @@
+@layer components {
+  .rescan-world-status-window { font: var(--type-code); font-size: 0.6875rem; }
+  .rescan-world-status-window-panel { inline-size: min(20rem, 75vw); }
+  .rescan-world-status-window-panel p { margin-block: 0 var(--space-sm); overflow-wrap: anywhere; }
+  .rescan-world-status-window-panel pre { font: inherit; white-space: pre-wrap; overflow-wrap: anywhere; }
+}

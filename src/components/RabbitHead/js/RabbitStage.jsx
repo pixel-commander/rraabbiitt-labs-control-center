@@ -1355,6 +1355,8 @@ export class RabbitStage extends Component {
       auto: fx.auto ?? (this.props.autoCircuits ?? false),          // ambient traces on random verts
       rate: fx.rate ?? (this.props.circuitRate ?? 10),              // ambient sparks (concurrent)
       glow: fx.glow ?? (this.props.circuitGlow ?? 0.4),             // halo strength
+      coreColor: fx.coreColor ?? (this.props.useMono ? this.props.monoColor : this.props.circuitCoreColor),
+      glowColor: fx.glowColor ?? (this.props.useMono ? this.props.monoColor : this.props.circuitGlowColor),
       jumps: fx.jumps ?? (this.props.circuitJumps ?? 4),             // mesh points per bolt
       hold: fx.hold ?? (this.props.circuitHold ?? 0.4),              // 0 = never lingers, 1 = long crackle-in-place
       dir: fx.dir ?? (this.props.circuitDir ?? 0),                   // travel direction, degrees: 0=up, 90=right, 180=down, -90=left
@@ -1438,8 +1440,10 @@ export class RabbitStage extends Component {
     }
     pts2.push([x2, y2]);
     const GLW = cfg.glow;
+    const coreColor = cfg.coreColor ? this.hexRgb(cfg.coreColor) : this.tint(this.circuitColor(), 0.5);
+    const glowColor = cfg.glowColor ? this.hexRgb(cfg.glowColor) : coreColor;
       for (const [wd, alpha] of [[5 * (0.4 + GLW * 1.6), al * 0.16 * (0.5 + GLW)], [1.8 + GLW * 1.6, al * 0.35 * (0.6 + GLW * 0.8)], [0.6, al]]) {
-      ctx.strokeStyle = `rgba(${this.rgbStr(this.tint(this.circuitColor(), 0.5))},${alpha.toFixed(2)})`;
+      ctx.strokeStyle = `rgba(${this.rgbStr(wd === 0.6 ? coreColor : glowColor)},${alpha.toFixed(2)})`;
       ctx.lineWidth = wd;
       ctx.beginPath();
       ctx.moveTo(pts2[0][0], pts2[0][1]);
@@ -1450,7 +1454,7 @@ export class RabbitStage extends Component {
     if (rnd(seed + 9) > 0.55) {
       const mp = pts2[Math.floor(pts2.length / 2)];
       const fs = rnd(seed + 10) < 0.5 ? 1 : -1;
-      ctx.strokeStyle = `rgba(${this.rgbStr(this.tint(this.circuitColor(), 0.5))},${(al * 0.6).toFixed(2)})`;
+      ctx.strokeStyle = `rgba(${this.rgbStr(coreColor)},${(al * 0.6).toFixed(2)})`;
       ctx.lineWidth = 0.5;
       ctx.beginPath();
       ctx.moveTo(mp[0], mp[1]);
@@ -1458,7 +1462,7 @@ export class RabbitStage extends Component {
       ctx.stroke();
     }
     // endpoint nodes
-    ctx.fillStyle = `rgba(${this.rgbStr(this.tint(this.circuitColor(), 0.85))},${Math.min(1, al * 1.5).toFixed(2)})`;
+    ctx.fillStyle = `rgba(${this.rgbStr(cfg.coreColor ? coreColor : this.tint(this.circuitColor(), 0.85))},${Math.min(1, al * 1.5).toFixed(2)})`;
     ctx.fillRect(x1 - 1, y1 - 1, 2, 2);
     ctx.fillRect(x2 - 1, y2 - 1, 2, 2);
   }
@@ -1814,7 +1818,7 @@ export class RabbitStage extends Component {
       hops: 0,
       maxHops: opts.hops ?? cfg.hops,
       lastGrow: 0,
-      color: opts.color || '77,255,136'
+      color: opts.color || null
     });
     if (this.faceBolts.length > 4) this.faceBolts.shift();
   }

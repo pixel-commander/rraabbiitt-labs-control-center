@@ -5,7 +5,7 @@
   "description": "Create a child component in its parent. It includes a type file and styles. Add an optional grid and CSS class.",
   "type": "tool",
   "path": "toolkit/rab-react/scaffolds/new-react-subcomponent",
-  "file": "new-react-subcomponent",
+  "file": "new-react-subcomponent.ts",
   "parent": 1791518327955,
   "tags": [
     "rab-react",

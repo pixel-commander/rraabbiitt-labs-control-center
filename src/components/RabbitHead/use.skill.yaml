@@ -18,6 +18,9 @@ instructions: >-
   placement and size. Set transparentBg to true for a transparent background.
   Set interactive to false for a page background or decorative icon.
 
+  Arc core and halo colors accept circuitCoreColor and circuitGlowColor props,
+  or settings.circuits.coreColor and glowColor. Monochrome uses monoColor for both.
+  The handleReady effects object accepts circuits overrides with optional coreColor and glowColor hex strings for arc cores and halos. circuits(null) clears these overrides.
   Control the head with the typed settings prop. It accepts partial groups:
   pulses, sparkles, dust, circuits, lightning, flood, hover, colors, surface,
   and view. Omitted fields use the renderer defaults. Keep numeric values within

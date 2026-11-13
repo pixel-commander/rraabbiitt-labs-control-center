@@ -1,6 +1,8 @@
 new-react-dashboard
 
 TypeScript entry: new-react-dashboard.ts
+The registered run export returns the standard scaffold ToolReturn envelope.
+The direct newReactDashboard function returns the generated record.
 Props are one object, as declared in rab.settings.json:
 - name (string) required: Dashboard page name in any text style. The scaffold normalizes it to a safe PascalCase identifier for the output folder, source/types files and saved record. Empty or punctuation-only names become Item; leading digits are prefixed with N.
 - path (string) required: Destination parent folder.

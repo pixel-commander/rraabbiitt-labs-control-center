@@ -44,6 +44,14 @@ import type { HybridSearchProps } from "../../HybridSearch.types";
 export const useHybridSearch = (props: HybridSearchProps = {}) => {
   const isDumbot = props.mode === "dumbot";
   const contract = useRef<SearchResult["contract"]>(undefined);
+  const typingArcTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  useEffect(() => {
+    const effects = props.rabbitEffects;
+    return () => {
+      if (typingArcTimer.current !== null) clearTimeout(typingArcTimer.current);
+      effects?.current?.circuits(null);
+    };
+  }, [props.rabbitEffects]);
   const [searchState, setState] = useState({
     model: isDumbot ? "DumBot" : "Qwen3-Coder 30B",
     submitted: "",
@@ -315,6 +323,15 @@ export const useHybridSearch = (props: HybridSearchProps = {}) => {
     value: (typeof state)[K],
   ) => {
     if (key === "query") {
+      if (value !== provider.message && props.rabbitEffects?.current) {
+        const effects = props.rabbitEffects.current;
+        effects.circuits({ on: true, auto: true, rate: 7, opacity: 0.3, glow: 0.35, jumps: 6, coreColor: "#ffffff", glowColor: "#2684ff" });
+        if (typingArcTimer.current !== null) clearTimeout(typingArcTimer.current);
+        typingArcTimer.current = setTimeout(() => {
+          effects.circuits(null);
+          typingArcTimer.current = null;
+        }, 1000);
+      }
       draft.current = value as string;
       provider.handleChange(value as string);
       return;

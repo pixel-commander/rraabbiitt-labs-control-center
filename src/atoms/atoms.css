@@ -22,6 +22,7 @@
 @import "./effects/effect-inset/effect-inset.css";
 
 @import "./containers/container-outline/container-outline.css";
+@import "./containers/container-dropdown/container-dropdown.css";
 @import "./containers/container-alt/container-alt.css";
 @import "./containers/container-side-rail/container-side-rail.css";
 @import "./actions/action-filled/action-filled.css";
@@ -45,7 +46,7 @@
     border-top: 1px solid var(--border-subtle);
     color: var(--color-muted);
   }
-  .mcp-viewer {
+  .mcp-viewer, .status-icon {
     --action-light-border: 1px solid var(--border-subtle);
     font: var(--type-code);
   }

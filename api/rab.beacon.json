@@ -7,54 +7,86 @@
   "tags": [],
   "paths": [
     {
-      "id": 1794415784096,
-      "name": "file-system",
-      "type": "beacon",
-      "path": "file-system",
-      "file": "rab.beacon.json"
+      "id": 1794444448187,
+      "name": "favorites",
+      "type": "api",
+      "tags": [
+        "rab-world-v2",
+        "scaffold"
+      ],
+      "path": "X:/rraabbiitt-labs-control-center/api/favorites",
+      "file": "favorites.mjs"
+    },
+    {
+      "id": 1794415784086,
+      "name": "list-files",
+      "type": "api",
+      "tags": [],
+      "path": "X:/rraabbiitt-labs-control-center/api/file-system/list-files"
+    },
+    {
+      "id": 1794415784083,
+      "name": "read-file",
+      "type": "api",
+      "tags": [],
+      "path": "X:/rraabbiitt-labs-control-center/api/file-system/read-file"
+    },
+    {
+      "id": 1794415784085,
+      "name": "save-file",
+      "type": "api",
+      "tags": [],
+      "path": "X:/rraabbiitt-labs-control-center/api/file-system/save-file"
     },
     {
       "id": 1794415784075,
       "name": "hybrid-search",
-      "type": "settings",
-      "path": "hybrid-search",
-      "file": "rab.settings.json"
+      "type": "api",
+      "tags": [],
+      "path": "X:/rraabbiitt-labs-control-center/api/hybrid-search"
+    },
+    {
+      "id": 1794413738402,
+      "name": "portable-search-dashboard-mcp",
+      "type": "mcp-server",
+      "path": "X:/rraabbiitt-labs-control-center/api/mcp",
+      "file": "server.mjs"
     },
     {
       "id": 1794415784077,
       "name": "messages",
-      "type": "settings",
-      "path": "messages",
-      "file": "rab.settings.json"
+      "type": "api",
+      "tags": [],
+      "path": "X:/rraabbiitt-labs-control-center/api/messages",
+      "file": "messages.mjs"
     },
     {
       "id": 1794415784082,
       "name": "records",
-      "type": "settings",
-      "path": "records",
-      "file": "rab.settings.json"
+      "type": "api",
+      "tags": [],
+      "path": "X:/rraabbiitt-labs-control-center/api/records"
     },
     {
-      "id": 1794413738402,
-      "name": "mcp",
-      "type": "settings",
-      "path": "mcp",
-      "file": "rab.settings.json"
+      "id": 1794418952090,
+      "name": "search-records",
+      "type": "api",
+      "tags": [
+        "search",
+        "hybrid",
+        "feedback"
+      ],
+      "path": "X:/rraabbiitt-labs-control-center/api/search-records",
+      "file": "search-records.mjs"
     },
     {
       "id": 1794415784087,
       "name": "tool-usage",
-      "type": "settings",
-      "path": "tool-usage",
-      "file": "rab.settings.json"
-    },
-    {
-      "id": 1794444448187,
-      "name": "favorites",
-      "type": "settings",
-      "path": "favorites",
-      "file": "rab.settings.json"
+      "type": "api",
+      "tags": [],
+      "path": "X:/rraabbiitt-labs-control-center/api/tool-usage",
+      "file": "endpoint.mjs"
     }
   ],
-  "path": "api"
+  "path": "X:/rraabbiitt-labs-control-center/api"
 }

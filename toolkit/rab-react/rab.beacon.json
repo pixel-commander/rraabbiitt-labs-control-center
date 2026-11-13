@@ -11,10 +11,197 @@
   ],
   "paths": [
     {
-      "name": "local-sources",
-      "path": ".",
-      "type": "path"
+      "id": 1793143585570,
+      "name": "react runners folder",
+      "type": "path",
+      "tags": [
+        "react",
+        "runners"
+      ],
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/runners"
+    },
+    {
+      "id": 1793138966750,
+      "name": "runner-new-atom",
+      "type": "runner",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/runners/runner-new-atom",
+      "file": "runner-new-atom.ts"
+    },
+    {
+      "id": 1793138966741,
+      "name": "runner-new-component",
+      "type": "runner",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/runners/runner-new-component",
+      "file": "runner-new-component.ts"
+    },
+    {
+      "id": 1793138966759,
+      "name": "runner-new-dashboard",
+      "type": "runner",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/runners/runner-new-dashboard",
+      "file": "runner-new-dashboard.ts"
+    },
+    {
+      "id": 1793138966755,
+      "name": "runner-new-page",
+      "type": "runner",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/runners/runner-new-page",
+      "file": "runner-new-page.ts"
+    },
+    {
+      "id": 1793138966734,
+      "name": "runner-new-react-project-kit",
+      "type": "runner",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/runners/runner-new-react-project-kit",
+      "file": "runner-new-react-project-kit.ts"
+    },
+    {
+      "id": 1793138966746,
+      "name": "runner-new-subcomponent",
+      "type": "runner",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/runners/runner-new-subcomponent",
+      "file": "runner-new-subcomponent.ts"
+    },
+    {
+      "id": 1794366620615,
+      "name": "runner-render-factory-composition",
+      "type": "runner",
+      "tags": [
+        "react",
+        "factory",
+        "composition",
+        "component",
+        "runner"
+      ],
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/runners/runner-render-factory-composition",
+      "file": "runner-render-factory-composition.ts"
+    },
+    {
+      "id": 1790031603507,
+      "name": "new-action-atom",
+      "type": "tool",
+      "tags": [
+        "rab-react",
+        "scaffold"
+      ],
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-action-atom",
+      "file": "new-action-atom"
+    },
+    {
+      "id": 1790031603502,
+      "name": "new-container-atom",
+      "type": "tool",
+      "tags": [
+        "rab-react",
+        "scaffold"
+      ],
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-container-atom",
+      "file": "new-container-atom"
+    },
+    {
+      "id": 1790031603525,
+      "name": "new-effect-atom",
+      "type": "tool",
+      "tags": [
+        "rab-react",
+        "scaffold"
+      ],
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-effect-atom",
+      "file": "new-effect-atom"
+    },
+    {
+      "id": 1790031603528,
+      "name": "new-grid-atom",
+      "type": "tool",
+      "tags": [
+        "rab-react",
+        "scaffold"
+      ],
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-grid-atom",
+      "file": "new-grid-atom"
+    },
+    {
+      "id": 1790000000401,
+      "name": "new-react-component",
+      "type": "tool",
+      "tags": [
+        "rab-react",
+        "scaffold"
+      ],
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-react-component",
+      "file": "new-react-component.ts"
+    },
+    {
+      "id": 1830000000006,
+      "name": "new-react-dashboard",
+      "type": "tool",
+      "tags": [
+        "rab-react",
+        "scaffold"
+      ],
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-react-dashboard",
+      "file": "new-react-dashboard.ts"
+    },
+    {
+      "id": 1789877167204,
+      "name": "new-react-navigation",
+      "type": "tool",
+      "tags": [
+        "rab-react",
+        "scaffold"
+      ],
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-react-navigation",
+      "file": "new-react-navigation"
+    },
+    {
+      "id": 1830000000001,
+      "name": "new-react-page",
+      "type": "tool",
+      "tags": [
+        "rab-react",
+        "scaffold"
+      ],
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-react-page",
+      "file": "new-react-page"
+    },
+    {
+      "id": 1790000000300,
+      "name": "new-react-project",
+      "type": "tool",
+      "tags": [
+        "rab-react",
+        "scaffold"
+      ],
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-react-project",
+      "file": "new-react-project"
+    },
+    {
+      "id": 1790000000402,
+      "name": "new-react-subcomponent",
+      "type": "tool",
+      "tags": [
+        "rab-react",
+        "scaffold"
+      ],
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-react-subcomponent",
+      "file": "new-react-subcomponent.ts"
+    },
+    {
+      "id": 1793143585577,
+      "name": "scaffolds folder",
+      "type": "path",
+      "tags": [
+        "scaffolds"
+      ],
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds"
+    },
+    {
+      "id": 1794005588365,
+      "name": "generate-dependencies.manifest-json",
+      "type": "tool",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/tools/generate-dependencies.manifest-json",
+      "file": "generate-dependencies.manifest-json.ts"
     }
   ],
-  "path": "toolkit/rab-react"
+  "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react"
 }

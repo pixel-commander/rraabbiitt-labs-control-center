@@ -208,12 +208,13 @@
     isolation: isolate;
     background: transparent;
   }
-  .world-search-background {
-    grid-column: 1 / -1;
-    grid-row: 1 / -1;
-    min-inline-size: 0;
-    min-block-size: 0;
-    overflow: hidden;
+  .site-main {
+    position: relative;
+    isolation: isolate;
+  }
+  .page-rabbit-background {
+    position: absolute;
+    inset: 0;
     pointer-events: none;
     z-index: -1;
   }

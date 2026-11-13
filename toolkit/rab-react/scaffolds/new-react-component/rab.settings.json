@@ -5,7 +5,7 @@
   "description": "Create a React component with types, styles, a hook, a demo, and settings. The tool accepts optional grid and class values.",
   "type": "tool",
   "path": "toolkit/rab-react/scaffolds/new-react-component",
-  "file": "new-react-component",
+  "file": "new-react-component.ts",
   "parent": 1791518327955,
   "tags": [
     "rab-react",

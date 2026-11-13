@@ -102,4 +102,10 @@ export async function newReactComponent(
     "demo",
   ]);
 }
-export const run = newReactComponent;
+export const run = async (settings: NewReactComponentProps) => {
+  try {
+    return { return_type: "scaffold", status: "complete", settings, response: await newReactComponent(settings) };
+  } catch (error) {
+    return { return_type: "scaffold", status: "error", settings, error: error instanceof Error ? error.message : String(error) };
+  }
+};

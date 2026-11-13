@@ -63,4 +63,10 @@ export async function newReactSubcomponent(
   Object.assign(saved, { file: `${input.name}.tsx` });
   return publish(input.path, input.name, saved, files, ["css"]);
 }
-export const run = newReactSubcomponent;
+export const run = async (settings: NewReactSubcomponentProps) => {
+  try {
+    return { return_type: "scaffold", status: "complete", settings, response: await newReactSubcomponent(settings) };
+  } catch (error) {
+    return { return_type: "scaffold", status: "error", settings, error: error instanceof Error ? error.message : String(error) };
+  }
+};

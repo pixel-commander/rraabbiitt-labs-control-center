@@ -1,0 +1,13 @@
+{
+  "id": 1794606382387,
+  "name": "WorldCodeViewPopupLink",
+  "title": "WorldCodeViewPopupLink",
+  "description": "",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "WorldCodeViewPopupLink.tsx",
+  "path": "src/components/WorldComponents/WorldCodeViewPopupLink"
+}

@@ -1,4 +1,12 @@
 @layer components {
-  .runner-content { display: grid; gap: var(--space-xs); min-inline-size: 0; overflow-wrap: anywhere; }
+  .runner-content { gap: var(--space-md); min-inline-size: 0; overflow-wrap: anywhere; }
+  .runner-content__info { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-sm); padding: var(--space-md); border: 1px solid var(--border-subtle); border-radius: var(--radius-control); }
+  .runner-content__label { color: var(--color-muted); font: var(--type-code); }
+  .runner-content__name { color: var(--color-primary); }
+  .runner-content__stats, .runner-content__summary { margin: 0; inline-size: 100%; }
+  .runner-content__stats > div, .runner-content__summary > div { display: flex; justify-content: space-between; gap: var(--space-md); padding-block: var(--space-xs); }
+  .runner-content dt { color: var(--color-muted); }
+  .runner-content dd { margin: 0; font: var(--type-code); }
+  .runner-content__paths { padding: var(--space-md); max-block-size: 24rem; border-inline-start: 1px solid var(--border-subtle); }
 }
 

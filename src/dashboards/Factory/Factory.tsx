@@ -6,6 +6,7 @@ import { ComponentFactory } from "./components/ComponentFactory/ComponentFactory
 import type { FactoryProps } from "./Factory.types";
 import { SavePopup } from "./components/SavePopup/SavePopup";
 import { useFactory } from "./hooks/useFactory/useFactory";
+import { useDatabaseComposition } from "./hooks/useDatabaseComposition";
 import "./css/factory.css";
 
 const items = [
@@ -14,10 +15,11 @@ const items = [
 
 export const Factory = ({ className, ...props }: FactoryProps) => {
   const factory = useFactory(props);
+  const database = useDatabaseComposition();
   const [url, handleURL] = useURL();
   const selected = typeof url.section === "string" && url.section ? url.section : "component-factory";
   useEffect(() => {
-    if (!url.section) handleURL({ section: "component-factory" }, "set-path");
+    if (!url.section && !/^#\d+$/.test(window.location.hash)) handleURL({ section: "component-factory" }, "set-path");
   }, [url.section, handleURL]);
   className = ["factory", className].filter(Boolean).join(" ");
 
@@ -29,15 +31,17 @@ export const Factory = ({ className, ...props }: FactoryProps) => {
             items={items}
             selected={selected}
             styler="main"
-            handleClick={(item) => { if (item) handleURL({ section: item.path }, "set-path"); }}
+            handleClick={(item) => { if (item && item.path !== selected) handleURL({ section: item.path }, "set-path"); }}
           />
+          {database.loading && <p role="status">Loading composition {database.id}…</p>}
+          {database.error && <p role="alert">{database.error}</p>}
           {!factory.draft && factory.error && <p role="alert">{factory.error}</p>}
           {!factory.draft && factory.saved && <p role="status">Saved {factory.saved.file}</p>}
         </div>
       </GridCell>
       <div data-area="main" data-rows="1" data-cols="1">
         {selected === "component-factory" ? (
-          <ComponentFactory {...props} handleSubmit={factory.openSave} />
+          <ComponentFactory {...props} json={database.json ?? props.json} handleSubmit={factory.openSave} />
         ) : <p>Factory view not found.</p>}
       </div>
       {factory.draft && (

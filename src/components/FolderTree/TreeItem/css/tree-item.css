@@ -38,6 +38,12 @@
   }
 }
 
+@layer overrides {
+  .folder-tree__row {
+    text-transform: none;
+  }
+}
+
 @layer components {
   .folder-tree__row.is-selected {
     background: var(--surface-selected);

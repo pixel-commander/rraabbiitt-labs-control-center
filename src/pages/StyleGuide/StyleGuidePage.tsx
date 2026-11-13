@@ -1,4 +1,5 @@
 import { Demo as ContactsDemo } from "../../components/BookKeeping/components/Contacts/demo/Demo";
+import { Demo as FactoryDemo } from "../../dashboards/Factory/components/ComponentFactory/demo/Demo";
 import { Demo as ExpensesDemo } from "../../components/BookKeeping/components/Expenses/demo/Demo";
 import { Demo as BookKeepingDemo } from "../../components/BookKeeping/demo/Demo";
 import { Demo as CalendarDemo } from "../../components/Calendar/demo/Demo";
@@ -324,6 +325,10 @@ export const StyleGuidePage = () => {
       <section id="stylers" data-cols="1" data-gap="content">
         <h2>Stylers</h2>
         <StylersDemo />
+      </section>
+      <section id="factory-json" data-cols="1" data-gap="content">
+        <h2>Factory JSON composition</h2>
+        <FactoryDemo />
       </section>
       <section id="test-component" data-cols="1" data-gap="content">
         <h2>TestComponent</h2>

@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import type { CodeViewPopupLinkProps } from "../../CodeViewPopupLink.types";
 import type { FloatWindowProps } from "../../../FloatWindow/FloatWindow.types";
+import { useKeypress } from "../../../../hooks/useKeypress/useKeypress";
 export const useCodeViewPopupLink = (props: CodeViewPopupLinkProps) => {
   const [state, setState] = useState(() => ({
     open: false,
@@ -55,6 +56,11 @@ export const useCodeViewPopupLink = (props: CodeViewPopupLinkProps) => {
     props.handleCancel?.(undefined, "close", props);
     trigger.current?.focus();
   };
+  useKeypress({ key: "Escape", callback: event => {
+    if (!open || event.defaultPrevented) return;
+    event.preventDefault();
+    close();
+  } });
   const move = (rect?: FloatWindowProps["rect"]) => {
     if (rect) setState((value) => ({ ...value, rect }));
   };

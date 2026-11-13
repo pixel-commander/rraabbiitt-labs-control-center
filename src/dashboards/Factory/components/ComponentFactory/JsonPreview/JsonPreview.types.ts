@@ -1,6 +1,6 @@
-import type { FactoryComposition } from "../ComponentFactory.types";
+import type { FactoryDocument } from "../ComponentFactory.types";
 
 export interface JsonPreviewProps {
-  composition: FactoryComposition;
+  composition: FactoryDocument;
   handleClose: () => void;
 }

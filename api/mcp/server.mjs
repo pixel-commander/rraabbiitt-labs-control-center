@@ -108,6 +108,7 @@ async function buildRequestHandler(world) {
 
     // Domain routes the UI still calls. Each goes through the master runner.
     const domainRoutes = {
+      "/api/file-system/read-file": null,
       "/api/favorites": 1794444448187,
       "/api/messages": null,
       "/api/search-records": null,
@@ -122,6 +123,11 @@ async function buildRequestHandler(world) {
         // For now delegate to the existing handler modules so the UI keeps working.
         // Tracking still happens if they call through use_tool.
         try {
+          if (prefix === "/api/file-system/read-file") {
+            const { handleReadFile } = await import("../file-system/read-file/read-file.mjs");
+            await handleReadFile(world, req, res, new URL(req.url, `http://${host}:${port}`));
+            return;
+          }
           if (prefix === "/api/favorites") {
             const { handleFavorites } = await import("../favorites/favorites.mjs");
             await handleFavorites(world, req, res, new URL(req.url, `http://${host}:${port}`));
@@ -158,7 +164,7 @@ async function buildRequestHandler(world) {
               update: (steps) => {
                 requestEvent.runs = steps.map((step) => ({
                   id: step.id,
-                  name: step.name,
+                  name: step.name, type: step.type, return_type: step.return_type,
                   status: step.status,
                   date_start: step.date_start,
                   date_end: step.date_end,
@@ -224,7 +230,7 @@ async function buildRequestHandler(world) {
             update: (steps) => {
               requestEvent.runs = steps.map((step) => ({
                 id: step.id,
-                name: step.name,
+                name: step.name, type: step.type, return_type: step.return_type,
                 status: step.status,
                 date_start: step.date_start,
                 date_end: step.date_end,
@@ -315,7 +321,7 @@ async function buildRequestHandler(world) {
               if (requestEvent)
                 requestEvent.runs = steps.map((step) => ({
                   id: step.id,
-                  name: step.name,
+                  name: step.name, type: step.type, return_type: step.return_type,
                   status: step.status,
                   date_start: step.date_start,
                   date_end: step.date_end,
@@ -394,3 +400,4 @@ export function start() {
       process.exit(1);
     });
 }
+

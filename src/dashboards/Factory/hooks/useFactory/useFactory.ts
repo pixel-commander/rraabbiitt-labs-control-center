@@ -1,6 +1,6 @@
 import { useState } from "react";
 import type { HandlerKey } from "../../../../HouseKeys.types";
-import type { FactoryComposition } from "../../components/ComponentFactory/ComponentFactory.types";
+import type { FactoryDocument } from "../../components/ComponentFactory/ComponentFactory.types";
 import type { FactoryProps, FactorySaveData, FactorySaveResult, FactoryOverwriteConfirmation } from "../../Factory.types";
 import { compositionCode } from "../../components/ComponentFactory/js/compositionCode";
 
@@ -13,7 +13,7 @@ export const useFactory = (props: FactoryProps) => {
   const [complete, setComplete] = useState(false);
   const [confirmation, setConfirmation] = useState<FactoryOverwriteConfirmation>();
 
-  const openSave = async (composition?: FactoryComposition, _type?: "save", bag?: FactoryProps) => {
+  const openSave = async (composition?: FactoryDocument, _type?: "save", bag?: FactoryProps) => {
     if (!composition || pending) return;
     setPending(true);
     setError(undefined);

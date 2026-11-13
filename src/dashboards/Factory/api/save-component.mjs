@@ -11,7 +11,7 @@ export async function saveComponent(data, toolkitRoot, projectRoot) {
     if (typeof data?.[key] !== "string" || !data[key].trim()) throw Error(`${key} is required.`);
   }
   if (!["component", "subcomponent", "page", "dashboard"].includes(data.type)) throw Error("Unsupported artifact type.");
-  if (!data.composition || !Array.isArray(data.composition.elements)) throw Error("Composition is required.");
+  if (!data.composition || (!data.composition.root && !Array.isArray(data.composition.elements))) throw Error("Composition is required.");
   if (typeof projectRoot !== "string" || !projectRoot.trim()) throw Error("projectRoot is required.");
   projectRoot = resolve(projectRoot);
   const destination = resolve(projectRoot, data.path);

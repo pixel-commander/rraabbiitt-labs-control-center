@@ -18,8 +18,9 @@ showLink=false supports external triggers such as FolderTree.
 rect sets initial geometry; the owner hook handles subsequent move/resize.
 className styles the link, window_class styles FloatWindow, container_class
 styles the editor. Base classes remain composed. Parent CSS and theme tokens
-can override styles. Caller supplies a positioned, bounded parent.
+can override styles. The popup is portaled to document.body and positioned
+against the viewport, independent of the link's parent size. Escape closes it.
 
 Demo: /style-guide/components/code-view-popup-link
-Opens this component's own source through the development file API.
-Caller uses revision-checked saving. No production file backend is included.
+Opens an in-memory code example with saving for the lifetime of the demo.
+No production file backend is included.

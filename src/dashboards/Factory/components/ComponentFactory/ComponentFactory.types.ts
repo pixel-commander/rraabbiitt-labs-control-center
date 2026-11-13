@@ -6,12 +6,73 @@ import type { GridLayout } from "../../../../components/GridAreaSelect/GridAreaS
 import type { TabNavItem } from "../../../../components/TabNav/TabNav.types";
 
 export interface ComponentFactoryProps extends HouseKeys {
+  /** Nested composition JSON (object or serialized JSON). Changes load a new document. */
+  json?: FactoryDocument | FactoryNode | FactoryComposition | string;
   children?: ReactNode;
   theme_tokens?: { [key: string]: string };
   layout_tokens?: { [key: string]: string };
   className?: string;
   handleClick?: HandlerKey<{}, "new" | "open" | "export" | "save", unknown, ComponentFactoryProps>;
-  handleSubmit?: HandlerKey<FactoryComposition, "save", unknown, ComponentFactoryProps>;
+  handleSubmit?: HandlerKey<FactoryDocument, "save", unknown, ComponentFactoryProps>;
+}
+
+export interface FactoryNode {
+  id: number;
+  name: string;
+  tag: FactoryLayoutTag | FactoryHeadline | "button" | "a" | "p" | "strong" | "em" | "small" | "ul" | "ol" | "li";
+  container_class?: string;
+  action_class?: string;
+  effect_class?: string;
+  grid_type?: GridType;
+  grid_area?: string;
+  grid_rows?: number;
+  grid_cols?: number;
+  scroll_x?: boolean;
+  scroll_y?: boolean;
+  padding?: string | number | Partial<Record<PaddingSide, string | number>>;
+  gap?: string | number;
+  css?: import("react").CSSProperties;
+  text?: string;
+  href?: string;
+  disabled?: boolean;
+  /** Optional drawn-grid and action-state controls. */
+  grid_custom?: GridLayout;
+  grid_spans?: FactoryGridLayout["spans"];
+  states?: FactoryElement["states"];
+  children?: FactoryNode[];
+}
+
+/** Private compatibility projection for the existing editor controls; never exported. */
+export interface EditorFactoryNode {
+  id: number;
+  name: string;
+  tag: FactoryNode["tag"];
+  kind?: "area";
+  /** Named grid area, or a stable key for a custom grid cell. */
+  area?: string;
+  container_class?: string;
+  atom_class?: string;
+  effect_class?: string;
+  css?: import("react").CSSProperties;
+  text?: string;
+  href?: string;
+  disabled?: boolean;
+  layout?: FactoryGridLayout;
+  style?: FactorySurfaceStyle & Partial<FactoryElement>;
+  states?: FactoryElement["states"];
+  children?: EditorFactoryNode[];
+}
+
+export interface EditorFactoryDocument extends Omit<FactoryDocument, "root"> { root: EditorFactoryNode }
+
+export interface FactoryDocument extends HouseKeys {
+  /** Database record identity; independent of an artifact scaffold's id. */
+  composition_id?: number;
+  version: 2;
+  root: FactoryNode;
+  colors?: Record<string, string>;
+  /** Canvas-only geometry; never emitted into component markup. */
+  editor?: { frame: FactoryFrame };
 }
 
 export interface SettingsColProps extends HouseKeys {
@@ -61,6 +122,10 @@ export interface FactoryPadding {
 }
 
 export interface FactoryElement extends FactoryPadding {
+  nodeName?: string;
+  nodeTag?: FactoryNode["tag"];
+  css?: import("react").CSSProperties;
+  childArea?: string;
   paint?: FactoryPaint;
   states?: Partial<Record<FactoryActionState, FactoryPaint>>;
   id: number;
@@ -91,6 +156,7 @@ export interface FactoryFrame {
 }
 
 export interface FactorySurfaceStyle extends FactoryPadding {
+  css?: import("react").CSSProperties;
   width?: number;
   height?: number;
   paddingX?: FactorySize | number;
@@ -106,6 +172,7 @@ export interface FactorySurfaceStyle extends FactoryPadding {
 }
 
 export interface FactoryComposition extends HouseKeys {
+  rootTag?: FactoryNode["tag"];
   name?: string;
   colors?: Record<string, string>;
   grid: GridType;

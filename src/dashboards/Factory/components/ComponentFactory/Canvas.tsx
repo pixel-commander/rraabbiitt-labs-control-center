@@ -1,10 +1,9 @@
-import { useId } from "react";
-import type { ReactNode, CSSProperties, RefObject } from "react";
-import { gridTypes } from "../../../../components/GridLayoutDisplay/GridLayoutDisplay.types";
-import type { FactoryEditorProps, FactoryGridLayout } from "./ComponentFactory.types";
-import { layoutCells, rootCells } from "./js/gridSlots";
-import { factoryPaintClass, factoryPaintCss } from "./js/paintStyles";
-import { cellLayoutCss, elementClass, elementStyle, elementTag, gridAttributes, slotStyle, surfaceClass } from "./js/renderStyles";
+import { Fragment, useId } from "react";
+import type { ReactNode, RefObject } from "react";
+import type { FactoryEditorProps, EditorFactoryNode } from "./ComponentFactory.types";
+import { factoryPaintClass } from "./js/paintStyles";
+import { compositionCode } from "./js/compositionCode";
+import { elementStyle, gridAttributes, slotStyle, surfaceClass } from "./js/renderStyles";
 
 const elementDragType = "application/x-component-factory-element";
 
@@ -15,111 +14,54 @@ interface CanvasProps extends FactoryEditorProps {
 export const Canvas = ({ editor, container_ref }: CanvasProps) => {
   const canvasId = useId();
   const { grid, frame, elements } = editor.composition;
-  const shellLayout = editor.composition.gridStyle?.gridLayout ?? { grid };
-  const areas = gridTypes[grid];
-  const renderSlots = (layout: FactoryGridLayout, owner: string, tag: "div" | "span", content: ReactNode) =>
-    layoutCells(layout, owner).map((cell, index) =>
-      renderArea(cell.key, cell.name, slotStyle(layout, index), cell.receivesContent ? content : null, tag),
-    );
-
-  const renderArea = (
-    area: string, name?: string, placement?: CSSProperties,
-    inherited?: ReactNode, AreaTag: "div" | "span" = "div",
-  ): ReactNode => {
-    const areaStyle = editor.composition.areaStyles?.[area];
-    const areaLayout = areaStyle?.gridLayout;
-    const selected = editor.area === area && !editor.selected;
-    const temporaryClass = factoryPaintClass(`area:${area}`, editor.composition.name);
-    const content = (
-      <>
-        {inherited}
-        {elements.filter((item) => item.area === area).map((item) => {
-          const Tag = elementTag(item);
-          return (
-            <div
-              key={item.id}
-              className="component-factory-element"
-              data-selected={editor.selected?.id === item.id}
-              role="button"
-              tabIndex={0}
-              draggable
-              onDragStart={(event) => {
-                event.dataTransfer.effectAllowed = "move";
-                event.dataTransfer.setData(elementDragType, String(item.id));
-              }}
-              onClick={(event) => {
-                event.stopPropagation();
-                editor.selectArea(area, item.id);
-              }}
-              onKeyDown={(event) => {
-                if (event.target !== event.currentTarget) return;
-                if (event.key !== "Enter" && event.key !== " ") return;
-                event.preventDefault();
-                editor.selectArea(area, item.id);
-              }}
-            >
-              <Tag
-                {...gridAttributes(item.gridLayout)}
-                href={Tag === "a" ? "#" : undefined}
-                onClick={Tag === "a" ? (event) => event.preventDefault() : undefined}
-                className={[elementClass(item), factoryPaintClass(`item:${item.id}`, editor.composition.name)].filter(Boolean).join(" ")}
-                aria-pressed={Tag === "button" ? editor.selected?.id === item.id : undefined}
-                disabled={Tag === "button" && item.disabled ? true : undefined}
-                style={elementStyle(item)}
-                tabIndex={Tag === "button" ? -1 : undefined}
-              >
-                {item.gridLayout ? renderSlots(item.gridLayout, String(item.id), item.type === "Div" && Tag !== "span" ? "div" : "span", item.text) : item.text}
-              </Tag>
-              <button
-                type="button"
-                className="component-factory-clear"
-                aria-label={`Remove ${item.type}`}
-                onClick={(event) => {
-                  event.stopPropagation();
-                  editor.removeElement(item.id);
-                }}
-              >
-                ×
-              </button>
-            </div>
-          );
-        })}
-      </>
-    );
-    return (
-      <AreaTag
-        key={area}
-        data-area={name}
-        {...gridAttributes(areaLayout)}
-        className={["component-factory-area", surfaceClass(areaStyle), areaStyle?.scrollY && "scroll-y", temporaryClass].filter(Boolean).join(" ")}
-        style={placement}
-        tabIndex={0}
-        aria-label={`Select ${name ?? area} area`}
-        data-selected={selected}
-        onClick={(event) => {
-          event.stopPropagation();
-          editor.selectArea(area);
-        }}
-        onKeyDown={(event) => {
-          if (event.target !== event.currentTarget || (event.key !== "Enter" && event.key !== " ")) return;
-          event.preventDefault();
-          event.stopPropagation();
-          editor.selectArea(area);
-        }}
-        onDragOver={(event) => {
-          if (event.dataTransfer.types.includes(elementDragType)) event.preventDefault();
-        }}
-        onDrop={(event) => {
-          const id = event.dataTransfer.getData(elementDragType);
-          if (!id) return;
-          event.preventDefault();
-          event.stopPropagation();
-          editor.moveElement(Number(id), area);
-        }}
-      >
-        {areaLayout ? renderSlots(areaLayout, area, AreaTag, content) : content}
-      </AreaTag>
-    );
+  const RootTag = editor.renderDocument.root.tag;
+  const renderNode = (node: EditorFactoryNode, parent: EditorFactoryNode, index: number): ReactNode => {
+    const item = elements.find(item => item.id === node.id);
+    const isArea = node.kind === "area";
+    const area = isArea ? node.area ?? String(node.id) : item?.area ?? "main";
+    const Tag = node.tag;
+    const placement = parent.layout ? slotStyle(parent.layout, index) : undefined;
+    const selected = isArea ? editor.area === area && !editor.selected : editor.selected?.id === node.id;
+    const key = isArea ? `area:${area}` : `item:${node.id}`;
+    const content = <Tag
+      {...gridAttributes(node.layout)}
+      data-area={isArea ? node.area?.split("/").at(-1) : undefined}
+      className={[isArea && "component-factory-area", node.container_class, node.atom_class, node.effect_class, node.name, factoryPaintClass(key, editor.composition.name)].filter(Boolean).join(" ")}
+      style={isArea ? placement : item ? elementStyle(item) : node.css}
+      href={Tag === "a" ? node.href ?? "#" : undefined}
+      disabled={Tag === "button" ? node.disabled : undefined}
+      data-selected={isArea ? selected : undefined}
+      tabIndex={isArea ? 0 : undefined}
+      onClick={event => {
+        event.preventDefault(); event.stopPropagation();
+        editor.selectArea(area, isArea ? undefined : node.id);
+      }}
+      onKeyDown={event => {
+        if (event.target !== event.currentTarget || (event.key !== "Enter" && event.key !== " ")) return;
+        event.preventDefault(); event.stopPropagation(); editor.selectArea(area, isArea ? undefined : node.id);
+      }}
+      onDragOver={event => { if (event.dataTransfer.types.includes(elementDragType)) { event.preventDefault(); event.stopPropagation(); } }}
+      onDrop={event => {
+        const dragged = event.dataTransfer.getData(elementDragType);
+        if (!dragged) return;
+        event.preventDefault(); event.stopPropagation();
+        editor.moveElement(Number(dragged), isArea ? area : `${node.id}/content`);
+      }}
+    >{node.text}{node.children?.map((child, index) => renderNode(child, node, index))}</Tag>;
+    if (isArea) return <Fragment key={node.id}>{content}</Fragment>;
+    return <div key={node.id} className="component-factory-element" data-selected={selected} role="button" tabIndex={0}
+      onKeyDown={event => {
+        if (event.target !== event.currentTarget || (event.key !== "Enter" && event.key !== " ")) return;
+        event.preventDefault(); event.stopPropagation(); editor.selectArea(area, node.id);
+      }}
+      style={placement} draggable onDragStart={event => {
+        event.stopPropagation(); event.dataTransfer.effectAllowed = "move";
+        event.dataTransfer.setData(elementDragType, String(node.id));
+      }}>
+      {content}
+      <button type="button" className="component-factory-clear" aria-label={`Remove ${node.name}`}
+        onClick={event => { event.stopPropagation(); editor.removeElement(node.id); }}>×</button>
+    </div>;
   };
   return (
     <div
@@ -136,22 +78,13 @@ export const Canvas = ({ editor, container_ref }: CanvasProps) => {
         }
       }}
     >
-      <style>{[
-        factoryPaintCss(editor.composition, `[data-factory-canvas="${canvasId}"] `),
-        cellLayoutCss(editor.composition, `[data-factory-canvas="${canvasId}"] `),
-      ].join("\n")}</style>
+      <style>{compositionCode(editor.document).css.replace(/^(\.[^{]+)\{/gm, `[data-factory-canvas="${canvasId}"] $1{`)}</style>
       <div className="component-factory-world" style={{ minWidth: frame.x + frame.width + 24, minHeight: frame.y + frame.height + 24 }}>
         <div className="component-factory-frame" data-selected={editor.frameSelected} style={{ left: frame.x, top: frame.y, width: frame.width, height: frame.height }}>
-          <div {...gridAttributes(editor.composition.gridStyle?.gridLayout ?? { grid })} className={`component-factory-layout ${surfaceClass(editor.composition.gridStyle)} ${factoryPaintClass("shell", editor.composition.name)}`}>
-            {rootCells(shellLayout, areas).map((cell, index) =>
-              renderArea(
-                cell.key,
-                cell.name,
-                cell.inheritedAreas ? slotStyle(shellLayout, index) : undefined,
-                cell.inheritedAreas?.map((area) => renderArea(area)),
-              ),
-            )}
-          </div>
+          <RootTag {...gridAttributes(editor.renderDocument.root.layout)} className={`component-factory-layout ${surfaceClass(editor.composition.gridStyle)} ${editor.renderDocument.root.atom_class ?? ""} ${editor.renderDocument.root.name} ${factoryPaintClass("shell", editor.composition.name)}`}>
+            {editor.renderDocument.root.text}
+            {editor.renderDocument.root.children?.map((node, index) => renderNode(node, editor.renderDocument.root, index))}
+          </RootTag>
           {editor.area !== undefined && !editor.selected && (
             <span className="component-factory-cell-tag" aria-hidden="true">
               {factoryPaintClass(`area:${editor.area}`, editor.composition.name)}

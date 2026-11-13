@@ -8,7 +8,7 @@ const compositionTabs = [
 ];
 
 export const CodePreview = ({ editor }: FactoryEditorProps) => {
-  const { css, html } = compositionCode(editor.composition);
+  const { css, html } = compositionCode(editor.document, "html", true);
   const cssSelected = editor.compositionTab === "CSS";
 
   return (

@@ -1,4 +1,6 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import type { SetStateAction } from "react";
+import { compositionToTree, readComposition, treeToComposition, toEditorDocument } from "../../js/compositionTree";
 import type { PointerEvent } from "react";
 import { newElement } from "../../../../../../components/RabDesigner/js/document";
 import { gridTypes } from "../../../../../../components/GridLayoutDisplay/GridLayoutDisplay.types";
@@ -22,8 +24,37 @@ const initialComposition: FactoryComposition = {
   elements: [],
 };
 
+// Imported CSS supplies initial appearance. Explicit edits replace the corresponding declaration.
+const stylePatch = <T extends FactorySurfaceStyle | Partial<FactoryElement>>(current: T, patch: Partial<T>): T => {
+  const css = { ...current.css } as Record<string, unknown>;
+  const aliases: Record<string, string[]> = {
+    size: ["fontSize"], gap: ["gap"], padding: ["padding"], paddingSides: ["padding", "paddingLeft", "paddingRight", "paddingTop", "paddingBottom"],
+    paint: [], background: ["background", "backgroundColor", "backgroundImage"], gradient: ["background", "backgroundColor", "backgroundImage"],
+    radius: ["borderRadius"], radiusCorners: ["borderRadius", "borderTopLeftRadius", "borderTopRightRadius", "borderBottomLeftRadius", "borderBottomRightRadius"],
+    borders: ["border", "borderColor", "borderWidth", "borderStyle", "borderTop", "borderRight", "borderBottom", "borderLeft"], shadows: ["boxShadow"],
+  };
+  for (const key of [...Object.keys(patch), ...Object.keys(patch.paint ?? {})]) {
+    for (const property of aliases[key] ?? [key]) delete css[property];
+  }
+  return { ...current, ...patch, css: Object.keys(css).length ? css : undefined } as T;
+};
+
 export const useComponentFactory = (props: ComponentFactoryProps) => {
-  const [composition, setComposition] = useState(initialComposition);
+  const [initial] = useState(() => {
+    try { return { document: readComposition(props.json ?? initialComposition), error: undefined as string | undefined }; }
+    catch (error) { return { document: readComposition(), error: error instanceof Error ? error.message : String(error) }; }
+  });
+  const [document, setDocument] = useState(initial.document);
+  const [jsonError, setJsonError] = useState(initial.error);
+  const composition = treeToComposition(document);
+  const setComposition = (update: SetStateAction<FactoryComposition>) => setDocument(current => {
+    const flat = treeToComposition(current);
+    return compositionToTree(typeof update === "function" ? update(flat) : update, current);
+  });
+  useEffect(() => {
+    if (props.json === undefined) return;
+    loadJson(props.json);
+  }, [props.json]);
   const [jsonOpen, setJsonOpen] = useState(false);
   const [gridTab, setGridTab] = useState("Grid");
   const [styleTab, setStyleTab] = useState("Style");
@@ -34,6 +65,13 @@ export const useComponentFactory = (props: ComponentFactoryProps) => {
   const [selectedId, setSelectedId] = useState<number>();
   const [gridDraft, setGridDraft] = useState<GridLayout>();
   const [draftArea, setDraftArea] = useState<number>();
+
+  function loadJson(input: ComponentFactoryProps["json"]) {
+    try {
+      setDocument(readComposition(input)); setJsonError(undefined);
+      setArea(undefined); setSelectedId(undefined); setFrameSelected(true); setGridDraft(undefined);
+    } catch (error) { setJsonError(error instanceof Error ? error.message : String(error)); }
+  }
 
   const openGridDraft = (layout?: GridLayout, rows = 4, cols = 6) => {
     setDraftArea(undefined);
@@ -63,7 +101,7 @@ export const useComponentFactory = (props: ComponentFactoryProps) => {
       if (composition.gridStyle?.gridLayout) {
         setComposition((current) => ({
           ...current,
-          gridStyle: { ...current.gridStyle, gridLayout: undefined },
+          gridStyle: { ...current.gridStyle, gridLayout: { grid } },
         }));
       }
       return;
@@ -86,7 +124,7 @@ export const useComponentFactory = (props: ComponentFactoryProps) => {
       return {
         ...current,
         grid,
-        gridStyle: { ...current.gridStyle, gridLayout: undefined },
+        gridStyle: { ...current.gridStyle, gridLayout: { grid } },
         areaStyles: Object.fromEntries(
           Object.entries(current.areaStyles ?? {}).filter(([key]) => survives(key)),
         ),
@@ -98,10 +136,19 @@ export const useComponentFactory = (props: ComponentFactoryProps) => {
   };
 
   const removeElement = (id: number) => {
-    setComposition((current) => ({
-      ...current,
-      elements: current.elements.filter((element) => element.id !== id),
-    }));
+    setComposition((current) => {
+      const removed = new Set([id]);
+      let changed = true;
+      while (changed) {
+        changed = false;
+        for (const element of current.elements) {
+          if (removed.has(Number(element.area.split("/")[0])) && !removed.has(element.id)) {
+            removed.add(element.id); changed = true;
+          }
+        }
+      }
+      return { ...current, elements: current.elements.filter(element => !removed.has(element.id)) };
+    });
     if (selectedId === id) setSelectedId(undefined);
   };
 
@@ -121,13 +168,13 @@ export const useComponentFactory = (props: ComponentFactoryProps) => {
   const updateSurface = (patch: FactorySurfaceStyle) => {
     setComposition((current) => {
       if (area === undefined) {
-        return { ...current, gridStyle: { ...current.gridStyle, ...patch } };
+        return { ...current, gridStyle: stylePatch(current.gridStyle ?? {}, patch) };
       }
       return {
         ...current,
         areaStyles: {
           ...current.areaStyles,
-          [area]: { ...current.areaStyles?.[area], ...patch },
+          [area]: stylePatch(current.areaStyles?.[area] ?? {}, patch),
         },
       };
     });
@@ -157,7 +204,7 @@ export const useComponentFactory = (props: ComponentFactoryProps) => {
     setComposition((current) => ({
       ...current,
       elements: current.elements.map((element) =>
-        element.id === selectedId ? { ...element, ...patch } : element,
+        element.id === selectedId ? { ...stylePatch(element, patch), nodeTag: patch.heading ?? patch.layoutTag ?? element.nodeTag } : element,
       ),
     }));
   };
@@ -203,8 +250,18 @@ export const useComponentFactory = (props: ComponentFactoryProps) => {
   };
 
   const handleAction = (action: "new" | "open" | "export" | "save") => {
+    if (action === "new") {
+      loadJson(undefined); return;
+    }
+    if (action === "export") {
+      const url = URL.createObjectURL(new Blob([JSON.stringify(document, null, 2)], { type: "application/json" }));
+      const link = window.document.createElement("a");
+      link.href = url; link.download = `${document.name || "composition"}.json`; link.click();
+      setTimeout(() => URL.revokeObjectURL(url), 0);
+      return;
+    }
     if (action === "save" && props.handleSubmit) {
-      return props.handleSubmit(composition, "save", props);
+      return props.handleSubmit(document, "save", props);
     }
     props.handleClick?.({}, action, props);
   };
@@ -220,13 +277,15 @@ export const useComponentFactory = (props: ComponentFactoryProps) => {
     setComposition((current) => ({
       ...current,
       elements: current.elements.map((element) =>
-        element.id === id ? { ...element, area: nextArea } : element,
+        element.id === id ? { ...element, area: nextArea } : nextArea === `${element.id}/content` ? { ...element, childArea: nextArea } : element,
       ),
     }));
     selectArea(nextArea, id);
   };
 
   return {
+    loadJson, jsonError,
+    document, renderDocument: toEditorDocument(document),
     jsonOpen, setJsonOpen,
     composition, area, selected, gridTab, styleTab, compositionTab, setCompositionTab, theme,
     gridDraft, setGridDraft, draftArea, setDraftArea, openGridDraft, addDraftArea,

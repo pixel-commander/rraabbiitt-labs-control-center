@@ -4,8 +4,9 @@
     opacity: 0.5;
   }
   .code-view-popup-link__window {
-    z-index: 10;
-    max-inline-size: calc(100% - 48px);
-    max-block-size: calc(100% - 48px);
+    position: fixed;
+    z-index: 1000;
+    max-inline-size: calc(100vw - 48px);
+    max-block-size: calc(100dvh - 48px);
   }
 }

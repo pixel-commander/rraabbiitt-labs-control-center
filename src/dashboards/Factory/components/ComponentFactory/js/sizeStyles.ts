@@ -4,7 +4,7 @@ export const factorySizes = ["xs", "sm", "md", "base", "lg", "xl"] as const;
 
 export const factorySizeCss = (value: FactorySizeValue | undefined, token = "space") => {
   if (value === undefined) return undefined;
-  return typeof value === "number" ? `${value}px` : `var(--${token}-${value})`;
+  return typeof value === "number" ? `${value}px` : factorySizes.includes(value) ? `var(--${token}-${value})` : value;
 };
 
 export const paddingSides = ["left", "top", "right", "bottom"] as const;

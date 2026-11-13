@@ -1,0 +1,111 @@
+{
+  "version": 2,
+  "name": "ProjectCard",
+  "title": "Project card",
+  "description": "A nested card supplied to Factory through its JSON prop.",
+  "editor": {
+    "frame": {
+      "x": 24,
+      "y": 24,
+      "width": 600,
+      "height": 360
+    }
+  },
+  "root": {
+    "tag": "article",
+    "name": "project-card",
+    "id": 1000,
+    "container_class": "container-main",
+    "grid_type": "header-main",
+    "padding": 24,
+    "gap": 16,
+    "css": {
+      "display": "grid",
+      "borderRadius": 16
+    },
+    "children": [
+      {
+        "tag": "header",
+        "name": "header",
+        "id": 1001,
+        "grid_area": "header",
+        "children": [
+          {
+            "tag": "h2",
+            "name": "title",
+            "id": 1002,
+            "css": {
+              "color": "var(--color-primary)",
+              "fontSize": 26,
+              "margin": 0
+            },
+            "text": "Build from JSON",
+            "children": []
+          }
+        ]
+      },
+      {
+        "tag": "section",
+        "name": "main",
+        "id": 1003,
+        "grid_area": "main",
+        "children": [
+          {
+            "tag": "div",
+            "name": "card-body",
+            "id": 1004,
+            "gap": 20,
+            "css": {
+              "display": "grid"
+            },
+            "children": [
+              {
+                "tag": "p",
+                "name": "description",
+                "id": 1005,
+                "css": {
+                  "fontSize": 16,
+                  "lineHeight": 1.6,
+                  "margin": 0
+                },
+                "text": "One composition drives Layers, the canvas, and generated code.",
+                "children": []
+              },
+              {
+                "tag": "footer",
+                "name": "actions",
+                "id": 1006,
+                "gap": 12,
+                "css": {
+                  "display": "flex",
+                  "alignItems": "center"
+                },
+                "children": [
+                  {
+                    "tag": "button",
+                    "name": "build-button",
+                    "id": 1007,
+                    "action_class": "action-main",
+                    "text": "Build something",
+                    "children": []
+                  },
+                  {
+                    "tag": "a",
+                    "name": "docs-link",
+                    "id": 1008,
+                    "css": {
+                      "color": "var(--color-primary)"
+                    },
+                    "text": "Explore styles",
+                    "href": "/style-guide#stylers",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

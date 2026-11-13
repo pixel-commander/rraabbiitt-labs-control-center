@@ -1,17 +1,42 @@
+@property --container-dropdown-start-color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: transparent;
+}
+@property --container-dropdown-end-color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: transparent;
+}
+
 @layer atoms {
   .container-dropdown {
+    --container-dropdown-start-color: color-mix(in srgb, var(--color-main-alt) var(--container-dropdown-start-opacity, var(--bg-filter-opacity, 65%)), transparent);
+    --container-dropdown-end-color: color-mix(in srgb, var(--color-main) var(--container-dropdown-end-opacity, 45%), transparent);
     color: var(--color-main-alt-neg);
     background: linear-gradient(
       160deg,
-      color-mix(in srgb, var(--color-main-alt) var(--bg-filter-opacity, 65%), transparent),
-      color-mix(in srgb, var(--color-main) var(--container-dropdown-end-opacity, 45%), transparent)
+      var(--container-dropdown-start-color),
+      var(--container-dropdown-end-color)
     );
     border: var(--border-width) var(--border-style) var(--border-subtle);
     border-radius: var(--radius-container);
     -webkit-backdrop-filter: blur(var(--bg-filter-blur, 12px));
     backdrop-filter: blur(var(--bg-filter-blur, 12px));
+    transition:
+      --container-dropdown-start-color 220ms ease,
+      --container-dropdown-end-color 220ms ease,
+      color 220ms ease,
+      border-color 220ms ease;
     box-shadow:
       inset 0 0 40px 8px color-mix(in srgb, var(--color-main) 32%, transparent),
       var(--elevation-float);
+  }
+  .container-dropdown.is-open {
+    --container-dropdown-start-opacity: 80%;
+    --container-dropdown-end-opacity: 65%;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .container-dropdown { transition: none; }
   }
 }

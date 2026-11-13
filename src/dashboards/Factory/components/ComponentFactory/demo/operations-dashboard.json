@@ -1,0 +1,440 @@
+{
+  "version": 2,
+  "name": "MissionControl",
+  "title": "Mission control",
+  "description": "A dashboard authored in the Factory node format.",
+  "editor": {
+    "frame": {
+      "x": 24,
+      "y": 24,
+      "width": 760,
+      "height": 520
+    }
+  },
+  "root": {
+    "tag": "article",
+    "name": "ops-dashboard",
+    "id": 2037,
+    "container_class": "container-main",
+    "grid_type": "header-main",
+    "css": {
+      "gridTemplateRows": "auto minmax(0, 1fr)",
+      "borderRadius": 16,
+      "overflow": "hidden"
+    },
+    "children": [
+      {
+        "tag": "header",
+        "name": "ops-header",
+        "id": 2005,
+        "grid_area": "header",
+        "padding": 20,
+        "css": {
+          "display": "flex",
+          "alignItems": "center",
+          "justifyContent": "space-between",
+          "borderBottom": "1px solid var(--color-tertiary)"
+        },
+        "children": [
+          {
+            "tag": "div",
+            "name": "ops-heading",
+            "id": 2003,
+            "children": [
+              {
+                "tag": "p",
+                "name": "ops-eyebrow",
+                "id": 2001,
+                "text": "RRAABBIITT / WORKSPACE",
+                "css": {
+                  "margin": 0,
+                  "fontSize": 10,
+                  "color": "var(--color-primary)"
+                }
+              },
+              {
+                "tag": "h1",
+                "name": "ops-title",
+                "id": 2002,
+                "text": "Mission control",
+                "css": {
+                  "margin": "4px 0 0",
+                  "fontSize": 28
+                }
+              }
+            ]
+          },
+          {
+            "tag": "button",
+            "name": "ops-new-project",
+            "id": 2004,
+            "action_class": "action-main",
+            "text": "+ New project",
+            "padding": "sm"
+          }
+        ]
+      },
+      {
+        "tag": "main",
+        "name": "ops-main",
+        "id": 2036,
+        "grid_area": "main",
+        "padding": 20,
+        "gap": 16,
+        "css": {
+          "display": "grid",
+          "alignContent": "start"
+        },
+        "children": [
+          {
+            "tag": "div",
+            "name": "ops-stats",
+            "id": 2018,
+            "grid_cols": 3,
+            "gap": 12,
+            "children": [
+              {
+                "tag": "section",
+                "name": "ops-active",
+                "id": 2009,
+                "container_class": "container-main",
+                "padding": 16,
+                "gap": 6,
+                "css": {
+                  "display": "grid",
+                  "borderRadius": 12
+                },
+                "children": [
+                  {
+                    "tag": "p",
+                    "name": "ops-active-label",
+                    "id": 2006,
+                    "text": "ACTIVE PROJECTS",
+                    "css": {
+                      "margin": 0,
+                      "fontSize": 11,
+                      "color": "var(--color-primary-alt)"
+                    }
+                  },
+                  {
+                    "tag": "p",
+                    "name": "ops-active-value",
+                    "id": 2007,
+                    "text": "12",
+                    "css": {
+                      "margin": 0,
+                      "fontSize": 30,
+                      "color": "var(--color-main-neg)"
+                    }
+                  },
+                  {
+                    "tag": "p",
+                    "name": "ops-active-note",
+                    "id": 2008,
+                    "text": "3 ready to ship",
+                    "css": {
+                      "margin": 0,
+                      "fontSize": 11,
+                      "color": "var(--color-main-alt-neg)"
+                    }
+                  }
+                ]
+              },
+              {
+                "tag": "section",
+                "name": "ops-complete",
+                "id": 2013,
+                "container_class": "container-main",
+                "padding": 16,
+                "gap": 6,
+                "css": {
+                  "display": "grid",
+                  "borderRadius": 12
+                },
+                "children": [
+                  {
+                    "tag": "p",
+                    "name": "ops-complete-label",
+                    "id": 2010,
+                    "text": "TASKS COMPLETE",
+                    "css": {
+                      "margin": 0,
+                      "fontSize": 11,
+                      "color": "var(--color-primary-alt)"
+                    }
+                  },
+                  {
+                    "tag": "p",
+                    "name": "ops-complete-value",
+                    "id": 2011,
+                    "text": "84%",
+                    "css": {
+                      "margin": 0,
+                      "fontSize": 30,
+                      "color": "var(--color-main-neg)"
+                    }
+                  },
+                  {
+                    "tag": "p",
+                    "name": "ops-complete-note",
+                    "id": 2012,
+                    "text": "Up 12% this week",
+                    "css": {
+                      "margin": 0,
+                      "fontSize": 11,
+                      "color": "var(--color-main-alt-neg)"
+                    }
+                  }
+                ]
+              },
+              {
+                "tag": "section",
+                "name": "ops-tools",
+                "id": 2017,
+                "container_class": "container-main",
+                "padding": 16,
+                "gap": 6,
+                "css": {
+                  "display": "grid",
+                  "borderRadius": 12
+                },
+                "children": [
+                  {
+                    "tag": "p",
+                    "name": "ops-tools-label",
+                    "id": 2014,
+                    "text": "TOOLS ONLINE",
+                    "css": {
+                      "margin": 0,
+                      "fontSize": 11,
+                      "color": "var(--color-primary-alt)"
+                    }
+                  },
+                  {
+                    "tag": "p",
+                    "name": "ops-tools-value",
+                    "id": 2015,
+                    "text": "31",
+                    "css": {
+                      "margin": 0,
+                      "fontSize": 30,
+                      "color": "var(--color-main-neg)"
+                    }
+                  },
+                  {
+                    "tag": "p",
+                    "name": "ops-tools-note",
+                    "id": 2016,
+                    "text": "All systems available",
+                    "css": {
+                      "margin": 0,
+                      "fontSize": 11,
+                      "color": "var(--color-main-alt-neg)"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "name": "ops-workspace",
+            "id": 2035,
+            "grid_cols": 2,
+            "gap": 12,
+            "children": [
+              {
+                "tag": "section",
+                "name": "ops-projects",
+                "id": 2029,
+                "container_class": "container-main",
+                "padding": 16,
+                "gap": 12,
+                "css": {
+                  "display": "grid",
+                  "alignContent": "start",
+                  "borderRadius": 12
+                },
+                "children": [
+                  {
+                    "tag": "h2",
+                    "name": "ops-projects-title",
+                    "id": 2028,
+                    "text": "Current projects",
+                    "css": {
+                      "margin": 0,
+                      "fontSize": 18
+                    }
+                  },
+                  {
+                    "tag": "div",
+                    "name": "ops-project-factory",
+                    "id": 2021,
+                    "padding": 12,
+                    "css": {
+                      "display": "flex",
+                      "justifyContent": "space-between",
+                      "alignItems": "center",
+                      "borderBottom": "1px solid var(--color-tertiary)"
+                    },
+                    "children": [
+                      {
+                        "tag": "p",
+                        "name": "ops-project-factory-name",
+                        "id": 2019,
+                        "text": "Component Factory",
+                        "css": {
+                          "margin": 0,
+                          "fontSize": 13,
+                          "color": "var(--color-main-neg)"
+                        }
+                      },
+                      {
+                        "tag": "p",
+                        "name": "ops-project-factory-status",
+                        "id": 2020,
+                        "text": "In progress",
+                        "css": {
+                          "margin": 0,
+                          "fontSize": 10,
+                          "color": "var(--color-primary-alt)"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "name": "ops-project-navigation",
+                    "id": 2024,
+                    "padding": 12,
+                    "css": {
+                      "display": "flex",
+                      "justifyContent": "space-between",
+                      "alignItems": "center",
+                      "borderBottom": "1px solid var(--color-tertiary)"
+                    },
+                    "children": [
+                      {
+                        "tag": "p",
+                        "name": "ops-project-navigation-name",
+                        "id": 2022,
+                        "text": "Navigation cleanup",
+                        "css": {
+                          "margin": 0,
+                          "fontSize": 13,
+                          "color": "var(--color-main-neg)"
+                        }
+                      },
+                      {
+                        "tag": "p",
+                        "name": "ops-project-navigation-status",
+                        "id": 2023,
+                        "text": "Ready for review",
+                        "css": {
+                          "margin": 0,
+                          "fontSize": 10,
+                          "color": "var(--color-primary-alt)"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "name": "ops-project-tokens",
+                    "id": 2027,
+                    "padding": 12,
+                    "css": {
+                      "display": "flex",
+                      "justifyContent": "space-between",
+                      "alignItems": "center",
+                      "borderBottom": "1px solid var(--color-tertiary)"
+                    },
+                    "children": [
+                      {
+                        "tag": "p",
+                        "name": "ops-project-tokens-name",
+                        "id": 2025,
+                        "text": "Theme tokens",
+                        "css": {
+                          "margin": 0,
+                          "fontSize": 13,
+                          "color": "var(--color-main-neg)"
+                        }
+                      },
+                      {
+                        "tag": "p",
+                        "name": "ops-project-tokens-status",
+                        "id": 2026,
+                        "text": "Complete",
+                        "css": {
+                          "margin": 0,
+                          "fontSize": 10,
+                          "color": "var(--color-primary-alt)"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "aside",
+                "name": "ops-quick",
+                "id": 2034,
+                "container_class": "container-main",
+                "padding": 16,
+                "gap": 12,
+                "css": {
+                  "display": "grid",
+                  "alignContent": "start",
+                  "borderRadius": 12
+                },
+                "children": [
+                  {
+                    "tag": "h2",
+                    "name": "ops-quick-title",
+                    "id": 2030,
+                    "text": "Build something",
+                    "css": {
+                      "margin": 0,
+                      "fontSize": 18
+                    }
+                  },
+                  {
+                    "tag": "p",
+                    "name": "ops-quick-copy",
+                    "id": 2031,
+                    "text": "Start with a JSON composition. Refine it in Factory. Save it as a reusable component.",
+                    "css": {
+                      "margin": 0,
+                      "fontSize": 12,
+                      "color": "var(--color-main-neg)"
+                    }
+                  },
+                  {
+                    "tag": "button",
+                    "name": "ops-quick-open",
+                    "id": 2032,
+                    "action_class": "action-main",
+                    "text": "Create composition",
+                    "padding": "sm"
+                  },
+                  {
+                    "tag": "p",
+                    "name": "ops-quick-hint",
+                    "id": 2033,
+                    "text": "JSON \u2192 Factory \u2192 React + CSS",
+                    "css": {
+                      "margin": 0,
+                      "fontSize": 10,
+                      "color": "var(--color-primary-alt)"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

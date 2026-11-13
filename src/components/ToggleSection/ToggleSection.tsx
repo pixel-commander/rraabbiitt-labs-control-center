@@ -7,15 +7,17 @@ export const ToggleSection = ({
   title, title_class = "", container_class = "container-dropdown", children, className = "",
 }: ToggleSectionProps) => {
   const main = useRef<HTMLDivElement>(null);
+  const section = useRef<HTMLElement>(null);
   const mainId = useId();
   return (
-    <section className={["toggle-section", container_class, className].filter(Boolean).join(" ")}>
+    <section ref={section} className={["toggle-section", container_class, className].filter(Boolean).join(" ")}>
       <div className={["toggle-section-title", title_class].filter(Boolean).join(" ")}>{title}</div>
       <button type="button" className="toggle-section-toggle" aria-label="Toggle section"
         aria-expanded="false" aria-controls={mainId}
         onClick={event => {
           if (!main.current) return;
           const open = main.current.classList.toggle("is-open");
+          section.current?.classList.toggle("is-open", open);
           main.current.classList.toggle("is-closed", !open);
           main.current.inert = !open;
           main.current.setAttribute("aria-hidden", String(!open));

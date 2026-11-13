@@ -1,4 +1,14 @@
 @layer components {
-  .scaffold-content { display: grid; gap: var(--space-xs); min-inline-size: 0; overflow-wrap: anywhere; }
+  .scaffold-content { gap: var(--space-md); min-inline-size: 0; overflow-wrap: anywhere; }
+  .scaffold-content__info { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-sm); padding: var(--space-md); border: 1px solid var(--border-subtle); border-radius: var(--radius-container); background: var(--color-main-alt); }
+  .scaffold-content__type { color: var(--color-primary); font: var(--type-code); text-transform: uppercase; }
+  .scaffold-content h3, .scaffold-content p, .scaffold-content dl { margin: 0; }
+  .scaffold-content dl { inline-size: 100%; }
+  .scaffold-content dl > div { padding-block: var(--space-xs); }
+  .scaffold-content dt { color: var(--color-muted); text-transform: capitalize; }
+  .scaffold-content dd { margin: 0; }
+  .scaffold-content__tags { display: flex; flex-wrap: wrap; gap: var(--space-xs); }
+  .scaffold-content__tags > span { padding: var(--space-2xs) var(--space-sm); border: 1px solid var(--border-subtle); border-radius: 999px; font: var(--type-code); }
+  .scaffold-content__paths { padding: var(--space-md); max-block-size: 28rem; border-inline-start: 1px solid var(--border-subtle); }
 }
 

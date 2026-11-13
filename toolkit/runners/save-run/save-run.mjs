@@ -25,7 +25,7 @@ export async function readRunActivity(world) {
           method: "tools/call", tool: summary.name, status: summary.status,
           query: summary.query ?? steps[0]?.settings?.query,
           runs: steps.map(step => ({
-            name: step.name, status: step.status,
+            name: step.name, status: step.status, type: step.type, return_type: step.return_type,
             date_start: step.start, date_end: step.end,
             error: step.error, settings: step.settings, response: step.response,
             lookup: { query: step.query ?? step.settings?.query, id: step.settings?.id },
@@ -133,6 +133,7 @@ export async function saveRun(world, steps) {
         name: s.name,
         title: s.title,
         type: s.type,
+        return_type: s.return_type,
         start: s.date_start ?? null,
         end: s.date_end ?? null,
         duration: stepDuration,

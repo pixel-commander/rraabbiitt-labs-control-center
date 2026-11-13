@@ -1,5 +1,5 @@
 import type { ComponentFactoryProps } from "./components/ComponentFactory/ComponentFactory.types";
-import type { FactoryComposition } from "./components/ComponentFactory/ComponentFactory.types";
+import type { FactoryDocument } from "./components/ComponentFactory/ComponentFactory.types";
 import type { HouseKeys } from "../../HouseKeys.types";
 
 export interface FactoryProps extends ComponentFactoryProps {}
@@ -19,7 +19,7 @@ export interface FactorySaveData extends HouseKeys {
   /** Required description stored in the component metadata and composition file. */
   description: string;
   /** Editable composition source saved separately from its generated JSX and CSS. */
-  composition: FactoryComposition;
+  composition: FactoryDocument;
   /** Explicit confirmation to replace an existing component's generated files. */
   overwrite?: boolean;
 }

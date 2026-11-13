@@ -1,4 +1,5 @@
 import type { CodeViewPopupLinkProps } from "./CodeViewPopupLink.types";
+import { createPortal } from "react-dom";
 import { useCodeViewPopupLink } from "./hooks/useCodeViewPopupLink/useCodeViewPopupLink";
 import { FloatWindow } from "../FloatWindow/FloatWindow";
 import { CodeEditAndView } from "../CodeEditAndView/CodeEditAndView";
@@ -73,7 +74,7 @@ export const CodeViewPopupLink = (props: CodeViewPopupLinkProps) => {
           </span>
         </button>
       )}
-      {popup.open && (
+      {popup.open && createPortal(
         <FloatWindow
           title={props.title ?? props.file}
           rect={popup.rect}
@@ -110,7 +111,7 @@ export const CodeViewPopupLink = (props: CodeViewPopupLinkProps) => {
               }
             />
           )}
-        </FloatWindow>
+        </FloatWindow>, document.body
       )}
     </>
   );

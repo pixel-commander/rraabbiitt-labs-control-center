@@ -1,0 +1,58 @@
+import assert from "node:assert/strict";
+import { mkdtemp, mkdir, readFile } from "node:fs/promises";
+import { resolve } from "node:path";
+import { DatabaseSync } from "node:sqlite";
+import { createServer } from "node:http";
+import { createCompositionStore, compositionRequestHandler } from "../src/dashboards/Factory/api/compositions.mjs";
+import { run as createTable } from "../toolkit/tools/new-db-table/new-db-table.mjs";
+
+await mkdir(resolve(".tmp"), { recursive: true });
+const folder = await mkdtemp(resolve(".tmp/factory-api-"));
+const file = resolve(folder, "app.sqlite");
+new DatabaseSync(file).close();
+const scaffold = await createTable({ path: folder, name: "factory_composition" });
+assert.equal(scaffold.status, "complete");
+const store = createCompositionStore(file);
+const handler = compositionRequestHandler(store);
+const server = createServer((req, res) => handler(req, res, () => { res.writeHead(404); res.end(); }));
+await new Promise(resolve => server.listen(0, "127.0.0.1", resolve));
+const base = `http://127.0.0.1:${server.address().port}/api/factory/compositions`;
+const composition = JSON.parse(await readFile(new URL("../src/dashboards/Factory/components/ComponentFactory/demo/operations-dashboard.json", import.meta.url), "utf8"));
+const record = { name: "MissionControl", title: "Mission control", type: "dashboard", description: "API integration test", tags: ["factory"], paths: [], composition };
+const write = (url, method, body, headers = {}) => fetch(url, { method, headers: { "Content-Type": "application/json", ...headers }, body: JSON.stringify(body) });
+try {
+  const createdResponse = await write(base, "POST", record);
+  assert.equal(createdResponse.status, 201);
+  const created = await createdResponse.json();
+  assert.ok(Number.isSafeInteger(created.id));
+  assert.deepEqual(created.composition, composition);
+  assert.deepEqual(created.tags, ["factory"]);
+  const rawDb = new DatabaseSync(file);
+  assert.equal(typeof rawDb.prepare("SELECT composition FROM factory_composition").get().composition, "string");
+  assert.throws(() => rawDb.exec("UPDATE factory_composition SET composition='not json'"));
+  assert.throws(() => rawDb.exec("UPDATE factory_composition SET composition='[]'"));
+  rawDb.close();
+  assert.equal((await (await fetch(base)).json()).total, 1);
+  assert.ok(!("composition" in (await (await fetch(base)).json()).items[0]));
+  assert.deepEqual((await (await fetch(`${base}/${created.id}`)).json()).composition, composition);
+  const update = structuredClone(record); update.title = "Updated mission"; update.composition.root.padding = 24;
+  const updatedResponse = await write(`${base}/${created.id}`, "PUT", update);
+  assert.equal(updatedResponse.status, 200);
+  const updated = await updatedResponse.json();
+  assert.equal(updated.id, created.id);
+  assert.equal(updated.composition.root.padding, 24);
+  assert.equal(updated.title, "Updated mission");
+  assert.equal((await write(base, "POST", { ...record, id: created.id })).status, 409);
+  assert.equal((await fetch(`${base}/1`)).status, 404);
+  assert.equal((await write(base, "POST", { ...record, composition: "{}" })).status, 400);
+  assert.equal((await write(base, "POST", record, { Origin: "http://other.example" })).status, 403);
+  assert.equal((await write(`${base}/${created.id}`, "PUT", { ...record, id: created.id + 1 })).status, 400);
+  assert.equal((await write(`${base}/1`, "PUT", record)).status, 404);
+  assert.equal((await fetch(base, { method: "DELETE" })).status, 405);
+  assert.equal((await fetch(`${base}?limit=0`)).status, 400);
+  assert.equal((await fetch(base, { method: "POST", body: "{" })).status, 400);
+  assert.equal(createCompositionStore(file).get(created.id).composition.root.padding, 24, "Persists after reopening the store");
+  console.log("Factory DB API: schema migration, create/list/load/update, JSON constraint, persistence, and request error checks passed.");
+} finally {
+  await new Promise(resolve => server.close(resolve));
+}

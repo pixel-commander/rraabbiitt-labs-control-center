@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1791940045452
 name: scanners
-title: Scanners
+title: "How to Scanners"
 description: Walk a declared scope and collect or explicitly index records.
 type: skill
 path: skills/toolkits/tools/scanners

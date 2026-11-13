@@ -27,3 +27,5 @@ It does not positively label the original query for a lower-ranked result.
 Lesson-save failures retain the text; a search failure after saving is reported
 as saved-lesson/search-failed. Cancel clears the selected rephrase target.
 
+
+DumBot mode: accepts mode="dumbot" in the incoming props bag (default hybrid). Uses /api/search-records/dumbot and the same scroll layout. Select result loads requirements; answers retain contract values in this mounted page. New search clears them. DumBot hides grading actions. className is composed at the feature root.

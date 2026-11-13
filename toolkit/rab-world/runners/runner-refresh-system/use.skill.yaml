@@ -1,0 +1,17 @@
+schema: 1
+intent: use
+id: 1794537157024
+name: runner-refresh-system
+title: Refresh system through the shared tracker
+owner:
+  id: 1794537157022
+implementation:
+  - id: 1794537157022
+instructions: >
+  Dispatch runner ID 1794537157022 with path and toolkits from the loaded world.
+  Execute only on explicit request. Delegates metadata refresh to ID 1793984711136,
+  forwarding record/update callbacks to its existing tracker. Tracks the report save
+  with runTools and returns a flat RunnerReturn, ending with response.report.
+  complete is called once with the combined branches. A missing DB preserves
+  complete when refresh succeeded and adds DB not found to error and report.errors.
+  Failed branches retain error status. Does not create a DB or rebuild search.

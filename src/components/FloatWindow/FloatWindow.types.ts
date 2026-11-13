@@ -8,7 +8,7 @@ export interface FloatWindowProps extends Omit<HouseKeys, "title"> {
   children?: ReactNode;
   /** Extra CSS classes appended to the outer window element. */
   className?: string;
-  /** Skin classes applied to the outer window. Defaults to "container-main", while an empty string removes that default. */
+  /** Skin classes applied to the outer window. Defaults to "container-dropdown", while an empty string removes that default. */
   container_class?: string;
   /** Extra CSS classes applied to the draggable header alongside its structural class. */
   header_class?: string;

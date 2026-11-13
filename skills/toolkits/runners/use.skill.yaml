@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1791940045245
 name: runners
-title: Runners
+title: "How to Runners"
 description: Compose ordered steps under one shared execution owner.
 type: skill
 path: skills/toolkits/runners

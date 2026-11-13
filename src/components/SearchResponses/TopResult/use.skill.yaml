@@ -4,12 +4,13 @@ owner:
   id: 1794398447056
 id: 1794408972739
 name: TopResult
-title: Use TopResult
+title: "How to Use TopResult"
 description: Props, defaults and callbacks for TopResult.
 type: skill
-path: C:\rraabbiitt-hq\rraabbiitt-labs-control-center\src\components\SearchResponses\TopResult
+path: src/components/SearchResponses/TopResult
 tags: []
-implementation: []
+implementation:
+  - id: 1794404369434
 context: []
 inputs:
   result_type:
@@ -81,71 +82,22 @@ inputs:
   score:
     type: number | undefined
     required: false
+  action_class:
+    type: string | undefined
+    required: false
+  favorite:
+    type: boolean | undefined
+    required: false
 outputs: {}
-instructions: >-
-  Props
-
-  result_type (required): "top-result"
-
-  container_aton (optional): string | undefined
-
-  container_class (optional): string | undefined
-
-  title (optional): ReactNode
-
-  color (optional): string | undefined
-
-  children (optional): ReactNode
-
-  data (optional): unknown
-
-  className (optional): string | undefined
-
-  handleClick (optional): HandlerKey<unknown, SearchResponseAction, void, SearchResponsesProps> |
-  undefined
-
-  id (optional): number | undefined
-
-  name (optional): string | undefined
-
-  description (optional): string | undefined
-
-  path (optional): string | undefined
-
-  save_path (optional): string | undefined
-
-  save_file (optional): string | undefined
-
-  paths (optional): PathsProps[] | undefined
-
-  date_added (optional): number | undefined
-
-  date_updated (optional): number | undefined
-
-  date_used (optional): number | undefined
-
-  date (optional): number | undefined
-
-  date_start (optional): number | undefined
-
-  date_end (optional): number | undefined
-
-
-  Defaults
-
-  container_class="container-side-rail" unless the legacy container_aton is supplied; className="".
-
-
-  Callbacks and prop behavior
-
-  result_type must be top-result when using SearchResponses. title and children accept ReactNode.
-  container_class selects the container; empty string removes it. container_aton is the legacy
-  fallback. color overrides the rail color. handleClick receives (data, "good-vote" | "ok-vote" |
-  "bad-vote" | "rephrase", props).
-
-
-  score is optional. When supplied, it is displayed to two decimals in the left heading slot. Zero
-  is preserved. If omitted, no score box is rendered.
+instructions: result_type is top-result. title and children accept ReactNode. name, type and numeric
+  id provide metadata. score defaults to 0 and displays two decimals. container_class defaults to
+  container-main on the center card; an empty string removes the skin. container_aton remains the
+  fallback when container_class is absent. action_class defaults to action-outline for Rephrase.
+  color overrides all four rails; className applies to the outer grid. disabled and vote pass to the
+  shared controls. handleClick receives (data, good-vote | ok-vote | bad-vote | rephrase, complete
+  original incoming props). Parent owns feedback and persistence. favorite defaults to false. The
+  star is at the footer right. Clicking it calls handleClick(data, "favorite", complete props). The
+  parent owns favorites and persistence. Each footer control has a tooltip.
 checks: []
 examples: []
 routes: []

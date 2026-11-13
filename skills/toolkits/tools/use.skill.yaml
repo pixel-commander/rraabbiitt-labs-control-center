@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1791940045227
 name: tools
-title: Tools
+title: "How to Tools"
 description: Shared input, output and ownership rules for a single capability.
 type: skill
 path: skills/toolkits/tools

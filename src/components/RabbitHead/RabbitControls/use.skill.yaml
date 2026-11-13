@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "intent": "use",
+  "id": 1794535078354,
+  "owner": {
+    "id": 1794534782424
+  },
+  "name": "use-rabbit-controls",
+  "title": "Use Rabbit Controls",
+  "type": "skill",
+  "path": "src/components/RabbitHead/RabbitControls",
+  "implementation": [
+    {
+      "id": 1794534782424
+    }
+  ],
+  "context": [
+    {
+      "id": 1793996465585
+    },
+    {
+      "id": 1794014810540
+    }
+  ],
+  "instructions": "Render inside a positioned parent. Required values, rect, handleSlider and handleClick. FloatWindow open, handleChange and handleClose pass through. handleSlider receives (number, slider, Slider props); props.name is the renderer property key. handleClick receives (action, rabbit-control, complete props). Actions: lightning, flood, arcs, showPulses, showSparkles, autoMotion, reset. Parent owns settings, rectangle and visibility. Default title is Rabbit controls. className is composed. No persistence. Pulse sliders use pulseFreq (0–40), pulseSize (0.25–4), pulseTravel (1–20), pulseSpeed (0.1–5); the showPulses action toggles visibility. Colors use handleClick with {name: renderer color property, value: hex string}, rabbit-control, and complete props. useMono toggles monochrome. Color controls cover faceColor, lineColor, fxColor, circuitColor, circuitCoreColor, circuitGlowColor, strikeColor, floodColor, monoColor."
+}

@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1794005588366
 name: generate-dependencies.manifest-json
-title: Generate dependency manifests
+title: "How to Generate dependency manifests"
 description: Overwrite component manifests with outward relative imports.
 type: skill
 path: toolkits/rab-react/tools/generate-dependencies.manifest-json

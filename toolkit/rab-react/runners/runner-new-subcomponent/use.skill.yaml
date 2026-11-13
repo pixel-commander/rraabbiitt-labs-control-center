@@ -2,7 +2,7 @@ id: 1793143585576
 schema: 1
 intent: use
 name: use-runner-new-subcomponent
-title: New Subcomponent
+title: How to make a subcomponent
 path: toolkits/rab-react/runners/runner-new-subcomponent
 file: use.skill.yaml
 instructions: Call run with the shared ToolsProps bag. path is the caller project root; name is the

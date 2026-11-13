@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1791940045355
 name: checkers
-title: Checkers
+title: "How to Checkers"
 description: Validate selected subjects without repairing them.
 type: skill
 path: skills/toolkits/tools/checkers

@@ -3,6 +3,30 @@
   "type": "dependencies",
   "paths": [
     {
+      "name": "../../../../HouseKeys.types",
+      "path": "../../../../HouseKeys.types",
+      "type": "import",
+      "file": "messagesApi.ts"
+    },
+    {
+      "name": "../../../../HouseKeys.types",
+      "path": "../../../../HouseKeys.types",
+      "type": "import",
+      "file": "searchApi.ts"
+    },
+    {
+      "name": "../../../../../models/dumbot/dumbot",
+      "path": "../../../../../models/dumbot/dumbot",
+      "type": "import",
+      "file": "useHybridSearch.ts"
+    },
+    {
+      "name": "../../../../../models/dumbot/responder",
+      "path": "../../../../../models/dumbot/responder",
+      "type": "import",
+      "file": "useHybridSearch.ts"
+    },
+    {
       "name": "../../../MessageBox/hooks/useMessageProvider/useMessageProvider",
       "path": "../../../MessageBox/hooks/useMessageProvider/useMessageProvider",
       "type": "import",
@@ -15,10 +39,16 @@
       "file": "useHybridSearch.ts"
     },
     {
-      "name": "../../../../HouseKeys.types",
+      "name": "../../../SearchResponses/ResponseAndRankingCard/ResponseAndRankingCard.types",
+      "path": "../../../SearchResponses/ResponseAndRankingCard/ResponseAndRankingCard.types",
       "type": "import",
-      "file": "messagesApi.ts",
-      "path": "../../../../HouseKeys.types"
+      "file": "useHybridSearch.ts"
+    },
+    {
+      "name": "../../HybridSearch.types",
+      "path": "../../HybridSearch.types",
+      "type": "import",
+      "file": "useHybridSearch.ts"
     }
   ]
 }

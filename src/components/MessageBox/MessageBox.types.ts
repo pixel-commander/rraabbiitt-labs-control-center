@@ -7,6 +7,7 @@ export interface MessageBoxProps extends HouseKeys {
   children?: ReactNode;
   className?: string;
   value?: string;
+  handleClick?: HandlerKey<string, "rephrase", void, MessageBoxProps>;
   handleChange?: HandlerKey<string, "message-box", void, MessageBoxProps>;
   handleSubmit: HandlerKey<string, "message-box", void, MessageBoxProps>;
 }

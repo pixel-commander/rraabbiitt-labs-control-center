@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1793981262992
 name: refresh-project-json
-title: Refresh project JSON
+title: "How to Refresh project JSON"
 description: Refresh beacon summaries while preserving unmatched configured path destinations.
 owner:
   id: 1793981262988

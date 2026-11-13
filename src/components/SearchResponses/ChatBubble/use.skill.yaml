@@ -4,10 +4,10 @@ owner:
   id: 1794401889543
 id: 1794408972639
 name: ChatBubble
-title: Use ChatBubble
+title: "How to Use ChatBubble"
 description: Props, defaults and callbacks for ChatBubble.
 type: skill
-path: C:\rraabbiitt-hq\rraabbiitt-labs-control-center\src\components\SearchResponses\ChatBubble
+path: src/components/SearchResponses/ChatBubble
 tags: []
 implementation: []
 context: []

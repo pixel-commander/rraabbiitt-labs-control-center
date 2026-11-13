@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1791543035829
 name: css-atom-scaffolds
-title: css-atom-scaffolds
+title: "How to css-atom-scaffolds"
 description: Shared usage guidance for css-atoms.
 type: function
 path: toolkits/rab-react/scaffolds/css-atoms

@@ -1,0 +1,102 @@
+{
+  "id": 1794442290029,
+  "name": "RabbitHead",
+  "title": "RabbitHead",
+  "description": "",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "RabbitHead.tsx",
+  "path": "src/components/RabbitHead",
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt",
+      "id": 1794442464507
+    },
+    {
+      "name": "README.txt",
+      "path": "RabbitCanvas",
+      "type": "txt"
+    },
+    {
+      "name": "RabbitCanvas.tsx",
+      "path": "RabbitCanvas",
+      "type": "tsx"
+    },
+    {
+      "name": "RabbitCanvas.types.ts",
+      "path": "RabbitCanvas",
+      "type": "ts"
+    },
+    {
+      "name": "rabbit-canvas.css",
+      "path": "RabbitCanvas/css",
+      "type": "css"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": "RabbitCanvas",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "RabbitCanvas",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "RabbitCanvas",
+      "type": "yaml"
+    },
+    {
+      "name": "RabbitHead.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "RabbitHead.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "rabbit-head.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": "Demo.tsx",
+      "path": "demo",
+      "type": "tsx"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "RabbitStage.d.ts",
+      "path": "js",
+      "type": "ts"
+    },
+    {
+      "name": "RabbitStage.jsx",
+      "path": "js",
+      "type": "jsx"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml",
+      "id": 1794442464508
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+title: "How to use useDumBot"
+schema: 1
+intent: use
+id: 1794528643982
+name: useDumBot
+owner:
+  id: 1794528643980
+implementation:
+  - id: 1794528643980
+instructions: Generated starter; update with the implemented contract before use.

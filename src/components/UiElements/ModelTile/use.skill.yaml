@@ -4,10 +4,10 @@ owner:
   id: 1794395295618
 id: 1794408972999
 name: ModelTile
-title: Use ModelTile
+title: "How to Use ModelTile"
 description: Props, defaults and callbacks for ModelTile.
 type: skill
-path: C:\rraabbiitt-hq\rraabbiitt-labs-control-center\src\components\UiElements\ModelTile
+path: src/components/UiElements/ModelTile
 tags: []
 implementation: []
 context: []

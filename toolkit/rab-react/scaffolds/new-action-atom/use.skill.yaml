@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1791518659432
 name: new-action-atom
-title: New Action Atom
+title: "How to New Action Atom"
 description: Creates a action-atom CSS atom with its demo and metadata.
 type: function
 path: toolkits/rab-react/scaffolds/new-action-atom

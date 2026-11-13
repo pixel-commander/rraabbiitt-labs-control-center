@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1791940045421
 name: finders
-title: Finders
+title: "How to Finders"
 description: Locate and return matching subjects without modifying them.
 type: skill
 path: skills/toolkits/tools/finders

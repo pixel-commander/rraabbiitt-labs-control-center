@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1793984237831
 name: new-world-project-json
-title: New world project JSON
+title: "How to New world project JSON"
 description: Create a settings-shaped rab.project.json in a folder.
 context:
   - use: 1791940045476

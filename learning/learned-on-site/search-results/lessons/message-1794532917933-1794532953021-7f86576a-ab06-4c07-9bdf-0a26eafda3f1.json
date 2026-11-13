@@ -1,0 +1,83 @@
+{
+  "schema": 1,
+  "date": 1794532953021,
+  "sequence": 9,
+  "message": 1794532917933,
+  "query": "list all the components",
+  "id": 1793679050189,
+  "record_key": "skills/project/search/finding-records/use.skill.yaml",
+  "name": "all",
+  "content": {
+    "vote": "up"
+  },
+  "approved": true,
+  "origin": "user",
+  "scope": "query-result",
+  "lesson_type": "whole-result-relevance",
+  "grade": 1,
+  "source": {
+    "message": {
+      "id": 1794532917933,
+      "name": null,
+      "title": null,
+      "type": "user",
+      "description": "list all the components",
+      "tags": "[]",
+      "file": null,
+      "path": null,
+      "paths": "[]"
+    },
+    "record": {
+      "id": 1793679050189,
+      "name": "finding-records",
+      "title": "How to Find components, atoms, and skills",
+      "type": "skill",
+      "description": "Use search to find project records and read their type and source.",
+      "tags": "[\"project\", \"search\"]",
+      "file": "use.skill.yaml",
+      "path": "skills/project/search/finding-records",
+      "paths": "[]",
+      "data": {
+        "id": 1793679050189,
+        "name": "finding-records",
+        "title": "How to Find components, atoms, and skills",
+        "description": "Use search to find project records and read their type and source.",
+        "tags": [
+          "project",
+          "search"
+        ],
+        "context": [
+          {
+            "use": 1793679050118,
+            "path": "skills/project/search/use.skill.yaml",
+            "reason": "Read the shared search guide first."
+          }
+        ],
+        "intent": "use",
+        "outputs": {},
+        "type": "skill",
+        "path": "skills/project/search/finding-records",
+        "file": "use.skill.yaml",
+        "record_key": "skills/project/search/finding-records/use.skill.yaml",
+        "text": "finding-records\n\nHow to Find components, atoms, and skills\n\nUse search to find project records and read their type and source.\n\nEnter a question such as \"where are components?\" or \"how do I run the site?\". Read the best answer and open other results when needed.\nEach result shows its exact registered type above an icon. The name, ID, and source show which record supplied it. A skill can provide usage instructions.\nThe root rab.project.json lists source folders. Components are registered under src/components. Dashboard-owned components can be inside src/dashboards. Read the source path on each result.\nTo list actual records, request \"list all components\" or \"find all atoms\". If search finds a matching tool, review and confirm it using the tool guide.\nIf a new file is missing from search, check its metadata and registered source folder. Run npm run index from the project root after the requested change.",
+        "sources": [
+          {
+            "path": "skills/project/search/finding-records/use.skill.yaml",
+            "kind": "skill",
+            "sha256": "84973d4dd6b5b329cdf1cf26756a665148610cbb1344a7864dba56db02244830"
+          }
+        ],
+        "skills": [],
+        "instructions": "Enter a question such as \"where are components?\" or \"how do I run the site?\". Read the best answer and open other results when needed.\nEach result shows its exact registered type above an icon. The name, ID, and source show which record supplied it. A skill can provide usage instructions.\nThe root rab.project.json lists source folders. Components are registered under src/components. Dashboard-owned components can be inside src/dashboards. Read the source path on each result.\nTo list actual records, request \"list all components\" or \"find all atoms\". If search finds a matching tool, review and confirm it using the tool guide.\nIf a new file is missing from search, check its metadata and registered source folder. Run npm run index from the project root after the requested change."
+      }
+    }
+  },
+  "original": {
+    "query": "list all the components",
+    "message": 1794532917933,
+    "id": 1793679050189,
+    "path": "skills/project/search/finding-records/use.skill.yaml",
+    "name": "all",
+    "content": "{\"vote\":\"up\"}"
+  }
+}

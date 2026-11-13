@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1791518659441
 name: new-effect-atom
-title: New Effect Atom
+title: "How to New Effect Atom"
 description: Creates a effect-atom CSS atom with its demo and metadata.
 type: function
 path: toolkits/rab-react/scaffolds/new-effect-atom

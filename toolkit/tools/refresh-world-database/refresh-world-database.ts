@@ -74,3 +74,7 @@ export const run: UsageTool = async settings => {
     return { ...result, error: [result.error, `Usage reporting failed: ${error instanceof Error ? error.message : String(error)}`].filter(Boolean).join("\n") };
   }
 };
+
+// Direct execution uses the same exported tool contract.
+const { runToolCli } = await import("../../rab-world/runners/tool-cli.mjs");
+await runToolCli(import.meta.url, run);

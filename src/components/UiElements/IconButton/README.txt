@@ -18,3 +18,11 @@ The icon is decorative. Put the accessible text in children or title.
 
 The component owns no state. The parent owns the action.
 Use theme tokens, action_atom, className or parent CSS for style overrides.
+
+ICON_TYPES also includes skill (graduation cap), tool (wrench), runner (play),
+doc (document), find (magnifier), settings (animated pulse) and beacon (satellite).
+The settings pulse stops when the visitor requests reduced motion.
+These display keys do not restrict the database's record type values.
+
+ICONS maps record type keys to icon elements, such as skill: <SkillIcon />.
+ICON_TYPES includes ICONS plus add for button use.

@@ -1,0 +1,13 @@
+{
+  "id": 1794536548612,
+  "name": "WorldComponents",
+  "title": "World Components",
+  "description": "World-specific compositions and usage of presentational components.",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "WorldComponents.tsx",
+  "path": "src/components/WorldComponents"
+}

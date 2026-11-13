@@ -4,16 +4,16 @@ owner:
   id: 1794412867605
 id: 1794413032134
 name: HybridSearch
-title: Use HybridSearch
+title: "How to Use HybridSearch"
 description: Props, defaults and callbacks.
 type: function
-path: C:\rraabbiitt-hq\rraabbiitt-labs-control-center\src\components\HybridSearch
+path: src/components/HybridSearch
 tags: []
 implementation: []
 context: []
 inputs: {}
 outputs: {}
-instructions: "Props: none. Saves submitted user messages before calling the registered hybrid search API. Shows the top result title and description in the main header and remaining ranked cards in the right scroll. Explicit votes save whole-result lessons tied to the saved message and query. Callbacks: none accepted. Errors are displayed; no preview results substitute for failed requests."
+instructions: "Props: optional mode (hybrid by default or dumbot), HouseKeys and className. Optional rabbitEffects is a parent-owned ref populated by the background head handleReady callback; the existing query handleChange enables seven circuit arcs while text changes and clears the override one second after typing stops or on unmount. DumBot mode offers an outlined Rephrase button beside Run that previews the draft through the model responder without submitting it. DumBot mode ranks DB-pairs and slots, hides grading and lets users select a result to fill requirements. Saves submitted user messages before calling the registered hybrid search API. Shows the top result title and description in the main header and remaining ranked cards in the right scroll. Explicit votes save whole-result lessons tied to the saved message and query. Callbacks: none accepted. Errors are displayed; no preview results substitute for failed requests."
 checks: []
 examples: []
 routes: []

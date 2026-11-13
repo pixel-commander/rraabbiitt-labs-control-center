@@ -96,13 +96,6 @@
       "path": "src\\pages"
     },
     {
-      "name": "toolkit",
-      "type": "beacon",
-      "path": "toolkit",
-      "id": 1794423287652,
-      "file": "rab.beacon.json"
-    },
-    {
       "name": "api folder",
       "type": "path",
       "path": "api"
@@ -114,12 +107,44 @@
       "file": "app.sqlite"
     },
     {
+      "id": 1794415784096,
+      "name": "file-system",
+      "type": "beacon",
+      "tags": [],
+      "path": "X:/rraabbiitt-labs-control-center/api/file-system"
+    },
+    {
+      "id": 1794415784105,
+      "name": "api",
+      "type": "beacon",
+      "tags": [],
+      "path": "X:/rraabbiitt-labs-control-center/api"
+    },
+    {
       "id": 1794423287648,
       "name": "skills",
       "type": "beacon",
-      "path": "skills",
-      "file": "rab.beacon.json"
+      "tags": [],
+      "path": "X:/rraabbiitt-labs-control-center/skills"
+    },
+    {
+      "id": 1794151925547,
+      "name": "rab-react",
+      "type": "toolkit",
+      "tags": [
+        "rraabbiitt",
+        "toolkit",
+        "react"
+      ],
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react"
+    },
+    {
+      "id": 1794423287652,
+      "name": "toolkit",
+      "type": "beacon",
+      "tags": [],
+      "path": "X:/rraabbiitt-labs-control-center/toolkit"
     }
   ],
-  "path": "."
+  "path": "X:/rraabbiitt-labs-control-center"
 }

@@ -1,0 +1,133 @@
+{
+  "add": [
+    "add",
+    "adds",
+    "added",
+    "adding"
+  ],
+  "create": [
+    "create",
+    "creates",
+    "created",
+    "creating"
+  ],
+  "make": [
+    "make",
+    "makes",
+    "making",
+    "made"
+  ],
+  "find": [
+    "find",
+    "finds",
+    "finding",
+    "found"
+  ],
+  "search": [
+    "search",
+    "searches",
+    "searched",
+    "searching"
+  ],
+  "list": [
+    "list",
+    "lists",
+    "listed",
+    "listing"
+  ],
+  "read": [
+    "read",
+    "reads",
+    "reading"
+  ],
+  "edit": [
+    "edit",
+    "edits",
+    "edited",
+    "editing"
+  ],
+  "delete": [
+    "delete",
+    "deletes",
+    "deleted",
+    "deleting"
+  ],
+  "remove": [
+    "remove",
+    "removes",
+    "removed",
+    "removing"
+  ],
+  "move": [
+    "move",
+    "moves",
+    "moved",
+    "moving"
+  ],
+  "copy": [
+    "copy",
+    "copies",
+    "copied",
+    "copying"
+  ],
+  "rename": [
+    "rename",
+    "renames",
+    "renamed",
+    "renaming"
+  ],
+  "run": [
+    "run",
+    "runs",
+    "running",
+    "ran"
+  ],
+  "execute": [
+    "execute",
+    "executes",
+    "executed",
+    "executing"
+  ],
+  "stop": [
+    "stop",
+    "stops",
+    "stopped",
+    "stopping"
+  ],
+  "validate": [
+    "validate",
+    "validates",
+    "validated",
+    "validating"
+  ],
+  "refresh": [
+    "refresh",
+    "refreshes",
+    "refreshed",
+    "refreshing"
+  ],
+  "import": [
+    "import",
+    "imports",
+    "imported",
+    "importing"
+  ],
+  "export": [
+    "export",
+    "exports",
+    "exported",
+    "exporting"
+  ],
+  "train": [
+    "train",
+    "trains",
+    "trained",
+    "training"
+  ],
+  "use": [
+    "use",
+    "uses",
+    "used",
+    "using"
+  ]
+}

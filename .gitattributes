@@ -1,2 +1,8 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Preserve checksum-pinned bytes.
+learning/shipped-with-app/search-results/saved-models/hybrid-seat-ranking/** -text
+tests/hybrid-search/catalog.json -text
+tests/hybrid-search/expectations.json -text
+db/base/*.sqlite binary

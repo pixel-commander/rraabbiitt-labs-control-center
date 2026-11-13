@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1791853637988
 name: new-skill-flow
-title: New skill flow
+title: "How to New skill flow"
 description: Create a standalone YAML skill from the owned template.
 owner:
   id: 1791853637888
@@ -11,7 +11,7 @@ context:
 implementation:
   - id: 1791853637888
 instructions: "Call run(props) with one HouseKeys bag. Required nonempty strings: name, title,
-  description, path and instructions. path is the destination folder. intent is use (default) or
+  description, path and instructions. path is the destination folder in this world. The saved path is relative to rab.world.json. intent is use (default) or
   enhance; file selects the matching output skill YAML filename. Optional owner, type, tags, paths,
   implementation, context, inputs, outputs, checks, examples, routes and provenance are accepted.
   Returns ToolReturn with the saved skill record in response and the incoming props in settings. An

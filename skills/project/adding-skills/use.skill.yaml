@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1793144165307
 name: adding-skills
-title: Add a skill
+title: "How to Add a skill"
 description:
   Write a small usage skill, group shared instructions under one parent,
   and link it to the thing it explains.

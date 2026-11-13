@@ -4,10 +4,10 @@ owner:
   id: 1794404369434
 id: 1794408972671
 name: ResponseAndRankingCard
-title: Use ResponseAndRankingCard
+title: "How to Use ResponseAndRankingCard"
 description: Props, defaults and callbacks for ResponseAndRankingCard.
 type: skill
-path: C:\rraabbiitt-hq\rraabbiitt-labs-control-center\src\components\SearchResponses\ResponseAndRankingCard
+path: src/components/SearchResponses/ResponseAndRankingCard
 tags: []
 implementation: []
 context: []
@@ -72,6 +72,15 @@ inputs:
   date_end:
     type: number | undefined
     required: false
+  container_class:
+    type: string | undefined
+    required: false
+  children:
+    type: ReactNode
+    required: false
+  favorite:
+    type: boolean | undefined
+    required: false
 outputs: {}
 instructions: >-
   Props
@@ -126,8 +135,12 @@ instructions: >-
   Callbacks and prop behavior
 
   rank and score are numbers; score displays two decimals. name is metadata text; id is numeric;
-  title accepts ReactNode. action_class styles Rephrase only; hand-vote buttons have no action atom. handleClick receives (data,
-  "good-vote" | "ok-vote" | "bad-vote" | "rephrase", props).
+  title accepts ReactNode. action_class styles Rephrase only; hand-vote buttons have no action atom.
+  handleClick receives (data, "good-vote" | "ok-vote" | "bad-vote" | "rephrase", props). children
+  optionally adds content between heading and actions. container_class defaults to
+  container-side-rail; an empty string removes the skin. favorite defaults to false. The star is at
+  the footer right. Clicking it calls handleClick(data, "favorite", complete props). The parent owns
+  favorites and persistence. Each footer control has a tooltip.
 checks: []
 examples: []
 routes: []

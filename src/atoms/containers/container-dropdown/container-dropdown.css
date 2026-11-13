@@ -1,0 +1,17 @@
+@layer atoms {
+  .container-dropdown {
+    color: var(--color-main-alt-neg);
+    background: linear-gradient(
+      160deg,
+      color-mix(in srgb, var(--color-main-alt) var(--bg-filter-opacity, 65%), transparent),
+      color-mix(in srgb, var(--color-main) var(--container-dropdown-end-opacity, 45%), transparent)
+    );
+    border: var(--border-width) var(--border-style) var(--border-subtle);
+    border-radius: var(--radius-container);
+    -webkit-backdrop-filter: blur(var(--bg-filter-blur, 12px));
+    backdrop-filter: blur(var(--bg-filter-blur, 12px));
+    box-shadow:
+      inset 0 0 40px 8px color-mix(in srgb, var(--color-main) 32%, transparent),
+      var(--elevation-float);
+  }
+}

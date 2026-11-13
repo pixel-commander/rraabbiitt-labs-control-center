@@ -4,10 +4,10 @@ owner:
   id: 1794395693982
 id: 1794413032168
 name: useWorldSearch
-title: Use useWorldSearch
+title: "How to Use useWorldSearch"
 description: Hook usage.
 type: function
-path: C:\rraabbiitt-hq\rraabbiitt-labs-control-center\src\pages\WorldSearch\hooks\useWorldSearch
+path: src/pages/WorldSearch/hooks/useWorldSearch
 tags: []
 implementation: []
 context:

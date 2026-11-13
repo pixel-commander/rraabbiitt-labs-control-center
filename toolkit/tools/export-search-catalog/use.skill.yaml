@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1793676793915
 name: use-export-search-catalog
-title: export-search-catalog
+title: "How to export-search-catalog"
 description: Export indexed records and skills as a search catalog.
 type: skill
 path: toolkit/tools/export-search-catalog

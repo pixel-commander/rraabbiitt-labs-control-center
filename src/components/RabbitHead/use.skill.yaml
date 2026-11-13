@@ -1,0 +1,94 @@
+schema: 1
+intent: use
+id: 1794442464508
+name: use-rabbit-head
+title: "How to Use RabbitHead"
+description: Render and configure the portable Rraabbiitt 3D head.
+type: function
+implementation:
+  - use: 1794442290029
+context:
+  - use: 1794442464507
+    reason: Complete RabbitHead prop, settings, defaults, and effects reference.
+  - use: 1794023448112
+    reason: Parent dashboard and source of the interactive settings controls.
+instructions: >-
+  Import RabbitHead as a React component. Place it inside a parent with a defined
+  width and height. RabbitHead fills that parent. Use className or style to set
+  placement and size. Set transparentBg to true for a transparent background.
+  Set interactive to false for a page background or decorative icon.
+
+  Arc core and halo colors accept circuitCoreColor and circuitGlowColor props,
+  or settings.circuits.coreColor and glowColor. Monochrome uses monoColor for both.
+  The handleReady effects object accepts circuits overrides with optional coreColor and glowColor hex strings for arc cores and halos. circuits(null) clears these overrides.
+  Control the head with the typed settings prop. It accepts partial groups:
+  pulses, sparkles, dust, circuits, lightning, flood, hover, colors, surface,
+  and view. Omitted fields use the renderer defaults. Keep numeric values within
+  the dashboard ranges in README ID 1794442464507. The component does not clamp
+  values. It preserves false, zero, and empty-string values.
+
+  Pulses supports on, freq, size, travel, and speed. Defaults are true, 14, 1,
+  3, and 1. The dashboard ranges are 0-40 by 1, 0.25-4 by 0.25, 1-20 by 1,
+  and 0.1-5 by 0.1 for the numeric fields.
+
+  Sparkles supports on, freq, size, travel, speed, and amount. Defaults are
+  true, 8, 1, 6, 1, and 0.5. Dashboard ranges are 0-40 by 1, 0.25-4 by 0.25,
+  1-20 by 1, 0.1-5 by 0.1, and 0-1 by 0.05. Dust supports amount and size.
+  Their defaults are 0.5 and 1; dashboard ranges are 0-1 by 0.05 and 0.25-3
+  by 0.25. dust.amount takes priority over sparkles.amount.
+
+  Circuits supports on, density, count, length, opacity, speed, auto, rate,
+  glow, jumps, hold, dir, and step. Defaults are true, 0.55, 2, 1, 0.22, 1,
+  false, 10, 0.4, 4, 0.4, 0, and 1. Dashboard ranges are opacity 0.05-1 by
+  0.05; speed 0.25-4 by 0.25; rate 1-40 by 1; glow and hold 0-1 by 0.05;
+  jumps 1-14 by 1; direction -180-180 by 15; and step 1-4 by 1.
+
+  Lightning supports auto, rate, arms, hops, speed, intensity, and fade.
+  Defaults are false, 12 events per minute, 3 arms, 22 hops, speed 1,
+  intensity 1, and fade 900 ms. Dashboard ranges are rate 1-120 by 1, arms
+  1-8 by 1, hops 4-60 by 1, intensity 0.25-3 by 0.25, and fade 200-3000 ms
+  by 100. Flood supports auto, rate, hops, speed, intensity, and fade. Defaults
+  are false, 8 per minute, 22 hops, speed 1, intensity 1, and 900 ms. Its rate,
+  hops, intensity, and fade use the same ranges as lightning.
+
+  Hover supports glow, sparks, pulse, circuit, strike, flood, radius, strength,
+  and rate. Effect toggles default to false. Radius defaults to 90 px and uses
+  30-240 by 10. Strength defaults to 1 and uses 0.25-3 by 0.25. Rate defaults
+  to 2 events per second and uses 0.5-10 by 0.5.
+
+  Colors supports mono, monoColor, line, face, fx, circuit, strike, and flood.
+  mono defaults to false. A mono color string enables mono mode and sets the
+  mono color. The default mono color is #4dff88. Default line, fx, strike, and
+  flood colors are #4dff88. The default face color is #39e28e. Circuit color
+  defaults to the fx color. Use CSS hex strings.
+
+  Surface supports faceOpacity, lineOpacity, glitch, pointSize, pointGlow, and
+  showPoints. Defaults are 0.96, 1, 1, 1.5, 0, and true. Dashboard ranges are
+  0-1 by 0.05 for opacity and glow, 0-3 by 0.25 for glitch, and 0-6 by 0.25
+  for pointSize.
+
+  View supports zoom, panX, and panY. panY defaults to 0; negative values move
+  the head up and positive values move it down. Defaults are 1 and 0. Dashboard ranges are
+  0.3-3 by 0.05 and -1-1 by 0.02. RabbitHead also accepts direct renderer props
+  for every mapped value. A defined direct prop takes priority over settings.
+  It accepts model, transparentBg, motion, wheelZoom, autoMotion, followMouse,
+  followX, followY, shading, and interactive as top-level props. Model values
+  include rabbit-lo, rabbit, rabbit-hi, rabbit-pro, skull, robot, brain, or a saved custom
+  model key. Defaults are rabbit, opaque background, full motion, wheel zoom on,
+  automatic motion on, pointer following on, followX 0.7, followY 0.35, smooth
+  shading, and interactive true.
+
+  RabbitHead hides the dashboard labels, model picker, sculpt tools, and snapshot
+  controls. It keeps the renderer and canvas; red targeting brackets are removed. It does not expose the
+  sculpt UI. Use handleReady to receive the effects command object. This
+  callback uses the House HandlerKey form: handleReady(effects, "rabbit-head",
+  completeProps). It receives null on unmount. The effects commands are strike,
+  faceStrike, storm(count, interval), and model(name). Group methods are pulses,
+  sparkles, dust, circuits, lightning, flood, hover, colors, surface, and view.
+  Each group method accepts an options object or null. It merges options into
+  the runtime override. Pass null to clear that override.
+
+  See README ID 1794442464507 for prop mappings, the complete defaults table,
+  effects options, and usage examples.
+owner:
+  id: 1794442290029

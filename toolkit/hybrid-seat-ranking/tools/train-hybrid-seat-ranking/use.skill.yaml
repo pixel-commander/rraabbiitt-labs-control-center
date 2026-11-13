@@ -2,8 +2,7 @@ schema: 1
 intent: use
 id: 1793154927348
 name: use-train-hybrid-seat-ranking
-title: Indexes supervised third-channel query/field evidence and saves checkpoints for frozen
-  BM25/semantic/RRF models and reranking.
+title: "How to Indexes supervised third-channel query/field evidence and saves checkpoints for frozen BM25/semantic/RRF models and reranking."
 description: Indexes supervised third-channel query/field evidence and saves checkpoints for frozen
   BM25/semantic/RRF models and reranking.
 type: skill

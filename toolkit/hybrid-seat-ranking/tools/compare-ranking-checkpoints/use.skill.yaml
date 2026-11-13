@@ -1,7 +1,7 @@
 schema: 1
 intent: use
 name: use-compare-ranking-checkpoints
-title: compare-ranking-checkpoints
+title: "How to compare-ranking-checkpoints"
 description: Compare active and candidate search rankings on the same saved catalog and held-out
   whole-answer judgments. Reports gains and regressions without activation.
 type: skill

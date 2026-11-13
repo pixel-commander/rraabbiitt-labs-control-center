@@ -1,6 +1,8 @@
 import { readFile, readdir, stat, realpath, mkdir, writeFile } from "node:fs/promises";
 import { resolve, dirname, join, relative, isAbsolute } from "node:path";
 import { spawnSync } from "node:child_process";
+import { parse } from "yaml";
+import { win32 } from "node:path";
 import { projectRoot, loadWorld, withinProject } from "./world.mjs";
 
 const errors = [];
@@ -24,6 +26,11 @@ async function scan(folder) {
   for (const entry of await readdir(folder, { withFileTypes: true })) {
     const file = join(folder, entry.name);
     if (entry.isDirectory()) { if (!skip.has(entry.name)) await scan(file); continue; }
+    if (/\.skill\.yaml$/.test(file)) {
+      const record = parse(await readFile(file, "utf8"));
+      if (typeof record?.path === "string" && (isAbsolute(record.path) || win32.isAbsolute(record.path) || !withinProject(projectRoot, resolve(projectRoot, record.path))))
+        errors.push(`Nonportable skill path ${relative(projectRoot, file)}: ${record.path}`);
+    }
     if (!/\.(?:ts|tsx|js|mjs)$/.test(file)) continue;
     const text = await readFile(file, "utf8");
     for (const match of text.matchAll(/(?:from\s*|import\s*\(\s*|import\s*)["'](\.[^"']+)["']/g)) {
@@ -38,7 +45,7 @@ async function scan(folder) {
     }
   }
 }
-for (const folder of ["src", "ui", "api", "scripts", "toolkit", "tests", "db"]) await scan(resolve(projectRoot, folder));
+for (const folder of ["src", "ui", "api", "scripts", "toolkit", "tests", "db", "skills", "learning"]) await scan(resolve(projectRoot, folder));
 const interpreter = world.paths.find(entry => entry.name === "search-python");
 const python = resolve(projectRoot, interpreter.path, interpreter.file);
 const checked = spawnSync(python, ["-B", "-c", [

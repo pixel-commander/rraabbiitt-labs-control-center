@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1793979336057
 name: new-world-beacon-json
-title: New world beacon JSON
+title: "How to New world beacon JSON"
 description: Create a settings-shaped rab.beacon.json in a folder.
 context:
   - use: 1791940045476

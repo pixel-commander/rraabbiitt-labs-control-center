@@ -1,0 +1,13 @@
+{
+  "id": 1794538905696,
+  "name": "ToggleSection",
+  "title": "ToggleSection",
+  "description": "Two-column section with title, chevron and ref-toggled scrollable content.",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "ToggleSection.tsx",
+  "path": "src/components/ToggleSection"
+}

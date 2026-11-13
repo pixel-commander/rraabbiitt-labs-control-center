@@ -18,7 +18,12 @@
     "ranker:search:example": "node scripts/ranker.mjs --catalog data/catalog.example.json --base",
     "mcp": "node scripts/mcp.mjs",
     "hybrid:setup": "node scripts/setup-hybrid.mjs",
-    "audit:portable": "node scripts/audit-portability.mjs"
+    "audit:portable": "node scripts/audit-portability.mjs",
+    "db:refresh": "node toolkit/tools/refresh-world-database/refresh-world-database.ts",
+    "tool": "node scripts/tool.mjs",
+    "db:base": "node scripts/prepare-base-db.mjs",
+    "test:portability": "node tests/portability/setup.mjs && node tests/portability/worker.mjs",
+    "test:mcp": "node tests/portability/mcp.mjs"
   },
   "dependencies": {
     "@modelcontextprotocol/node": "^2.1.2",

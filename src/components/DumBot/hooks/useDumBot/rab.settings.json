@@ -1,0 +1,13 @@
+{
+  "id": 1794528643980,
+  "name": "useDumBot",
+  "title": "useDumBot",
+  "description": "",
+  "type": "hook",
+  "tags": [
+    "react",
+    "hook"
+  ],
+  "file": "useDumBot.ts",
+  "path": "src/components/DumBot/hooks/useDumBot"
+}

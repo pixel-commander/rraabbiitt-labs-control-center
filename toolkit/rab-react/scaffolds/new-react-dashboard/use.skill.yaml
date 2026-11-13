@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1791518659423
 name: new-react-dashboard
-title: New Dashboard
+title: "How to New Dashboard"
 description: Creates a self-contained header-main React dashboard.
 type: function
 path: toolkits/rab-react/scaffolds/new-react-dashboard

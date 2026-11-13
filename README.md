@@ -135,9 +135,17 @@ before adding fields.
 
 Setup creates required tables. It does not populate document records. A table's existence does not establish a working persistence connection.
 
-Check Git inclusion before transfer. This project does not ignore `db/main/`.
-The database can contain user messages. Keep schema and setup source so a new
-installation can create an empty database when live data is not transferred.
+`db/main/` is Git-ignored working data. `db/base/app.sqlite` is the clean database
+for a new installation. It contains indexed source records and no application
+messages, documents, runs or usage history. Setup copies it only when `db/main/`
+is absent. It never replaces an existing working database. To transfer live
+history, include the working database separately in the folder transfer.
+
+Run `npm run db:refresh` after you edit existing source metadata or skills.
+Successful scaffolds also refresh registration. Run `npm run db:base` after
+refresh to prepare the clean distribution database. This command reads the
+working database and removes application history only from a temporary copy.
+It does not change the working database.
 
 ## Training Data
 
@@ -169,7 +177,7 @@ endpoint together. The registered local URL is in `rab.world.json`.
 Run `npm run build` to check TypeScript and produce the production UI. Run `npm run preview` to inspect that build locally.
 
 `npm run setup` creates the local `.venv`, installs the hybrid runtime
-dependencies, and sets up the database. It does not download models or start
+dependencies, sets up the database, and indexes registered source records. It does not download models or start
 training. The shipped model files must be present. Use `npm run hybrid:setup`
 or `npm run db:setup` for one part. `npm run ranker:setup` installs only the
 separate optional portable CLI.
@@ -193,3 +201,39 @@ Temporary files and reports stay in this project's Git-ignored `.tmp/`.
 Verify actual output before you call an integration complete. For UI changes, check rendered behavior and applicable themes. For tools and endpoints, check responses and stored results. Run applicable build and contract checks. State which connections remain incomplete.
 
 
+
+## Run a Tool by ID
+
+Use `npm run tool -- ID` to read a current registration and its usage skill.
+Use `npm run tool -- ID JSON-settings` to execute that registered tool or runner.
+Quote the JSON object as required by your shell. A tool with a `run` export does
+not necessarily execute when you pass its source file directly to Node.
+Use this ID runner unless the tool documents a direct CLI.
+
+The ID runner reads the records table first. It checks the current settings file
+inside the supplied toolkit before loading code. A missing ID causes a source
+refresh. Discovery is the fallback for explicitly supplied toolkits.
+
+## Search Cache
+
+The API keeps a local Python worker loaded between queries. The worker reads
+approved lessons for each query. It does not train model weights.
+
+Catalog vectors are disposable files in `.tmp/hybrid-search/vectors/`.
+Their key includes record IDs, record keys, field text, type, order, and encoder
+configuration with pinned asset hashes. Changed searchable data gets new vectors.
+Changed instructions refresh the result data without rebuilding unchanged vectors.
+Model and checkpoint file changes restart the worker. Pinned assets are verified
+when the new worker loads the model. A process restart still loads the models,
+but it can read saved catalog vectors.
+
+The database is the source for the catalog. Refresh it after source-file edits.
+An unindexed file edit cannot invalidate the search cache.
+
+## Portability Regression Checks
+
+Run `npm run test:portability` after setup. It checks a relocated database setup,
+message preservation, BOM input, ID lookup, relative paths and scaffold indexing.
+It also checks search worker reuse, catalog invalidation and disk cache reuse.
+Run `npm run test:mcp` to check the local MCP handler on a temporary loopback port.
+These checks put temporary fixtures and reports in `.tmp/portability-tests/`.

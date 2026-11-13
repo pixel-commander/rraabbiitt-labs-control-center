@@ -1,0 +1,79 @@
+PORTABILITY ISSUE RESOLUTION
+Date: 2026-11-11
+Scope: This standalone package. The original PROBLEMS.txt is unchanged.
+
+SETUP AND BASE DATABASE - PASS
+Setup now runs catalog refresh after database setup. The current catalog has
+262 records: 153 other source records and 109 skills.
+db/base/app.sqlite is the clean distribution database. It has no application
+messages, docs, runs, tool calls or usage history. Setup copies it only when
+the working database folder is absent. The copy refuses an existing target.
+A relocated fixture passed integrity checks and retained a test message after
+repeat setup and refresh. The active database was not replaced.
+
+TOOL COMMANDS AND LOOKUP - PASS
+npm run db:refresh runs the refresh CLI. npm run tool -- ID inspects a tool.
+Add a quoted JSON settings object to execute it. Invalid inputs return errors.
+The dispatcher looks up IDs in records and reads current adjacent metadata.
+A missing indexed ID refreshes source registration. Explicit toolkit discovery
+remains a fallback. Successful scaffolds and saved settings refresh the catalog.
+Tests verified that an indexed lookup succeeds with unrelated broken metadata
+elsewhere in the toolkit. This checks that the lookup does not walk that tree.
+
+PINNED BYTES - PASS
+Line-ending conversion caused checksum differences in this copy. Exact LF or
+CRLF variants were accepted only when they matched the existing expected hash.
+The frozen catalog and engine configuration were restored by that same check.
+Expected hashes, test answers and model weights were not changed.
+.gitattributes now prevents conversion of checksum-pinned assets and fixtures.
+The unchanged hybrid baseline passed all seven queries and checks model files
+for unexpected writes.
+
+RELATIVE PATHS - PASS
+refresh-settings-json, new-settings-json and new-skill-flow save location paths
+relative to this world's folder. File-list paths retain their owning-folder
+contract. Existing IDs are retained when records are refreshed.
+28 stale absolute skill location fields were corrected in this copy.
+The portability audit now checks skill location fields. It passed with
+399 local imports and nine contained runtime locations.
+
+RESULT CARD TYPE - ALREADY PRESENT
+HybridSearch already passes type={record.type} to ResponseAndRankingCard.
+No component edit was needed for this report.
+
+SEARCH WORKER AND VECTORS - PASS
+The API reuses a Python worker. Source model/checkpoint changes restart it.
+Every request reads the current database export and approved lesson files.
+Catalog vectors are keyed by searchable content, record order/identity and
+encoder configuration. Disposable vectors are saved under .tmp/hybrid-search.
+Full catalog metadata changes also invalidate the in-memory result state.
+Tests verified warm worker reuse, changed text rebuilding vectors, changed
+instructions reusing vectors, recovery after invalid input, and disk reuse
+after a worker restart. Closing the MCP handler stops its search workers.
+
+Measured here with 262 records:
+- Vector construction, including field index setup: about 2.2 seconds.
+- First cold search: about 11.9 seconds, including model loading.
+- Warm repeated search: about 0.4 seconds.
+- Restart with saved vectors: about 10 to 12 seconds, mostly model loading.
+These are local measurements, not a performance guarantee for enterprise data.
+Refresh the catalog after existing source files change. A file edit that is
+not indexed cannot invalidate the database-derived vectors.
+
+BOM INPUT - PASS
+The UTF-8 BOM input support was retained and tested through the refresh CLI's
+Python entry point.
+
+VERIFICATION
+npm run test:portability - PASS
+npm run test:hybrid-baseline - PASS, 7 of 7
+npm run test:mcp - PASS
+npm run build - PASS; Vite retains its large-chunk advisory.
+npm run audit:portable - PASS
+Git diff whitespace check - PASS
+Base database and model assets are not Git-ignored. Working db/main and .tmp are.
+Detailed generated reports remain under .tmp; no receipt folder was added.
+
+NEXT TASK
+Root-folder access through MCP for cloud, LLM and Dumbot is not part of these
+issue fixes. It remains on TASK_LIST.txt. No zip or Git commit was created.

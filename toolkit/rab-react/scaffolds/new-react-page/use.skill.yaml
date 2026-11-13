@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1791518659413
 name: new-react-page
-title: New Page
+title: "How to New Page"
 description: Creates a React page with its stylesheet, hook and content template.
 type: function
 path: toolkits/rab-react/scaffolds/new-react-page

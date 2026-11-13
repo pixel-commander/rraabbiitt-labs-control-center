@@ -1,0 +1,24 @@
+{
+  "name": "DumBot",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../../../models/dumbot/model/db-pairs.ts",
+      "path": "../../../models/dumbot/model/db-pairs.ts",
+      "type": "import",
+      "file": "db-pairs.adapter.ts"
+    },
+    {
+      "name": "../../../models/dumbot/model/db-pairs.ts",
+      "path": "../../../models/dumbot/model/db-pairs.ts",
+      "type": "import",
+      "file": "db-pairs.adapter.ts"
+    },
+    {
+      "name": "../../components/HybridSearch/HybridSearch",
+      "path": "../../components/HybridSearch/HybridSearch",
+      "type": "import",
+      "file": "DumBotPage.tsx"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": 1794534782424,
+  "name": "RabbitControls",
+  "title": "Rabbit Controls",
+  "description": "Compact floating rabbit appearance and effects controls",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "RabbitControls.tsx",
+  "path": "src/components/RabbitHead/RabbitControls",
+  "skills": [
+    {
+      "id": 1794535078354,
+      "path": "src/components/RabbitHead/RabbitControls/use.skill.yaml"
+    }
+  ],
+  "paths": [
+    {
+      "path": "src/components/RabbitHead/RabbitControls",
+      "file": "use.skill.yaml",
+      "type": "skill",
+      "id": 1794535078354
+    },
+    {
+      "path": "src/components/RabbitHead/RabbitControls",
+      "file": "README.txt",
+      "type": "file"
+    }
+  ]
+}

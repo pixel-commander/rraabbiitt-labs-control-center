@@ -6,9 +6,7 @@ import { pathToFileURL } from "node:url";
 const world = await loadWorld();
 const attachMcp = async server => {
   const { createRequestHandler } = await import(pathToFileURL(resolve(world.path, world.mcp.path, world.mcp.file)).href);
-  const handler = await createRequestHandler({ ...world,
-    toolkits: world.toolkits.map(entry => ({ ...entry, path: resolve(world.path, entry.path) })),
-  });
+  const handler = await createRequestHandler();
   server.middlewares.use((req, res, next) => {
     const pathname = new URL(req.url, "http://localhost").pathname;
     if (pathname !== "/mcp" && !pathname.startsWith("/api/")) return next();

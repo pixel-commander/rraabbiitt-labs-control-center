@@ -2,7 +2,7 @@ id: 1793143585575
 schema: 1
 intent: use
 name: use-runner-new-react-project-kit
-title: New React Project Kit
+title: How to make a new React project kit
 path: toolkits/rab-react/runners/runner-new-react-project-kit
 file: use.skill.yaml
 instructions: Call run with the shared ToolsProps bag. path is an existing parent folder or caller

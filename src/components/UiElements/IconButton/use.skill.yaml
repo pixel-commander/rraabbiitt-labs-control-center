@@ -4,10 +4,10 @@ owner:
   id: 1794398974533
 id: 1794408972904
 name: IconButton
-title: Use IconButton
+title: "How to Use IconButton"
 description: Props, defaults and callbacks for IconButton.
 type: skill
-path: C:\rraabbiitt-hq\rraabbiitt-labs-control-center\src\components\UiElements\IconButton
+path: src/components/UiElements/IconButton
 tags: []
 implementation: []
 context: []
@@ -19,7 +19,7 @@ inputs:
     type: ReactNode
     required: false
   type:
-    type: '"add" | undefined'
+    type: keyof typeof ICON_TYPES | undefined
     required: false
   disabled:
     type: boolean | undefined
@@ -84,7 +84,8 @@ instructions: >-
 
   Icon (optional): ReactNode
 
-  type (optional): "add" | undefined
+  type (optional): "add" | "skill" | "tool" | "runner" | "doc" | "find" | "settings" | "beacon" |
+  undefined
 
   disabled (optional): boolean | undefined
 

@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1793679050322
 name: feedback-training
-title: Teach search with feedback
+title: "How to Teach search with feedback"
 description: Use result feedback and rephrasing to improve ranking from reviewed examples.
 type: skill
 path: skills/project/search/feedback-training

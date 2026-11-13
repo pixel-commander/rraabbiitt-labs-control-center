@@ -1,0 +1,4 @@
+TODO
+
+- Add tool: find-world-anchor. Deferred; revisit later.
+- Add hash verification for project files when the project is closer to completion. Deferred.

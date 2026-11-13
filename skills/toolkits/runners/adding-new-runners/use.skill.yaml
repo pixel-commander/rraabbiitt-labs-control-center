@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1791940045292
 name: adding-new-runners
-title: Adding runners
+title: "How to Adding runners"
 description: Define composition without duplicating domain tools or tracking.
 type: skill
 path: skills/toolkits/runners/adding-new-runners

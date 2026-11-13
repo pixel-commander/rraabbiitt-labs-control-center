@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1793723655465
 name: configure vite startup
-title: Configure Vite startup for the local app
+title: "How to Configure Vite startup for the local app"
 description: How Vite finds the startup model Python environment and database and loads the local API plugins.
 type: skill
 path: skills/project/vite

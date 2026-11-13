@@ -9,3 +9,13 @@
     border-radius: var(--radius-container);
   }
 }
+
+@layer atoms {
+  @supports (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px)) {
+    .container-main.--bg-filter {
+      background: color-mix(in srgb, var(--container-main-background, var(--color-main-alt)) var(--bg-filter-opacity, 65%), transparent);
+      -webkit-backdrop-filter: blur(var(--bg-filter-blur, 12px));
+      backdrop-filter: blur(var(--bg-filter-blur, 12px));
+    }
+  }
+}

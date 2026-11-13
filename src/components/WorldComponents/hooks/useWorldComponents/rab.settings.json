@@ -1,0 +1,13 @@
+{
+  "id": 1794536548613,
+  "name": "useWorldComponents",
+  "title": "useWorldComponents",
+  "description": "",
+  "type": "hook",
+  "tags": [
+    "react",
+    "hook"
+  ],
+  "file": "useWorldComponents.ts",
+  "path": "src/components/WorldComponents/hooks/useWorldComponents"
+}

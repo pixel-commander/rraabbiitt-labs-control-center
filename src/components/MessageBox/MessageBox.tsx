@@ -28,6 +28,9 @@ export const MessageBox = (props: MessageBoxProps) => {
         onKeyDown={handleKeyDown}
       />
       <div className="message-box-children">{children}</div>
+      <div className="message-box-actions" data-cols={props.handleClick ? "2" : "1"} data-gap="control">
+        {props.handleClick && <button type="button" className="action-outline" disabled={!value.trim()}
+          onClick={() => props.handleClick?.(value.trim(), "rephrase", props)}>Rephrase</button>}
       <button
         className={["message-box-submit", submit_class]
           .filter(Boolean)
@@ -37,6 +40,7 @@ export const MessageBox = (props: MessageBoxProps) => {
       >
         Run ↑
       </button>
+      </div>
     </form>
   );
 };

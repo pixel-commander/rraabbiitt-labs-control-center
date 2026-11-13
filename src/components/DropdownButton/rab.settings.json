@@ -1,0 +1,13 @@
+{
+  "id": 1794538514756,
+  "name": "DropdownButton",
+  "title": "DropdownButton",
+  "description": "Ref-driven dropdown disclosure with optional initial-open and forced-closed flags.",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "DropdownButton.tsx",
+  "path": "src/components/DropdownButton"
+}

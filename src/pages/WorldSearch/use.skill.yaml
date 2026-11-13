@@ -4,10 +4,10 @@ owner:
   id: 1794395343357
 id: 1794408973490
 name: WorldSearchPage
-title: Use WorldSearchPage
+title: "How to Use WorldSearchPage"
 description: Props, defaults and callbacks for WorldSearchPage.
 type: skill
-path: C:\rraabbiitt-hq\rraabbiitt-labs-control-center\src\pages\WorldSearch
+path: src/pages/WorldSearch
 tags: []
 implementation: []
 context: []

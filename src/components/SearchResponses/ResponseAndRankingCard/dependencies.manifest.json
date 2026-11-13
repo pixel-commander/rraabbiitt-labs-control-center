@@ -3,6 +3,18 @@
   "type": "dependencies",
   "paths": [
     {
+      "name": "../../Tooltip/Tooltip",
+      "path": "../../Tooltip/Tooltip",
+      "type": "import",
+      "file": "ResponseAndRankingCard.tsx"
+    },
+    {
+      "name": "../../UiElements/IconButton/IconButton",
+      "path": "../../UiElements/IconButton/IconButton",
+      "type": "import",
+      "file": "ResponseAndRankingCard.tsx"
+    },
+    {
       "name": "../../../HouseKeys.types",
       "path": "../../../HouseKeys.types",
       "type": "import",

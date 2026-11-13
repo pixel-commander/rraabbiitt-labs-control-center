@@ -4,10 +4,10 @@ owner:
   id: 1794404078377
 id: 1794408973434
 name: ToolCol
-title: Use ToolCol
+title: "How to Use ToolCol"
 description: Props, defaults and callbacks for ToolCol.
 type: skill
-path: C:\rraabbiitt-hq\rraabbiitt-labs-control-center\src\pages\WorldSearch\ToolCol
+path: src/pages/WorldSearch/ToolCol
 tags: []
 implementation: []
 context: []

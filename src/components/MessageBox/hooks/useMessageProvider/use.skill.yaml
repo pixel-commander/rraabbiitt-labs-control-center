@@ -4,10 +4,10 @@ owner:
   id: 1794413032084
 id: 1794413032111
 name: useMessageProvider
-title: Use useMessageProvider
+title: "How to Use useMessageProvider"
 description: Props, defaults and callbacks.
 type: function
-path: C:\rraabbiitt-hq\rraabbiitt-labs-control-center\src\components\MessageBox\hooks\useMessageProvider
+path: src/components/MessageBox/hooks/useMessageProvider
 tags: []
 implementation: []
 context: []

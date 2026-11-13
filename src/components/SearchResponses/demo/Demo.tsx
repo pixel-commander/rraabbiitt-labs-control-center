@@ -2,6 +2,7 @@ import { useState } from "react";
 import { SearchResponses } from "../SearchResponses";
 import { ResponseAndRankingCard } from "../ResponseAndRankingCard/ResponseAndRankingCard";
 export const Demo = () => {
+  const [favorite, setFavorite] = useState(false);
   const [vote, setVote] = useState("No vote yet");
   return (
     <>
@@ -14,14 +15,20 @@ export const Demo = () => {
           title="inspect-ranking-attention"
           score={0.08}
           data={{ name: "ranking-demo" }}
-          handleClick={(_, type) => setVote(type ?? "")}
+          favorite={favorite}
+          handleClick={(_, type) => type === "favorite" ? setFavorite(value => !value) : setVote(type ?? "")}
         />
       </div>
+      <h3>TopResult</h3>
       <SearchResponses
         result_type="top-result"
+        name="search-world"
+        type="tool"
+        score={0.92}
         title="QWEN3-CODER 30B"
         data={{ name: "demo" }}
-        handleClick={(_, type) => setVote(type ?? "")}
+        favorite={favorite}
+          handleClick={(_, type) => type === "favorite" ? setFavorite(value => !value) : setVote(type ?? "")}
       >
         The current world settings have been retrieved.
       </SearchResponses>
@@ -31,7 +38,8 @@ export const Demo = () => {
         title={<strong>Custom rail color</strong>}
         color="var(--status-error)"
         data={{ name: "rail-override" }}
-        handleClick={(_, type) => setVote(type ?? "")}
+        favorite={favorite}
+          handleClick={(_, type) => type === "favorite" ? setFavorite(value => !value) : setVote(type ?? "")}
       >
         The optional color overrides the rail using a theme token.
       </SearchResponses>

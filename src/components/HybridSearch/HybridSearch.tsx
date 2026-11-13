@@ -13,27 +13,31 @@ import { ToolCol } from "../../pages/WorldSearch/ToolCol/ToolCol";
 import { useHybridSearch } from "./hooks/useHybridSearch/useHybridSearch";
 import "../../pages/WorldSearch/css/world-search.css";
 import "./css/hybrid-search.css";
-export const HybridSearch = () => {
+import type { HybridSearchProps } from "./HybridSearch.types";
+export const HybridSearch = (props: HybridSearchProps) => {
+  const isDumbot = props.mode === "dumbot";
   const {
     state,
     handleChange,
     handleSubmit,
     handleClick,
     handleReset,
+    handleRephrase,
     messagesRef,
     handleScroll,
-  } = useHybridSearch();
+    handleSelect,
+  } = useHybridSearch(props);
   return (
     <div
-      className="hybrid-search world-search"
+      className={["hybrid-search world-search", props.className].filter(Boolean).join(" ")}
       data-grid="header-main"
       data-gap="section"
     >
       <div data-area="header">
         <PageHeader
           className="world-search-heading"
-          label="LOCAL INTELLIGENCE / WORLD SEARCH"
-          Headline={<h1>World Search</h1>}
+          label={isDumbot ? "LOCAL INTELLIGENCE / DUMBOT" : "LOCAL INTELLIGENCE / WORLD SEARCH"}
+          Headline={<h1>{isDumbot ? "DumBot" : "World Search"}</h1>}
           Right={
             <>
               <StatusLabel
@@ -51,7 +55,9 @@ export const HybridSearch = () => {
         data-gap="container"
         className="world-search-columns"
       >
-        <aside
+        {isDumbot ? (
+          <div data-area="left" className="dum-bot-placeholder" aria-hidden="true" />
+        ) : (<aside
           data-area="left"
           className="container-main world-search-panel world-search-models pad-xs"
           data-cols="1"
@@ -59,7 +65,7 @@ export const HybridSearch = () => {
           <div className="pad-xs scroll-y">
             <h2>MODEL MATRIX / LOCAL</h2>
             <div className="world-search-model-list" data-cols="1">
-              {["Qwen3-Coder 30B", "qwen2.5:14b", "rraabbiitt:latest"].map(
+              {(isDumbot ? ["DumBot"] : ["Qwen3-Coder 30B", "qwen2.5:14b", "rraabbiitt:latest"]).map(
                 (model) => (
                   <button
                     key={model}
@@ -74,11 +80,11 @@ export const HybridSearch = () => {
                     aria-pressed={state.model === model}
                     onClick={() => handleChange("model", model)}
                   >
-                    <ModelTile title={model} label="OLLAMA / DEMO" />
+                    <ModelTile title={model} label={isDumbot ? "DB PAIRS / SLOTS" : "OLLAMA / DEMO"} />
                   </button>
                 ),
               )}
-              <button
+              {!isDumbot && <button
                 type="button"
                 className="action-ghost world-search-model"
                 disabled
@@ -89,7 +95,7 @@ export const HybridSearch = () => {
                   status_color="var(--color-muted)"
                   label_color="var(--color-muted)"
                 />
-              </button>
+              </button>}
             </div>
             <IconButton
               type="add"
@@ -100,34 +106,38 @@ export const HybridSearch = () => {
               New search
             </IconButton>
           </div>
-          <div>
-            <h2>WORKSPACE</h2>
-            <a href="/style-guide" className="action-text-link">
-              Explore the style guide ↗
-            </a>
-            <p className="world-search-muted">
-              Choose a model. Search your world.
-            </p>
-          </div>
-        </aside>
+          <section className="world-search-return" data-grid="header-main" aria-label="Full search return">
+            <h2 data-area="header">Search return</h2>
+            <div data-area="main" className="scroll-y" tabIndex={0}>
+              <pre className="world-search-return-json">{state.raw_return == null
+                ? "Submit a search to view its return."
+                : JSON.stringify(state.raw_return, null, 2)}</pre>
+            </div>
+          </section>
+        </aside>)}
         <section
           data-area="main"
           className="world-search-panel world-search-conversation"
-          data-grid="shell"
+          data-grid={isDumbot ? "main-footer" : "shell"}
           data-gap="section"
-          aria-label="World Search conversation"
+          aria-label={isDumbot ? "DumBot conversation" : "World Search conversation"}
         >
-          <header data-area="header" className="world-search-result-header">
+          {!isDumbot && <header data-area="header" className="world-search-result-header">
             {state.top_result && (
               <SearchResponses
                 result_type="top-result"
+                show_actions={!isDumbot}
                 className="world-search-current-result"
+                id={state.top_result.id}
+                name={state.top_result.name}
+                type={state.top_result.type}
                 title={state.top_result.title}
-                  score={state.top_result.ranking?.score ?? state.top_result.score ?? 0}
+                score={state.top_result.ranking?.score ?? state.top_result.score ?? 0}
                 data={state.top_result}
                 handleClick={handleClick}
-                disabled={state.searching || state.saving}
+                disabled={state.searching || state.saving || state.favorites_loading}
                 vote={state.feedback[state.top_result.id]}
+                favorite={state.favorites[state.top_result.id] ?? false}
               >
                 {state.skill_text !== null ? (
                   <pre className="world-search-skill-instructions">
@@ -138,7 +148,7 @@ export const HybridSearch = () => {
                 )}
               </SearchResponses>
             )}
-          </header>
+          </header>}
           <div data-area="main" className="world-search-messages">
             <div
               className="world-search-messages-scroll scroll-y"
@@ -208,7 +218,9 @@ export const HybridSearch = () => {
               value={state.query}
               handleChange={(text) => handleChange("query", text ?? "")}
               handleSubmit={handleSubmit}
+              handleClick={isDumbot ? handleRephrase : undefined}
             >
+              {isDumbot && <button type="button" className="action-outline" disabled={state.searching} onClick={handleReset}>New search</button>}
               {state.rephrase && (
                 <div data-cols="1" data-gap="control">
                   <span>
@@ -242,10 +254,15 @@ export const HybridSearch = () => {
             data-cols="1"
             data-gap="content"
           >
-            <h2>OTHER RANKED RESULTS</h2>
-            {state.results.slice(1).map((record, index) => (
+            <h2>{isDumbot ? "SEARCH RETURN" : "OTHER RANKED RESULTS"}</h2>
+            {isDumbot && <details className="dum-bot-raw-return">
+              <summary>Full return</summary>
+              <pre className="world-search-return-json">{state.raw_return == null ? "Submit a search to view its return." : JSON.stringify(state.raw_return, null, 2)}</pre>
+            </details>}
+            {(isDumbot ? state.results : state.results.slice(1)).map((record, index) => (
               <ResponseAndRankingCard
                 key={record.id}
+                show_actions={!isDumbot}
                 id={record.id}
                 name={record.name}
                 type={record.type}
@@ -254,9 +271,12 @@ export const HybridSearch = () => {
                 score={record.ranking?.score ?? record.score ?? 0}
                 data={record}
                 handleClick={handleClick}
-                disabled={state.searching || state.saving}
+                disabled={state.searching || state.saving || state.favorites_loading}
                 vote={state.feedback[record.id]}
-              />
+                favorite={state.favorites[record.id] ?? false}
+              >
+                {isDumbot && <><p>{record.description}</p><button className="action-outline" disabled={state.searching} onClick={() => void handleSelect(record)}>Select result</button></>}
+              </ResponseAndRankingCard>
             ))}
             {!state.searching && state.results.length < 2 && (
               <p className="world-search-muted">

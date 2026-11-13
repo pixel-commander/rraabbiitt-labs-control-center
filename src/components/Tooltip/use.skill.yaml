@@ -4,10 +4,10 @@ owner:
   id: 1794399859295
 id: 1794408972823
 name: Tooltip
-title: Use Tooltip
+title: "How to Use Tooltip"
 description: Props, defaults and callbacks for Tooltip.
 type: skill
-path: C:\rraabbiitt-hq\rraabbiitt-labs-control-center\src\components\Tooltip
+path: src/components/Tooltip
 tags: []
 implementation: []
 context: []

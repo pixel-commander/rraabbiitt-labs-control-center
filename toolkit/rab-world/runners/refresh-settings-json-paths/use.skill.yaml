@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1793987131754
 name: refresh-settings-json-paths
-title: Refresh settings JSON paths
+title: How to refresh settings JSON paths
 path: toolkit/rab-world/runners/refresh-settings-json-paths
 file: refresh-settings-json-paths.ts
 owner:

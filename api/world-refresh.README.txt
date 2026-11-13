@@ -1,0 +1,6 @@
+POST /api/world/refresh — thin HTTP adapter, no client configuration.
+Dispatches registered runner ID 1794537157022 through runner-use-tool and its shared tracker.
+Scope comes from the loaded world. Runner owns refresh, branch status and persistence.
+Existing host/origin/auth checks apply. POST only; concurrent requests return 409.
+Response includes response.report flattened as response for the UI, plus full tracked results.
+Nothing runs on startup.

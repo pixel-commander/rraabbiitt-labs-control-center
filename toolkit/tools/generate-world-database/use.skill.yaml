@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1793617400001
 name: use-generate-world-database
-title: Generate world database
+title: "How to Generate world database"
 type: skill
 path: toolkit/tools/generate-world-database
 file: generate-world-database.ts

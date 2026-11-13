@@ -1,4 +1,5 @@
 import { readFile } from "node:fs/promises";
+import { runTools } from "../../toolkit/rab-world/runners/run-tools.ts";
 import type { ToolsProps, ToolReturn } from "../../toolkit/Tooling.types.ts";
 
 /** Called by each tool after its work. Usage failures never change its outcome. */
@@ -7,6 +8,17 @@ export async function finishToolUsage(
   settings: ToolsProps,
   result: ToolReturn,
 ): Promise<ToolReturn> {
+  if (result.status === "complete" && (result.return_type === "scaffold" || (result.return_type === "settings" && typeof result.response?.id === "number" && typeof result.response?.path === "string"))) {
+    const { executeTool } = await import("../../toolkit/tools/refresh-world-database/refresh-world-database.ts");
+    const { projectRoot } = await import("../../scripts/world.mjs");
+    const [refreshed] = await runTools(
+      [{ id: 1793210509222, name: "refresh-world-database", type: "tool", settings: { path: projectRoot } }],
+      step => executeTool(step.settings),
+    );
+    if (refreshed.status !== "complete") return {
+      ...result, status: "error", error: `Files were created, but catalog registration failed: ${refreshed.error}`,
+    };
+  }
   try {
     const world = JSON.parse(
       await readFile(new URL("../../rab.world.json", import.meta.url), "utf8"),

@@ -1,4 +1,4 @@
-import { spawn } from "node:child_process";
+import { searchWorker } from "./search-worker.ts";
 import { readFile, mkdir, mkdtemp, rm } from "node:fs/promises";
 import { dirname, resolve, relative, isAbsolute } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -44,30 +44,8 @@ const runProject = async (settings: ToolsProps, operation: "search" | "feedback"
       ...(settings.message !== undefined ? { message: settings.message } : {}),
     });
     if (exported.status !== "complete") throw new Error(exported.error || "Catalog export failed.");
-    return await new Promise<ToolReturn>((done, fail) => {
-      const worker = spawn(resolve(project, python.path, python.file), ["-B", resolve(toolsDirectory, "project_search.py"), "--project", project, "--catalog", catalog, "--operation", operation], {
-        cwd: project, windowsHide: true, stdio: ["pipe", "pipe", "pipe"],
-        env: { ...process.env, HF_HUB_OFFLINE: "1", TRANSFORMERS_OFFLINE: "1", PYTHONIOENCODING: "utf-8" },
-      });
-      let output = "", errors = "";
-      const timer = setTimeout(() => { worker.kill(); fail(new Error("Project search timed out after 240 seconds.")); }, 240_000);
-      worker.stdout.on("data", (chunk) => {
-        output += chunk;
-        if (output.length > 4_000_000) { worker.kill(); fail(new Error("Search response exceeded 4 MB.")); }
-      });
-      worker.stderr.on("data", (chunk) => { errors = (errors + chunk).slice(-4000); });
-      worker.on("error", (error) => { clearTimeout(timer); fail(error); });
-      worker.on("close", (code) => {
-        clearTimeout(timer);
-        try {
-          const result = JSON.parse(output);
-          if (!result || !["complete", "error"].includes(result.status)) throw new Error("Invalid search return.");
-          done({ ...result, return_type: operation === "search" ? "results" : "settings", settings });
-        } catch { fail(new Error(`Project search exited (${code}). ${errors || output}`)); }
-      });
-      worker.stdin.on("error", (error) => { clearTimeout(timer); fail(error); });
-      worker.stdin.end(JSON.stringify(settings));
-    });
+    const result = await searchWorker(project, model, resolve(project, python.path, python.file), resolve(toolsDirectory, "project_search.py"), catalog, settings);
+    return { ...result, return_type: "results", settings };
   } catch (error) {
     return { return_type: "results", status: "error", settings, error: error instanceof Error ? error.message : String(error) };
   } finally {

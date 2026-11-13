@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1791518659436
 name: new-container-atom
-title: New Container Atom
+title: "How to New Container Atom"
 description: Creates a container-atom CSS atom with its demo and metadata.
 type: function
 path: toolkits/rab-react/scaffolds/new-container-atom

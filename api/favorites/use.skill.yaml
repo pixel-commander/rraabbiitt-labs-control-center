@@ -1,0 +1,25 @@
+schema: 1
+intent: use
+owner:
+  id: 1794444448187
+id: 1794444448203
+name: use-favorites
+title: "How to Use favorites"
+description: Save, read and remove favorites.
+type: skill
+path: api/favorites
+tags: []
+implementation:
+  - id: 1794444448187
+context: []
+inputs: {}
+outputs: {}
+instructions: GET /api/favorites/get lists favorites. Optional id selects one. POST
+  /api/favorites/set accepts only {id}, a positive numeric ID already in records. The server copies
+  current House metadata and upserts one favorite per record. DELETE /api/favorites/delete?id=ID
+  removes that favorite and is idempotent. Responses use status complete/error and response.
+  Favorites do not train ranking or change model feedback.
+checks: []
+examples: []
+routes: []
+provenance: []

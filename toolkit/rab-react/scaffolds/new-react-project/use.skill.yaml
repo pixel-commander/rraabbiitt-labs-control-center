@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1791518659427
 name: new-react-project
-title: New React Project
+title: "How to New React Project"
 description: Creates a local React project from the included template.
 type: function
 path: toolkits/rab-react/scaffolds/new-react-project

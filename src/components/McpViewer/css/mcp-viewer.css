@@ -1,7 +1,7 @@
 @layer components {
   .mcp-viewer { padding: var(--space-sm) var(--space-md); }
   .mcp-viewer svg { vertical-align: middle; margin-inline-end: var(--space-xs); }
-  .mcp-viewer__status { margin-inline-start: var(--space-xs); white-space: nowrap; }
+  .mcp-viewer__status { display: inline-block; vertical-align: middle; margin-inline-start: var(--space-xs); white-space: nowrap; }
   .mcp-viewer__layer {
     position: fixed;
     inset: 0;
@@ -11,4 +11,14 @@
   .mcp-viewer__layer .float-window { pointer-events: auto; }
   .mcp-viewer__settings { margin: 0; }
   .mcp-viewer__settings dd { margin: 0; overflow-wrap: anywhere; }
+  .mcp-viewer__content { min-width: 0; }
+  .mcp-viewer__content p { margin: 0; line-height: 1.6; }
+  .mcp-viewer__muted, .mcp-viewer__request time { color: var(--color-muted); }
+  .mcp-viewer__tool strong { color: var(--color-primary); }
+  .mcp-viewer__activity { display: grid; gap: var(--space-sm); list-style: none; margin: 0; padding: 0; }
+  .mcp-viewer__request { display: flex; flex-wrap: wrap; align-items: start; justify-content: space-between; gap: var(--space-md); }
+  .mcp-viewer__request-main, .mcp-viewer__request-result { display: grid; gap: var(--space-xs); min-width: 0; }
+  .mcp-viewer__request-main { flex: 1 1 220px; overflow-wrap: anywhere; }
+  .mcp-viewer__request-result { justify-items: end; }
+  .mcp-viewer__request time { font: var(--type-code); }
 }

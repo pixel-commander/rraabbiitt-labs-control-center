@@ -1,0 +1,51 @@
+{
+  "id": 1794441432724,
+  "name": "RabbitCanvas",
+  "title": "RabbitCanvas",
+  "description": "",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "RabbitCanvas.tsx",
+  "path": "src/components/RabbitHead/RabbitCanvas",
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt",
+      "id": 1794441935650
+    },
+    {
+      "name": "RabbitCanvas.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "RabbitCanvas.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "rabbit-canvas.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

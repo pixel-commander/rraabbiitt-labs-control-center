@@ -1,0 +1,7 @@
+@layer components {
+  .refresh-system-control { display: inline-flex; }
+  .refresh-system-announcement { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+}
+
+.refresh-system-button-title { align-items: center; gap: var(--space-xs); }
+.refresh-system-button-title .status-label { display: inline-flex; }

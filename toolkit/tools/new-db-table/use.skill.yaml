@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1791766641357
 name: use-new-db-table
-title: new db table
+title: "How to new db table"
 type: skill
 path: toolkit/tools/new-db-table
 file: new-db-table.mjs

@@ -4,10 +4,10 @@ owner:
   id: 1794395295573
 id: 1794408972707
 name: SearchResponses
-title: Use SearchResponses
+title: "How to Use SearchResponses"
 description: Props, defaults and callbacks for SearchResponses.
 type: skill
-path: C:\rraabbiitt-hq\rraabbiitt-labs-control-center\src\components\SearchResponses
+path: src/components/SearchResponses
 tags: []
 implementation: []
 context: []

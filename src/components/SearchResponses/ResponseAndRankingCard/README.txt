@@ -11,10 +11,16 @@ data is passed unchanged to optional handleClick(data, type, props).
 The callback receives the complete incoming bag. Types are good-vote,
 ok-vote, bad-vote, and rephrase. Parent owns votes and other decisions.
 
-The root composes container-side-rail and pad-base. Colors use theme tokens.
+children optionally adds content between the heading and actions.
+container_class defaults to container-side-rail; an empty string removes the skin.
+The root composes container_class and pad-base. Colors use theme tokens.
 Override the rail through --container-side-rail-color on a supplied class.
 Override controls with action_class; override structure through className
 or external CSS. The parent controls available width.
 
 The SearchResponses demo on /style-guide includes this subcomponent.
 
+
+favorite defaults to false. The star at the footer right calls handleClick with
+favorite and the complete props bag. Parent owns persistence and selected state.
+All footer controls have shared tooltips.

@@ -2,7 +2,7 @@ id: 1793143585574
 schema: 1
 intent: use
 name: use-runner-new-page
-title: New Page
+title: How to make a new page
 path: toolkits/rab-react/runners/runner-new-page
 file: use.skill.yaml
 instructions: Call run with the shared ToolsProps bag. path is the caller project root; name is the

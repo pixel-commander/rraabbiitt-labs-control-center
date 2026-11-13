@@ -1,3 +1,4 @@
+import { searchDumbot } from "./dumbot.mjs";
 import { DatabaseSync } from "node:sqlite";
 import {
   readFile,
@@ -9,7 +10,7 @@ import {
 } from "node:fs/promises";
 import { resolve, join } from "node:path";
 import { randomUUID } from "node:crypto";
-import { executeToolById } from "../../toolkit/rab-world/runners/runner-use-tool/runner-use-tool.ts";
+import { run as useTool } from "../../toolkit/rab-world/runners/runner-use-tool/runner-use-tool.ts";
 
 const grades = { up: 1, part: 0.5, down: 0 };
 const lessonPath = "learning/learned-on-site/search-results/lessons";
@@ -112,18 +113,19 @@ export async function searchRecords(world, settings) {
     const limit = settings.limit ?? 20;
     if (!Number.isInteger(limit) || limit < 1 || limit > 100)
       throw new InputError("limit must be 1 to 100.");
-    const result = await executeToolById(
-      1793154927345,
-      {
+    const receipts = await useTool({
+      id: 1793154927345,
+      content: JSON.stringify({
         query: settings.query.trim(),
         path: world.path,
         message: settings.message,
-      },
-      world.toolkits.map((entry) => ({
-        ...entry,
-        path: resolve(world.path, entry.path),
+      }),
+      toolkits: world.toolkits.map(entry => ({
+        ...entry, path: resolve(world.path, entry.path),
       })),
-    );
+    });
+    const result = receipts.at(-1);
+    if (!result) throw new Error("Hybrid search returned no runner result.");
     if (result.status !== "complete")
       throw new Error(result.error || "Hybrid search failed.");
     if (!Array.isArray(result.response?.paths))
@@ -374,6 +376,7 @@ export async function handleSearchRecords(world, req, res, url) {
   if (
     ![
       "/api/search-records",
+      "/api/search-records/dumbot",
       "/api/search-records/feedback",
       "/api/search-records/rephrase",
     ].includes(pathname)
@@ -402,7 +405,7 @@ export async function handleSearchRecords(world, req, res, url) {
   } catch {
     return send(failure(400, "Supply valid JSON."));
   }
-  const action = pathname.endsWith("/rephrase")
+  const action = pathname.endsWith("/dumbot") ? searchDumbot : pathname.endsWith("/rephrase")
     ? recordRephrase
     : pathname.endsWith("/feedback")
       ? recordFeedback

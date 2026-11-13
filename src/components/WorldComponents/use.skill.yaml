@@ -1,0 +1,13 @@
+schema: 1
+intent: use
+id: 1794536548614
+name: WorldComponents
+owner:
+  id: 1794536548612
+implementation:
+  - id: 1794536548612
+instructions: >-
+  Composes refresh button ID 1794536548923. Optional children and className.
+  The owner hook handles explicit clicks, calls the server and retains branch
+  reports. Never executes on mount. Status resets after four seconds while the
+  report remains. No incoming callbacks. Children render after refresh controls.

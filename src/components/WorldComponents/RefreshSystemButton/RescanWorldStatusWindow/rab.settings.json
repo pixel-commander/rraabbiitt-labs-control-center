@@ -1,0 +1,13 @@
+{
+  "id": 1794538077037,
+  "name": "RescanWorldStatusWindow",
+  "title": "RescanWorldStatusWindow",
+  "description": "Rescan status and branch report in a padded translucent dropdown surface.",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "RescanWorldStatusWindow.tsx",
+  "path": "src/components/WorldComponents/RefreshSystemButton/RescanWorldStatusWindow"
+}

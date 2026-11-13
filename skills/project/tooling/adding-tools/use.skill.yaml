@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1793143987359
 name: adding-tools
-title: Add a tool
+title: "How to Add a tool"
 description:
   Create a tool in a toolkit, using the shared input and return contracts,
   and pair it with a small usage skill.

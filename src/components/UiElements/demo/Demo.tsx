@@ -30,6 +30,11 @@ export const Demo = () => {
             Disabled
           </IconButton>
         </div>
+        <div data-cols="3" data-collapse="2" data-gap="control">
+          {(["skill", "tool", "runner", "doc", "find", "settings", "beacon"] as const).map(type => (
+            <IconButton key={type} type={type} action_atom="action-light">{type}</IconButton>
+          ))}
+        </div>
         <output aria-live="polite">IconButton clicks: {clicks}</output>
       </section>
       <section data-cols="1" data-gap="control">

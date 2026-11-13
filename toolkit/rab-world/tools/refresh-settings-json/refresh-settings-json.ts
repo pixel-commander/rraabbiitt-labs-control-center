@@ -8,13 +8,14 @@ import {
   unlink,
 } from "node:fs/promises";
 import { basename, dirname, extname, join, relative, resolve } from "node:path";
+import { projectRoot, withinProject } from "../../../../scripts/world.mjs";
 import { randomUUID } from "node:crypto";
 import { generateWorldId } from "../../generators/generate-world-id/generate-world-id.ts";
 import type { ToolsProps, ToolReturn } from "../../../Tooling.types.ts";
 import type { HouseKeys, PathsProps } from "../../../HouseKeys.types.ts";
 
 const readRecord = async (file: string): Promise<HouseKeys & PathsProps> => {
-  const record = JSON.parse(await readFile(file, "utf8"));
+  const record = JSON.parse((await readFile(file, "utf8")).replace(/^\uFEFF/, ""));
   if (!record || typeof record !== "object" || Array.isArray(record)) {
     throw new Error(`Expected a JSON object: ${file}`);
   }
@@ -46,7 +47,8 @@ export const executeTool = async (settings: ToolsProps): Promise<ToolReturn> => 
       }
       throw new Error("Supply path or id; ID lookup is not implemented yet.");
     }
-    const supplied = resolve(settings.path);
+    const supplied = resolve(projectRoot, settings.path);
+    if (!withinProject(projectRoot, supplied)) throw new Error("Settings must stay inside this world.");
     const info = await stat(supplied);
     if (
       !info.isDirectory() &&
@@ -69,7 +71,7 @@ export const executeTool = async (settings: ToolsProps): Promise<ToolReturn> => 
     const updated: HouseKeys & PathsProps = {
       ...record,
       id: record.id ?? generateWorldId().id,
-      path: dirname(target).replaceAll("\\", "/"),
+      path: relative(projectRoot, dirname(target)).replaceAll("\\", "/") || ".",
       paths,
     };
     if (updated.file === targetName) delete updated.file;

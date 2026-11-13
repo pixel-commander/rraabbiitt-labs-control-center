@@ -1,0 +1,23 @@
+schema: 1
+intent: use
+owner:
+  id: 1794441432724
+id: 1794441720407
+name: use-rabbit-canvas
+title: "How to Use RabbitCanvas"
+description: Canvas surface used by the Rraabbiitt3d dashboard renderer.
+type: function
+implementation:
+  - use: 1794441432724
+context:
+  - use: 1794023448112
+    reason: Parent dashboard owns the drawing loop and canvas ref.
+  - use: 1794441935650
+    reason: README for the canvas element's props and styling contract.
+  - use: 1794442290029
+    reason: Reusable head component that accepts renderer settings.
+instructions: >-
+  Pass canvasRef from the parent dashboard referenced by use: 1794023448112. It is
+  attached directly to the canvas element. The parent owns drawing, interaction,
+  animation, and cleanup. className is composed with the rabbit-canvas base class.
+  Use parent CSS for sizing overrides; the parent provides the bounded stage.

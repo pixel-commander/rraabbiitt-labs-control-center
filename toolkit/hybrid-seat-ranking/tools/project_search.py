@@ -3,11 +3,14 @@ import argparse
 import contextlib
 import json
 import sys
+import os
+import time
 from pathlib import Path
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--project', required=True)
-parser.add_argument('--catalog', required=True)
+parser.add_argument('--catalog')
+parser.add_argument('--worker', action='store_true')
 parser.add_argument('--operation', choices=('search',), default='search')
 args = parser.parse_args()
 project = Path(args.project).resolve(strict=True)
@@ -58,7 +61,17 @@ with contextlib.redirect_stdout(sys.stderr):
 
     retrieval.current_catalog = current_catalog
     retrieval.write = readonly_write
-    settings = json.load(sys.stdin)
+    original_api = retrieval.established_api
+    def cached_api():
+        api = original_api()
+        api.VECTOR_CACHE_ROOT = project / '.tmp/hybrid-search/vectors'
+        return api
+    retrieval.established_api = cached_api
+
+
+def search(settings, catalog):
+    started = time.perf_counter()
+    args.catalog = catalog
     options = json.loads(settings.get('content') or '{}')
     if not isinstance(options, dict) or options:
         raise ValueError('This connection searches the shipped baseline and live catalog; custom search options are not enabled.')
@@ -78,6 +91,30 @@ with contextlib.redirect_stdout(sys.stderr):
                             'encoder_frozen': True, 'neural_weight_updates': False}
         result['response']['body'] = json.dumps(body)
 
-print(json.dumps(result, ensure_ascii=False))
-if result['status'] != 'complete':
-    sys.exit(1)
+    if result['status'] == 'complete':
+        body = json.loads(result['response']['body'])
+        body['worker'] = {'pid': os.getpid(), 'request_ms': round((time.perf_counter()-started)*1000, 2)}
+        result['response']['body'] = json.dumps(body)
+    return result
+
+
+sys.stdin.reconfigure(encoding='utf-8-sig')
+if args.worker:
+    for line in sys.stdin:
+        request = {}
+        try:
+            request = json.loads(line)
+            with contextlib.redirect_stdout(sys.stderr):
+                result = search(request['settings'], request['catalog'])
+        except Exception as error:
+            result = {'status': 'error', 'error': str(error)}
+        print(json.dumps({'id': request.get('id'), 'result': result}, ensure_ascii=False), flush=True)
+else:
+    try:
+        with contextlib.redirect_stdout(sys.stderr):
+            result = search(json.load(sys.stdin), args.catalog)
+    except Exception as error:
+        result = {'status': 'error', 'error': str(error)}
+    print(json.dumps(result, ensure_ascii=False))
+    if result['status'] != 'complete':
+        sys.exit(1)

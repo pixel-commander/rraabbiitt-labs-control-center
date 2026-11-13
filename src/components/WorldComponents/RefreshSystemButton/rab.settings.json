@@ -1,0 +1,13 @@
+{
+  "id": 1794536548923,
+  "name": "RefreshSystemButton",
+  "title": "Refresh System Button",
+  "description": "World refresh action using the shared icon button.",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "RefreshSystemButton.tsx",
+  "path": "src/components/WorldComponents/RefreshSystemButton"
+}

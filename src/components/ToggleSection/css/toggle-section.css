@@ -1,0 +1,50 @@
+@layer components {
+  .toggle-section {
+    --toggle-section-max-height: 24rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    min-inline-size: 0;
+  }
+  .toggle-section-title {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: center;
+    min-inline-size: 0;
+    padding: var(--space-base);
+    font: var(--type-code);
+    overflow-wrap: anywhere;
+  }
+  .toggle-section-toggle {
+    grid-column: 2;
+    grid-row: 1;
+    display: grid;
+    place-items: center;
+    padding: var(--space-base);
+    background: transparent;
+    color: inherit;
+    border: 0;
+    cursor: pointer;
+  }
+  .toggle-section-toggle:focus-visible { outline: var(--focus-ring); outline-offset: -2px; }
+  .toggle-section-toggle svg { transition: transform 220ms ease; }
+  .toggle-section-toggle[aria-expanded="true"] svg { transform: rotate(180deg); }
+  .toggle-section-main {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    min-inline-size: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: max-height 220ms ease, padding-block 220ms ease;
+  }
+  .toggle-section-main.is-closed { max-height: 0; padding-block: 0; }
+  .toggle-section-main.is-open { max-height: var(--toggle-section-max-height); }
+  .toggle-section-inner {
+    height: max-content;
+    max-height: calc(var(--toggle-section-max-height) - var(--space-base) * 2);
+    min-inline-size: 0;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .toggle-section-main, .toggle-section-toggle svg { transition: none; }
+  }
+}

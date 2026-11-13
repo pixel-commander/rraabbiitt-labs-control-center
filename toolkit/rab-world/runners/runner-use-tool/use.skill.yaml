@@ -3,12 +3,13 @@ schema: 1
 name: use-runner-use-tool
 intent: use
 type: skill
+title: How to find and run a tool
 description: Search for, inspect, and invoke a registered RAB World tool or runner.
 owner:
   id: 1793213000002
 instructions:
   Supply toolkits from the root rab.world.json toolkits registration. Each toolkit requires an
-  absolute path. No project-settings or database fallback is used. query searches current tool and
+  absolute path. The project database locates IDs. Current adjacent settings are read before loading. A missing ID refreshes the catalog, then falls back to discovery inside the supplied toolkits. Successful scaffolds refresh catalog registration. query searches current tool and
   runner rab.settings.json records inside those folders by case-insensitive terms in name, title and
   description. Every query term must match; there is no result limit. Templates, dependencies and
   symlinks are skipped. id reads a matching registration and adjacent usage skill. An ID outside the

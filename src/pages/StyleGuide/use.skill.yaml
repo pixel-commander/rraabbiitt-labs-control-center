@@ -4,10 +4,10 @@ owner:
   id: 1794247089699
 id: 1794408973383
 name: StyleGuidePage
-title: Use StyleGuidePage
+title: "How to Use StyleGuidePage"
 description: Props, defaults and callbacks for StyleGuidePage.
 type: skill
-path: C:\rraabbiitt-hq\rraabbiitt-labs-control-center\src\pages\StyleGuide
+path: src/pages/StyleGuide
 tags: []
 implementation: []
 context: []

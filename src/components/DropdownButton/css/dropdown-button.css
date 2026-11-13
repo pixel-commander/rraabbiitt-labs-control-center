@@ -1,0 +1,39 @@
+@layer components {
+  .dropdown-button { position: relative; display: inline-block; }
+  .dropdown-button-trigger { display: inline-flex; align-items: center; gap: var(--space-xs); padding: var(--space-sm) var(--space-md); }
+  .dropdown-button-icon { display: inline-flex; }
+  .dropdown-button-panel {
+    position: absolute;
+    inset-block-start: calc(100% + var(--space-xs));
+    inset-inline-end: 0;
+    z-index: 100;
+    inline-size: max-content;
+    min-inline-size: 100%;
+    max-inline-size: min(24rem, 85vw);
+    height: max-content;
+    max-height: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: max-height 220ms ease, padding-block 220ms ease,
+      opacity 220ms ease, visibility 0s linear 220ms;
+  }
+  .dropdown-button:not(.is-open) > .dropdown-button-panel,
+  .dropdown-button.is-closed > .dropdown-button-panel {
+    max-height: 0;
+    padding-block: 0;
+  }
+  .dropdown-button.is-open:not(.is-closed) > .dropdown-button-panel {
+    max-height: var(--dropdown-max-height, 65vh);
+    overflow-y: auto;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition-delay: 0s;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .dropdown-button-panel { transition: none; }
+  }
+}

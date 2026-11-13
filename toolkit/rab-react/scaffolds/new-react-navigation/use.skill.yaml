@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1791518659419
 name: new-react-navigation
-title: New Navigation
+title: "How to New Navigation"
 description: Creates accessible React navigation from unique id, name and path rows.
 type: function
 path: toolkits/rab-react/scaffolds/new-react-navigation

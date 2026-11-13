@@ -6,22 +6,33 @@ import "./themes/light/colors.css";
 import "./atoms/atoms.css";
 
 import { SiteNav } from "./components/SiteNav/SiteNav";
+import { WorldComponents } from "./components/WorldComponents/WorldComponents";
 import { McpViewer } from "./components/McpViewer/McpViewer";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { WorldSearchPage } from "./pages/WorldSearch/WorldSearchPage";
+import { DumBotPage } from "./pages/DumBot/DumBotPage";
+import dumBotSettings from "./pages/DumBot/rab.settings.json";
 import worldSearchSettings from "./pages/WorldSearch/rab.settings.json";
 import type { ComponentType } from "react";
 import type { VIEWProps } from "./App.types";
 import { HomePage } from "./pages/home/HomePage";
 import { StyleGuidePage } from "./pages/StyleGuide/StyleGuidePage";
 import { useURL } from "./hooks/useURL/useURL";
+import { WorldAudit } from "./dashboards/WorldAudit/WorldAudit";
+import worldAuditSettings from "./dashboards/WorldAudit/rab.settings.json";
+import { RabbitHead } from "./components/RabbitHead/RabbitHead";
+import type { RabbitEffects } from "./components/RabbitHead/js/RabbitStage.jsx";
+import type { HybridSearchProps } from "./components/HybridSearch/HybridSearch.types";
 
 export const App = () => {
+  const rabbitEffects = useRef<RabbitEffects | null>(null);
   const [theme, setTheme] = useState<"dark" | "light">("dark");
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
   }, [theme]);
   const VIEWS: VIEWProps[] = [
+    { id: worldAuditSettings.id, name: "world-audit", title: "World Audit", path: "world-audit", View: WorldAudit },
+    { id: dumBotSettings.id, name: "dumbot", title: "DumBot", path: "dumbot", View: DumBotPage },
     {
       id: worldSearchSettings.id,
       name: "world-search",
@@ -49,7 +60,7 @@ export const App = () => {
   const selected_view =
     VIEWS.find(({ path }) => path === String(page)) ||
     (page ? undefined : VIEWS.find(({ path }) => path === "home"));
-  let View: ComponentType = selected_view?.View || (() => <>404 not found</>);
+  let View: ComponentType<HybridSearchProps> = selected_view?.View || (() => <>404 not found</>);
 
   return (
     <div className="site-shell" data-theme={theme} data-grid="shell">
@@ -79,11 +90,21 @@ export const App = () => {
           handleClick={(item) =>
             handleURL({ page: item?.path.slice(1) }, "update-path")
           }
-          Right={<McpViewer />}
+          Right={<div className="site-header-controls"><McpViewer /><WorldComponents /></div>}
         />
       </header>
       <main className="site-main" data-area="main">
-        <View />
+        <div className="page-rabbit-background" aria-hidden="true" hidden={page !== "dumbot" && page !== "world-search" && page !== "world-audit"}>
+          <RabbitHead transparentBg interactive={false} followMouse autoMotion={false} wheelZoom={false}
+            handleReady={(effects) => { rabbitEffects.current = effects ?? null; }}
+            zoom={1} faceOpacity={0.1} lineOpacity={0.15}
+            showSparkles={false} dustAmount={0}
+            strikeIntensity={0.3} strikeArms={1} strikeSpread={12} strikeLength={600}
+            circuitGlow={0.08} circuitOpacity={0.08} pulseFreq={4} pulseSize={0.5}
+            pointGlow={0} pointSize={0.3}
+            panX={page === "dumbot" ? -0.72 : 0.65} panY={-0.03} />
+        </div>
+        <View rabbitEffects={rabbitEffects} />
       </main>
       <footer className="site-footer" data-area="footer" data-grid="side-right">
         <div className="pad" data-area="main">rab world v.0.0.11</div>

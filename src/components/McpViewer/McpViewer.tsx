@@ -4,6 +4,7 @@ import { FloatWindow } from "../FloatWindow/FloatWindow";
 import { StatusLabel } from "../UiElements/StatusLabel/StatusLabel";
 import { PageHeader } from "../UiElements/PageHeader/PageHeader";
 import { ToggleSection } from "../ToggleSection/ToggleSection";
+import { ToolHistoryTile } from "../WorldComponents/ToolHistoryTile/ToolHistoryTile";
 import { useMcpViewer } from "./hooks/useMcpViewer/useMcpViewer";
 import "./css/mcp-viewer.css";
 
@@ -11,7 +12,7 @@ export const McpViewer = () => {
   const { open, rect, status, tools, toolError, activity, buttonRef, windowRef, handleClick, handleChange, handleClose } = useMcpViewer();
   const label = status === "connected" ? "Connected" : status === "checking" ? "Checking" : "Disconnected";
   const executions = activity.flatMap(event =>
-    (event.runs ?? []).map((run, step) => ({ ...run, time: event.time, key: `${event.time}-${step}` })),
+    (event.runs ?? []).map((run, step) => ({ ...run, lookup: { query: event.query, id: event.toolId, ...run.lookup }, time: event.time, key: `${event.time}-${step}` })),
   );
   return (
     <>
@@ -47,19 +48,7 @@ export const McpViewer = () => {
             <section data-cols="1" data-gap="content">
             <PageHeader label="SHARED RUNNER / UPDATES EVERY 2S" Headline="Tool activity" />
             {executions.length ? <ol className="mcp-viewer__activity">{executions.map(run => (
-              <li key={run.key} className="mcp-viewer__request container-alt pad">
-                <div className="mcp-viewer__request-main">
-                  <strong><code>{run.name ?? run.id ?? "Unnamed tool"}</code></strong>
-                  {run.id != null && <code className="mcp-viewer__muted">Tool ID {run.id}</code>}
-                  {run.date_end != null && run.date_start != null && <code className="mcp-viewer__muted">{run.date_end - run.date_start} ms</code>}
-                  {run.error && <p>{run.error}</p>}
-                </div>
-                <div className="mcp-viewer__request-result">
-                  <StatusLabel status={run.status === "error" ? "error" : run.error ? "warn" : run.status === "complete" ? "success" : "waiting"}
-                    label={run.status === "complete" ? run.error ? "COMPLETED WITH WARNING" : "SUCCESS" : run.status.toUpperCase()} />
-                  <time dateTime={run.time}>{new Date(run.date_start ?? run.time).toLocaleTimeString()}</time>
-                </div>
-              </li>
+              <li key={run.key}><ToolHistoryTile run={run} /></li>
             ))}</ol> : <p>No tool executions recorded yet.</p>}
             <p className="mcp-viewer__muted">Tool outcomes and durations come from the shared runner.</p>
             </section>

@@ -1,0 +1,13 @@
+{
+  "id": 1794599518566,
+  "name": "GridStyler",
+  "title": "GridStyler",
+  "description": "",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "GridStyler.tsx",
+  "path": "src/components/Stylers/GridStyler"
+}

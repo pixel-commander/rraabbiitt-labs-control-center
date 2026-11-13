@@ -1,0 +1,13 @@
+{
+  "id": 1794599487070,
+  "name": "useStylers",
+  "title": "useStylers",
+  "description": "",
+  "type": "hook",
+  "tags": [
+    "react",
+    "hook"
+  ],
+  "file": "useStylers.ts",
+  "path": "src/components/Stylers/hooks/useStylers"
+}

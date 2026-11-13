@@ -1,0 +1,13 @@
+{
+  "id": 1794599512507,
+  "name": "ActionStyler",
+  "title": "ActionStyler",
+  "description": "",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "ActionStyler.tsx",
+  "path": "src/components/Stylers/ActionStyler"
+}

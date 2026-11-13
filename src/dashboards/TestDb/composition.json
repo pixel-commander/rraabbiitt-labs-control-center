@@ -1,0 +1,16 @@
+{
+  "grid": "holy-grail",
+  "frame": {
+    "x": 24,
+    "y": 24,
+    "width": 480,
+    "height": 280
+  },
+  "elements": [],
+  "name": "TestDb",
+  "id": 1794595343585,
+  "title": "TestDB",
+  "path": "X:\\rraabbiitt-labs-control-center\\src\\dashboards",
+  "type": "dashboard",
+  "description": "test db"
+}

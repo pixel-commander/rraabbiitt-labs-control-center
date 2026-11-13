@@ -6,7 +6,10 @@ import { resolve } from "node:path";
 import { pathToFileURL } from "node:url";
 const world = await loadWorld();
 const attachMcp = async server => {
-  const { createRequestHandler } = await import(pathToFileURL(resolve(world.path, world.mcp.path, world.mcp.file)).href);
+  // A Vite restart must load current tracking code rather than Node's cached handler.
+  const handlerUrl = pathToFileURL(resolve(world.path, world.mcp.path, world.mcp.file));
+  handlerUrl.searchParams.set("v", String(Date.now()));
+  const { createRequestHandler } = await import(handlerUrl.href);
   const handler = await createRequestHandler();
   server.middlewares.use((req, res, next) => {
     const pathname = new URL(req.url, "http://localhost").pathname;

@@ -16,8 +16,8 @@
     isolation: isolate;
   }
   .page-rabbit-background {
-    max-block-size: 100dvh;
-    position: absolute;
+    block-size: 100dvh;
+    position: fixed;
     inset: 0;
     pointer-events: none;
     z-index: -1;

@@ -1,0 +1,8 @@
+@layer components {
+  .tool-history-tile__heading { align-items: center; gap: var(--space-md); overflow-wrap: anywhere; }
+  .tool-history-tile__details { display: grid; gap: var(--space-xs); min-width: 0; overflow-wrap: anywhere; }
+  .tool-history-tile__details p { margin: 0; line-height: 1.6; }
+  .tool-history-tile__muted, .tool-history-tile time { color: var(--color-muted); }
+  .tool-history-tile time { font: var(--type-code); }
+  .tool-history-tile__response { margin: 0; min-width: 0; white-space: pre-wrap; overflow-wrap: anywhere; font: var(--type-code); }
+}

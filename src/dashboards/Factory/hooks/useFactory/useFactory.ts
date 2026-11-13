@@ -28,8 +28,9 @@ export const useFactory = (props: FactoryProps) => {
         id: composition.id ?? previous?.id,
         name: previous?.name ?? composition.name ?? "",
         title: composition.title ?? previous?.title ?? props.title ?? composition.name ?? "",
-        path: bag?.path ?? props.path ?? composition.path ?? previous?.path ?? context.path,
-        type: "component",
+        path: previous?.path ?? composition.path ?? bag?.path ?? props.path ?? context.path,
+        type: previous?.type === "subcomponent" || previous?.type === "page" || previous?.type === "dashboard" ? previous.type : composition.type === "subcomponent" || composition.type === "page" || composition.type === "dashboard" ? composition.type : "component",
+        destinations: context.paths,
         description: composition.description ?? previous?.description ?? props.description ?? "",
         composition,
       });

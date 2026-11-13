@@ -10,7 +10,7 @@
     "component"
   ],
   "file": "TestComponent.tsx",
-  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/TestComponent",
+  "path": "src/components/TestComponent",
   "paths": [
     {
       "name": "README.txt",
@@ -41,6 +41,11 @@
       "name": "Demo.tsx",
       "path": "demo",
       "type": "tsx"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
     },
     {
       "name": "README.txt",

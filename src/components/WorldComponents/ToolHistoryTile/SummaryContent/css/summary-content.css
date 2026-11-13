@@ -1,0 +1,4 @@
+@layer components {
+  .summary-content { display: grid; gap: var(--space-xs); min-inline-size: 0; overflow-wrap: anywhere; }
+}
+

@@ -3,6 +3,42 @@ import { readFile, realpath } from "node:fs/promises";
 import { resolve } from "node:path";
 import { withinProject } from "../../../scripts/world.mjs";
 
+/** Restore the latest tracked runs for the activity popup after a server restart. */
+export async function readRunActivity(world) {
+  let db;
+  try {
+    const project = JSON.parse((await readFile(resolve(world.path, "rab.world.json"), "utf8")).replace(/^\uFEFF/, ""));
+    const entry = project.paths?.find(row => row.name === "database");
+    if (!entry) return [];
+    const file = await realpath(resolve(world.path, entry.path, entry.file));
+    if (!withinProject(world.path, file)) return [];
+    db = new DatabaseSync(file, { readOnly: true });
+    const rows = db.prepare("SELECT id,description FROM runs ORDER BY id DESC LIMIT 50").all().reverse();
+    const calls = db.prepare("SELECT description FROM tool_calls WHERE run_id = ? ORDER BY id");
+    return rows.flatMap(row => {
+      try {
+        const summary = JSON.parse(row.description);
+        const steps = calls.all(row.id).map(call => JSON.parse(call.description));
+        if (!steps.length) return [];
+        return [{
+          time: new Date(summary.start ?? row.id).toISOString(),
+          method: "tools/call", tool: summary.name, status: summary.status,
+          query: summary.query ?? steps[0]?.settings?.query,
+          runs: steps.map(step => ({
+            name: step.name, status: step.status,
+            date_start: step.start, date_end: step.end,
+            error: step.error, settings: step.settings, response: step.response,
+            lookup: { query: step.query ?? step.settings?.query, id: step.settings?.id },
+          })),
+        }];
+      } catch { return []; }
+    });
+  } catch (error) {
+    console.warn("Activity history could not be loaded:", error.message);
+    return [];
+  } finally { db?.close(); }
+}
+
 /**
  * Writes a finished run into the main database:
  *   - one summary row in runs
@@ -71,6 +107,9 @@ export async function saveRun(world, steps) {
       end: safeEnd,
       duration,
       status,
+      query: typeof top.settings?.query === "string" ? top.settings.query : null,
+      search: top.response?.search ?? (typeof top.settings?.query === "string" && top.status === "error"
+        ? { query: top.settings.query, outcome: "error", error: top.error } : null),
     };
 
     db.prepare(
@@ -98,6 +137,9 @@ export async function saveRun(world, steps) {
         end: s.date_end ?? null,
         duration: stepDuration,
         status: s.status,
+        query: typeof s.settings?.query === "string" ? s.settings.query : null,
+        search: s.response?.search ?? (typeof s.settings?.query === "string" && s.status === "error"
+          ? { query: s.settings.query, outcome: "error", error: s.error } : null),
         settings: s.settings,
         response: s.response,
         error: s.error,

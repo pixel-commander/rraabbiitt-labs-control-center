@@ -1,19 +1,27 @@
 @layer atoms {
   .container-main {
     color: var(--color-main-alt-neg);
-    background: var(--container-main-background, var(--color-main-alt));
+    background: linear-gradient(
+      160deg,
+      color-mix(in srgb, var(--container-main-background, var(--color-main-alt)) var(--bg-filter-opacity, 65%), transparent),
+      color-mix(in srgb, var(--color-main) var(--container-main-end-opacity, 45%), transparent)
+    );
     border: var(
       --container-main-border,
-      var(--border-width) var(--border-style) var(--border-default)
+      var(--border-width) var(--border-style) color-mix(in srgb, var(--border-subtle) 85%, white)
     );
     border-radius: var(--radius-container);
+    -webkit-backdrop-filter: blur(var(--bg-filter-blur, 12px));
+    backdrop-filter: blur(var(--bg-filter-blur, 12px));
+    box-shadow:
+      inset 0 0 40px 8px color-mix(in srgb, var(--color-main) 32%, transparent),
+      var(--elevation-float);
   }
 }
 
 @layer atoms {
   @supports (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px)) {
     .container-main.--bg-filter {
-      background: color-mix(in srgb, var(--container-main-background, var(--color-main-alt)) var(--bg-filter-opacity, 65%), transparent);
       -webkit-backdrop-filter: blur(var(--bg-filter-blur, 12px));
       backdrop-filter: blur(var(--bg-filter-blur, 12px));
     }

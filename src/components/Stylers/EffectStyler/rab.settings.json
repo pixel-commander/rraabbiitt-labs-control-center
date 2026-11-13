@@ -1,0 +1,13 @@
+{
+  "id": 1794599515286,
+  "name": "EffectStyler",
+  "title": "EffectStyler",
+  "description": "",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "EffectStyler.tsx",
+  "path": "src/components/Stylers/EffectStyler"
+}

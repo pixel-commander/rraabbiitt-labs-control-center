@@ -1,0 +1,16 @@
+{
+  "grid": "holy-grail",
+  "frame": {
+    "x": 24,
+    "y": 24,
+    "width": 480,
+    "height": 280
+  },
+  "elements": [],
+  "id": 1794593467339,
+  "name": "TestDashboard",
+  "title": "Test Dashboard for delete",
+  "path": "X:\\rraabbiitt-labs-control-center\\src\\components",
+  "type": "dashboard",
+  "description": "Test"
+}

@@ -64,7 +64,8 @@ async function buildRequestHandler(world) {
   if (publicUrl && (publicUrl.protocol !== "https:" || !token))
     throw new Error("Public MCP requires HTTPS and MCP_TOKEN.");
 
-  const activity = [];
+  const { readRunActivity } = await import("../../toolkit/runners/save-run/save-run.mjs");
+  const activity = await readRunActivity(world);
   const connections = new Set();
 
   function validateHost(req, res) {
@@ -162,6 +163,9 @@ async function buildRequestHandler(world) {
                   date_start: step.date_start,
                   date_end: step.date_end,
                   error: step.error,
+                  response: step.response,
+                  settings: step.settings,
+                  lookup: { query: step.settings?.query, id: step.settings?.id },
                 }));
                 requestEvent.toolId ??= steps.at(-1)?.id;
               },
@@ -225,6 +229,9 @@ async function buildRequestHandler(world) {
                 date_start: step.date_start,
                 date_end: step.date_end,
                 error: step.error,
+                  response: step.response,
+                  settings: step.settings,
+                  lookup: { query: step.settings?.query, id: step.settings?.id },
               }));
             },
             complete: async (steps) => {
@@ -295,6 +302,7 @@ async function buildRequestHandler(world) {
           method: "tools/call",
           tool: "use_tool",
           toolId: input?.id,
+          query: input?.query,
           status: "running",
           runs: [],
         };
@@ -312,6 +320,9 @@ async function buildRequestHandler(world) {
                   date_start: step.date_start,
                   date_end: step.date_end,
                   error: step.error,
+                  response: step.response,
+                  settings: step.settings,
+                  lookup: { query: step.settings?.query, id: step.settings?.id },
                 }));
             },
             complete: async (steps) => {

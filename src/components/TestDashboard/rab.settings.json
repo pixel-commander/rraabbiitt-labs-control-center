@@ -1,0 +1,40 @@
+{
+  "id": 1794593467339,
+  "name": "TestDashboard",
+  "title": "Test Dashboard for delete",
+  "description": "Test",
+  "type": "dashboard",
+  "tags": [
+    "react",
+    "dashboard"
+  ],
+  "file": "TestDashboard.tsx",
+  "path": "src/components/TestDashboard",
+  "paths": [
+    {
+      "name": "TestDashboard.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "test-dashboard.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "useTestDashboard.ts",
+      "path": "hooks",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    }
+  ]
+}

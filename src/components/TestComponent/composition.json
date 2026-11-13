@@ -1,0 +1,16 @@
+{
+  "grid": "holy-grail",
+  "frame": {
+    "x": 24,
+    "y": 24,
+    "width": 480,
+    "height": 280
+  },
+  "elements": [],
+  "name": "TestComponent",
+  "id": 1794367187480,
+  "title": "TestComponent",
+  "path": "X:\\rraabbiitt-labs-control-center\\src\\components",
+  "type": "component",
+  "description": "Just a test thing"
+}

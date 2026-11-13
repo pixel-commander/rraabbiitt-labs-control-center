@@ -1,0 +1,91 @@
+@layer base {
+  :where(form) {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    min-inline-size: 0;
+  }
+
+  :where(fieldset) {
+    min-inline-size: 0;
+    margin: 0;
+    padding: var(--space-lg);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-control);
+  }
+
+  :where(legend, label) {
+    color: var(--color-main-alt-neg);
+  }
+
+  :where(legend) {
+    padding-inline: var(--space-xs);
+  }
+
+  :where(input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]):not([type="button"]):not([type="submit"]):not([type="reset"]), textarea, select) {
+    min-inline-size: 0;
+    max-inline-size: 100%;
+    padding: var(--space-sm) var(--space-md);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-control);
+    background-color: var(--color-main-alt);
+    color: var(--color-main-neg);
+    font: inherit;
+    transition: border-color var(--motion-fast), background-color var(--motion-fast);
+  }
+
+  :where(select) {
+    font-family: var(--font-alt);
+    cursor: pointer;
+  }
+
+  :where(select:not([multiple]):not([size])) {
+    appearance: none;
+    padding-inline-end: calc(var(--space-lg) + var(--space-md));
+    background-image: linear-gradient(45deg, transparent 50%, var(--color-muted) 50%),
+      linear-gradient(135deg, var(--color-muted) 50%, transparent 50%);
+    background-position: right calc(var(--space-md) + 4px) center, right var(--space-md) center;
+    background-size: 4px 4px;
+    background-repeat: no-repeat;
+  }
+
+  :where(option, optgroup) {
+    background-color: var(--color-main-alt);
+    color: var(--color-main-neg);
+  }
+
+  :where(input, textarea, select):hover:not(:disabled) {
+    border-color: var(--color-muted);
+  }
+
+  :where(input, textarea, select):focus-visible {
+    border-color: var(--border-focus);
+    outline: var(--focus-ring);
+    outline-offset: var(--focus-offset);
+  }
+
+  :where(input, textarea)::placeholder {
+    color: var(--color-muted);
+    opacity: 1;
+  }
+
+  :where(textarea) {
+    resize: vertical;
+  }
+
+  :where(input[type="checkbox"], input[type="radio"], input[type="range"]) {
+    accent-color: var(--color-primary);
+  }
+
+  :where(input, textarea, select, button):disabled {
+    opacity: var(--disabled-opacity);
+    cursor: not-allowed;
+  }
+
+  @media (forced-colors: active) {
+    :where(select:not([multiple]):not([size])) {
+      appearance: auto;
+      background-image: none;
+    }
+  }
+}

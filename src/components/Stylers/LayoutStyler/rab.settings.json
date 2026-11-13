@@ -1,0 +1,13 @@
+{
+  "id": 1794599523355,
+  "name": "LayoutStyler",
+  "title": "LayoutStyler",
+  "description": "",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "LayoutStyler.tsx",
+  "path": "src/components/Stylers/LayoutStyler"
+}

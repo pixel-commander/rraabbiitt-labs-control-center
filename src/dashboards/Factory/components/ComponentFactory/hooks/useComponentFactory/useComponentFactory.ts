@@ -24,6 +24,7 @@ const initialComposition: FactoryComposition = {
 
 export const useComponentFactory = (props: ComponentFactoryProps) => {
   const [composition, setComposition] = useState(initialComposition);
+  const [jsonOpen, setJsonOpen] = useState(false);
   const [gridTab, setGridTab] = useState("Grid");
   const [styleTab, setStyleTab] = useState("Style");
   const [compositionTab, setCompositionTab] = useState("HTML");
@@ -226,6 +227,7 @@ export const useComponentFactory = (props: ComponentFactoryProps) => {
   };
 
   return {
+    jsonOpen, setJsonOpen,
     composition, area, selected, gridTab, styleTab, compositionTab, setCompositionTab, theme,
     gridDraft, setGridDraft, draftArea, setDraftArea, openGridDraft, addDraftArea,
     setName: (name: string) => setComposition((current) => ({ ...current, name })),

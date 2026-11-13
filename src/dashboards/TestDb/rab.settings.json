@@ -1,0 +1,40 @@
+{
+  "id": 1794595343585,
+  "name": "TestDb",
+  "title": "TestDB",
+  "description": "test db",
+  "type": "dashboard",
+  "tags": [
+    "react",
+    "dashboard"
+  ],
+  "file": "TestDb.tsx",
+  "path": "src/dashboards/TestDb",
+  "paths": [
+    {
+      "name": "TestDb.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "test-db.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "useTestDb.ts",
+      "path": "hooks",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    }
+  ]
+}

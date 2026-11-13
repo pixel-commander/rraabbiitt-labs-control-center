@@ -1,4 +1,4 @@
-import { projectRoot, withinProject } from "../../../../scripts/world.mjs";
+import { projectRoot, withinProject } from "../../../scripts/world.mjs";
 import { runToolCli } from "../../runners/tool-cli.mjs";
 import { generateWorldId } from "../../generators/generate-world-id/generate-world-id.ts";
 import { readFile, mkdir, writeFile } from "node:fs/promises";

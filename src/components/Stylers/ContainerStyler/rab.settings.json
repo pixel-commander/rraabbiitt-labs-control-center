@@ -1,0 +1,13 @@
+{
+  "id": 1794599510118,
+  "name": "ContainerStyler",
+  "title": "ContainerStyler",
+  "description": "",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "ContainerStyler.tsx",
+  "path": "src/components/Stylers/ContainerStyler"
+}

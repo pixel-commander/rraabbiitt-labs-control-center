@@ -2,7 +2,7 @@
   "id": 1794366620615,
   "name": "runner-render-factory-composition",
   "title": "Render factory composition",
-  "description": "Creates a component through the registered component runner, then replaces its returned JSX and stylesheet with generated composition strings.",
+  "description": "Creates a component, page, or dashboard through its registered runner, then replaces its returned JSX and stylesheet with generated composition strings.",
   "type": "runner",
   "tags": [
     "react",
@@ -50,7 +50,10 @@
       "name": "type",
       "type": "select",
       "options": [
-        "component"
+        "component",
+        "subcomponent",
+        "page",
+        "dashboard"
       ]
     },
     {

@@ -25,6 +25,7 @@ export interface SettingsColProps extends HouseKeys {
 }
 
 export interface HeaderProps extends ComponentFactoryProps {
+  handleViewJson?: () => void;
   component_name?: string;
   handleChange?: HandlerKey<string, "component-name", void, HeaderProps>;
 }

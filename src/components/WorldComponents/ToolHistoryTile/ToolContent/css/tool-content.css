@@ -1,0 +1,4 @@
+@layer components {
+  .tool-content { min-inline-size: 0; }
+}
+

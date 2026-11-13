@@ -1,0 +1,13 @@
+{
+  "id": 1794601443138,
+  "name": "Modal",
+  "title": "Modal",
+  "description": "",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "Modal.tsx",
+  "path": "src/components/Modal"
+}

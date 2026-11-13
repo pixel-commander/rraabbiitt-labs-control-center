@@ -7,11 +7,11 @@ owner:
   id: 1794366620615
 implementation:
   - id: 1794366620615
-instructions: Call run with one settings bag. type must be component. Supply name and path as the
-  component runner's HouseKeys, plus code as one JSX root element and css as a stylesheet string.
-  title, description, save_path and tags pass through. The runner resolves component runner ID
-  1793138966741 from the registered catalog. It scaffolds the component, then replaces only its
-  return expression and imported stylesheet. Existing props, imports, type definitions and default
-  assignments remain in place. Pass the generated component id to update its return and CSS without
-  rerunning the scaffold. Other types fail before creating files. Returns the flat RunnerReturn
-  receipts from the component runner and write step.
+instructions: Call run with one settings bag. type selects component, subcomponent, page, or dashboard.
+  Supply name, path (project root), code as one JSX root element, and css as a stylesheet string.
+  title, description, save_path and tags pass through. The runner resolves the registered
+  component (1793138966741), subcomponent (1793138966746), page (1793138966755), or dashboard (1793138966759) runner.
+  It scaffolds the selected artifact, then replaces only its return expression and imported
+  stylesheet. Existing props, imports, type definitions and defaults remain in place.
+  Existing artifacts return overwrite confirmation. Pass overwrite true and the matching id
+  to update without rerunning the scaffold. Returns flat RunnerReturn receipts.

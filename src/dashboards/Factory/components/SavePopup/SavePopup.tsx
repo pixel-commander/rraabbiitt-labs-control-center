@@ -1,3 +1,4 @@
+import type { FactoryArtifactType } from "../../Factory.types";
 import "./css/save-popup.css";
 import type { SavePopupProps } from "./SavePopup.types";
 import { FolderTree } from "../../../../components/FolderTree/FolderTree";
@@ -13,7 +14,7 @@ export const SavePopup = (props: SavePopupProps) => {
   return (
     <dialog
       className={rootClassName}
-      aria-label={pending ? "Saving component" : result ? "Component saved" : confirmation ? "Confirm overwrite" : "Save component"}
+      aria-label={pending ? "Saving artifact" : result ? "Artifact saved" : confirmation ? "Confirm overwrite" : "Save artifact"}
       ref={(dialog) => { if (dialog && !dialog.open) dialog.showModal(); }}
       onCancel={(event) => {
         event.preventDefault();
@@ -37,7 +38,7 @@ export const SavePopup = (props: SavePopupProps) => {
             </div>
             <div data-area="main" className="save-popup__success" role="status">
               <SuccessIcon />
-              <strong>Component saved</strong>
+              <strong>Artifact saved</strong>
               <span>{result.name}</span>
             </div>
           </div>
@@ -78,27 +79,34 @@ export const SavePopup = (props: SavePopupProps) => {
           const path = String(values.get("path")).trim();
           handleSave?.({
             ...data,
-            id: name === data.name && path === data.path ? data.id : undefined,
+            id: name === data.name && path === data.path && values.get("type") === data.type ? data.id : undefined,
             name,
             title: String(values.get("title")).trim(),
             path,
-            type: "component",
+            type: String(values.get("type")) as FactoryArtifactType,
             description: String(values.get("description")).trim(),
           }, "component-runner", props);
         }}
       >
-        <header data-area="header"><strong>Save component</strong></header>
+        <header data-area="header"><strong>Save artifact</strong></header>
         <fieldset data-area="main" disabled={pending}>
           {fields.map((name) => (
             <label key={name}>
-              {name === "path" ? "Path (components folder)" : name}
+              {name === "path" ? "Path (destination folder)" : name}
               <input name={name} defaultValue={data[name]} required autoFocus={name === "name"} />
             </label>
           ))}
           <label>
             Type
-            <select name="type" required defaultValue="component">
+            <select name="type" required defaultValue={data.type} onChange={(event) => {
+              const input = event.currentTarget.form?.elements.namedItem("path") as HTMLInputElement | null;
+              const destination = data.destinations?.[event.currentTarget.value as FactoryArtifactType];
+              if (input && destination) input.value = destination;
+            }}>
               <option value="component">component</option>
+              <option value="subcomponent">subcomponent</option>
+              <option value="page">page</option>
+              <option value="dashboard">dashboard</option>
             </select>
           </label>
         </fieldset>

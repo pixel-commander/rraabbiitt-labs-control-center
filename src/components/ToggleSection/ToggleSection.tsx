@@ -25,8 +25,10 @@ export const ToggleSection = ({
           <path d="m4 6 4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       </button>
-      <div ref={main} id={mainId} className="toggle-section-main pad is-closed" inert aria-hidden="true">
-        <div className="toggle-section-inner scroll-y">{children}</div>
+      <div ref={main} id={mainId} className="toggle-section-main is-closed" inert aria-hidden="true">
+        <div className="toggle-section-inner">
+          <div className="toggle-section-content pad scroll-y">{children}</div>
+        </div>
       </div>
     </section>
   );

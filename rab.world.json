@@ -3,7 +3,7 @@
   "name": "portable-search-dashboard",
   "title": "Portable Hybrid Search Dashboard",
   "description": "Local world for the labs control center.",
-  "path": "C:/rraabbiitt-labs-control-center",
+  "path": ".",
   "paths": [
     {
       "id": 1794420272872,

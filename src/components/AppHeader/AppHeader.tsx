@@ -1,13 +1,17 @@
 import "./css/app-header.css";
 import { useState } from "react";
-import { data } from "../../data.ts";
+import type { ReactNode } from "react";
+import type { TabNavItem } from "../TabNav/TabNav.types";
 import { useURL } from "../../hooks/useURL/useURL.ts";
 import { TabNav } from "../TabNav/TabNav";
 import { useProjectRefresh } from "./hooks/useProjectRefresh/useProjectRefresh";
 
 const wordmark = "rraabbiitt";
 
-export const AppHeader = () => {
+export const AppHeader = ({ brand, nav_items = [] }: {
+  brand?: { mark?: ReactNode; title?: string };
+  nav_items?: TabNavItem[];
+} = {}) => {
   const [mode, setMode] = useState(() =>
     document.documentElement.dataset.mode === "light" ? "light" : "dark",
   );
@@ -18,8 +22,8 @@ export const AppHeader = () => {
     <>
       <div data-area="side">
         <div className="app-header__brand inner pad">
-          <span className="app-header__mark">{data.brand.mark}</span>
-          <span className="app-header__wordmark" aria-label={data.brand.title}>
+          <span className="app-header__mark">{brand?.mark}</span>
+          <span className="app-header__wordmark" aria-label={brand?.title ?? "rraabbiitt labs"}>
             {Array.from(wordmark).map((letter, index) => (
               <span
                 key={`${letter}-${index}`}
@@ -41,11 +45,7 @@ export const AppHeader = () => {
         <div className="app-header__right inner pad">
           <TabNav
             styler="main"
-            items={data.siteNav.map(({ label, page }, index) => ({
-              id: index + 1,
-              label,
-              path: `/${page}`,
-            }))}
+            items={nav_items}
             selected={`/${current}`}
             handleClick={(item) =>
               item && handleURL({

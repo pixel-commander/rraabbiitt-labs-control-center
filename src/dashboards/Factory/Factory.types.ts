@@ -4,6 +4,8 @@ import type { HouseKeys } from "../../HouseKeys.types";
 
 export interface FactoryProps extends ComponentFactoryProps {}
 
+export type FactoryArtifactType = "component" | "subcomponent" | "page" | "dashboard";
+
 export interface FactorySaveData extends HouseKeys {
   /** Component name supplied to the runner. It is prefilled from the designer. */
   name: string;
@@ -11,8 +13,9 @@ export interface FactorySaveData extends HouseKeys {
   title: string;
   /** Required destination components folder, absolute or relative to the configured project. */
   path: string;
-  /** Artifact category. This save flow currently supports components. */
-  type: "component";
+  /** Artifact category. Selects the matching scaffold. */
+  type: FactoryArtifactType;
+  destinations?: Record<FactoryArtifactType, string>;
   /** Required description stored in the component metadata and composition file. */
   description: string;
   /** Editable composition source saved separately from its generated JSX and CSS. */

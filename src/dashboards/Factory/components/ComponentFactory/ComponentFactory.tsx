@@ -5,6 +5,7 @@ import type { ComponentFactoryProps } from "./ComponentFactory.types";
 import { Footer } from "./Footer/Footer";
 import { GridCol } from "./GridCol";
 import { Header } from "./Header/Header";
+import { JsonPreview } from "./JsonPreview/JsonPreview";
 import { Layers } from "./Layers/Layers";
 import { StyleCol } from "./StyleCol";
 import { useComponentFactory } from "./hooks/useComponentFactory/useComponentFactory";
@@ -18,7 +19,7 @@ export const ComponentFactory = (props: ComponentFactoryProps) => {
   useKeypress({
     key: "Escape",
     callback: () => {
-      if (!editor.gridDraft) editor.clearSelection();
+      if (!editor.gridDraft && !editor.jsonOpen) editor.clearSelection();
     },
   });
 
@@ -28,6 +29,7 @@ export const ComponentFactory = (props: ComponentFactoryProps) => {
         <Header
           {...props}
           component_name={editor.composition.name}
+          handleViewJson={() => editor.setJsonOpen(true)}
           handleChange={(name) => { if (name !== undefined) editor.setName(name); }}
           handleClick={(_, action) => action && editor.handleAction(action)}
         />
@@ -41,6 +43,7 @@ export const ComponentFactory = (props: ComponentFactoryProps) => {
       <div data-area="footer">
         <Footer container_ref={container_ref} background={editor.theme} handleChange={editor.setTheme} />
       </div>
+      {editor.jsonOpen && <JsonPreview composition={editor.composition} handleClose={() => editor.setJsonOpen(false)} />}
     </div>
   );
 };

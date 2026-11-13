@@ -1,0 +1,26 @@
+{
+  "id": 1794595668705,
+  "name": "add-view-to-nav",
+  "title": "add-view-to-nav",
+  "description": "New world tool.",
+  "type": "tool",
+  "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/tools/add-view-to-nav",
+  "file": "add-view-to-nav.ts",
+  "settings": [],
+  "paths": [
+    {
+      "path": ".",
+      "file": "add-view-to-nav.ts",
+      "type": "ts"
+    },
+    {
+      "path": ".",
+      "file": "rab.settings.json",
+      "type": "json"
+    }
+  ],
+  "tags": [
+    "rab-world-v2",
+    "scaffold"
+  ]
+}

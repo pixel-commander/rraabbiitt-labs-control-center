@@ -1,0 +1,9 @@
+schema: 1
+intent: use
+id: 1794601443141
+name: useModal
+owner:
+  id: 1794601443139
+implementation:
+  - id: 1794601443139
+instructions: Generated starter; update with the implemented contract before use.

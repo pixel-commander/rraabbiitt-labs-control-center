@@ -1,9 +1,8 @@
 import { useState } from "react";
-import type { ReactNode } from "react";
+import { Stylers as SharedStylers } from "../../../../../components/Stylers/Stylers";
+import { ColorStyler } from "../../../../../components/Stylers/ColorStyler/ColorStyler";
 import { SizeFields } from "../SizeFields";
 import { radiusCorners } from "../js/sizeStyles";
-import { DropdownButton } from "../../../../../components/DropdownButton/DropdownButton";
-import type { DropdownButtonProps } from "../../../../../components/DropdownButton/DropdownButton.types";
 import { FillIcon } from "../../../../../icons/FillIcon";
 import { RadiusIcon } from "../../../../../icons/RadiusIcon";
 import { StrokeIcon } from "../../../../../icons/StrokeIcon";
@@ -17,17 +16,6 @@ interface StylersProps extends FactoryEditorProps {
   theme_tokens?: ComponentFactoryProps["theme_tokens"];
   atoms: Record<"container" | "effect" | "action", string[]>;
 }
-
-const pickerRow = (caption: string, dropdown: DropdownButtonProps, swatch?: ReactNode) => {
-  const className = swatch ? "component-factory-color" : "component-factory-color component-factory-atom";
-  return (
-    <div key={caption} className={className} role="group" aria-label={caption}>
-      <span>{caption}</span>
-      {swatch}
-      <DropdownButton {...dropdown} />
-    </div>
-  );
-};
 
 export const Stylers = ({ editor, atoms, theme_tokens }: StylersProps) => {
   const [state, setState] = useState<FactoryActionState>("default");
@@ -50,32 +38,12 @@ export const Stylers = ({ editor, atoms, theme_tokens }: StylersProps) => {
   const swatchColor = (name: string) =>
     composition.colors?.[name] ?? `var(${name}${theme_tokens?.[name] ? `, ${theme_tokens[name]}` : ""})`;
   const color = (label: string, value: string | undefined, change: (value: string) => void) => {
-    const token = colorNames.find((name) => value === `var(${name})`);
-    const items = [
-      { id: 0, label: "Default" },
-      ...colorNames.map((name, index) => ({
-        id: index + 1,
-        label: name.slice(2),
-        Icon: <span className="component-factory-color__swatch" style={{ backgroundColor: swatchColor(name) }} />,
-      })),
-    ];
-
-    return pickerRow(label, {
-      label: token?.slice(2) ?? (value || "Default"),
-      items,
-      handleClick: (item) => {
-        if (item) change(item.id === 0 ? "" : `var(${colorNames[item.id - 1]})`);
-      },
-    },
-        <div className="component-factory-color__swatch" style={{ backgroundColor: token ? swatchColor(token) : value }}>
-          <input
-            aria-label={`${label} custom color`}
-            type="color"
-            value={value && /^#[\da-f]{6}$/i.test(value) ? value : "#000000"}
-            onChange={(event) => change(event.target.value)}
-          />
-        </div>,
-    );
+    return <fieldset><legend>{label}</legend>
+      <ColorStyler color_property="color" values={{ color: value }} theme_tokens={Object.fromEntries(colorNames.map(name => [name, swatchColor(name)]))}
+        handleChange={selection => { if (selection) change(String(selection.value ?? '')); }} />
+      <label>Custom color<input aria-label={label + ' custom color'} type="color" value={value && /^#[\da-f]{6}$/i.test(value) ? value : '#000000'} onChange={event => change(event.target.value)} /></label>
+      <button type="button" className="action-ghost" onClick={() => change('')}>Default</button>
+    </fieldset>;
   };
   if (selected && selected.type !== "Div" && !button) {
     return <fieldset><legend>Text</legend>{color("Color", selected.color, (value) => editor.updateElement({ color: value || "#dfe4ee" }))}</fieldset>;
@@ -87,32 +55,13 @@ export const Stylers = ({ editor, atoms, theme_tokens }: StylersProps) => {
   const updateShadow = (index: number, patch: Partial<FactoryShadow>) => update({ shadows: shadows.map((layer, i) => i === index ? { ...layer, ...patch } : layer) });
   return (
     <>
-      {fields.map((field) => {
-        const current = field === "action" ? selected?.action : target?.[field];
-        const items = [
-          { id: 0, label: "None" },
-          ...atoms[field].map((atom, index) => ({
-            id: index + 1,
-            label: atom,
-            Icon: <span className={`component-factory-atom-preview ${atom}`} />,
-          })),
-        ];
-        return pickerRow(field, {
-          label: current ? (
-            <>
-              <span className={`component-factory-atom-preview ${current}`} aria-hidden="true" />
-              {current}
-            </>
-          ) : "None",
-          items,
-          handleClick: (item) => {
-            if (!item) return;
-            const patch = { [field]: item.id === 0 ? "" : atoms[field][item.id - 1] };
-            if (selected) editor.updateElement(patch);
-            else editor.updateSurface(patch);
-          },
-        });
-      })}
+      <SharedStylers types={[...fields]} atoms={atoms} values={{ container: target?.container, effect: target?.effect, action: selected?.action }}
+        handleChange={change => {
+          if (!change) return;
+          const patch = { [change.name]: change.value };
+          if (selected) editor.updateElement(patch);
+          else editor.updateSurface(patch);
+        }} />
       {button && <label><input type="checkbox" checked={selected.disabled ?? false} onChange={(event) => editor.updateElement({ disabled: event.target.checked })} />Disabled</label>}
       {button && <label>Action state<select value={state} onChange={(event) => setState(event.target.value as FactoryActionState)}>
         {actionStates.map((name) => <option key={name}>{name}</option>)}

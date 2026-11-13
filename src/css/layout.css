@@ -16,6 +16,11 @@
     --border-style: solid;
     --radius-control: 0.25rem;
     --radius-container: 0.5rem;
+    --radius-xs: var(--space-xs);
+    --radius-sm: var(--space-sm);
+    --radius-md: var(--space-md);
+    --radius-base: var(--space-base);
+    --radius-lg: var(--space-lg);
     --radius-xl: 1rem;
     --radius-round: 50%;
     --font-main: "Roboto", system-ui, sans-serif;

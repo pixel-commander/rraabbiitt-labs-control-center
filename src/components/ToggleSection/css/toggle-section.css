@@ -35,14 +35,19 @@
     min-inline-size: 0;
     overflow: hidden;
     box-sizing: border-box;
-    transition: max-height 220ms ease, padding-block 220ms ease;
+    display: grid;
+    transition: grid-template-rows 220ms ease;
   }
-  .toggle-section-main.is-closed { max-height: 0; padding-block: 0; }
-  .toggle-section-main.is-open { max-height: var(--toggle-section-max-height); }
+  .toggle-section-main.is-closed { grid-template-rows: 0fr; }
+  .toggle-section-main.is-open { grid-template-rows: 1fr; }
   .toggle-section-inner {
-    height: max-content;
-    max-height: calc(var(--toggle-section-max-height) - var(--space-base) * 2);
+    min-block-size: 0;
+    overflow: hidden;
     min-inline-size: 0;
+  }
+  .toggle-section-content {
+    max-height: var(--toggle-section-max-height);
+    box-sizing: border-box;
   }
   @media (prefers-reduced-motion: reduce) {
     .toggle-section-main, .toggle-section-toggle svg { transition: none; }

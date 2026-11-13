@@ -20,6 +20,7 @@ import { Demo as HelpIconDemo } from "../../components/HelpIcon/demo/Demo";
 import { Demo as LoginBoxDemo } from "../../components/LoginBox/demo/Demo";
 import { Demo as McpViewerDemo } from "../../components/McpViewer/demo/Demo";
 import { Demo as MessageBoxDemo } from "../../components/MessageBox/demo/Demo";
+import { Demo as ModalDemo } from "../../components/Modal/demo/Demo";
 import { Demo as NetworkGraphDemo } from "../../components/NetworkGraph/demo/Demo";
 import { Demo as PassPropsDemo } from "../../components/PassProps/demo/Demo";
 import { Demo as PopupDemo } from "../../components/Popup/demo/Demo";
@@ -35,6 +36,7 @@ import { Demo as StarRankingDemo } from "../../components/StarRanking/demo/Demo"
 import { Demo as StatCellsDemo } from "../../components/StatCells/demo/Demo";
 import { Demo as StatusBarDemo } from "../../components/StatusBar/demo/Demo";
 import { Demo as TabNavDemo } from "../../components/TabNav/demo/Demo";
+import { Demo as StylersDemo } from "../../components/Stylers/demo/Demo";
 import { Demo as TestComponentDemo } from "../../components/TestComponent/demo/Demo";
 import { Demo as ToggleGroupDemo } from "../../components/ToggleGroup/demo/Demo";
 import { Demo as ToggleSectionDemo } from "../../components/ToggleSection/demo/Demo";
@@ -255,6 +257,10 @@ export const StyleGuidePage = () => {
         <h2>MessageBox</h2>
         <MessageBoxDemo />
       </section>
+      <section id="modal" data-cols="1" data-gap="content">
+        <h2>Modal</h2>
+        <ModalDemo />
+      </section>
       <section id="network-graph" data-cols="1" data-gap="content">
         <h2>NetworkGraph</h2>
         <NetworkGraphDemo />
@@ -314,6 +320,10 @@ export const StyleGuidePage = () => {
       <section id="tab-nav" data-cols="1" data-gap="content">
         <h2>TabNav</h2>
         <TabNavDemo />
+      </section>
+      <section id="stylers" data-cols="1" data-gap="content">
+        <h2>Stylers</h2>
+        <StylersDemo />
       </section>
       <section id="test-component" data-cols="1" data-gap="content">
         <h2>TestComponent</h2>

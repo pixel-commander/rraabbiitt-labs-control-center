@@ -1,0 +1,4 @@
+@layer components {
+  .content-data { margin: 0; min-inline-size: 0; white-space: pre-wrap; overflow-wrap: anywhere; font: var(--type-code); }
+}
+

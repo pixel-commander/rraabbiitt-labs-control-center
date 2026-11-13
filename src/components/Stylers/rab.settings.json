@@ -1,0 +1,13 @@
+{
+  "id": 1794599487069,
+  "name": "Stylers",
+  "title": "Stylers",
+  "description": "",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "Stylers.tsx",
+  "path": "src/components/Stylers"
+}

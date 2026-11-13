@@ -1,0 +1,13 @@
+{
+  "id": 1794596743497,
+  "name": "ToolHistoryTile",
+  "title": "Tool history tile",
+  "description": "Tool history tile extending ToggleSection.",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "ToolHistoryTile.tsx",
+  "path": "src/components/WorldComponents/ToolHistoryTile"
+}

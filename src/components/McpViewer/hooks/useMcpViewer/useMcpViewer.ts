@@ -4,7 +4,7 @@ import type { FloatWindowProps } from "../../../FloatWindow/FloatWindow.types";
 export const useMcpViewer = () => {
   const [tools, setTools] = useState<{ name: string; description?: string }[]>([]);
   const [toolError, setToolError] = useState("");
-  const [activity, setActivity] = useState<{ time: string; method: string; client: string; tool?: string; toolId?: number; status: string; runs?: { id?: number; name?: string; status: string; date_start?: number; date_end?: number; error?: string }[] }[]>([]);
+  const [activity, setActivity] = useState<{ time: string; method: string; client: string; tool?: string; toolId?: number; query?: string; status: string; runs?: { id?: number; name?: string; type?: string; return_type?: string; status: string; date_start?: number; date_end?: number; error?: string; response?: unknown; settings?: Record<string, unknown>; lookup?: { query?: string; id?: number } }[] }[]>([]);
   const [state, setState] = useState(() => ({
     open: false,
     status: "checking" as "checking" | "connected" | "disconnected",
@@ -67,3 +67,4 @@ export const useMcpViewer = () => {
   };
   return { ...state, tools, toolError, activity, buttonRef, windowRef, handleClick, handleClose, handleChange };
 };
+

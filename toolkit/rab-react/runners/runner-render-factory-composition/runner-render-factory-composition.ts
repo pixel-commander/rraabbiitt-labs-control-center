@@ -15,8 +15,8 @@ import { compositionExpression, replaceReturn } from "./replace-return.ts";
 export { pascalCase } from "../../scaffolds/new-react-component/scaffold.ts";
 
 export interface RenderFactoryCompositionProps extends ToolsProps {
-  /** Artifact category. Only component is currently supported. */
-  type: "component";
+  /** Artifact category. Component, page, or dashboard scaffold. */
+  type: "component" | "subcomponent" | "page" | "dashboard";
   /** Name passed to the canonical component runner for normalization. */
   name: string;
   /** Destination project root with registered component paths. */
@@ -30,14 +30,14 @@ export interface RenderFactoryCompositionProps extends ToolsProps {
 }
 
 const pending = new Set<string>();
-const componentRunnerId = 1793138966741;
+const runnerIds = { component: 1793138966741, subcomponent: 1793138966746, page: 1793138966755, dashboard: 1793138966759 };
 
 export const run = async (settings: RenderFactoryCompositionProps, options: RunnerCallbacks = {}): Promise<RunnerReturn> => {
-  if (settings.type !== "component") throw Error("Only type component is supported.");
+  if (!Object.hasOwn(runnerIds, settings.type)) throw Error("Unsupported artifact type.");
   if (typeof settings.code !== "string" || !settings.code.trim()) throw Error("code is required.");
   if (typeof settings.css !== "string") throw Error("css must be a string.");
   const code = compositionExpression(settings.code);
-  const plan = await planReactScaffold("component", settings);
+  const plan = await planReactScaffold(settings.type, settings);
   const name = pascalCase(settings.name);
   const folder = resolve(String(plan[0].settings.path), name);
   const lock = folder.toLowerCase();
@@ -48,7 +48,7 @@ export const run = async (settings: RenderFactoryCompositionProps, options: Runn
     let created: NonNullable<ToolReturn["response"]>;
     try {
       created = JSON.parse(await readFile(resolve(folder, "rab.settings.json"), "utf8"));
-      if ((settings.id !== undefined && created.id !== settings.id) || created.name !== name || created.type !== "component") {
+      if ((settings.id !== undefined && created.id !== settings.id) || created.name !== name || created.type !== (settings.type === "subcomponent" ? "component" : settings.type)) {
         throw Error("Existing component identity does not match.");
       }
       const existingFile = resolve(folder, String(created.file));
@@ -63,7 +63,7 @@ export const run = async (settings: RenderFactoryCompositionProps, options: Runn
       }
     } catch (error) {
       if ((error as NodeJS.ErrnoException).code !== "ENOENT" || settings.id !== undefined) throw error;
-      const entry = await resolveRunner(componentRunnerId);
+      const entry = await resolveRunner(runnerIds[settings.type], settings.path);
       const runner = await import(pathToFileURL(entry).href);
       results = await runner.run(settings, options);
       const result = results.find((item) => item.response?.id);
@@ -83,7 +83,8 @@ export const run = async (settings: RenderFactoryCompositionProps, options: Runn
       const localCss = relative(folder, cssFile);
       if (localCss.startsWith("..") || isAbsolute(localCss)) throw Error("Stylesheet must be inside the component folder.");
       await readFile(cssFile, "utf8");
-      const next = replaceReturn(source, name, code);
+      const exportName = settings.type === "page" && !name.endsWith("Page") ? `${name}Page` : name;
+      const next = replaceReturn(source, exportName, code);
       const token = randomUUID();
       const componentTemp = componentFile + `.${token}.tmp`;
       const cssTemp = cssFile + `.${token}.tmp`;

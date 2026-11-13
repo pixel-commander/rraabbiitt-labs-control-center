@@ -1,0 +1,9 @@
+schema: 1
+intent: use
+id: 1794601443140
+name: Modal
+owner:
+  id: 1794601443138
+implementation:
+  - id: 1794601443138
+instructions: Generated starter; update with the implemented contract before use.

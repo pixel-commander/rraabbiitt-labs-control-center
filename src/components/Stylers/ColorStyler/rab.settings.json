@@ -1,0 +1,13 @@
+{
+  "id": 1794599507315,
+  "name": "ColorStyler",
+  "title": "ColorStyler",
+  "description": "",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "ColorStyler.tsx",
+  "path": "src/components/Stylers/ColorStyler"
+}

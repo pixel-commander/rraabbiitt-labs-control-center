@@ -10,7 +10,7 @@ export async function saveComponent(data, toolkitRoot, projectRoot) {
   for (const key of required) {
     if (typeof data?.[key] !== "string" || !data[key].trim()) throw Error(`${key} is required.`);
   }
-  if (data.type !== "component") throw Error("This save type creates components.");
+  if (!["component", "subcomponent", "page", "dashboard"].includes(data.type)) throw Error("Unsupported artifact type.");
   if (!data.composition || !Array.isArray(data.composition.elements)) throw Error("Composition is required.");
   if (typeof projectRoot !== "string" || !projectRoot.trim()) throw Error("projectRoot is required.");
   projectRoot = resolve(projectRoot);
@@ -30,7 +30,7 @@ export async function saveComponent(data, toolkitRoot, projectRoot) {
   if (data.id !== undefined && !Number.isSafeInteger(data.id)) throw Error("Saved component identity is invalid.");
   try {
     const previous = JSON.parse(await readFile(file, "utf8"));
-    if (resolve(projectRoot, previous.path) !== destination || (data.id !== undefined && previous.id !== data.id)) {
+    if (previous.type !== data.type || resolve(projectRoot, previous.path) !== destination || (data.id !== undefined && previous.id !== data.id)) {
       throw Error("This composition name belongs to another component or project.");
     }
   } catch (error) {
@@ -73,7 +73,7 @@ export async function saveComponent(data, toolkitRoot, projectRoot) {
     name: created.name,
     title: data.title.trim(),
     path: destination,
-    type: "component",
+    type: data.type,
     description: data.description.trim(),
   };
   const temp = join(folder, `.${randomUUID()}.tmp`);
@@ -87,6 +87,7 @@ export async function saveComponent(data, toolkitRoot, projectRoot) {
   return {
     id: created.id,
     name: created.name,
+    type: data.type,
     title: saved.title,
     description: saved.description,
     path: destination,
@@ -109,7 +110,21 @@ export const factorySavePlugin = ({ path, toolkitRoot, projectRoot }) => {
         res.writeHead(status, { "Content-Type": "application/json", "Cache-Control": "no-store" });
         res.end(JSON.stringify(value));
       };
-      if (req.method === "GET") return send(200, { path: destination });
+      if (req.method === "GET") {
+        try {
+          const { planReactScaffold } = await import(pathToFileURL(resolve(toolkitRoot, "rab-react/runners/run-react-scaffold.ts")).href);
+          const paths = {};
+          for (const type of ["component", "subcomponent", "page", "dashboard"]) {
+            const plan = await planReactScaffold(type, { path: projectRoot, name: "Factory" });
+            paths[type] = plan[0].settings.path || resolve(destination, "..", { component: "components", subcomponent: "components", page: "pages", dashboard: "dashboards" }[type]);
+          }
+          paths.component = destination;
+          paths.subcomponent ||= destination;
+          return send(200, { path: destination, paths });
+        } catch (error) {
+          return send(400, { error: error.message });
+        }
+      }
       if (req.method !== "POST") return send(405, { error: "Use GET or POST." });
       if (req.headers.origin && new URL(req.headers.origin).host !== req.headers.host) return send(403, { error: "Same-origin request required." });
       if (pending) return send(409, { error: "A component save is already running." });

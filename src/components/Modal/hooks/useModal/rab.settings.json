@@ -1,0 +1,13 @@
+{
+  "id": 1794601443139,
+  "name": "useModal",
+  "title": "useModal",
+  "description": "",
+  "type": "hook",
+  "tags": [
+    "react",
+    "hook"
+  ],
+  "file": "useModal.ts",
+  "path": "src/components/Modal/hooks/useModal"
+}

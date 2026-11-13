@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1791940045376
 name: fixers
-title: Fixers
+title: "How to Fixers"
 description: Repair an explicitly selected problem and report changes.
 type: skill
 path: skills/toolkits/tools/fixers

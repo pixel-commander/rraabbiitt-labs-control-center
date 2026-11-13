@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1791940045476
 name: scaffolds
-title: Scaffolds
+title: "How to Scaffolds"
 description: Create a declared structure from its owned template.
 type: skill
 path: skills/toolkits/tools/scaffolds

@@ -12,6 +12,8 @@ export interface ResponseAndRankingCardProps extends Omit<HouseKeys, "title"> {
   children?: ReactNode;
   data?: unknown;
   disabled?: boolean;
+  /** Hide feedback actions for display-only ranked results. */
+  show_actions?: boolean;
   vote?: VoteType;
   favorite?: boolean;
   handleClick?: HandlerKey<

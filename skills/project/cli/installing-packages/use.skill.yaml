@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1793126984416
 name: installing-packages
-title: Installing packages
+title: "How to Installing packages"
 description: CLI for installing packages
 type: function
 path: skills/project/cli/installing-packages

@@ -4,7 +4,7 @@ owner:
   id: 1794014810540
 id: 1794014849134
 name: Slider
-title: Use Slider
+title: "How to Use Slider"
 description: Props, defaults and callbacks for Slider.
 type: skill
 path: src/components/Slider

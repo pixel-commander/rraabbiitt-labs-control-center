@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1791518659404
 name: new-react-component
-title: New Component
+title: "How to New Component"
 description: Creates a React component, types, stylesheet and hook using the supplied values.
 type: function
 path: toolkits/rab-react/scaffolds/new-react-component

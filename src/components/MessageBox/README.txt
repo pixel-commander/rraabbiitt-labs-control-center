@@ -25,3 +25,5 @@ Layout
   The root owns padding and gap. No fixed outer preview width is applied.
 
 Use theme tokens, container_class, submit_class, className, or parent CSS for style overrides. Native form submission is prevented. The component performs no network or storage operations.
+
+Rephrase: MessageBox accepts optional handleClick(text, "rephrase", completeProps). When supplied, an outlined Rephrase button appears beside Run. DumBot owns this callback and previews the current draft through its model responder in the chat; no tool executes and the draft is preserved.

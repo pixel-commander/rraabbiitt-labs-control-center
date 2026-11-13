@@ -4,7 +4,7 @@ owner:
   id: 1794399461744
 id: 1794408972586
 name: MessageBox
-title: Use MessageBox
+title: "How to Use MessageBox"
 description: Props, defaults and callbacks for MessageBox.
 type: skill
 path: src/components/MessageBox
@@ -80,6 +80,7 @@ inputs:
     required: false
 outputs: {}
 instructions: >-
+  Optional handleClick(text, "rephrase", completeProps) displays an outlined Rephrase button beside Run. The parent owns its behavior.
   Props
 
   place_holder (optional): string | undefined

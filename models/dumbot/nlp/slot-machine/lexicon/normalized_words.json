@@ -1,0 +1,20 @@
+{
+  "add": [
+    "create",
+    "make"
+  ],
+  "find": [
+    "search"
+  ],
+  "delete": [
+    "remove"
+  ],
+  "run": [
+    "execute"
+  ],
+  "name": [
+    "named",
+    "names",
+    "name it"
+  ]
+}

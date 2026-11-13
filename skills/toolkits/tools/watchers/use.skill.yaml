@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1791940045502
 name: watchers
-title: Watchers
+title: "How to Watchers"
 description: Observe a scope with an explicit lifecycle.
 type: skill
 path: skills/toolkits/tools/watchers

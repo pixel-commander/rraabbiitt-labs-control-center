@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1793154927350
 name: use-train-field-feedback
-title: Records an explicit user field judgment or rephrase and trains supervised field/query evidence.
+title: "How to Records an explicit user field judgment or rephrase and trains supervised field/query evidence."
 description: Records an explicit user field judgment or rephrase and trains supervised field/query evidence.
 type: skill
 path: toolkit/hybrid-seat-ranking/tools/train-field-feedback

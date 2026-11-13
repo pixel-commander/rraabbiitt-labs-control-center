@@ -4,7 +4,7 @@ owner:
   id: 1794397432878
 id: 1794408973101
 name: PageHeader
-title: Use PageHeader
+title: "How to Use PageHeader"
 description: Props, defaults and callbacks for PageHeader.
 type: skill
 path: src/components/UiElements/PageHeader

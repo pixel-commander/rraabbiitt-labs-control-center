@@ -4,7 +4,7 @@ owner:
   id: 1794404369434
 id: 1794408972671
 name: ResponseAndRankingCard
-title: Use ResponseAndRankingCard
+title: "How to Use ResponseAndRankingCard"
 description: Props, defaults and callbacks for ResponseAndRankingCard.
 type: skill
 path: src/components/SearchResponses/ResponseAndRankingCard

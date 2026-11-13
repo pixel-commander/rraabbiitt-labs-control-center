@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1791940045335
 name: runner-states
-title: Runner states
+title: "How to Runner states"
 description: Interpret execution states separately from findings.
 type: skill
 path: skills/toolkits/runners/runner-states

@@ -88,7 +88,7 @@ export const ResponseAndRankingCard = (props: ResponseAndRankingCardProps) => {
         {children !== undefined && (
           <div className="response-and-ranking-card-content">{children}</div>
         )}
-        <footer
+        {props.show_actions !== false && <footer
           data-grid="side-right"
           data-gap="control"
           className="response-and-ranking-card-actions"
@@ -134,7 +134,7 @@ export const ResponseAndRankingCard = (props: ResponseAndRankingCardProps) => {
             {ICON_TYPES.favorite}
           </button>
           <Tooltip targetRef={targets.favorite} content={favorite ? "Remove from favorites list" : "Add to favorites list"} placement="above" />
-        </footer>
+        </footer>}
       </div>
     </article>
   );

@@ -11,6 +11,8 @@ export interface SearchRecord extends HouseKeys, PathsProps {
 }
 export interface SearchResult {
   raw_return?: unknown;
+  reply?: string;
+  contract?: { id: number; values: Record<string, unknown>; next: string | null; phase?: "filling" | "confirming" | "confirmed" | "cancelled" | "complete" | "failed"; token?: string; action?: string; type?: string };
   paths: SearchRecord[];
   return_type?: string;
   body?: string;
@@ -31,6 +33,8 @@ const request = async <T>(path: string, settings: unknown, includeRaw = false): 
     );
   return { ...result.response, return_type: result.return_type, ...(includeRaw ? { raw_return: result } : {}) } as T;
 };
+export const searchDumbot = (query: string, message: number, contract?: unknown, select?: number) =>
+  request<SearchResult>("/api/search-records/dumbot", { query, message, contract, select }, true);
 export const searchRecords = (query: string, message: number) =>
   request<SearchResult>("/api/search-records", { query, message }, true);
 export const saveSearchFeedback = (

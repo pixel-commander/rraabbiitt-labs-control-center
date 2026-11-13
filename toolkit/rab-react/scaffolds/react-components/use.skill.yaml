@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1791543035822
 name: react-component-scaffolds
-title: react-component-scaffolds
+title: "How to react-component-scaffolds"
 description: Shared usage guidance for react-components.
 type: function
 path: toolkits/rab-react/scaffolds/react-components

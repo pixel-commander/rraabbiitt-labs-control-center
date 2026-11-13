@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1793981262998
 name: refresh-beacon-json
-title: Refresh beacon JSON
+title: "How to Refresh beacon JSON"
 description: Refresh absolute beacon paths from settings files found recursively.
 owner:
   id: 1793981262996

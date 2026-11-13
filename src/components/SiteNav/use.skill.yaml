@@ -4,7 +4,7 @@ owner:
   id: 1794395895090
 id: 1794408972779
 name: SiteNav
-title: Use SiteNav
+title: "How to Use SiteNav"
 description: Props, defaults and callbacks for SiteNav.
 type: skill
 path: src/components/SiteNav

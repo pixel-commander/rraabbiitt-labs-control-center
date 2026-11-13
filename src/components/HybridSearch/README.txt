@@ -30,3 +30,7 @@ npm run dev; the viewing skill displays the current registered world URL.
 Feedback progress is a left model-style bubble derived from local notice state.
 It does not create a database message row. Its footer uses Sent/Read only.
 
+
+DumBot mode: accepts mode="dumbot" in the incoming props bag (default hybrid). Uses /api/search-records/dumbot and the same scroll layout. Select result loads requirements; answers retain contract values in this mounted page. New search clears them. DumBot hides grading actions. className is composed at the feature root.
+
+Rephrase: MessageBox accepts optional handleClick(text, "rephrase", completeProps). When supplied, an outlined Rephrase button appears beside Run. DumBot owns this callback and previews the current draft through its model responder in the chat; no tool executes and the draft is preserved.

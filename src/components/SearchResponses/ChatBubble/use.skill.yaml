@@ -4,7 +4,7 @@ owner:
   id: 1794401889543
 id: 1794408972639
 name: ChatBubble
-title: Use ChatBubble
+title: "How to Use ChatBubble"
 description: Props, defaults and callbacks for ChatBubble.
 type: skill
 path: src/components/SearchResponses/ChatBubble

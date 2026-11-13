@@ -4,7 +4,7 @@ owner:
   id: 1794404078377
 id: 1794408973434
 name: ToolCol
-title: Use ToolCol
+title: "How to Use ToolCol"
 description: Props, defaults and callbacks for ToolCol.
 type: skill
 path: src/pages/WorldSearch/ToolCol

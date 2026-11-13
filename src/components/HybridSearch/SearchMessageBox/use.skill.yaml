@@ -4,7 +4,7 @@ owner:
   id: 1794412867627
 id: 1794413032142
 name: SearchMessageBox
-title: Use SearchMessageBox
+title: "How to Use SearchMessageBox"
 description: Props, defaults and callbacks.
 type: function
 path: src/components/HybridSearch/SearchMessageBox

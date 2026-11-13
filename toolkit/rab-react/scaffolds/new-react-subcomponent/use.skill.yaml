@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1791518659408
 name: new-react-subcomponent
-title: Sub Component
+title: "How to Sub Component"
 description: Creates a structural React subcomponent with optional canonical grid and class string.
 type: function
 path: toolkits/rab-react/scaffolds/new-react-subcomponent

@@ -1,0 +1,7 @@
+title: "How to use use-dum-bot"
+schema: 1
+intent: use
+owner:
+  id: 1794529580067
+name: use-dum-bot
+instructions: Render the page at /dumbot. No props or callbacks. Submit text for ranked results and select a matching tool to fill required settings. No grading. Review the filled contract and answer yes to execute the registered tool, or no to cancel. The chat reports the actual execution result.

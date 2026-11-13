@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1793981263002
 name: refresh-settings-json
-title: Refresh settings JSON
+title: "How to Refresh settings JSON"
 description: Replace settings paths with all files found recursively.
 owner:
   id: 1793981263000

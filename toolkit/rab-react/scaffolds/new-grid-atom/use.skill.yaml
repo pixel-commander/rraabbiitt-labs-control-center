@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1791518659445
 name: new-grid-atom
-title: New Grid Atom
+title: "How to New Grid Atom"
 description: Creates a named CSS grid from one of the included topology presets.
 type: function
 path: toolkits/rab-react/scaffolds/new-grid-atom

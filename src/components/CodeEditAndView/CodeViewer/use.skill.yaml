@@ -4,7 +4,7 @@ owner:
   id: 1793990174762
 id: 1793990737743
 name: CodeViewer
-title: Use CodeViewer
+title: "How to Use CodeViewer"
 description: Props, defaults and callbacks for CodeViewer.
 type: skill
 path: src/components/CodeEditAndView/CodeViewer

@@ -1,3 +1,4 @@
+import { searchDumbot } from "./dumbot.mjs";
 import { DatabaseSync } from "node:sqlite";
 import {
   readFile,
@@ -374,6 +375,7 @@ export async function handleSearchRecords(world, req, res, url) {
   if (
     ![
       "/api/search-records",
+      "/api/search-records/dumbot",
       "/api/search-records/feedback",
       "/api/search-records/rephrase",
     ].includes(pathname)
@@ -402,7 +404,7 @@ export async function handleSearchRecords(world, req, res, url) {
   } catch {
     return send(failure(400, "Supply valid JSON."));
   }
-  const action = pathname.endsWith("/rephrase")
+  const action = pathname.endsWith("/dumbot") ? searchDumbot : pathname.endsWith("/rephrase")
     ? recordRephrase
     : pathname.endsWith("/feedback")
       ? recordFeedback

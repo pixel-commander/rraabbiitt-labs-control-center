@@ -17,7 +17,7 @@ description: Refresh or reindex search after adding or changing components, tool
 schema: 1
 owner:
   id: 1793210509222
-title: Refresh world database
+title: "How to Refresh world database"
 path: toolkit/tools/refresh-world-database
 type: skill
 context: []

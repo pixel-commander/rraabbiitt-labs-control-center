@@ -1122,15 +1122,6 @@ export class RabbitStage extends Component {
       ctx.fillStyle = '#ffb84d';
       ctx.fillRect(q.sx - r3 / 2, q.sy - r3 / 2, r3, r3);
     }
-    // targeting brackets around the head
-    const bx = 150 * S * 0.62, by = 130 * S * 0.62, bo = Math.sin(t * 0.002) * 5;
-    ctx.strokeStyle = 'rgba(255,43,58,0.5)'; ctx.lineWidth = 1.2;
-    [[-1, -1], [1, -1], [-1, 1], [1, 1]].forEach(([dx, dy]) => {
-      const px = cx + dx * (bx + bo), py = cy - 10 + dy * (by + bo);
-      ctx.beginPath();
-      ctx.moveTo(px - dx * 16, py); ctx.lineTo(px, py); ctx.lineTo(px, py - dy * 16);
-      ctx.stroke();
-    });
     this.drawEdgePulses(ctx, P, t);
     this.drawSparkleRiders(ctx, P, t); // independent of pulses — seeds its own travelers when pulses are off
     this.drawDust(ctx, t);

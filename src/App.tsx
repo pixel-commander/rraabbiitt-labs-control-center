@@ -9,6 +9,8 @@ import { SiteNav } from "./components/SiteNav/SiteNav";
 import { McpViewer } from "./components/McpViewer/McpViewer";
 import { useEffect, useState } from "react";
 import { WorldSearchPage } from "./pages/WorldSearch/WorldSearchPage";
+import { DumBotPage } from "./pages/DumBot/DumBotPage";
+import dumBotSettings from "./pages/DumBot/rab.settings.json";
 import worldSearchSettings from "./pages/WorldSearch/rab.settings.json";
 import type { ComponentType } from "react";
 import type { VIEWProps } from "./App.types";
@@ -22,6 +24,7 @@ export const App = () => {
     document.documentElement.dataset.theme = theme;
   }, [theme]);
   const VIEWS: VIEWProps[] = [
+    { id: dumBotSettings.id, name: "dumbot", title: "DumBot", path: "dumbot", View: DumBotPage },
     {
       id: worldSearchSettings.id,
       name: "world-search",

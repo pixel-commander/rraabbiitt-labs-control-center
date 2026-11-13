@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1791766641355
 name: use-new-sqlite-db
-title: new sqlite db
+title: "How to new sqlite db"
 type: skill
 path: toolkit/tools/new-sqlite-db
 file: new-sqlite-db.mjs

@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1793679050118
 name: search
-title: How does search work?
+title: "How to How does search work?"
 description: How HybridSearchModel finds answers, shows their source, and offers tools.
 type: skill
 path: skills/project/search

@@ -4,7 +4,7 @@ owner:
   id: 1790784702601
 id: 1794409148594
 name: generate-world-id
-title: Generate ID
+title: "How to Generate ID"
 description: Generate one numeric House ID.
 type: function
 path: toolkit/rab-world/generators/generate-world-id

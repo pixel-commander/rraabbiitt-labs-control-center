@@ -13,6 +13,8 @@ export interface SearchResponseContentProps extends Omit<HouseKeys, "title"> {
   children?: ReactNode;
   data?: unknown;
   disabled?: boolean;
+  /** Hide feedback actions for display-only ranked results. */
+  show_actions?: boolean;
   vote?: VoteType;
   favorite?: boolean;
   className?: string;

@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1794442464508
 name: use-rabbit-head
-title: Use RabbitHead
+title: "How to Use RabbitHead"
 description: Render and configure the portable Rraabbiitt 3D head.
 type: function
 implementation:
@@ -76,7 +76,7 @@ instructions: >-
   shading, and interactive true.
 
   RabbitHead hides the dashboard labels, model picker, sculpt tools, and snapshot
-  controls. It keeps the renderer and canvas crosshairs. It does not expose the
+  controls. It keeps the renderer and canvas; red targeting brackets are removed. It does not expose the
   sculpt UI. Use handleReady to receive the effects command object. This
   callback uses the House HandlerKey form: handleReady(effects, "rabbit-head",
   completeProps). It receives null on unmount. The effects commands are strike,

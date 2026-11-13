@@ -1,7 +1,7 @@
 schema: 1
 intent: use
 name: use-inspect-ranking-attention
-title: inspect-ranking-attention
+title: "How to inspect-ranking-attention"
 description: Inspect one cross-encoder attention layer/head for a question and answer using active
   or candidate weights. Returns token labels and measured attention, with explicit truncation.
 type: skill

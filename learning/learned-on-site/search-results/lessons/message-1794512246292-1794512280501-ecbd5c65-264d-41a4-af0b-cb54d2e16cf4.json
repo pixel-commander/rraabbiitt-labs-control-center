@@ -1,0 +1,92 @@
+{
+  "schema": 1,
+  "date": 1794512280501,
+  "sequence": 8,
+  "message": 1794512246292,
+  "query": "how do i add a component/",
+  "id": 1791518659404,
+  "record_key": "toolkit/rab-react/scaffolds/new-react-component/use.skill.yaml",
+  "name": "all",
+  "content": {
+    "vote": "up"
+  },
+  "approved": true,
+  "origin": "user",
+  "scope": "query-result",
+  "lesson_type": "whole-result-relevance",
+  "grade": 1,
+  "source": {
+    "message": {
+      "id": 1794512246292,
+      "name": null,
+      "title": null,
+      "type": "user",
+      "description": "how do i add a component/",
+      "tags": "[]",
+      "file": null,
+      "path": null,
+      "paths": "[]"
+    },
+    "record": {
+      "id": 1791518659404,
+      "name": "new-react-component",
+      "title": "New Component",
+      "type": "skill",
+      "description": "Creates a React component, types, stylesheet and hook using the supplied values.",
+      "tags": "[]",
+      "file": "use.skill.yaml",
+      "path": "toolkit/rab-react/scaffolds/new-react-component",
+      "paths": "[]",
+      "data": {
+        "id": 1791518659404,
+        "name": "new-react-component",
+        "title": "New Component",
+        "description": "Creates a React component, types, stylesheet and hook using the supplied values.",
+        "tags": [],
+        "context": [
+          {
+            "use": 1791940045476,
+            "reason": "Shared category contract, inherited before concrete implementation guidance."
+          }
+        ],
+        "intent": "use",
+        "outputs": {
+          "return": {
+            "description": "The generated rab.settings.json record, with its absolute destination path and generated file paths."
+          }
+        },
+        "type": "skill",
+        "path": "toolkit/rab-react/scaffolds/new-react-component",
+        "file": "use.skill.yaml",
+        "record_key": "toolkit/rab-react/scaffolds/new-react-component/use.skill.yaml",
+        "text": "new-react-component\n\nNew Component\n\nCreates a React component, types, stylesheet and hook using the supplied values.\n\nPass one props object matching rab.settings.json. Call the TypeScript function exported from new-react-component.ts. The scaffold validates before writing, refuses an existing destination and returns the saved record. Name input in any text style is normalized to PascalCase for generated folders and files. It does not start tracking, discover tools, scan the world or run a CLI.\nSupporting documentation: toolkits/rab-react/scaffolds/new-react-component/README.txt.",
+        "sources": [
+          {
+            "path": "toolkit/rab-react/scaffolds/new-react-component/use.skill.yaml",
+            "kind": "skill",
+            "sha256": "ebf5e9e10480f6bfa09c077a6fc84d978b4d872a369ac514f80d3b22994d5eec"
+          }
+        ],
+        "skills": [],
+        "instructions": "Pass one props object matching rab.settings.json. Call the TypeScript function exported from new-react-component.ts. The scaffold validates before writing, refuses an existing destination and returns the saved record. Name input in any text style is normalized to PascalCase for generated folders and files. It does not start tracking, discover tools, scan the world or run a CLI.\nSupporting documentation: toolkits/rab-react/scaffolds/new-react-component/README.txt.",
+        "owner": {
+          "id": 1790000000401,
+          "name": "new-react-component",
+          "title": "Create React Component",
+          "description": "Create a React component with types, styles, a hook, a demo, and settings. The tool accepts optional grid and class values.",
+          "type": "tool",
+          "path": "toolkit/rab-react/scaffolds/new-react-component",
+          "file": "new-react-component"
+        }
+      }
+    }
+  },
+  "original": {
+    "query": "how do i add a component/",
+    "message": 1794512246292,
+    "id": 1791518659404,
+    "path": "toolkit/rab-react/scaffolds/new-react-component/use.skill.yaml",
+    "name": "all",
+    "content": "{\"vote\":\"up\"}"
+  }
+}

@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1793154927346
 name: use-search-hybrid-seat-ranking
-title: Searches with per-field BM25, frozen semantic and supervised RRF channels plus a relative reranker.
+title: "How to Searches with per-field BM25, frozen semantic and supervised RRF channels plus a relative reranker."
 description: Searches with per-field BM25, frozen semantic and supervised RRF channels plus a relative reranker.
 type: skill
 path: toolkit/hybrid-seat-ranking/tools/search-hybrid-seat-ranking

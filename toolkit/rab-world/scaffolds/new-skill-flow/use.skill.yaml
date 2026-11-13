@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1791853637988
 name: new-skill-flow
-title: New skill flow
+title: "How to New skill flow"
 description: Create a standalone YAML skill from the owned template.
 owner:
   id: 1791853637888

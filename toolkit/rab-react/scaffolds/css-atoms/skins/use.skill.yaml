@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1791543035832
 name: css-atom-skins
-title: css-atom-skins
+title: "How to css-atom-skins"
 description: Shared usage guidance for skins.
 type: function
 path: toolkits/rab-react/scaffolds/css-atoms/skins

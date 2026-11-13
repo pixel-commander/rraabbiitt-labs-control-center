@@ -4,7 +4,7 @@ owner:
   id: 1794412867637
 id: 1794413032150
 name: SearchResponseBubble
-title: Use SearchResponseBubble
+title: "How to Use SearchResponseBubble"
 description: Props, defaults and callbacks.
 type: function
 path: src/components/HybridSearch/SearchResponseBubble

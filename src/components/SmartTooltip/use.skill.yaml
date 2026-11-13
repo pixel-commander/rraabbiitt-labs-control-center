@@ -4,7 +4,7 @@ owner:
   id: 1792432275473
 id: 1794004819954
 name: SmartTooltip
-title: Use SmartTooltip
+title: "How to Use SmartTooltip"
 description: Props, defaults and callbacks for SmartTooltip.
 type: skill
 path: src/components/SmartTooltip

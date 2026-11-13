@@ -15,6 +15,18 @@
       "file": "hooks/useHybridSearch/searchApi.ts"
     },
     {
+      "name": "../../../../../models/dumbot/dumbot",
+      "path": "../../../models/dumbot/dumbot",
+      "type": "import",
+      "file": "hooks/useHybridSearch/useHybridSearch.ts"
+    },
+    {
+      "name": "../../../../../models/dumbot/responder",
+      "path": "../../../models/dumbot/responder",
+      "type": "import",
+      "file": "hooks/useHybridSearch/useHybridSearch.ts"
+    },
+    {
       "name": "../../../MessageBox/hooks/useMessageProvider/useMessageProvider",
       "path": "../MessageBox/hooks/useMessageProvider/useMessageProvider",
       "type": "import",
@@ -67,6 +79,12 @@
       "path": "../../pages/WorldSearch/css/world-search.css",
       "type": "import",
       "file": "HybridSearch.tsx"
+    },
+    {
+      "name": "../../HouseKeys.types",
+      "path": "../../HouseKeys.types",
+      "type": "import",
+      "file": "HybridSearch.types.ts"
     },
     {
       "name": "../../MessageBox/MessageBox",

@@ -4,7 +4,7 @@ owner:
   id: 1794395343357
 id: 1794408973490
 name: WorldSearchPage
-title: Use WorldSearchPage
+title: "How to Use WorldSearchPage"
 description: Props, defaults and callbacks for WorldSearchPage.
 type: skill
 path: src/pages/WorldSearch

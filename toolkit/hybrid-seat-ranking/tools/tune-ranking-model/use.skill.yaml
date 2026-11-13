@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1793221495964
 name: use-tune-ranking-model
-title: Fine-tune ranking model
+title: "How to Fine-tune ranking model"
 description: Fine-tune the local cross-encoder ranking model from reviewed graded answers. Retain
   versioned training chunks, exact dataset snapshots, changed model weights, held-out evaluation,
   progress, disk sizes and candidate checkpoints. Read status without inference; activate only

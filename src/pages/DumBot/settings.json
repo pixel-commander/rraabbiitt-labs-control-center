@@ -1,0 +1,9 @@
+{
+  "paths": {
+    "component": "src/components",
+    "api": "api",
+    "page": "src/pages",
+    "dashboard": "src/dashboards",
+    "root": "."
+  }
+}

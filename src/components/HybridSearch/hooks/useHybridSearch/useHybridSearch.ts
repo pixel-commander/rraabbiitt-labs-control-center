@@ -1,3 +1,5 @@
+import { dumbot } from "../../../../../models/dumbot/dumbot";
+import { rephraseMessage } from "../../../../../models/dumbot/responder";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { useMessageProvider } from "../../../MessageBox/hooks/useMessageProvider/useMessageProvider";
 import type { VoteType } from "../../../SearchResponses/SearchResponses.types";
@@ -5,6 +7,7 @@ import type { ResponseAndRankingAction } from "../../../SearchResponses/Response
 import { saveSearchMessage } from "./messagesApi";
 import {
   searchRecords,
+  searchDumbot,
   getFavorites,
   saveFavorite,
   saveSearchFeedback,
@@ -37,9 +40,12 @@ const savedVotes = (response: SearchResult) => {
   return result;
 };
 
-export const useHybridSearch = () => {
+import type { HybridSearchProps } from "../../HybridSearch.types";
+export const useHybridSearch = (props: HybridSearchProps = {}) => {
+  const isDumbot = props.mode === "dumbot";
+  const contract = useRef<SearchResult["contract"]>(undefined);
   const [searchState, setState] = useState({
-    model: "Qwen3-Coder 30B",
+    model: isDumbot ? "DumBot" : "Qwen3-Coder 30B",
     submitted: "",
     submitted_at: 0,
     messages: [] as {
@@ -65,7 +71,7 @@ export const useHybridSearch = () => {
       message: number;
       rank: number;
     } | null,
-    mode: "hybrid",
+    mode: isDumbot ? "db-pairs" : "hybrid",
     error: "",
     notice: "",
     notice_date: 0,
@@ -148,7 +154,8 @@ export const useHybridSearch = () => {
         rephrase: null,
         notice: "",
       }));
-      const response = await searchRecords(saved.query, saved.id);
+      const response = isDumbot ? await searchDumbot(saved.query, saved.id, contract.current) : await searchRecords(saved.query, saved.id);
+      if (version === request.current) contract.current = response.contract;
       if (version !== request.current) return;
       setState((current) => ({
         ...current,
@@ -164,9 +171,9 @@ export const useHybridSearch = () => {
             ? {
                 ...message,
                 answer: {
-                  text: response.paths.length
+                  text: response.reply ?? (response.paths.length
                     ? "I found a top result."
-                    : "I didn't find a result.",
+                    : "I didn't find a result."),
                   date: Date.now(),
                 },
               }
@@ -199,6 +206,7 @@ export const useHybridSearch = () => {
     data: unknown,
     type?: ResponseAndRankingAction,
   ) => {
+    if (isDumbot) return;
     const current = context.current;
     if (!current || inFlight.current || !type) return;
     const record = data as SearchRecord | undefined;
@@ -284,6 +292,23 @@ export const useHybridSearch = () => {
         setState((value) => ({ ...value, saving: false }));
     }
   };
+  const handleSelect = async (record: SearchRecord) => {
+    if (!isDumbot || inFlight.current || !context.current) return;
+    inFlight.current = true;
+    setState(value => ({ ...value, searching: true, error: "" }));
+    const version = request.current;
+    try {
+      const response = await searchDumbot(context.current.query, context.current.id, undefined, record.id);
+      if (version !== request.current) return;
+      contract.current = response.contract;
+      setState(value => ({ ...value, top_result: record, raw_return: response.raw_return, notice: response.reply ?? "", notice_date: Date.now() }));
+    } catch (error) {
+      if (version === request.current) setState(value => ({ ...value, error: String(error) }));
+    } finally {
+      inFlight.current = false;
+      if (version === request.current) setState(value => ({ ...value, searching: false }));
+    }
+  };
   const state = { ...searchState, query: provider.message };
   const handleChange = <K extends keyof typeof state>(
     key: K,
@@ -305,6 +330,7 @@ export const useHybridSearch = () => {
     if (inFlight.current) return;
     ++request.current;
     context.current = null;
+    contract.current = undefined;
     draft.current = "";
     nearBottomRef.current = true;
     provider.handleChange("");
@@ -352,13 +378,22 @@ export const useHybridSearch = () => {
   return {
     state,
     message: provider.message,
+    handleRephrase: (text?: string) => {
+      if (!text?.trim() || inFlight.current) return;
+      const result = dumbot({ query: text, data: searchState.results.map(record => ({ ...record })) });
+      const reply = rephraseMessage(text, result.slots);
+      nearBottomRef.current = true;
+      setState(current => ({ ...current, notice: reply, notice_date: Date.now() }));
+    },
     handleChange,
     handleSubmit: (...args: Parameters<typeof provider.handleSubmit>) => {
       if (!inFlight.current) provider.handleSubmit(...args);
     },
     handleClick,
     handleReset,
+    handleSelect,
     messagesRef,
     handleScroll,
   };
 };
+

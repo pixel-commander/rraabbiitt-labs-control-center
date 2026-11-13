@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1793679050255
 name: confirming-tools
-title: Run a tool from search
+title: "How to Run a tool from search"
 description: Review and confirm a matching tool before search runs it.
 type: skill
 path: skills/project/search/confirming-tools

@@ -4,7 +4,7 @@ owner:
   id: 1794398447056
 id: 1794408972739
 name: TopResult
-title: Use TopResult
+title: "How to Use TopResult"
 description: Props, defaults and callbacks for TopResult.
 type: skill
 path: src/components/SearchResponses/TopResult

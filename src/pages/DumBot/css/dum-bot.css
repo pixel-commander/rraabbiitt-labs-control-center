@@ -1,0 +1,37 @@
+@layer components {
+  /* The page owns the requested 40 / 30 / 30 column proportions. */
+  .dum-bot > .world-search-columns[data-grid="side-cols"] {
+    grid-template-columns: minmax(0, 4fr) minmax(0, 3fr) minmax(0, 3fr);
+  }
+  .dum-bot-placeholder {
+    overflow: hidden;
+  }
+  .dum-bot .world-search-tool-col,
+  .dum-bot .world-search-tool-col .tool-col-scroll {
+    width: 100%;
+    min-block-size: 0;
+  }
+  .dum-bot .world-search-tool-col .tool-col-inner {
+    position: static;
+    width: 100%;
+    height: 100%;
+  }
+  .dum-bot .world-search-conversation {
+    min-block-size: 0;
+    padding-inline: 0;
+  }
+  .dum-bot-raw-return {
+    min-inline-size: 0;
+  }
+  .dum-bot-raw-return summary {
+    cursor: pointer;
+  }
+  @media (max-width: 900px) {
+    .dum-bot > .world-search-columns[data-grid="side-cols"] {
+      grid-template-columns: minmax(0, 1fr);
+    }
+    .dum-bot-placeholder { min-block-size: 14rem; }
+    .dum-bot .world-search-conversation { min-block-size: 30rem; }
+    .dum-bot .world-search-tool-col { min-block-size: 24rem; }
+  }
+}

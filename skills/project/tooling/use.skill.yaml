@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1793144147315
 name: tooling
-title: Add toolkit capabilities
+title: "How to Add toolkit capabilities"
 description:
   Shared instructions for adding tools and runners, including HouseKeys,
   metadata, usage skills, and indexing.

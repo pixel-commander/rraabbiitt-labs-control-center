@@ -240,7 +240,7 @@ RabbitHead renders a positioned root and the head stage. The root fills its
 parent. Give the parent a width and height. The root also accepts style and
 className. Parent CSS can override the component CSS.
 
-The canvas and crosshairs are part of the renderer. Dashboard labels, model
+The canvas is part of the renderer. Red targeting brackets have been removed. Dashboard labels, model
 buttons, sculpt controls, and snapshot controls are not rendered by RabbitHead.
 
 Local package

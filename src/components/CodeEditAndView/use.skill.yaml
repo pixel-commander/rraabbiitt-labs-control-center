@@ -4,7 +4,7 @@ owner:
   id: 1793976287997
 id: 1793990737735
 name: CodeEditAndView
-title: Use CodeEditAndView
+title: "How to Use CodeEditAndView"
 description: Props, defaults and callbacks for CodeEditAndView.
 type: skill
 path: src/components/CodeEditAndView

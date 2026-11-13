@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1793127075008
 name: viewing-the-app
-title: Viewing the app
+title: "How to Viewing the app"
 description: Open the running control center in a browser.
 type: function
 path: skills/project/viewing-the-app

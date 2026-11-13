@@ -4,7 +4,7 @@ owner:
   id: 1794247089698
 id: 1794408973336
 name: HomePage
-title: Use HomePage
+title: "How to Use HomePage"
 description: Props, defaults and callbacks for HomePage.
 type: skill
 path: src/pages/home

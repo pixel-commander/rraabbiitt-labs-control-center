@@ -1,1 +1,2 @@
-export type HybridSearchProps = Record<string, never>;
+import type { HouseKeys } from "../../HouseKeys.types";
+export interface HybridSearchProps extends HouseKeys { mode?: "hybrid" | "dumbot"; className?: string; }

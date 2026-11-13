@@ -4,7 +4,7 @@ owner:
   id: 1794444448187
 id: 1794444448203
 name: use-favorites
-title: Use favorites
+title: "How to Use favorites"
 description: Save, read and remove favorites.
 type: skill
 path: api/favorites

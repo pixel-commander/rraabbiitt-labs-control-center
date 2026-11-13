@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1791940045400
 name: generators
-title: Generators
+title: "How to Generators"
 description: Produce derived values or content from declared inputs.
 type: skill
 path: skills/toolkits/tools/generators

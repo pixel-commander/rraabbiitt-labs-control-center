@@ -4,7 +4,7 @@ owner:
   id: 1794441432724
 id: 1794441720407
 name: use-rabbit-canvas
-title: Use RabbitCanvas
+title: "How to Use RabbitCanvas"
 description: Canvas surface used by the Rraabbiitt3d dashboard renderer.
 type: function
 implementation:

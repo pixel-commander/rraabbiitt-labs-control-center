@@ -4,7 +4,7 @@ owner:
   id: 1794395295542
 id: 1794408973262
 name: UiElements
-title: Use UiElements
+title: "How to Use UiElements"
 description: Props, defaults and callbacks for UiElements.
 type: skill
 path: src/components/UiElements

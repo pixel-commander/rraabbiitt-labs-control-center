@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1793679050189
 name: finding-records
-title: Find components, atoms, and skills
+title: "How to Find components, atoms, and skills"
 description: Use search to find project records and read their type and source.
 type: skill
 path: skills/project/search/finding-records

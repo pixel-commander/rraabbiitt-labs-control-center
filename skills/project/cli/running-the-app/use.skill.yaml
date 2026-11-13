@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1793126984423
 name: running-the-app
-title: Running the app
+title: "How to Running the app"
 description: CLI for running the app
 type: function
 path: skills/project/cli/running-the-app

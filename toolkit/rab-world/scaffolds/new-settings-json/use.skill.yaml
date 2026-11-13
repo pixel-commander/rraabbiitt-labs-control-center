@@ -4,7 +4,7 @@ owner:
   id: 1791468954599
 id: 1794409021587
 name: new-settings-json
-title: Create settings
+title: "How to Create settings"
 description: Create one settings record.
 type: function
 path: toolkit/rab-world/scaffolds/new-settings-json

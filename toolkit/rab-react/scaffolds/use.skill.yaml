@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1791518327961
 name: scaffolds
-title: React scaffolds
+title: "How to React scaffolds"
 description: Shared usage guidance for the migrated React scaffold packages.
 type: function
 path: toolkits/rab-react/scaffolds

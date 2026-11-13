@@ -4,7 +4,7 @@ owner:
   id: 1794395295604
 id: 1794408973182
 name: StatusLabel
-title: Use StatusLabel
+title: "How to Use StatusLabel"
 description: Props, defaults and callbacks for StatusLabel.
 type: skill
 path: src/components/UiElements/StatusLabel

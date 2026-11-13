@@ -15,6 +15,18 @@
       "file": "searchApi.ts"
     },
     {
+      "name": "../../../../../models/dumbot/dumbot",
+      "path": "../../../../../models/dumbot/dumbot",
+      "type": "import",
+      "file": "useHybridSearch.ts"
+    },
+    {
+      "name": "../../../../../models/dumbot/responder",
+      "path": "../../../../../models/dumbot/responder",
+      "type": "import",
+      "file": "useHybridSearch.ts"
+    },
+    {
       "name": "../../../MessageBox/hooks/useMessageProvider/useMessageProvider",
       "path": "../../../MessageBox/hooks/useMessageProvider/useMessageProvider",
       "type": "import",
@@ -29,6 +41,12 @@
     {
       "name": "../../../SearchResponses/ResponseAndRankingCard/ResponseAndRankingCard.types",
       "path": "../../../SearchResponses/ResponseAndRankingCard/ResponseAndRankingCard.types",
+      "type": "import",
+      "file": "useHybridSearch.ts"
+    },
+    {
+      "name": "../../HybridSearch.types",
+      "path": "../../HybridSearch.types",
       "type": "import",
       "file": "useHybridSearch.ts"
     }

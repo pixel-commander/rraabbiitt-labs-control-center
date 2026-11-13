@@ -2,7 +2,7 @@ schema: 1
 intent: use
 id: 1791940045207
 name: toolkits
-title: Shared toolkit flow
+title: "How to Shared toolkit flow"
 description: Shared shape, House keys and execution ownership for all toolkits.
 type: skill
 path: skills/toolkits

@@ -8,5 +8,6 @@ export interface VIEWProps extends HouseKeys {
   path: string;
   file?: string;
   View: ComponentType;
+  props?: { path: string };
   Icon?: ComponentType;
 }

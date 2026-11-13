@@ -1,0 +1,31 @@
+{
+  "id": 1794590221510,
+  "paths": [
+    {
+      "type": "ts",
+      "name": "useRabbit.ts",
+      "path": "."
+    },
+    {
+      "type": "tsx",
+      "name": "RabbitProvider.tsx",
+      "path": "."
+    },
+    {
+      "type": "txt",
+      "name": "README.txt",
+      "path": "."
+    },
+    {
+      "type": "yaml",
+      "name": "use.skill.yaml",
+      "path": "."
+    }
+  ],
+  "description": "Portable owner of RabbitHead renderer values, popup state and runtime effects; includes a shared provider.",
+  "name": "useRabbit",
+  "type": "hook",
+  "path": "src/components/RabbitHead/hooks/useRabbit",
+  "title": "Rabbit head controller",
+  "file": "useRabbit.ts"
+}

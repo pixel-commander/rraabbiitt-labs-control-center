@@ -12,7 +12,7 @@ const rendererKeys: (keyof RabbitHeadRendererProps)[] = [
   "autoFlood", "floodRate", "floodTravel", "floodSpeed", "floodIntensity", "floodLength",
   "hoverGlow", "hoverSparks", "hoverPulse", "hoverCircuit", "hoverStrike", "hoverFlood", "hoverRadius", "hoverStrength", "hoverRate",
   "useMono", "monoColor", "lineColor", "faceColor", "fxColor", "circuitColor", "strikeColor", "floodColor",
-  "faceOpacity", "lineOpacity", "glitch", "pointSize", "pointGlow", "showPoints", "zoom", "panX", "panY",
+  "faceOpacity", "lineOpacity", "glitch", "glitchDuration", "glitchInterval", "autoGlitch", "pointSize", "pointGlow", "showPoints", "zoom", "panX", "panY",
 ];
 
 const mapSettings = (settings: RabbitHeadSettings = {}): Partial<RabbitHeadRendererProps> => ({
@@ -76,6 +76,9 @@ const mapSettings = (settings: RabbitHeadSettings = {}): Partial<RabbitHeadRende
   faceOpacity: settings.surface?.faceOpacity,
   lineOpacity: settings.surface?.lineOpacity,
   glitch: settings.surface?.glitch,
+  glitchDuration: settings.surface?.glitchDuration,
+  glitchInterval: settings.surface?.glitchInterval,
+  autoGlitch: settings.surface?.autoGlitch,
   pointSize: settings.surface?.pointSize,
   pointGlow: settings.surface?.pointGlow,
   showPoints: settings.surface?.showPoints,

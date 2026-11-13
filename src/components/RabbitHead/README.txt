@@ -182,7 +182,7 @@ colors
 surface
   faceOpacity: Mesh face opacity. Range 0 to 1. Step 0.05. Default 0.96.
   lineOpacity: Mesh line opacity. Range 0 to 1. Step 0.05. Default 1.
-  glitch: Vertex glitch amount. Range 0 to 3. Step 0.25. Default 1.
+  glitch: Vertex glitch amount. Range 0 to 5. Step 0.25. Default 1.
   pointSize: Mesh point size. Range 0 to 6. Step 0.25. Default 1.5.
   pointGlow: Mesh point glow. Range 0 to 1. Step 0.05. Default 0.
   showPoints: Show mesh points. Default true.
@@ -256,3 +256,23 @@ move down. Set it directly or through settings.view.panY. A direct prop takes
 priority. The runtime view command also accepts panY.
 
 Runtime circuits overrides also accept coreColor and glowColor (hex strings) for independent arc core and halo colors. Omitted colors retain the existing circuit tint; circuits(null) clears the overrides.
+
+Glitch trigger and timing
+------------------------
+The Glitch button triggers one immediate burst, like Flood. Auto glitch defaults to false
+in useRabbit so pages can trigger it externally without background bursts. Enable Auto glitch
+for repeating bursts. Duration is milliseconds (default 252), interval is milliseconds
+(default 4200), and amount remains 0 to 5. Zero amount or duration suppresses the effect.
+All three values and autoGlitch are included in Copy settings.
+
+Inside a page under RabbitProvider:
+  const { effects } = useRabbitContext();
+  effects.current?.glitch(); // use configured amount and duration
+  effects.current?.glitch({ amount: 5, duration: 600 }); // one-off override
+  effects.current?.glitch(null); // cancel the triggered burst
+
+Repeated triggers restart the burst. They use the render clock and create no timers.
+Cancellation leaves automatic mode unchanged; disable autoGlitch to stop repeating bursts.
+Calm/reduced-motion mode suppresses glitch. Renderer-only consumers retain automatic behavior
+unless autoGlitch is explicitly false. Nested settings.surface accepts glitchDuration,
+glitchInterval and autoGlitch alongside glitch. Runtime surface overrides accept them too.

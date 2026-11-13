@@ -1,0 +1,17 @@
+schema: 1
+intent: use
+id: 1794590221511
+owner:
+  id: 1794590221510
+name: useRabbit
+type: skill
+implementation:
+  - use: 1794590221510
+context:
+  - use: 1794442290029
+instructions: >-
+  Use the owner hook for an independent head and popup. For a shared head, mount RabbitProvider
+  once and consume useRabbitContext in the shell and pages. Spread values onto the head and
+  attach handleReady. handleSettings merges partial flat renderer props, ignoring undefined
+  and preserving false, zero and empty strings. effects.current exposes runtime effects.
+  Initial values, popup open state and rectangle are read on mount. Reset restores initial values.

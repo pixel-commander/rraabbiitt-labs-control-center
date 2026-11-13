@@ -13,7 +13,7 @@ export const useFactory = (props: FactoryProps) => {
   const [complete, setComplete] = useState(false);
   const [confirmation, setConfirmation] = useState<FactoryOverwriteConfirmation>();
 
-  const openSave = async (composition?: FactoryComposition) => {
+  const openSave = async (composition?: FactoryComposition, _type?: "save", bag?: FactoryProps) => {
     if (!composition || pending) return;
     setPending(true);
     setError(undefined);
@@ -28,7 +28,7 @@ export const useFactory = (props: FactoryProps) => {
         id: composition.id ?? previous?.id,
         name: previous?.name ?? composition.name ?? "",
         title: composition.title ?? previous?.title ?? props.title ?? composition.name ?? "",
-        path: composition.path ?? previous?.path ?? props.path ?? context.path,
+        path: bag?.path ?? props.path ?? composition.path ?? previous?.path ?? context.path,
         type: "component",
         description: composition.description ?? previous?.description ?? props.description ?? "",
         composition,

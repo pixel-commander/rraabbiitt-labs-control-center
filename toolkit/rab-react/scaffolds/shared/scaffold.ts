@@ -154,19 +154,19 @@ export function createScaffold(moduleUrl: string) {
       if (saved.type !== "project") {
         recordRoot = absoluteParent;
         while (true) {
-          try {
-            if (
-              JSON.parse(
-                await readFile(
-                  path.join(recordRoot, "rab.project.json"),
-                  "utf8",
-                ),
-              ).type === "project"
-            )
-              break;
-          } catch (error) {
-            if ((error as NodeJS.ErrnoException).code !== "ENOENT") throw error;
+          let registered = false;
+          for (const manifest of ["rab.project.json", "rab.world.json"]) {
+            try {
+              const project = JSON.parse(await readFile(path.join(recordRoot, manifest), "utf8"));
+              if (project.type === "project" || (manifest === "rab.world.json" && typeof project.id === "number")) {
+                registered = true;
+                break;
+              }
+            } catch (error) {
+              if ((error as NodeJS.ErrnoException).code !== "ENOENT") throw error;
+            }
           }
+          if (registered) break;
           const up = path.dirname(recordRoot);
           if (up === recordRoot)
             throw new Error(

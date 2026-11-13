@@ -1,11 +1,5 @@
 @layer components {
   .site-main:has(.dum-bot) {
-    background: radial-gradient(
-      ellipse at 24% 42%,
-      color-mix(in srgb, var(--color-primary) 10%, var(--color-main)) 0%,
-      color-mix(in srgb, var(--color-primary) 3%, var(--color-main)) 38%,
-      var(--color-main) 72%
-    );
     box-shadow: inset 0 0 140px 45px var(--color-main);
   }
   /* The page owns the requested 40 / 30 / 30 column proportions. */

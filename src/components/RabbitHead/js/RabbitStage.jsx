@@ -1,3 +1,4 @@
+import { glitchDefaults, glitchOffset } from "./glitch";
 import React, { Component, Fragment } from "react";
 import { RabbitCanvas } from "../RabbitCanvas/RabbitCanvas";
 
@@ -38,6 +39,14 @@ export class RabbitStage extends Component {
     this.mounted = true;
     this.build();
     this.effects = {
+      // glitch({ amount?, duration? }) triggers immediately; duration is milliseconds. Null cancels.
+      glitch: (options) => {
+        this._glitchBurst = options === null ? null : {
+          start: performance.now(),
+          duration: Math.max(0, options?.duration ?? this.props.glitchDuration ?? glitchDefaults.duration),
+          amount: options?.amount,
+        };
+      },
       strike: (seed, opts) => this.strike(seed, opts),      // lightning from a vertex index, {x,y,z} point, or random
       storm: (n = 5, ms = 400) => { let i = 0; const id = setInterval(() => { this.effects.strike(); if (++i >= n) { clearInterval(id); this.storms.delete(id); } }, ms); this.storms.add(id); },
       faceStrike: (seed, opts) => this.faceStrike(seed, opts), // lightning that floods FACES, not lines
@@ -1014,9 +1023,13 @@ export class RabbitStage extends Component {
     const [yaw, pitch] = this.viewAngles(t, calm);
     const cy1 = Math.cos(yaw), sy1 = Math.sin(yaw), cp = Math.cos(pitch), sp2 = Math.sin(pitch);
     // glitch: brief horizontal shear bursts (0 = off, 1 = default, up = wilder)
-    const gAmt = ((this._fxSurface || {}).glitch ?? this.props.glitch ?? 1);
-    const gph = (t % 4200) / 4200;
-    const glitch = !calm && gAmt > 0 && gph > 0.94 ? Math.sin(t * 0.9) * 8 * gAmt : 0;
+    const surface = this._fxSurface || {};
+    const glitch = glitchOffset(t, {
+      amount: surface.glitch ?? this.props.glitch,
+      duration: surface.glitchDuration ?? this.props.glitchDuration,
+      interval: surface.glitchInterval ?? this.props.glitchInterval,
+      auto: surface.autoGlitch ?? this.props.autoGlitch,
+    }, this._glitchBurst ?? null, calm);
     const proj = (p) => {
       const x = p.x * cy1 + p.z * sy1, z = -p.x * sy1 + p.z * cy1, y = -p.y;
       const y2 = y * cp - z * sp2, z2 = y * sp2 + z * cp;

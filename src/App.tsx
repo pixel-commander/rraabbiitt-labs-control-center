@@ -9,7 +9,7 @@ import "./atoms/atoms.css";
 import { SiteNav } from "./components/SiteNav/SiteNav";
 import { WorldComponents } from "./components/WorldComponents/WorldComponents";
 import { McpViewer } from "./components/McpViewer/McpViewer";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { WorldSearchPage } from "./pages/WorldSearch/WorldSearchPage";
 import { DumBotPage } from "./pages/DumBot/DumBotPage";
 import dumBotSettings from "./pages/DumBot/rab.settings.json";
@@ -24,17 +24,17 @@ import factorySettings from "./dashboards/Factory/rab.settings.json";
 import { WorldAudit } from "./dashboards/WorldAudit/WorldAudit";
 import worldAuditSettings from "./dashboards/WorldAudit/rab.settings.json";
 import { RabbitHead } from "./components/RabbitHead/RabbitHead";
-import type { RabbitEffects } from "./components/RabbitHead/js/RabbitStage.jsx";
+import { RabbitProvider, useRabbitContext } from "./components/RabbitHead/hooks/useRabbit/RabbitProvider";
 import type { HybridSearchProps } from "./components/HybridSearch/HybridSearch.types";
 
-export const App = () => {
-  const rabbitEffects = useRef<RabbitEffects | null>(null);
+const SiteShell = () => {
+  const rabbit = useRabbitContext();
   const [theme, setTheme] = useState<"dark" | "light">("dark");
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
   }, [theme]);
   const VIEWS: VIEWProps[] = [
-    { id: factorySettings.id, name: "factory", title: "Factory", path: "factory", View: Factory },
+    { id: factorySettings.id, name: "factory", title: "Factory", path: "factory", View: Factory, props: { path: "src/components" } },
     { id: worldAuditSettings.id, name: "world-audit", title: "World Audit", path: "world-audit", View: WorldAudit },
     { id: dumBotSettings.id, name: "dumbot", title: "DumBot", path: "dumbot", View: DumBotPage },
     {
@@ -98,17 +98,10 @@ export const App = () => {
         />
       </header>
       <main className="site-main" data-area="main">
-        <div className="page-rabbit-background" aria-hidden="true" hidden={page !== "dumbot" && page !== "world-search" && page !== "world-audit"}>
-          <RabbitHead transparentBg interactive={false} followMouse autoMotion={false} wheelZoom={false}
-            handleReady={(effects) => { rabbitEffects.current = effects ?? null; }}
-            zoom={1} faceOpacity={0.1} lineOpacity={0.15}
-            showSparkles={false} dustAmount={0}
-            strikeIntensity={0.3} strikeArms={1} strikeSpread={12} strikeLength={600}
-            circuitGlow={0.08} circuitOpacity={0.08} pulseFreq={4} pulseSize={0.5}
-            pointGlow={0} pointSize={0.3}
-            panX={page === "dumbot" ? -0.72 : 0.65} panY={-0.03} />
+        <div className="page-rabbit-background" aria-hidden="true">
+          <RabbitHead {...rabbit.values} transparentBg interactive={false} followMouse wheelZoom={false} handleReady={rabbit.handleReady} />
         </div>
-        <View rabbitEffects={rabbitEffects} />
+        <View {...selected_view?.props} rabbitEffects={rabbit.effects} />
       </main>
       <footer className="site-footer" data-area="footer" data-grid="side-right">
         <div className="pad" data-area="main">rab world v.0.0.11</div>
@@ -120,5 +113,18 @@ export const App = () => {
         </div>
       </footer>
     </div>
+  );
+};
+
+const shellRabbitValues = {
+  panX: 0.65, panY: -0.03, showPulses: true,
+  circuitGlow: 0.08, circuitOpacity: 0.08, pulseFreq: 4, pulseSize: 0.5,
+};
+
+export const App = () => {
+  return (
+    <RabbitProvider values={shellRabbitValues} open={false}>
+      <SiteShell />
+    </RabbitProvider>
   );
 };

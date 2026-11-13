@@ -13,3 +13,7 @@ The component runner creates the scaffold. Only its return expression and
 imported CSS file are replaced, preserving props, defaults, imports and types.
 Editable compositions are stored at HQ/src/user/components/Name/composition.json.
 Subsequent saves update the matching component and composition.
+
+Save path is the required destination components folder, not a project root. The Factory route supplies src/components. The server resolves it against its configured projectRoot, passes it as the runner save_path, and writes composition.json beside the generated component. The server plugin receives explicit path, projectRoot and toolkitRoot options; it does not infer HQ or sibling toolkit folders.
+
+Factory saves pass catalog: false through the runner and metadata steps. Saving writes component files and composition.json without refreshing or registering the catalog.

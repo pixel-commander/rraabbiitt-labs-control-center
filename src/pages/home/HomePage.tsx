@@ -1,8 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { RabbitControls } from "../../components/RabbitHead/RabbitControls/RabbitControls";
+import { useRabbitContext } from "../../components/RabbitHead/hooks/useRabbit/RabbitProvider";
 import type { HomePageProps } from "./HomePage.types";
 
 export const HomePage: React.FC<HomePageProps> = () => {
-  return <>Page</>;
+  const rabbit = useRabbitContext();
+  const { setOpen } = rabbit;
+  useEffect(() => {
+    setOpen(true);
+    return () => setOpen(false);
+  }, [setOpen]);
+  return (
+    <>
+      {!rabbit.open && (
+        <button type="button" className="action-outline" onClick={() => setOpen(true)}>Rabbit controls</button>
+      )}
+      <RabbitControls />
+    </>
+  );
 };
 
 /* Preserved World Search right-column JSX. Requires the original World Search state, handleChange, StatusLabel and Slider imports if restored.

@@ -91,7 +91,7 @@ export const SavePopup = (props: SavePopupProps) => {
         <fieldset data-area="main" disabled={pending}>
           {fields.map((name) => (
             <label key={name}>
-              {name === "path" ? "Path (project root)" : name}
+              {name === "path" ? "Path (components folder)" : name}
               <input name={name} defaultValue={data[name]} required autoFocus={name === "name"} />
             </label>
           ))}

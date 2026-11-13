@@ -97,6 +97,36 @@
       "path": ".",
       "type": "yaml",
       "id": 1794442464508
+    },
+    {
+      "name": "useRabbit.ts",
+      "path": "hooks/useRabbit",
+      "type": "ts"
+    },
+    {
+      "name": "RabbitProvider.tsx",
+      "path": "hooks/useRabbit",
+      "type": "tsx"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "hooks/useRabbit",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "hooks/useRabbit",
+      "type": "yaml"
+    },
+    {
+      "name": "README.txt",
+      "path": "hooks/useRabbit",
+      "type": "txt"
+    },
+    {
+      "name": "glitch.ts",
+      "path": "js",
+      "type": "ts"
     }
   ]
 }

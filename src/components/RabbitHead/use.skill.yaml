@@ -64,7 +64,7 @@ instructions: >-
 
   Surface supports faceOpacity, lineOpacity, glitch, pointSize, pointGlow, and
   showPoints. Defaults are 0.96, 1, 1, 1.5, 0, and true. Dashboard ranges are
-  0-1 by 0.05 for opacity and glow, 0-3 by 0.25 for glitch, and 0-6 by 0.25
+  0-1 by 0.05 for opacity and glow, 0-5 by 0.25 for glitch, and 0-6 by 0.25
   for pointSize.
 
   View supports zoom, panX, and panY. panY defaults to 0; negative values move
@@ -92,3 +92,6 @@ instructions: >-
   effects options, and usage examples.
 owner:
   id: 1794442290029
+
+# Timing: effects.current.glitch({amount: 5, duration: 600}) triggers one burst; null cancels.
+# Props: autoGlitch, glitchDuration (ms), glitchInterval (ms). useRabbit defaults autoGlitch to false.

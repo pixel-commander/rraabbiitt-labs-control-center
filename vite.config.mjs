@@ -1,3 +1,4 @@
+import { factorySavePlugin } from "./src/dashboards/Factory/api/save-component.mjs";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { loadWorld } from "./scripts/world.mjs";
@@ -21,7 +22,7 @@ export default defineConfig({
   root: world.path,
   // This app has no PostCSS plugins; do not inherit a parent workspace config.
   css: { postcss: { plugins: [] } },
-  plugins: [react(), { name: "labs-mcp", configureServer: attachMcp, configurePreviewServer: attachMcp }],
+  plugins: [react(), factorySavePlugin({ path: "src/components", projectRoot: world.path, toolkitRoot: resolve(world.path, world.toolkits[0].path) }), { name: "labs-mcp", configureServer: attachMcp, configurePreviewServer: attachMcp }],
   server: {
     host: world.mcp.host, port: world.mcp.port, strictPort: true,
     fs: { allow: [world.path] },

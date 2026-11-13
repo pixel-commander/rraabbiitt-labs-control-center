@@ -29,7 +29,9 @@ export async function executeReactScaffold(
   ];
   if (!allowed.includes(scaffold)) throw new Error("Unknown React scaffold.");
   const tool = await import(`../scaffolds/${scaffold}/${scaffold}.ts`);
-  const created = await tool.run(settings);
+  const result = await tool.run(settings);
+  if (result.status === "error") return result;
+  const created = result.response ?? result;
   return {
     status: "complete",
     settings,
@@ -57,12 +59,14 @@ export const planReactScaffold = async (kind: string, input: ToolsProps): Promis
       ? JSON.parse(await readFile(join(root, "rab.project.json"), "utf8"))
       : { paths: [] };
   } catch (error) {
-    if (
+    if (kind !== "project" && (error as NodeJS.ErrnoException).code === "ENOENT") {
+      project = JSON.parse(await readFile(join(root, "rab.world.json"), "utf8"));
+    } else if (
       kind !== "project" ||
       (error as NodeJS.ErrnoException).code !== "ENOENT"
     )
       throw error;
-    project = { paths: [] };
+    if (project === undefined) project = { paths: [] };
   }
   const category = kind === "atom" ? `${input.type}s` : locations[kind];
   const registeredPaths = Array.isArray(input.paths)

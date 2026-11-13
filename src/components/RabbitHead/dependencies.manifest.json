@@ -13,6 +13,24 @@
       "path": "../../HouseKeys.types",
       "type": "import",
       "file": "RabbitHead.types.ts"
+    },
+    {
+      "file": "demo/Demo.tsx",
+      "name": "../hooks/useRabbit/RabbitProvider",
+      "path": "hooks/useRabbit/RabbitProvider",
+      "type": "import"
+    },
+    {
+      "file": "hooks/useRabbit/useRabbit.ts",
+      "name": "../../../../hooks/useWindowGesture/useWindowGesture",
+      "path": "../../hooks/useWindowGesture/useWindowGesture",
+      "type": "import"
+    },
+    {
+      "file": "hooks/useRabbit/useRabbit.ts",
+      "name": "../../RabbitControls/RabbitControls.types",
+      "path": "RabbitControls/RabbitControls.types",
+      "type": "import"
     }
   ]
 }

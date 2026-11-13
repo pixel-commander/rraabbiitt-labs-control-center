@@ -99,6 +99,9 @@ export interface RabbitSurfaceSettings {
   faceOpacity?: number;
   lineOpacity?: number;
   glitch?: number;
+  glitchDuration?: number;
+  glitchInterval?: number;
+  autoGlitch?: boolean;
   pointSize?: number;
   pointGlow?: number;
   showPoints?: boolean;
@@ -195,6 +198,9 @@ export interface RabbitHeadRendererProps {
   faceOpacity?: number;
   lineOpacity?: number;
   glitch?: number;
+  glitchDuration?: number;
+  glitchInterval?: number;
+  autoGlitch?: boolean;
   pointSize?: number;
   pointGlow?: number;
   showPoints?: boolean;

@@ -7,7 +7,13 @@ export const toolkitRoot = fileURLToPath(new URL("../../../", import.meta.url));
 
 /** Resolve a stable House ID through the project's registered tool catalog. */
 export const resolveRunner = async (id: number, root = toolkitRoot) => {
-  const project = JSON.parse(await readFile(resolve(root, "rab.project.json"), "utf8"));
+  let project;
+  try {
+    project = JSON.parse(await readFile(resolve(root, "rab.project.json"), "utf8"));
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code !== "ENOENT") throw error;
+    project = JSON.parse(await readFile(resolve(root, "rab.world.json"), "utf8"));
+  }
   const databases = project.paths.filter((entry: { name?: string }) => entry.name === "database");
   if (databases.length !== 1) throw Error("Register exactly one project database.");
   const database = databases[0];

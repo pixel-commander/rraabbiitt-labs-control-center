@@ -1171,6 +1171,13 @@
       "file": "RabbitControls.tsx"
     },
     {
+      "id": 1794590221510,
+      "name": "useRabbit",
+      "type": "hook",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/RabbitHead/hooks/useRabbit",
+      "file": "useRabbit.ts"
+    },
+    {
       "id": 1794442290029,
       "name": "RabbitHead",
       "type": "component",
@@ -2244,6 +2251,13 @@
       "name": "use",
       "type": "skill",
       "path": "C:/rraabbiitt-labs-control-center/src/components/RabbitHead/RabbitControls",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794590221511,
+      "name": "useRabbit",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/RabbitHead/hooks/useRabbit",
       "file": "use.skill.yaml"
     },
     {

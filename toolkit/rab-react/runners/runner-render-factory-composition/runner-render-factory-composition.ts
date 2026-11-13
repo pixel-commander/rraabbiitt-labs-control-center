@@ -112,8 +112,8 @@ export const run = async (settings: RenderFactoryCompositionProps, options: Runn
     }, options);
     if (written.some((item) => item.status !== "complete")) return [...results, ...written];
     const metadata = await runTools([
-      { type: "tool", name: "generate-dependencies.manifest-json", settings: { path: folder } },
-      { type: "tool", name: "refresh-settings-json", settings: { path: folder } },
+      { type: "tool", name: "generate-dependencies.manifest-json", settings: { ...settings, path: folder } },
+      { type: "tool", name: "refresh-settings-json", settings: { ...settings, path: folder } },
     ], (step) => step.name === "refresh-settings-json"
       ? refreshSettings(step.settings)
       : generateDependencies(step.settings), options);

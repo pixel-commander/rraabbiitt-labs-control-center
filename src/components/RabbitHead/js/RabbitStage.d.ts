@@ -2,6 +2,7 @@ import type { ComponentType } from "react";
 import type { RabbitHeadRendererProps, RabbitModel } from "../RabbitHead.types";
 
 export type RabbitEffects = {
+  glitch: (options?: import("./glitch").GlitchOptions | null) => void;
   strike: () => void;
   faceStrike: () => void;
   storm: (count: number, interval: number) => void;

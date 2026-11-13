@@ -9,7 +9,7 @@ export interface FactorySaveData extends HouseKeys {
   name: string;
   /** Required display title saved with the component metadata. */
   title: string;
-  /** Registered project root whose component destination the runner will use. */
+  /** Required destination components folder, absolute or relative to the configured project. */
   path: string;
   /** Artifact category. This save flow currently supports components. */
   type: "component";
@@ -26,7 +26,7 @@ export interface FactorySaveResult extends HouseKeys {
   id: number;
   /** Canonical component name returned by the runner. */
   name: string;
-  /** Project root used to create the component. */
+  /** Destination components folder used to create the component. */
   path: string;
   /** Absolute path of the saved composition JSON file. */
   file: string;
@@ -37,6 +37,6 @@ export interface FactoryOverwriteConfirmation extends HouseKeys {
   id: number;
   /** Existing component name confirmed by its metadata. */
   name: string;
-  /** Project root containing that component. */
+  /** Destination components folder containing that component. */
   path: string;
 }

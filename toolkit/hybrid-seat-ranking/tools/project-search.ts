@@ -32,9 +32,8 @@ const runProject = async (settings: ToolsProps, operation: "search" | "feedback"
     const childPath = relative(project, model);
     if (childPath.startsWith("..") || isAbsolute(childPath)) throw new Error("Model state must stay inside its project.");
     const python = entry("search-python");
-    const projectConfig = await read(resolve(project, "rab.project.json"));
-    const databases = projectConfig.paths.filter((row: { name: string }) => row.name === "database");
-    if (databases.length !== 1) throw new Error("Register exactly one catalog database in rab.project.json.");
+    const databases = world.paths.filter((row: { name: string }) => row.name === "database");
+    if (databases.length !== 1) throw new Error("Register exactly one catalog database in rab.world.json.");
     const temporaryRoot = resolve(defaultProject, ".tmp/hybrid-search/requests");
     await mkdir(temporaryRoot, { recursive: true });
     temporary = await mkdtemp(resolve(temporaryRoot, "search-"));

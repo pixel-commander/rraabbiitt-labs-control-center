@@ -18,7 +18,7 @@ instructions:
   toolkits errors; an empty array lists no tools. The shared runTools owner provides timing and flat
   tracking. Preserve the incoming settings bag.
 context: []
-path: toolkit/runners/runner-use-tool
+path: toolkit/rab-world/runners/runner-use-tool
 implementation:
   - id: 1793213000002
 file: runner-use-tool.ts

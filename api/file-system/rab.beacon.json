@@ -11,22 +11,22 @@
       "name": "list-files",
       "type": "api",
       "tags": [],
-      "path": "X:/rraabbiitt-labs-control-center/api/file-system/list-files"
+      "path": "C:/rraabbiitt-labs-control-center/api/file-system/list-files"
     },
     {
       "id": 1794415784083,
       "name": "read-file",
       "type": "api",
       "tags": [],
-      "path": "X:/rraabbiitt-labs-control-center/api/file-system/read-file"
+      "path": "C:/rraabbiitt-labs-control-center/api/file-system/read-file"
     },
     {
       "id": 1794415784085,
       "name": "save-file",
       "type": "api",
       "tags": [],
-      "path": "X:/rraabbiitt-labs-control-center/api/file-system/save-file"
+      "path": "C:/rraabbiitt-labs-control-center/api/file-system/save-file"
     }
   ],
-  "path": "X:/rraabbiitt-labs-control-center/api/file-system"
+  "path": "C:/rraabbiitt-labs-control-center/api/file-system"
 }

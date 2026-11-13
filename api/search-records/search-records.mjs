@@ -105,7 +105,7 @@ async function atomicJson(file, value) {
   }
 }
 
-export async function searchRecords(world, settings) {
+export async function searchRecords(world, settings, options = {}) {
   let db;
   try {
     db = await database(world);
@@ -123,7 +123,7 @@ export async function searchRecords(world, settings) {
       toolkits: world.toolkits.map(entry => ({
         ...entry, path: resolve(world.path, entry.path),
       })),
-    });
+    }, options);
     const result = receipts.at(-1);
     if (!result) throw new Error("Hybrid search returned no runner result.");
     if (result.status !== "complete")
@@ -366,7 +366,8 @@ export const recordFeedback = (world, settings) =>
 export const recordRephrase = (world, settings) =>
   enqueue(() => saveLesson(world, settings, true));
 
-export async function handleSearchRecords(world, req, res, url) {
+/** options carries runner callbacks (update/complete) so the caller can track runs. */
+export async function handleSearchRecords(world, req, res, url, options = {}) {
   const pathname =
     url?.pathname ?? new URL(req.url, "http://localhost").pathname;
   const send = (result) => {
@@ -410,10 +411,8 @@ export async function handleSearchRecords(world, req, res, url) {
     : pathname.endsWith("/feedback")
       ? recordFeedback
       : searchRecords;
-  send(await action(world, settings));
+  send(await action(world, settings, options));
 }
-
-import { searchDumbot } from "./dumbot.mjs";
 
 /** Tool entry for the master runner. Uses the deterministic dumbot search path. */
 export const run = async (props) => {

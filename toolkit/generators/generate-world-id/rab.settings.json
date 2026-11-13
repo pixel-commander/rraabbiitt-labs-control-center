@@ -9,7 +9,7 @@
   "description": "Create and return a numeric House ID. This generator does not create a registration record.",
   "type": "tool",
   "parent": 1791825479795,
-  "path": "toolkit/generators/generate-world-id",
+  "path": "toolkit/rab-world/generators/generate-world-id",
   "file": "generate-world-id.ts",
   "settings": [],
   "paths": [

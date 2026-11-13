@@ -39,7 +39,15 @@ def prepare_catalog(project, *, skip_missing_owners=False, all_settings=False, w
         return dict(path=file.relative_to(project).as_posix(), kind=kind,
                     sha256=hashlib.sha256(file.read_bytes()).hexdigest())
     files = set()
-    locations = [{'path': '.'}] if all_settings else read(project/'rab.project.json')['paths']
+    def add_entry(entry, folder):
+        # A manifest entry names exactly one file: its skill yaml, or the settings file in its folder.
+        name = entry.get('file')
+        target = folder/name if isinstance(name, str) and name.endswith('.skill.yaml') else folder/'rab.settings.json'
+        if target.is_file() and allowed(target):
+            files.add(target)
+        elif warnings is not None:
+            warnings.append(dict(file=str(target), error='Manifest entry has no file on disk; not indexed.'))
+    locations = [{'path': '.'}] if all_settings else read(next(f for f in (project/'rab.project.json', project/'rab.world.json') if f.is_file()))['paths']
     pending = list(locations)
     seen_beacons = set()
     while pending:
@@ -59,7 +67,7 @@ def prepare_catalog(project, *, skip_missing_owners=False, all_settings=False, w
                     folder = (target.parent/child.get('path', '.').replace('\\','/')).resolve()
                     if not folder.is_relative_to(project):
                         raise ValueError('Beacon path escapes project: '+str(target))
-                    pending.append({**child, 'path': folder.relative_to(project).as_posix()})
+                    add_entry(child, folder)
                 continue
             if target.is_file() and allowed(target) and (target.name=='rab.settings.json' or target.name.endswith('.skill.yaml')):
                 files.add(target)
@@ -67,6 +75,9 @@ def prepare_catalog(project, *, skip_missing_owners=False, all_settings=False, w
         folder = (project/location['path'].replace('\\','/')).resolve()
         if not folder.is_relative_to(project):
             raise ValueError('Registered path escapes project')
+        if not all_settings:
+            add_entry(location, folder)
+            continue
         for directory, children, names in os.walk(folder, followlinks=False):
             children[:] = [name for name in children if allowed(Path(directory)/name)]
             files.update(Path(directory)/name for name in names
@@ -221,17 +232,17 @@ def refresh(settings):
         root = (world_root/projects[0]['path']).resolve(strict=True)
         if not root.is_relative_to(world_root):
             raise ValueError('Database project escapes world.')
-    config = json.loads((root / 'rab.project.json').read_text(encoding='utf-8-sig'))
+    config = json.loads(next(f for f in (root / 'rab.project.json', root / 'rab.world.json') if f.is_file()).read_text(encoding='utf-8-sig'))
     entries = [entry for entry in config['paths'] if entry.get('name') == 'database']
     if len(entries) != 1 or not isinstance(entries[0].get('path'), str) or not isinstance(entries[0].get('file'), str):
-        raise ValueError('Root rab.project.json must define one database path and file.')
+        raise ValueError('Root manifest (rab.world.json) must define one database path and file.')
     database = (root / entries[0]['path'] / entries[0]['file']).resolve(strict=True)
     if not database.is_relative_to(root):
         raise ValueError('Configured database path escapes the project root.')
     if supplied is not None and supplied.is_file() and supplied != database:
         raise ValueError('Refresh requires the root-configured database.')
     warnings = []
-    catalog = prepare_world(world_root, root, warnings) if world_root else include_registered_toolkits(root, prepare_catalog(root), warnings)
+    catalog = prepare_world(world_root, root, warnings) if world_root else prepare_catalog(root, warnings=warnings)
     seen = set()
     for row in catalog:
         if type(row.get('id')) is not int:

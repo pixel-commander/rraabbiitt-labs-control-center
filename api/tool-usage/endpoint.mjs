@@ -58,10 +58,13 @@ export async function recordUsage(world, settings) {
       throw new Error("Database path and file are missing from rab.world.json.");
     const file = resolve(world.path, entries[0].path, entries[0].file);
     if (!(await stat(file)).isFile()) throw new Error("Usage database is not a file.");
-    const schema = await readFile(new URL("./schema.sql", import.meta.url), "utf8");
     db = new DatabaseSync(file);
     db.exec("PRAGMA busy_timeout=0");
-    db.exec(schema);
+    db.exec(`CREATE TABLE IF NOT EXISTS tool_usage (
+      id INTEGER NOT NULL,
+      date INTEGER NOT NULL,
+      message INTEGER
+    )`);
     db.prepare("INSERT INTO tool_usage (id,date,message) VALUES (?,?,?)")
       .run(settings.id, settings.date, settings.message ?? null);
     return { code: 200, body: { return_type: "api-call", status: "complete", settings } };

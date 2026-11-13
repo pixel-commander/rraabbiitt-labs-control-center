@@ -118,7 +118,7 @@ export const run: UsageTool = async (settings) => {
     result = { return_type: "scaffold", status: "error", settings, error: error instanceof Error ? error.message : String(error) };
   }
   try {
-    const { finishToolUsage } = await import("../../../../api/tool-usage/finish-tool-usage.ts");
+    const { finishToolUsage } = await import("../../../api/tool-usage/finish-tool-usage.ts");
     return await finishToolUsage(1791853637888, settings, result);
   } catch (error) {
     return { ...result, error: [result.error, `Usage reporting failed: ${error instanceof Error ? error.message : String(error)}`].filter(Boolean).join("\n") };

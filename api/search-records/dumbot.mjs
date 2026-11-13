@@ -40,7 +40,7 @@ function parseAnswer(text, prop) {
   }
   return text;
 }
-export async function searchDumbot(world, settings) {
+export async function searchDumbot(world, settings, options = {}) {
   try {
     if (typeof settings?.query !== 'string' || !settings.query.trim() || settings.query.length > 2000 || !Number.isSafeInteger(settings.message)) throw Error('Supply query and saved message ID.');
     const project = JSON.parse(await readFile(resolve(world.path, 'rab.world.json'), 'utf8'));
@@ -95,7 +95,11 @@ export async function searchDumbot(world, settings) {
         type: continuing ? settings.contract.type : result.slots.find(slot => slot.slot === 'type')?.normalized };
       reply = error + answer.text;
       if (answer.phase === 'confirming') {
-        if (!['tool', 'runner'].includes(owner.type)) throw Error('The selected result is not an executable tool or runner.');
+        if (!['tool', 'runner'].includes(owner.type)) {
+          if (continuing || settings.select !== undefined) throw Error('The selected result is not an executable tool or runner.');
+          return { code: 200, body: { status: 'complete', return_type: 'api-call', settings,
+            response: { ...result, reply: 'The top result is "' + (record.title ?? record.name) + '" (' + owner.type + '), which is not an executable tool or runner.' } } };
+        }
         const toolkits = world.toolkits.map(entry => ({ ...entry, path: resolve(world.path, entry.path) }));
         const decision = settings.query.trim().toLowerCase().replace(/[.!?]+$/, '');
         const prior = continuing && settings.contract.phase === 'confirming' ? proposals.get(settings.contract.token) : undefined;
@@ -111,7 +115,7 @@ export async function searchDumbot(world, settings) {
           answer.phase = 'cancelled';
         } else if (prior && decision === 'yes') {
           prior.used = true;
-          const receipts = await useTool({ id: prior.id, content: JSON.stringify(prior.values), toolkits });
+          const receipts = await useTool({ id: prior.id, content: JSON.stringify(prior.values), toolkits }, options);
           const failed = receipts.find(step => step.status === 'error');
           contract.phase = failed ? 'failed' : 'complete';
           reply = executionReply(receipts, prior.request);
@@ -119,7 +123,7 @@ export async function searchDumbot(world, settings) {
           answer.executed = true;
           answer.phase = contract.phase;
         } else {
-          const inspection = await useTool({ id: owner.id, toolkits });
+          const inspection = await useTool({ id: owner.id, toolkits }, options);
           const failed = inspection.find(step => step.status === 'error');
           if (failed) throw Error(failed.error ?? 'Cannot load the registered tool and its usage skill.');
           for (const [key, proposal] of proposals) if (proposal.expires < Date.now()) proposals.delete(key);

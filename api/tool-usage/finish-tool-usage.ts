@@ -8,7 +8,7 @@ export async function finishToolUsage(
   settings: ToolsProps,
   result: ToolReturn,
 ): Promise<ToolReturn> {
-  if (result.status === "complete" && (result.return_type === "scaffold" || (result.return_type === "settings" && typeof result.response?.id === "number" && typeof result.response?.path === "string"))) {
+  if (settings.catalog !== false && result.status === "complete" && (result.return_type === "scaffold" || (result.return_type === "settings" && typeof result.response?.id === "number" && typeof result.response?.path === "string"))) {
     const { executeTool } = await import("../../toolkit/tools/refresh-world-database/refresh-world-database.ts");
     const { projectRoot } = await import("../../scripts/world.mjs");
     const [refreshed] = await runTools(

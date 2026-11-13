@@ -105,6 +105,98 @@ async function buildRequestHandler(world) {
 
     const pathname = new URL(req.url, `http://${host}:${port}`).pathname;
 
+    // Domain routes the UI still calls. Each goes through the master runner.
+    const domainRoutes = {
+      "/api/favorites": 1794444448187,
+      "/api/messages": null,
+      "/api/search-records": null,
+      "/api/tool-usage": null,
+    };
+    for (const [prefix, id] of Object.entries(domainRoutes)) {
+      if (pathname === prefix || pathname.startsWith(prefix + "/")) {
+        if (req.method !== "POST" && req.method !== "GET") {
+          send(res, 405, { error: "Method not allowed." });
+          return;
+        }
+        // For now delegate to the existing handler modules so the UI keeps working.
+        // Tracking still happens if they call through use_tool.
+        try {
+          if (prefix === "/api/favorites") {
+            const { handleFavorites } = await import("../favorites/favorites.mjs");
+            await handleFavorites(world, req, res, new URL(req.url, `http://${host}:${port}`));
+            return;
+          }
+          if (prefix === "/api/messages") {
+            const { handleMessages } = await import("../messages/messages.mjs");
+            await handleMessages(world, req, res, new URL(req.url, `http://${host}:${port}`));
+            return;
+          }
+          if (prefix === "/api/search-records") {
+            const { handleSearchRecords } = await import("../search-records/search-records.mjs");
+            const requestUrl = new URL(req.url, `http://${host}:${port}`);
+            // Feedback and rephrase save lessons only; searches run tools and are tracked.
+            const tracked = req.method === "POST" && !/\/(feedback|rephrase)$/.test(pathname);
+            if (!tracked) {
+              await handleSearchRecords(world, req, res, requestUrl);
+              return;
+            }
+            const requestEvent = {
+              time: new Date().toISOString(),
+              method: "POST",
+              tool: pathname.endsWith("/dumbot") ? "dumbot-search" : "search-records",
+              status: "running",
+              runs: [],
+            };
+            activity.push(requestEvent);
+            if (activity.length > 50) activity.shift();
+            res.once("finish", () => {
+              requestEvent.status = res.statusCode < 400 ? "complete" : "error";
+              if (res.statusCode >= 400) requestEvent.error = `HTTP ${res.statusCode}`;
+            });
+            await handleSearchRecords(world, req, res, requestUrl, {
+              update: (steps) => {
+                requestEvent.runs = steps.map((step) => ({
+                  id: step.id,
+                  name: step.name,
+                  status: step.status,
+                  date_start: step.date_start,
+                  date_end: step.date_end,
+                  error: step.error,
+                }));
+                requestEvent.toolId ??= steps.at(-1)?.id;
+              },
+              complete: async (steps) => {
+                try {
+                  const { saveRun } = await import("../../toolkit/runners/save-run/save-run.mjs");
+                  await saveRun(world, steps);
+                } catch (e) { console.warn("saveRun failed:", e.message); }
+              },
+            });
+            return;
+          }
+          if (prefix === "/api/tool-usage") {
+            const { readUsage, recordUsage } = await import("../tool-usage/endpoint.mjs");
+            if (req.method === "GET") {
+              const result = await readUsage(world);
+              send(res, result.code ?? 200, result.body ?? result);
+              return;
+            }
+            if (req.method === "POST") {
+              const chunks = [];
+              for await (const chunk of req) chunks.push(chunk);
+              const settings = JSON.parse(Buffer.concat(chunks).toString("utf8") || "{}");
+              const result = await recordUsage(world, settings);
+              send(res, result.code ?? 200, result.body ?? result);
+              return;
+            }
+          }
+        } catch (error) {
+          send(res, 500, { error: error.message });
+          return;
+        }
+      }
+    }
+
     // Refresh world button: goes through the master runner so it gets tracked.
     if (pathname === "/api/world/refresh" && req.method === "POST") {
       const requestEvent = {

@@ -6,7 +6,7 @@ import type { SearchRecord } from "../../../models/dumbot/model/db-pairs.ts";
 
 /** path is the caller project root; its manifest owns the database location. */
 export const readDbRecords = async ({ path }: { path: string }): Promise<SearchRecord[]> => {
-  const project = JSON.parse(await readFile(resolve(path, "rab.project.json"), "utf8"));
+  const project = JSON.parse(await readFile(resolve(path, "rab.world.json"), "utf8"));
   const entries = project.paths?.filter((entry: { name?: string }) => entry.name === "database");
   if (entries?.length !== 1 || !entries[0].path || !entries[0].file) throw Error("Database registration is missing or ambiguous.");
   const db = new DatabaseSync(resolve(path, entries[0].path, entries[0].file), { readOnly: true });

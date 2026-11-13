@@ -5,6 +5,196 @@
   "description": "Discover source metadata within this project's skills folder.",
   "type": "beacon",
   "tags": [],
-  "paths": [],
-  "path": "X:/rraabbiitt-labs-control-center/skills"
+  "paths": [
+    {
+      "id": 1793181017723,
+      "name": "index-world-search-docs",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/skills/cli/index-world-search-docs",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1793144165307,
+      "name": "adding-skills",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/skills/project/adding-skills",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1793126984416,
+      "name": "installing-packages",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/skills/project/cli/installing-packages",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1793126984423,
+      "name": "running-the-app",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/skills/project/cli/running-the-app",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1793679050255,
+      "name": "confirming-tools",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/skills/project/search/confirming-tools",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1793679050322,
+      "name": "feedback-training",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/skills/project/search/feedback-training",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1793679050189,
+      "name": "finding-records",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/skills/project/search/finding-records",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1793679050118,
+      "name": "search",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/skills/project/search",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1793143987360,
+      "name": "adding-runners",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/skills/project/tooling/adding-runners",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1793143987359,
+      "name": "adding-tools",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/skills/project/tooling/adding-tools",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1793144147315,
+      "name": "tooling",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/skills/project/tooling",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1793127075008,
+      "name": "viewing-the-app",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/skills/project/viewing-the-app",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1793723655465,
+      "name": "configure vite startup",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/skills/project/vite",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1791940045292,
+      "name": "adding-new-runners",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/skills/toolkits/runners/adding-new-runners",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1791940045316,
+      "name": "runner-results",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/skills/toolkits/runners/runner-results",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1791940045335,
+      "name": "runner-states",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/skills/toolkits/runners/runner-states",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1791940045245,
+      "name": "runners",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/skills/toolkits/runners",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1791940045269,
+      "name": "using-runners",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/skills/toolkits/runners/using-runners",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1791940045355,
+      "name": "checkers",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/skills/toolkits/tools/checkers",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1791940045421,
+      "name": "finders",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/skills/toolkits/tools/finders",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1791940045376,
+      "name": "fixers",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/skills/toolkits/tools/fixers",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1791940045400,
+      "name": "generators",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/skills/toolkits/tools/generators",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1791940045476,
+      "name": "scaffolds",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/skills/toolkits/tools/scaffolds",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1791940045452,
+      "name": "scanners",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/skills/toolkits/tools/scanners",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1791940045227,
+      "name": "tools",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/skills/toolkits/tools",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1791940045502,
+      "name": "watchers",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/skills/toolkits/tools/watchers",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1791940045207,
+      "name": "toolkits",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/skills/toolkits",
+      "file": "use.skill.yaml"
+    }
+  ],
+  "path": "C:/rraabbiitt-labs-control-center/skills"
 }

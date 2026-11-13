@@ -1,7 +1,7 @@
 import { DatabaseSync } from "node:sqlite";
 import { readFile, realpath } from "node:fs/promises";
 import { resolve } from "node:path";
-import { withinProject } from "../../scripts/world.mjs";
+import { withinProject } from "../../../scripts/world.mjs";
 
 /**
  * Writes a finished run into the main database:

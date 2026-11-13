@@ -205,7 +205,7 @@ export const run: Runner = async (props, options = {}) => {
   const { loadWorld } = await import("../../../scripts/world.mjs");
   const world = await loadWorld();
   const toolkits = world.toolkits.map((entry: { path: string }) => ({ ...entry, path: resolve(world.path, entry.path) }));
-  const { executeToolById } = await import("../../runners/runner-use-tool/runner-use-tool.ts");
+  const { executeToolById } = await import("../runner-use-tool/runner-use-tool.ts");
   return runnerWorldTooling({ runs: props.runs as RunProps[] }, { ...options,
     execute: async step => {
       if (!Number.isSafeInteger(step.id)) throw new TypeError("Each tool requires its numeric House ID.");

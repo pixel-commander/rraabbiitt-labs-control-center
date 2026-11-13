@@ -1,0 +1,1180 @@
+{
+  "id": 1794580370850,
+  "name": "src",
+  "title": "Project Source",
+  "description": "Discover source metadata within this project's src folder.",
+  "type": "beacon",
+  "tags": [],
+  "paths": [
+    {
+      "id": 1794247089869,
+      "name": "action-accent",
+      "type": "ui-atom",
+      "tags": [
+        "action"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/atoms/actions/action-accent",
+      "file": "action-accent.css"
+    },
+    {
+      "id": 1794247089870,
+      "name": "action-fill-alt",
+      "type": "ui-atom",
+      "tags": [
+        "action"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/atoms/actions/action-fill-alt"
+    },
+    {
+      "id": 1794395295488,
+      "name": "action-filled",
+      "type": "actions",
+      "tags": [
+        "react",
+        "actions"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/atoms/actions/action-filled",
+      "file": "action-filled.css"
+    },
+    {
+      "id": 1794247089871,
+      "name": "action-ghost",
+      "type": "ui-atom",
+      "tags": [
+        "action"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/atoms/actions/action-ghost"
+    },
+    {
+      "id": 1794395916209,
+      "name": "action-light",
+      "type": "actions",
+      "tags": [
+        "react",
+        "actions"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/atoms/actions/action-light",
+      "file": "action-light.css"
+    },
+    {
+      "id": 1794247089872,
+      "name": "action-main",
+      "type": "ui-atom",
+      "tags": [
+        "action"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/atoms/actions/action-main",
+      "file": "action-main.css"
+    },
+    {
+      "id": 1794247089873,
+      "name": "action-nav-alt",
+      "type": "ui-atom",
+      "tags": [
+        "action"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/atoms/actions/action-nav-alt"
+    },
+    {
+      "id": 1794247089874,
+      "name": "action-neg",
+      "type": "ui-atom",
+      "tags": [
+        "action"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/atoms/actions/action-neg",
+      "file": "action-neg.css"
+    },
+    {
+      "id": 1794247089875,
+      "name": "action-outline",
+      "type": "ui-atom",
+      "tags": [
+        "action"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/atoms/actions/action-outline",
+      "file": "action-outline.css"
+    },
+    {
+      "id": 1794247089876,
+      "name": "action-rail-left",
+      "type": "ui-atom",
+      "tags": [
+        "action"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/atoms/actions/action-rail-left"
+    },
+    {
+      "id": 1794247089877,
+      "name": "action-row",
+      "type": "ui-atom",
+      "tags": [
+        "action"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/atoms/actions/action-row",
+      "file": "action-row.css"
+    },
+    {
+      "id": 1794247089878,
+      "name": "action-row-rail",
+      "type": "ui-atom",
+      "tags": [
+        "action"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/atoms/actions/action-row-rail",
+      "file": "action-row-rail.css"
+    },
+    {
+      "id": 1794395295506,
+      "name": "action-text-link",
+      "type": "actions",
+      "tags": [
+        "react",
+        "actions"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/atoms/actions/action-text-link",
+      "file": "action-text-link.css"
+    },
+    {
+      "name": "actions folder",
+      "type": "path",
+      "tags": [
+        "actions"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/atoms/actions"
+    },
+    {
+      "id": 1794395295454,
+      "name": "container-alt",
+      "type": "containers",
+      "tags": [
+        "react",
+        "containers"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/atoms/containers/container-alt",
+      "file": "container-alt.css"
+    },
+    {
+      "id": 1794247089879,
+      "name": "container-cell",
+      "type": "ui-atom",
+      "tags": [
+        "container"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/atoms/containers/container-cell"
+    },
+    {
+      "id": 1794537900544,
+      "name": "container-dropdown",
+      "type": "containers",
+      "tags": [
+        "react",
+        "containers"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/atoms/containers/container-dropdown",
+      "file": "container-dropdown.css"
+    },
+    {
+      "id": 1794400072527,
+      "name": "container-fill",
+      "type": "containers",
+      "tags": [
+        "react",
+        "containers"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/atoms/containers/container-fill",
+      "file": "container-fill.css"
+    },
+    {
+      "id": 1794247089880,
+      "name": "container-ghost",
+      "type": "ui-atom",
+      "tags": [
+        "container"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/atoms/containers/container-ghost",
+      "file": "container-ghost.css"
+    },
+    {
+      "id": 1794247089881,
+      "name": "container-header",
+      "type": "ui-atom",
+      "tags": [
+        "container"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/atoms/containers/container-header",
+      "file": "container-header.css"
+    },
+    {
+      "id": 1794247089882,
+      "name": "container-machine",
+      "type": "ui-atom",
+      "tags": [
+        "container"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/atoms/containers/container-machine"
+    },
+    {
+      "id": 1794247089883,
+      "name": "container-main",
+      "type": "ui-atom",
+      "tags": [
+        "container"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/atoms/containers/container-main",
+      "file": "container-main.css"
+    },
+    {
+      "id": 1794247089884,
+      "name": "container-metal",
+      "type": "ui-atom",
+      "tags": [
+        "container"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/atoms/containers/container-metal",
+      "file": "container-metal.css"
+    },
+    {
+      "id": 1794247089885,
+      "name": "container-neg",
+      "type": "ui-atom",
+      "tags": [
+        "container"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/atoms/containers/container-neg",
+      "file": "container-neg.css"
+    },
+    {
+      "id": 1794247089886,
+      "name": "container-neon-corner",
+      "type": "ui-atom",
+      "tags": [
+        "container"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/atoms/containers/container-neon-corner"
+    },
+    {
+      "id": 1794395295440,
+      "name": "container-outline",
+      "type": "containers",
+      "tags": [
+        "react",
+        "containers"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/atoms/containers/container-outline",
+      "file": "container-outline.css"
+    },
+    {
+      "id": 1794395295465,
+      "name": "container-side-rail",
+      "type": "containers",
+      "tags": [
+        "react",
+        "containers"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/atoms/containers/container-side-rail",
+      "file": "container-side-rail.css"
+    },
+    {
+      "name": "containers folder",
+      "type": "path",
+      "tags": [
+        "containers"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/atoms/containers"
+    },
+    {
+      "id": 1794247089887,
+      "name": "effect-float",
+      "type": "ui-atom",
+      "tags": [
+        "effect"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/atoms/effects/effect-float"
+    },
+    {
+      "id": 1794247089888,
+      "name": "effect-inset",
+      "type": "ui-atom",
+      "tags": [
+        "effect"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/atoms/effects/effect-inset"
+    },
+    {
+      "name": "effects folder",
+      "type": "path",
+      "tags": [
+        "effects"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/atoms/effects"
+    },
+    {
+      "name": "grids folder",
+      "type": "path",
+      "tags": [
+        "grids"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/atoms/grids"
+    },
+    {
+      "id": 1793990174762,
+      "name": "CodeViewer",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/CodeEditAndView/CodeViewer",
+      "file": "CodeViewer.tsx"
+    },
+    {
+      "id": 1794004818408,
+      "name": "useCodeEditAndView",
+      "type": "hook",
+      "tags": [
+        "hook"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/CodeEditAndView/hooks/useCodeEditAndView",
+      "file": "useCodeEditAndView.ts"
+    },
+    {
+      "id": 1794004818442,
+      "name": "useCodeViewer",
+      "type": "hook",
+      "tags": [
+        "hook"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/CodeEditAndView/hooks/useCodeViewer",
+      "file": "useCodeViewer.ts"
+    },
+    {
+      "id": 1794004818503,
+      "name": "save-code-file",
+      "type": "function",
+      "tags": [
+        "function"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/CodeEditAndView/js/save-code-file",
+      "file": "save-code-file.ts"
+    },
+    {
+      "id": 1794004818529,
+      "name": "validate-code",
+      "type": "function",
+      "tags": [
+        "function"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/CodeEditAndView/js/validate-code",
+      "file": "validate-code.ts"
+    },
+    {
+      "id": 1793976287997,
+      "name": "CodeEditAndView",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/CodeEditAndView",
+      "file": "CodeEditAndView.tsx"
+    },
+    {
+      "id": 1794538514756,
+      "name": "DropdownButton",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/DropdownButton",
+      "file": "DropdownButton.tsx"
+    },
+    {
+      "id": 1794528643980,
+      "name": "useDumBot",
+      "type": "hook",
+      "tags": [
+        "react",
+        "hook"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/DumBot/hooks/useDumBot",
+      "file": "useDumBot.ts"
+    },
+    {
+      "id": 1794528643979,
+      "name": "DumBot",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/DumBot",
+      "file": "DumBot.tsx"
+    },
+    {
+      "id": 1793996465585,
+      "name": "FloatWindow",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/FloatWindow",
+      "file": "FloatWindow.tsx"
+    },
+    {
+      "id": 1794412867627,
+      "name": "SearchMessageBox",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/HybridSearch/SearchMessageBox",
+      "file": "SearchMessageBox.tsx"
+    },
+    {
+      "id": 1794412867637,
+      "name": "SearchResponseBubble",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/HybridSearch/SearchResponseBubble",
+      "file": "SearchResponseBubble.tsx"
+    },
+    {
+      "id": 1794412867606,
+      "name": "useHybridSearch",
+      "type": "hook",
+      "tags": [
+        "react",
+        "hook"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/HybridSearch/hooks/useHybridSearch",
+      "file": "useHybridSearch.ts"
+    },
+    {
+      "id": 1794412867605,
+      "name": "HybridSearch",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/HybridSearch",
+      "file": "HybridSearch.tsx"
+    },
+    {
+      "id": 1794417147127,
+      "name": "useMcpViewer",
+      "type": "hook",
+      "tags": [
+        "react",
+        "hook"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/McpViewer/hooks/useMcpViewer",
+      "file": "useMcpViewer.ts"
+    },
+    {
+      "id": 1794417147126,
+      "name": "McpViewer",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/McpViewer",
+      "file": "McpViewer.tsx"
+    },
+    {
+      "id": 1794399461745,
+      "name": "useMessageBox",
+      "type": "hook",
+      "tags": [
+        "react",
+        "hook"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/MessageBox/hooks/useMessageBox",
+      "file": "useMessageBox.ts"
+    },
+    {
+      "id": 1794413032084,
+      "name": "useMessageProvider",
+      "type": "hook",
+      "tags": [
+        "react",
+        "hook"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/MessageBox/hooks/useMessageProvider",
+      "file": "useMessageProvider.ts"
+    },
+    {
+      "id": 1794399461744,
+      "name": "MessageBox",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/MessageBox",
+      "file": "MessageBox.tsx"
+    },
+    {
+      "id": 1794441432724,
+      "name": "RabbitCanvas",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/RabbitHead/RabbitCanvas",
+      "file": "RabbitCanvas.tsx"
+    },
+    {
+      "id": 1794534782424,
+      "name": "RabbitControls",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/RabbitHead/RabbitControls",
+      "file": "RabbitControls.tsx"
+    },
+    {
+      "id": 1794442290029,
+      "name": "RabbitHead",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/RabbitHead",
+      "file": "RabbitHead.tsx"
+    },
+    {
+      "id": 1794401889543,
+      "name": "ChatBubble",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/SearchResponses/ChatBubble",
+      "file": "ChatBubble.tsx"
+    },
+    {
+      "id": 1794404369434,
+      "name": "ResponseAndRankingCard",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/SearchResponses/ResponseAndRankingCard",
+      "file": "ResponseAndRankingCard.tsx"
+    },
+    {
+      "id": 1794398447056,
+      "name": "TopResult",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/SearchResponses/TopResult",
+      "file": "TopResult.tsx"
+    },
+    {
+      "id": 1794395295573,
+      "name": "SearchResponses",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/SearchResponses",
+      "file": "SearchResponses.tsx"
+    },
+    {
+      "id": 1794395895090,
+      "name": "SiteNav",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/SiteNav",
+      "file": "SiteNav.tsx"
+    },
+    {
+      "id": 1794014810540,
+      "name": "Slider",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/Slider",
+      "file": "Slider.tsx"
+    },
+    {
+      "id": 1792432275473,
+      "name": "SmartTooltip",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/SmartTooltip",
+      "file": "SmartTooltip.tsx"
+    },
+    {
+      "id": 1794538905696,
+      "name": "ToggleSection",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/ToggleSection",
+      "file": "ToggleSection.tsx"
+    },
+    {
+      "id": 1794399859295,
+      "name": "Tooltip",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/Tooltip",
+      "file": "Tooltip.tsx"
+    },
+    {
+      "id": 1794398974533,
+      "name": "IconButton",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/UiElements/IconButton",
+      "file": "IconButton.tsx"
+    },
+    {
+      "id": 1794395295618,
+      "name": "ModelTile",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/UiElements/ModelTile",
+      "file": "ModelTile.tsx"
+    },
+    {
+      "id": 1794397432878,
+      "name": "PageHeader",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/UiElements/PageHeader",
+      "file": "PageHeader.tsx"
+    },
+    {
+      "id": 1794536966393,
+      "name": "StatusIcon",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/UiElements/StatusIcon",
+      "file": "StatusIcon.tsx"
+    },
+    {
+      "id": 1794395295604,
+      "name": "StatusLabel",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/UiElements/StatusLabel",
+      "file": "StatusLabel.tsx"
+    },
+    {
+      "id": 1794395295542,
+      "name": "UiElements",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/UiElements",
+      "file": "UiElements.tsx"
+    },
+    {
+      "id": 1794538077037,
+      "name": "RescanWorldStatusWindow",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/WorldComponents/RefreshSystemButton/RescanWorldStatusWindow",
+      "file": "RescanWorldStatusWindow.tsx"
+    },
+    {
+      "id": 1794536548923,
+      "name": "RefreshSystemButton",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/WorldComponents/RefreshSystemButton",
+      "file": "RefreshSystemButton.tsx"
+    },
+    {
+      "id": 1794536548613,
+      "name": "useWorldComponents",
+      "type": "hook",
+      "tags": [
+        "react",
+        "hook"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/WorldComponents/hooks/useWorldComponents",
+      "file": "useWorldComponents.ts"
+    },
+    {
+      "id": 1794536548612,
+      "name": "WorldComponents",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/WorldComponents",
+      "file": "WorldComponents.tsx"
+    },
+    {
+      "name": "components folder",
+      "type": "path",
+      "tags": [
+        "components"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components"
+    },
+    {
+      "id": 1794535953418,
+      "name": "WorldAudit",
+      "type": "dashboard",
+      "tags": [
+        "react",
+        "dashboard"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/dashboards/WorldAudit",
+      "file": "WorldAudit.tsx"
+    },
+    {
+      "name": "dashboards folder",
+      "type": "path",
+      "tags": [
+        "dashboards"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/dashboards"
+    },
+    {
+      "name": "hooks folder",
+      "type": "path",
+      "tags": [
+        "hooks"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/hooks"
+    },
+    {
+      "id": 1793996745750,
+      "name": "useWindowGesture",
+      "type": "hook",
+      "path": "C:/rraabbiitt-labs-control-center/src/hooks/useWindowGesture",
+      "file": "useWindowGesture.ts"
+    },
+    {
+      "id": 1794529580067,
+      "name": "DumBot",
+      "type": "page",
+      "tags": [
+        "react",
+        "page"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/pages/DumBot",
+      "file": "DumBotPage.tsx"
+    },
+    {
+      "id": 1794247089699,
+      "name": "StyleGuide",
+      "type": "tool",
+      "tags": [
+        "rab-react",
+        "scaffold"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/pages/StyleGuide",
+      "file": "StyleGuidePage.tsx"
+    },
+    {
+      "id": 1794404078377,
+      "name": "ToolCol",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/pages/WorldSearch/ToolCol",
+      "file": "ToolCol.tsx"
+    },
+    {
+      "id": 1794395693982,
+      "name": "useWorldSearch",
+      "type": "hook",
+      "path": "C:/rraabbiitt-labs-control-center/src/pages/WorldSearch/hooks/useWorldSearch",
+      "file": "useWorldSearch.ts"
+    },
+    {
+      "id": 1794395343357,
+      "name": "WorldSearch",
+      "type": "page",
+      "tags": [
+        "react",
+        "page"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/pages/WorldSearch",
+      "file": "WorldSearchPage.tsx"
+    },
+    {
+      "id": 1794247089698,
+      "name": "home",
+      "type": "tool",
+      "tags": [
+        "rab-react",
+        "scaffold"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/pages/home",
+      "file": "HomePage.tsx"
+    },
+    {
+      "name": "pages folder",
+      "type": "path",
+      "tags": [
+        "pages"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/pages"
+    },
+    {
+      "id": 1793990737743,
+      "name": "CodeViewer",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/CodeEditAndView/CodeViewer",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1793990737729,
+      "name": "useCodeEditAndView",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/CodeEditAndView/hooks/useCodeEditAndView",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1793990737721,
+      "name": "useCodeViewer",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/CodeEditAndView/hooks/useCodeViewer",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1793990737717,
+      "name": "saveCodeFile",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/CodeEditAndView/js/save-code-file",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1793990737711,
+      "name": "validateCode",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/CodeEditAndView/js/validate-code",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1793990737735,
+      "name": "CodeEditAndView",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/CodeEditAndView",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794528643982,
+      "name": "useDumBot",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/DumBot/hooks/useDumBot",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794528643981,
+      "name": "DumBot",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/DumBot",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794417083882,
+      "name": "use-float-window",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/FloatWindow",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794413032142,
+      "name": "SearchMessageBox",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/HybridSearch/SearchMessageBox",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794413032150,
+      "name": "SearchResponseBubble",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/HybridSearch/SearchResponseBubble",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794413032125,
+      "name": "useHybridSearch",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/HybridSearch/hooks/useHybridSearch",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794413032134,
+      "name": "HybridSearch",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/HybridSearch",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794417387697,
+      "name": "useMcpViewer",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/McpViewer/hooks/useMcpViewer",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794417387696,
+      "name": "McpViewer",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/McpViewer",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794413032161,
+      "name": "useMessageBox",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/MessageBox/hooks/useMessageBox",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794413032111,
+      "name": "useMessageProvider",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/MessageBox/hooks/useMessageProvider",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794408972586,
+      "name": "MessageBox",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/MessageBox",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794441720407,
+      "name": "use-rabbit-canvas",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/RabbitHead/RabbitCanvas",
+      "file": "use.skill.yaml"
+    },
+    {
+      "name": "use",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/RabbitHead/RabbitControls",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794442464508,
+      "name": "use-rabbit-head",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/RabbitHead",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794408972639,
+      "name": "ChatBubble",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/SearchResponses/ChatBubble",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794408972671,
+      "name": "ResponseAndRankingCard",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/SearchResponses/ResponseAndRankingCard",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794408972739,
+      "name": "TopResult",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/SearchResponses/TopResult",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794408972707,
+      "name": "SearchResponses",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/SearchResponses",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794408972779,
+      "name": "SiteNav",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/SiteNav",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794014849134,
+      "name": "Slider",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/Slider",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794004819954,
+      "name": "SmartTooltip",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/SmartTooltip",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794408972823,
+      "name": "Tooltip",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/Tooltip",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794408972904,
+      "name": "IconButton",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/UiElements/IconButton",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794408972999,
+      "name": "ModelTile",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/UiElements/ModelTile",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794408973101,
+      "name": "PageHeader",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/UiElements/PageHeader",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794408973182,
+      "name": "StatusLabel",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/UiElements/StatusLabel",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794408973262,
+      "name": "UiElements",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/UiElements",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794536548615,
+      "name": "useWorldComponents",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/WorldComponents/hooks/useWorldComponents",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794536548614,
+      "name": "WorldComponents",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/WorldComponents",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794417083886,
+      "name": "use-window-gesture",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/hooks/useWindowGesture",
+      "file": "use.skill.yaml"
+    },
+    {
+      "name": "use-dum-bot",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/pages/DumBot",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794408973383,
+      "name": "StyleGuidePage",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/pages/StyleGuide",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794408973434,
+      "name": "ToolCol",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/pages/WorldSearch/ToolCol",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794413032168,
+      "name": "useWorldSearch",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/pages/WorldSearch/hooks/useWorldSearch",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794408973490,
+      "name": "WorldSearchPage",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/pages/WorldSearch",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794408973336,
+      "name": "HomePage",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/pages/home",
+      "file": "use.skill.yaml"
+    }
+  ],
+  "path": "C:/rraabbiitt-labs-control-center/src"
+}

@@ -30,6 +30,7 @@ import { runTools } from "../run-tools.ts";
 import { run as refreshProject } from "../../tools/refresh-project-json/refresh-project-json.ts";
 import { run as refreshBeacon } from "../../tools/refresh-beacon-json/refresh-beacon-json.ts";
 import { run as refreshSettings } from "../../tools/refresh-settings-json/refresh-settings-json.ts";
+import { run as refreshDatabase } from "../../tools/refresh-world-database/refresh-world-database.ts";
 
 const inside = (root: string, path: string) => {
   const child = relative(root, path);
@@ -103,7 +104,8 @@ const updateWorldJson = async (
           !entry ||
           typeof entry !== "object" ||
           Array.isArray(entry) ||
-          (entry as Record<string, unknown>).type !== "project",
+          (entry as Record<string, unknown>).type !== "project" ||
+          (entry as Record<string, unknown>).file === "rab.world.json",
       ),
       ...orderedProjects,
       ...keyedProjects.values(),
@@ -139,7 +141,7 @@ export const run = async (
   ): RunProps => ({
     type: "tool",
     name: `refresh-${type}-json`,
-    settings: { ...settings, type, path, ...(root ? { root } : {}) },
+    settings: { ...settings, type, path, catalog: false, ...(root ? { root } : {}) },
   });
   return runTools(
     async () => {
@@ -234,6 +236,12 @@ export const run = async (
                 name: "update-rab-world-json",
                 settings: { ...settings, path: worldFile, root: worldRoot },
               },
+              {
+                id: 1793210509222,
+                type: "tool" as const,
+                name: "refresh-world-database",
+                settings: { path: worldRoot },
+              },
             ]
           : []),
       ];
@@ -248,6 +256,15 @@ export const run = async (
         return result;
       }
       const path = String(run.settings.path);
+      if (run.name === "refresh-world-database") {
+        if (failed.length)
+          return { return_type: "settings",
+            status: "error",
+            settings: run.settings,
+            error: "Database refresh skipped because one or more beacon or project refreshes failed.",
+          };
+        return refreshDatabase(run.settings);
+      }
       if (run.name === "update-rab-world-json") {
         if (failed.length)
           return { return_type: "settings",

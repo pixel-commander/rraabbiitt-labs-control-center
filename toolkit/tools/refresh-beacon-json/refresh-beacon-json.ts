@@ -56,12 +56,13 @@ const findProjectRoot = async (start: string): Promise<string> => {
   const fallback = resolve(start);
   let folder = fallback;
   while (true) {
-    try {
-      if ((await stat(join(folder, "rab.project.json"))).isFile())
-        return folder;
-    } catch (error) {
-      const code = (error as NodeJS.ErrnoException).code;
-      if (code !== "ENOENT" && code !== "ENOTDIR") throw error;
+    for (const manifest of ["rab.world.json", "rab.project.json"]) {
+      try {
+        if ((await stat(join(folder, manifest))).isFile()) return folder;
+      } catch (error) {
+        const code = (error as NodeJS.ErrnoException).code;
+        if (code !== "ENOENT" && code !== "ENOTDIR") throw error;
+      }
     }
     const parent = dirname(folder);
     if (parent === folder) return fallback;
@@ -94,18 +95,21 @@ export const executeTool = async (settings: ToolsProps): Promise<ToolReturn> => 
         : await findProjectRoot(dirname(target));
     const files = await collectFiles(dirname(target));
     const paths: Array<PathsProps & Pick<ToolsProps, "tags">> = [];
-    for (const file of files) {
-      if (basename(file) !== "rab.settings.json") continue;
-      const { id, name, type, tags, file: entryFile } = await readRecord(file);
-      const entryPath = resolve(dirname(file));
-      const projectRelativePath = relative(projectRoot, entryPath);
+    const checkInside = (file: string) => {
+      const projectRelativePath = relative(projectRoot, resolve(dirname(file)));
       if (
         projectRelativePath === ".." ||
         projectRelativePath.startsWith(`..${sep}`) ||
         isAbsolute(projectRelativePath)
       ) {
-        throw new Error(`Settings file is outside the project root: ${file}`);
+        throw new Error(`Registered file is outside the project root: ${file}`);
       }
+    };
+    for (const file of files) {
+      if (basename(file) !== "rab.settings.json") continue;
+      const { id, name, type, tags, file: entryFile } = await readRecord(file);
+      const entryPath = resolve(dirname(file));
+      checkInside(file);
       paths.push({
         id,
         name,
@@ -114,6 +118,21 @@ export const executeTool = async (settings: ToolsProps): Promise<ToolReturn> => 
         path: entryPath.replaceAll("\\", "/"),
         file: entryFile === "rab.settings.json" ? undefined : entryFile,
       });
+    }
+    // Skills are registered too, so the manifest lists everything the catalog indexes.
+    for (const file of files) {
+      if (!file.endsWith(".skill.yaml")) continue;
+      checkInside(file);
+      const text = await readFile(file, "utf8");
+      const id = text.match(/^id:\s*(\d+)/m)?.[1];
+      const name = text.match(/^name:\s*["']?(.+?)["']?\s*$/m)?.[1];
+      paths.push({
+        id: id ? Number(id) : undefined,
+        name: name ?? basename(file, ".skill.yaml"),
+        type: "skill",
+        path: resolve(dirname(file)).replaceAll("\\", "/"),
+        file: basename(file),
+      } as PathsProps & Pick<ToolsProps, "tags">);
     }
     const updated: HouseKeys & PathsProps = {
       ...record,
@@ -157,7 +176,7 @@ export const run: UsageTool = async (settings) => {
     result = { return_type: "settings", status: "error", settings, error: error instanceof Error ? error.message : String(error) };
   }
   try {
-    const { finishToolUsage } = await import("../../../../api/tool-usage/finish-tool-usage.ts");
+    const { finishToolUsage } = await import("../../../api/tool-usage/finish-tool-usage.ts");
     return await finishToolUsage(1793981262996, settings, result);
   } catch (error) {
     return { ...result, error: [result.error, `Usage reporting failed: ${error instanceof Error ? error.message : String(error)}`].filter(Boolean).join("\n") };

@@ -5,8 +5,14 @@ import { resolve } from "node:path";
 import { pathToFileURL } from "node:url";
 const world = await loadWorld();
 const attachMcp = async server => {
-  const { createRequestHandler } = await import(pathToFileURL(resolve(world.path, world.mcp.path, world.mcp.file)).href);
+  const { createRequestHandler, warmSearch } = await import(pathToFileURL(resolve(world.path, world.mcp.path, world.mcp.file)).href);
   const handler = await createRequestHandler();
+  const warm_started = Date.now();
+  void warmSearch()
+    .then(result => result.status === "complete"
+      ? console.log(`Search ready in ${Math.round((Date.now() - warm_started) / 1000)} s.`)
+      : console.warn(`Search warm-up failed: ${result.error}`))
+    .catch(error => console.warn(`Search warm-up failed: ${error.message}`));
   server.middlewares.use((req, res, next) => {
     const pathname = new URL(req.url, "http://localhost").pathname;
     if (pathname !== "/mcp" && !pathname.startsWith("/api/")) return next();

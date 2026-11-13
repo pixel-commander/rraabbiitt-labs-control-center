@@ -47,6 +47,12 @@ export async function createRequestHandler() {
   return buildRequestHandler(await readWorld());
 }
 
+export async function warmSearch() {
+  const world = await readWorld();
+  const { warmProject } = await import("../../toolkit/hybrid-seat-ranking/tools/project-search.ts");
+  return warmProject({ query: "warm up", path: world.path });
+}
+
 async function buildRequestHandler(world) {
   const { host, port } = world.mcp;
   if (

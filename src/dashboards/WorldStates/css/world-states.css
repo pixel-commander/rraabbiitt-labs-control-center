@@ -1,0 +1,46 @@
+@layer components {
+  .world-states {
+    padding: var(--space-2xl);
+    gap: var(--space-xl);
+    min-block-size: 100%;
+  }
+  .world-states h1 { margin: 0; }
+  .world-states { position: relative; max-width: 1440px; margin-inline: auto; width: 100%; box-sizing: border-box; }
+  .world-states__muted { color: var(--color-muted); margin: 0; }
+  .world-states__metrics { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: var(--space-md); }
+  .world-states__metric { display: grid; gap: var(--space-md); border-top: 2px solid var(--color-primary); }
+  .world-states__metric span { font: var(--type-code); color: var(--color-muted); letter-spacing: .12em; }
+  .world-states__metric strong { font-size: clamp(2rem,4vw,3.5rem); font-weight: 500; font-variant-numeric: tabular-nums; }
+  .world-states__panel { --page-header-headline-size: 1.5rem; min-width: 0; padding: var(--space-xl); }
+  .world-states__legend { display: flex; gap: var(--space-lg); flex-wrap: wrap; font: var(--type-code); }
+  .world-states__legend span:first-child { color: var(--color-primary); }
+  .world-states__legend span:last-child { color: var(--status-success); }
+  .world-states__chart-scroll { overflow-x: auto; min-width: 0; }
+  .world-states__timeline { display: block; width: 100%; height: auto; }
+  .world-states__timeline text { fill: var(--color-muted); font: 11px monospace; }
+  .world-states__grid { stroke: var(--color-muted); stroke-opacity: .18; stroke-dasharray: 3 5; }
+  .world-states__calls { fill: var(--color-primary); }
+  .world-states__runs { fill: var(--status-success); }
+  .world-states__timeline rect:hover { opacity: .75; }
+  .world-states__bars { display: grid; gap: var(--space-lg); }
+  .world-states__bar-row { display: grid; grid-template-columns: minmax(180px, .8fr) minmax(80px, 2fr) 48px; gap: var(--space-lg); align-items: center; }
+  .world-states__tool-name { display: grid; gap: var(--space-xs); min-width: 0; overflow-wrap: anywhere; }
+  .world-states__tool-name strong { font-weight: 500; }
+  .world-states__tool-name code, .world-states__table td code { color: var(--color-muted); font-size: .8em; }
+  .world-states__track { height: 22px; background: var(--color-main-alt); border-radius: 3px; overflow: hidden; }
+  .world-states__track span { display: block; height: 100%; min-width: 2px; background: var(--color-primary); border-radius: inherit; }
+  .world-states__count { color: var(--color-primary); text-align: right; font-variant-numeric: tabular-nums; }
+  .world-states__table { width: 100%; border-collapse: collapse; text-align: left; }
+  .world-states__table th { color: var(--color-muted); font-weight: 400; font: var(--type-code); white-space: nowrap; }
+  .world-states__table th, .world-states__table td { padding: var(--space-md); border-bottom: 1px solid color-mix(in srgb, var(--color-muted) 20%, transparent); }
+  .world-states__table td { font-variant-numeric: tabular-nums; }
+  .world-states__table td code { display: block; margin-top: var(--space-xs); }
+  @media (max-width: 700px) {
+    .world-states { padding: var(--space-md); }
+    .world-states__metrics { grid-template-columns: repeat(2,minmax(0,1fr)); }
+    .world-states__panel { padding: var(--space-md); }
+    .world-states__bar-row { grid-template-columns: minmax(120px,1fr) minmax(60px,1fr) 30px; gap: var(--space-sm); }
+    .world-states .page-header { grid-template-columns: 1fr; }
+    .world-states .page-header-right { grid-column: 1; grid-row: 3; }
+  }
+}

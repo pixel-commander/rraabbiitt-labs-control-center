@@ -774,14 +774,14 @@
     },
     {
       "id": 1794535953418,
-      "name": "WorldAudit",
+      "name": "WorldStates",
       "type": "dashboard",
       "tags": [
         "react",
         "dashboard"
       ],
-      "path": "C:/rraabbiitt-labs-control-center/src/dashboards/WorldAudit",
-      "file": "WorldAudit.tsx"
+      "path": "C:/rraabbiitt-labs-control-center/src/dashboards/WorldStates",
+      "file": "WorldStates.tsx"
     },
     {
       "name": "dashboards folder",

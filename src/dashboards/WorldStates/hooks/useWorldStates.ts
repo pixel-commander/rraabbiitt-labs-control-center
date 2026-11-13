@@ -6,7 +6,7 @@ export interface AuditData {
   hours: { date: string; calls: number; runs: number }[];
   runs: { id: number; name: string; status: string; start: number | null; end: number | null; steps: number | null; warnings?: number }[];
 }
-export const useWorldAudit = () => {
+export const useWorldStates = () => {
   const [data, setData] = useState<AuditData | null>(null);
   const [error, setError] = useState("");
   useEffect(() => {

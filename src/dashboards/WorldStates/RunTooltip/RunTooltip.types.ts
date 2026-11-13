@@ -1,5 +1,5 @@
 import type { ReactNode, RefObject } from "react";
-import type { AuditData } from "../hooks/useWorldAudit";
+import type { AuditData } from "../hooks/useWorldStates";
 
 export interface RunTooltipProps<T extends Element> {
   run?: AuditData["runs"][number];

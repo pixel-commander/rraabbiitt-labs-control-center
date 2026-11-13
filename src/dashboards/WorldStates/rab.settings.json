@@ -1,0 +1,13 @@
+{
+  "id": 1794535953418,
+  "name": "WorldStates",
+  "title": "World States",
+  "description": "World States dashboard.",
+  "type": "dashboard",
+  "tags": [
+    "react",
+    "dashboard"
+  ],
+  "file": "WorldStates.tsx",
+  "path": "src/dashboards/WorldStates"
+}

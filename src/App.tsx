@@ -18,8 +18,8 @@ import type { VIEWProps } from "./App.types";
 import { HomePage } from "./pages/home/HomePage";
 import { StyleGuidePage } from "./pages/StyleGuide/StyleGuidePage";
 import { useURL } from "./hooks/useURL/useURL";
-import { WorldAudit } from "./dashboards/WorldAudit/WorldAudit";
-import worldAuditSettings from "./dashboards/WorldAudit/rab.settings.json";
+import { WorldStates } from "./dashboards/WorldStates/WorldStates";
+import worldStatesSettings from "./dashboards/WorldStates/rab.settings.json";
 import { RabbitHead } from "./components/RabbitHead/RabbitHead";
 import type { RabbitEffects } from "./components/RabbitHead/js/RabbitStage.jsx";
 import type { HybridSearchProps } from "./components/HybridSearch/HybridSearch.types";
@@ -31,7 +31,7 @@ export const App = () => {
     document.documentElement.dataset.theme = theme;
   }, [theme]);
   const VIEWS: VIEWProps[] = [
-    { id: worldAuditSettings.id, name: "world-audit", title: "World Audit", path: "world-audit", View: WorldAudit },
+    { id: worldStatesSettings.id, name: "world-states", title: "World States", path: "world-states", View: WorldStates },
     { id: dumBotSettings.id, name: "dumbot", title: "DumBot", path: "dumbot", View: DumBotPage },
     {
       id: worldSearchSettings.id,
@@ -94,7 +94,7 @@ export const App = () => {
         />
       </header>
       <main className="site-main" data-area="main">
-        <div className="page-rabbit-background" aria-hidden="true" hidden={page !== "dumbot" && page !== "world-search" && page !== "world-audit"}>
+        <div className="page-rabbit-background" aria-hidden="true" hidden={page !== "dumbot" && page !== "world-search" && page !== "world-states"}>
           <RabbitHead transparentBg interactive={false} followMouse autoMotion={false} wheelZoom={false}
             handleReady={(effects) => { rabbitEffects.current = effects ?? null; }}
             zoom={1} faceOpacity={0.1} lineOpacity={0.15}

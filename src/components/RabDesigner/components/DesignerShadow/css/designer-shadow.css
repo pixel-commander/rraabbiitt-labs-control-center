@@ -1,0 +1,28 @@
+.designer-shadow {
+  padding: 10px;
+  min-width: 0;
+}
+.designer-shadow header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+.designer-shadow label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+}
+.designer-shadow input[type="number"] {
+  width: 100%;
+  min-width: 0;
+}
+.designer-shadow input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+}
+.designer-shadow .designer-color-trigger {
+  width: 140px;
+}

@@ -1,0 +1,24 @@
+{
+  "name": "HelpIcon",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../SmartTooltip/SmartTooltip",
+      "path": "../SmartTooltip/SmartTooltip",
+      "type": "import",
+      "file": "HelpIcon.tsx"
+    },
+    {
+      "name": "../../HouseKeys.types",
+      "path": "../../HouseKeys.types",
+      "type": "import",
+      "file": "HelpIcon.types.ts"
+    },
+    {
+      "name": "../SmartTooltip/SmartTooltip.types",
+      "path": "../SmartTooltip/SmartTooltip.types",
+      "type": "import",
+      "file": "HelpIcon.types.ts"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+name: use-full-screen-wrapper
+type: skill
+path: src/components/FullScreenWrapper
+file: use.skill.yaml
+instructions: >-
+  Render FullScreenWrapper with children and title or heading. Supply controlled
+  full (default false) and handleChange(data, fullscreen, props); data is {full}.
+  The parent must apply the returned full value. actions and icon accept React
+  content. The toggle requests fullscreen or restore; Escape requests restore.
+  CSS fullscreen only, without browser fullscreen API, persistence or global state.

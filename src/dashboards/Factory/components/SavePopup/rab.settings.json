@@ -1,0 +1,36 @@
+{
+  "action_type": "use",
+  "id": 1794365959207,
+  "name": "SavePopup",
+  "title": "SavePopup",
+  "description": "",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "SavePopup.tsx",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/dashboards/Factory/components/SavePopup",
+  "paths": [
+    {
+      "name": "SavePopup.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "SavePopup.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "save-popup.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    }
+  ]
+}

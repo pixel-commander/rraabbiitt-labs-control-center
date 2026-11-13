@@ -1,0 +1,46 @@
+{
+  "action_type": "use",
+  "id": 1793993435709,
+  "name": "TreeItem",
+  "title": "TreeItem",
+  "description": "Recursive file or folder row for FolderTree.",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "TreeItem.tsx",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/FolderTree/TreeItem",
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "TreeItem.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "TreeItem.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "tree-item.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

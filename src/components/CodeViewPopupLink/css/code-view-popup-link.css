@@ -1,0 +1,11 @@
+@layer components {
+  .code-view-popup-link:disabled {
+    cursor: default;
+    opacity: 0.5;
+  }
+  .code-view-popup-link__window {
+    z-index: 10;
+    max-inline-size: calc(100% - 48px);
+    max-block-size: calc(100% - 48px);
+  }
+}

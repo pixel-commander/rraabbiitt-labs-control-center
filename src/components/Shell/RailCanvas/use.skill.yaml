@@ -1,0 +1,28 @@
+schema: 1
+intent: use
+owner:
+  id: 1793975199112
+  path: src/components/Shell/RailCanvas
+  file: rab.settings.json
+id: 1794004819793
+name: use RailCanvas
+title: Use RailCanvas
+description: Animated canvas frame rail with neon tubes, LEDs, and mechanical detailing.
+type: function
+path: C:\rraabbiitt-react-components\src\components\Shell\RailCanvas
+file: use.skill.yaml
+tags: []
+implementation:
+  - path: src/components/Shell/RailCanvas
+    file: RailCanvas.tsx
+context: []
+inputs: {}
+outputs: {}
+instructions: Read README.txt and RailCanvas.types.ts for the current contract. Render this
+  component with the props below. Application data and persistence remain with the caller. Preserve
+  supplied false, zero and empty-string values. Use theme/component tokens, supplied class props, or
+  parent CSS for UI overrides.
+checks: []
+examples: []
+routes: []
+provenance: []

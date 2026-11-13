@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "intent": "use",
+  "id": 1793156167379,
+  "name": "use-searchable-select",
+  "title": "Use SearchableSelect",
+  "description": "Select a record from a searchable list.",
+  "type": "skill",
+  "path": "src/components/SearchableSelect",
+  "file": "use.skill.yaml",
+  "owner":
+    {
+      "id": 1793156049058,
+      "path": "src/components/SearchableSelect/rab.settings.json",
+    },
+  "implementation":
+    [{ "path": "src/components/SearchableSelect/SearchableSelect.tsx" }],
+  "instructions": "Import SearchableSelect. Pass data as HouseKeys/PathsProps records, selected as the parent-owned selected record, and handleClick(data, type = searchable-select, props) using shared HandlerKey. On selection update selected in the parent; data is the selected record and props is the packed settings bag. Supply placeholder and label as needed. Search filters data locally unless handleChange is supplied; for remote search handleChange receives {query}, searchable-select, settings, and the parent replaces data and status. name optionally supplies a hidden form input containing the selected name. Pass children for the always-rendered footer. The header opens the search/list; selection or Escape closes it. No nested form is created. The wrapper is relative and the menu is absolute, so opening it never changes row height. The menu chooses above or below from available space within clipping ancestors and the viewport; no fixed positioning or popover is used. Outside pointer clicks also close it.",
+}

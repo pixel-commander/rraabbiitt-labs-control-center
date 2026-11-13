@@ -1,0 +1,36 @@
+{
+  "action_type": "list",
+  "id": 1794232180622,
+  "name": "generate-word-array-from-text",
+  "title": "Generate Word Array From Text",
+  "description": "Split text into words, removing special characters while preserving case, duplicates and order.",
+  "type": "function",
+  "tags": [
+    "words",
+    "text"
+  ],
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/WordGraphs/js/generate-word-array-from-text",
+  "file": "generate-word-array-from-text.ts",
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "generate-word-array-from-text.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

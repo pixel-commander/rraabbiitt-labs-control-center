@@ -1,0 +1,111 @@
+@layer components {
+  .grid-designer {
+    gap: var(--space-sm);
+    min-width: 0;
+    min-height: 0;
+    position: relative;
+    color: var(--grid-designer-color, var(--content-default));
+  }
+  .grid-designer fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+    gap: var(--space-sm);
+  }
+  .grid-designer label {
+    min-width: 0;
+  }
+  .grid-designer input,
+  .grid-designer select,
+  .grid-designer textarea {
+    width: 100%;
+    min-width: 0;
+    color: inherit;
+    background: var(--grid-designer-input-background, var(--surface-inset));
+    border: 1px solid var(--border-default);
+    padding: var(--space-xs);
+  }
+  .grid-designer__toolbar,
+  .grid-designer__tracks {
+    gap: var(--space-sm);
+  }
+  .grid-designer__viewport {
+    overflow: auto;
+    min-width: 0;
+    min-height: 0;
+  }
+  /* This leaf is the editable grid itself, not a competing page layout. */
+  .grid-designer__canvas {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    touch-action: none;
+    background: var(--grid-designer-background, var(--surface-inset));
+  }
+  .grid-designer__cell {
+    pointer-events: none;
+    border: 1px solid var(--grid-designer-line, var(--border-subtle));
+    min-width: 0;
+    min-height: 0;
+  }
+  .grid-designer__box {
+    position: relative;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+    cursor: move;
+    padding: var(--space-sm);
+  }
+  .grid-designer__box.is-selected {
+    outline: 2px solid var(--grid-designer-accent, var(--accent-secondary));
+    outline-offset: -2px;
+  }
+  .grid-designer__box input {
+    width: calc(100% - 2em);
+  }
+  .grid-designer__remove {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .grid-designer__resize {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 1em;
+    height: 1em;
+    padding: 0;
+    border: 0;
+    border-right: 3px solid var(--grid-designer-accent, var(--accent-secondary));
+    border-bottom: 3px solid
+      var(--grid-designer-accent, var(--accent-secondary));
+    background: transparent;
+    cursor: nwse-resize;
+  }
+  .grid-designer__draft {
+    pointer-events: none;
+    z-index: 1;
+    border: 2px dashed var(--grid-designer-accent, var(--accent-secondary));
+    background: color-mix(
+      in srgb,
+      var(--grid-designer-accent, var(--accent-secondary)) 15%,
+      transparent
+    );
+  }
+  .grid-designer__draft.is-blocked {
+    border-color: var(--danger-default);
+    background: var(--danger-soft);
+  }
+  .grid-designer__dialog {
+    position: fixed;
+    inset: 50% auto auto 50%;
+    transform: translate(-50%, -50%);
+    width: min(30rem, 90vw);
+    z-index: 100;
+    padding: var(--space-md);
+  }
+  .grid-designer__dialog form {
+    gap: var(--space-sm);
+  }
+}

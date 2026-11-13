@@ -1,0 +1,91 @@
+{
+  "action_type": "use",
+  "id": 1793975199132,
+  "name": "AppHeader",
+  "title": "AppHeader",
+  "description": "Application brand, page navigation, and user identity.",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "AppHeader.tsx",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/AppHeader",
+  "paths": [
+    {
+      "name": "AppHeader.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "NavItem.tsx",
+      "path": "NavItem",
+      "type": "tsx"
+    },
+    {
+      "name": "README.txt",
+      "path": "NavItem",
+      "type": "txt"
+    },
+    {
+      "name": "nav-item.css",
+      "path": "NavItem/css",
+      "type": "css"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "NavItem",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "NavItem",
+      "type": "yaml"
+    },
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "app-header.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "README.txt",
+      "path": "hooks/useProjectRefresh",
+      "type": "txt"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "hooks/useProjectRefresh",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "hooks/useProjectRefresh",
+      "type": "yaml"
+    },
+    {
+      "name": "useProjectRefresh.ts",
+      "path": "hooks/useProjectRefresh",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

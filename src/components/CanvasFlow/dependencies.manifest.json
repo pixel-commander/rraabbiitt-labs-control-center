@@ -1,0 +1,42 @@
+{
+  "name": "CanvasFlow",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../../HouseKeys.types",
+      "path": "../../HouseKeys.types",
+      "type": "import",
+      "file": "CanvasFlow.types.ts"
+    },
+    {
+      "name": "../../../Slider/Slider",
+      "path": "../Slider/Slider",
+      "type": "import",
+      "file": "components/ConnectorSettings/ConnectorSettings.tsx"
+    },
+    {
+      "name": "../../../SearchableSelect/SearchableSelect",
+      "path": "../SearchableSelect/SearchableSelect",
+      "type": "import",
+      "file": "components/ConnectorSettings/ConnectorSettings.tsx"
+    },
+    {
+      "name": "../../../../atoms/actions/action-main/action-main.css",
+      "path": "../../atoms/actions/action-main/action-main.css",
+      "type": "import",
+      "file": "components/ConnectorSettings/ConnectorSettings.tsx"
+    },
+    {
+      "name": "../../../../atoms/containers/container-cell/container-cell.css",
+      "path": "../../atoms/containers/container-cell/container-cell.css",
+      "type": "import",
+      "file": "components/ConnectorSettings/ConnectorSettings.tsx"
+    },
+    {
+      "name": "../../../../HouseKeys.types",
+      "path": "../../HouseKeys.types",
+      "type": "import",
+      "file": "components/ConnectorSettings/ConnectorSettings.types.ts"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "action_type": "use",
+  "id": 1793992769254,
+  "name": "MessageBubble",
+  "title": "MessageBubble",
+  "description": "Render MessageBubble with name, message and side (left or right).",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "MessageBubble.tsx",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/Chat/MessageBubble",
+  "paths": [
+    {
+      "name": "MessageBubble.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "MessageBubble.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "message-bubble.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

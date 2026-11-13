@@ -1,0 +1,68 @@
+{
+  "schema": 1,
+  "mode": "canvas",
+  "id": 1793358028958,
+  "title": "Layout absolute-position demo",
+  "children": [
+    {
+      "id": 1793358029222,
+      "title": "3 columns",
+      "type": "box",
+      "x": 40,
+      "y": 40,
+      "width": 640,
+      "height": 300,
+      "content": "",
+      "surface": "main",
+      "color": "default",
+      "fontSize": 16,
+      "children": [
+        {
+          "id": 1793358029223,
+          "title": "Cell 1",
+          "type": "box",
+          "x": 0,
+          "y": 0,
+          "width": 204.656,
+          "height": 298,
+          "content": "",
+          "surface": "main",
+          "color": "default",
+          "fontSize": 16,
+          "children": []
+        },
+        {
+          "id": 1793358029224,
+          "title": "Cell 2",
+          "type": "box",
+          "x": 216.65625,
+          "y": 0,
+          "width": 204.672,
+          "height": 298,
+          "content": "",
+          "surface": "main",
+          "color": "default",
+          "fontSize": 16,
+          "children": []
+        },
+        {
+          "id": 1793358029225,
+          "title": "Cell 3",
+          "type": "box",
+          "x": 433.328125,
+          "y": 0,
+          "width": 204.672,
+          "height": 298,
+          "content": "",
+          "surface": "main",
+          "color": "default",
+          "fontSize": 16,
+          "children": []
+        }
+      ],
+      "grid": "columns",
+      "cols": 3,
+      "rows": 3
+    }
+  ]
+}

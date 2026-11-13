@@ -1,0 +1,51 @@
+{
+  "action_type": "use",
+  "id": 1794025611586,
+  "name": "StateCell",
+  "title": "StateCell",
+  "description": "",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "StateCell.tsx",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/StatCells/components/StateCell",
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "StateCell.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "StateCell.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "state-cell.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+@layer components {
+  .folder-tree {
+    position: relative;
+    min-inline-size: var(--folder-tree-auto-width, 0px);
+  }
+  .folder-tree__items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+@layer components {
+  .folder-tree--measuring {
+    visibility: hidden;
+    inline-size: max-content;
+    min-inline-size: 0;
+  }
+  .folder-tree--measuring .folder-tree__row {
+    inline-size: max-content;
+  }
+  .folder-tree--measuring .tree-item__name {
+    white-space: nowrap;
+  }
+}

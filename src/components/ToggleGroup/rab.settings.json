@@ -1,0 +1,61 @@
+{
+  "action_type": "use",
+  "id": 1794335532351,
+  "name": "ToggleGroup",
+  "title": "ToggleGroup",
+  "description": "",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "ToggleGroup.tsx",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/ToggleGroup",
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "ToggleGroup.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "ToggleGroup.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "toggle-group.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": ".gitkeep",
+      "path": "demo",
+      "type": ""
+    },
+    {
+      "name": "Demo.tsx",
+      "path": "demo",
+      "type": "tsx"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

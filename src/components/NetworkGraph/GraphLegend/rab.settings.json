@@ -1,0 +1,46 @@
+{
+  "action_type": "use",
+  "id": 1793998504007,
+  "name": "GraphLegend",
+  "title": "GraphLegend",
+  "description": "Display graph group labels.",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "GraphLegend.tsx",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/NetworkGraph/GraphLegend",
+  "paths": [
+    {
+      "name": "GraphLegend.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "GraphLegend.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "graph-legend.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

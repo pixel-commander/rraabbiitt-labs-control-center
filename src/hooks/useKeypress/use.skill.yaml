@@ -1,0 +1,7 @@
+schema: 1
+intent: use
+name: useKeypress
+file: useKeypress.ts
+instructions: >
+  Call useKeypress({ key, callback }) at the top level of a React component or
+  hook. The callback receives the matching KeyboardEvent from document keydown.

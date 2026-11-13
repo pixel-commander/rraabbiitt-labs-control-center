@@ -1,0 +1,15 @@
+.component-factory-header > input[data-area="main"] {
+  box-sizing: border-box;
+  inline-size: 100%;
+  min-inline-size: 0;
+  padding: var(--space-xs) var(--space-sm);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-control);
+  background: var(--surface-inset);
+  color: var(--content-default);
+  font: inherit;
+}
+
+.component-factory-header > input:focus-visible {
+  outline: var(--focus-ring);
+}

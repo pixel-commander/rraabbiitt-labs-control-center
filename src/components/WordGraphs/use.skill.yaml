@@ -1,0 +1,5 @@
+schema: 1
+intent: use
+name: WordGraphs
+file: WordGraphs.tsx
+instructions: Render WordGraphs with words (optional string array) and optional className. Props extend HouseKeys. Counts exact strings, sorted by count descending with first-seen order for ties and displays horizontal bars and visible counts. No callbacks or internal state. See README.txt for theme tokens and CSS overrides.

@@ -1,0 +1,45 @@
+.connector-settings {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+.connector-settings > header,
+.connector-settings-body {
+  padding: var(--space-sm);
+}
+
+.connector-settings > header {
+  align-items: center;
+  background: var(--surface-float);
+}
+
+.connector-settings-body {
+  gap: var(--space-xs);
+}
+
+.connector-settings-body label {
+  align-items: center;
+}
+
+.connector-settings-body > label > input {
+  min-inline-size: 0;
+  background: var(--surface-inset);
+  color: var(--content-default);
+  border: var(--border-width) solid var(--border-default);
+  font: inherit;
+  padding: var(--space-xs);
+}
+
+.connector-settings-options > * {
+  display: inline-block;
+  margin: 0 var(--space-xs) var(--space-xs) 0;
+}
+
+.connector-settings .action-main {
+  font: inherit;
+  padding: var(--space-xs);
+}
+
+.connector-settings-controls {
+  gap: var(--space-xs);
+}

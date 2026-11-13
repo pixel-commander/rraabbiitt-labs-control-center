@@ -1,0 +1,33 @@
+@layer components {
+  .user-input {
+    min-inline-size: 0;
+  }
+  .user-input form {
+    gap: var(--space-sm);
+  }
+  .user-input input {
+    min-inline-size: 0;
+    padding: var(--space-sm);
+    color: var(--content-default);
+    background: var(--surface-inset);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-control);
+    font: inherit;
+  }
+  .user-input button {
+    padding: var(--space-sm) var(--space-md);
+    color: var(--content-default);
+    background: var(--surface-main);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-control);
+    font: inherit;
+    cursor: pointer;
+  }
+  .user-input :is(input, button):focus-visible {
+    outline: var(--focus-ring);
+  }
+  .user-input :disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+}

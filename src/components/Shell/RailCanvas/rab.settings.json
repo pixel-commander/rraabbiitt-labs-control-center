@@ -1,0 +1,41 @@
+{
+  "action_type": "use",
+  "id": 1793975199112,
+  "name": "RailCanvas",
+  "title": "RailCanvas",
+  "description": "Animated canvas frame rail with neon tubes, LEDs, and mechanical detailing.",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "RailCanvas.tsx",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/Shell/RailCanvas",
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "RailCanvas.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "RailCanvas.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

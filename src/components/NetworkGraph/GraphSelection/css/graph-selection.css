@@ -1,0 +1,8 @@
+@layer components {
+  .graph-selection {
+    min-inline-size: 0;
+  }
+  .graph-selection__path {
+    overflow-wrap: anywhere;
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "action_type": "use",
+  "id": 1793998504034,
+  "name": "GraphSearch",
+  "title": "GraphSearch",
+  "description": "Present graph search using the reusable SearchBar.",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "GraphSearch.tsx",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/NetworkGraph/GraphSearch",
+  "paths": [
+    {
+      "name": "GraphSearch.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "GraphSearch.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "graph-search.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

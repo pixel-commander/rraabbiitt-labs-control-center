@@ -1,0 +1,7 @@
+schema: 1
+intent: use
+name: ToggleGroup
+file: ToggleGroup.tsx
+instructions: >-
+  Pass items with id, path, label, and an optional Icon. Pass selected as the
+  active path and update it in handleClick. Supply title to label the group.

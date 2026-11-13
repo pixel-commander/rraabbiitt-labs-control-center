@@ -1,0 +1,7 @@
+.drag-sort-demo .drag-source {
+  opacity: 0.35;
+}
+.drag-sort-demo .drop-slot {
+  border: 1px dashed var(--accent-default);
+  background: var(--surface-inset);
+}

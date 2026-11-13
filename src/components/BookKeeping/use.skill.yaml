@@ -1,0 +1,7 @@
+schema: 1
+intent: use
+name: use-bookkeeping
+title: BookKeeping
+instructions: Read README.txt for props, callbacks and styling.
+implementation:
+  - file: BookKeeping.tsx

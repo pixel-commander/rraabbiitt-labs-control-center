@@ -1,0 +1,16 @@
+.component-factory-grid-dialog {
+  inline-size: min(42rem, 90vw);
+  max-block-size: 90vh;
+  padding: var(--space-md);
+  background: var(--surface-main);
+  color: var(--content-default);
+  border: 1px solid var(--border-default);
+}
+
+.component-factory-grid-dialog::backdrop {
+  background: var(--surface-scrim);
+}
+
+.component-factory-grid-draft {
+  block-size: min(24rem, 50vh);
+}

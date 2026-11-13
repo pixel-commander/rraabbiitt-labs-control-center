@@ -1,0 +1,10 @@
+schema: 1
+intent: use
+name: use TabNav
+title: Use TabNav
+description: Controlled tab navigation with labels, optional icons, and caller-owned selection.
+instructions: |
+  Read README.txt and TabNav.types.ts. Supply data records with id, path, label,
+  and optional Icon ReactNode. selected is a path. handleSelect receives the item,
+  tab-nav type, and complete props bag. Caller owns routing and selection.
+  Supply container_class and action_class for skin. Layout uses flex.

@@ -1,0 +1,46 @@
+{
+  "action_type": "use",
+  "id": 1793998444330,
+  "name": "GraphFootprint",
+  "title": "GraphFootprint",
+  "description": "Display supplied graph summary metrics.",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "GraphFootprint.tsx",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/NetworkGraph/GraphFootprint",
+  "paths": [
+    {
+      "name": "GraphFootprint.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "GraphFootprint.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "graph-footprint.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

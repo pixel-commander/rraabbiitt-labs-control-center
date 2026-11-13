@@ -1,0 +1,28 @@
+schema: 1
+intent: use
+owner:
+  id: 1794004818655
+  path: src/components/GridAreaSelect/hooks/useGridAreaSelect
+  file: rab.settings.json
+id: 1794004818666
+name: use useGridAreaSelect
+title: Use useGridAreaSelect
+description: "useGridAreaSelect: hook implementation. See README.txt for the exported contract and integration."
+type: function
+path: C:\rraabbiitt-react-components\src\components\GridAreaSelect\hooks\useGridAreaSelect
+file: use.skill.yaml
+tags: []
+implementation:
+  - path: src/components/GridAreaSelect/hooks/useGridAreaSelect
+    file: useGridAreaSelect.ts
+context: []
+inputs: {}
+outputs: {}
+instructions: Read README.txt and useGridAreaSelect.ts for the current contract. Call this hook at
+  the top level of a React component. Its implementation owns its interaction lifecycle. Preserve
+  supplied false, zero and empty-string values. Use theme/component tokens, supplied class props, or
+  parent CSS for UI overrides.
+checks: []
+examples: []
+routes: []
+provenance: []

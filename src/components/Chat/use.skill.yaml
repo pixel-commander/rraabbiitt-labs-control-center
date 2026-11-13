@@ -1,0 +1,19 @@
+schema: 1
+intent: use
+id: 1793992921651
+name: Chat
+path: src/components/Chat
+file: Chat.tsx
+owner:
+  id: 1793976288032
+  path: src/components/Chat
+  file: rab.settings.json
+implementation:
+  - path: src/components/Chat
+    file: Chat.tsx
+instructions: Render Chat with messages and optional handleSubmit, handleChange
+  and handleClick. Returns a main-footer layout with a bottom-aligned scrollable
+  message list and UserInput footer. Messages remain in supplied order. Input
+  callbacks receive {message} with user-input action; message clicks pass the
+  original record. No message creation, user conversion, network sending or
+  persistence. user equal to user is right; other users are left.

@@ -1,0 +1,26 @@
+@layer components {
+  .progress-bar {
+    min-inline-size: 0;
+  }
+  .progress-bar__track {
+    overflow: hidden;
+    block-size: var(--progress-bar-height, var(--space-sm));
+  }
+  .progress-bar__fill {
+    block-size: 100%;
+  }
+  .progress-bar__label {
+    margin-block-start: var(--space-xs);
+  }
+}
+
+@layer components {
+  .progress-track {
+    background: var(--surface-inset);
+    border-radius: var(--radius-control);
+  }
+  .progress-fill {
+    background: var(--progress-fill-background, var(--accent-secondary));
+    border-radius: inherit;
+  }
+}

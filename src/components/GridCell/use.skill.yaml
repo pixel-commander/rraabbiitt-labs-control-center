@@ -1,0 +1,9 @@
+schema: 1
+intent: use
+name: use-grid-cell
+title: Use GridCell
+description: Compose a grid cell with optional scrolling and outer padding.
+instructions: >-
+  Import GridCell. Choose styler (main, alt, inset, float, metal) and pass data_area, children,
+  padding and optional scroll. Parent owns dimensions. Import used atom styles
+  and the theme layout utilities. Padding applies only to the outer wrapper; callers style children.

@@ -1,0 +1,8 @@
+@layer components {
+  .graph-footprint {
+    min-inline-size: 0;
+  }
+  .graph-footprint dd {
+    margin-inline-start: 0;
+  }
+}

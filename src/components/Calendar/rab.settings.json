@@ -1,0 +1,76 @@
+{
+  "action_type": "use",
+  "id": 1793976288008,
+  "name": "Calendar",
+  "title": "Calendar",
+  "description": "Presentational calendar with month, multi-week and day views, date navigation, event selection and add-event callbacks. The caller owns selected date and view.",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "Calendar.tsx",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/Calendar",
+  "paths": [
+    {
+      "name": "Calendar.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "Calendar.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "calendar.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": "Demo.tsx",
+      "path": "demo",
+      "type": "tsx"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "README.txt",
+      "path": "hooks/useCalendar",
+      "type": "txt"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "hooks/useCalendar",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "hooks/useCalendar",
+      "type": "yaml"
+    },
+    {
+      "name": "useCalendar.ts",
+      "path": "hooks/useCalendar",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

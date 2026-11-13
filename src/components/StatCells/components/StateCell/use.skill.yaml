@@ -1,0 +1,7 @@
+schema: 1
+intent: use
+name: use-statecell
+title: StateCell
+instructions: Read README.txt for the props and styling contract.
+implementation:
+  - file: StateCell.tsx

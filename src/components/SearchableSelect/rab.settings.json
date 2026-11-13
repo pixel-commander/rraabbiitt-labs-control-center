@@ -1,0 +1,76 @@
+{
+  "action_type": "use",
+  "id": 1793156049058,
+  "name": "SearchableSelect",
+  "title": "Searchable select",
+  "description": "Selectable records with a searchable list and caller-owned footer.",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/SearchableSelect",
+  "file": "SearchableSelect.tsx",
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "SearchableSelect.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "SearchableSelect.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "searchable-select.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": "Demo.tsx",
+      "path": "demo",
+      "type": "tsx"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "README.txt",
+      "path": "hooks/useSearchableSelect",
+      "type": "txt"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "hooks/useSearchableSelect",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "hooks/useSearchableSelect",
+      "type": "yaml"
+    },
+    {
+      "name": "useSearchableSelect.ts",
+      "path": "hooks/useSearchableSelect",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

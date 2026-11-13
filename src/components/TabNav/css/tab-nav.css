@@ -1,0 +1,23 @@
+@layer components {
+  .tab-nav {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    align-items: center;
+    gap: var(--tab-nav-gap, var(--space-xs));
+    inline-size: max-content;
+    max-inline-size: 100%;
+    min-inline-size: 0;
+  }
+  .tab-nav > a {
+    flex-shrink: 0;
+    align-items: center;
+    gap: var(--tab-nav-icon-gap, var(--space-xs));
+    padding: var(--tab-nav-action-padding, var(--space-sm) var(--space-md));
+    text-decoration: none;
+  }
+  .tab-nav.container-cell { padding: var(--space-2xs); }
+  .tab-nav--full { inline-size: 100%; }
+  .tab-nav .nav-item-icon { grid-area: side; }
+  .tab-nav > a:not(:has(.nav-item-icon)) > .nav-item-label { grid-column: 1 / -1; }
+}

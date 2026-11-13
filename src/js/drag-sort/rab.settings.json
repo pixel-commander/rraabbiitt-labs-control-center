@@ -1,0 +1,51 @@
+{
+  "action_type": "move",
+  "id": 1794003953594,
+  "name": "drag-sort",
+  "title": "Drag sort",
+  "description": "Native drag sorting that reports reordered IDs without moving React-owned rows.",
+  "type": "function",
+  "tags": [
+    "javascript",
+    "interaction"
+  ],
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "Demo.tsx",
+      "path": "demo",
+      "type": "tsx"
+    },
+    {
+      "name": "demo.css",
+      "path": "demo",
+      "type": "css"
+    },
+    {
+      "name": "drag-sort.d.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "drag-sort.js",
+      "path": ".",
+      "type": "js"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ],
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/js/drag-sort",
+  "file": "drag-sort.js"
+}

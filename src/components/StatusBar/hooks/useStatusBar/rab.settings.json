@@ -1,0 +1,36 @@
+{
+  "action_type": "use",
+  "id": 1794000378912,
+  "name": "useStatusBar",
+  "title": "useStatusBar",
+  "description": "Toggle StatusBar visibility through a DOM ref and is-open class; manage delay, duration and manual close.",
+  "type": "hook",
+  "tags": [
+    "rab-world-v2",
+    "scaffold"
+  ],
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    },
+    {
+      "name": "useStatusBar.ts",
+      "path": ".",
+      "type": "ts"
+    }
+  ],
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/StatusBar/hooks/useStatusBar",
+  "file": "useStatusBar.ts"
+}

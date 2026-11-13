@@ -1,0 +1,7 @@
+schema: 1
+intent: use
+name: use-statcells
+title: StatCells
+instructions: Read README.txt for the props and styling contract.
+implementation:
+  - file: StatCells.tsx

@@ -1,0 +1,42 @@
+@layer components {
+  .star-ranking .action-star {
+    display: inline-block;
+    padding: var(--space-xs);
+  }
+  .star-ranking__row {
+    align-items: center;
+    padding-block: var(--space-sm);
+  }
+  .star-ranking__icon {
+    display: block;
+    inline-size: 1.25em;
+    block-size: 1.25em;
+  }
+  .star-ranking__total {
+    margin-block-start: var(--space-md);
+  }
+}
+
+@layer components {
+  .action-star {
+    color: var(--star-ranking-empty-color, var(--content-muted));
+    background: transparent;
+    border: 0;
+    border-radius: var(--radius-control);
+    cursor: pointer;
+  }
+  .action-star:hover {
+    background: var(--surface-hover);
+  }
+  .action-star:is(:active, .is-active) {
+    color: var(--star-ranking-color, var(--accent-secondary));
+    background: var(--surface-active);
+  }
+  .action-star:focus-visible {
+    outline: var(--focus-ring);
+    outline-offset: var(--focus-offset);
+  }
+  .action-star:disabled {
+    cursor: default;
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "action_type": "use",
+  "id": 1794021285493,
+  "name": "GridCell",
+  "title": "GridCell",
+  "description": "Stateless grid cell with container and cell classes, optional axis scrolling and padding on each wrapper.",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "GridCell.tsx",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/GridCell",
+  "paths": [
+    {
+      "name": "GridCell.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "GridCell.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "grid-cell.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": "Demo.tsx",
+      "path": "demo",
+      "type": "tsx"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

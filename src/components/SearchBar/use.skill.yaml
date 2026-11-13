@@ -1,0 +1,28 @@
+schema: 1
+intent: use
+owner:
+  id: 1793976287982
+  path: src/components/SearchBar
+  file: rab.settings.json
+id: 1794004819732
+name: use SearchBar
+title: Use SearchBar
+description: Search form with change and submit callbacks receiving the search value, type and complete props bag.
+type: function
+path: C:\rraabbiitt-react-components\src\components\SearchBar
+file: use.skill.yaml
+tags: []
+implementation:
+  - path: src/components/SearchBar
+    file: SearchBar.tsx
+context: []
+inputs: {}
+outputs: {}
+instructions: Read README.txt and SearchBar.types.ts for the current contract. Render this component
+  with the props below. Application data and persistence remain with the caller. Preserve supplied
+  false, zero and empty-string values. Use theme/component tokens, supplied class props, or parent
+  CSS for UI overrides.
+checks: []
+examples: []
+routes: []
+provenance: []

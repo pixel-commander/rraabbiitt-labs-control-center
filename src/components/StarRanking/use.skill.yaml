@@ -1,0 +1,11 @@
+name: use-star-ranking
+type: skill
+path: src/components/StarRanking
+file: use.skill.yaml
+instructions: >-
+  Render StarRanking with criteria as HouseKeys records having unique names, scores
+  keyed by criterion name, and optional max (default 5). Parent owns scores. The
+  handleChange(data, star-ranking, props) callback returns {criterion, value, total};
+  apply value to that criterion in the parent. Clicking the current score requests
+  zero. Scores are clamped integer values. disabled or readOnly prevents changes;
+  showTotal defaults true. No fetching, saving, routing or internal score state.

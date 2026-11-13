@@ -1,0 +1,49 @@
+.composition-slot-main-1 {
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 5;
+}
+
+.composition-slot-main-2 {
+  grid-row: 2 / span 3;
+  grid-column: 1 / span 3;
+}
+
+.composition-slot-main-3 {
+  grid-row: 2 / span 2;
+  grid-column: 4 / span 2;
+}
+
+.composition-slot-main-4 {
+  grid-row: 4 / span 1;
+  grid-column: 4 / span 2;
+}
+
+.testcomponent-shell {
+}
+
+.testcomponent-area-header {
+}
+
+.testcomponent-area-left {
+}
+
+.testcomponent-area-main {
+}
+
+.testcomponent-area-main_2f_1794367090071 {
+}
+
+.testcomponent-area-main_2f_1794367093965 {
+}
+
+.testcomponent-area-main_2f_1794367095623 {
+}
+
+.testcomponent-area-main_2f_1794367096527 {
+}
+
+.testcomponent-area-right {
+}
+
+.testcomponent-area-footer {
+}

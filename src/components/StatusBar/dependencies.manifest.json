@@ -1,0 +1,12 @@
+{
+  "name": "StatusBar",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../../HouseKeys.types",
+      "path": "../../HouseKeys.types",
+      "type": "import",
+      "file": "StatusBar.types.ts"
+    }
+  ]
+}

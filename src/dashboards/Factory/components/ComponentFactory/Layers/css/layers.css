@@ -1,0 +1,4 @@
+.component-factory-layers-pane > header {
+  border-bottom: 1px solid var(--border-default);
+}
+

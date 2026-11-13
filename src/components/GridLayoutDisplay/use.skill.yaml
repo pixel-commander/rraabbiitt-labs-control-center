@@ -1,0 +1,7 @@
+schema: 1
+intent: use
+name: GridLayoutDisplay
+file: GridLayoutDisplay.tsx
+instructions: >
+  Pass a registered grid name as selected. Handle grid-select to update the
+  selected grid in the parent. Load the shared grid and action styles.

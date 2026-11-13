@@ -1,0 +1,17 @@
+schema: 1
+intent: use
+id: 1794445359102
+name: ToggleSection
+owner:
+  id: 1794445359100
+implementation:
+  - id: 1794445359100
+instructions: >-
+  Use this component for content with a click-toggleable header.
+  Props are title (optional ReactNode), children (required ReactNode), footer
+  (optional ReactNode), container_class and header_class (both default to
+  container-main), and className (composed with toggle-section). The header
+  uses the side-right house grid, .pad-sm, and ChevronDown. The root receives
+  is-open or is-closed. Content is in a 300px maximum-height scrolling region;
+  the footer is inside that region after children. Override root/header skin
+  with the class props, theme tokens, or parent CSS.

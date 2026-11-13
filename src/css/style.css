@@ -8,6 +8,14 @@
     color: var(--color-main-alt-neg);
     font: var(--type-body);
   }
+  body {
+    background: radial-gradient(
+      ellipse at 24% 42%,
+      color-mix(in srgb, var(--color-primary) 10%, var(--color-main)) 0%,
+      color-mix(in srgb, var(--color-primary) 3%, var(--color-main)) 38%,
+      var(--color-main) 72%
+    );
+  }
   * {
     box-sizing: border-box;
     scrollbar-width: thin;
@@ -53,9 +61,6 @@
   }
 }
 @layer components {
-  .site-shell {
-    min-block-size: 100dvh;
-  }
 
   .site-theme {
     padding: var(--space-sm) var(--space-lg);

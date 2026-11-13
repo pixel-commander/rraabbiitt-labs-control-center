@@ -1,0 +1,28 @@
+schema: 1
+intent: use
+owner:
+  id: 1793998504034
+  path: src/components/NetworkGraph/GraphSearch
+  file: rab.settings.json
+id: 1794004818738
+name: use GraphSearch
+title: Use GraphSearch
+description: Present graph search using the reusable SearchBar.
+type: function
+path: C:\rraabbiitt-react-components\src\components\NetworkGraph\GraphSearch
+file: use.skill.yaml
+tags: []
+implementation:
+  - path: src/components/NetworkGraph/GraphSearch
+    file: GraphSearch.tsx
+context: []
+inputs: {}
+outputs: {}
+instructions: Read README.txt and GraphSearch.types.ts for the current contract. Render this
+  component with the props below. Application data and persistence remain with the caller. Preserve
+  supplied false, zero and empty-string values. Use theme/component tokens, supplied class props, or
+  parent CSS for UI overrides.
+checks: []
+examples: []
+routes: []
+provenance: []

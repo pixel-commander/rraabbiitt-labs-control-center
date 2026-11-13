@@ -1,0 +1,54 @@
+.grid-layout-display {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.grid-select-cell-button {
+  min-height: 75px;
+  inline-size: 100%;
+}
+
+.grid-select-cell {
+  gap: 0;
+}
+
+.grid-select-cell[data-grid="side-right"] {
+  grid-template-columns: minmax(0, 1fr) minmax(10px, 50px);
+}
+
+.grid-select-cell[data-grid="holy-grail"] {
+  grid-template-columns: minmax(10px, 50px) minmax(0, 1fr) minmax(10px, 50px);
+}
+
+@media (width > 768px) {
+  .grid-select-cell[data-grid="side-left"] {
+    grid-template-columns: minmax(10px, 50px) minmax(0, 1fr);
+  }
+
+  .grid-select-cell[data-grid="side-cols"] {
+    grid-template-columns: minmax(10px, 50px) minmax(0, 1fr) minmax(10px, 50px);
+  }
+}
+
+.grid-select-cell > [data-area] {
+  padding: 0.125em;
+}
+
+.grid-select-cell-inner {
+  border: 1px dotted;
+  border-radius: 3px;
+}
+
+.grid-select-cell > [data-area="main"] > .grid-select-cell-inner {
+  border-color: var(--success-default);
+}
+
+.grid-select-cell > :is([data-area="side"], [data-area="left"], [data-area="right"]) > .grid-select-cell-inner {
+  border-color: var(--accent-secondary);
+}
+
+.grid-select-cell > :is([data-area="header"], [data-area="footer"]) > .grid-select-cell-inner {
+  min-height: 10px;
+  border-color: var(--accent-default);
+}

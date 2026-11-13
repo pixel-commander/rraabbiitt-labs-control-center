@@ -1,0 +1,18 @@
+schema: 1
+intent: use
+id: 1793992921679
+name: Messages
+path: src/components/Chat/Messages
+file: Messages.tsx
+owner:
+  id: 1793992769280
+  path: src/components/Chat/Messages
+  file: rab.settings.json
+implementation:
+  - path: src/components/Chat/Messages
+    file: Messages.tsx
+instructions: "Render Messages with messages: ChatMessage[]. Each record
+  contains id, user (text), message, optional name, status (sent/read) and date.
+  Returns a MessageBubble for each record in array order. user equal to user is
+  left; other users are right. handleClick receives the original record. No data
+  conversion or storage."

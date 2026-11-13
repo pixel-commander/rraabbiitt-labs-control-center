@@ -1,0 +1,101 @@
+{
+  "action_type": "use",
+  "id": 1794231393813,
+  "name": "WordGraphs",
+  "title": "WordGraphs",
+  "description": "",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "WordGraphs.tsx",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/WordGraphs",
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "WordGraphs.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "WordGraphs.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "word-graphs.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": ".gitkeep",
+      "path": "demo",
+      "type": ""
+    },
+    {
+      "name": "Demo.tsx",
+      "path": "demo",
+      "type": "tsx"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "README.txt",
+      "path": "js/generate-word-array-from-text",
+      "type": "txt"
+    },
+    {
+      "name": "generate-word-array-from-text.ts",
+      "path": "js/generate-word-array-from-text",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "js/generate-word-array-from-text",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "js/generate-word-array-from-text",
+      "type": "yaml"
+    },
+    {
+      "name": "README.txt",
+      "path": "js/get-words-from-settings",
+      "type": "txt"
+    },
+    {
+      "name": "get-words-from-settings.ts",
+      "path": "js/get-words-from-settings",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "js/get-words-from-settings",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "js/get-words-from-settings",
+      "type": "yaml"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+@layer components {
+  .graph-search {
+    min-inline-size: 0;
+  }
+}

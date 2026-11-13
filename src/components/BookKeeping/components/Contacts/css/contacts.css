@@ -1,0 +1,51 @@
+.contacts {
+  gap: var(--space-md);
+  padding: var(--space-md);
+}
+
+.contacts-sidebar,
+.contacts-detail {
+  padding: var(--space-md);
+}
+
+.contacts h2,
+.contacts h3 {
+  margin-block: 0 var(--space-sm);
+}
+
+.contacts-sidebar header > button {
+  margin-block-end: var(--space-sm);
+}
+
+.contacts-scroll {
+  min-height: 0;
+  overflow: auto;
+}
+
+.contacts-scroll ul {
+  padding: 0;
+  list-style: none;
+}
+
+.contacts-scroll li + li {
+  margin-block-start: var(--space-xs);
+}
+
+.contacts-scroll li > button {
+  inline-size: 100%;
+  text-align: start;
+}
+
+.contacts-detail dl {
+  margin-block: var(--space-md);
+}
+
+.contacts-detail dt {
+  color: var(--content-muted, var(--content-default));
+  font-size: 0.8em;
+}
+
+.contacts-detail dd {
+  margin: 0 0 var(--space-sm);
+  overflow-wrap: anywhere;
+}

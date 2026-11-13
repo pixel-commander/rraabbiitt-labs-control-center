@@ -1,0 +1,67 @@
+{
+  "action_type": "use",
+  "id": 1793996465668,
+  "name": "StarRanking",
+  "title": "StarRanking",
+  "description": "Controlled criterion star scores with configurable maximum, clear-on-repeat selection and derived total.",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "StarRanking.tsx",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/StarRanking",
+  "source_report_id": 1793899448959,
+  "paths": [
+    {
+      "name": "README.md",
+      "path": ".",
+      "type": "md"
+    },
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "StarRanking.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "StarRanking.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "star-ranking.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": ".gitkeep",
+      "path": "demo",
+      "type": ""
+    },
+    {
+      "name": "Demo.tsx",
+      "path": "demo",
+      "type": "tsx"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

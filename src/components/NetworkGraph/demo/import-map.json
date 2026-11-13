@@ -1,0 +1,290 @@
+{
+  "components": [
+    {
+      "id": 1793899448873,
+      "name": "AvatarStack",
+      "path": "C:\\Users\\pixelcommander\\Desktop\\convert-for-reuse\\components\\AvatarStack",
+      "type": ".tsx",
+      "description": "React component",
+      "source": "components",
+      "imports": [1793899448876, 1793899448881]
+    },
+    {
+      "id": 1793899448874,
+      "name": "Card",
+      "path": "C:\\Users\\pixelcommander\\Desktop\\convert-for-reuse\\components\\Card",
+      "type": ".tsx",
+      "description": "React component",
+      "source": "components",
+      "imports": [
+        1793899448876, 1793899448884, 1793899448889, 1793899449037,
+        1793899449057
+      ]
+    },
+    {
+      "id": 1793899448875,
+      "name": "DBSearchMultiTable",
+      "path": "C:\\Users\\pixelcommander\\Desktop\\convert-for-reuse\\components\\DBSearchMultiTable",
+      "type": ".tsx",
+      "description": "React component",
+      "source": "components",
+      "imports": [1793899448892, 1793899448894, 1793899448901, 1793899449060]
+    },
+    {
+      "id": 1793899448876,
+      "name": "DBSearchWidget",
+      "path": "C:\\Users\\pixelcommander\\Desktop\\convert-for-reuse\\components\\DBSearchWidget",
+      "type": ".tsx",
+      "description": "React component",
+      "source": "components",
+      "imports": [1793899448897, 1793899448899, 1793899449060]
+    },
+    {
+      "id": 1793899448877,
+      "name": "DropLoader",
+      "path": "C:\\Users\\pixelcommander\\Desktop\\convert-for-reuse\\components\\DropLoader",
+      "type": ".tsx",
+      "description": "React component",
+      "source": "components",
+      "imports": [
+        1793899448884, 1793899448902, 1793899448904, 1793899448909,
+        1793899448982, 1793899448990, 1793899448998, 1793899449037,
+        1793899449048, 1793899449083
+      ]
+    },
+    {
+      "id": 1793899448878,
+      "name": "FullScreenWrapper",
+      "path": "C:\\Users\\pixelcommander\\Desktop\\convert-for-reuse\\components\\FullScreenWrapper",
+      "type": ".tsx",
+      "description": "React component",
+      "source": "components",
+      "imports": [1793899448911, 1793899448914]
+    },
+    {
+      "id": 1793899448879,
+      "name": "GlowPanel",
+      "path": "C:\\Users\\pixelcommander\\Desktop\\convert-for-reuse\\components\\GlowPanel",
+      "type": ".tsx",
+      "description": "React component",
+      "source": "components",
+      "imports": [1793899448917, 1793899448922]
+    },
+    {
+      "id": 1793899448880,
+      "name": "GridAreaSelect",
+      "path": "C:\\Users\\pixelcommander\\Desktop\\convert-for-reuse\\components\\GridAreaSelect",
+      "type": ".tsx",
+      "description": "React component",
+      "source": "components",
+      "imports": [1793899448924, 1793899448926, 1793899448928, 1793899448932]
+    },
+    {
+      "id": 1793899448881,
+      "name": "IdeaAdd",
+      "path": "C:\\Users\\pixelcommander\\Desktop\\convert-for-reuse\\components\\IdeaAdd",
+      "type": ".tsx",
+      "description": "React component",
+      "source": "components",
+      "imports": []
+    },
+    {
+      "id": 1793899448882,
+      "name": "IdeaCard",
+      "path": "C:\\Users\\pixelcommander\\Desktop\\convert-for-reuse\\components\\IdeaCard",
+      "type": ".tsx",
+      "description": "React component",
+      "source": "components",
+      "imports": []
+    },
+    {
+      "id": 1793899448883,
+      "name": "IdeaChat",
+      "path": "C:\\Users\\pixelcommander\\Desktop\\convert-for-reuse\\components\\IdeaChat",
+      "type": ".tsx",
+      "description": "React component",
+      "source": "components",
+      "imports": []
+    },
+    {
+      "id": 1793899448884,
+      "name": "Interactive",
+      "path": "C:\\Users\\pixelcommander\\Desktop\\convert-for-reuse\\components\\Interactive",
+      "type": ".tsx",
+      "description": "React component",
+      "source": "components",
+      "imports": []
+    }
+  ],
+  "files": [
+    {
+      "id": 1793899448876,
+      "file": "AvatarStack.tsx",
+      "path": "C:\\Users\\pixelcommander\\Desktop\\convert-for-reuse\\components\\AvatarStack\\AvatarStack.tsx",
+      "ext": ".tsx"
+    },
+    {
+      "id": 1793899448881,
+      "file": "avatar-stack.css",
+      "path": "C:\\Users\\pixelcommander\\Desktop\\convert-for-reuse\\components\\AvatarStack\\avatar-stack.css",
+      "ext": ".css"
+    },
+    {
+      "id": 1793899448884,
+      "file": "Card.tsx",
+      "path": "C:\\Users\\pixelcommander\\Desktop\\convert-for-reuse\\components\\Card\\Card.tsx",
+      "ext": ".tsx"
+    },
+    {
+      "id": 1793899448889,
+      "file": "card.css",
+      "path": "C:\\Users\\pixelcommander\\Desktop\\convert-for-reuse\\components\\Card\\card.css",
+      "ext": ".css"
+    },
+    {
+      "id": 1793899449037,
+      "file": "ProgressBar.tsx",
+      "path": "C:\\Users\\pixelcommander\\Desktop\\convert-for-reuse\\components\\ProgressBar\\ProgressBar.tsx",
+      "ext": ".tsx"
+    },
+    {
+      "id": 1793899449057,
+      "file": "SearchBox.tsx",
+      "path": "C:\\Users\\pixelcommander\\Desktop\\convert-for-reuse\\components\\SearchBox\\SearchBox.tsx",
+      "ext": ".tsx"
+    },
+    {
+      "id": 1793899448892,
+      "file": "DBSearchMultiTable.tsx",
+      "path": "C:\\Users\\pixelcommander\\Desktop\\convert-for-reuse\\components\\DBSearchMultiTable\\DBSearchMultiTable.tsx",
+      "ext": ".tsx"
+    },
+    {
+      "id": 1793899448894,
+      "file": "db-search-multi-table.css",
+      "path": "C:\\Users\\pixelcommander\\Desktop\\convert-for-reuse\\components\\DBSearchMultiTable\\db-search-multi-table.css",
+      "ext": ".css"
+    },
+    {
+      "id": 1793899448901,
+      "file": "index.ts",
+      "path": "C:\\Users\\pixelcommander\\Desktop\\convert-for-reuse\\components\\DBSearchWidget\\index.ts",
+      "ext": ".ts"
+    },
+    {
+      "id": 1793899449060,
+      "file": "index.ts",
+      "path": "C:\\Users\\pixelcommander\\Desktop\\convert-for-reuse\\components\\SearchBox\\index.ts",
+      "ext": ".ts"
+    },
+    {
+      "id": 1793899448897,
+      "file": "DBSearchWidget.tsx",
+      "path": "C:\\Users\\pixelcommander\\Desktop\\convert-for-reuse\\components\\DBSearchWidget\\DBSearchWidget.tsx",
+      "ext": ".tsx"
+    },
+    {
+      "id": 1793899448899,
+      "file": "db-search-widget.css",
+      "path": "C:\\Users\\pixelcommander\\Desktop\\convert-for-reuse\\components\\DBSearchWidget\\db-search-widget.css",
+      "ext": ".css"
+    },
+    {
+      "id": 1793899448902,
+      "file": "DropLoader.tsx",
+      "path": "C:\\Users\\pixelcommander\\Desktop\\convert-for-reuse\\components\\DropLoader\\DropLoader.tsx",
+      "ext": ".tsx"
+    },
+    {
+      "id": 1793899448904,
+      "file": "DropTrigger.tsx",
+      "path": "C:\\Users\\pixelcommander\\Desktop\\convert-for-reuse\\components\\DropLoader\\DropTrigger.tsx",
+      "ext": ".tsx"
+    },
+    {
+      "id": 1793899448909,
+      "file": "drop-loader.css",
+      "path": "C:\\Users\\pixelcommander\\Desktop\\convert-for-reuse\\components\\DropLoader\\drop-loader.css",
+      "ext": ".css"
+    },
+    {
+      "id": 1793899448982,
+      "file": "Message.tsx",
+      "path": "C:\\Users\\pixelcommander\\Desktop\\convert-for-reuse\\components\\Message\\Message.tsx",
+      "ext": ".tsx"
+    },
+    {
+      "id": 1793899448990,
+      "file": "MessageInfoBar.tsx",
+      "path": "C:\\Users\\pixelcommander\\Desktop\\convert-for-reuse\\components\\MessageInfoBar\\MessageInfoBar.tsx",
+      "ext": ".tsx"
+    },
+    {
+      "id": 1793899448998,
+      "file": "MessageInput.tsx",
+      "path": "C:\\Users\\pixelcommander\\Desktop\\convert-for-reuse\\components\\MessageInput\\MessageInput.tsx",
+      "ext": ".tsx"
+    },
+    {
+      "id": 1793899449048,
+      "file": "RailItem.tsx",
+      "path": "C:\\Users\\pixelcommander\\Desktop\\convert-for-reuse\\components\\RailItem\\RailItem.tsx",
+      "ext": ".tsx"
+    },
+    {
+      "id": 1793899449083,
+      "file": "Sortable.tsx",
+      "path": "C:\\Users\\pixelcommander\\Desktop\\convert-for-reuse\\components\\Sortable\\Sortable.tsx",
+      "ext": ".tsx"
+    },
+    {
+      "id": 1793899448911,
+      "file": "FullScreenWrapper.tsx",
+      "path": "C:\\Users\\pixelcommander\\Desktop\\convert-for-reuse\\components\\FullScreenWrapper\\FullScreenWrapper.tsx",
+      "ext": ".tsx"
+    },
+    {
+      "id": 1793899448914,
+      "file": "full-screen-wrapper.css",
+      "path": "C:\\Users\\pixelcommander\\Desktop\\convert-for-reuse\\components\\FullScreenWrapper\\full-screen-wrapper.css",
+      "ext": ".css"
+    },
+    {
+      "id": 1793899448917,
+      "file": "GlowPanel.tsx",
+      "path": "C:\\Users\\pixelcommander\\Desktop\\convert-for-reuse\\components\\GlowPanel\\GlowPanel.tsx",
+      "ext": ".tsx"
+    },
+    {
+      "id": 1793899448922,
+      "file": "glow-panel.css",
+      "path": "C:\\Users\\pixelcommander\\Desktop\\convert-for-reuse\\components\\GlowPanel\\glow-panel.css",
+      "ext": ".css"
+    },
+    {
+      "id": 1793899448924,
+      "file": "GridAreaCell.tsx",
+      "path": "C:\\Users\\pixelcommander\\Desktop\\convert-for-reuse\\components\\GridAreaSelect\\GridAreaCell.tsx",
+      "ext": ".tsx"
+    },
+    {
+      "id": 1793899448926,
+      "file": "GridAreaPositionsAndSizes.tsx",
+      "path": "C:\\Users\\pixelcommander\\Desktop\\convert-for-reuse\\components\\GridAreaSelect\\GridAreaPositionsAndSizes.tsx",
+      "ext": ".tsx"
+    },
+    {
+      "id": 1793899448928,
+      "file": "GridAreaSelect.tsx",
+      "path": "C:\\Users\\pixelcommander\\Desktop\\convert-for-reuse\\components\\GridAreaSelect\\GridAreaSelect.tsx",
+      "ext": ".tsx"
+    },
+    {
+      "id": 1793899448932,
+      "file": "PropsPasser.tsx",
+      "path": "C:\\Users\\pixelcommander\\Desktop\\convert-for-reuse\\components\\GridAreaSelect\\deps\\PropsPasser\\PropsPasser.tsx",
+      "ext": ".tsx"
+    }
+  ],
+  "generated": 1793899449473
+}

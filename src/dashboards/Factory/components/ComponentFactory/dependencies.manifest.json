@@ -1,0 +1,204 @@
+{
+  "name": "ComponentFactory",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../../../../components/GridLayoutDisplay/GridLayoutDisplay.types",
+      "path": "../../../../components/GridLayoutDisplay/GridLayoutDisplay.types",
+      "type": "import",
+      "file": "Canvas.tsx"
+    },
+    {
+      "name": "../../../../components/TabNav/TabNav",
+      "path": "../../../../components/TabNav/TabNav",
+      "type": "import",
+      "file": "CodePreview.tsx"
+    },
+    {
+      "name": "../../../../hooks/useKeypress/useKeypress",
+      "path": "../../../../hooks/useKeypress/useKeypress",
+      "type": "import",
+      "file": "ComponentFactory.tsx"
+    },
+    {
+      "name": "../../../../HouseKeys.types",
+      "path": "../../../../HouseKeys.types",
+      "type": "import",
+      "file": "ComponentFactory.types.ts"
+    },
+    {
+      "name": "../../../../components/GridLayoutDisplay/GridLayoutDisplay.types",
+      "path": "../../../../components/GridLayoutDisplay/GridLayoutDisplay.types",
+      "type": "import",
+      "file": "ComponentFactory.types.ts"
+    },
+    {
+      "name": "../../../../components/GridAreaSelect/GridAreaSelect.types",
+      "path": "../../../../components/GridAreaSelect/GridAreaSelect.types",
+      "type": "import",
+      "file": "ComponentFactory.types.ts"
+    },
+    {
+      "name": "../../../../components/TabNav/TabNav.types",
+      "path": "../../../../components/TabNav/TabNav.types",
+      "type": "import",
+      "file": "ComponentFactory.types.ts"
+    },
+    {
+      "name": "../../../../../HouseKeys.types",
+      "path": "../../../../HouseKeys.types",
+      "type": "import",
+      "file": "Elements/Elements.types.ts"
+    },
+    {
+      "name": "../../../../../components/ToggleGroup/ToggleGroup",
+      "path": "../../../../components/ToggleGroup/ToggleGroup",
+      "type": "import",
+      "file": "Footer/Footer.tsx"
+    },
+    {
+      "name": "../../../../../components/GridAreaSelect/GridAreaSelect",
+      "path": "../../../../components/GridAreaSelect/GridAreaSelect",
+      "type": "import",
+      "file": "GridAreaSelectPopup/GridAreaSelectPopup.tsx"
+    },
+    {
+      "name": "../../../../../HouseKeys.types",
+      "path": "../../../../HouseKeys.types",
+      "type": "import",
+      "file": "GridAreaSelectPopup/GridAreaSelectPopup.types.ts"
+    },
+    {
+      "name": "../../../../components/GridLayoutDisplay/GridLayoutDisplay",
+      "path": "../../../../components/GridLayoutDisplay/GridLayoutDisplay",
+      "type": "import",
+      "file": "GridCol.tsx"
+    },
+    {
+      "name": "../../../../../../components/RabDesigner/js/document",
+      "path": "../../../../components/RabDesigner/js/document",
+      "type": "import",
+      "file": "hooks/useComponentFactory/useComponentFactory.ts"
+    },
+    {
+      "name": "../../../../../../components/GridLayoutDisplay/GridLayoutDisplay.types",
+      "path": "../../../../components/GridLayoutDisplay/GridLayoutDisplay.types",
+      "type": "import",
+      "file": "hooks/useComponentFactory/useComponentFactory.ts"
+    },
+    {
+      "name": "../../../../../../components/GridLayoutDisplay/GridLayoutDisplay.types",
+      "path": "../../../../components/GridLayoutDisplay/GridLayoutDisplay.types",
+      "type": "import",
+      "file": "hooks/useComponentFactory/useComponentFactory.ts"
+    },
+    {
+      "name": "../../../../../../components/GridAreaSelect/GridAreaSelect.types",
+      "path": "../../../../components/GridAreaSelect/GridAreaSelect.types",
+      "type": "import",
+      "file": "hooks/useComponentFactory/useComponentFactory.ts"
+    },
+    {
+      "name": "../../../../../components/GridLayoutDisplay/GridLayoutDisplay.types",
+      "path": "../../../../components/GridLayoutDisplay/GridLayoutDisplay.types",
+      "type": "import",
+      "file": "js/compositionCode.ts"
+    },
+    {
+      "name": "../../../../../components/GridLayoutDisplay/GridLayoutDisplay.types",
+      "path": "../../../../components/GridLayoutDisplay/GridLayoutDisplay.types",
+      "type": "import",
+      "file": "js/gridSlots.ts"
+    },
+    {
+      "name": "../../../../../icons/CodeChevrons",
+      "path": "../../../../icons/CodeChevrons",
+      "type": "import",
+      "file": "Layers/Layers.tsx"
+    },
+    {
+      "name": "../../../../../components/FolderTree/FolderTree",
+      "path": "../../../../components/FolderTree/FolderTree",
+      "type": "import",
+      "file": "Layers/Layers.tsx"
+    },
+    {
+      "name": "../../../../../components/FolderTree/FolderTree.types",
+      "path": "../../../../components/FolderTree/FolderTree.types",
+      "type": "import",
+      "file": "Layers/Layers.tsx"
+    },
+    {
+      "name": "../../../../../components/GridLayoutDisplay/GridLayoutDisplay.types",
+      "path": "../../../../components/GridLayoutDisplay/GridLayoutDisplay.types",
+      "type": "import",
+      "file": "Layers/Layers.tsx"
+    },
+    {
+      "name": "../../../../../HouseKeys.types",
+      "path": "../../../../HouseKeys.types",
+      "type": "import",
+      "file": "Layers/Layers.types.ts"
+    },
+    {
+      "name": "../../../../../components/TabNav/TabNav",
+      "path": "../../../../components/TabNav/TabNav",
+      "type": "import",
+      "file": "SettingsCol/SettingsCol.tsx"
+    },
+    {
+      "name": "../../../../HouseKeys.types",
+      "path": "../../../../HouseKeys.types",
+      "type": "import",
+      "file": "SizeFields.tsx"
+    },
+    {
+      "name": "../../../../icons/PaddingSideIcon",
+      "path": "../../../../icons/PaddingSideIcon",
+      "type": "import",
+      "file": "SizeFields.tsx"
+    },
+    {
+      "name": "../../../../icons/RadiusIcon",
+      "path": "../../../../icons/RadiusIcon",
+      "type": "import",
+      "file": "SizeFields.tsx"
+    },
+    {
+      "name": "../../../../icons/PositionIcon",
+      "path": "../../../../icons/PositionIcon",
+      "type": "import",
+      "file": "StyleCol.tsx"
+    },
+    {
+      "name": "../../../../../components/DropdownButton/DropdownButton",
+      "path": "../../../../components/DropdownButton/DropdownButton",
+      "type": "import",
+      "file": "Stylers/Stylers.tsx"
+    },
+    {
+      "name": "../../../../../components/DropdownButton/DropdownButton.types",
+      "path": "../../../../components/DropdownButton/DropdownButton.types",
+      "type": "import",
+      "file": "Stylers/Stylers.tsx"
+    },
+    {
+      "name": "../../../../../icons/FillIcon",
+      "path": "../../../../icons/FillIcon",
+      "type": "import",
+      "file": "Stylers/Stylers.tsx"
+    },
+    {
+      "name": "../../../../../icons/RadiusIcon",
+      "path": "../../../../icons/RadiusIcon",
+      "type": "import",
+      "file": "Stylers/Stylers.tsx"
+    },
+    {
+      "name": "../../../../../icons/StrokeIcon",
+      "path": "../../../../icons/StrokeIcon",
+      "type": "import",
+      "file": "Stylers/Stylers.tsx"
+    }
+  ]
+}

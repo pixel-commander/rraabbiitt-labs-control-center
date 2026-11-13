@@ -1,0 +1,31 @@
+{
+  "action_type": "use",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/BookKeeping/components/Contacts/hooks/useContacts",
+  "title": "Contact search state",
+  "name": "useContacts",
+  "id": 1794025260714,
+  "type": "hook",
+  "file": "useContacts.ts",
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    },
+    {
+      "name": "useContacts.ts",
+      "path": ".",
+      "type": "ts"
+    }
+  ]
+}

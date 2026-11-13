@@ -1,0 +1,40 @@
+{
+  "action_type": "use",
+  "id": 1793330731383,
+  "name": "DesignerComposition",
+  "title": "DesignerComposition",
+  "description": "",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/RabDesigner/components/DesignerComposition",
+  "paths": [
+    {
+      "name": "DesignerComposition.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "DesignerComposition.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "designer-composition.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": "useDesignerComposition.ts",
+      "path": "hooks",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    }
+  ]
+}

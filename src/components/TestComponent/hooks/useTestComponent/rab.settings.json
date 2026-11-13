@@ -1,0 +1,36 @@
+{
+  "action_type": "use",
+  "id": 1794367187481,
+  "name": "useTestComponent",
+  "title": "useTestComponent",
+  "description": "",
+  "type": "hook",
+  "tags": [
+    "react",
+    "hook"
+  ],
+  "file": "useTestComponent.ts",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/TestComponent/hooks/useTestComponent",
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    },
+    {
+      "name": "useTestComponent.ts",
+      "path": ".",
+      "type": "ts"
+    }
+  ]
+}

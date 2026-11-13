@@ -1,0 +1,14 @@
+schema: 1
+intent: use
+name: HelpIcon
+title: Help Icon
+path: src/components/HelpIcon
+file: HelpIcon.tsx
+description: Borderless question-mark help control with a built-in, viewport-aware SmartTooltip.
+instructions: >-
+  Place HelpIcon next to a setting label and provide content with a short
+  explanation. The tooltip follows the pointer and adapts its placement to the
+  viewport. Plain string content is also included in the trigger's accessible
+  name. Use title for an optional tooltip heading, label for an accessible name,
+  placement to choose the preferred tooltip side, and className to customize the
+  trigger. Styling uses theme tokens and the .help-icon class.

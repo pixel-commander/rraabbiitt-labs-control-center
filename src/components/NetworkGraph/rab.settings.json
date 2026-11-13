@@ -1,0 +1,211 @@
+{
+  "action_type": "use",
+  "id": 1793998444287,
+  "name": "NetworkGraph",
+  "title": "Network graph",
+  "description": "Display connected nodes with controlled selection and click callbacks.",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "NetworkGraph.tsx",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/NetworkGraph",
+  "paths": [
+    {
+      "name": "GraphFootprint.tsx",
+      "path": "GraphFootprint",
+      "type": "tsx"
+    },
+    {
+      "name": "GraphFootprint.types.ts",
+      "path": "GraphFootprint",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": "GraphFootprint",
+      "type": "txt"
+    },
+    {
+      "name": "graph-footprint.css",
+      "path": "GraphFootprint/css",
+      "type": "css"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "GraphFootprint",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "GraphFootprint",
+      "type": "yaml"
+    },
+    {
+      "name": "GraphLegend.tsx",
+      "path": "GraphLegend",
+      "type": "tsx"
+    },
+    {
+      "name": "GraphLegend.types.ts",
+      "path": "GraphLegend",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": "GraphLegend",
+      "type": "txt"
+    },
+    {
+      "name": "graph-legend.css",
+      "path": "GraphLegend/css",
+      "type": "css"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "GraphLegend",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "GraphLegend",
+      "type": "yaml"
+    },
+    {
+      "name": "GraphSearch.tsx",
+      "path": "GraphSearch",
+      "type": "tsx"
+    },
+    {
+      "name": "GraphSearch.types.ts",
+      "path": "GraphSearch",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": "GraphSearch",
+      "type": "txt"
+    },
+    {
+      "name": "graph-search.css",
+      "path": "GraphSearch/css",
+      "type": "css"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "GraphSearch",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "GraphSearch",
+      "type": "yaml"
+    },
+    {
+      "name": "GraphSelection.tsx",
+      "path": "GraphSelection",
+      "type": "tsx"
+    },
+    {
+      "name": "GraphSelection.types.ts",
+      "path": "GraphSelection",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": "GraphSelection",
+      "type": "txt"
+    },
+    {
+      "name": "graph-selection.css",
+      "path": "GraphSelection/css",
+      "type": "css"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "GraphSelection",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "GraphSelection",
+      "type": "yaml"
+    },
+    {
+      "name": "NetworkGraph.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "NetworkGraph.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "network-graph.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": ".gitkeep",
+      "path": "demo",
+      "type": ""
+    },
+    {
+      "name": "Demo.tsx",
+      "path": "demo",
+      "type": "tsx"
+    },
+    {
+      "name": "demo.css",
+      "path": "demo",
+      "type": "css"
+    },
+    {
+      "name": "import-map.json",
+      "path": "demo",
+      "type": "json"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "README.txt",
+      "path": "hooks/useNetworkGraph",
+      "type": "txt"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "hooks/useNetworkGraph",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "hooks/useNetworkGraph",
+      "type": "yaml"
+    },
+    {
+      "name": "useNetworkGraph.ts",
+      "path": "hooks/useNetworkGraph",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "action_type": "edit",
+  "id": 1794003953633,
+  "name": "resize-columns",
+  "title": "Resize columns",
+  "description": "Resize left and right grid columns through refs, CSS variables and a HouseKeys callback.",
+  "type": "function",
+  "tags": [
+    "javascript",
+    "interaction"
+  ],
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "Demo.tsx",
+      "path": "demo",
+      "type": "tsx"
+    },
+    {
+      "name": "demo.css",
+      "path": "demo",
+      "type": "css"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "resize-columns.d.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "resize-columns.js",
+      "path": ".",
+      "type": "js"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ],
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/js/resize-columns",
+  "file": "resize-columns.js"
+}

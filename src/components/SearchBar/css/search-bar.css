@@ -1,0 +1,24 @@
+@layer components {
+  .search-bar {
+    padding: var(--space-2xs);
+  }
+  .search-bar__input {
+    min-inline-size: 0;
+    inline-size: 100%;
+    padding: var(--space-sm) var(--space-md);
+    color: inherit;
+    background: transparent;
+    border: 0;
+  }
+  .search-bar__icon {
+    align-items: center;
+    padding-inline-start: var(--space-sm);
+  }
+  .search-bar__input:focus-visible {
+    outline: var(--focus-ring);
+    outline-offset: calc(-1 * var(--border-width));
+  }
+  .search-bar__submit {
+    padding: var(--space-sm) var(--space-md);
+  }
+}

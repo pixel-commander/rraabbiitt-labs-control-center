@@ -1,0 +1,71 @@
+{
+  "action_type": "use",
+  "id": 1793976288020,
+  "name": "StatelesssForm",
+  "title": "StatelesssForm",
+  "description": "Presentational StatelesssForm component placeholder. Accepts HouseKeys props; no internal processing.",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "StatelesssForm.tsx",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/StatelesssForm",
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "StatelesssForm.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "StatelesssForm.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "statelesss-form.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "README.txt",
+      "path": "hooks/useStatelesssForm",
+      "type": "txt"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "hooks/useStatelesssForm",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "hooks/useStatelesssForm",
+      "type": "yaml"
+    },
+    {
+      "name": "useStatelesssForm.ts",
+      "path": "hooks/useStatelesssForm",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

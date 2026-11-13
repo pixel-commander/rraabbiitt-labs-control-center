@@ -1,0 +1,22 @@
+@layer components {
+  .full-screen-wrapper {
+    min-inline-size: 0;
+    min-block-size: 0;
+  }
+  .full-screen-wrapper.is-full {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+  }
+  .full-screen-wrapper__body {
+    position: relative;
+    min-block-size: 0;
+  }
+  .full-screen-wrapper__body > .scroll-y {
+    max-block-size: 100%;
+  }
+  .full-screen-wrapper.is-full .full-screen-wrapper__body > .scroll-y {
+    position: absolute;
+    inset: 0;
+  }
+}

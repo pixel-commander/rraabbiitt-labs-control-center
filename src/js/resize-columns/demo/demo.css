@@ -1,0 +1,26 @@
+.resize-columns-demo > [data-area="left"] {
+  width: var(--left-w, 6rem);
+  position: relative;
+}
+.resize-columns-demo > [data-area="right"] {
+  width: var(--right-w, 6rem);
+  position: relative;
+}
+.resize-columns-demo [data-resize] {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  cursor: col-resize;
+  touch-action: none;
+  background: var(--border-default);
+}
+.resize-columns-demo [data-resize="left"] {
+  right: 0;
+}
+.resize-columns-demo [data-resize="right"] {
+  left: 0;
+}
+.resize-columns-demo [data-resize]:hover {
+  background: var(--accent-default);
+}

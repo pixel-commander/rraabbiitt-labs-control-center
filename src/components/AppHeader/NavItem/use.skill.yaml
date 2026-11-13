@@ -1,0 +1,28 @@
+schema: 1
+intent: use
+owner:
+  id: 1793975199150
+  path: src/components/AppHeader/NavItem
+  file: rab.settings.json
+id: 1794004818133
+name: use NavItem
+title: Use NavItem
+description: Header navigation button with current-page state and an optional badge.
+type: function
+path: C:\rraabbiitt-react-components\src\components\AppHeader\NavItem
+file: use.skill.yaml
+tags: []
+implementation:
+  - path: src/components/AppHeader/NavItem
+    file: NavItem.tsx
+context: []
+inputs: {}
+outputs: {}
+instructions: Read README.txt and NavItem.tsx for the current contract. Render this component with
+  the props below. Application data and persistence remain with the caller. Preserve supplied false,
+  zero and empty-string values. Use theme/component tokens, supplied class props, or parent CSS for
+  UI overrides.
+checks: []
+examples: []
+routes: []
+provenance: []

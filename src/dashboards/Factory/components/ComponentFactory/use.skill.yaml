@@ -1,0 +1,7 @@
+schema: 1
+intent: use
+name: ComponentFactory
+file: ComponentFactory.tsx
+instructions: >
+  Render the editor in a bounded grid region. Supply handleSubmit to save the
+  current composition and handleClick for the other header actions.

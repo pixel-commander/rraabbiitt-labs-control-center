@@ -1,0 +1,81 @@
+{
+  "action_type": "use",
+  "id": 1794025080193,
+  "name": "Contacts",
+  "title": "Contacts",
+  "description": "",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "Contacts.tsx",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/BookKeeping/components/Contacts",
+  "paths": [
+    {
+      "name": "Contacts.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "Contacts.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "contacts.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": "Demo.tsx",
+      "path": "demo",
+      "type": "tsx"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "README.txt",
+      "path": "hooks/useContacts",
+      "type": "txt"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "hooks/useContacts",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "hooks/useContacts",
+      "type": "yaml"
+    },
+    {
+      "name": "useContacts.ts",
+      "path": "hooks/useContacts",
+      "type": "ts"
+    },
+    {
+      "name": "contact-fields.ts",
+      "path": "js",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

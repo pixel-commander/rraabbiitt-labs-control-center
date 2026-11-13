@@ -1,0 +1,166 @@
+{
+  "action_type": "use",
+  "id": 1793976288032,
+  "name": "Chat",
+  "title": "Chat",
+  "description": "Render Chat with messages and optional handleSubmit, handleChange and handleClick.",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "Chat.tsx",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/Chat",
+  "paths": [
+    {
+      "name": "Chat.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "Chat.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "MessageBubble.tsx",
+      "path": "MessageBubble",
+      "type": "tsx"
+    },
+    {
+      "name": "MessageBubble.types.ts",
+      "path": "MessageBubble",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": "MessageBubble",
+      "type": "txt"
+    },
+    {
+      "name": "message-bubble.css",
+      "path": "MessageBubble/css",
+      "type": "css"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "MessageBubble",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "MessageBubble",
+      "type": "yaml"
+    },
+    {
+      "name": "Messages.tsx",
+      "path": "Messages",
+      "type": "tsx"
+    },
+    {
+      "name": "Messages.types.ts",
+      "path": "Messages",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": "Messages",
+      "type": "txt"
+    },
+    {
+      "name": "messages.css",
+      "path": "Messages/css",
+      "type": "css"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "Messages",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "Messages",
+      "type": "yaml"
+    },
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "README.txt",
+      "path": "UserInput",
+      "type": "txt"
+    },
+    {
+      "name": "UserInput.tsx",
+      "path": "UserInput",
+      "type": "tsx"
+    },
+    {
+      "name": "UserInput.types.ts",
+      "path": "UserInput",
+      "type": "ts"
+    },
+    {
+      "name": "user-input.css",
+      "path": "UserInput/css",
+      "type": "css"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "UserInput",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "UserInput",
+      "type": "yaml"
+    },
+    {
+      "name": "chat.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": "Demo.tsx",
+      "path": "demo",
+      "type": "tsx"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "README.txt",
+      "path": "hooks/useChat",
+      "type": "txt"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "hooks/useChat",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "hooks/useChat",
+      "type": "yaml"
+    },
+    {
+      "name": "useChat.ts",
+      "path": "hooks/useChat",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

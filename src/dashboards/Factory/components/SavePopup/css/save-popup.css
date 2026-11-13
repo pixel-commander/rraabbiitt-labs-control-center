@@ -1,0 +1,76 @@
+.save-popup {
+  inline-size: min(32rem, 90vw);
+  max-block-size: 90vh;
+  padding: var(--space-md);
+  background: var(--surface-float);
+  color: var(--content-default);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-container);
+}
+
+.save-popup::backdrop {
+  background: var(--surface-scrim);
+}
+
+.save-popup fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.save-popup label {
+  display: block;
+  margin-block-end: var(--space-sm);
+  text-transform: capitalize;
+}
+
+.save-popup :is(input, select) {
+  display: block;
+  box-sizing: border-box;
+  inline-size: 100%;
+  padding: var(--space-xs) var(--space-sm);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-control);
+  background: var(--surface-inset);
+  color: var(--content-default);
+  font: inherit;
+}
+
+.save-popup--saved {
+  inline-size: min(50rem, 90vw);
+}
+
+.save-popup__saved {
+  min-block-size: 16rem;
+}
+
+.save-popup__files {
+  max-inline-size: 24rem;
+  max-block-size: 24rem;
+  overflow: auto;
+  padding: var(--space-sm);
+  border-inline-end: 1px solid var(--border-subtle);
+}
+
+.save-popup__success {
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  text-align: center;
+}
+
+.save-popup__success > svg {
+  color: var(--success-default);
+  font-size: 3rem;
+}
+
+.save-popup__saving {
+  padding: var(--space-xl);
+  text-align: center;
+}
+
+.save-popup__close {
+  text-align: end;
+}

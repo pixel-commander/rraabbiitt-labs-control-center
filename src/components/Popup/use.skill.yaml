@@ -1,0 +1,12 @@
+name: use-popup
+type: skill
+path: src/components/Popup
+file: use.skill.yaml
+instructions: >-
+  Pass value containing mode (docked, floating, fullscreen) and rect
+  (x,y,width,height pixels). Parent applies handleChange(next,type,props).
+  Types are move, resize, snap, fullscreen, restore. Dragging docked lifts
+  into a viewport-clamped floating window; dropping over its seat snaps back.
+  canDrag, canResize and canFullscreen default true. title, actions, children,
+  className and HouseKeys are accepted. Fullscreen is CSS, no browser API.
+  No data fetching, routing, persistence, dismissal policy or application state.

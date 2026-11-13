@@ -1,0 +1,33 @@
+schema: 1
+intent: use
+owner:
+  id: 1794003953633
+  file: rab.settings.json
+id: 1794003953640
+name: use resize-columns
+title: Use Resize columns
+description: Resize left and right grid columns through refs, CSS variables and a
+  HouseKeys callback.
+type: function
+file: use.skill.yaml
+tags: []
+implementation:
+- file: resize-columns.js
+context: []
+inputs: {}
+outputs: {}
+instructions: Import resizeColumns from resize-columns.js and call resizeColumns(ref,
+  props) after mount; return cleanup from the effect. Put data-resize="left" or "right"
+  on grips inside the root and apply touch-action:none to grips. grip_selector defaults
+  to [data-resize]. The root must be a grid with resolved pixel tracks. Consume --left-w
+  and --right-w on the corresponding side elements; house sides grid retains layout
+  ownership. Widths are rem units, clamped by min_rem=6 and max_rem=34. handleChange({
+  side, width }, "resize-columns", props) reports each move. One primary pointer is
+  accepted; release, cancel, lost capture, blur and cleanup detach active listeners
+  and restore interaction styles. Final width CSS variables remain on the root.
+checks: []
+examples: []
+routes: []
+provenance:
+- file: resize-columns.js
+  description: User supplied reference; adapted for local contracts and cleanup.

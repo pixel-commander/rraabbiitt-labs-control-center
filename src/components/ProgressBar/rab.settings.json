@@ -1,0 +1,67 @@
+{
+  "action_type": "use",
+  "id": 1793996465599,
+  "name": "ProgressBar",
+  "title": "ProgressBar",
+  "description": "Controlled progress fill with automatic fraction/percent interpretation, explicit scale, clamping and optional labels.",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "ProgressBar.tsx",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/ProgressBar",
+  "source_report_id": 1793899448893,
+  "paths": [
+    {
+      "name": "ProgressBar.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "ProgressBar.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "README.md",
+      "path": ".",
+      "type": "md"
+    },
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "progress-bar.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": ".gitkeep",
+      "path": "demo",
+      "type": ""
+    },
+    {
+      "name": "Demo.tsx",
+      "path": "demo",
+      "type": "tsx"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

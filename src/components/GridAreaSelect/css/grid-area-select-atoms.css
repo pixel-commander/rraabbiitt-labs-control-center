@@ -1,0 +1,17 @@
+@layer atoms {
+  .grid-area-select__cell {
+    border: 1px solid var(--border-subtle);
+  }
+  .grid-area-select__area--selected {
+    outline: 2px solid var(--accent-secondary);
+    outline-offset: -2px;
+  }
+  .grid-area-select__preview {
+    border: 2px solid var(--accent-secondary);
+    background: color-mix(in srgb, var(--accent-secondary) 20%, transparent);
+  }
+  .grid-area-select__preview--blocked {
+    border-color: var(--danger-default);
+    background: color-mix(in srgb, var(--danger-default) 20%, transparent);
+  }
+}

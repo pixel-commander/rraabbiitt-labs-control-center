@@ -1,0 +1,67 @@
+{
+  "action_type": "use",
+  "id": 1793996465632,
+  "name": "FullScreenWrapper",
+  "title": "FullScreenWrapper",
+  "description": "Controlled title/actions/content shell with CSS fullscreen and restore requests.",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "FullScreenWrapper.tsx",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/FullScreenWrapper",
+  "source_report_id": 1793899448878,
+  "paths": [
+    {
+      "name": "FullScreenWrapper.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "FullScreenWrapper.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "README.md",
+      "path": ".",
+      "type": "md"
+    },
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "full-screen-wrapper.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": ".gitkeep",
+      "path": "demo",
+      "type": ""
+    },
+    {
+      "name": "Demo.tsx",
+      "path": "demo",
+      "type": "tsx"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

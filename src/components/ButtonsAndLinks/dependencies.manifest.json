@@ -1,0 +1,12 @@
+{
+  "name": "ButtonsAndLinks",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../../HouseKeys.types",
+      "path": "../../HouseKeys.types",
+      "type": "import",
+      "file": "ButtonsAndLinks.types.ts"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "action_type": "use",
+  "id": 1793329533687,
+  "name": "DesignerCanvas",
+  "title": "DesignerCanvas",
+  "description": "",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/RabDesigner/components/DesignerCanvas",
+  "paths": [
+    {
+      "name": "DesignerCanvas.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "DesignerCanvas.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "designer-canvas.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": "useDesignerCanvas.ts",
+      "path": "hooks",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    }
+  ]
+}

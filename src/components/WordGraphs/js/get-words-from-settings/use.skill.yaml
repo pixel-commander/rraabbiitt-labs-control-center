@@ -1,0 +1,8 @@
+schema: 1
+intent: use
+id: 1794231709076
+name: get-words-from-settings
+title: Get Words From Settings
+owner:
+  id: 1794231709075
+instructions: Pass parsed JSON to getWordsFromSettings(settings). Returns string[] from top-level name, title, description and path only. Special characters split words; Unicode letters, numbers and marks remain. Preserves case and duplicates. No file access or nested traversal.

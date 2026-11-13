@@ -1,0 +1,126 @@
+{
+  "action_type": "use",
+  "id": 1794029448242,
+  "name": "CanvasFlow",
+  "title": "CanvasFlow",
+  "description": "",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "CanvasFlow.tsx",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/CanvasFlow",
+  "paths": [
+    {
+      "name": "CanvasFlow.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "CanvasFlow.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "ConnectorSettings.tsx",
+      "path": "components/ConnectorSettings",
+      "type": "tsx"
+    },
+    {
+      "name": "ConnectorSettings.types.ts",
+      "path": "components/ConnectorSettings",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": "components/ConnectorSettings",
+      "type": "txt"
+    },
+    {
+      "name": "connector-settings.css",
+      "path": "components/ConnectorSettings/css",
+      "type": "css"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": "components/ConnectorSettings",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "components/ConnectorSettings",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "components/ConnectorSettings",
+      "type": "yaml"
+    },
+    {
+      "name": "canvas-flow.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": "Demo.tsx",
+      "path": "demo",
+      "type": "tsx"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "README.txt",
+      "path": "hooks/useCanvasFlow",
+      "type": "txt"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "hooks/useCanvasFlow",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "hooks/useCanvasFlow",
+      "type": "yaml"
+    },
+    {
+      "name": "useCanvasFlow.ts",
+      "path": "hooks/useCanvasFlow",
+      "type": "ts"
+    },
+    {
+      "name": "flow-connectors.js",
+      "path": "js",
+      "type": "js"
+    },
+    {
+      "name": "flow-renderer.d.ts",
+      "path": "js",
+      "type": "ts"
+    },
+    {
+      "name": "flow-renderer.js",
+      "path": "js",
+      "type": "js"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

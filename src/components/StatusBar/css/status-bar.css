@@ -1,0 +1,30 @@
+@layer components {
+  .status-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: min-content;
+    min-inline-size: 0;
+    overflow: hidden;
+  }
+  .status-bar__message {
+    min-inline-size: 0;
+    align-items: center;
+    transform: translateY(-100%);
+    visibility: hidden;
+    transition:
+      transform 200ms ease,
+      visibility 0s linear 200ms;
+  }
+  .status-bar.is-open > .status-bar__message {
+    transform: translateY(0);
+    visibility: visible;
+    transition-delay: 0s;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .status-bar__message {
+      transition: none;
+    }
+  }
+}

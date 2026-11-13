@@ -1,0 +1,81 @@
+{
+  "action_type": "use",
+  "id": 1794014886047,
+  "name": "DatePicker",
+  "title": "DatePicker",
+  "description": "Controlled numeric date selection with a month popover.",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "DatePicker.tsx",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/DatePicker",
+  "paths": [
+    {
+      "name": "DatePicker.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "DatePicker.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "date-picker.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": ".gitkeep",
+      "path": "demo",
+      "type": ""
+    },
+    {
+      "name": "Demo.tsx",
+      "path": "demo",
+      "type": "tsx"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "README.txt",
+      "path": "hooks/useDatePicker",
+      "type": "txt"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "hooks/useDatePicker",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "hooks/useDatePicker",
+      "type": "yaml"
+    },
+    {
+      "name": "useDatePicker.ts",
+      "path": "hooks/useDatePicker",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

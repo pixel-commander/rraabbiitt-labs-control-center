@@ -1,0 +1,46 @@
+{
+  "action_type": "use",
+  "id": 1793992769280,
+  "name": "Messages",
+  "title": "Messages",
+  "description": "Render Messages with messages: ChatMessage[].",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "Messages.tsx",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/Chat/Messages",
+  "paths": [
+    {
+      "name": "Messages.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "Messages.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "messages.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

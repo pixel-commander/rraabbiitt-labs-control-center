@@ -1,0 +1,7 @@
+schema: 1
+intent: use
+name: use-canvas-flow-hook
+title: CanvasFlow interaction
+instructions: Pass CanvasFlow props and attach the returned ref and pointer handlers to the canvas.
+implementation:
+  - file: useCanvasFlow.ts

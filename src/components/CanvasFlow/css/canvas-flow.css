@@ -1,0 +1,18 @@
+.canvas-flow {
+  --board: #12161f;
+  --card: #171c27;
+  --ink: #e8eaf0;
+  --dim: #8792a6;
+  --line: #232a38;
+  --safe: #4a9eff;
+  --danger: #d4635a;
+  --ok: #17c98a;
+  --warn: #d8a24a;
+  --shade: rgba(0, 0, 0, 0.35);
+  --mono: var(--font-mono, monospace);
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  cursor: crosshair;
+  touch-action: none;
+}

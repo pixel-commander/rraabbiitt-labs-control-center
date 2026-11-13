@@ -1,0 +1,72 @@
+{
+  "name": "BookKeeping",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../../HouseKeys.types",
+      "path": "../../HouseKeys.types",
+      "type": "import",
+      "file": "BookKeeping.types.ts"
+    },
+    {
+      "name": "../../../../atoms/actions/action-main/action-main.css",
+      "path": "../../atoms/actions/action-main/action-main.css",
+      "type": "import",
+      "file": "components/Contacts/Contacts.tsx"
+    },
+    {
+      "name": "../../../Calendar/Calendar",
+      "path": "../Calendar/Calendar",
+      "type": "import",
+      "file": "components/Contacts/Contacts.tsx"
+    },
+    {
+      "name": "../../../SearchBar/SearchBar",
+      "path": "../SearchBar/SearchBar",
+      "type": "import",
+      "file": "components/Contacts/Contacts.tsx"
+    },
+    {
+      "name": "../../../StatelesssForm/StatelesssForm",
+      "path": "../StatelesssForm/StatelesssForm",
+      "type": "import",
+      "file": "components/Contacts/Contacts.tsx"
+    },
+    {
+      "name": "../../../../HouseKeys.types",
+      "path": "../../HouseKeys.types",
+      "type": "import",
+      "file": "components/Contacts/Contacts.types.ts"
+    },
+    {
+      "name": "../../../Calendar/Calendar.types",
+      "path": "../Calendar/Calendar.types",
+      "type": "import",
+      "file": "components/Contacts/Contacts.types.ts"
+    },
+    {
+      "name": "../../../SearchableSelect/SearchableSelect",
+      "path": "../SearchableSelect/SearchableSelect",
+      "type": "import",
+      "file": "components/Expenses/Expenses.tsx"
+    },
+    {
+      "name": "../../../StatCells/StatCells",
+      "path": "../StatCells/StatCells",
+      "type": "import",
+      "file": "components/Expenses/Expenses.tsx"
+    },
+    {
+      "name": "../../../../atoms/actions/action-main/action-main.css",
+      "path": "../../atoms/actions/action-main/action-main.css",
+      "type": "import",
+      "file": "components/Expenses/Expenses.tsx"
+    },
+    {
+      "name": "../../../../HouseKeys.types",
+      "path": "../../HouseKeys.types",
+      "type": "import",
+      "file": "components/Expenses/Expenses.types.ts"
+    }
+  ]
+}

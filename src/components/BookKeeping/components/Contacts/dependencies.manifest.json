@@ -1,0 +1,54 @@
+{
+  "name": "Contacts",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../../../../atoms/actions/action-main/action-main.css",
+      "path": "../../../../atoms/actions/action-main/action-main.css",
+      "type": "import",
+      "file": "Contacts.tsx"
+    },
+    {
+      "name": "../../../Calendar/Calendar",
+      "path": "../../../Calendar/Calendar",
+      "type": "import",
+      "file": "Contacts.tsx"
+    },
+    {
+      "name": "../../../SearchBar/SearchBar",
+      "path": "../../../SearchBar/SearchBar",
+      "type": "import",
+      "file": "Contacts.tsx"
+    },
+    {
+      "name": "../../../StatelesssForm/StatelesssForm",
+      "path": "../../../StatelesssForm/StatelesssForm",
+      "type": "import",
+      "file": "Contacts.tsx"
+    },
+    {
+      "name": "../Expenses/Expenses",
+      "path": "../Expenses/Expenses",
+      "type": "import",
+      "file": "Contacts.tsx"
+    },
+    {
+      "name": "../../../../HouseKeys.types",
+      "path": "../../../../HouseKeys.types",
+      "type": "import",
+      "file": "Contacts.types.ts"
+    },
+    {
+      "name": "../../../Calendar/Calendar.types",
+      "path": "../../../Calendar/Calendar.types",
+      "type": "import",
+      "file": "Contacts.types.ts"
+    },
+    {
+      "name": "../Expenses/Expenses.types",
+      "path": "../Expenses/Expenses.types",
+      "type": "import",
+      "file": "Contacts.types.ts"
+    }
+  ]
+}

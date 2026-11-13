@@ -1,0 +1,35 @@
+{
+  "action_type": "use",
+  "id": 1794004818784,
+  "name": "useNetworkGraph",
+  "title": "useNetworkGraph",
+  "description": "useNetworkGraph: hook implementation. See README.txt for the exported contract and integration.",
+  "type": "hook",
+  "tags": [
+    "hook"
+  ],
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    },
+    {
+      "name": "useNetworkGraph.ts",
+      "path": ".",
+      "type": "ts"
+    }
+  ],
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/NetworkGraph/hooks/useNetworkGraph",
+  "file": "useNetworkGraph.ts"
+}

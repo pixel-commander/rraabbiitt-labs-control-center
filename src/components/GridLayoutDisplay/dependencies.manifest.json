@@ -1,0 +1,18 @@
+{
+  "name": "GridLayoutDisplay",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../../HouseKeys.types",
+      "path": "../../HouseKeys.types",
+      "type": "import",
+      "file": "GridLayoutDisplay.types.ts"
+    },
+    {
+      "name": "../../SmartTooltip/SmartTooltip",
+      "path": "../SmartTooltip/SmartTooltip",
+      "type": "import",
+      "file": "GridSelectCell/GridSelectCell.tsx"
+    }
+  ]
+}

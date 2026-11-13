@@ -1,0 +1,24 @@
+{
+  "name": "GridDesigner",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../../atoms/actions/action-main/action-main.css",
+      "path": "../../atoms/actions/action-main/action-main.css",
+      "type": "import",
+      "file": "GridDesigner.tsx"
+    },
+    {
+      "name": "../../atoms/containers/container-cell/container-cell.css",
+      "path": "../../atoms/containers/container-cell/container-cell.css",
+      "type": "import",
+      "file": "GridDesigner.tsx"
+    },
+    {
+      "name": "../../HouseKeys.types",
+      "path": "../../HouseKeys.types",
+      "type": "import",
+      "file": "GridDesigner.types.ts"
+    }
+  ]
+}

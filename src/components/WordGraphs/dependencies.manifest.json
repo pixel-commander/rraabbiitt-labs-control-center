@@ -1,0 +1,12 @@
+{
+  "name": "WordGraphs",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../../HouseKeys.types",
+      "path": "../../HouseKeys.types",
+      "type": "import",
+      "file": "WordGraphs.types.ts"
+    }
+  ]
+}

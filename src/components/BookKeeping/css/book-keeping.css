@@ -1,0 +1,3 @@
+.book-keeping > section + section {
+  margin-block-start: var(--space-md, 1rem);
+}

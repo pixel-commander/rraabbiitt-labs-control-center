@@ -1,0 +1,63 @@
+{
+  "id": 1793996031485,
+  "name": "js folder",
+  "title": "Shared functions",
+  "description": "Reusable vanilla JavaScript functions.",
+  "type": "path",
+  "tags": [
+    "javascript",
+    "functions"
+  ],
+  "paths": [
+    {
+      "id": 1793996047838,
+      "name": "drag-scroll",
+      "type": "function",
+      "path": "C:/rraabbiitt-labs-control-center/src/js/drag-scroll",
+      "file": "drag-scroll.js"
+    },
+    {
+      "id": 1794003953594,
+      "name": "drag-sort",
+      "type": "function",
+      "tags": [
+        "javascript",
+        "interaction"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/js/drag-sort",
+      "file": "drag-sort.js"
+    },
+    {
+      "id": 1794003953633,
+      "name": "resize-columns",
+      "type": "function",
+      "tags": [
+        "javascript",
+        "interaction"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/js/resize-columns",
+      "file": "resize-columns.js"
+    },
+    {
+      "name": "use-drag-scroll",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/js/drag-scroll",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794003953621,
+      "name": "use drag-sort",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/js/drag-sort",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794003953640,
+      "name": "use resize-columns",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/js/resize-columns",
+      "file": "use.skill.yaml"
+    }
+  ],
+  "path": "C:/rraabbiitt-labs-control-center/src/js"
+}

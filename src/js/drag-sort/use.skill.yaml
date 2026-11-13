@@ -1,0 +1,34 @@
+schema: 1
+intent: use
+owner:
+  id: 1794003953594
+  file: rab.settings.json
+id: 1794003953621
+name: use drag-sort
+title: Use Drag sort
+description: Native drag sorting that reports reordered IDs without moving React-owned
+  rows.
+type: function
+file: use.skill.yaml
+tags: []
+implementation:
+- file: drag-sort.js
+context: []
+inputs: {}
+outputs: {}
+instructions: Import dragSort from drag-sort.js and call dragSort(ref, props) after
+  mount; return its cleanup from the effect. Supply data-sort-id on sibling rows for
+  stable string IDs, or the original sibling indexes are used. item_selector defaults
+  to [data-sort-id], falling back to direct children. Rows must share a parent. handleSort({
+  ids, from, to }, "drag-sort", props) reports order; the parent must reorder its
+  data. Native HTML drag gestures coexist with dragScroll; inputs, buttons, links,
+  editable and data-no-drag controls are excluded. The function marks rows draggable,
+  observes new rows, inserts a temporary drop-slot, and restores original draggable
+  attributes and removes the placeholder on cleanup. Style drag-source and drop-slot
+  in caller CSS. No injected stylesheet.
+checks: []
+examples: []
+routes: []
+provenance:
+- file: drag-sort.js
+  description: User supplied reference; adapted for local contracts and cleanup.

@@ -1,0 +1,50 @@
+@layer components {
+  .tree-item {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .folder-tree__row {
+    inline-size: 100%;
+    box-sizing: border-box;
+    text-align: start;
+    padding: 0;
+    gap: var(--space-xs);
+    font: inherit;
+    line-height: 1.8;
+    color: inherit;
+    background: transparent;
+    border: 0;
+    align-items: center;
+    cursor: pointer;
+  }
+  .tree-item__icons {
+    display: block;
+    white-space: nowrap;
+    color: var(--tree-item-icon-color, inherit);
+    line-height: 1;
+  }
+  .tree-item__icons svg {
+    display: block;
+  }
+  .tree-item__name {
+    overflow-wrap: anywhere;
+  }
+  .tree-item__children {
+    margin: 0;
+    padding: 0;
+    padding-inline-start: var(--space-lg);
+    list-style: none;
+  }
+}
+
+@layer components {
+  .folder-tree__row.is-selected {
+    background: var(--surface-selected);
+    color: var(--content-strong);
+  }
+  .folder-tree__row:focus-visible {
+    outline: var(--focus-ring);
+    outline-offset: var(--focus-offset);
+  }
+}

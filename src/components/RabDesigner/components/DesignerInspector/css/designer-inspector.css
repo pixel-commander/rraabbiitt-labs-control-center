@@ -1,0 +1,117 @@
+.designer-inspector {
+  width: 280px;
+  height: 100%;
+  min-height: 0;
+  box-sizing: border-box;
+}
+.designer-inspector [data-inspector-panel][hidden],
+.designer-inspector form[hidden] {
+  display: none;
+}
+.designer-panel-heading {
+  padding: 14px 20px;
+}
+.designer-panel-heading h2 {
+  font-size: 18px;
+  margin: 0 0 6px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.designer-panel-tabs {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
+  padding: 0;
+  font-size: 13px;
+}
+.designer-panel-tabs a {
+  color: inherit;
+  text-decoration: none;
+}
+.designer-properties {
+  padding: 0 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.designer-properties h3 {
+  font-size: 14px;
+  margin: 20px 0 4px;
+}
+.designer-properties label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 12px;
+}
+.designer-properties [role="tabpanel"] > label {
+  margin: 12px 0;
+}
+.designer-color-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 12px;
+  margin: 12px 0;
+}
+.designer-panel-tabs button {
+  flex: 1;
+  font-size: 12px;
+  padding: 14px 4px;
+}
+.designer-properties input,
+.designer-properties select {
+  width: 146px;
+  min-width: 0;
+  height: 32px;
+  padding: 4px 8px;
+  box-sizing: border-box;
+  font: inherit;
+}
+.designer-property-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+.designer-property-actions button {
+  padding: 8px 12px;
+}
+.designer-properties details label {
+  margin: 12px 0;
+  overflow-wrap: anywhere;
+}
+.designer-properties details input {
+  flex-shrink: 0;
+}
+.designer-properties summary {
+  cursor: pointer;
+}
+.designer-linked-fields {
+  min-width: 0;
+  padding: 8px;
+}
+.designer-linked-fields input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+}
+.designer-linked-fields label {
+  margin: 8px 0;
+}
+.designer-border-side {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 14px 0;
+  font-size: 12px;
+}
+.designer-border-side input,
+.designer-border-side select {
+  width: 100%;
+}
+.designer-shadow-layer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}

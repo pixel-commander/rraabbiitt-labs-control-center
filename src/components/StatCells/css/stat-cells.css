@@ -1,0 +1,34 @@
+.stat-cells {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 0.5em;
+  grid-auto-columns: minmax(0, 1fr);
+}
+
+.stat-cells.pad-sm {
+  gap: 0.25em;
+}
+
+.stat-cells.pad-md {
+  gap: 0.5em;
+}
+
+.stat-cells.pad-lg {
+  gap: 1em;
+}
+
+.stat-cells.pad {
+  gap: var(--space-md);
+}
+
+.stat-cells[data-size="sm"] {
+  font-size: 0.65em;
+}
+
+.stat-cells[data-size="md"] {
+  font-size: 1em;
+}
+
+.stat-cells[data-size="lg"] {
+  font-size: 1.3em;
+}

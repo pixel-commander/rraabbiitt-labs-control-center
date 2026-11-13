@@ -1,0 +1,40 @@
+{
+  "action_type": "move",
+  "id": 1794004818673,
+  "name": "resolve-layout",
+  "title": "resolve-layout",
+  "description": "resolve-layout: function implementation. See README.txt for the exported contract and integration.",
+  "type": "function",
+  "tags": [
+    "function"
+  ],
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "resolve-layout.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "resolve-layout.test.mjs",
+      "path": "tests",
+      "type": "mjs"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ],
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/GridAreaSelect/js/resolve-layout",
+  "file": "resolve-layout.ts"
+}

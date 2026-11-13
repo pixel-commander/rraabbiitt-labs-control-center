@@ -1,0 +1,35 @@
+@layer components {
+  .login-box {
+    gap: var(--space-md);
+    color: var(--login-box-color, var(--content-default));
+    min-width: 0;
+  }
+  .login-box fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    min-width: 0;
+    gap: var(--space-sm);
+  }
+  .login-box__actions {
+    gap: var(--space-xs);
+  }
+  .login-box label {
+    min-width: 0;
+  }
+  .login-box label input {
+    width: 100%;
+    min-width: 0;
+    padding: var(--space-sm);
+    color: inherit;
+    background: var(--login-box-input-background, var(--surface-inset));
+    border: 1px solid var(--login-box-input-border, var(--border-default));
+  }
+  .login-box input[type="submit"],
+  .login-box button {
+    padding: var(--space-sm) var(--space-md);
+  }
+  .login-box output {
+    color: var(--login-box-status-color, var(--content-muted));
+  }
+}

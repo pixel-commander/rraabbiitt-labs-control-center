@@ -1,0 +1,29 @@
+schema: 1
+intent: use
+owner:
+  id: 1794004818159
+  path: src/components/ButtonsAndLinks/hooks/useButtonsAndLinks
+  file: rab.settings.json
+id: 1794004818172
+name: use useButtonsAndLinks
+title: Use useButtonsAndLinks
+description: "useButtonsAndLinks: hook implementation. See README.txt for the exported contract and
+  integration."
+type: function
+path: C:\rraabbiitt-react-components\src\components\ButtonsAndLinks\hooks\useButtonsAndLinks
+file: use.skill.yaml
+tags: []
+implementation:
+  - path: src/components/ButtonsAndLinks/hooks/useButtonsAndLinks
+    file: useButtonsAndLinks.ts
+context: []
+inputs: {}
+outputs: {}
+instructions: Read README.txt and useButtonsAndLinks.ts for the current contract. Call this hook at
+  the top level of a React component. Its implementation owns its interaction lifecycle. Preserve
+  supplied false, zero and empty-string values. Use theme/component tokens, supplied class props, or
+  parent CSS for UI overrides.
+checks: []
+examples: []
+routes: []
+provenance: []

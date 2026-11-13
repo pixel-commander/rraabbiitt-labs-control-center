@@ -1,0 +1,7 @@
+schema: 1
+intent: use
+name: useCodeViewPopupLink
+path: src/components/CodeViewPopupLink/hooks/useCodeViewPopupLink
+file: useCodeViewPopupLink.ts
+instructions: >-
+  Call with the complete CodeViewPopupLinkProps bag. Returns open, code, error, rect, pending, trigger, show, close, move. Ignores stale async responses. No filesystem work.

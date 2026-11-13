@@ -1,0 +1,51 @@
+.designer-library {
+  width: 264px;
+  min-height: 0;
+  height: 100%;
+  box-sizing: border-box;
+}
+.designer-library-content {
+  padding: 16px;
+}
+.designer-library-content > input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  font: inherit;
+}
+.designer-library h3 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 20px 0 12px;
+}
+.designer-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  height: 102px;
+  min-width: 0;
+  font-size: 11px;
+}
+.designer-tile[hidden] {
+  display: none;
+}
+.designer-tile-icon {
+  font-size: 32px;
+  line-height: 38px;
+}
+.designer-tree-heading {
+  padding: 0 16px;
+}
+.designer-layer {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  align-items: center;
+  text-align: left;
+  padding: 8px 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 12px;
+}

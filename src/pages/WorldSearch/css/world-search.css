@@ -1,7 +1,4 @@
 @layer components {
-  .site-shell:has(.world-search) {
-    block-size: 100dvh;
-  }
   .world-search {
     padding: var(--space-2xl);
     block-size: 100%;

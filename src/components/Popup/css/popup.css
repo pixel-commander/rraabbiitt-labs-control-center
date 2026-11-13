@@ -1,0 +1,47 @@
+@layer components {
+  .popup-seat {
+    position: relative;
+    min-inline-size: 0;
+    min-block-size: 0;
+  }
+  .popup {
+    min-inline-size: 0;
+    min-block-size: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  .popup__bar {
+    touch-action: none;
+    cursor: move;
+  }
+  .popup__body {
+    position: relative;
+  }
+  .popup__body > .scroll-y {
+    max-block-size: 100%;
+  }
+  .popup:is(.popup--floating, .popup--fullscreen) .popup__body > .scroll-y {
+    position: absolute;
+    inset: 0;
+  }
+  .popup--floating {
+    position: fixed;
+    z-index: 200;
+  }
+  .popup--fullscreen {
+    position: fixed;
+    inset: var(--space-sm);
+    z-index: 210;
+  }
+  .popup__resize {
+    position: absolute;
+    inset-inline-end: 0;
+    inset-block-end: 0;
+    padding: var(--space-sm);
+    cursor: nwse-resize;
+    touch-action: none;
+  }
+  .popup__resize::after {
+    content: "◢";
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Chat",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../../HouseKeys.types",
+      "path": "../../HouseKeys.types",
+      "type": "import",
+      "file": "Chat.types.ts"
+    },
+    {
+      "name": "../../../../js/drag-scroll/drag-scroll.js",
+      "path": "../../js/drag-scroll/drag-scroll.js",
+      "type": "import",
+      "file": "hooks/useChat/useChat.ts"
+    },
+    {
+      "name": "../../../HouseKeys.types",
+      "path": "../../HouseKeys.types",
+      "type": "import",
+      "file": "MessageBubble/MessageBubble.types.ts"
+    },
+    {
+      "name": "../../../HouseKeys.types",
+      "path": "../../HouseKeys.types",
+      "type": "import",
+      "file": "MessageBubble/MessageBubble.types.ts"
+    },
+    {
+      "name": "../../../HouseKeys.types",
+      "path": "../../HouseKeys.types",
+      "type": "import",
+      "file": "Messages/Messages.types.ts"
+    },
+    {
+      "name": "../../../HouseKeys.types",
+      "path": "../../HouseKeys.types",
+      "type": "import",
+      "file": "UserInput/UserInput.types.ts"
+    }
+  ]
+}

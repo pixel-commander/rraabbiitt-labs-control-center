@@ -1,0 +1,5 @@
+schema: 1
+intent: use
+name: TestComponent
+file: TestComponent.tsx
+instructions: Generated starter; update with the implemented contract before use.

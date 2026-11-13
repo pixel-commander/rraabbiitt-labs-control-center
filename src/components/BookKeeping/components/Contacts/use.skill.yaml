@@ -1,0 +1,7 @@
+schema: 1
+intent: use
+name: use-contacts
+title: Contacts
+instructions: Read README.txt for props, callbacks and styling.
+implementation:
+  - file: Contacts.tsx

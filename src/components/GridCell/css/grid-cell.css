@@ -1,0 +1,8 @@
+@layer components {
+  .grid-cell,
+  .grid-cell__cell,
+  .grid-cell__scroll {
+    min-inline-size: 0;
+    min-block-size: 0;
+  }
+}

@@ -1,0 +1,9 @@
+@layer components {
+  .graph-legend {
+    min-inline-size: 0;
+  }
+  .graph-legend__item {
+    display: inline-block;
+    margin-inline-end: var(--space-lg);
+  }
+}

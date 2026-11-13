@@ -1,0 +1,7 @@
+schema: 1
+intent: use
+name: CodeViewPopupLink
+path: src/components/CodeViewPopupLink
+file: CodeViewPopupLink.tsx
+instructions: >-
+  Pass path, file and optional Icon. handleLoad returns code; handleSave owns persistence. Callbacks receive data, type, full props. open supports controlled visibility; handleCancel closes in the parent. showLink false supports external triggers. See README.txt.

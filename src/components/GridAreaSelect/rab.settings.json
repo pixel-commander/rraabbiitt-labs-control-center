@@ -1,0 +1,111 @@
+{
+  "action_type": "use",
+  "id": 1793996465617,
+  "name": "GridAreaSelect",
+  "title": "GridAreaSelect",
+  "description": "",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "GridAreaSelect.tsx",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/GridAreaSelect",
+  "paths": [
+    {
+      "name": "GridAreaSelect.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "GridAreaSelect.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "grid-area-select-atoms.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": "grid-area-select.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": ".gitkeep",
+      "path": "demo",
+      "type": ""
+    },
+    {
+      "name": "Demo.tsx",
+      "path": "demo",
+      "type": "tsx"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "README.txt",
+      "path": "hooks/useGridAreaSelect",
+      "type": "txt"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "hooks/useGridAreaSelect",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "hooks/useGridAreaSelect",
+      "type": "yaml"
+    },
+    {
+      "name": "useGridAreaSelect.ts",
+      "path": "hooks/useGridAreaSelect",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": "js/resolve-layout",
+      "type": "txt"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "js/resolve-layout",
+      "type": "json"
+    },
+    {
+      "name": "resolve-layout.ts",
+      "path": "js/resolve-layout",
+      "type": "ts"
+    },
+    {
+      "name": "resolve-layout.test.mjs",
+      "path": "js/resolve-layout/tests",
+      "type": "mjs"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "js/resolve-layout",
+      "type": "yaml"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

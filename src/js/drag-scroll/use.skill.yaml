@@ -1,0 +1,18 @@
+name: use-drag-scroll
+type: skill
+path: src/js/drag-scroll
+file: use.skill.yaml
+instructions: >-
+  Import dragScroll from drag-scroll.js. Call dragScroll(ref, props) after the
+  element mounts; ref is an HTMLElement or an object with current pointing to one.
+  The element must already have overflowing content and CSS overflow enabled.
+  Options default to flick=true, smooth=true, sensitivity=3. Sensitivity scales
+  release momentum: zero disables momentum speed; larger values increase it.
+  Dragging stays immediate; smooth sets idle CSS scroll-behavior for programmatic
+  scrolling. Touch uses native scrolling. Reduced-motion preference disables
+  custom flick. Links and buttons remain clickable until pointer movement reaches
+  four pixels; dragging scrolls and suppresses the subsequent click. Native link
+  dragging is suppressed during the gesture. Inputs, editable content and explicitly
+  draggable elements retain their behavior.
+  Returns a cleanup function that removes listeners, cancels momentum and restores
+  inline styles. Call cleanup before attaching again or replacing the element.

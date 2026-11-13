@@ -1,0 +1,161 @@
+{
+  "action_type": "use",
+  "id": 1794025045181,
+  "name": "BookKeeping",
+  "title": "BookKeeping",
+  "description": "",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "BookKeeping.tsx",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/BookKeeping",
+  "paths": [
+    {
+      "name": "BookKeeping.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "BookKeeping.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "Contacts.tsx",
+      "path": "components/Contacts",
+      "type": "tsx"
+    },
+    {
+      "name": "Contacts.types.ts",
+      "path": "components/Contacts",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": "components/Contacts",
+      "type": "txt"
+    },
+    {
+      "name": "contacts.css",
+      "path": "components/Contacts/css",
+      "type": "css"
+    },
+    {
+      "name": "Demo.tsx",
+      "path": "components/Contacts/demo",
+      "type": "tsx"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": "components/Contacts",
+      "type": "json"
+    },
+    {
+      "name": "README.txt",
+      "path": "components/Contacts/hooks/useContacts",
+      "type": "txt"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "components/Contacts/hooks/useContacts",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "components/Contacts/hooks/useContacts",
+      "type": "yaml"
+    },
+    {
+      "name": "useContacts.ts",
+      "path": "components/Contacts/hooks/useContacts",
+      "type": "ts"
+    },
+    {
+      "name": "contact-fields.ts",
+      "path": "components/Contacts/js",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "components/Contacts",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "components/Contacts",
+      "type": "yaml"
+    },
+    {
+      "name": "Expenses.tsx",
+      "path": "components/Expenses",
+      "type": "tsx"
+    },
+    {
+      "name": "Expenses.types.ts",
+      "path": "components/Expenses",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": "components/Expenses",
+      "type": "txt"
+    },
+    {
+      "name": "expenses.css",
+      "path": "components/Expenses/css",
+      "type": "css"
+    },
+    {
+      "name": "Demo.tsx",
+      "path": "components/Expenses/demo",
+      "type": "tsx"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": "components/Expenses",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "components/Expenses",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "components/Expenses",
+      "type": "yaml"
+    },
+    {
+      "name": "book-keeping.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": "Demo.tsx",
+      "path": "demo",
+      "type": "tsx"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

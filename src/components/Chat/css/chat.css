@@ -1,0 +1,22 @@
+@layer components {
+  .chat {
+    min-inline-size: 0;
+    min-block-size: 0;
+    overflow: hidden;
+  }
+  .chat__main {
+    position: relative;
+    min-block-size: 0;
+    overflow: hidden;
+  }
+
+  .chat__bottom {
+    display: grid;
+    min-block-size: 100%;
+    align-items: end;
+  }
+  .chat__footer {
+    padding: var(--space-sm);
+    border-block-start: 1px solid var(--border-default);
+  }
+}

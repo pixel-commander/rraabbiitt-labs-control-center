@@ -1,0 +1,48 @@
+{
+  "name": "NetworkGraph",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../../../HouseKeys.types",
+      "path": "../../HouseKeys.types",
+      "type": "import",
+      "file": "GraphFootprint/GraphFootprint.types.ts"
+    },
+    {
+      "name": "../../../HouseKeys.types",
+      "path": "../../HouseKeys.types",
+      "type": "import",
+      "file": "GraphLegend/GraphLegend.types.ts"
+    },
+    {
+      "name": "../../SearchBar/SearchBar",
+      "path": "../SearchBar/SearchBar",
+      "type": "import",
+      "file": "GraphSearch/GraphSearch.tsx"
+    },
+    {
+      "name": "../../SearchBar/SearchBar.types",
+      "path": "../SearchBar/SearchBar.types",
+      "type": "import",
+      "file": "GraphSearch/GraphSearch.types.ts"
+    },
+    {
+      "name": "../../../atoms/actions/action-row/action-row.css",
+      "path": "../../atoms/actions/action-row/action-row.css",
+      "type": "import",
+      "file": "GraphSelection/GraphSelection.tsx"
+    },
+    {
+      "name": "../../../HouseKeys.types",
+      "path": "../../HouseKeys.types",
+      "type": "import",
+      "file": "GraphSelection/GraphSelection.types.ts"
+    },
+    {
+      "name": "../../HouseKeys.types",
+      "path": "../../HouseKeys.types",
+      "type": "import",
+      "file": "NetworkGraph.types.ts"
+    }
+  ]
+}

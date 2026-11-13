@@ -1,0 +1,35 @@
+@layer components {
+  .toggle-group {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
+    inline-size: fit-content;
+    padding: var(--space-xs);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-container);
+    background: var(--surface-inset);
+  }
+
+  .toggle-group__item {
+    padding: var(--space-xs) var(--space-sm);
+    border: 0;
+    border-radius: var(--radius-control);
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+  }
+
+  .toggle-group__item:hover {
+    color: var(--content-strong);
+  }
+
+  .toggle-group__item[aria-pressed="true"] {
+    background: var(--surface-active);
+    color: var(--content-strong);
+  }
+
+  .toggle-group__item:focus-visible {
+    outline: var(--focus-ring);
+  }
+}

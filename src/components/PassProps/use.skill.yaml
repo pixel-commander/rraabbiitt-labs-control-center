@@ -1,0 +1,28 @@
+schema: 1
+intent: use
+owner:
+  id: 1793994765514
+  path: src/components/PassProps
+  file: rab.settings.json
+id: 1794004819145
+name: use PassProps
+title: Use PassProps
+description: Reusable PassProps component.
+type: function
+path: C:\rraabbiitt-react-components\src\components\PassProps
+file: use.skill.yaml
+tags: []
+implementation:
+  - path: src/components/PassProps
+    file: PassProps.tsx
+context: []
+inputs: {}
+outputs: {}
+instructions: Read README.txt and PassProps.types.ts for the current contract. Render this component
+  with the props below. Application data and persistence remain with the caller. Preserve supplied
+  false, zero and empty-string values. Use theme/component tokens, supplied class props, or parent
+  CSS for UI overrides.
+checks: []
+examples: []
+routes: []
+provenance: []

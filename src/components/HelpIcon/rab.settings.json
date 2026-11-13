@@ -1,0 +1,61 @@
+{
+  "action_type": "use",
+  "id": 1794118916035,
+  "name": "HelpIcon",
+  "title": "Help Icon",
+  "description": "Accessible question mark trigger with a built-in SmartTooltip.",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "paths": [
+    {
+      "name": "HelpIcon.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "HelpIcon.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "help-icon.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": ".gitkeep",
+      "path": "demo",
+      "type": ""
+    },
+    {
+      "name": "Demo.tsx",
+      "path": "demo",
+      "type": "tsx"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ],
+  "file": "HelpIcon.tsx",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/HelpIcon"
+}

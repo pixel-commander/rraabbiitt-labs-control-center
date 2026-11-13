@@ -318,6 +318,203 @@
       "path": "C:/rraabbiitt-labs-control-center/src/atoms/grids"
     },
     {
+      "id": 1793975199150,
+      "name": "NavItem",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/AppHeader/NavItem",
+      "file": "NavItem.tsx"
+    },
+    {
+      "id": 1794004818093,
+      "name": "useProjectRefresh",
+      "type": "hook",
+      "tags": [
+        "hook"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/AppHeader/hooks/useProjectRefresh",
+      "file": "useProjectRefresh.ts"
+    },
+    {
+      "id": 1793975199132,
+      "name": "AppHeader",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/AppHeader",
+      "file": "AppHeader.tsx"
+    },
+    {
+      "id": 1794025260714,
+      "name": "useContacts",
+      "type": "hook",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/BookKeeping/components/Contacts/hooks/useContacts",
+      "file": "useContacts.ts"
+    },
+    {
+      "id": 1794025080193,
+      "name": "Contacts",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/BookKeeping/components/Contacts",
+      "file": "Contacts.tsx"
+    },
+    {
+      "id": 1794025080175,
+      "name": "Expenses",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/BookKeeping/components/Expenses",
+      "file": "Expenses.tsx"
+    },
+    {
+      "id": 1794025045181,
+      "name": "BookKeeping",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/BookKeeping",
+      "file": "BookKeeping.tsx"
+    },
+    {
+      "id": 1794004818159,
+      "name": "useButtonsAndLinks",
+      "type": "hook",
+      "tags": [
+        "hook"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/ButtonsAndLinks/hooks/useButtonsAndLinks",
+      "file": "useButtonsAndLinks.ts"
+    },
+    {
+      "id": 1793976288045,
+      "name": "ButtonsAndLinks",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/ButtonsAndLinks",
+      "file": "ButtonsAndLinks.tsx"
+    },
+    {
+      "id": 1794004818199,
+      "name": "useCalendar",
+      "type": "hook",
+      "tags": [
+        "hook"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/Calendar/hooks/useCalendar",
+      "file": "useCalendar.ts"
+    },
+    {
+      "id": 1793976288008,
+      "name": "Calendar",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/Calendar",
+      "file": "Calendar.tsx"
+    },
+    {
+      "id": 1794030143384,
+      "name": "ConnectorSettings",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/CanvasFlow/components/ConnectorSettings",
+      "file": "ConnectorSettings.tsx"
+    },
+    {
+      "id": 1794029939873,
+      "name": "useCanvasFlow",
+      "type": "hook",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/CanvasFlow/hooks/useCanvasFlow",
+      "file": "useCanvasFlow.ts"
+    },
+    {
+      "id": 1794029448242,
+      "name": "CanvasFlow",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/CanvasFlow",
+      "file": "CanvasFlow.tsx"
+    },
+    {
+      "id": 1793992769254,
+      "name": "MessageBubble",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/Chat/MessageBubble",
+      "file": "MessageBubble.tsx"
+    },
+    {
+      "id": 1793992769280,
+      "name": "Messages",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/Chat/Messages",
+      "file": "Messages.tsx"
+    },
+    {
+      "id": 1793992769266,
+      "name": "UserInput",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/Chat/UserInput",
+      "file": "UserInput.tsx"
+    },
+    {
+      "id": 1794004818257,
+      "name": "useChat",
+      "type": "hook",
+      "tags": [
+        "hook"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/Chat/hooks/useChat",
+      "file": "useChat.ts"
+    },
+    {
+      "id": 1793976288032,
+      "name": "Chat",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/Chat",
+      "file": "Chat.tsx"
+    },
+    {
       "id": 1793990174762,
       "name": "CodeViewer",
       "type": "component",
@@ -380,6 +577,50 @@
       "file": "CodeEditAndView.tsx"
     },
     {
+      "id": 1794162491193,
+      "name": "useCodeViewPopupLink",
+      "type": "hook",
+      "tags": [
+        "react",
+        "hook"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/CodeViewPopupLink/hooks/useCodeViewPopupLink",
+      "file": "useCodeViewPopupLink.ts"
+    },
+    {
+      "id": 1794162491192,
+      "name": "CodeViewPopupLink",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/CodeViewPopupLink",
+      "file": "CodeViewPopupLink.tsx"
+    },
+    {
+      "id": 1794014932851,
+      "name": "useDatePicker",
+      "type": "hook",
+      "tags": [
+        "rab-world-v2",
+        "scaffold"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/DatePicker/hooks/useDatePicker",
+      "file": "useDatePicker.ts"
+    },
+    {
+      "id": 1794014886047,
+      "name": "DatePicker",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/DatePicker",
+      "file": "DatePicker.tsx"
+    },
+    {
       "id": 1794538514756,
       "name": "DropdownButton",
       "type": "component",
@@ -424,6 +665,131 @@
       "file": "FloatWindow.tsx"
     },
     {
+      "id": 1793993435709,
+      "name": "TreeItem",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/FolderTree/TreeItem",
+      "file": "TreeItem.tsx"
+    },
+    {
+      "id": 1794004818595,
+      "name": "useFolderTree",
+      "type": "hook",
+      "tags": [
+        "hook"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/FolderTree/hooks/useFolderTree",
+      "file": "useFolderTree.ts"
+    },
+    {
+      "id": 1793993362977,
+      "name": "FolderTree",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/FolderTree",
+      "file": "FolderTree.tsx"
+    },
+    {
+      "id": 1793996465632,
+      "name": "FullScreenWrapper",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/FullScreenWrapper",
+      "file": "FullScreenWrapper.tsx"
+    },
+    {
+      "id": 1794004818655,
+      "name": "useGridAreaSelect",
+      "type": "hook",
+      "tags": [
+        "hook"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/GridAreaSelect/hooks/useGridAreaSelect",
+      "file": "useGridAreaSelect.ts"
+    },
+    {
+      "id": 1794004818673,
+      "name": "resolve-layout",
+      "type": "function",
+      "tags": [
+        "function"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/GridAreaSelect/js/resolve-layout",
+      "file": "resolve-layout.ts"
+    },
+    {
+      "id": 1793996465617,
+      "name": "GridAreaSelect",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/GridAreaSelect",
+      "file": "GridAreaSelect.tsx"
+    },
+    {
+      "id": 1794021285493,
+      "name": "GridCell",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/GridCell",
+      "file": "GridCell.tsx"
+    },
+    {
+      "id": 1794025246819,
+      "name": "useGridDesigner",
+      "type": "hook",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/GridDesigner/hooks/useGridDesigner",
+      "file": "useGridDesigner.ts"
+    },
+    {
+      "id": 1794022535744,
+      "name": "GridDesigner",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/GridDesigner",
+      "file": "GridDesigner.tsx"
+    },
+    {
+      "id": 1794315524611,
+      "name": "GridLayoutDisplay",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/GridLayoutDisplay",
+      "file": "GridLayoutDisplay.tsx"
+    },
+    {
+      "id": 1794118916035,
+      "name": "HelpIcon",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/HelpIcon",
+      "file": "HelpIcon.tsx"
+    },
+    {
       "id": 1794412867627,
       "name": "SearchMessageBox",
       "type": "component",
@@ -466,6 +832,17 @@
       ],
       "path": "C:/rraabbiitt-labs-control-center/src/components/HybridSearch",
       "file": "HybridSearch.tsx"
+    },
+    {
+      "id": 1794022535773,
+      "name": "LoginBox",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/LoginBox",
+      "file": "LoginBox.tsx"
     },
     {
       "id": 1794417147127,
@@ -523,6 +900,255 @@
       "file": "MessageBox.tsx"
     },
     {
+      "id": 1793998444330,
+      "name": "GraphFootprint",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/NetworkGraph/GraphFootprint",
+      "file": "GraphFootprint.tsx"
+    },
+    {
+      "id": 1793998504007,
+      "name": "GraphLegend",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/NetworkGraph/GraphLegend",
+      "file": "GraphLegend.tsx"
+    },
+    {
+      "id": 1793998504034,
+      "name": "GraphSearch",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/NetworkGraph/GraphSearch",
+      "file": "GraphSearch.tsx"
+    },
+    {
+      "id": 1793998444355,
+      "name": "GraphSelection",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/NetworkGraph/GraphSelection",
+      "file": "GraphSelection.tsx"
+    },
+    {
+      "id": 1794004818784,
+      "name": "useNetworkGraph",
+      "type": "hook",
+      "tags": [
+        "hook"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/NetworkGraph/hooks/useNetworkGraph",
+      "file": "useNetworkGraph.ts"
+    },
+    {
+      "id": 1793998444287,
+      "name": "NetworkGraph",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/NetworkGraph",
+      "file": "NetworkGraph.tsx"
+    },
+    {
+      "id": 1794004818840,
+      "name": "usePassProps",
+      "type": "hook",
+      "tags": [
+        "hook"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/PassProps/hooks/usePassProps",
+      "file": "usePassProps.ts"
+    },
+    {
+      "id": 1794004819067,
+      "name": "pass-props-to-children",
+      "type": "function",
+      "tags": [
+        "function"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/PassProps/js/pass-props-to-children",
+      "file": "pass-props-to-children.ts"
+    },
+    {
+      "id": 1793994765514,
+      "name": "PassProps",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/PassProps",
+      "file": "PassProps.tsx"
+    },
+    {
+      "id": 1793996465651,
+      "name": "Popup",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/Popup",
+      "file": "Popup.tsx"
+    },
+    {
+      "id": 1793996465599,
+      "name": "ProgressBar",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/ProgressBar",
+      "file": "ProgressBar.tsx"
+    },
+    {
+      "id": 1793329533687,
+      "name": "DesignerCanvas",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/RabDesigner/components/DesignerCanvas"
+    },
+    {
+      "id": 1793331427691,
+      "name": "DesignerColor",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/RabDesigner/components/DesignerColor"
+    },
+    {
+      "id": 1793330731383,
+      "name": "DesignerComposition",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/RabDesigner/components/DesignerComposition"
+    },
+    {
+      "id": 1793333048512,
+      "name": "DesignerHtmlNode",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/RabDesigner/components/DesignerHtmlNode"
+    },
+    {
+      "id": 1793333048929,
+      "name": "DesignerHtmlProperties",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/RabDesigner/components/DesignerHtmlProperties"
+    },
+    {
+      "id": 1793330118219,
+      "name": "DesignerInspector",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/RabDesigner/components/DesignerInspector"
+    },
+    {
+      "id": 1793330118447,
+      "name": "DesignerLibrary",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/RabDesigner/components/DesignerLibrary"
+    },
+    {
+      "id": 1793329534122,
+      "name": "DesignerNode",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/RabDesigner/components/DesignerNode"
+    },
+    {
+      "id": 1793331680227,
+      "name": "DesignerShadow",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/RabDesigner/components/DesignerShadow"
+    },
+    {
+      "id": 1793330529804,
+      "name": "DesignerTheme",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/RabDesigner/components/DesignerTheme"
+    },
+    {
+      "id": 1793329533907,
+      "name": "DesignerToolbar",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/RabDesigner/components/DesignerToolbar"
+    },
+    {
+      "id": 1793329365830,
+      "name": "SiteNav",
+      "type": "navigation",
+      "tags": [
+        "react",
+        "navigation"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/RabDesigner/components/SiteNav"
+    },
+    {
+      "id": 1793329365831,
+      "name": "RABDesigner",
+      "type": "dashboard",
+      "tags": [
+        "react",
+        "dashboard"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/RabDesigner",
+      "file": "RABDesigner.tsx"
+    },
+    {
       "id": 1794441432724,
       "name": "RabbitCanvas",
       "type": "component",
@@ -554,6 +1180,17 @@
       ],
       "path": "C:/rraabbiitt-labs-control-center/src/components/RabbitHead",
       "file": "RabbitHead.tsx"
+    },
+    {
+      "id": 1793976287982,
+      "name": "SearchBar",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/SearchBar",
+      "file": "SearchBar.tsx"
     },
     {
       "id": 1794401889543,
@@ -600,6 +1237,50 @@
       "file": "SearchResponses.tsx"
     },
     {
+      "id": 1793796407955,
+      "name": "useSearchableSelect",
+      "type": "hook",
+      "tags": [
+        "react",
+        "hook"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/SearchableSelect/hooks/useSearchableSelect",
+      "file": "useSearchableSelect.ts"
+    },
+    {
+      "id": 1793156049058,
+      "name": "SearchableSelect",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/SearchableSelect",
+      "file": "SearchableSelect.tsx"
+    },
+    {
+      "id": 1793975199112,
+      "name": "RailCanvas",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/Shell/RailCanvas",
+      "file": "RailCanvas.tsx"
+    },
+    {
+      "id": 1793974159531,
+      "name": "Shell",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/Shell",
+      "file": "Shell.tsx"
+    },
+    {
       "id": 1794395895090,
       "name": "SiteNav",
       "type": "component",
@@ -631,6 +1312,126 @@
       ],
       "path": "C:/rraabbiitt-labs-control-center/src/components/SmartTooltip",
       "file": "SmartTooltip.tsx"
+    },
+    {
+      "id": 1793996465668,
+      "name": "StarRanking",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/StarRanking",
+      "file": "StarRanking.tsx"
+    },
+    {
+      "id": 1794025611586,
+      "name": "StateCell",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/StatCells/components/StateCell",
+      "file": "StateCell.tsx"
+    },
+    {
+      "id": 1794025611566,
+      "name": "StatCells",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/StatCells",
+      "file": "StatCells.tsx"
+    },
+    {
+      "id": 1794004819987,
+      "name": "useStatelesssForm",
+      "type": "hook",
+      "tags": [
+        "hook"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/StatelesssForm/hooks/useStatelesssForm",
+      "file": "useStatelesssForm.ts"
+    },
+    {
+      "id": 1793976288020,
+      "name": "StatelesssForm",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/StatelesssForm",
+      "file": "StatelesssForm.tsx"
+    },
+    {
+      "id": 1794000378912,
+      "name": "useStatusBar",
+      "type": "hook",
+      "tags": [
+        "rab-world-v2",
+        "scaffold"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/StatusBar/hooks/useStatusBar",
+      "file": "useStatusBar.ts"
+    },
+    {
+      "id": 1794000318806,
+      "name": "StatusBar",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/StatusBar",
+      "file": "StatusBar.tsx"
+    },
+    {
+      "id": 1794018435672,
+      "name": "TabNav",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/TabNav",
+      "file": "TabNav.tsx"
+    },
+    {
+      "id": 1794367187481,
+      "name": "useTestComponent",
+      "type": "hook",
+      "tags": [
+        "react",
+        "hook"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/TestComponent/hooks/useTestComponent",
+      "file": "useTestComponent.ts"
+    },
+    {
+      "id": 1794367187480,
+      "name": "TestComponent",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/TestComponent",
+      "file": "TestComponent.tsx"
+    },
+    {
+      "id": 1794335532351,
+      "name": "ToggleGroup",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/ToggleGroup",
+      "file": "ToggleGroup.tsx"
     },
     {
       "id": 1794538905696,
@@ -721,6 +1522,39 @@
       "file": "UiElements.tsx"
     },
     {
+      "id": 1794232180622,
+      "name": "generate-word-array-from-text",
+      "type": "function",
+      "tags": [
+        "words",
+        "text"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/WordGraphs/js/generate-word-array-from-text",
+      "file": "generate-word-array-from-text.ts"
+    },
+    {
+      "id": 1794231709075,
+      "name": "get-words-from-settings",
+      "type": "function",
+      "tags": [
+        "words",
+        "settings"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/WordGraphs/js/get-words-from-settings",
+      "file": "get-words-from-settings.ts"
+    },
+    {
+      "id": 1794231393813,
+      "name": "WordGraphs",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/components/WordGraphs",
+      "file": "WordGraphs.tsx"
+    },
+    {
       "id": 1794538077037,
       "name": "RescanWorldStatusWindow",
       "type": "component",
@@ -773,6 +1607,58 @@
       "path": "C:/rraabbiitt-labs-control-center/src/components"
     },
     {
+      "id": 1794314771657,
+      "name": "useComponentFactory",
+      "type": "hook",
+      "path": "C:/rraabbiitt-labs-control-center/src/dashboards/Factory/components/ComponentFactory/hooks/useComponentFactory",
+      "file": "useComponentFactory.ts"
+    },
+    {
+      "id": 1794313041796,
+      "name": "ComponentFactory",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/dashboards/Factory/components/ComponentFactory",
+      "file": "ComponentFactory.tsx"
+    },
+    {
+      "id": 1794365959207,
+      "name": "SavePopup",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/dashboards/Factory/components/SavePopup",
+      "file": "SavePopup.tsx"
+    },
+    {
+      "id": 1794366698973,
+      "name": "useFactory",
+      "type": "hook",
+      "tags": [
+        "react",
+        "hook",
+        "factory"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/dashboards/Factory/hooks/useFactory",
+      "file": "useFactory.ts"
+    },
+    {
+      "id": 1794362069662,
+      "name": "Factory",
+      "type": "dashboard",
+      "tags": [
+        "react",
+        "dashboard"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/dashboards/Factory",
+      "file": "Factory.tsx"
+    },
+    {
       "id": 1794535953418,
       "name": "WorldAudit",
       "type": "dashboard",
@@ -805,6 +1691,35 @@
       "type": "hook",
       "path": "C:/rraabbiitt-labs-control-center/src/hooks/useWindowGesture",
       "file": "useWindowGesture.ts"
+    },
+    {
+      "id": 1793996047838,
+      "name": "drag-scroll",
+      "type": "function",
+      "path": "C:/rraabbiitt-labs-control-center/src/js/drag-scroll",
+      "file": "drag-scroll.js"
+    },
+    {
+      "id": 1794003953594,
+      "name": "drag-sort",
+      "type": "function",
+      "tags": [
+        "javascript",
+        "interaction"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/js/drag-sort",
+      "file": "drag-sort.js"
+    },
+    {
+      "id": 1794003953633,
+      "name": "resize-columns",
+      "type": "function",
+      "tags": [
+        "javascript",
+        "interaction"
+      ],
+      "path": "C:/rraabbiitt-labs-control-center/src/js/resize-columns",
+      "file": "resize-columns.js"
     },
     {
       "id": 1794529580067,
@@ -877,6 +1792,132 @@
       "path": "C:/rraabbiitt-labs-control-center/src/pages"
     },
     {
+      "id": 1794004818133,
+      "name": "use NavItem",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/AppHeader/NavItem",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794004818110,
+      "name": "use useProjectRefresh",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/AppHeader/hooks/useProjectRefresh",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794004818062,
+      "name": "use AppHeader",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/AppHeader",
+      "file": "use.skill.yaml"
+    },
+    {
+      "name": "use-contacts-hook",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/BookKeeping/components/Contacts/hooks/useContacts",
+      "file": "use.skill.yaml"
+    },
+    {
+      "name": "use-contacts",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/BookKeeping/components/Contacts",
+      "file": "use.skill.yaml"
+    },
+    {
+      "name": "use-expenses",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/BookKeeping/components/Expenses",
+      "file": "use.skill.yaml"
+    },
+    {
+      "name": "use-bookkeeping",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/BookKeeping",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794004818172,
+      "name": "use useButtonsAndLinks",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/ButtonsAndLinks/hooks/useButtonsAndLinks",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794004818149,
+      "name": "use ButtonsAndLinks",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/ButtonsAndLinks",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794004818224,
+      "name": "use useCalendar",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/Calendar/hooks/useCalendar",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794000796693,
+      "name": "use Calendar",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/Calendar",
+      "file": "use.skill.yaml"
+    },
+    {
+      "name": "use-connector-settings",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/CanvasFlow/components/ConnectorSettings",
+      "file": "use.skill.yaml"
+    },
+    {
+      "name": "use-canvas-flow-hook",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/CanvasFlow/hooks/useCanvasFlow",
+      "file": "use.skill.yaml"
+    },
+    {
+      "name": "use-canvas-flow",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/CanvasFlow",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1793992921668,
+      "name": "MessageBubble",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/Chat/MessageBubble",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1793992921679,
+      "name": "Messages",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/Chat/Messages",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1793992921693,
+      "name": "UserInput",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/Chat/UserInput",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794004818271,
+      "name": "use useChat",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/Chat/hooks/useChat",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1793992921651,
+      "name": "Chat",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/Chat",
+      "file": "use.skill.yaml"
+    },
+    {
       "id": 1793990737743,
       "name": "CodeViewer",
       "type": "skill",
@@ -919,6 +1960,38 @@
       "file": "use.skill.yaml"
     },
     {
+      "name": "useCodeViewPopupLink",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/CodeViewPopupLink/hooks/useCodeViewPopupLink",
+      "file": "use.skill.yaml"
+    },
+    {
+      "name": "CodeViewPopupLink",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/CodeViewPopupLink",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794014932878,
+      "name": "use useDatePicker",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/DatePicker/hooks/useDatePicker",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794014932868,
+      "name": "use DatePicker",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/DatePicker",
+      "file": "use.skill.yaml"
+    },
+    {
+      "name": "DropdownButton",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/DropdownButton",
+      "file": "use.skill.yaml"
+    },
+    {
       "id": 1794528643982,
       "name": "useDumBot",
       "type": "skill",
@@ -937,6 +2010,83 @@
       "name": "use-float-window",
       "type": "skill",
       "path": "C:/rraabbiitt-labs-control-center/src/components/FloatWindow",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794004818627,
+      "name": "use TreeItem",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/FolderTree/TreeItem",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794004818611,
+      "name": "use useFolderTree",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/FolderTree/hooks/useFolderTree",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1793993518462,
+      "name": "FolderTree",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/FolderTree",
+      "file": "use.skill.yaml"
+    },
+    {
+      "name": "use-full-screen-wrapper",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/FullScreenWrapper",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794004818666,
+      "name": "use useGridAreaSelect",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/GridAreaSelect/hooks/useGridAreaSelect",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794004818682,
+      "name": "use resolve-layout",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/GridAreaSelect/js/resolve-layout",
+      "file": "use.skill.yaml"
+    },
+    {
+      "name": "use-grid-area-select",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/GridAreaSelect",
+      "file": "use.skill.yaml"
+    },
+    {
+      "name": "use-grid-cell",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/GridCell",
+      "file": "use.skill.yaml"
+    },
+    {
+      "name": "useGridDesigner",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/GridDesigner/hooks/useGridDesigner",
+      "file": "use.skill.yaml"
+    },
+    {
+      "name": "use-GridDesigner",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/GridDesigner",
+      "file": "use.skill.yaml"
+    },
+    {
+      "name": "GridLayoutDisplay",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/GridLayoutDisplay",
+      "file": "use.skill.yaml"
+    },
+    {
+      "name": "HelpIcon",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/HelpIcon",
       "file": "use.skill.yaml"
     },
     {
@@ -965,6 +2115,12 @@
       "name": "HybridSearch",
       "type": "skill",
       "path": "C:/rraabbiitt-labs-control-center/src/components/HybridSearch",
+      "file": "use.skill.yaml"
+    },
+    {
+      "name": "use-LoginBox",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/LoginBox",
       "file": "use.skill.yaml"
     },
     {
@@ -1003,6 +2159,81 @@
       "file": "use.skill.yaml"
     },
     {
+      "id": 1794004818696,
+      "name": "use GraphFootprint",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/NetworkGraph/GraphFootprint",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794004818710,
+      "name": "use GraphLegend",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/NetworkGraph/GraphLegend",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794004818738,
+      "name": "use GraphSearch",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/NetworkGraph/GraphSearch",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794004818760,
+      "name": "use GraphSelection",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/NetworkGraph/GraphSelection",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794004818794,
+      "name": "use useNetworkGraph",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/NetworkGraph/hooks/useNetworkGraph",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794004818812,
+      "name": "use NetworkGraph",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/NetworkGraph",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794004818991,
+      "name": "use usePassProps",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/PassProps/hooks/usePassProps",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794004819101,
+      "name": "use pass-props-to-children",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/PassProps/js/pass-props-to-children",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794004819145,
+      "name": "use PassProps",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/PassProps",
+      "file": "use.skill.yaml"
+    },
+    {
+      "name": "use-popup",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/Popup",
+      "file": "use.skill.yaml"
+    },
+    {
+      "name": "use-progress-bar",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/ProgressBar",
+      "file": "use.skill.yaml"
+    },
+    {
       "id": 1794441720407,
       "name": "use-rabbit-canvas",
       "type": "skill",
@@ -1020,6 +2251,13 @@
       "name": "use-rabbit-head",
       "type": "skill",
       "path": "C:/rraabbiitt-labs-control-center/src/components/RabbitHead",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794004819732,
+      "name": "use SearchBar",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/SearchBar",
       "file": "use.skill.yaml"
     },
     {
@@ -1051,6 +2289,33 @@
       "file": "use.skill.yaml"
     },
     {
+      "id": 1793796407958,
+      "name": "use-searchable-select",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/SearchableSelect/hooks/useSearchableSelect",
+      "file": "use.skill.yaml"
+    },
+    {
+      "name": "use",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/SearchableSelect",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794004819793,
+      "name": "use RailCanvas",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/Shell/RailCanvas",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794004819865,
+      "name": "use Shell",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/Shell",
+      "file": "use.skill.yaml"
+    },
+    {
       "id": 1794408972779,
       "name": "SiteNav",
       "type": "skill",
@@ -1069,6 +2334,83 @@
       "name": "SmartTooltip",
       "type": "skill",
       "path": "C:/rraabbiitt-labs-control-center/src/components/SmartTooltip",
+      "file": "use.skill.yaml"
+    },
+    {
+      "name": "use-star-ranking",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/StarRanking",
+      "file": "use.skill.yaml"
+    },
+    {
+      "name": "use-statecell",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/StatCells/components/StateCell",
+      "file": "use.skill.yaml"
+    },
+    {
+      "name": "use-statcells",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/StatCells",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794004820027,
+      "name": "use useStatelesssForm",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/StatelesssForm/hooks/useStatelesssForm",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794004820065,
+      "name": "use StatelesssForm",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/StatelesssForm",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794000378956,
+      "name": "use useStatusBar",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/StatusBar/hooks/useStatusBar",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794000378940,
+      "name": "use StatusBar",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/StatusBar",
+      "file": "use.skill.yaml"
+    },
+    {
+      "name": "use TabNav",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/TabNav",
+      "file": "use.skill.yaml"
+    },
+    {
+      "name": "useTestComponent",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/TestComponent/hooks/useTestComponent",
+      "file": "use.skill.yaml"
+    },
+    {
+      "name": "TestComponent",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/TestComponent",
+      "file": "use.skill.yaml"
+    },
+    {
+      "name": "ToggleGroup",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/ToggleGroup",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794445359102,
+      "name": "ToggleSection",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/ToggleSection",
       "file": "use.skill.yaml"
     },
     {
@@ -1114,6 +2456,26 @@
       "file": "use.skill.yaml"
     },
     {
+      "id": 1794232180623,
+      "name": "generate-word-array-from-text",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/WordGraphs/js/generate-word-array-from-text",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794231709076,
+      "name": "get-words-from-settings",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/WordGraphs/js/get-words-from-settings",
+      "file": "use.skill.yaml"
+    },
+    {
+      "name": "WordGraphs",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/components/WordGraphs",
+      "file": "use.skill.yaml"
+    },
+    {
       "id": 1794536548615,
       "name": "useWorldComponents",
       "type": "skill",
@@ -1128,10 +2490,60 @@
       "file": "use.skill.yaml"
     },
     {
+      "name": "useComponentFactory",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/dashboards/Factory/components/ComponentFactory/hooks/useComponentFactory",
+      "file": "use.skill.yaml"
+    },
+    {
+      "name": "ComponentFactory",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/dashboards/Factory/components/ComponentFactory",
+      "file": "use.skill.yaml"
+    },
+    {
+      "name": "useFactory",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/dashboards/Factory/hooks/useFactory",
+      "file": "use.skill.yaml"
+    },
+    {
+      "name": "Factory",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/dashboards/Factory",
+      "file": "use.skill.yaml"
+    },
+    {
+      "name": "useKeypress",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/hooks/useKeypress",
+      "file": "use.skill.yaml"
+    },
+    {
       "id": 1794417083886,
       "name": "use-window-gesture",
       "type": "skill",
       "path": "C:/rraabbiitt-labs-control-center/src/hooks/useWindowGesture",
+      "file": "use.skill.yaml"
+    },
+    {
+      "name": "use-drag-scroll",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/js/drag-scroll",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794003953621,
+      "name": "use drag-sort",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/js/drag-sort",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794003953640,
+      "name": "use resize-columns",
+      "type": "skill",
+      "path": "C:/rraabbiitt-labs-control-center/src/js/resize-columns",
       "file": "use.skill.yaml"
     },
     {

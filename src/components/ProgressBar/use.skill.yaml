@@ -1,0 +1,10 @@
+name: use-progress-bar
+type: skill
+path: src/components/ProgressBar
+file: use.skill.yaml
+instructions: >-
+  Import ProgressBar and pass value. Default scale auto accepts a fraction up to 1
+  or a percentage above 1; use scale percent to represent exactly 1 percent, or
+  scale fraction for explicit fractional values. Values clamp to 0–100 and nonfinite
+  values render as zero. label true displays a percentage; a string supplies custom
+  text. title or name labels the accessible progressbar. No state or side effects.

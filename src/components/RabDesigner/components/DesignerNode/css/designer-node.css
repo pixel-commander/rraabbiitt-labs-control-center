@@ -1,0 +1,79 @@
+.designer-node {
+  position: absolute;
+  box-sizing: border-box;
+  min-width: 0;
+  min-height: 0;
+  white-space: pre-wrap;
+}
+.designer-node-flow {
+  position: relative;
+}
+.designer-node-content {
+  pointer-events: none;
+  display: block;
+  line-height: 1.4;
+}
+.designer-node-children {
+  position: absolute;
+  inset: 0;
+}
+.designer-node-label {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  font-size: 12px;
+  line-height: 20px;
+  padding: 0 6px;
+  white-space: nowrap;
+  transform: scale(calc(1 / var(--canvas-scale)));
+  transform-origin: bottom left;
+  pointer-events: none;
+}
+.designer-handle {
+  position: absolute;
+  z-index: 3;
+  width: 8px;
+  height: 8px;
+  box-sizing: border-box;
+  transform: translate(-50%, -50%) scale(calc(1 / var(--canvas-scale)));
+}
+.designer-handle-nw {
+  left: 0;
+  top: 0;
+  cursor: nwse-resize;
+}
+.designer-handle-n {
+  left: 50%;
+  top: 0;
+  cursor: ns-resize;
+}
+.designer-handle-ne {
+  left: 100%;
+  top: 0;
+  cursor: nesw-resize;
+}
+.designer-handle-e {
+  left: 100%;
+  top: 50%;
+  cursor: ew-resize;
+}
+.designer-handle-se {
+  left: 100%;
+  top: 100%;
+  cursor: nwse-resize;
+}
+.designer-handle-s {
+  left: 50%;
+  top: 100%;
+  cursor: ns-resize;
+}
+.designer-handle-sw {
+  left: 0;
+  top: 100%;
+  cursor: nesw-resize;
+}
+.designer-handle-w {
+  left: 0;
+  top: 50%;
+  cursor: ew-resize;
+}

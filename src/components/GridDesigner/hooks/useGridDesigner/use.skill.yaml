@@ -1,0 +1,4 @@
+schema: 1
+intent: use
+name: useGridDesigner
+instructions: Pass the complete GridDesignerProps bag. Use returned pointer handlers on the canvas. Parent must apply handleChange data.

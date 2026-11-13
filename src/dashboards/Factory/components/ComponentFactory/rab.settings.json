@@ -1,0 +1,226 @@
+{
+  "action_type": "use",
+  "id": 1794313041796,
+  "name": "ComponentFactory",
+  "title": "ComponentFactory",
+  "description": "",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "ComponentFactory.tsx",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/dashboards/Factory/components/ComponentFactory",
+  "paths": [
+    {
+      "name": "Canvas.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "CodePreview.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "ComponentFactory.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "ComponentFactory.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "Elements.tsx",
+      "path": "Elements",
+      "type": "tsx"
+    },
+    {
+      "name": "Elements.types.ts",
+      "path": "Elements",
+      "type": "ts"
+    },
+    {
+      "name": "elements.css",
+      "path": "Elements/css",
+      "type": "css"
+    },
+    {
+      "name": "Footer.tsx",
+      "path": "Footer",
+      "type": "tsx"
+    },
+    {
+      "name": "footer.css",
+      "path": "Footer/css",
+      "type": "css"
+    },
+    {
+      "name": "GridAreaSelectPopup.tsx",
+      "path": "GridAreaSelectPopup",
+      "type": "tsx"
+    },
+    {
+      "name": "GridAreaSelectPopup.types.ts",
+      "path": "GridAreaSelectPopup",
+      "type": "ts"
+    },
+    {
+      "name": "grid-area-select-popup.css",
+      "path": "GridAreaSelectPopup/css",
+      "type": "css"
+    },
+    {
+      "name": "GridCol.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "Header.tsx",
+      "path": "Header",
+      "type": "tsx"
+    },
+    {
+      "name": "header.css",
+      "path": "Header/css",
+      "type": "css"
+    },
+    {
+      "name": "Layers.tsx",
+      "path": "Layers",
+      "type": "tsx"
+    },
+    {
+      "name": "Layers.types.ts",
+      "path": "Layers",
+      "type": "ts"
+    },
+    {
+      "name": "layers.css",
+      "path": "Layers/css",
+      "type": "css"
+    },
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "SettingsCol.tsx",
+      "path": "SettingsCol",
+      "type": "tsx"
+    },
+    {
+      "name": "settings-col.css",
+      "path": "SettingsCol/css",
+      "type": "css"
+    },
+    {
+      "name": "SizeFields.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "StyleCol.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "Stylers.tsx",
+      "path": "Stylers",
+      "type": "tsx"
+    },
+    {
+      "name": "TODO.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "component-factory.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": ".gitkeep",
+      "path": "demo",
+      "type": ""
+    },
+    {
+      "name": "Demo.tsx",
+      "path": "demo",
+      "type": "tsx"
+    },
+    {
+      "name": "layout.json",
+      "path": "demo",
+      "type": "json"
+    },
+    {
+      "name": "theme.ts",
+      "path": "demo",
+      "type": "ts"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "README.txt",
+      "path": "hooks/useComponentFactory",
+      "type": "txt"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "hooks/useComponentFactory",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "hooks/useComponentFactory",
+      "type": "yaml"
+    },
+    {
+      "name": "useComponentFactory.ts",
+      "path": "hooks/useComponentFactory",
+      "type": "ts"
+    },
+    {
+      "name": "compositionCode.ts",
+      "path": "js",
+      "type": "ts"
+    },
+    {
+      "name": "gridSlots.ts",
+      "path": "js",
+      "type": "ts"
+    },
+    {
+      "name": "paintStyles.ts",
+      "path": "js",
+      "type": "ts"
+    },
+    {
+      "name": "renderStyles.ts",
+      "path": "js",
+      "type": "ts"
+    },
+    {
+      "name": "sizeStyles.ts",
+      "path": "js",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

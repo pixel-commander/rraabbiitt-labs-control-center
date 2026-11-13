@@ -1,0 +1,91 @@
+{
+  "action_type": "use",
+  "id": 1794022535744,
+  "name": "GridDesigner",
+  "title": "GridDesigner",
+  "description": "Controlled visual grid editor with drawing, moving, resizing, track sizing and parent-owned CSS saving.",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "GridDesigner.tsx",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/GridDesigner",
+  "paths": [
+    {
+      "name": "GridDesigner.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "GridDesigner.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "grid-designer.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": "Demo.tsx",
+      "path": "demo",
+      "type": "tsx"
+    },
+    {
+      "name": "demo.css",
+      "path": "demo",
+      "type": "css"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "README.txt",
+      "path": "hooks/useGridDesigner",
+      "type": "txt"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "hooks/useGridDesigner",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "hooks/useGridDesigner",
+      "type": "yaml"
+    },
+    {
+      "name": "useGridDesigner.ts",
+      "path": "hooks/useGridDesigner",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": "js/geometry",
+      "type": "txt"
+    },
+    {
+      "name": "geometry.ts",
+      "path": "js/geometry",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

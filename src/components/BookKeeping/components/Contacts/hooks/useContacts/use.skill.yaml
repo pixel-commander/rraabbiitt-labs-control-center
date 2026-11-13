@@ -1,0 +1,7 @@
+schema: 1
+intent: use
+name: use-contacts-hook
+title: Contact search state
+instructions: Pass the contact items. Use rows for rendering and setQuery for search input.
+implementation:
+  - file: useContacts.ts

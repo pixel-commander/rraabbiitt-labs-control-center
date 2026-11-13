@@ -1,0 +1,8 @@
+schema: 1
+intent: use
+name: use-LoginBox
+title: Use LoginBox
+instructions: >-
+  Read README.txt and LoginBox.types.ts. Supply controlled data and canonical handlers.
+  Callbacks receive data, type and the complete incoming props bag.
+  Parent owns persistence and business decisions. Demo is available in the URL StyleGuide.

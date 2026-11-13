@@ -1,0 +1,26 @@
+schema: 1
+intent: use
+id: 1793993518462
+name: FolderTree
+path: src/components/FolderTree
+file: FolderTree.tsx
+owner:
+  id: 1793993362977
+  path: src/components/FolderTree
+  file: rab.settings.json
+implementation:
+  - path: src/components/FolderTree
+    file: FolderTree.tsx
+instructions: "Render FolderTree with items: FolderTreeNode[]. Each node
+  requires name and a unique path; children recursively contains further nodes
+  without a fixed depth limit. type=folder marks empty folders, and type=file
+  marks files; supplying children also identifies a folder. icon and
+  expandedIcon accept custom ReactNode per node; fileIcon/folderIcon supply
+  default icons, and null hides an icon. selected is the controlled selected
+  path. handleClick receives the original node and a file or folder action; the
+  parent updates selected. start_state is open or collapsed (default collapsed)
+  for folder expansion. Returns an expandable file/folder list, with keyboard
+  arrow/Home/End navigation and native button activation. No filesystem access
+  or network loading."
+
+# Per-item overrides: Icon (JSX.Element) overrides icon maps; color overrides the row and icon color.

@@ -1,0 +1,36 @@
+{
+  "action_type": "list",
+  "id": 1794231709075,
+  "name": "get-words-from-settings",
+  "title": "Get Words From Settings",
+  "description": "Extract cleaned words from top-level name, title, description and path strings in parsed JSON.",
+  "type": "function",
+  "tags": [
+    "words",
+    "settings"
+  ],
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/WordGraphs/js/get-words-from-settings",
+  "file": "get-words-from-settings.ts",
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "get-words-from-settings.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

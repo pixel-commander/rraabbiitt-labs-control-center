@@ -1,48 +1,270 @@
 {
-  "name": "StyleGuide",
   "type": "dependencies",
   "paths": [
     {
-      "name": "../../components/Tooltip/demo/Demo",
-      "path": "../../components/Tooltip/demo/Demo",
+      "file": "StyleGuidePage.tsx",
       "type": "import",
-      "file": "StyleGuidePage.tsx"
+      "path": "../../components/BookKeeping/components/Contacts/demo/Demo",
+      "name": "../../components/BookKeeping/components/Contacts/demo/Demo"
     },
     {
-      "name": "../../components/MessageBox/demo/Demo",
-      "path": "../../components/MessageBox/demo/Demo",
+      "file": "StyleGuidePage.tsx",
       "type": "import",
-      "file": "StyleGuidePage.tsx"
+      "path": "../../components/BookKeeping/components/Expenses/demo/Demo",
+      "name": "../../components/BookKeeping/components/Expenses/demo/Demo"
     },
     {
-      "name": "../../components/SiteNav/demo/Demo",
-      "path": "../../components/SiteNav/demo/Demo",
+      "file": "StyleGuidePage.tsx",
       "type": "import",
-      "file": "StyleGuidePage.tsx"
+      "path": "../../components/BookKeeping/demo/Demo",
+      "name": "../../components/BookKeeping/demo/Demo"
     },
     {
-      "name": "../../components/CodeEditAndView/demo/Demo",
+      "file": "StyleGuidePage.tsx",
+      "type": "import",
+      "path": "../../components/Calendar/demo/Demo",
+      "name": "../../components/Calendar/demo/Demo"
+    },
+    {
+      "file": "StyleGuidePage.tsx",
+      "type": "import",
+      "path": "../../components/CanvasFlow/demo/Demo",
+      "name": "../../components/CanvasFlow/demo/Demo"
+    },
+    {
+      "file": "StyleGuidePage.tsx",
+      "type": "import",
+      "path": "../../components/Chat/demo/Demo",
+      "name": "../../components/Chat/demo/Demo"
+    },
+    {
+      "file": "StyleGuidePage.tsx",
+      "type": "import",
       "path": "../../components/CodeEditAndView/demo/Demo",
-      "type": "import",
-      "file": "StyleGuidePage.tsx"
+      "name": "../../components/CodeEditAndView/demo/Demo"
     },
     {
-      "name": "../../components/UiElements/demo/Demo",
-      "path": "../../components/UiElements/demo/Demo",
+      "file": "StyleGuidePage.tsx",
       "type": "import",
-      "file": "StyleGuidePage.tsx"
+      "path": "../../components/CodeViewPopupLink/demo/Demo",
+      "name": "../../components/CodeViewPopupLink/demo/Demo"
     },
     {
-      "name": "../../components/SearchResponses/demo/Demo",
+      "file": "StyleGuidePage.tsx",
+      "type": "import",
+      "path": "../../components/DatePicker/demo/Demo",
+      "name": "../../components/DatePicker/demo/Demo"
+    },
+    {
+      "file": "StyleGuidePage.tsx",
+      "type": "import",
+      "path": "../../components/DropdownButton/demo/Demo",
+      "name": "../../components/DropdownButton/demo/Demo"
+    },
+    {
+      "file": "StyleGuidePage.tsx",
+      "type": "import",
+      "path": "../../components/DumBot/demo/Demo",
+      "name": "../../components/DumBot/demo/Demo"
+    },
+    {
+      "file": "StyleGuidePage.tsx",
+      "type": "import",
+      "path": "../../components/FloatWindow/demo/Demo",
+      "name": "../../components/FloatWindow/demo/Demo"
+    },
+    {
+      "file": "StyleGuidePage.tsx",
+      "type": "import",
+      "path": "../../components/FolderTree/demo/Demo",
+      "name": "../../components/FolderTree/demo/Demo"
+    },
+    {
+      "file": "StyleGuidePage.tsx",
+      "type": "import",
+      "path": "../../components/FullScreenWrapper/demo/Demo",
+      "name": "../../components/FullScreenWrapper/demo/Demo"
+    },
+    {
+      "file": "StyleGuidePage.tsx",
+      "type": "import",
+      "path": "../../components/GridAreaSelect/demo/Demo",
+      "name": "../../components/GridAreaSelect/demo/Demo"
+    },
+    {
+      "file": "StyleGuidePage.tsx",
+      "type": "import",
+      "path": "../../components/GridCell/demo/Demo",
+      "name": "../../components/GridCell/demo/Demo"
+    },
+    {
+      "file": "StyleGuidePage.tsx",
+      "type": "import",
+      "path": "../../components/GridDesigner/demo/Demo",
+      "name": "../../components/GridDesigner/demo/Demo"
+    },
+    {
+      "file": "StyleGuidePage.tsx",
+      "type": "import",
+      "path": "../../components/GridLayoutDisplay/demo/Demo",
+      "name": "../../components/GridLayoutDisplay/demo/Demo"
+    },
+    {
+      "file": "StyleGuidePage.tsx",
+      "type": "import",
+      "path": "../../components/HelpIcon/demo/Demo",
+      "name": "../../components/HelpIcon/demo/Demo"
+    },
+    {
+      "file": "StyleGuidePage.tsx",
+      "type": "import",
+      "path": "../../components/LoginBox/demo/Demo",
+      "name": "../../components/LoginBox/demo/Demo"
+    },
+    {
+      "file": "StyleGuidePage.tsx",
+      "type": "import",
+      "path": "../../components/McpViewer/demo/Demo",
+      "name": "../../components/McpViewer/demo/Demo"
+    },
+    {
+      "file": "StyleGuidePage.tsx",
+      "type": "import",
+      "path": "../../components/MessageBox/demo/Demo",
+      "name": "../../components/MessageBox/demo/Demo"
+    },
+    {
+      "file": "StyleGuidePage.tsx",
+      "type": "import",
+      "path": "../../components/NetworkGraph/demo/Demo",
+      "name": "../../components/NetworkGraph/demo/Demo"
+    },
+    {
+      "file": "StyleGuidePage.tsx",
+      "type": "import",
+      "path": "../../components/PassProps/demo/Demo",
+      "name": "../../components/PassProps/demo/Demo"
+    },
+    {
+      "file": "StyleGuidePage.tsx",
+      "type": "import",
+      "path": "../../components/Popup/demo/Demo",
+      "name": "../../components/Popup/demo/Demo"
+    },
+    {
+      "file": "StyleGuidePage.tsx",
+      "type": "import",
+      "path": "../../components/ProgressBar/demo/Demo",
+      "name": "../../components/ProgressBar/demo/Demo"
+    },
+    {
+      "file": "StyleGuidePage.tsx",
+      "type": "import",
+      "path": "../../components/RabbitHead/demo/Demo",
+      "name": "../../components/RabbitHead/demo/Demo"
+    },
+    {
+      "file": "StyleGuidePage.tsx",
+      "type": "import",
+      "path": "../../components/SearchableSelect/demo/Demo",
+      "name": "../../components/SearchableSelect/demo/Demo"
+    },
+    {
+      "file": "StyleGuidePage.tsx",
+      "type": "import",
+      "path": "../../components/SearchBar/demo/Demo",
+      "name": "../../components/SearchBar/demo/Demo"
+    },
+    {
+      "file": "StyleGuidePage.tsx",
+      "type": "import",
       "path": "../../components/SearchResponses/demo/Demo",
-      "type": "import",
-      "file": "StyleGuidePage.tsx"
+      "name": "../../components/SearchResponses/demo/Demo"
     },
     {
-      "name": "../../components/Slider/Slider",
-      "path": "../../components/Slider/Slider",
+      "file": "StyleGuidePage.tsx",
       "type": "import",
-      "file": "StyleGuidePage.tsx"
+      "path": "../../components/SiteNav/demo/Demo",
+      "name": "../../components/SiteNav/demo/Demo"
+    },
+    {
+      "file": "StyleGuidePage.tsx",
+      "type": "import",
+      "path": "../../components/Slider/demo/Demo",
+      "name": "../../components/Slider/demo/Demo"
+    },
+    {
+      "file": "StyleGuidePage.tsx",
+      "type": "import",
+      "path": "../../components/SmartTooltip/demo/Demo",
+      "name": "../../components/SmartTooltip/demo/Demo"
+    },
+    {
+      "file": "StyleGuidePage.tsx",
+      "type": "import",
+      "path": "../../components/StarRanking/demo/Demo",
+      "name": "../../components/StarRanking/demo/Demo"
+    },
+    {
+      "file": "StyleGuidePage.tsx",
+      "type": "import",
+      "path": "../../components/StatCells/demo/Demo",
+      "name": "../../components/StatCells/demo/Demo"
+    },
+    {
+      "file": "StyleGuidePage.tsx",
+      "type": "import",
+      "path": "../../components/StatusBar/demo/Demo",
+      "name": "../../components/StatusBar/demo/Demo"
+    },
+    {
+      "file": "StyleGuidePage.tsx",
+      "type": "import",
+      "path": "../../components/TabNav/demo/Demo",
+      "name": "../../components/TabNav/demo/Demo"
+    },
+    {
+      "file": "StyleGuidePage.tsx",
+      "type": "import",
+      "path": "../../components/TestComponent/demo/Demo",
+      "name": "../../components/TestComponent/demo/Demo"
+    },
+    {
+      "file": "StyleGuidePage.tsx",
+      "type": "import",
+      "path": "../../components/ToggleGroup/demo/Demo",
+      "name": "../../components/ToggleGroup/demo/Demo"
+    },
+    {
+      "file": "StyleGuidePage.tsx",
+      "type": "import",
+      "path": "../../components/ToggleSection/demo/Demo",
+      "name": "../../components/ToggleSection/demo/Demo"
+    },
+    {
+      "file": "StyleGuidePage.tsx",
+      "type": "import",
+      "path": "../../components/Tooltip/demo/Demo",
+      "name": "../../components/Tooltip/demo/Demo"
+    },
+    {
+      "file": "StyleGuidePage.tsx",
+      "type": "import",
+      "path": "../../components/UiElements/demo/Demo",
+      "name": "../../components/UiElements/demo/Demo"
+    },
+    {
+      "file": "StyleGuidePage.tsx",
+      "type": "import",
+      "path": "../../components/WordGraphs/demo/Demo",
+      "name": "../../components/WordGraphs/demo/Demo"
+    },
+    {
+      "file": "StyleGuidePage.tsx",
+      "type": "import",
+      "path": "../../components/WorldComponents/demo/Demo",
+      "name": "../../components/WorldComponents/demo/Demo"
     }
-  ]
+  ],
+  "name": "StyleGuide"
 }

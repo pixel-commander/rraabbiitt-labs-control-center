@@ -1,0 +1,136 @@
+{
+  "action_type": "use",
+  "id": 1793993362977,
+  "name": "FolderTree",
+  "title": "Folder tree",
+  "description": "Recursive folder/file list with controlled selection, expansion and custom React icons.",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "FolderTree.tsx",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/FolderTree",
+  "settings": [
+    {
+      "name": "items",
+      "type": "array",
+      "required": false,
+      "description": "Nested FolderTreeNode[]; each node has name, path, optional type, children, icon and expandedIcon."
+    },
+    {
+      "name": "selected",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "start_state",
+      "type": "string",
+      "required": false,
+      "default": "collapsed",
+      "description": "open | collapsed"
+    },
+    {
+      "name": "handleClick",
+      "type": "function",
+      "required": false
+    }
+  ],
+  "paths": [
+    {
+      "name": "FolderTree.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "FolderTree.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "README.txt",
+      "path": "TreeItem",
+      "type": "txt"
+    },
+    {
+      "name": "TreeItem.tsx",
+      "path": "TreeItem",
+      "type": "tsx"
+    },
+    {
+      "name": "TreeItem.types.ts",
+      "path": "TreeItem",
+      "type": "ts"
+    },
+    {
+      "name": "tree-item.css",
+      "path": "TreeItem/css",
+      "type": "css"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "TreeItem",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "TreeItem",
+      "type": "yaml"
+    },
+    {
+      "name": "folder-tree.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": ".gitkeep",
+      "path": "demo",
+      "type": ""
+    },
+    {
+      "name": "Demo.tsx",
+      "path": "demo",
+      "type": "tsx"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "README.txt",
+      "path": "hooks/useFolderTree",
+      "type": "txt"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "hooks/useFolderTree",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "hooks/useFolderTree",
+      "type": "yaml"
+    },
+    {
+      "name": "useFolderTree.ts",
+      "path": "hooks/useFolderTree",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

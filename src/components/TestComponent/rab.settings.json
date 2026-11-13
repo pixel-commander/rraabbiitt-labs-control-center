@@ -1,0 +1,76 @@
+{
+  "action_type": "use",
+  "id": 1794367187480,
+  "name": "TestComponent",
+  "title": "TestComponent",
+  "description": "going to migrate rebuild magic box around this new system of searching",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "TestComponent.tsx",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/TestComponent",
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "TestComponent.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "TestComponent.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "test-component.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": ".gitkeep",
+      "path": "demo",
+      "type": ""
+    },
+    {
+      "name": "Demo.tsx",
+      "path": "demo",
+      "type": "tsx"
+    },
+    {
+      "name": "README.txt",
+      "path": "hooks/useTestComponent",
+      "type": "txt"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "hooks/useTestComponent",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "hooks/useTestComponent",
+      "type": "yaml"
+    },
+    {
+      "name": "useTestComponent.ts",
+      "path": "hooks/useTestComponent",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+.designer-html-frame {
+  position: absolute;
+}
+.designer-html-node {
+  min-width: 0;
+  white-space: pre-wrap;
+}

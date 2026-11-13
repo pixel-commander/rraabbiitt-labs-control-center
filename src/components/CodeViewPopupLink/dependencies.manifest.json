@@ -1,0 +1,48 @@
+{
+  "name": "CodeViewPopupLink",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../FloatWindow/FloatWindow",
+      "path": "../FloatWindow/FloatWindow",
+      "type": "import",
+      "file": "CodeViewPopupLink.tsx"
+    },
+    {
+      "name": "../CodeEditAndView/CodeEditAndView",
+      "path": "../CodeEditAndView/CodeEditAndView",
+      "type": "import",
+      "file": "CodeViewPopupLink.tsx"
+    },
+    {
+      "name": "../FolderTree/TreeItem/css/tree-item.css",
+      "path": "../FolderTree/TreeItem/css/tree-item.css",
+      "type": "import",
+      "file": "CodeViewPopupLink.tsx"
+    },
+    {
+      "name": "../../HouseKeys.types",
+      "path": "../../HouseKeys.types",
+      "type": "import",
+      "file": "CodeViewPopupLink.types.ts"
+    },
+    {
+      "name": "../CodeEditAndView/CodeEditAndView.types",
+      "path": "../CodeEditAndView/CodeEditAndView.types",
+      "type": "import",
+      "file": "CodeViewPopupLink.types.ts"
+    },
+    {
+      "name": "../FloatWindow/FloatWindow.types",
+      "path": "../FloatWindow/FloatWindow.types",
+      "type": "import",
+      "file": "CodeViewPopupLink.types.ts"
+    },
+    {
+      "name": "../../../FloatWindow/FloatWindow.types",
+      "path": "../FloatWindow/FloatWindow.types",
+      "type": "import",
+      "file": "hooks/useCodeViewPopupLink/useCodeViewPopupLink.ts"
+    }
+  ]
+}

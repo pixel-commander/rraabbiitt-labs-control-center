@@ -1,0 +1,25 @@
+schema: 1
+intent: use
+owner:
+  id: 1794014932851
+  file: rab.settings.json
+id: 1794014932878
+name: use useDatePicker
+title: Use useDatePicker
+description: Numeric date selection following HouseKeys.
+type: function
+file: use.skill.yaml
+tags: []
+implementation:
+- file: useDatePicker.ts
+context: []
+inputs: {}
+outputs: {}
+instructions: Pass selected as a sorted pair of millisecond timestamps. Drag selects
+  a range and handleSelect returns the pair on release; a click returns [date, date].
+  handleSelect([start, end], "date-picker", props) reports local midnight. Parent
+  owns selected. See README.txt for open state and styling.
+checks: []
+examples: []
+routes: []
+provenance: []

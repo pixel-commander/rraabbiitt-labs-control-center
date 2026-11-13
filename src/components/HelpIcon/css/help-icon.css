@@ -1,0 +1,29 @@
+@layer components {
+  .help-icon {
+    display: inline-grid;
+    place-items: center;
+    inline-size: 1rem;
+    block-size: 1rem;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    color: var(--content-muted, #98a1b3);
+    background: transparent;
+    font: inherit;
+    font-size: 0.7rem;
+    font-weight: 700;
+    line-height: 1;
+    cursor: help;
+  }
+
+  .help-icon:hover {
+    color: var(--accent-secondary, #9b8aff);
+  }
+
+  .help-icon:focus-visible {
+    color: var(--accent-secondary, #9b8aff);
+    outline: 2px solid var(--border-focus, var(--accent-secondary, #9b8aff));
+    outline-offset: 2px;
+  }
+}

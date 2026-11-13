@@ -1,0 +1,28 @@
+schema: 1
+intent: use
+owner:
+  id: 1793975199132
+  path: src/components/AppHeader
+  file: rab.settings.json
+id: 1794004818062
+name: use AppHeader
+title: Use AppHeader
+description: Application brand, page navigation, and user identity.
+type: function
+path: C:\rraabbiitt-react-components\src\components\AppHeader
+file: use.skill.yaml
+tags: []
+implementation:
+  - path: src/components/AppHeader
+    file: AppHeader.tsx
+context: []
+inputs: {}
+outputs: {}
+instructions: Read README.txt and AppHeader.tsx for the current contract. Render this component with
+  the props below. Application data and persistence remain with the caller. Preserve supplied false,
+  zero and empty-string values. Use theme/component tokens, supplied class props, or parent CSS for
+  UI overrides.
+checks: []
+examples: []
+routes: []
+provenance: []

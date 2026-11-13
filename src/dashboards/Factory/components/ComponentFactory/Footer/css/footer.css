@@ -1,0 +1,18 @@
+.component-factory-footer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-sm);
+  color: var(--content-muted);
+  font-size: var(--font-size-sm);
+}
+
+.component-factory-footer__guides {
+  cursor: pointer;
+}
+
+.component-factory-footer__guides input {
+  margin-inline-end: var(--space-xs);
+  vertical-align: middle;
+  accent-color: var(--accent-default);
+}

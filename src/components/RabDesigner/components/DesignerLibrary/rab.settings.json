@@ -1,0 +1,40 @@
+{
+  "action_type": "use",
+  "id": 1793330118447,
+  "name": "DesignerLibrary",
+  "title": "DesignerLibrary",
+  "description": "",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/RabDesigner/components/DesignerLibrary",
+  "paths": [
+    {
+      "name": "DesignerLibrary.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "DesignerLibrary.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "designer-library.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": "useDesignerLibrary.ts",
+      "path": "hooks",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    }
+  ]
+}

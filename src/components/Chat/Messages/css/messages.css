@@ -1,0 +1,5 @@
+@layer components {
+  .messages {
+    padding: var(--space-sm);
+  }
+}

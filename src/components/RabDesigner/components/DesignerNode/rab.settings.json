@@ -1,0 +1,40 @@
+{
+  "action_type": "use",
+  "id": 1793329534122,
+  "name": "DesignerNode",
+  "title": "DesignerNode",
+  "description": "",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/RabDesigner/components/DesignerNode",
+  "paths": [
+    {
+      "name": "DesignerNode.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "DesignerNode.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "designer-node.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": "useDesignerNode.ts",
+      "path": "hooks",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    }
+  ]
+}

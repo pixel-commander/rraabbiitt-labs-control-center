@@ -1,0 +1,8 @@
+schema: 1
+intent: use
+name: use-GridDesigner
+title: Use GridDesigner
+instructions: >-
+  Read README.txt and GridDesigner.types.ts. Supply controlled data and canonical handlers.
+  Callbacks receive data, type and the complete incoming props bag.
+  Parent owns persistence and business decisions. Demo is available in the URL StyleGuide.

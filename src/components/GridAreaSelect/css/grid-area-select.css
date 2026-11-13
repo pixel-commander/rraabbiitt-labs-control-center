@@ -1,0 +1,101 @@
+@layer components {
+  .grid-area-select {
+    position: relative;
+    min-block-size: 0;
+    block-size: 100%;
+    touch-action: none;
+    user-select: none;
+  }
+  .grid-area-select__cell {
+    pointer-events: none;
+  }
+  .grid-area-select__area {
+    position: relative;
+    min-inline-size: 0;
+    min-block-size: 0;
+    overflow: hidden;
+    z-index: 1;
+  }
+  .grid-area-select__move {
+    cursor: move;
+    text-align: start;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .grid-area-select__body {
+    position: relative;
+  }
+  .grid-area-select__content {
+    position: absolute;
+    inset: 0;
+    overflow: auto;
+    padding: var(--space-sm);
+    user-select: text;
+  }
+  .grid-area-select__resize {
+    position: absolute;
+    z-index: 2;
+  }
+  .grid-area-select__resize:hover {
+    background-color: var(
+      --grid-area-select-resize-hover,
+      var(--accent-default)
+    );
+  }
+  .grid-area-select__resize--n,
+  .grid-area-select__resize--s {
+    inset-inline: var(--space-sm);
+    block-size: 0.5rem;
+    cursor: ns-resize;
+  }
+  .grid-area-select__resize--n {
+    top: 0;
+  }
+  .grid-area-select__resize--s {
+    bottom: 0;
+  }
+  .grid-area-select__resize--e,
+  .grid-area-select__resize--w {
+    inset-block: var(--space-sm);
+    inline-size: 0.5rem;
+    cursor: ew-resize;
+  }
+  .grid-area-select__resize--e {
+    right: 0;
+  }
+  .grid-area-select__resize--w {
+    left: 0;
+  }
+  .grid-area-select__resize--ne,
+  .grid-area-select__resize--nw,
+  .grid-area-select__resize--se,
+  .grid-area-select__resize--sw {
+    inline-size: 0.6rem;
+    block-size: 0.6rem;
+  }
+  .grid-area-select__resize--ne {
+    right: 0;
+    top: 0;
+    cursor: nesw-resize;
+  }
+  .grid-area-select__resize--nw {
+    left: 0;
+    top: 0;
+    cursor: nwse-resize;
+  }
+  .grid-area-select__resize--se {
+    right: 0;
+    bottom: 0;
+    cursor: nwse-resize;
+  }
+  .grid-area-select__resize--sw {
+    left: 0;
+    bottom: 0;
+    cursor: nesw-resize;
+  }
+  .grid-area-select__preview {
+    pointer-events: none;
+    z-index: 3;
+  }
+}

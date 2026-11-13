@@ -1,0 +1,25 @@
+{
+  "action_type": "use",
+  "id": 1793329365830,
+  "name": "SiteNav",
+  "title": "SiteNav",
+  "description": "",
+  "type": "navigation",
+  "tags": [
+    "react",
+    "navigation"
+  ],
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/RabDesigner/components/SiteNav",
+  "paths": [
+    {
+      "name": "SiteNav.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    }
+  ]
+}

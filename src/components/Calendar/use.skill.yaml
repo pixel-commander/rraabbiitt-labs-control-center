@@ -1,0 +1,27 @@
+schema: 1
+intent: use
+owner:
+  id: 1793976288008
+  file: rab.settings.json
+id: 1794000796693
+name: use Calendar
+title: Use Calendar
+description: Presentational calendar with month, multi-week and day views, date navigation,
+  event selection and add-event callbacks. The caller owns selected date and view.
+type: function
+file: use.skill.yaml
+tags: []
+implementation:
+- file: Calendar.tsx
+context: []
+inputs: {}
+outputs: {}
+instructions: render({ event, date }, "event") customizes event content only; date
+  cells retain their standard markup. Render Calendar with events using HouseKeys
+  plus color. Event date is a numeric timestamp; title or name supplies display text.
+  Parent owns value and view. handleSelect(data, type, props) reports calendar-event
+  with the complete event, calendar-date with the selected timestamp, calendar-previous/calendar-next
+  with the target timestamp, and calendar-view with day, week or month. handleClick(timestamp,
+  "calendar-add-event", props) is reserved for the add-event button. has_views controls
+  view buttons. Calendar fills its container; fixed preview heights belong in the
+  demo. Calendar styles live in css/calendar.css.

@@ -1,0 +1,81 @@
+{
+  "action_type": "use",
+  "id": 1794162491192,
+  "name": "CodeViewPopupLink",
+  "title": "CodeViewPopupLink",
+  "description": "Code popup with caller-owned source and persistence.",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "CodeViewPopupLink.tsx",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/CodeViewPopupLink",
+  "paths": [
+    {
+      "name": "CodeViewPopupLink.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "CodeViewPopupLink.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "code-view-popup-link.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": ".gitkeep",
+      "path": "demo",
+      "type": ""
+    },
+    {
+      "name": "Demo.tsx",
+      "path": "demo",
+      "type": "tsx"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "README.txt",
+      "path": "hooks/useCodeViewPopupLink",
+      "type": "txt"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "hooks/useCodeViewPopupLink",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "hooks/useCodeViewPopupLink",
+      "type": "yaml"
+    },
+    {
+      "name": "useCodeViewPopupLink.ts",
+      "path": "hooks/useCodeViewPopupLink",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

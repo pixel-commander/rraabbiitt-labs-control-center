@@ -1,0 +1,646 @@
+{
+  "action_type": "use",
+  "id": 1793329365831,
+  "name": "RABDesigner",
+  "title": "RABDesigner",
+  "description": "",
+  "type": "dashboard",
+  "tags": [
+    "react",
+    "dashboard"
+  ],
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/RabDesigner",
+  "file": "RABDesigner.tsx",
+  "paths": [
+    {
+      "name": "RABDesigner.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "RABDesigner.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "README.md",
+      "path": ".",
+      "type": "md"
+    },
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "designer.mjs",
+      "path": "api",
+      "type": "mjs"
+    },
+    {
+      "name": "designer.test.mjs",
+      "path": "api",
+      "type": "mjs"
+    },
+    {
+      "name": "code-rewivew.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "DesignerCanvas.tsx",
+      "path": "components/DesignerCanvas",
+      "type": "tsx"
+    },
+    {
+      "name": "DesignerCanvas.types.ts",
+      "path": "components/DesignerCanvas",
+      "type": "ts"
+    },
+    {
+      "name": "designer-canvas.css",
+      "path": "components/DesignerCanvas/css",
+      "type": "css"
+    },
+    {
+      "name": "useDesignerCanvas.ts",
+      "path": "components/DesignerCanvas/hooks",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "components/DesignerCanvas",
+      "type": "json"
+    },
+    {
+      "name": "DesignerColor.tsx",
+      "path": "components/DesignerColor",
+      "type": "tsx"
+    },
+    {
+      "name": "DesignerColor.types.ts",
+      "path": "components/DesignerColor",
+      "type": "ts"
+    },
+    {
+      "name": "designer-color.css",
+      "path": "components/DesignerColor/css",
+      "type": "css"
+    },
+    {
+      "name": "useDesignerColor.ts",
+      "path": "components/DesignerColor/hooks",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "components/DesignerColor",
+      "type": "json"
+    },
+    {
+      "name": "DesignerComposition.tsx",
+      "path": "components/DesignerComposition",
+      "type": "tsx"
+    },
+    {
+      "name": "DesignerComposition.types.ts",
+      "path": "components/DesignerComposition",
+      "type": "ts"
+    },
+    {
+      "name": "designer-composition.css",
+      "path": "components/DesignerComposition/css",
+      "type": "css"
+    },
+    {
+      "name": "useDesignerComposition.ts",
+      "path": "components/DesignerComposition/hooks",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "components/DesignerComposition",
+      "type": "json"
+    },
+    {
+      "name": "DesignerHtmlNode.tsx",
+      "path": "components/DesignerHtmlNode",
+      "type": "tsx"
+    },
+    {
+      "name": "DesignerHtmlNode.types.ts",
+      "path": "components/DesignerHtmlNode",
+      "type": "ts"
+    },
+    {
+      "name": "designer-html-node.css",
+      "path": "components/DesignerHtmlNode/css",
+      "type": "css"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "components/DesignerHtmlNode",
+      "type": "json"
+    },
+    {
+      "name": "DesignerHtmlProperties.tsx",
+      "path": "components/DesignerHtmlProperties",
+      "type": "tsx"
+    },
+    {
+      "name": "DesignerHtmlProperties.types.ts",
+      "path": "components/DesignerHtmlProperties",
+      "type": "ts"
+    },
+    {
+      "name": "designer-html-properties.css",
+      "path": "components/DesignerHtmlProperties/css",
+      "type": "css"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "components/DesignerHtmlProperties",
+      "type": "json"
+    },
+    {
+      "name": "DesignerInspector.tsx",
+      "path": "components/DesignerInspector",
+      "type": "tsx"
+    },
+    {
+      "name": "DesignerInspector.types.ts",
+      "path": "components/DesignerInspector",
+      "type": "ts"
+    },
+    {
+      "name": "designer-inspector.css",
+      "path": "components/DesignerInspector/css",
+      "type": "css"
+    },
+    {
+      "name": "useDesignerInspector.ts",
+      "path": "components/DesignerInspector/hooks",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "components/DesignerInspector",
+      "type": "json"
+    },
+    {
+      "name": "DesignerLibrary.tsx",
+      "path": "components/DesignerLibrary",
+      "type": "tsx"
+    },
+    {
+      "name": "DesignerLibrary.types.ts",
+      "path": "components/DesignerLibrary",
+      "type": "ts"
+    },
+    {
+      "name": "designer-library.css",
+      "path": "components/DesignerLibrary/css",
+      "type": "css"
+    },
+    {
+      "name": "useDesignerLibrary.ts",
+      "path": "components/DesignerLibrary/hooks",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "components/DesignerLibrary",
+      "type": "json"
+    },
+    {
+      "name": "DesignerNode.tsx",
+      "path": "components/DesignerNode",
+      "type": "tsx"
+    },
+    {
+      "name": "DesignerNode.types.ts",
+      "path": "components/DesignerNode",
+      "type": "ts"
+    },
+    {
+      "name": "designer-node.css",
+      "path": "components/DesignerNode/css",
+      "type": "css"
+    },
+    {
+      "name": "useDesignerNode.ts",
+      "path": "components/DesignerNode/hooks",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "components/DesignerNode",
+      "type": "json"
+    },
+    {
+      "name": "DesignerShadow.tsx",
+      "path": "components/DesignerShadow",
+      "type": "tsx"
+    },
+    {
+      "name": "DesignerShadow.types.ts",
+      "path": "components/DesignerShadow",
+      "type": "ts"
+    },
+    {
+      "name": "designer-shadow.css",
+      "path": "components/DesignerShadow/css",
+      "type": "css"
+    },
+    {
+      "name": "useDesignerShadow.ts",
+      "path": "components/DesignerShadow/hooks",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "components/DesignerShadow",
+      "type": "json"
+    },
+    {
+      "name": "DesignerTheme.tsx",
+      "path": "components/DesignerTheme",
+      "type": "tsx"
+    },
+    {
+      "name": "DesignerTheme.types.ts",
+      "path": "components/DesignerTheme",
+      "type": "ts"
+    },
+    {
+      "name": "designer-theme.css",
+      "path": "components/DesignerTheme/css",
+      "type": "css"
+    },
+    {
+      "name": "useDesignerTheme.ts",
+      "path": "components/DesignerTheme/hooks",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "components/DesignerTheme",
+      "type": "json"
+    },
+    {
+      "name": "DesignerToolbar.tsx",
+      "path": "components/DesignerToolbar",
+      "type": "tsx"
+    },
+    {
+      "name": "DesignerToolbar.types.ts",
+      "path": "components/DesignerToolbar",
+      "type": "ts"
+    },
+    {
+      "name": "designer-toolbar.css",
+      "path": "components/DesignerToolbar/css",
+      "type": "css"
+    },
+    {
+      "name": "useDesignerToolbar.ts",
+      "path": "components/DesignerToolbar/hooks",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "components/DesignerToolbar",
+      "type": "json"
+    },
+    {
+      "name": "SiteNav.tsx",
+      "path": "components/SiteNav",
+      "type": "tsx"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "components/SiteNav",
+      "type": "json"
+    },
+    {
+      "name": "1793329853409.json",
+      "path": "compositions",
+      "type": "json"
+    },
+    {
+      "name": "1793331145547.json",
+      "path": "compositions",
+      "type": "json"
+    },
+    {
+      "name": "1793333372418.json",
+      "path": "compositions",
+      "type": "json"
+    },
+    {
+      "name": "1793355626718.json",
+      "path": "compositions",
+      "type": "json"
+    },
+    {
+      "name": "1793358028958.json",
+      "path": "compositions",
+      "type": "json"
+    },
+    {
+      "name": "1793358588743.json",
+      "path": "compositions",
+      "type": "json"
+    },
+    {
+      "name": "rab-designer.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": "Demo.tsx",
+      "path": "demo",
+      "type": "tsx"
+    },
+    {
+      "name": "DesignerHtmlNode-scaffold.json",
+      "path": "demo",
+      "type": "json"
+    },
+    {
+      "name": "DesignerHtmlProperties-scaffold.json",
+      "path": "demo",
+      "type": "json"
+    },
+    {
+      "name": "clipboard-check.png",
+      "path": "demo",
+      "type": "png"
+    },
+    {
+      "name": "color-shadow-scaffold-receipts.json",
+      "path": "demo",
+      "type": "json"
+    },
+    {
+      "name": "contextual-layout.png",
+      "path": "demo",
+      "type": "png"
+    },
+    {
+      "name": "create-demo.mjs",
+      "path": "demo",
+      "type": "mjs"
+    },
+    {
+      "name": "dashboard-overview.json",
+      "path": "demo",
+      "type": "json"
+    },
+    {
+      "name": "designer-controls.png",
+      "path": "demo",
+      "type": "png"
+    },
+    {
+      "name": "html-dev-mode.png",
+      "path": "demo",
+      "type": "png"
+    },
+    {
+      "name": "html-mode-preview.html",
+      "path": "demo",
+      "type": "html"
+    },
+    {
+      "name": "layout-absolute-mode.png",
+      "path": "demo",
+      "type": "png"
+    },
+    {
+      "name": "review-fixes.png",
+      "path": "demo",
+      "type": "png"
+    },
+    {
+      "name": "revision-check.png",
+      "path": "demo",
+      "type": "png"
+    },
+    {
+      "name": "scaffold-receipts.json",
+      "path": "demo",
+      "type": "json"
+    },
+    {
+      "name": "useDesigner.ts",
+      "path": "hooks",
+      "type": "ts"
+    },
+    {
+      "name": "useDesignerAppearance.ts",
+      "path": "hooks",
+      "type": "ts"
+    },
+    {
+      "name": "useDesignerCanvas.ts",
+      "path": "hooks",
+      "type": "ts"
+    },
+    {
+      "name": "useDesignerColor.ts",
+      "path": "hooks",
+      "type": "ts"
+    },
+    {
+      "name": "useDesignerComposition.ts",
+      "path": "hooks",
+      "type": "ts"
+    },
+    {
+      "name": "useDesignerHistory.ts",
+      "path": "hooks",
+      "type": "ts"
+    },
+    {
+      "name": "useDesignerHtmlProperties.ts",
+      "path": "hooks",
+      "type": "ts"
+    },
+    {
+      "name": "useDesignerInteraction.ts",
+      "path": "hooks",
+      "type": "ts"
+    },
+    {
+      "name": "useDesignerPersistence.ts",
+      "path": "hooks",
+      "type": "ts"
+    },
+    {
+      "name": "useDesignerShadow.ts",
+      "path": "hooks",
+      "type": "ts"
+    },
+    {
+      "name": "useDesignerTabs.ts",
+      "path": "hooks",
+      "type": "ts"
+    },
+    {
+      "name": "useDesignerTheme.ts",
+      "path": "hooks",
+      "type": "ts"
+    },
+    {
+      "name": "useDesignerToolbar.ts",
+      "path": "hooks",
+      "type": "ts"
+    },
+    {
+      "name": "appearance.ts",
+      "path": "js",
+      "type": "ts"
+    },
+    {
+      "name": "border.ts",
+      "path": "js",
+      "type": "ts"
+    },
+    {
+      "name": "canvasAppearance.ts",
+      "path": "js",
+      "type": "ts"
+    },
+    {
+      "name": "clipboard.test.mjs",
+      "path": "js",
+      "type": "mjs"
+    },
+    {
+      "name": "clipboard.ts",
+      "path": "js",
+      "type": "ts"
+    },
+    {
+      "name": "color.ts",
+      "path": "js",
+      "type": "ts"
+    },
+    {
+      "name": "composition.ts",
+      "path": "js",
+      "type": "ts"
+    },
+    {
+      "name": "containerAppearance.ts",
+      "path": "js",
+      "type": "ts"
+    },
+    {
+      "name": "document.ts",
+      "path": "js",
+      "type": "ts"
+    },
+    {
+      "name": "effectAppearance.ts",
+      "path": "js",
+      "type": "ts"
+    },
+    {
+      "name": "history.test.mjs",
+      "path": "js",
+      "type": "mjs"
+    },
+    {
+      "name": "history.ts",
+      "path": "js",
+      "type": "ts"
+    },
+    {
+      "name": "htmlModel.test.mjs",
+      "path": "js",
+      "type": "mjs"
+    },
+    {
+      "name": "htmlModel.ts",
+      "path": "js",
+      "type": "ts"
+    },
+    {
+      "name": "layoutSnapshot.test.mjs",
+      "path": "js",
+      "type": "mjs"
+    },
+    {
+      "name": "layoutSnapshot.ts",
+      "path": "js",
+      "type": "ts"
+    },
+    {
+      "name": "nodeStyle.ts",
+      "path": "js",
+      "type": "ts"
+    },
+    {
+      "name": "recovery.test.mjs",
+      "path": "js",
+      "type": "mjs"
+    },
+    {
+      "name": "recovery.ts",
+      "path": "js",
+      "type": "ts"
+    },
+    {
+      "name": "resize.test.mjs",
+      "path": "js",
+      "type": "mjs"
+    },
+    {
+      "name": "resize.ts",
+      "path": "js",
+      "type": "ts"
+    },
+    {
+      "name": "shadows.ts",
+      "path": "js",
+      "type": "ts"
+    },
+    {
+      "name": "site.ts",
+      "path": "js",
+      "type": "ts"
+    },
+    {
+      "name": "theme.ts",
+      "path": "js",
+      "type": "ts"
+    },
+    {
+      "name": "validation.d.mts",
+      "path": "js",
+      "type": "mts"
+    },
+    {
+      "name": "validation.mjs",
+      "path": "js",
+      "type": "mjs"
+    },
+    {
+      "name": "viewGrid.test.mjs",
+      "path": "js",
+      "type": "mjs"
+    },
+    {
+      "name": "viewGrid.ts",
+      "path": "js",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    }
+  ]
+}

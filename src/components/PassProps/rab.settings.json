@@ -1,0 +1,101 @@
+{
+  "action_type": "use",
+  "id": 1793994765514,
+  "name": "PassProps",
+  "title": "Pass props",
+  "description": "Reusable PassProps component.",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "PassProps.tsx",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/PassProps",
+  "paths": [
+    {
+      "name": "PassProps.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "PassProps.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "pass-props.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": ".gitkeep",
+      "path": "demo",
+      "type": ""
+    },
+    {
+      "name": "Demo.tsx",
+      "path": "demo",
+      "type": "tsx"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "README.txt",
+      "path": "hooks/usePassProps",
+      "type": "txt"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "hooks/usePassProps",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "hooks/usePassProps",
+      "type": "yaml"
+    },
+    {
+      "name": "usePassProps.ts",
+      "path": "hooks/usePassProps",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": "js/pass-props-to-children",
+      "type": "txt"
+    },
+    {
+      "name": "pass-props-to-children.ts",
+      "path": "js/pass-props-to-children",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "js/pass-props-to-children",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "js/pass-props-to-children",
+      "type": "yaml"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

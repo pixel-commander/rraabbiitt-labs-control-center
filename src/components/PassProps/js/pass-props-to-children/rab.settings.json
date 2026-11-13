@@ -1,0 +1,35 @@
+{
+  "action_type": "edit",
+  "id": 1794004819067,
+  "name": "pass-props-to-children",
+  "title": "pass-props-to-children",
+  "description": "pass-props-to-children: function implementation. See README.txt for the exported contract and integration.",
+  "type": "function",
+  "tags": [
+    "function"
+  ],
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "pass-props-to-children.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ],
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/PassProps/js/pass-props-to-children",
+  "file": "pass-props-to-children.ts"
+}

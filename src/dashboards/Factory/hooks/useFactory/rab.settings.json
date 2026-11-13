@@ -1,0 +1,37 @@
+{
+  "action_type": "use",
+  "id": 1794366698973,
+  "name": "useFactory",
+  "title": "Factory save flow",
+  "description": "Owns the HouseKeys save dialog and invokes the factory composition runner through the local API.",
+  "type": "hook",
+  "tags": [
+    "react",
+    "hook",
+    "factory"
+  ],
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    },
+    {
+      "name": "useFactory.ts",
+      "path": ".",
+      "type": "ts"
+    }
+  ],
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/dashboards/Factory/hooks/useFactory",
+  "file": "useFactory.ts"
+}

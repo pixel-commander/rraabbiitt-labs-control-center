@@ -1,0 +1,8 @@
+schema: 1
+intent: use
+name: useComponentFactory
+file: useComponentFactory.ts
+instructions: >
+  Call once in ComponentFactory with its complete props bag. Pass the returned
+  editor state and operations to the columns and canvas. Save forwards the
+  composition to handleSubmit when supplied.

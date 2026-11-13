@@ -1,6 +1,7 @@
 import "./css/layout.css";
 import "./css/grid.css";
 import "./css/style.css";
+import "./css/site-shell.css";
 import "./themes/dark/colors.css";
 import "./themes/light/colors.css";
 import "./atoms/atoms.css";
@@ -18,6 +19,8 @@ import type { VIEWProps } from "./App.types";
 import { HomePage } from "./pages/home/HomePage";
 import { StyleGuidePage } from "./pages/StyleGuide/StyleGuidePage";
 import { useURL } from "./hooks/useURL/useURL";
+import { Factory } from "./dashboards/Factory/Factory";
+import factorySettings from "./dashboards/Factory/rab.settings.json";
 import { WorldAudit } from "./dashboards/WorldAudit/WorldAudit";
 import worldAuditSettings from "./dashboards/WorldAudit/rab.settings.json";
 import { RabbitHead } from "./components/RabbitHead/RabbitHead";
@@ -31,6 +34,7 @@ export const App = () => {
     document.documentElement.dataset.theme = theme;
   }, [theme]);
   const VIEWS: VIEWProps[] = [
+    { id: factorySettings.id, name: "factory", title: "Factory", path: "factory", View: Factory },
     { id: worldAuditSettings.id, name: "world-audit", title: "World Audit", path: "world-audit", View: WorldAudit },
     { id: dumBotSettings.id, name: "dumbot", title: "DumBot", path: "dumbot", View: DumBotPage },
     {

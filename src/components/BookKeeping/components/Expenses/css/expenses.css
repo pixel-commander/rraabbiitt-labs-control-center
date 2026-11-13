@@ -1,0 +1,49 @@
+.expenses {
+  gap: var(--space-md);
+  padding: var(--space-lg);
+}
+
+.expenses h2 {
+  margin: 0;
+}
+
+.expenses-totals {
+  gap: var(--space-sm);
+}
+
+.expenses dt,
+.expense-row small {
+  color: var(--content-muted, var(--content-default));
+  font-size: 0.8em;
+}
+
+.expenses dd {
+  margin-inline-start: 0;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+.expenses-ledger > article + article {
+  margin-block-start: var(--space-xs);
+}
+
+.expense-row {
+  inline-size: 100%;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  text-align: start;
+}
+
+.expense-row small {
+  display: block;
+}
+
+.expense-row > [data-area="side"] {
+  text-align: end;
+  font-variant-numeric: tabular-nums;
+}
+
+.expenses > footer {
+  padding-block-start: var(--space-sm);
+  border-block-start: var(--border-width) solid var(--border-default);
+}

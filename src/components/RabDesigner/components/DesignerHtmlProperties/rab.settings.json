@@ -1,0 +1,35 @@
+{
+  "action_type": "use",
+  "id": 1793333048929,
+  "name": "DesignerHtmlProperties",
+  "title": "DesignerHtmlProperties",
+  "description": "",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/RabDesigner/components/DesignerHtmlProperties",
+  "paths": [
+    {
+      "name": "DesignerHtmlProperties.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "DesignerHtmlProperties.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "designer-html-properties.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    }
+  ]
+}

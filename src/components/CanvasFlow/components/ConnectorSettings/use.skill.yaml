@@ -1,0 +1,7 @@
+schema: 1
+intent: use
+name: use-connector-settings
+title: ConnectorSettings
+instructions: Pass an edge and the callbacks described in README.txt.
+implementation:
+  - file: ConnectorSettings.tsx

@@ -1,0 +1,46 @@
+{
+  "action_type": "use",
+  "id": 1793992769266,
+  "name": "UserInput",
+  "title": "UserInput",
+  "description": "Render UserInput with optional handleSubmit, handleChange, placeholder, disabled and className.",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "UserInput.tsx",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/Chat/UserInput",
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "UserInput.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "UserInput.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "user-input.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

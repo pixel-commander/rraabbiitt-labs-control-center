@@ -35,10 +35,6 @@
   .style-guide .style-guide-sample :is(h3, p) {
     color: inherit;
   }
-  .site-shell {
-    background: var(--color-main);
-    color: var(--color-main-alt-neg);
-  }
   .site-nav {
     border-bottom: 1px solid var(--border-default);
   }

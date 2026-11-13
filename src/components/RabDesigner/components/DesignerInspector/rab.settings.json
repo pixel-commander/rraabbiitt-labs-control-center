@@ -1,0 +1,40 @@
+{
+  "action_type": "use",
+  "id": 1793330118219,
+  "name": "DesignerInspector",
+  "title": "DesignerInspector",
+  "description": "",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/RabDesigner/components/DesignerInspector",
+  "paths": [
+    {
+      "name": "DesignerInspector.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "DesignerInspector.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "designer-inspector.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": "useDesignerInspector.ts",
+      "path": "hooks",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    }
+  ]
+}

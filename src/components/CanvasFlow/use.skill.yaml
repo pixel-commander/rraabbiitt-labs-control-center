@@ -1,0 +1,7 @@
+schema: 1
+intent: use
+name: use-canvas-flow
+title: CanvasFlow
+instructions: Pass the flow data and callbacks documented in README.txt.
+implementation:
+  - file: CanvasFlow.tsx

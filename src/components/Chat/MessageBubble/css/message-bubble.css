@@ -1,0 +1,101 @@
+@layer components {
+  .message-bubble {
+    --message-bubble-padding: 2em;
+    padding-block: var(--space-sm);
+  }
+  .message-bubble[data-side="left"] {
+    padding-inline-end: var(--message-bubble-padding);
+  }
+  .message-bubble[data-side="right"] {
+    padding-inline-start: var(--message-bubble-padding);
+  }
+  .message-bubble__content {
+    grid-column: 1 / -1;
+    padding: var(--space-md);
+    min-inline-size: 0;
+    overflow-wrap: anywhere;
+  }
+  .message-bubble[data-side="left"] > .message-bubble__content {
+    justify-self: start;
+  }
+  .message-bubble[data-side="right"] > .message-bubble__content {
+    justify-self: end;
+  }
+  .message-bubble__name {
+    margin-block-end: var(--space-xs);
+  }
+  .message-bubble__message {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    text-align: start;
+  }
+  button.message-bubble__name-action {
+    display: block;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+  }
+  button.message-bubble__name-action:focus-visible {
+  }
+  .message-bubble__meta {
+    margin-block-start: var(--space-xs);
+    font-size: 0.75em;
+  }
+}
+
+@layer components {
+  .message-bubble__message > :first-child {
+    margin-block-start: 0;
+  }
+  .message-bubble__message > :last-child {
+    margin-block-end: 0;
+  }
+  .message-bubble__message :is(ul, ol) {
+    padding-inline-start: var(--space-xl);
+  }
+  .message-bubble__message pre {
+    overflow-x: auto;
+    white-space: pre;
+    padding: var(--space-sm);
+  }
+  .message-bubble__message blockquote {
+    margin-inline: 0;
+    padding-inline-start: var(--space-md);
+  }
+  .message-bubble__message a {
+  }
+}
+
+@layer components {
+  :where(.message-bubble .message-bubble__name) {
+    color: var(--content-muted, var(--content-default));
+    font-weight: 600;
+  }
+  :where(.message-bubble .message-bubble__message) {
+    color: var(--content-strong, #fff);
+  }
+  :where(.message-bubble button.message-bubble__name-action) {
+    color: inherit;
+    border: 0;
+    background: transparent;
+  }
+  :where(
+    .message-bubble button.message-bubble__name-action:focus-visible
+  ) {
+    outline: var(--focus-ring);
+  }
+  :where(.message-bubble .message-bubble__meta) {
+    color: var(--content-muted, var(--content-default));
+  }
+  :where(.message-bubble .message-bubble__message pre) {
+    background: var(--surface-inset);
+    border-radius: var(--radius-control);
+  }
+  :where(.message-bubble .message-bubble__message blockquote) {
+    border-inline-start: 2px solid var(--border-strong);
+    color: var(--content-muted);
+  }
+  :where(.message-bubble .message-bubble__message a) {
+    color: var(--content-accent);
+  }
+}

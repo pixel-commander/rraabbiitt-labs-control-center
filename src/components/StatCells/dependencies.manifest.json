@@ -1,0 +1,24 @@
+{
+  "name": "StatCells",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../../../../atoms/containers/container-cell/container-cell.css",
+      "path": "../../atoms/containers/container-cell/container-cell.css",
+      "type": "import",
+      "file": "components/StateCell/StateCell.tsx"
+    },
+    {
+      "name": "../../../../HouseKeys.types",
+      "path": "../../HouseKeys.types",
+      "type": "import",
+      "file": "components/StateCell/StateCell.types.ts"
+    },
+    {
+      "name": "../../HouseKeys.types",
+      "path": "../../HouseKeys.types",
+      "type": "import",
+      "file": "StatCells.types.ts"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "action_type": "use",
+  "id": 1793976288045,
+  "name": "ButtonsAndLinks",
+  "title": "ButtonsAndLinks",
+  "description": "Presentational ButtonsAndLinks component placeholder. Accepts HouseKeys props; no internal processing.",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "ButtonsAndLinks.tsx",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/ButtonsAndLinks",
+  "paths": [
+    {
+      "name": "ButtonsAndLinks.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "ButtonsAndLinks.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "buttons-and-links.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "README.txt",
+      "path": "hooks/useButtonsAndLinks",
+      "type": "txt"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "hooks/useButtonsAndLinks",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "hooks/useButtonsAndLinks",
+      "type": "yaml"
+    },
+    {
+      "name": "useButtonsAndLinks.ts",
+      "path": "hooks/useButtonsAndLinks",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+schema: 1
+intent: use
+name: use-expenses
+title: Expenses
+instructions: Read README.txt for props, callbacks and styling.
+implementation:
+  - file: Expenses.tsx

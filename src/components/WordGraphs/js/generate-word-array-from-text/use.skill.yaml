@@ -1,0 +1,8 @@
+schema: 1
+intent: use
+id: 1794232180623
+name: generate-word-array-from-text
+title: Generate Word Array From Text
+owner:
+  id: 1794232180622
+instructions: Call generateWordArrayFromText(text) with a string. Returns string[] with punctuation and special characters removed as separators. Retains Unicode letters, numbers and combining marks; preserves case, duplicates and order. No file access.

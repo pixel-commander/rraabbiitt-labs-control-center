@@ -1,0 +1,24 @@
+{
+  "name": "DropdownButton",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../../icons/ChevronDown",
+      "path": "../../icons/ChevronDown",
+      "type": "import",
+      "file": "DropdownButton.tsx"
+    },
+    {
+      "name": "../SmartTooltip/SmartTooltip",
+      "path": "../SmartTooltip/SmartTooltip",
+      "type": "import",
+      "file": "DropdownButton.tsx"
+    },
+    {
+      "name": "../../HouseKeys.types",
+      "path": "../../HouseKeys.types",
+      "type": "import",
+      "file": "DropdownButton.types.ts"
+    }
+  ]
+}

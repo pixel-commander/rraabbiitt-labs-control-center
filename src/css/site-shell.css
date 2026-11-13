@@ -1,0 +1,11 @@
+@layer components {
+  .site-shell {
+    min-block-size: 100dvh;
+    background: transparent;
+    color: var(--color-main-alt-neg);
+  }
+
+  .site-shell:has(.world-search) {
+    block-size: 100dvh;
+  }
+}

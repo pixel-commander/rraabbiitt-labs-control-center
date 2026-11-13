@@ -1,0 +1,30 @@
+{
+  "action_type": "use",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/CanvasFlow/hooks/useCanvasFlow",
+  "name": "useCanvasFlow",
+  "type": "hook",
+  "file": "useCanvasFlow.ts",
+  "id": 1794029939873,
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    },
+    {
+      "name": "useCanvasFlow.ts",
+      "path": ".",
+      "type": "ts"
+    }
+  ]
+}

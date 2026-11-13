@@ -1,0 +1,30 @@
+{
+  "name": "Expenses",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../../../SearchableSelect/SearchableSelect",
+      "path": "../../../SearchableSelect/SearchableSelect",
+      "type": "import",
+      "file": "Expenses.tsx"
+    },
+    {
+      "name": "../../../StatCells/StatCells",
+      "path": "../../../StatCells/StatCells",
+      "type": "import",
+      "file": "Expenses.tsx"
+    },
+    {
+      "name": "../../../../atoms/actions/action-main/action-main.css",
+      "path": "../../../../atoms/actions/action-main/action-main.css",
+      "type": "import",
+      "file": "Expenses.tsx"
+    },
+    {
+      "name": "../../../../HouseKeys.types",
+      "path": "../../../../HouseKeys.types",
+      "type": "import",
+      "file": "Expenses.types.ts"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+schema: 1
+intent: use
+owner:
+  id: 1794004818673
+  path: src/components/GridAreaSelect/js/resolve-layout
+  file: rab.settings.json
+id: 1794004818682
+name: use resolve-layout
+title: Use resolve-layout
+description: "resolve-layout: function implementation. See README.txt for the exported contract and
+  integration."
+type: function
+path: C:\rraabbiitt-react-components\src\components\GridAreaSelect\js\resolve-layout
+file: use.skill.yaml
+tags: []
+implementation:
+  - path: src/components/GridAreaSelect/js/resolve-layout
+    file: resolve-layout.ts
+context: []
+inputs: {}
+outputs: {}
+instructions: Read README.txt and resolve-layout.ts for the current contract. Import the named
+  exports below. Follow the implementation signature; interaction functions return cleanup for the
+  caller to dispose. Preserve supplied false, zero and empty-string values. Use theme/component
+  tokens, supplied class props, or parent CSS for UI overrides.
+checks: []
+examples: []
+routes: []
+provenance: []

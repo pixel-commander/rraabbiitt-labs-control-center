@@ -1,0 +1,41 @@
+{
+  "action_type": "use",
+  "id": 1793975199150,
+  "name": "NavItem",
+  "title": "NavItem",
+  "description": "Header navigation button with current-page state and an optional badge.",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "NavItem.tsx",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/AppHeader/NavItem",
+  "paths": [
+    {
+      "name": "NavItem.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "nav-item.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "LoginBox",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../../atoms/actions/action-main/action-main.css",
+      "path": "../../atoms/actions/action-main/action-main.css",
+      "type": "import",
+      "file": "LoginBox.tsx"
+    },
+    {
+      "name": "../../atoms/containers/container-cell/container-cell.css",
+      "path": "../../atoms/containers/container-cell/container-cell.css",
+      "type": "import",
+      "file": "LoginBox.tsx"
+    },
+    {
+      "name": "../../HouseKeys.types",
+      "path": "../../HouseKeys.types",
+      "type": "import",
+      "file": "LoginBox.types.ts"
+    }
+  ]
+}

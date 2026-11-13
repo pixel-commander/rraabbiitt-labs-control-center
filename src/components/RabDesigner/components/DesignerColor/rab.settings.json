@@ -1,0 +1,40 @@
+{
+  "action_type": "use",
+  "id": 1793331427691,
+  "name": "DesignerColor",
+  "title": "DesignerColor",
+  "description": "",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/RabDesigner/components/DesignerColor",
+  "paths": [
+    {
+      "name": "DesignerColor.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "DesignerColor.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "designer-color.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": "useDesignerColor.ts",
+      "path": "hooks",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    }
+  ]
+}

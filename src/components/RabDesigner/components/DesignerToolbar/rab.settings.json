@@ -1,0 +1,40 @@
+{
+  "action_type": "use",
+  "id": 1793329533907,
+  "name": "DesignerToolbar",
+  "title": "DesignerToolbar",
+  "description": "",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/RabDesigner/components/DesignerToolbar",
+  "paths": [
+    {
+      "name": "DesignerToolbar.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "DesignerToolbar.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "designer-toolbar.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": "useDesignerToolbar.ts",
+      "path": "hooks",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    }
+  ]
+}

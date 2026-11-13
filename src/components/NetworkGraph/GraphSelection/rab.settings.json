@@ -1,0 +1,46 @@
+{
+  "action_type": "use",
+  "id": 1793998444355,
+  "name": "GraphSelection",
+  "title": "GraphSelection",
+  "description": "Display a selected graph node and its connected nodes.",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "GraphSelection.tsx",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/NetworkGraph/GraphSelection",
+  "paths": [
+    {
+      "name": "GraphSelection.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "GraphSelection.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "graph-selection.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

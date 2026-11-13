@@ -1,0 +1,36 @@
+{
+  "action_type": "use",
+  "id": 1794014932851,
+  "name": "useDatePicker",
+  "title": "DatePicker UI state",
+  "description": "Owns open state and displayed month for numeric date selection.",
+  "type": "hook",
+  "tags": [
+    "rab-world-v2",
+    "scaffold"
+  ],
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    },
+    {
+      "name": "useDatePicker.ts",
+      "path": ".",
+      "type": "ts"
+    }
+  ],
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/DatePicker/hooks/useDatePicker",
+  "file": "useDatePicker.ts"
+}

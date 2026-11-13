@@ -1,0 +1,21 @@
+@layer components {
+  .network-graph {
+    min-inline-size: 0;
+    block-size: 100%;
+    min-block-size: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .network-graph > canvas {
+    display: block;
+    inline-size: 100%;
+    block-size: 100%;
+    cursor: grab;
+    touch-action: none;
+  }
+  .network-graph > p {
+    position: absolute;
+    inset: var(--space-lg);
+    pointer-events: none;
+  }
+}

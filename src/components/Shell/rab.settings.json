@@ -1,0 +1,76 @@
+{
+  "action_type": "use",
+  "id": 1793974159531,
+  "name": "Shell",
+  "title": "Neon machine site shell",
+  "description": "Full-viewport React site shell with metallic framing, four animated canvas rails, neon corner accents, an optional header, and a scrollable main content region. Extracted from the live rraabbiitt.com SiteChrome.",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/Shell",
+  "file": "Shell.tsx",
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "README.txt",
+      "path": "RailCanvas",
+      "type": "txt"
+    },
+    {
+      "name": "RailCanvas.tsx",
+      "path": "RailCanvas",
+      "type": "tsx"
+    },
+    {
+      "name": "RailCanvas.types.ts",
+      "path": "RailCanvas",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "RailCanvas",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "RailCanvas",
+      "type": "yaml"
+    },
+    {
+      "name": "Shell.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "Shell.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "shell.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

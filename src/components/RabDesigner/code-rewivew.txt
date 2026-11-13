@@ -1,0 +1,183 @@
+RABDesigner — running code review
+Reviewed: 2026-11-10
+Status: OPEN findings; no implementation changes.
+
+Scope and method
+- Target: rraabbiitt-react-components/src/components/RabDesigner.
+  No ComponentDesigner/ComponentDesginer folder was found; RabDesigner is the existing designer.
+- Read HQ AGENTS.md, React BOOT_SEQ.txt, README.md, RULES.txt and src/HouseKeys.types.ts.
+- No more-specific AGENTS.md or RULES.txt was found under the designer.
+- Configured world_demo entry point unavailable. Review used targeted local reads.
+- Static review only. No tests, builds, browser runs, generators or services were run.
+- Read root UI/types/docs/settings; history, interaction, persistence and canvas owners;
+  inspector/library/HTML properties/rendering; document, validation, clipboard,
+  layout capture, export and grid helpers; relevant styles and Vite integration.
+  This is a running list, not a claim that every helper or interaction is verified.
+- References below are relative to this designer folder unless stated otherwise.
+- P1 = potential loss/corruption of work; P2 = functional/contract defect;
+  P3 = maintenance/documentation issue. All entries remain OPEN.
+
+01. [P1] Canvas permits document values that save and recovery reject
+    Evidence: hooks/useDesignerCanvas.ts:280-288 draws without an upper size limit;
+    move/nudge also do not enforce coordinate limits. js/history.ts:32-45 commits
+    without validateDocument. js/validation.mjs rejects dimensions above 10000,
+    coordinates outside +/-100000, excessive nesting and more than 2000 nodes.
+    Trigger: zoom out and draw a box wider than 10000 canvas pixels, or keep adding
+    nodes beyond the persisted limit. The editor accepts work that PUT rejects;
+    startup recovery also validates and cannot restore an invalid snapshot.
+    Suggested fix: enforce the shared persistence constraints at editing/commit
+    boundaries and report the reason without discarding the last valid document.
+    Confirmation: source trace; not reproduced in a browser.
+
+02. [P2] One invalid saved composition blocks the entire Open list
+    Evidence: api/designer.mjs:43-51 parses/validates all files inside one outer
+    try/catch (74-76). One malformed or incompatible numeric .json file aborts
+    the whole response, so otherwise valid compositions cannot be listed.
+    Suggested fix: isolate per-file failures and expose failed entries alongside
+    the valid files; preserve the original files.
+
+03. [P2] Request body decoding can corrupt Unicode across chunks
+    Evidence: api/designer.mjs:62-69 uses body += chunk for each request Buffer.
+    A UTF-8 character split between buffers is decoded separately and can become
+    replacement characters. JSON can still parse, allowing corrupted text to save.
+    Suggested fix: buffer bytes and decode once, or use a streaming UTF-8 decoder;
+    retain the byte-size limit.
+
+04. [P2] View-mode paste drops imported theme tokens
+    Evidence: hooks/useDesignerInteraction.ts:72-87 receives pasteObject's result
+    but passes getData() to addViewElement in View mode, retaining only result.node.
+    js/clipboard.ts merges source.theme into result.data (destination wins).
+    Trigger: paste an object using a theme token absent from a View composition.
+    The pasted node keeps its var() reference but the merged token is discarded.
+    Suggested fix: preserve the returned document-level theme when inserting into
+    the selected area.
+
+05. [P2] View export changes every house-grid node height to 100vh
+    Evidence: js/site.ts:40-42 previews View height using layout.height or auto;
+    elementDeclarations at 106-108 exports 100vh whenever data-grid is present.
+    Trigger: open a View document with an explicit root height or a nested house
+    grid. Export overrides that height and differs from the editor.
+    Suggested fix: preserve the authored height and distinguish root viewport
+    sizing from nested grid sizing.
+
+06. [P2] Root component does not accept the contract it passes onward
+    Evidence: RABDesigner.tsx:6-7 takes no props and creates useDesigner itself.
+    RABDesigner.types.ts defines DesignerProps, but the root does not accept it.
+    The hook creates document/history and owns saving to /api/designer.
+    Rule: AGENTS bag contract and parent ownership; BOOT reusable components dumb.
+    Consequence: a parent cannot supply document, selection, handlers, identity or
+    className when composing this as a shared component.
+    Classification note: rab.settings.json still calls this a dashboard. Owning
+    application state is reasonable for a dashboard, but it was placed among shared
+    components without a reusable boundary. Resolve that boundary explicitly;
+    do not blindly flatten all specialized hooks into one large hook.
+
+07. [P2] Callback bag is omitted at canvas calls and dropped in forwarding
+    Evidence: hooks/useDesignerCanvas.ts:217-219, 273, 315, 334 call handlers with
+    data/type only. hooks/useDesignerInteraction.ts:131 declares handleAction with
+    only payload/type and line 215 forwards only those two arguments.
+    Rule: callbacks receive (data, type, props) with the complete incoming bag.
+    Consequence: injected handlers lose caller context; providing it in a toolbar
+    call does not preserve it through the interaction-to-persistence boundary.
+    Suggested fix: pass the actual incoming bag and retain it through forwarding.
+
+08. [P2] Supported className is ignored by multiple public parts
+    Evidence: DesignerProps includes className; components/DesignerInspector/
+    DesignerInspector.tsx:148 and components/DesignerLibrary/DesignerLibrary.tsx
+    root aside use fixed classes. DesignerToolbar.tsx:13 and DesignerComposition.tsx
+    root section also ignore props.className. DesignerHtmlProperties root form
+    has only designer-properties and no canonical designer-html-properties base.
+    Rule: C2 and AGENTS require base + incoming className and functional overrides.
+    Suggested fix: compose each part's base and supplied class at its actual root.
+    DesignerCanvas already demonstrates className composition.
+
+09. [P2] Editor structural layout departs from house grid rules
+    Evidence: css/rab-designer.css:10-23,39-45 uses flex for header/brand/actions/
+    status. components/DesignerInspector/css/designer-inspector.css:31-46,103-117
+    uses flex-column structural property groups and hard-coded spacing/type sizes.
+    Rule: G1-G3 and BOOT require registered grids through structural wrappers;
+    G3 permits flex for a concrete need, not as the default layout system.
+    Suggested fix: use house layouts for structural groups and shared spacing/type
+    tokens. Record any actual wrapping requirement before keeping a flex exception.
+    Scope distinction: the editable canvas's absolute geometry and user-authored
+    Dev flex layouts are not automatically violations of editor chrome rules.
+    C1a allows existing component-specific token skin; no new skin atoms requested.
+
+10. [P2] Designer metadata points to its old dashboard location
+    Evidence: all 12 components/*/rab.settings.json path values still begin with
+    src/dashboards/RabDesigner or src/dashboards/RABDesigner. Actual files are in
+    src/components/RabDesigner/components. Root settings alone has the new path.
+    Consequence: consumers resolving those metadata paths are sent to old locations.
+    Suggested fix: update paths through the appropriate metadata workflow while
+    preserving every existing ID; do not infer that an index refresh has occurred.
+
+11. [P2] SiteNav publishes a different contract and drops accepted DOM props
+    Evidence: components/SiteNav/SiteNav.tsx:2-10 uses string|number IDs, rows and
+    a single-argument callback, without HouseKeys/HandlerKey. It extends
+    HTMLAttributes but destructures only selected fields and does not forward the
+    rest (14-32), so accepted id/title/data attributes/events never reach the nav.
+    Suggested fix: use the canonical bag/handler/ID contract and honor supported
+    attributes after filtering custom keys. Check whether this leftover component
+    has a real consumer before deciding whether to adapt or retire it.
+    Reachability: not imported by the reviewed designer root; no runtime impact
+    claimed for the current designer screen.
+
+12. [P2] DOM lookups are global rather than scoped to this designer instance
+    Evidence: js/layoutSnapshot.ts:48-50 queries document for canvas nodes by ID;
+    hooks/useDesignerInteraction.ts text-tool branch queries the first matching
+    inspector/tab and textarea in document.
+    Trigger: embed two designers showing the same saved composition. Layout capture
+    can read the first canvas while saving the second; text focus goes to the first
+    inspector. Fixed inspector/library tab IDs also repeat between instances.
+    Suggested fix: scope lookup and tab IDs to the owning designer root. This matters
+    when resolving the reusable-component boundary in finding 06.
+
+13. [P3] Documented root usage and hook anatomy are incomplete/stale
+    Evidence: README.md still documents /rab-designer and a test command under
+    src/dashboards/RabDesigner. Root settings says dashboard, uses RABDesigner while
+    its folder is RabDesigner, and has an empty description. No root use.skill.yaml
+    or dependencies.manifest.json is present. No nested usage skills/READMEs were
+    found in the designer inventory; owner hooks are flat files under hooks/.
+    Rule: BOOT requires current API/override documentation, consistent names, and
+    named custom-hook folders with settings, usage skill and README.
+    Suggested fix: document the actual root contract/location; reconcile current
+    component vs dashboard classification and hook metadata without changing IDs.
+    No component was added in this audit, so the addition completion gate is N/A.
+
+14. [P3] Duplicate hook names hide unused scaffold placeholders
+    Evidence: hooks/useDesignerToolbar.ts contains the inspector form/tab logic,
+    while components/DesignerToolbar/hooks/useDesignerToolbar.ts returns {}.
+    DesignerInspector imports the former; the toolbar imports no such owner hook.
+    Similar nested scaffold hook files exist alongside the root hook collection.
+    Consequence: navigation by name points maintainers at a non-owner; stale scaffold
+    anatomy makes it harder to identify which logic is real.
+    Suggested fix: trace consumers and retain a single clearly documented owner;
+    remove unused placeholders only as separately authorized implementation work.
+
+Follow-up questions / not asserted as defects
+- View mode is supported by types, persistence, library and export, but the New
+  dialog exposes only Layout and Dev (RABDesigner.tsx:171-172). Confirm whether View
+  is intentionally hidden before treating this as a missing UI feature.
+- No claim that React re-rendering itself produces multiple selected navigation
+  items. useDesignerTabs explicitly updates selection, ARIA and tabIndex together;
+  its interaction behavior has not been browser-tested in this review.
+- Existing tests and screenshots are historical artifacts, not current PASS evidence.
+
+Observed strengths to preserve
+- Save validates input and uses temporary-file + rename; request size is bounded.
+- History has one document owner, bounded undo and a preview/commit distinction.
+- Async save/open track revision/session to avoid adopting stale results.
+- Many leaf callbacks already pass the full props bag; numeric document/node IDs
+  are used in the primary designer types.
+- Existing atom classes and the registered root shell/side-cols areas are reused.
+
+Verification ledger
+- PASS: instructions and relevant source contracts read; evidence recorded above.
+- PASS: registered shell/side-cols names/areas checked against src/css/grid.css.
+- NOT RUN: tests/build/typecheck/browser behavior, per existing instruction.
+- N/A: scaffold generation and new-component checks; review adds only this report.
+- Overall: static audit complete for the stated coverage; runtime correctness and
+  full house compliance are not certified.
+
+Append future findings below; preserve earlier findings and record resolutions
+explicitly rather than silently rewriting the review history.

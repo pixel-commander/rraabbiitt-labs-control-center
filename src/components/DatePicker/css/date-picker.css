@@ -1,0 +1,112 @@
+@layer components {
+  .date-picker {
+    position: relative;
+    min-inline-size: 0;
+  }
+  .date-picker > label {
+    display: block;
+    margin-block-end: var(--space-xs, 0.5rem);
+  }
+  .date-picker-face {
+    inline-size: 100%;
+    padding: var(--space-xs, 0.5rem);
+    gap: var(--space-sm, 0.75rem);
+    text-align: start;
+  }
+  .date-picker-popover {
+    position: absolute;
+    z-index: 10;
+    inline-size: min(100%, 20rem);
+    box-sizing: border-box;
+    padding: var(--space-sm, 0.75rem);
+    margin-block-start: 0.25rem;
+  }
+  .date-picker-month {
+    align-items: center;
+    gap: var(--space-xs, 0.5rem);
+    margin-block-end: 0.75rem;
+  }
+  .date-picker-title {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .date-picker-step {
+    padding: 0.25rem 0.5rem;
+  }
+  .date-picker-dow,
+  .date-picker-days {
+    gap: 0.125rem;
+  }
+  .date-picker-dow span {
+    text-align: center;
+    font-size: 0.625rem;
+  }
+  .date-picker-day {
+    padding: 0.5rem 0;
+    text-align: center;
+    min-inline-size: 0;
+  }
+}
+
+@layer components {
+  .date-picker-days {
+    touch-action: none;
+    user-select: none;
+  }
+}
+
+@layer components {
+  :where(.date-picker-main) {
+    color: var(--content-default, #e5edf5);
+  }
+  :where(
+    .date-picker-main .date-picker-face,
+    .date-picker-main .date-picker-popover
+  ) {
+    color: inherit;
+    background: var(--surface-inset, #10141e);
+    border: 1px solid var(--border-default, #354052);
+    border-radius: var(--radius-sm, 3px);
+  }
+  :where(.date-picker-main .date-picker-popover) {
+    box-shadow: 0 0.5rem 1.5rem #0008;
+  }
+  :where(.date-picker-main button) {
+    font: inherit;
+    cursor: pointer;
+  }
+  :where(
+    .date-picker-main .date-picker-step,
+    .date-picker-main .date-picker-day
+  ) {
+    color: inherit;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: var(--radius-sm, 3px);
+  }
+  :where(.date-picker-main .date-picker-step) {
+    border-color: var(--border-default, #354052);
+  }
+  :where(.date-picker-main button:hover:not(:disabled)) {
+    background: var(--surface-hover, #ffffff0d);
+  }
+  :where(.date-picker-main .outside) {
+    opacity: 0.4;
+  }
+  :where(.date-picker-main [aria-current="date"]) {
+    color: var(--accent-primary, #ff28d5);
+  }
+  :where(.date-picker-main .is-selected) {
+    border-color: var(--accent-primary, #ff28d5);
+    background: var(--surface-selected, #ff28d522);
+  }
+  :where(.date-picker-main button:focus-visible) {
+    outline: 2px solid var(--accent-primary, #ff28d5);
+    outline-offset: 2px;
+  }
+  :where(.date-picker-main button:disabled) {
+    opacity: 0.5;
+    cursor: default;
+  }
+}

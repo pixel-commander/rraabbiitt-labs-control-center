@@ -1,0 +1,26 @@
+schema: 1
+intent: use
+owner:
+  id: 1793796407955
+  path: src/components/SearchableSelect/hooks/useSearchableSelect/rab.settings.json
+id: 1793796407958
+name: use-searchable-select
+title: Searchable select
+description: Manage selectable records, input filtering, and keyboard navigation.
+type: skill
+path: src/components/SearchableSelect/hooks/useSearchableSelect
+file: use.skill.yaml
+tags:
+  - react
+  - hook
+implementation:
+  - path: src/components/SearchableSelect/hooks/useSearchableSelect/useSearchableSelect.ts
+context: []
+inputs: {}
+outputs: {}
+instructions: Pass the select props and bind the returned ref and handlers to
+  the select controls.
+checks: []
+examples: []
+routes: []
+provenance: []

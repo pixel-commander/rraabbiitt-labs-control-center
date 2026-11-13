@@ -1,0 +1,306 @@
+{
+  "action_type": "use",
+  "id": 1794362069662,
+  "name": "Factory",
+  "title": "Factory",
+  "description": "",
+  "type": "dashboard",
+  "tags": [
+    "react",
+    "dashboard"
+  ],
+  "file": "Factory.tsx",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/dashboards/Factory",
+  "paths": [
+    {
+      "name": "Factory.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "Factory.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "save-component.mjs",
+      "path": "api",
+      "type": "mjs"
+    },
+    {
+      "name": "Canvas.tsx",
+      "path": "components/ComponentFactory",
+      "type": "tsx"
+    },
+    {
+      "name": "CodePreview.tsx",
+      "path": "components/ComponentFactory",
+      "type": "tsx"
+    },
+    {
+      "name": "ComponentFactory.tsx",
+      "path": "components/ComponentFactory",
+      "type": "tsx"
+    },
+    {
+      "name": "ComponentFactory.types.ts",
+      "path": "components/ComponentFactory",
+      "type": "ts"
+    },
+    {
+      "name": "Elements.tsx",
+      "path": "components/ComponentFactory/Elements",
+      "type": "tsx"
+    },
+    {
+      "name": "Elements.types.ts",
+      "path": "components/ComponentFactory/Elements",
+      "type": "ts"
+    },
+    {
+      "name": "elements.css",
+      "path": "components/ComponentFactory/Elements/css",
+      "type": "css"
+    },
+    {
+      "name": "Footer.tsx",
+      "path": "components/ComponentFactory/Footer",
+      "type": "tsx"
+    },
+    {
+      "name": "footer.css",
+      "path": "components/ComponentFactory/Footer/css",
+      "type": "css"
+    },
+    {
+      "name": "GridAreaSelectPopup.tsx",
+      "path": "components/ComponentFactory/GridAreaSelectPopup",
+      "type": "tsx"
+    },
+    {
+      "name": "GridAreaSelectPopup.types.ts",
+      "path": "components/ComponentFactory/GridAreaSelectPopup",
+      "type": "ts"
+    },
+    {
+      "name": "grid-area-select-popup.css",
+      "path": "components/ComponentFactory/GridAreaSelectPopup/css",
+      "type": "css"
+    },
+    {
+      "name": "GridCol.tsx",
+      "path": "components/ComponentFactory",
+      "type": "tsx"
+    },
+    {
+      "name": "Header.tsx",
+      "path": "components/ComponentFactory/Header",
+      "type": "tsx"
+    },
+    {
+      "name": "header.css",
+      "path": "components/ComponentFactory/Header/css",
+      "type": "css"
+    },
+    {
+      "name": "Layers.tsx",
+      "path": "components/ComponentFactory/Layers",
+      "type": "tsx"
+    },
+    {
+      "name": "Layers.types.ts",
+      "path": "components/ComponentFactory/Layers",
+      "type": "ts"
+    },
+    {
+      "name": "layers.css",
+      "path": "components/ComponentFactory/Layers/css",
+      "type": "css"
+    },
+    {
+      "name": "README.txt",
+      "path": "components/ComponentFactory",
+      "type": "txt"
+    },
+    {
+      "name": "SettingsCol.tsx",
+      "path": "components/ComponentFactory/SettingsCol",
+      "type": "tsx"
+    },
+    {
+      "name": "settings-col.css",
+      "path": "components/ComponentFactory/SettingsCol/css",
+      "type": "css"
+    },
+    {
+      "name": "SizeFields.tsx",
+      "path": "components/ComponentFactory",
+      "type": "tsx"
+    },
+    {
+      "name": "StyleCol.tsx",
+      "path": "components/ComponentFactory",
+      "type": "tsx"
+    },
+    {
+      "name": "Stylers.tsx",
+      "path": "components/ComponentFactory/Stylers",
+      "type": "tsx"
+    },
+    {
+      "name": "TODO.txt",
+      "path": "components/ComponentFactory",
+      "type": "txt"
+    },
+    {
+      "name": "component-factory.css",
+      "path": "components/ComponentFactory/css",
+      "type": "css"
+    },
+    {
+      "name": ".gitkeep",
+      "path": "components/ComponentFactory/demo",
+      "type": ""
+    },
+    {
+      "name": "Demo.tsx",
+      "path": "components/ComponentFactory/demo",
+      "type": "tsx"
+    },
+    {
+      "name": "layout.json",
+      "path": "components/ComponentFactory/demo",
+      "type": "json"
+    },
+    {
+      "name": "theme.ts",
+      "path": "components/ComponentFactory/demo",
+      "type": "ts"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": "components/ComponentFactory",
+      "type": "json"
+    },
+    {
+      "name": "README.txt",
+      "path": "components/ComponentFactory/hooks/useComponentFactory",
+      "type": "txt"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "components/ComponentFactory/hooks/useComponentFactory",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "components/ComponentFactory/hooks/useComponentFactory",
+      "type": "yaml"
+    },
+    {
+      "name": "useComponentFactory.ts",
+      "path": "components/ComponentFactory/hooks/useComponentFactory",
+      "type": "ts"
+    },
+    {
+      "name": "compositionCode.ts",
+      "path": "components/ComponentFactory/js",
+      "type": "ts"
+    },
+    {
+      "name": "gridSlots.ts",
+      "path": "components/ComponentFactory/js",
+      "type": "ts"
+    },
+    {
+      "name": "paintStyles.ts",
+      "path": "components/ComponentFactory/js",
+      "type": "ts"
+    },
+    {
+      "name": "renderStyles.ts",
+      "path": "components/ComponentFactory/js",
+      "type": "ts"
+    },
+    {
+      "name": "sizeStyles.ts",
+      "path": "components/ComponentFactory/js",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "components/ComponentFactory",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "components/ComponentFactory",
+      "type": "yaml"
+    },
+    {
+      "name": "SavePopup.tsx",
+      "path": "components/SavePopup",
+      "type": "tsx"
+    },
+    {
+      "name": "SavePopup.types.ts",
+      "path": "components/SavePopup",
+      "type": "ts"
+    },
+    {
+      "name": "save-popup.css",
+      "path": "components/SavePopup/css",
+      "type": "css"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "components/SavePopup",
+      "type": "json"
+    },
+    {
+      "name": "factory.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "README.txt",
+      "path": "hooks/useFactory",
+      "type": "txt"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": "hooks/useFactory",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": "hooks/useFactory",
+      "type": "yaml"
+    },
+    {
+      "name": "useFactory.ts",
+      "path": "hooks/useFactory",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

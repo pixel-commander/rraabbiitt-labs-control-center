@@ -1,0 +1,66 @@
+{
+  "action_type": "use",
+  "id": 1794315524611,
+  "name": "GridLayoutDisplay",
+  "title": "GridLayoutDisplay",
+  "description": "",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "GridLayoutDisplay.tsx",
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/GridLayoutDisplay",
+  "paths": [
+    {
+      "name": "GridLayoutDisplay.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "GridLayoutDisplay.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "GridSelectCell.tsx",
+      "path": "GridSelectCell",
+      "type": "tsx"
+    },
+    {
+      "name": "grid-select-cell.css",
+      "path": "GridSelectCell/css",
+      "type": "css"
+    },
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": ".gitkeep",
+      "path": "demo",
+      "type": ""
+    },
+    {
+      "name": "Demo.tsx",
+      "path": "demo",
+      "type": "tsx"
+    },
+    {
+      "name": "dependencies.manifest.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

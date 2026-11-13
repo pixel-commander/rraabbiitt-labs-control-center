@@ -1,0 +1,12 @@
+{
+  "name": "StatelesssForm",
+  "type": "dependencies",
+  "paths": [
+    {
+      "name": "../../HouseKeys.types",
+      "path": "../../HouseKeys.types",
+      "type": "import",
+      "file": "StatelesssForm.types.ts"
+    }
+  ]
+}

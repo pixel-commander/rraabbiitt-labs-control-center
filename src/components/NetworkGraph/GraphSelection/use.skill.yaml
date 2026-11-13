@@ -1,0 +1,28 @@
+schema: 1
+intent: use
+owner:
+  id: 1793998444355
+  path: src/components/NetworkGraph/GraphSelection
+  file: rab.settings.json
+id: 1794004818760
+name: use GraphSelection
+title: Use GraphSelection
+description: Display a selected graph node and its connected nodes.
+type: function
+path: C:\rraabbiitt-react-components\src\components\NetworkGraph\GraphSelection
+file: use.skill.yaml
+tags: []
+implementation:
+  - path: src/components/NetworkGraph/GraphSelection
+    file: GraphSelection.tsx
+context: []
+inputs: {}
+outputs: {}
+instructions: Read README.txt and GraphSelection.types.ts for the current contract. Render this
+  component with the props below. Application data and persistence remain with the caller. Preserve
+  supplied false, zero and empty-string values. Use theme/component tokens, supplied class props, or
+  parent CSS for UI overrides.
+checks: []
+examples: []
+routes: []
+provenance: []

@@ -1,0 +1,28 @@
+schema: 1
+intent: use
+owner:
+  id: 1794004818199
+  path: src/components/Calendar/hooks/useCalendar
+  file: rab.settings.json
+id: 1794004818224
+name: use useCalendar
+title: Use useCalendar
+description: "useCalendar: hook implementation. See README.txt for the exported contract and integration."
+type: function
+path: C:\rraabbiitt-react-components\src\components\Calendar\hooks\useCalendar
+file: use.skill.yaml
+tags: []
+implementation:
+  - path: src/components/Calendar/hooks/useCalendar
+    file: useCalendar.ts
+context: []
+inputs: {}
+outputs: {}
+instructions: Read README.txt and useCalendar.ts for the current contract. Call this hook at the top
+  level of a React component. Its implementation owns its interaction lifecycle. Preserve supplied
+  false, zero and empty-string values. Use theme/component tokens, supplied class props, or parent
+  CSS for UI overrides.
+checks: []
+examples: []
+routes: []
+provenance: []

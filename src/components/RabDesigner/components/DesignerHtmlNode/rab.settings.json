@@ -1,0 +1,35 @@
+{
+  "action_type": "use",
+  "id": 1793333048512,
+  "name": "DesignerHtmlNode",
+  "title": "DesignerHtmlNode",
+  "description": "",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "path": "C:/rraabbiitt-hq/rraabbiitt-react-components/src/components/RabDesigner/components/DesignerHtmlNode",
+  "paths": [
+    {
+      "name": "DesignerHtmlNode.tsx",
+      "path": ".",
+      "type": "tsx"
+    },
+    {
+      "name": "DesignerHtmlNode.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "designer-html-node.css",
+      "path": "css",
+      "type": "css"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    }
+  ]
+}

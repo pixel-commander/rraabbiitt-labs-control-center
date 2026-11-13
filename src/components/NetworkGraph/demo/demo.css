@@ -1,0 +1,86 @@
+@layer components {
+  .network-graph-demo {
+    block-size: 420px;
+    padding: var(--space-lg);
+  }
+  .network-graph-demo > aside {
+    inline-size: 240px;
+    padding-inline-start: var(--space-lg);
+  }
+  .network-graph-demo .graph-search {
+    margin-block-end: var(--space-sm);
+  }
+  .network-graph-demo .graph-footprint {
+    margin-block-end: var(--space-xl);
+  }
+  .network-graph-demo .graph-selection h4 {
+    margin-block: var(--space-md);
+  }
+}
+
+@layer components {
+  .network-graph-demo {
+    --network-surface: #071019;
+    --network-panel: #0b1722;
+    --network-line: #1c3544;
+    --network-text: #cae4e9;
+    --network-muted: #7794a3;
+    --network-accent: #53e0dc;
+    --network-node: var(--network-accent);
+    --network-edge: #338295;
+    color: var(--network-text);
+    background: var(--network-surface);
+    font:
+      14px/1.45 "Segoe UI",
+      system-ui,
+      sans-serif;
+  }
+  .network-graph-demo canvas {
+    background-image:
+      linear-gradient(#16304222 1px, transparent 1px),
+      linear-gradient(90deg, #16304222 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+  .network-graph-demo aside {
+    background: var(--network-panel);
+    border-left: 1px solid var(--network-line);
+  }
+  .network-graph-demo h3 {
+    color: var(--network-muted);
+    font-size: 10px;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  .network-graph-demo dt {
+    color: var(--network-muted);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .network-graph-demo dd {
+    color: var(--network-text);
+    font-size: 22px;
+  }
+  .network-graph-demo dl > div {
+    border-top: 1px solid var(--network-line);
+    padding-block: 10px;
+  }
+  .network-graph-demo .action-row {
+    color: var(--network-text);
+    background: transparent;
+    border-color: var(--network-line);
+    text-align: left;
+  }
+  .network-graph-demo input,
+  .network-graph-demo button[type="submit"] {
+    background: var(--network-panel);
+    color: var(--network-text);
+    border: 1px solid var(--network-line);
+    padding: 8px;
+  }
+  .network-graph-demo .graph-selection__path {
+    color: var(--network-muted);
+    font: 11px/1.5 monospace;
+  }
+}

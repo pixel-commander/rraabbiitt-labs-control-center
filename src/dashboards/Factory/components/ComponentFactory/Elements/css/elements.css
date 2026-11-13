@@ -1,0 +1,7 @@
+.component-factory-elements {
+  block-size: 100%;
+}
+
+.component-factory-elements > header {
+  border-bottom: 1px solid var(--border-default);
+}

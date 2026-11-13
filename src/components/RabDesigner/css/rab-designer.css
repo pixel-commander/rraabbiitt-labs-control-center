@@ -1,0 +1,58 @@
+.rab-designer {
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  box-sizing: border-box;
+}
+.rab-designer [data-panel][hidden] {
+  display: none;
+}
+.designer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 20px;
+  flex-wrap: wrap;
+}
+.designer-brand,
+.designer-file-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.designer-brand strong {
+  font-size: 18px;
+  white-space: nowrap;
+}
+.designer-brand > span:first-child {
+  font-size: 28px;
+}
+.designer-brand input {
+  width: 220px;
+  padding: 8px;
+  font: inherit;
+}
+.designer-file-actions button {
+  padding: 8px 14px;
+}
+.designer-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 20px;
+  font-size: 12px;
+}
+.designer-open {
+  width: min(480px, 80vw);
+  max-height: 75vh;
+  padding: 24px;
+}
+.designer-file-row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 14px;
+  margin-block: 8px;
+}

@@ -1,0 +1,71 @@
+.designer-toolbar {
+  position: absolute;
+  left: 24px;
+  top: 24px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px;
+  border-radius: 8px;
+  max-width: calc(100% - 48px);
+  flex-wrap: wrap;
+  z-index: 10;
+}
+.designer-toolbar button,
+.designer-toolbar select {
+  height: 34px;
+  min-width: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 8px;
+  font-size: 14px;
+}
+.designer-divider {
+  width: 1px;
+  height: 22px;
+  margin: 0 5px;
+}
+.designer-selection {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 20px;
+  display: flex;
+  align-items: end;
+  gap: 8px;
+  padding: 12px;
+  flex-wrap: wrap;
+  z-index: 10;
+  width: fit-content;
+  max-width: calc(100% - 72px);
+}
+.designer-selection label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 11px;
+}
+.designer-selection input {
+  width: 72px;
+  box-sizing: border-box;
+}
+.designer-selection input[name="title"],
+.designer-selection input[name="content"] {
+  width: 120px;
+}
+.designer-selection input,
+.designer-selection select,
+.designer-selection button {
+  height: 28px;
+}
+.designer-auto-mode {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  white-space: nowrap;
+}
+.designer-auto-mode span {
+  min-width: 64px;
+}

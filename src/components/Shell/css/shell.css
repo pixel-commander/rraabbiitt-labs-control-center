@@ -1,0 +1,117 @@
+@layer components {
+  .site-chrome__header[hidden] {
+    display: none;
+  }
+  .site-chrome {
+    position: relative;
+    block-size: 100dvh;
+    min-inline-size: 0;
+    min-block-size: 0;
+    padding: calc(2.3125rem + var(--space-2xs));
+    overflow: hidden;
+  }
+
+  .site-chrome__rail {
+    position: absolute;
+    z-index: 1;
+    min-block-size: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .site-chrome__rail--left,
+  .site-chrome__rail--right {
+    inset-block: 4rem;
+    inline-size: 1.75rem;
+  }
+
+  .site-chrome__rail--left {
+    inset-inline-start: 0.5625rem;
+  }
+
+  .site-chrome__rail--right {
+    inset-inline-end: 0.5625rem;
+  }
+
+  .site-chrome__rail--top,
+  .site-chrome__rail--bottom {
+    inset-inline: 4rem;
+    block-size: 1.75rem;
+  }
+
+  .site-chrome__rail--top {
+    inset-block-start: 0.5625rem;
+  }
+
+  .site-chrome__rail--bottom {
+    inset-block-end: 0.5625rem;
+  }
+
+  .site-chrome__rail-canvas {
+    position: absolute;
+    inset: 0.125rem;
+    display: block;
+    inline-size: calc(100% - 0.25rem);
+    block-size: calc(100% - 0.25rem);
+  }
+
+  .site-chrome__arc {
+    position: absolute;
+    z-index: 2;
+    inline-size: 2.75rem;
+    block-size: 2.75rem;
+    pointer-events: none;
+  }
+
+  .site-chrome__arc--top-left {
+    inset-block-start: 1.0625rem;
+    inset-inline-start: 1.0625rem;
+  }
+
+  .site-chrome__arc--top-right {
+    inset-block-start: 1.0625rem;
+    inset-inline-end: 1.0625rem;
+  }
+
+  .site-chrome__arc--bottom-left {
+    inset-block-end: 1.0625rem;
+    inset-inline-start: 1.0625rem;
+  }
+
+  .site-chrome__arc--bottom-right {
+    inset-block-end: 1.0625rem;
+    inset-inline-end: 1.0625rem;
+  }
+
+  .site-chrome__inner {
+    /* Float panels in the main stacking context must clear rails (1) and arcs (2). */
+    position: relative;
+    z-index: 3;
+    min-inline-size: 0;
+    min-block-size: 0;
+    padding: var(--space-2xs);
+    overflow: hidden;
+  }
+
+  .site-chrome__header {
+    min-inline-size: 0;
+  }
+
+  .site-chrome__main > .dashboard {
+    --dashboard-background: transparent;
+  }
+
+  .site-chrome__main {
+    position: relative;
+    min-inline-size: 0;
+    min-block-size: 0;
+  }
+}
+
+.site-chrome__arc canvas {
+  position: absolute;
+  inset: -0.3125rem;
+  width: calc(100% + 0.625rem);
+  height: calc(100% + 0.625rem);
+  pointer-events: none;
+}

@@ -1,0 +1,18 @@
+schema: 1
+intent: use
+id: 1793992921693
+name: UserInput
+path: src/components/Chat/UserInput
+file: UserInput.tsx
+owner:
+  id: 1793992769266
+  path: src/components/Chat/UserInput
+  file: rab.settings.json
+implementation:
+  - path: src/components/Chat/UserInput
+    file: UserInput.tsx
+instructions: Render UserInput with optional handleSubmit, handleChange,
+  placeholder, disabled and className. Returns an independent text input and
+  Send button using side-right grid layout. Callbacks receive {message} and
+  user-input action. Browser autocomplete is off. Does not import SearchBar,
+  convert users, create message records or send network requests.

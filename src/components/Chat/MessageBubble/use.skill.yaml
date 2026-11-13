@@ -1,0 +1,18 @@
+schema: 1
+intent: use
+id: 1793992921668
+name: MessageBubble
+path: src/components/Chat/MessageBubble
+file: MessageBubble.tsx
+owner:
+  id: 1793992769254
+  path: src/components/Chat/MessageBubble
+  file: rab.settings.json
+implementation:
+  - path: src/components/Chat/MessageBubble
+    file: MessageBubble.tsx
+instructions: Render MessageBubble with name, message and side (left or right).
+  Optional status/date render as supplied. handleClick receives name, message
+  and side with message-click action. Returns an aligned bubble inside a grid
+  wrapper. Left has 2em right padding; right has 2em left padding. No fixed or
+  maximum width. Feedback controls are not implemented.

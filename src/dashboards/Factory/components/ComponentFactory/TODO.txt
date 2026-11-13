@@ -1,0 +1,10 @@
+1. Add two functions in ComponentFactory's js folder.
+
+   js/generateComposition/generateComposition.ts
+   Input: { type?: "html" | "functions", code?: string, path?: string }
+
+   js/generateThemeTokens/generateThemeTokens.ts
+   Input: { type?: "color" | "layout" | "effects", code?: string, path?: string }
+
+   When a path is supplied, it identifies the file to open and scan.
+   Both functions return { type, response }.

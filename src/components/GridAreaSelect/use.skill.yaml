@@ -1,0 +1,16 @@
+name: use-grid-area-select
+type: skill
+path: src/components/GridAreaSelect
+file: use.skill.yaml
+instructions: >-
+  Supply controlled layout {cols, rows, areas}. Each area has numeric id, r1/c1
+  one-based starts, rows/cols spans, optional name/title and content ID. Parent owns
+  IDs, layout and selected id. Keep areas in bounds and nonoverlapping. handleCreate
+  receives a proposed rectangle without id; parent adds it. handleChange receives
+  replacement serializable layout and move/resize/remove/drop. handleClick receives
+  selected area or null. snap links directly touching neighbors during resize.
+  maxRowSpan caps new and resized areas. renderContent(content, area) renders IDs.
+  handleDrop reports area/content; handleChange also proposes the updated layout.
+  mime defaults text/x-drop-load-id with text/plain fallback. disabled prevents
+  editing. All callbacks use shared HandlerKey data/type/props. No persistence,
+  context, dialogs, routing or fetching. Replace layout to restore caller data.

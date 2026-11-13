@@ -1,0 +1,28 @@
+schema: 1
+intent: use
+owner:
+  id: 1794004818784
+  path: src/components/NetworkGraph/hooks/useNetworkGraph
+  file: rab.settings.json
+id: 1794004818794
+name: use useNetworkGraph
+title: Use useNetworkGraph
+description: "useNetworkGraph: hook implementation. See README.txt for the exported contract and integration."
+type: function
+path: C:\rraabbiitt-react-components\src\components\NetworkGraph\hooks\useNetworkGraph
+file: use.skill.yaml
+tags: []
+implementation:
+  - path: src/components/NetworkGraph/hooks/useNetworkGraph
+    file: useNetworkGraph.ts
+context: []
+inputs: {}
+outputs: {}
+instructions: Read README.txt and useNetworkGraph.ts for the current contract. Call this hook at the
+  top level of a React component. Its implementation owns its interaction lifecycle. Preserve
+  supplied false, zero and empty-string values. Use theme/component tokens, supplied class props, or
+  parent CSS for UI overrides.
+checks: []
+examples: []
+routes: []
+provenance: []

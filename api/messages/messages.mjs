@@ -24,7 +24,7 @@ export async function messageOperation(world, action, settings) {
   if (action === "edit" && !keys.length) return failure(400, "Supply fields to edit.", settings);
   let db;
   try {
-    const project = JSON.parse(await readFile(resolve(world.path, "rab.project.json"), "utf8"));
+    const project = JSON.parse(await readFile(resolve(world.path, "rab.world.json"), "utf8"));
     const entries = project.paths?.filter(entry => entry.name === "database");
     if (entries?.length !== 1 || !entries[0].path || !entries[0].file)
       throw Error("Database registration is missing.");
@@ -106,3 +106,18 @@ export async function handleMessages(world, req, res, url) {
   }
   send(await messageOperation(world, action, settings));
 }
+
+/** Tool entry for the master runner. */
+export const run = async (props) => {
+  const action = props.action ?? props.settings?.action;
+  const settings = props.settings ?? props;
+  const world = props.world ?? props;
+  const result = await messageOperation(world, action, settings);
+  return {
+    return_type: "api-call",
+    status: result.code >= 200 && result.code < 300 ? "complete" : "error",
+    settings,
+    response: result.body?.response,
+    error: result.body?.error,
+  };
+};

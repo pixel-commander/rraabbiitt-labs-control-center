@@ -1,5 +1,5 @@
 import { readFile } from "node:fs/promises";
-import { runTools } from "../../toolkit/rab-world/runners/run-tools.ts";
+import { runTools } from "../../toolkit/runners/run-tools.ts";
 import type { ToolsProps, ToolReturn } from "../../toolkit/Tooling.types.ts";
 
 /** Called by each tool after its work. Usage failures never change its outcome. */

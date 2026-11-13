@@ -12,3 +12,12 @@ CREATE TABLE IF NOT EXISTS "tool_calls" ("id" INTEGER PRIMARY KEY NOT NULL, "nam
 -- toolkit/tools/refresh-world-database/ensure-search-schema.ts.
 
 CREATE TABLE IF NOT EXISTS "favorites" ("id" INTEGER PRIMARY KEY NOT NULL, "name" TEXT, "title" TEXT, "type" TEXT, "description" TEXT, "tags" TEXT DEFAULT '[]' CHECK (tags IS NULL OR (json_valid(tags) AND json_type(tags) = 'array')), "file" TEXT, "path" TEXT, "paths" TEXT DEFAULT '[]' CHECK (paths IS NULL OR (json_valid(paths) AND json_type(paths) = 'array'))) WITHOUT ROWID;
+
+-- Side log kept as a backup net. Written by finishToolUsage inside tools.
+-- Primary tracking lives in runs + tool_calls.
+CREATE TABLE IF NOT EXISTS "tool_usage" (
+  "id" INTEGER NOT NULL,
+  "date" INTEGER NOT NULL,
+  "message" INTEGER
+);
+CREATE INDEX IF NOT EXISTS "tool_usage_id_date" ON "tool_usage" ("id", "date");

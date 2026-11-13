@@ -22,7 +22,7 @@ instructions: |
   Use RunnersProps, RunnerCallbacks, and RunnerReturn from
   toolkits/Runner.types.ts. Build an ordered RunProps array of
   { type: 'tool', name, settings } and pass it with the executor and options to runTools from
-  toolkits/rab-world/runners/run-tools.ts. Use its async plan factory for preparation.
+  toolkits/runners/run-tools.ts. Use its async plan factory for preparation.
   Return runTools directly: it delegates to runner-tooling-and-tracking, which
   owns waiting statuses, invocation IDs, per-entry date_start/date_end and
   update snapshots. RunnerReturn is the flat RunResponse[] itself. Do not nest trackers or

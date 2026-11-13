@@ -1,6 +1,6 @@
 LOCAL DATABASE TOOLS
 
-rab-world/ contains local metadata scaffolds and refresh runners.
+ contains local metadata scaffolds and refresh runners.
 hybrid-seat-ranking/ contains the copied ranking tool adapters.
 Read each folder README.txt for its setup and connection requirements.
 

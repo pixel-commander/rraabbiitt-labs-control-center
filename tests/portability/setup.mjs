@@ -28,7 +28,7 @@ try {
  assert.ok(db.prepare("SELECT count(*) n FROM records").get().n>0);
  for(const table of ["messages","docs","runs","tool_calls","tool_usage"])
   assert.equal(db.prepare(`SELECT count(*) n FROM ${table}`).get().n,0);
- const {generateWorldId}=await moduleAt("toolkit/rab-world/generators/generate-world-id/generate-world-id.ts");
+ const {generateWorldId}=await moduleAt("toolkit/generators/generate-world-id/generate-world-id.ts");
  const message=generateWorldId().id;
  db.prepare("INSERT INTO messages(id,description) VALUES(?,?)").run(message,"Preserve me across setup and refresh");
  good(command("db/setup.mjs"));
@@ -53,12 +53,12 @@ try {
  await writeFile(resolve(sample,"rab.settings.json"),JSON.stringify({...registration,title:"Fresh metadata"}));
  assert.equal(JSON.parse(command("scripts/tool.mjs",[String(id)]).stdout)[0].response.paths[0].title,"Fresh metadata");
  await rm(resolve(broken,"rab.settings.json"));
- const {executeTool:refreshSettings}=await moduleAt("toolkit/rab-world/tools/refresh-settings-json/refresh-settings-json.ts");
+ const {executeTool:refreshSettings}=await moduleAt("toolkit/tools/refresh-settings-json/refresh-settings-json.ts");
  const updated=await refreshSettings({path:sample});assert.equal(updated.status,"complete",updated.error);assert.equal(updated.response.path,"toolkit/tools/fixture");
- const {newSkillFlow}=await moduleAt("toolkit/rab-world/scaffolds/new-skill-flow/new-skill-flow.ts");
+ const {newSkillFlow}=await moduleAt("toolkit/scaffolds/new-skill-flow/new-skill-flow.ts");
  const skill=await newSkillFlow({path:sample,name:"fixture",title:"Fixture",description:"Test",instructions:"Use this test fixture",owner:{id}});
  assert.equal(skill.path,"toolkit/tools/fixture");
- const {newSettingsJson}=await moduleAt("toolkit/rab-world/scaffolds/new-settings-json/new-settings-json.mjs");
+ const {newSettingsJson}=await moduleAt("toolkit/scaffolds/new-settings-json/new-settings-json.mjs");
  const created=await newSettingsJson({path:"toolkit/tools/new-fixture",name:"new-fixture",title:"New fixture",description:"Test",type:"tool"});
  assert.equal(created.path,"toolkit/tools/new-fixture");
  const prior=process.env.TOOL_LEARNER_PYTHON;process.env.TOOL_LEARNER_PYTHON=python;

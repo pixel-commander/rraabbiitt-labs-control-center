@@ -1,0 +1,143 @@
+{
+  "tags": [
+    "rab-world-v2",
+    "scaffold"
+  ],
+  "id": 1791853637888,
+  "name": "new-skill-flow",
+  "title": "Create Skill Flow",
+  "description": "Create a use or enhance skill file with required metadata. The tool assigns an ID and refuses to replace an existing file.",
+  "type": "tool",
+  "parent": 1791825479795,
+  "path": "toolkit/scaffolds/new-skill-flow",
+  "file": "new-skill-flow.ts",
+  "settings": [
+    {
+      "name": "path",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "description",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "instructions",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "type",
+      "type": "string"
+    },
+    {
+      "name": "file",
+      "type": "string"
+    },
+    {
+      "name": "intent",
+      "type": "string"
+    },
+    {
+      "name": "owner",
+      "type": "object"
+    },
+    {
+      "name": "tags",
+      "type": "array"
+    },
+    {
+      "name": "id",
+      "type": "number",
+      "required": false
+    },
+    {
+      "name": "paths",
+      "type": "array",
+      "required": false
+    },
+    {
+      "name": "implementation",
+      "type": "array",
+      "required": false
+    },
+    {
+      "name": "context",
+      "type": "array",
+      "required": false
+    },
+    {
+      "name": "inputs",
+      "type": "object",
+      "required": false
+    },
+    {
+      "name": "outputs",
+      "type": "object",
+      "required": false
+    },
+    {
+      "name": "checks",
+      "type": "array",
+      "required": false
+    },
+    {
+      "name": "examples",
+      "type": "array",
+      "required": false
+    },
+    {
+      "name": "routes",
+      "type": "array",
+      "required": false
+    },
+    {
+      "name": "provenance",
+      "type": "array",
+      "required": false
+    }
+  ],
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "new-skill-flow.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "new-skill-flow.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "skill.yaml",
+      "path": "template",
+      "type": "yaml"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

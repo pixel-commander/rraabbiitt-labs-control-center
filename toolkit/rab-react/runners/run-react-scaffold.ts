@@ -2,7 +2,7 @@ import { readFile } from "node:fs/promises";
 import { resolve, relative, join } from "node:path";
 import type { ToolsProps, ToolReturn } from "../../Tooling.types.ts";
 import type { RunnerCallbacks, RunProps } from "../../Runner.types.ts";
-import { runTools } from "../../rab-world/runners/run-tools.ts";
+import { runTools } from "../../runners/run-tools.ts";
 
 const kinds = ["container", "action", "effect", "grid"];
 const locations: Record<string, string> = {

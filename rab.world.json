@@ -3,7 +3,7 @@
   "name": "portable-search-dashboard",
   "title": "Portable Hybrid Search Dashboard",
   "description": "Local world for the labs control center.",
-  "path": "X:/rraabbiitt-labs-control-center",
+  "path": ".",
   "paths": [
     {
       "id": 1794420272872,
@@ -55,8 +55,14 @@
       "id": 1794247089697,
       "name": "rraabbiitt-labs-control-center",
       "type": "project",
-      "path": "X:/rraabbiitt-labs-control-center",
-      "file": "rab.project.json"
+      "path": ".",
+      "file": "rab.world.json"
+    },
+    {
+      "name": "database",
+      "type": "path",
+      "path": "db/main",
+      "file": "app.sqlite"
     }
   ],
   "toolkits": [

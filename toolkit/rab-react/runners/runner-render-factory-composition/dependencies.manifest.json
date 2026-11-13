@@ -15,14 +15,14 @@
       "file": "runner-render-factory-composition.ts"
     },
     {
-      "name": "../../../rab-world/runners/run-tools.ts",
-      "path": "../../../rab-world/runners/run-tools.ts",
+      "name": "../../../runners/run-tools.ts",
+      "path": "../../../runners/run-tools.ts",
       "type": "import",
       "file": "runner-render-factory-composition.ts"
     },
     {
-      "name": "../../../rab-world/tools/refresh-settings-json/refresh-settings-json.ts",
-      "path": "../../../rab-world/tools/refresh-settings-json/refresh-settings-json.ts",
+      "name": "../../../tools/refresh-settings-json/refresh-settings-json.ts",
+      "path": "../../../tools/refresh-settings-json/refresh-settings-json.ts",
       "type": "import",
       "file": "runner-render-factory-composition.ts"
     },

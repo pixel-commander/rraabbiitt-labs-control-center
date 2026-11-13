@@ -17,7 +17,7 @@ Props are one object, as declared in rab.settings.json:
 - tags (array): Optional record tags.
 
 The implementation validates before writing, uses the template/ directory relative to its module, refuses an existing destination, and returns the exact saved rab.project.json record. Nested metadata remains in rab.settings.json files. Failures throw. It does not run tracking, startup, discovery, scans, or CLI parsing.
-Project name must already be lowercase kebab-case. The old name normalizer came from the missing ../../rab-world/scaffolds/new-world/new-world.mjs dependency; the migrated scaffold has no dependency on that legacy toolkit. The template carries its own package dependency versions. No database or UI kit seeding is performed.
+Project name must already be lowercase kebab-case. The old name normalizer came from the missing ../../scaffolds/new-world/new-world.mjs dependency; the migrated scaffold has no dependency on that legacy toolkit. The template carries its own package dependency versions. No database or UI kit seeding is performed.
 
 
 

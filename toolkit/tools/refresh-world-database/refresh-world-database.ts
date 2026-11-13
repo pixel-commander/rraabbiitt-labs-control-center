@@ -76,5 +76,5 @@ export const run: UsageTool = async settings => {
 };
 
 // Direct execution uses the same exported tool contract.
-const { runToolCli } = await import("../../rab-world/runners/tool-cli.mjs");
+const { runToolCli } = await import("../../runners/tool-cli.mjs");
 await runToolCli(import.meta.url, run);

@@ -1,0 +1,72 @@
+{
+  "id": 1793984711136,
+  "name": "runner-refresh-world-json",
+  "title": "Refresh world JSON",
+  "description": "Refresh discovered beacons and projects. In world mode, update rab.world.json after all refreshes succeed.",
+  "type": "runner",
+  "path": "toolkit/runners/runner-refresh-world-json",
+  "file": "runner-refresh-world-json.ts",
+  "tags": [
+    "rab-world",
+    "runner",
+    "refresh",
+    "json"
+  ],
+  "settings": [
+    {
+      "name": "path",
+      "type": "string",
+      "required": false,
+      "description": "Target JSON file or its containing folder. Required until ID lookup is connected."
+    },
+    {
+      "name": "id",
+      "type": "number",
+      "required": false,
+      "description": "Reserved record ID; ID-only lookup is not implemented."
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": true,
+      "description": "world | project | beacon | settings"
+    }
+  ],
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "runner-refresh-world-json-fanout.test.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "runner-refresh-world-json.test.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "runner-refresh-world-json.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "runner-refresh-world-json.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 import type { RunnerCallbacks } from "../../../Runner.types.ts";
-import { runTools } from "../../../rab-world/runners/run-tools.ts";
+import { runTools } from "../../../runners/run-tools.ts";
 import { planReactScaffold, executePlannedReactScaffold } from "../run-react-scaffold.ts";
 import { spawn } from "node:child_process";
 import { closeSync, openSync, existsSync } from "node:fs";

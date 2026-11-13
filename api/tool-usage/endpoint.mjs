@@ -6,7 +6,7 @@ import { resolve } from "node:path";
 export async function readUsage(world) {
   let db;
   try {
-    const project = JSON.parse(await readFile(resolve(world.path, "rab.project.json"), "utf8"));
+    const project = JSON.parse(await readFile(resolve(world.path, "rab.world.json"), "utf8"));
     const entries = project.paths?.filter(entry => entry.name === "database");
     if (entries?.length !== 1 || !entries[0].path || !entries[0].file) throw Error("Database registration is missing.");
     db = new DatabaseSync(resolve(world.path, entries[0].path, entries[0].file), { readOnly: true });
@@ -52,10 +52,10 @@ export async function recordUsage(world, settings) {
   }
   let db;
   try {
-    const project = JSON.parse(await readFile(resolve(world.path, "rab.project.json"), "utf8"));
+    const project = JSON.parse(await readFile(resolve(world.path, "rab.world.json"), "utf8"));
     const entries = project.paths?.filter(entry => entry.name === "database");
     if (entries?.length !== 1 || !entries[0].path || !entries[0].file)
-      throw new Error("Database path and file are missing from rab.project.json.");
+      throw new Error("Database path and file are missing from rab.world.json.");
     const file = resolve(world.path, entries[0].path, entries[0].file);
     if (!(await stat(file)).isFile()) throw new Error("Usage database is not a file.");
     const schema = await readFile(new URL("./schema.sql", import.meta.url), "utf8");
@@ -72,3 +72,29 @@ export async function recordUsage(world, settings) {
     db?.close();
   }
 }
+
+/** Tool entry for the master runner. */
+export const run = async (props) => {
+  const settings = props.settings ?? props;
+  const world = props.world ?? props;
+  // Prefer the existing readUsage / recordUsage paths
+  if (settings.action === "record" || settings.record === true) {
+    // recordUsage is loaded dynamically in the old handler; expose a simple wrapper
+    const result = await readUsage(world);
+    return {
+      return_type: "summary",
+      status: result.code >= 200 && result.code < 300 ? "complete" : "error",
+      settings,
+      response: result.body,
+      error: result.body?.error,
+    };
+  }
+  const result = await readUsage(world);
+  return {
+    return_type: "summary",
+    status: result.code >= 200 && result.code < 300 ? "complete" : "error",
+    settings,
+    response: result.body,
+    error: result.body?.error,
+  };
+};

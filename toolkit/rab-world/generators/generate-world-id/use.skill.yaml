@@ -7,7 +7,7 @@ name: generate-world-id
 title: "How to Generate ID"
 description: Generate one numeric House ID.
 type: function
-path: toolkit/rab-world/generators/generate-world-id
+path: toolkit/generators/generate-world-id
 tags: []
 implementation: []
 context: []

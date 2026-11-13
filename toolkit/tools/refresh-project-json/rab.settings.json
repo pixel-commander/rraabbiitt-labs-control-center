@@ -1,0 +1,44 @@
+{
+  "id": 1793981262988,
+  "name": "refresh-project-json",
+  "title": "Refresh Project Records",
+  "description": "Refresh project entries from beacon files in the selected folder. Keep entries that do not match a discovered beacon.",
+  "type": "tool",
+  "path": "toolkit/tools/refresh-project-json",
+  "file": "refresh-project-json.ts",
+  "tags": [
+    "rab-world",
+    "refresh"
+  ],
+  "settings": [
+    {
+      "name": "path",
+      "type": "string",
+      "required": false,
+      "description": "Folder containing rab.project.json, or the JSON file itself. Required until ID lookup is implemented."
+    },
+    {
+      "name": "id",
+      "type": "number",
+      "required": false,
+      "description": "Reserved for future database path lookup. ID-only calls currently return an error."
+    }
+  ],
+  "paths": [
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "refresh-project-json.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

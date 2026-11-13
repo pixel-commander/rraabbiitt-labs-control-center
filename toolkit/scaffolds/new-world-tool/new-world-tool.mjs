@@ -1,8 +1,8 @@
 import { mkdir, readFile, writeFile, rm } from "node:fs/promises";
 import { resolve, relative, join, extname } from "node:path";
 import { fileURLToPath } from "node:url";
-import { createSettings } from "../../rab-world/scaffolds/new-settings-json/new-settings-json.mjs";
-import { runToolCli } from "../../rab-world/runners/tool-cli.mjs";
+import { createSettings } from "../../scaffolds/new-settings-json/new-settings-json.mjs";
+import { runToolCli } from "../../runners/tool-cli.mjs";
 
 const importPath = (folder, file) => {
   const value = relative(folder, file).replaceAll("\\", "/");

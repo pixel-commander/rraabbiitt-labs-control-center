@@ -1,4 +1,4 @@
-import { run } from "../toolkit/rab-world/runners/runner-use-tool/runner-use-tool.ts";
+import { run } from "../toolkit/runners/runner-use-tool/runner-use-tool.ts";
 
 export const refreshSystemRunnerId = 1794537157022;
 export function createWorldRefreshHandler(world, execute = run) {

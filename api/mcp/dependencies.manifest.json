@@ -3,8 +3,8 @@
   "type": "dependencies",
   "paths": [
     {
-      "name": "../../toolkit/rab-world/runners/runner-use-tool/runner-use-tool.ts",
-      "path": "../../toolkit/rab-world/runners/runner-use-tool/runner-use-tool.ts",
+      "name": "../../toolkit/runners/runner-use-tool/runner-use-tool.ts",
+      "path": "../../toolkit/runners/runner-use-tool/runner-use-tool.ts",
       "type": "import",
       "file": "server.mjs"
     }

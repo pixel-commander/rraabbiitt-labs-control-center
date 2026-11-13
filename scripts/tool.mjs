@@ -1,6 +1,6 @@
 import { loadWorld } from "./world.mjs";
 import { resolve } from "node:path";
-import { run } from "../toolkit/rab-world/runners/runner-use-tool/runner-use-tool.ts";
+import { run } from "../toolkit/runners/runner-use-tool/runner-use-tool.ts";
 const [rawId, content, ...extra] = process.argv.slice(2);
 if (!rawId || !/^[1-9][0-9]*$/.test(rawId) || !Number.isSafeInteger(Number(rawId)) || extra.length)
   throw Error('Use npm run tool -- ID [JSON-settings]. With no settings, inspect the tool.');

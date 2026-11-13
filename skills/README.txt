@@ -8,7 +8,7 @@ Keep file inventories in rab.settings.json, not in usage instructions.
 Refer to an owner, implementation, context, or source by numeric House ID.
 Use id for an entity or use for a skill. Names are labels, not lookup keys.
 
-Use toolkit/rab-world/scaffolds/new-skill-flow to create a skill.
+Use toolkit/scaffolds/new-skill-flow to create a skill.
 Supply name, title, description, path, and instructions. The tool creates
 use.skill.yaml by default. An existing skill is not replaced automatically.
 

@@ -1,0 +1,25 @@
+schema: 1
+intent: use
+id: 1793981262998
+name: refresh-beacon-json
+title: "How to Refresh beacon JSON"
+description: Refresh absolute beacon paths from settings files found recursively.
+owner:
+  id: 1793981262996
+implementation:
+  - id: 1793981262996
+context:
+  - use: 1791940045227
+    reason: Shared tool contract.
+instructions: Call the exported run({ path }) with one HouseKeys settings bag. path is required and
+  names the folder containing rab.beacon.json; do not include the filename. ID-only lookup is not
+  available yet. The tool finds the nearest rab.project.json to verify that each settings path stays
+  within the project. Each beacon path is the absolute containing folder; file stores the entry
+  filename separately. When called by runner-refresh-world-json in project mode, the runner supplies
+  the project root explicitly. Returns ToolReturn. On success, response.paths contains current
+  settings summaries with id, name, type, tags, path and file. response.summary.count is the number
+  of paths. response.id is the saved beacon ID; an absent or null ID is assigned automatically, and
+  an existing ID is retained. response.path is updated to the target beacon file's actual absolute
+  containing folder. On failure, status is error and error describes the failure.
+path: toolkit/tools/refresh-beacon-json
+file: refresh-beacon-json.ts

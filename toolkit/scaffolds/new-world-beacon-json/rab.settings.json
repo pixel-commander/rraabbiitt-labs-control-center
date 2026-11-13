@@ -1,0 +1,79 @@
+{
+  "id": 1793979336055,
+  "name": "new-world-beacon-json",
+  "title": "Create Beacon Record",
+  "description": "Create a beacon record from its template. The tool assigns an ID and refuses to replace an existing file.",
+  "type": "tool",
+  "path": "toolkit/scaffolds/new-world-beacon-json",
+  "file": "new-world-beacon-json.ts",
+  "tags": [
+    "rab-world",
+    "scaffold"
+  ],
+  "settings": [
+    {
+      "name": "path",
+      "type": "string",
+      "required": true,
+      "description": "Destination folder."
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "required": true,
+      "description": "Record name, preserved as supplied."
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "description",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "tags",
+      "type": "array",
+      "required": false
+    },
+    {
+      "name": "paths",
+      "type": "array",
+      "required": false
+    }
+  ],
+  "paths": [
+    {
+      "name": "new-world-beacon-json.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "new-world-beacon-json.types.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "rab.beacon.json",
+      "path": "template",
+      "type": "json"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

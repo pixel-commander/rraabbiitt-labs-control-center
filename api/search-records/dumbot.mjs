@@ -3,7 +3,7 @@ import { resolve, relative, isAbsolute } from 'node:path';
 import { DatabaseSync } from 'node:sqlite';
 import { dumbot, responder, fillContract, confirmContract, executionReply } from '../../models/dumbot/dumbot.ts';
 import { randomUUID, createHash } from 'node:crypto';
-import { run as useTool } from '../../toolkit/rab-world/runners/runner-use-tool/runner-use-tool.ts';
+import { run as useTool } from '../../toolkit/runners/runner-use-tool/runner-use-tool.ts';
 import { readDbRecords, configuredPaths, fillPathSlots } from '../../src/pages/DumBot/db-pairs.adapter.ts';
 
 const proposals = new Map();
@@ -43,7 +43,7 @@ function parseAnswer(text, prop) {
 export async function searchDumbot(world, settings) {
   try {
     if (typeof settings?.query !== 'string' || !settings.query.trim() || settings.query.length > 2000 || !Number.isSafeInteger(settings.message)) throw Error('Supply query and saved message ID.');
-    const project = JSON.parse(await readFile(resolve(world.path, 'rab.project.json'), 'utf8'));
+    const project = JSON.parse(await readFile(resolve(world.path, 'rab.world.json'), 'utf8'));
     const registration = project.paths.find(entry => entry.name === 'database');
     const db = new DatabaseSync(resolve(world.path, registration.path, registration.file), { readOnly: true });
     try {

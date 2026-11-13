@@ -1,0 +1,51 @@
+{
+  "id": 1793987131753,
+  "name": "refresh-settings-json-paths",
+  "title": "Refresh settings JSON paths",
+  "description": "Find all rab.settings.json files recursively, refresh each, and return their collected tool results.",
+  "type": "runner",
+  "path": "toolkit/runners/refresh-settings-json-paths",
+  "file": "refresh-settings-json-paths.ts",
+  "tags": [
+    "rab-world",
+    "runner",
+    "refresh",
+    "settings",
+    "paths"
+  ],
+  "settings": [
+    {
+      "name": "path",
+      "type": "string",
+      "required": true,
+      "description": "Folder to search, including every subfolder."
+    }
+  ],
+  "paths": [
+    {
+      "name": "README.txt",
+      "path": ".",
+      "type": "txt"
+    },
+    {
+      "name": "rab.settings.json",
+      "path": ".",
+      "type": "json"
+    },
+    {
+      "name": "refresh-settings-json-paths.test.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "refresh-settings-json-paths.ts",
+      "path": ".",
+      "type": "ts"
+    },
+    {
+      "name": "use.skill.yaml",
+      "path": ".",
+      "type": "yaml"
+    }
+  ]
+}

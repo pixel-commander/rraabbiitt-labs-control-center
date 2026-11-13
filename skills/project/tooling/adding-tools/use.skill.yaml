@@ -23,4 +23,4 @@ instructions: |
   Return status, settings, response, and error when needed. Response uses HouseKeys
   with summary, body, and paths as applicable. Do not introduce per-tool types.
   Timing belongs to the runner. Use type: tool in the capability settings.
-  See toolkits/rab-world/tools/scan-path-records/scan-path-records.ts for an example.
+  See toolkits/tools/scan-path-records/scan-path-records.ts for an example.

@@ -254,7 +254,7 @@
         "rab-world-v2",
         "generator"
       ],
-      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-world/generators/generate-world-id",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/generators/generate-world-id",
       "file": "generate-world-id.ts"
     },
     {
@@ -278,7 +278,7 @@
         "settings",
         "paths"
       ],
-      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-world/runners/refresh-settings-json-paths",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/runners/refresh-settings-json-paths",
       "file": "refresh-settings-json-paths.ts"
     },
     {
@@ -290,7 +290,7 @@
         "runner",
         "refresh"
       ],
-      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-world/runners/runner-refresh-system",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/runners/runner-refresh-system",
       "file": "runner-refresh-system.mjs"
     },
     {
@@ -303,7 +303,7 @@
         "refresh",
         "json"
       ],
-      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-world/runners/runner-refresh-world-json",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/runners/runner-refresh-world-json",
       "file": "runner-refresh-world-json.ts"
     },
     {
@@ -319,7 +319,7 @@
         "skills",
         "mcp"
       ],
-      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-world/runners/runner-use-tool",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/runners/runner-use-tool",
       "file": "runner-use-tool.ts"
     },
     {
@@ -330,7 +330,7 @@
         "rab-world-v2",
         "scaffold"
       ],
-      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-world/scaffolds/new-settings-json",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/scaffolds/new-settings-json",
       "file": "new-settings-json.mjs"
     },
     {
@@ -341,7 +341,7 @@
         "rab-world-v2",
         "scaffold"
       ],
-      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-world/scaffolds/new-skill-flow",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/scaffolds/new-skill-flow",
       "file": "new-skill-flow.ts"
     },
     {
@@ -352,7 +352,7 @@
         "rab-world",
         "scaffold"
       ],
-      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-world/scaffolds/new-world-beacon-json",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/scaffolds/new-world-beacon-json",
       "file": "new-world-beacon-json.ts"
     },
     {
@@ -363,7 +363,7 @@
         "rab-world",
         "scaffold"
       ],
-      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-world/scaffolds/new-world-project-json",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/scaffolds/new-world-project-json",
       "file": "new-world-project-json.ts"
     },
     {
@@ -374,7 +374,7 @@
         "rab-world",
         "refresh"
       ],
-      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-world/tools/refresh-beacon-json",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/tools/refresh-beacon-json",
       "file": "refresh-beacon-json.ts"
     },
     {
@@ -385,7 +385,7 @@
         "rab-world",
         "refresh"
       ],
-      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-world/tools/refresh-project-json",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/tools/refresh-project-json",
       "file": "refresh-project-json.ts"
     },
     {
@@ -396,7 +396,7 @@
         "rab-world",
         "refresh"
       ],
-      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-world/tools/refresh-settings-json",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/tools/refresh-settings-json",
       "file": "refresh-settings-json.ts"
     },
     {

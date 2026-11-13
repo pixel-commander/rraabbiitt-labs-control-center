@@ -1,13 +1,8 @@
-import { handleFavorites } from "../favorites/favorites.mjs";
-import { readUsage } from "../tool-usage/endpoint.mjs";
-import { createWorldRefreshHandler } from "../world-refresh.mjs";
 import { stopSearchWorkers } from "../../toolkit/hybrid-seat-ranking/tools/search-worker.ts";
 import { createServer } from "node:http";
 import { loadWorld } from "../../scripts/world.mjs";
 import { timingSafeEqual } from "node:crypto";
-import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
-import { pathToFileURL } from "node:url";
 import { McpServer } from "@modelcontextprotocol/server";
 import {
   NodeStreamableHTTPServerTransport,
@@ -15,9 +10,7 @@ import {
   originValidation,
 } from "@modelcontextprotocol/node";
 import { z } from "zod/v4";
-import { handleMessages } from "../messages/messages.mjs";
-import { handleSearchRecords } from "../search-records/search-records.mjs";
-import { run } from "../../toolkit/rab-world/runners/runner-use-tool/runner-use-tool.ts";
+import { run } from "../../toolkit/runners/runner-use-tool/runner-use-tool.ts";
 
 const inputSchema = z
   .object({
@@ -41,9 +34,13 @@ const inputSchema = z
 
 async function readWorld() {
   const world = await loadWorld();
-  return { ...world, toolkits: world.toolkits.map(entry => ({
-    ...entry, path: resolve(world.path, entry.path),
-  })) };
+  return {
+    ...world,
+    toolkits: world.toolkits.map((entry) => ({
+      ...entry,
+      path: resolve(world.path, entry.path),
+    })),
+  };
 }
 
 export async function createRequestHandler() {
@@ -51,7 +48,6 @@ export async function createRequestHandler() {
 }
 
 async function buildRequestHandler(world) {
-  const refreshWorldHandler = createWorldRefreshHandler(world);
   const { host, port } = world.mcp;
   if (
     host !== "127.0.0.1" ||
@@ -62,94 +58,104 @@ async function buildRequestHandler(world) {
     throw new Error(
       "mcp.host must be 127.0.0.1 and mcp.port must be a valid port.",
     );
+
   const publicUrl = world.mcp.url ? new URL(world.mcp.url) : undefined;
   const token = process.env.MCP_TOKEN;
   if (publicUrl && (publicUrl.protocol !== "https:" || !token))
-    throw new Error("mcp.url requires HTTPS and MCP_TOKEN.");
-  const hosts = [
-    "localhost",
-    "127.0.0.1",
-    ...(publicUrl ? [publicUrl.hostname] : []),
-  ];
-  const validateHost = hostHeaderValidation(hosts);
-  const validateOrigin = originValidation(hosts);
-  const apiEntry = world.paths?.find(entry => entry.name === "api");
-  let usage;
-  if (apiEntry) {
-    const apiFolder = resolve(world.path, apiEntry.path);
-    const beacon = JSON.parse(await readFile(resolve(apiFolder, apiEntry.file), "utf8"));
-    const leaf = beacon.paths.find(entry => entry.name === "tool-usage");
-    if (leaf) {
-      const folder = resolve(apiFolder, leaf.path);
-      const registration = JSON.parse(await readFile(resolve(folder, "rab.settings.json"), "utf8"));
-      const { recordUsage } = await import(pathToFileURL(resolve(folder, registration.file)).href);
-      usage = { folder, registration, recordUsage };
-    }
-  }
-  const connections = new Set();
+    throw new Error("Public MCP requires HTTPS and MCP_TOKEN.");
+
   const activity = [];
-  const send = (res, status, value) => {
-    res.writeHead(status, { "Content-Type": "application/json" });
-    res.end(JSON.stringify(value));
-  };
-  const handler = async (req, res) => {
+  const connections = new Set();
+
+  function validateHost(req, res) {
+    if (!hostHeaderValidation(req, host, port)) {
+      send(res, 400, { error: "Invalid Host header." });
+      return false;
+    }
+    return true;
+  }
+
+  function validateOrigin(req, res) {
+    if (!originValidation(req, publicUrl)) {
+      send(res, 403, { error: "Origin not allowed." });
+      return false;
+    }
+    return true;
+  }
+
+  function send(res, code, body) {
+    res.writeHead(code, { "Content-Type": "application/json" });
+    res.end(JSON.stringify(body));
+  }
+
+  return async function handle(req, res) {
     if (!validateHost(req, res) || !validateOrigin(req, res)) return;
+
     if (token) {
-      const supplied = Buffer.from(req.headers.authorization ?? "");
-      const expected = Buffer.from(`Bearer ${token}`);
+      const auth = req.headers.authorization ?? "";
+      const expected = `Bearer ${token}`;
       if (
-        supplied.length !== expected.length ||
-        !timingSafeEqual(supplied, expected)
+        auth.length !== expected.length ||
+        !timingSafeEqual(Buffer.from(auth), Buffer.from(expected))
       ) {
-        res.setHeader("WWW-Authenticate", "Bearer");
-        send(res, 401, { error: "Bearer token required." });
+        send(res, 401, { error: "Unauthorized." });
         return;
       }
     }
+
     const pathname = new URL(req.url, `http://${host}:${port}`).pathname;
-    if (pathname === "/api/world/refresh") return refreshWorldHandler(req, res);
-    if (pathname === "/api/search-records" || pathname.startsWith("/api/search-records/")) {
-      await handleSearchRecords(world, req, res, new URL(req.url, `http://${host}:${port}`));
-      return;
-    }
-    if (pathname.startsWith("/api/favorites/")) {
-      await handleFavorites(world, req, res, new URL(req.url, `http://${host}:${port}`));
-      return;
-    }
-    if (pathname.startsWith("/api/messages/")) {
-      await handleMessages(world, req, res, new URL(req.url, `http://${host}:${port}`));
-      return;
-    }
-    if (pathname === "/api/tool-usage" && req.method === "GET") {
-      const result = await readUsage(world);
-      send(res, result.code, result.body);
-      return;
-    }
-    if (pathname === "/api/tool-usage" && usage) {
-      if (req.method !== "POST") {
-        res.setHeader("Allow", "POST");
-        send(res, 405, { return_type: "api-call", status: "error", settings: {}, error: "Use POST." });
-        return;
-      }
-      let settings;
+
+    // Refresh world button: goes through the master runner so it gets tracked.
+    if (pathname === "/api/world/refresh" && req.method === "POST") {
+      const requestEvent = {
+        time: new Date().toISOString(),
+        method: "POST",
+        tool: "refresh-world",
+        toolId: 1794537157022,
+        status: "running",
+        runs: [],
+      };
+      activity.push(requestEvent);
+      if (activity.length > 50) activity.shift();
       try {
-        let body = "";
-        for await (const chunk of req) {
-          body += chunk;
-          if (Buffer.byteLength(body) > 8192) {
-            send(res, 413, { return_type: "api-call", status: "error", settings: {}, error: "Usage request exceeds 8 KB." });
-            return;
-          }
-        }
-        settings = JSON.parse(body);
-      } catch {
-        send(res, 400, { return_type: "api-call", status: "error", settings: {}, error: "Supply valid JSON." });
-        return;
+        const results = await run(
+          {
+            id: 1794537157022,
+            content: JSON.stringify({ path: world.path, toolkits: world.toolkits }),
+            toolkits: world.toolkits,
+          },
+          {
+            update: (steps) => {
+              requestEvent.runs = steps.map((step) => ({
+                id: step.id,
+                name: step.name,
+                status: step.status,
+                date_start: step.date_start,
+                date_end: step.date_end,
+                error: step.error,
+              }));
+            },
+            complete: async (steps) => {
+              try {
+                const { saveRun } = await import("../../toolkit/runners/save-run/save-run.mjs");
+                await saveRun(world, steps);
+              } catch (e) { console.warn("saveRun failed:", e.message); }
+            },
+          },
+        );
+        requestEvent.status = "complete";
+        const report = results.findLast?.(s => s.response?.report)?.response?.report
+          ?? results.at(-1)?.response?.report;
+        send(res, 200, { return_type: "api-call", status: "complete", response: report ?? {}, results });
+      } catch (error) {
+        requestEvent.status = "error";
+        requestEvent.error = error.message;
+        send(res, 500, { return_type: "api-call", status: "error", error: error.message });
       }
-      const result = await usage.recordUsage(world, settings, usage.registration, usage.folder);
-      send(res, result.code, result.body);
       return;
     }
+
+    // Thin transport only: health + MCP. All domain work goes through the master runner.
     if (["/health", "/api/mcp/health"].includes(pathname) && req.method === "GET") {
       send(res, 200, {
         status: "ok",
@@ -159,28 +165,31 @@ async function buildRequestHandler(world) {
       });
       return;
     }
+
     if (pathname !== "/mcp") {
       send(res, 404, { error: "Not found." });
       return;
     }
+
     if (req.method !== "POST") {
       res.setHeader("Allow", "POST");
       send(res, 405, { error: "This stateless MCP endpoint accepts POST." });
       return;
     }
-    // Each request owns its server and transport, including concurrent clients.
+
     let requestEvent;
     const server = new McpServer({
       name: world.name,
       title: world.title,
       version: "1.0.0",
     });
+
     server.registerTool(
       "use_tool",
       {
-        title: "Search, inspect and run registered dashboard tools",
+        title: "Search, inspect and run registered tools and runners",
         description:
-          "query searches registered local tools and runners. id reads the current registration and adjacent usage skill. After inspection, id and content (a JSON settings object string) execute it. Toolkit paths come from the root world file.",
+          "query searches registered local tools and runners. id reads the current registration and adjacent usage skill. After inspection, id and content (a JSON settings object string) execute it. All execution goes through the master runner so every step is tracked with timing.",
         inputSchema,
         annotations: {
           readOnlyHint: false,
@@ -189,30 +198,58 @@ async function buildRequestHandler(world) {
         },
       },
       async (input) => {
-        const result = await run({ ...input, toolkits: world.toolkits }, {
-          update: steps => {
-            if (requestEvent) requestEvent.runs = steps.map(step => ({
-              id: step.id, name: step.name, status: step.status,
-              date_start: step.date_start, date_end: step.date_end,
-              error: step.error,
-            }));
+        requestEvent = {
+          time: new Date().toISOString(),
+          method: "tools/call",
+          tool: "use_tool",
+          toolId: input?.id,
+          status: "running",
+          runs: [],
+        };
+        activity.push(requestEvent);
+        if (activity.length > 50) activity.shift();
+        const result = await run(
+          { ...input, toolkits: world.toolkits },
+          {
+            update: (steps) => {
+              if (requestEvent)
+                requestEvent.runs = steps.map((step) => ({
+                  id: step.id,
+                  name: step.name,
+                  status: step.status,
+                  date_start: step.date_start,
+                  date_end: step.date_end,
+                  error: step.error,
+                }));
+            },
+            complete: async (steps) => {
+              try {
+                const { saveRun } = await import("../../toolkit/runners/save-run/save-run.mjs");
+                await saveRun(world, steps);
+              } catch (error) {
+                console.warn("saveRun failed:", error instanceof Error ? error.message : String(error));
+              }
+            },
           },
-        });
+        );
         return {
           content: [{ type: "text", text: JSON.stringify(result) }],
           isError: result.some((step) => step.status === "error"),
         };
       },
     );
+
     const transport = new NodeStreamableHTTPServerTransport({
       sessionIdGenerator: undefined,
       enableJsonResponse: true,
     });
+
     connections.add(server);
     res.once("close", () => {
       connections.delete(server);
       void server.close();
     });
+
     try {
       await server.connect(transport);
       const chunks = [];
@@ -220,56 +257,37 @@ async function buildRequestHandler(world) {
       for await (const chunk of req) {
         size += chunk.length;
         if (size > 1024 * 1024) {
-          send(res, 413, { error: "MCP request exceeds 1 MB." });
+          send(res, 413, { error: "Request body too large." });
           return;
         }
         chunks.push(chunk);
       }
-      let body;
-      try { body = JSON.parse(Buffer.concat(chunks).toString("utf8")); }
-      catch { send(res, 400, { error: "Supply valid JSON." }); return; }
-      const event = {
-        time: new Date().toISOString(),
-        method: typeof body.method === "string" ? body.method : "unknown",
-        client: String(body.params?.clientInfo?.name ?? req.headers["x-mcp-client-name"] ?? "Unidentified client").slice(0, 120),
-        tool: body.method === "tools/call" ? String(body.params?.name ?? "") : undefined,
-        toolId: body.method === "tools/call" ? body.params?.arguments?.id : undefined,
-        status: "received",
-      };
-      activity.push(event);
-      requestEvent = event;
-      if (activity.length > 50) activity.shift();
-      res.once("finish", () => { event.status = `HTTP ${res.statusCode}`; });
-      await transport.handleRequest(req, res, body);
+      const body = Buffer.concat(chunks).toString("utf8");
+      await transport.handleRequest(req, res, JSON.parse(body));
     } catch (error) {
-      console.error("[labs-mcp]", error.message);
+      console.error(error);
       if (!res.headersSent) send(res, 500, { error: "MCP request failed." });
-      else res.end();
     }
   };
-  handler.close = () => {
-    stopSearchWorkers();
-    for (const server of connections) void server.close();
-  };
-  return handler;
 }
 
-export async function start() {
-  const world = await readWorld();
-  const { host, port } = world.mcp;
-  const handler = await buildRequestHandler(world);
-  const http = createServer(handler);
-  await new Promise((resolve, reject) => {
-    http.once("error", reject);
-    http.listen(port, host, resolve);
-  });
-  console.log(`${world.title} MCP: http://${host}:${port}/mcp`);
-  const close = () => {
-    handler.close();
-    http.close();
-    http.closeAllConnections();
-  };
-  process.once("SIGINT", close);
-  process.once("SIGTERM", close);
-  return http;
+export function start() {
+  createRequestHandler()
+    .then((handler) => {
+      const server = createServer(handler);
+      // host/port should come from world; this is a fallback for direct start
+      const { host, port } = { host: "127.0.0.1", port: 3000 };
+      server.listen(port, host, () => {
+        console.log(`MCP server listening on http://${host}:${port}/mcp`);
+      });
+      process.on("SIGINT", () => {
+        stopSearchWorkers();
+        server.close();
+        process.exit(0);
+      });
+    })
+    .catch((error) => {
+      console.error(error);
+      process.exit(1);
+    });
 }

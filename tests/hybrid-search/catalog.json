@@ -85,9 +85,9 @@
     "title": "Generate World ID",
     "description": "Create and return a numeric House ID. This generator does not create a registration record.",
     "type": "tool",
-    "path": "toolkit/rab-world/generators/generate-world-id",
+    "path": "toolkit/generators/generate-world-id",
     "file": "generate-world-id.ts",
-    "record_key": "toolkit/rab-world/generators/generate-world-id"
+    "record_key": "toolkit/generators/generate-world-id"
   },
   {
     "id": 1791468954599,
@@ -95,9 +95,9 @@
     "title": "Create Settings Record",
     "description": "Create a settings record from the shared template. The tool assigns a new House ID and refuses to replace an existing file.",
     "type": "tool",
-    "path": "toolkit/rab-world/scaffolds/new-settings-json",
+    "path": "toolkit/scaffolds/new-settings-json",
     "file": "new-settings-json.mjs",
-    "record_key": "toolkit/rab-world/scaffolds/new-settings-json"
+    "record_key": "toolkit/scaffolds/new-settings-json"
   },
   {
     "id": 1791518327961,
@@ -303,9 +303,9 @@
     "title": "Create Skill Flow",
     "description": "Create a use or enhance skill file with required metadata. The tool assigns an ID and refuses to replace an existing file.",
     "type": "tool",
-    "path": "toolkit/rab-world/scaffolds/new-skill-flow",
+    "path": "toolkit/scaffolds/new-skill-flow",
     "file": "new-skill-flow.ts",
-    "record_key": "toolkit/rab-world/scaffolds/new-skill-flow"
+    "record_key": "toolkit/scaffolds/new-skill-flow"
   },
   {
     "id": 1791853637988,
@@ -313,9 +313,9 @@
     "title": "New skill flow",
     "description": "Create a standalone YAML skill from the owned template.",
     "type": "skill",
-    "path": "toolkit/rab-world/scaffolds/new-skill-flow",
+    "path": "toolkit/scaffolds/new-skill-flow",
     "file": "use.skill.yaml",
-    "record_key": "toolkit/rab-world/scaffolds/new-skill-flow/use.skill.yaml"
+    "record_key": "toolkit/scaffolds/new-skill-flow/use.skill.yaml"
   },
   {
     "id": 1793126984423,
@@ -528,9 +528,9 @@
     "title": "Search, load, and run a RAB World tool",
     "description": "Searches registered tools and runners by query, loads a selected tool's current registration and adjacent skill instructions by House ID, or executes a selected registered tool or runner. Uses runner-tooling-and-tracking through runTools for flat ordered execution records.",
     "type": "runner",
-    "path": "toolkit/rab-world/runners/runner-use-tool",
+    "path": "toolkit/runners/runner-use-tool",
     "file": "runner-use-tool.ts",
-    "record_key": "toolkit/rab-world/runners/runner-use-tool"
+    "record_key": "toolkit/runners/runner-use-tool"
   },
   {
     "id": 1793221495963,
@@ -597,9 +597,9 @@
     "name": "use-runner-use-tool",
     "description": "Search for, inspect, and invoke a registered RAB World tool or runner.",
     "type": "skill",
-    "path": "toolkit/rab-world/runners/runner-use-tool",
+    "path": "toolkit/runners/runner-use-tool",
     "file": "use.skill.yaml",
-    "record_key": "toolkit/rab-world/runners/runner-use-tool/use.skill.yaml"
+    "record_key": "toolkit/runners/runner-use-tool/use.skill.yaml"
   },
   {
     "id": 1793617400001,
@@ -636,9 +636,9 @@
     "title": "Create Beacon Record",
     "description": "Create a beacon record from its template. The tool assigns an ID and refuses to replace an existing file.",
     "type": "tool",
-    "path": "toolkit/rab-world/scaffolds/new-world-beacon-json",
+    "path": "toolkit/scaffolds/new-world-beacon-json",
     "file": "new-world-beacon-json.ts",
-    "record_key": "toolkit/rab-world/scaffolds/new-world-beacon-json"
+    "record_key": "toolkit/scaffolds/new-world-beacon-json"
   },
   {
     "id": 1793979336057,
@@ -646,9 +646,9 @@
     "title": "New world beacon JSON",
     "description": "Create a settings-shaped rab.beacon.json in a folder.",
     "type": "skill",
-    "path": "toolkit/rab-world/scaffolds/new-world-beacon-json",
+    "path": "toolkit/scaffolds/new-world-beacon-json",
     "file": "use.skill.yaml",
-    "record_key": "toolkit/rab-world/scaffolds/new-world-beacon-json/use.skill.yaml"
+    "record_key": "toolkit/scaffolds/new-world-beacon-json/use.skill.yaml"
   },
   {
     "id": 1793981262988,
@@ -656,9 +656,9 @@
     "title": "Refresh Project Records",
     "description": "Refresh project entries from beacon files in the selected folder. Keep entries that do not match a discovered beacon.",
     "type": "tool",
-    "path": "toolkit/rab-world/tools/refresh-project-json",
+    "path": "toolkit/tools/refresh-project-json",
     "file": "refresh-project-json.ts",
-    "record_key": "toolkit/rab-world/tools/refresh-project-json"
+    "record_key": "toolkit/tools/refresh-project-json"
   },
   {
     "id": 1793981262992,
@@ -666,9 +666,9 @@
     "title": "Refresh project JSON",
     "description": "Refresh beacon summaries while preserving unmatched configured path destinations.",
     "type": "skill",
-    "path": "toolkit/rab-world/tools/refresh-project-json",
+    "path": "toolkit/tools/refresh-project-json",
     "file": "use.skill.yaml",
-    "record_key": "toolkit/rab-world/tools/refresh-project-json/use.skill.yaml"
+    "record_key": "toolkit/tools/refresh-project-json/use.skill.yaml"
   },
   {
     "id": 1793981262996,
@@ -676,9 +676,9 @@
     "title": "Refresh Beacon Records",
     "description": "Refresh beacon entries from settings files in the selected folder. Keep the beacon ID and store absolute source paths.",
     "type": "tool",
-    "path": "toolkit/rab-world/tools/refresh-beacon-json",
+    "path": "toolkit/tools/refresh-beacon-json",
     "file": "refresh-beacon-json.ts",
-    "record_key": "toolkit/rab-world/tools/refresh-beacon-json"
+    "record_key": "toolkit/tools/refresh-beacon-json"
   },
   {
     "id": 1793981262998,
@@ -686,9 +686,9 @@
     "title": "Refresh beacon JSON",
     "description": "Refresh absolute beacon paths from settings files found recursively.",
     "type": "skill",
-    "path": "toolkit/rab-world/tools/refresh-beacon-json",
+    "path": "toolkit/tools/refresh-beacon-json",
     "file": "use.skill.yaml",
-    "record_key": "toolkit/rab-world/tools/refresh-beacon-json/use.skill.yaml"
+    "record_key": "toolkit/tools/refresh-beacon-json/use.skill.yaml"
   },
   {
     "id": 1793981263000,
@@ -696,9 +696,9 @@
     "title": "Refresh Settings Record",
     "description": "Refresh settings entries from files in the selected folder. Keep the settings ID and replace the entry list.",
     "type": "tool",
-    "path": "toolkit/rab-world/tools/refresh-settings-json",
+    "path": "toolkit/tools/refresh-settings-json",
     "file": "refresh-settings-json.ts",
-    "record_key": "toolkit/rab-world/tools/refresh-settings-json"
+    "record_key": "toolkit/tools/refresh-settings-json"
   },
   {
     "id": 1793981263002,
@@ -706,9 +706,9 @@
     "title": "Refresh settings JSON",
     "description": "Replace settings paths with all files found recursively.",
     "type": "skill",
-    "path": "toolkit/rab-world/tools/refresh-settings-json",
+    "path": "toolkit/tools/refresh-settings-json",
     "file": "use.skill.yaml",
-    "record_key": "toolkit/rab-world/tools/refresh-settings-json/use.skill.yaml"
+    "record_key": "toolkit/tools/refresh-settings-json/use.skill.yaml"
   },
   {
     "id": 1793984237830,
@@ -716,9 +716,9 @@
     "title": "Create Project Record",
     "description": "Create a project record from its template. The tool assigns an ID and refuses to replace an existing file.",
     "type": "tool",
-    "path": "toolkit/rab-world/scaffolds/new-world-project-json",
+    "path": "toolkit/scaffolds/new-world-project-json",
     "file": "new-world-project-json.ts",
-    "record_key": "toolkit/rab-world/scaffolds/new-world-project-json"
+    "record_key": "toolkit/scaffolds/new-world-project-json"
   },
   {
     "id": 1793984237831,
@@ -726,9 +726,9 @@
     "title": "New world project JSON",
     "description": "Create a settings-shaped rab.project.json in a folder.",
     "type": "skill",
-    "path": "toolkit/rab-world/scaffolds/new-world-project-json",
+    "path": "toolkit/scaffolds/new-world-project-json",
     "file": "use.skill.yaml",
-    "record_key": "toolkit/rab-world/scaffolds/new-world-project-json/use.skill.yaml"
+    "record_key": "toolkit/scaffolds/new-world-project-json/use.skill.yaml"
   },
   {
     "id": 1793984711136,
@@ -736,18 +736,18 @@
     "title": "Refresh world JSON",
     "description": "Refresh discovered beacons and projects. In world mode, update rab.world.json after all refreshes succeed.",
     "type": "runner",
-    "path": "toolkit/rab-world/runners/runner-refresh-world-json",
+    "path": "toolkit/runners/runner-refresh-world-json",
     "file": "runner-refresh-world-json.ts",
-    "record_key": "toolkit/rab-world/runners/runner-refresh-world-json"
+    "record_key": "toolkit/runners/runner-refresh-world-json"
   },
   {
     "id": 1793984711137,
     "name": "runner-refresh-world-json",
     "title": "Refresh world JSON",
     "type": "skill",
-    "path": "toolkit/rab-world/runners/runner-refresh-world-json",
+    "path": "toolkit/runners/runner-refresh-world-json",
     "file": "use.skill.yaml",
-    "record_key": "toolkit/rab-world/runners/runner-refresh-world-json/use.skill.yaml"
+    "record_key": "toolkit/runners/runner-refresh-world-json/use.skill.yaml"
   },
   {
     "id": 1793987131753,
@@ -755,18 +755,18 @@
     "title": "Refresh settings JSON paths",
     "description": "Find all rab.settings.json files recursively, refresh each, and return their collected tool results.",
     "type": "runner",
-    "path": "toolkit/rab-world/runners/refresh-settings-json-paths",
+    "path": "toolkit/runners/refresh-settings-json-paths",
     "file": "refresh-settings-json-paths.ts",
-    "record_key": "toolkit/rab-world/runners/refresh-settings-json-paths"
+    "record_key": "toolkit/runners/refresh-settings-json-paths"
   },
   {
     "id": 1793987131754,
     "name": "refresh-settings-json-paths",
     "title": "Refresh settings JSON paths",
     "type": "skill",
-    "path": "toolkit/rab-world/runners/refresh-settings-json-paths",
+    "path": "toolkit/runners/refresh-settings-json-paths",
     "file": "use.skill.yaml",
-    "record_key": "toolkit/rab-world/runners/refresh-settings-json-paths/use.skill.yaml"
+    "record_key": "toolkit/runners/refresh-settings-json-paths/use.skill.yaml"
   },
   {
     "id": 1794005588365,
@@ -813,9 +813,9 @@
     "title": "Create settings",
     "description": "Create one settings record.",
     "type": "skill",
-    "path": "toolkit/rab-world/scaffolds/new-settings-json",
+    "path": "toolkit/scaffolds/new-settings-json",
     "file": "use.skill.yaml",
-    "record_key": "toolkit/rab-world/scaffolds/new-settings-json/use.skill.yaml"
+    "record_key": "toolkit/scaffolds/new-settings-json/use.skill.yaml"
   },
   {
     "id": 1794409148594,
@@ -823,9 +823,9 @@
     "title": "Generate ID",
     "description": "Generate one numeric House ID.",
     "type": "skill",
-    "path": "toolkit/rab-world/generators/generate-world-id",
+    "path": "toolkit/generators/generate-world-id",
     "file": "use.skill.yaml",
-    "record_key": "toolkit/rab-world/generators/generate-world-id/use.skill.yaml"
+    "record_key": "toolkit/generators/generate-world-id/use.skill.yaml"
   },
   {
     "id": 1794415784109,

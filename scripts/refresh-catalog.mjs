@@ -1,4 +1,4 @@
-import { runTools } from "../toolkit/rab-world/runners/run-tools.ts";
+import { runTools } from "../toolkit/runners/run-tools.ts";
 import { executeTool } from "../toolkit/tools/refresh-world-database/refresh-world-database.ts";
 import { projectRoot } from "./world.mjs";
 const [{ response, ...step }] = await runTools(

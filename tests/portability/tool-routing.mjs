@@ -9,7 +9,7 @@ const base = resolve(".tmp/portability-tests");
 await mkdir(base, { recursive: true });
 const root = await mkdtemp(resolve(base, "tool-routing-"));
 try {
-  const cli = pathToFileURL(resolve("toolkit/rab-world/runners/tool-cli.mjs")).href;
+  const cli = pathToFileURL(resolve("toolkit/runners/tool-cli.mjs")).href;
   await writeFile(resolve(root, "rab.settings.json"), JSON.stringify({ id: 123, name: "fixture-tool", type: "tool" }));
   await writeFile(resolve(root, "fixture.mjs"), `
     import { runToolCli } from ${JSON.stringify(cli)};

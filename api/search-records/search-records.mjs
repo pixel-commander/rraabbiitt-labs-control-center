@@ -10,7 +10,7 @@ import {
 } from "node:fs/promises";
 import { resolve, join } from "node:path";
 import { randomUUID } from "node:crypto";
-import { run as useTool } from "../../toolkit/rab-world/runners/runner-use-tool/runner-use-tool.ts";
+import { run as useTool } from "../../toolkit/runners/runner-use-tool/runner-use-tool.ts";
 
 const grades = { up: 1, part: 0.5, down: 0 };
 const lessonPath = "learning/learned-on-site/search-results/lessons";
@@ -28,7 +28,7 @@ let feedbackQueue = Promise.resolve();
 
 async function database(world) {
   const project = JSON.parse(
-    await readFile(resolve(world.path, "rab.project.json"), "utf8"),
+    await readFile(resolve(world.path, "rab.world.json"), "utf8"),
   );
   const entries = project.paths?.filter((entry) => entry.name === "database");
   if (entries?.length !== 1 || !entries[0].path || !entries[0].file)
@@ -412,3 +412,19 @@ export async function handleSearchRecords(world, req, res, url) {
       : searchRecords;
   send(await action(world, settings));
 }
+
+import { searchDumbot } from "./dumbot.mjs";
+
+/** Tool entry for the master runner. Uses the deterministic dumbot search path. */
+export const run = async (props) => {
+  const settings = props.settings ?? props;
+  const world = props.world ?? props;
+  const result = await searchDumbot(world, settings);
+  return {
+    return_type: "results",
+    status: result.code >= 200 && result.code < 300 ? "complete" : "error",
+    settings,
+    response: result.body?.response,
+    error: result.body?.error,
+  };
+};

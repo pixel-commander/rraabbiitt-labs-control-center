@@ -12,7 +12,7 @@ export async function favoriteOperation(world,action,settings={}) {
     return failure(400,"Supply a positive numeric record id.");
   let db;
   try {
-    const project=JSON.parse((await readFile(resolve(world.path,"rab.project.json"),"utf8")).replace(/^\uFEFF/,""));
+    const project=JSON.parse((await readFile(resolve(world.path,"rab.world.json"),"utf8")).replace(/^\uFEFF/,""));
     const entries=project.paths.filter(row=>row.name==="database");
     if(entries.length!==1) throw Error("Register exactly one database.");
     const file=await realpath(resolve(world.path,entries[0].path,entries[0].file));
@@ -60,3 +60,18 @@ export async function handleFavorites(world,req,res,url) {
   }
   return send(await favoriteOperation(world,action,settings));
 }
+
+/** Tool entry for the master runner. Expects house keys + action + settings. */
+export const run = async (props) => {
+  const action = props.action ?? props.settings?.action;
+  const settings = props.settings ?? props;
+  const world = props.world ?? props;
+  const result = await favoriteOperation(world, action, settings);
+  return {
+    return_type: "api-call",
+    status: result.code >= 200 && result.code < 300 ? "complete" : "error",
+    settings,
+    response: result.body?.response,
+    error: result.body?.error,
+  };
+};

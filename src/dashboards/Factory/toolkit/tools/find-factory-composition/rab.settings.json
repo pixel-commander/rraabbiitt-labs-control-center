@@ -1,0 +1,47 @@
+{
+  "id": 1794610755409,
+  "name": "find-factory-composition",
+  "title": "find-factory-composition",
+  "description": "Find or load saved Factory compositions.",
+  "type": "tool",
+  "path": "src/dashboards/Factory/toolkit/tools/find-factory-composition",
+  "file": "find-factory-composition.ts",
+  "settings": [
+    {
+      "name": "id",
+      "type": "number",
+      "required": false
+    },
+    {
+      "name": "query",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "limit",
+      "type": "number",
+      "required": false
+    },
+    {
+      "name": "offset",
+      "type": "number",
+      "required": false
+    }
+  ],
+  "paths": [
+    {
+      "path": ".",
+      "file": "find-factory-composition.ts",
+      "type": "ts"
+    },
+    {
+      "path": ".",
+      "file": "rab.settings.json",
+      "type": "json"
+    }
+  ],
+  "tags": [
+    "rab-world-v2",
+    "scaffold"
+  ]
+}

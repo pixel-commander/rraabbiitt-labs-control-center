@@ -1,0 +1,52 @@
+{
+  "id": 1794610753145,
+  "name": "generate-factory-composition",
+  "title": "generate-factory-composition",
+  "description": "Generate and validate an editable Factory composition without saving.",
+  "type": "tool",
+  "path": "src/dashboards/Factory/toolkit/tools/generate-factory-composition",
+  "file": "generate-factory-composition.ts",
+  "settings": [
+    {
+      "name": "composition",
+      "type": "object",
+      "required": false
+    },
+    {
+      "name": "content",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "description",
+      "type": "string",
+      "required": false
+    }
+  ],
+  "paths": [
+    {
+      "path": ".",
+      "file": "generate-factory-composition.ts",
+      "type": "ts"
+    },
+    {
+      "path": ".",
+      "file": "rab.settings.json",
+      "type": "json"
+    }
+  ],
+  "tags": [
+    "rab-world-v2",
+    "scaffold"
+  ]
+}

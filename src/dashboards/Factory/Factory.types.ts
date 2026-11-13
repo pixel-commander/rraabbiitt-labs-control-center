@@ -1,6 +1,37 @@
 import type { ComponentFactoryProps } from "./components/ComponentFactory/ComponentFactory.types";
 import type { FactoryDocument } from "./components/ComponentFactory/ComponentFactory.types";
 import type { HouseKeys } from "../../HouseKeys.types";
+import type { ToolsProps, ToolReturn, ResponseProps } from "../../../toolkit/HouseKeys.types";
+import type { FactoryNode } from "./components/ComponentFactory/ComponentFactory.types";
+
+/** Authoring input permits omitted node IDs; Factory assigns them on import. */
+export type FactoryNodeInput = Omit<FactoryNode, "id" | "children"> & {
+  id?: number;
+  children?: FactoryNodeInput[];
+};
+export type FactoryCompositionInput = FactoryNodeInput | (Omit<FactoryDocument, "root"> & { root: FactoryNodeInput });
+export interface GenerateFactoryCompositionSettings extends ToolsProps {
+  composition?: FactoryCompositionInput;
+  /** Optional static markup, passed to generateCompositionFromMarkup. */
+  content?: string;
+}
+export interface FindFactoryCompositionSettings extends ToolsProps {
+  limit?: number;
+  offset?: number;
+}
+export interface SaveFactoryCompositionSettings extends ToolsProps {
+  composition: FactoryCompositionInput;
+}
+export interface FactoryCompositionResponse extends ResponseProps {
+  version?: 2;
+  root?: FactoryNode;
+  composition?: FactoryDocument;
+  warnings?: string[];
+  tags?: string[];
+}
+export interface FactoryCompositionToolReturn extends ToolReturn {
+  response?: FactoryCompositionResponse;
+}
 
 export interface FactoryProps extends ComponentFactoryProps {}
 

@@ -3,9 +3,9 @@ intent: use
 id: 1794445359102
 name: ToggleSection
 owner:
-  id: 1794445359100
+  id: 1794538905696
 implementation:
-  - id: 1794445359100
+  - id: 1794538905696
 instructions: >-
   Use this component for content with a click-toggleable header.
   Props are title (optional ReactNode), children (required ReactNode), footer

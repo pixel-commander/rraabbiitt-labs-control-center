@@ -14,55 +14,55 @@
         "rab-world-v2",
         "generator"
       ],
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/generators/generate-world-id",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/generators/generate-world-id",
       "file": "generate-world-id.ts"
     },
     {
       "id": 1793154927344,
       "name": "rab-hybrid-seat-ranking",
       "type": "path",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/hybrid-seat-ranking"
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/hybrid-seat-ranking"
     },
     {
       "id": 1793225821352,
       "name": "compare-ranking-checkpoints",
       "type": "tool",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/hybrid-seat-ranking/tools/compare-ranking-checkpoints",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/hybrid-seat-ranking/tools/compare-ranking-checkpoints",
       "file": "compare-ranking-checkpoints.ts"
     },
     {
       "id": 1793225821360,
       "name": "inspect-ranking-attention",
       "type": "tool",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/hybrid-seat-ranking/tools/inspect-ranking-attention",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/hybrid-seat-ranking/tools/inspect-ranking-attention",
       "file": "inspect-ranking-attention.ts"
     },
     {
       "id": 1793154927345,
       "name": "search-hybrid-seat-ranking",
       "type": "tool",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/hybrid-seat-ranking/tools/search-hybrid-seat-ranking",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/hybrid-seat-ranking/tools/search-hybrid-seat-ranking",
       "file": "search-hybrid-seat-ranking.ts"
     },
     {
       "id": 1793154927349,
       "name": "train-field-feedback",
       "type": "tool",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/hybrid-seat-ranking/tools/train-field-feedback",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/hybrid-seat-ranking/tools/train-field-feedback",
       "file": "train-field-feedback.ts"
     },
     {
       "id": 1793154927347,
       "name": "train-hybrid-seat-ranking",
       "type": "tool",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/hybrid-seat-ranking/tools/train-hybrid-seat-ranking",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/hybrid-seat-ranking/tools/train-hybrid-seat-ranking",
       "file": "train-hybrid-seat-ranking.ts"
     },
     {
       "id": 1793221495963,
       "name": "tune-ranking-model",
       "type": "tool",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/hybrid-seat-ranking/tools/tune-ranking-model",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/hybrid-seat-ranking/tools/tune-ranking-model",
       "file": "tune-ranking-model.ts"
     },
     {
@@ -73,48 +73,48 @@
         "react",
         "runners"
       ],
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/rab-react/runners"
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/runners"
     },
     {
       "id": 1793138966750,
       "name": "runner-new-atom",
       "type": "runner",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/rab-react/runners/runner-new-atom",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/runners/runner-new-atom",
       "file": "runner-new-atom.ts"
     },
     {
       "id": 1793138966741,
       "name": "runner-new-component",
       "type": "runner",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/rab-react/runners/runner-new-component",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/runners/runner-new-component",
       "file": "runner-new-component.ts"
     },
     {
       "id": 1793138966759,
       "name": "runner-new-dashboard",
       "type": "runner",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/rab-react/runners/runner-new-dashboard",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/runners/runner-new-dashboard",
       "file": "runner-new-dashboard.ts"
     },
     {
       "id": 1793138966755,
       "name": "runner-new-page",
       "type": "runner",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/rab-react/runners/runner-new-page",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/runners/runner-new-page",
       "file": "runner-new-page.ts"
     },
     {
       "id": 1793138966734,
       "name": "runner-new-react-project-kit",
       "type": "runner",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/rab-react/runners/runner-new-react-project-kit",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/runners/runner-new-react-project-kit",
       "file": "runner-new-react-project-kit.ts"
     },
     {
       "id": 1793138966746,
       "name": "runner-new-subcomponent",
       "type": "runner",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/rab-react/runners/runner-new-subcomponent",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/runners/runner-new-subcomponent",
       "file": "runner-new-subcomponent.ts"
     },
     {
@@ -128,7 +128,7 @@
         "component",
         "runner"
       ],
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/rab-react/runners/runner-render-factory-composition",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/runners/runner-render-factory-composition",
       "file": "runner-render-factory-composition.ts"
     },
     {
@@ -139,7 +139,7 @@
         "rab-react",
         "scaffold"
       ],
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-action-atom",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-action-atom",
       "file": "new-action-atom"
     },
     {
@@ -150,7 +150,7 @@
         "rab-react",
         "scaffold"
       ],
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-container-atom",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-container-atom",
       "file": "new-container-atom"
     },
     {
@@ -161,7 +161,7 @@
         "rab-react",
         "scaffold"
       ],
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-effect-atom",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-effect-atom",
       "file": "new-effect-atom"
     },
     {
@@ -172,7 +172,7 @@
         "rab-react",
         "scaffold"
       ],
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-grid-atom",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-grid-atom",
       "file": "new-grid-atom"
     },
     {
@@ -183,7 +183,7 @@
         "rab-react",
         "scaffold"
       ],
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-react-component",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-react-component",
       "file": "new-react-component.ts"
     },
     {
@@ -194,7 +194,7 @@
         "rab-react",
         "scaffold"
       ],
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-react-dashboard",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-react-dashboard",
       "file": "new-react-dashboard.ts"
     },
     {
@@ -205,7 +205,7 @@
         "rab-react",
         "scaffold"
       ],
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-react-navigation",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-react-navigation",
       "file": "new-react-navigation"
     },
     {
@@ -216,7 +216,7 @@
         "rab-react",
         "scaffold"
       ],
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-react-page",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-react-page",
       "file": "new-react-page"
     },
     {
@@ -227,7 +227,7 @@
         "rab-react",
         "scaffold"
       ],
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-react-project",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-react-project",
       "file": "new-react-project"
     },
     {
@@ -238,7 +238,7 @@
         "rab-react",
         "scaffold"
       ],
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-react-subcomponent",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-react-subcomponent",
       "file": "new-react-subcomponent.ts"
     },
     {
@@ -248,13 +248,24 @@
       "tags": [
         "scaffolds"
       ],
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds"
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds"
+    },
+    {
+      "id": 1794595668705,
+      "name": "add-view-to-nav",
+      "type": "tool",
+      "tags": [
+        "rab-world-v2",
+        "scaffold"
+      ],
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/tools/add-view-to-nav",
+      "file": "add-view-to-nav.ts"
     },
     {
       "id": 1794005588365,
       "name": "generate-dependencies.manifest-json",
       "type": "tool",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/rab-react/tools/generate-dependencies.manifest-json",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/tools/generate-dependencies.manifest-json",
       "file": "generate-dependencies.manifest-json.ts"
     },
     {
@@ -265,7 +276,18 @@
         "toolkit",
         "metadata"
       ],
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/rab-world"
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-world"
+    },
+    {
+      "id": 1794610890789,
+      "name": "list-css-atoms",
+      "type": "tool",
+      "tags": [
+        "rab-world-v2",
+        "scaffold"
+      ],
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-world/tools/list-css-atoms",
+      "file": "list-css-atoms.ts"
     },
     {
       "id": 1793987131753,
@@ -278,7 +300,7 @@
         "settings",
         "paths"
       ],
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/runners/refresh-settings-json-paths",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/runners/refresh-settings-json-paths",
       "file": "refresh-settings-json-paths.ts"
     },
     {
@@ -290,7 +312,7 @@
         "runner",
         "refresh"
       ],
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/runners/runner-refresh-system",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/runners/runner-refresh-system",
       "file": "runner-refresh-system.mjs"
     },
     {
@@ -303,7 +325,7 @@
         "refresh",
         "json"
       ],
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/runners/runner-refresh-world-json",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/runners/runner-refresh-world-json",
       "file": "runner-refresh-world-json.ts"
     },
     {
@@ -319,7 +341,7 @@
         "skills",
         "mcp"
       ],
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/runners/runner-use-tool",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/runners/runner-use-tool",
       "file": "runner-use-tool.ts"
     },
     {
@@ -330,7 +352,7 @@
         "rab-world-v2",
         "scaffold"
       ],
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/runners/runner-world-tooling",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/runners/runner-world-tooling",
       "file": "runner-world-tooling.ts"
     },
     {
@@ -341,7 +363,7 @@
         "rab-world-v2",
         "scaffold"
       ],
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/scaffolds/new-settings-json",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/scaffolds/new-settings-json",
       "file": "new-settings-json.mjs"
     },
     {
@@ -352,7 +374,7 @@
         "rab-world-v2",
         "scaffold"
       ],
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/scaffolds/new-skill-flow",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/scaffolds/new-skill-flow",
       "file": "new-skill-flow.ts"
     },
     {
@@ -363,7 +385,7 @@
         "rab-world",
         "scaffold"
       ],
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/scaffolds/new-world-beacon-json",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/scaffolds/new-world-beacon-json",
       "file": "new-world-beacon-json.ts"
     },
     {
@@ -374,7 +396,7 @@
         "rab-world",
         "scaffold"
       ],
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/scaffolds/new-world-project-json",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/scaffolds/new-world-project-json",
       "file": "new-world-project-json.ts"
     },
     {
@@ -384,7 +406,7 @@
       "tags": [
         "scaffold"
       ],
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/scaffolds/new-world-tool",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/scaffolds/new-world-tool",
       "file": "new-world-tool.mjs"
     },
     {
@@ -395,7 +417,7 @@
         "rab-world-v2",
         "scaffold"
       ],
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/tools/export-search-catalog",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/tools/export-search-catalog",
       "file": "export-search-catalog.ts"
     },
     {
@@ -407,7 +429,7 @@
         "database",
         "sqlite"
       ],
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/tools/generate-world-database",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/tools/generate-world-database",
       "file": "generate-world-database.ts"
     },
     {
@@ -419,7 +441,7 @@
         "database",
         "sqlite"
       ],
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/tools/new-db-table",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/tools/new-db-table",
       "file": "new-db-table.mjs"
     },
     {
@@ -431,7 +453,7 @@
         "database",
         "sqlite"
       ],
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/tools/new-sqlite-db",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/tools/new-sqlite-db",
       "file": "new-sqlite-db.mjs"
     },
     {
@@ -442,7 +464,7 @@
         "rab-world",
         "refresh"
       ],
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/tools/refresh-beacon-json",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/tools/refresh-beacon-json",
       "file": "refresh-beacon-json.ts"
     },
     {
@@ -453,7 +475,7 @@
         "rab-world",
         "refresh"
       ],
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/tools/refresh-project-json",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/tools/refresh-project-json",
       "file": "refresh-project-json.ts"
     },
     {
@@ -464,7 +486,7 @@
         "rab-world",
         "refresh"
       ],
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/tools/refresh-settings-json",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/tools/refresh-settings-json",
       "file": "refresh-settings-json.ts"
     },
     {
@@ -479,338 +501,338 @@
         "skills",
         "database"
       ],
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/tools/refresh-world-database",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/tools/refresh-world-database",
       "file": "refresh-world-database.ts"
     },
     {
       "id": 1794409148594,
       "name": "generate-world-id",
       "type": "skill",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/generators/generate-world-id",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/generators/generate-world-id",
       "file": "use.skill.yaml"
     },
     {
       "id": 1793225862869,
       "name": "use-compare-ranking-checkpoints",
       "type": "skill",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/hybrid-seat-ranking/tools/compare-ranking-checkpoints",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/hybrid-seat-ranking/tools/compare-ranking-checkpoints",
       "file": "use.skill.yaml"
     },
     {
       "id": 1793225862870,
       "name": "use-inspect-ranking-attention",
       "type": "skill",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/hybrid-seat-ranking/tools/inspect-ranking-attention",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/hybrid-seat-ranking/tools/inspect-ranking-attention",
       "file": "use.skill.yaml"
     },
     {
       "id": 1793154927346,
       "name": "use-search-hybrid-seat-ranking",
       "type": "skill",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/hybrid-seat-ranking/tools/search-hybrid-seat-ranking",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/hybrid-seat-ranking/tools/search-hybrid-seat-ranking",
       "file": "use.skill.yaml"
     },
     {
       "id": 1793154927350,
       "name": "use-train-field-feedback",
       "type": "skill",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/hybrid-seat-ranking/tools/train-field-feedback",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/hybrid-seat-ranking/tools/train-field-feedback",
       "file": "use.skill.yaml"
     },
     {
       "id": 1793154927348,
       "name": "use-train-hybrid-seat-ranking",
       "type": "skill",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/hybrid-seat-ranking/tools/train-hybrid-seat-ranking",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/hybrid-seat-ranking/tools/train-hybrid-seat-ranking",
       "file": "use.skill.yaml"
     },
     {
       "id": 1793221495964,
       "name": "use-tune-ranking-model",
       "type": "skill",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/hybrid-seat-ranking/tools/tune-ranking-model",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/hybrid-seat-ranking/tools/tune-ranking-model",
       "file": "use.skill.yaml"
     },
     {
       "id": 1793143585571,
       "name": "use-runner-new-atom",
       "type": "skill",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/rab-react/runners/runner-new-atom",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/runners/runner-new-atom",
       "file": "use.skill.yaml"
     },
     {
       "id": 1793143585572,
       "name": "use-runner-new-component",
       "type": "skill",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/rab-react/runners/runner-new-component",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/runners/runner-new-component",
       "file": "use.skill.yaml"
     },
     {
       "id": 1793143585573,
       "name": "use-runner-new-dashboard",
       "type": "skill",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/rab-react/runners/runner-new-dashboard",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/runners/runner-new-dashboard",
       "file": "use.skill.yaml"
     },
     {
       "id": 1793143585574,
       "name": "use-runner-new-page",
       "type": "skill",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/rab-react/runners/runner-new-page",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/runners/runner-new-page",
       "file": "use.skill.yaml"
     },
     {
       "id": 1793143585575,
       "name": "use-runner-new-react-project-kit",
       "type": "skill",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/rab-react/runners/runner-new-react-project-kit",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/runners/runner-new-react-project-kit",
       "file": "use.skill.yaml"
     },
     {
       "id": 1793143585576,
       "name": "use-runner-new-subcomponent",
       "type": "skill",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/rab-react/runners/runner-new-subcomponent",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/runners/runner-new-subcomponent",
       "file": "use.skill.yaml"
     },
     {
       "id": 1794366698969,
       "name": "runner-render-factory-composition",
       "type": "skill",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/rab-react/runners/runner-render-factory-composition",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/runners/runner-render-factory-composition",
       "file": "use.skill.yaml"
     },
     {
       "id": 1791543035835,
       "name": "css-atom-presets",
       "type": "skill",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/css-atoms/presets",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/css-atoms/presets",
       "file": "use.skill.yaml"
     },
     {
       "id": 1791543035832,
       "name": "css-atom-skins",
       "type": "skill",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/css-atoms/skins",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/css-atoms/skins",
       "file": "use.skill.yaml"
     },
     {
       "id": 1791543035829,
       "name": "css-atom-scaffolds",
       "type": "skill",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/css-atoms",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/css-atoms",
       "file": "use.skill.yaml"
     },
     {
       "id": 1791518659432,
       "name": "new-action-atom",
       "type": "skill",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-action-atom",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-action-atom",
       "file": "use.skill.yaml"
     },
     {
       "id": 1791518659436,
       "name": "new-container-atom",
       "type": "skill",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-container-atom",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-container-atom",
       "file": "use.skill.yaml"
     },
     {
       "id": 1791518659441,
       "name": "new-effect-atom",
       "type": "skill",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-effect-atom",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-effect-atom",
       "file": "use.skill.yaml"
     },
     {
       "id": 1791518659445,
       "name": "new-grid-atom",
       "type": "skill",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-grid-atom",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-grid-atom",
       "file": "use.skill.yaml"
     },
     {
       "id": 1791518659404,
       "name": "new-react-component",
       "type": "skill",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-react-component",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-react-component",
       "file": "use.skill.yaml"
     },
     {
       "id": 1791518659423,
       "name": "new-react-dashboard",
       "type": "skill",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-react-dashboard",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-react-dashboard",
       "file": "use.skill.yaml"
     },
     {
       "id": 1791518659419,
       "name": "new-react-navigation",
       "type": "skill",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-react-navigation",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-react-navigation",
       "file": "use.skill.yaml"
     },
     {
       "id": 1791518659413,
       "name": "new-react-page",
       "type": "skill",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-react-page",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-react-page",
       "file": "use.skill.yaml"
     },
     {
       "id": 1791518659427,
       "name": "new-react-project",
       "type": "skill",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-react-project",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-react-project",
       "file": "use.skill.yaml"
     },
     {
       "id": 1791518659408,
       "name": "new-react-subcomponent",
       "type": "skill",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-react-subcomponent",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/new-react-subcomponent",
       "file": "use.skill.yaml"
     },
     {
       "id": 1791543035822,
       "name": "react-component-scaffolds",
       "type": "skill",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/react-components",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds/react-components",
       "file": "use.skill.yaml"
     },
     {
       "id": 1791518327961,
       "name": "scaffolds",
       "type": "skill",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/scaffolds",
       "file": "use.skill.yaml"
     },
     {
       "id": 1794005588366,
       "name": "generate-dependencies.manifest-json",
       "type": "skill",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/rab-react/tools/generate-dependencies.manifest-json",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-react/tools/generate-dependencies.manifest-json",
       "file": "use.skill.yaml"
     },
     {
       "id": 1793987131754,
       "name": "refresh-settings-json-paths",
       "type": "skill",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/runners/refresh-settings-json-paths",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/runners/refresh-settings-json-paths",
       "file": "use.skill.yaml"
     },
     {
       "id": 1794537157024,
       "name": "runner-refresh-system",
       "type": "skill",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/runners/runner-refresh-system",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/runners/runner-refresh-system",
       "file": "use.skill.yaml"
     },
     {
       "id": 1793984711137,
       "name": "runner-refresh-world-json",
       "type": "skill",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/runners/runner-refresh-world-json",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/runners/runner-refresh-world-json",
       "file": "use.skill.yaml"
     },
     {
       "id": 1793225862871,
       "name": "use-runner-use-tool",
       "type": "skill",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/runners/runner-use-tool",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/runners/runner-use-tool",
       "file": "use.skill.yaml"
     },
     {
       "id": 1794409021587,
       "name": "new-settings-json",
       "type": "skill",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/scaffolds/new-settings-json",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/scaffolds/new-settings-json",
       "file": "use.skill.yaml"
     },
     {
       "id": 1791853637988,
       "name": "new-skill-flow",
       "type": "skill",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/scaffolds/new-skill-flow",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/scaffolds/new-skill-flow",
       "file": "use.skill.yaml"
     },
     {
       "id": 1793979336057,
       "name": "new-world-beacon-json",
       "type": "skill",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/scaffolds/new-world-beacon-json",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/scaffolds/new-world-beacon-json",
       "file": "use.skill.yaml"
     },
     {
       "id": 1793984237831,
       "name": "new-world-project-json",
       "type": "skill",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/scaffolds/new-world-project-json",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/scaffolds/new-world-project-json",
       "file": "use.skill.yaml"
     },
     {
       "id": 1794415784110,
       "name": "new-world-tool",
       "type": "skill",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/scaffolds/new-world-tool",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/scaffolds/new-world-tool",
       "file": "use.skill.yaml"
     },
     {
       "id": 1793676793915,
       "name": "use-export-search-catalog",
       "type": "skill",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/tools/export-search-catalog",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/tools/export-search-catalog",
       "file": "use.skill.yaml"
     },
     {
       "id": 1793617400001,
       "name": "use-generate-world-database",
       "type": "skill",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/tools/generate-world-database",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/tools/generate-world-database",
       "file": "use.skill.yaml"
     },
     {
       "id": 1791766641357,
       "name": "use-new-db-table",
       "type": "skill",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/tools/new-db-table",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/tools/new-db-table",
       "file": "use.skill.yaml"
     },
     {
       "id": 1791766641355,
       "name": "use-new-sqlite-db",
       "type": "skill",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/tools/new-sqlite-db",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/tools/new-sqlite-db",
       "file": "use.skill.yaml"
     },
     {
       "id": 1793981262998,
       "name": "refresh-beacon-json",
       "type": "skill",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/tools/refresh-beacon-json",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/tools/refresh-beacon-json",
       "file": "use.skill.yaml"
     },
     {
       "id": 1793981262992,
       "name": "refresh-project-json",
       "type": "skill",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/tools/refresh-project-json",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/tools/refresh-project-json",
       "file": "use.skill.yaml"
     },
     {
       "id": 1793981263002,
       "name": "refresh-settings-json",
       "type": "skill",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/tools/refresh-settings-json",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/tools/refresh-settings-json",
       "file": "use.skill.yaml"
     },
     {
       "id": 1793210509223,
       "name": "use-refresh-world-database",
       "type": "skill",
-      "path": "C:/rraabbiitt-labs-control-center/toolkit/tools/refresh-world-database",
+      "path": "X:/rraabbiitt-labs-control-center/toolkit/tools/refresh-world-database",
       "file": "use.skill.yaml"
     }
   ],
-  "path": "C:/rraabbiitt-labs-control-center/toolkit"
+  "path": "X:/rraabbiitt-labs-control-center/toolkit"
 }

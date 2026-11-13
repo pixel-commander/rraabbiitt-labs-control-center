@@ -1,0 +1,62 @@
+{
+  "id": 1794610757634,
+  "name": "save-factory-composition",
+  "title": "save-factory-composition",
+  "description": "Create or update a saved Factory composition without scaffolding files.",
+  "type": "tool",
+  "path": "src/dashboards/Factory/toolkit/tools/save-factory-composition",
+  "file": "save-factory-composition.ts",
+  "settings": [
+    {
+      "name": "composition",
+      "type": "object",
+      "required": true
+    },
+    {
+      "name": "id",
+      "type": "number",
+      "required": false
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "description",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "tags",
+      "type": "array",
+      "required": false
+    }
+  ],
+  "paths": [
+    {
+      "path": ".",
+      "file": "save-factory-composition.ts",
+      "type": "ts"
+    },
+    {
+      "path": ".",
+      "file": "rab.settings.json",
+      "type": "json"
+    }
+  ],
+  "tags": [
+    "rab-world-v2",
+    "scaffold"
+  ]
+}

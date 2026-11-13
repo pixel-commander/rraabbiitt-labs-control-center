@@ -3,6 +3,7 @@ import { createServer } from "node:http";
 import { loadWorld } from "../../scripts/world.mjs";
 import { timingSafeEqual } from "node:crypto";
 import { resolve } from "node:path";
+import { pathToFileURL } from "node:url";
 import { McpServer } from "@modelcontextprotocol/server";
 import {
   NodeStreamableHTTPServerTransport,
@@ -10,16 +11,19 @@ import {
   originValidation,
 } from "@modelcontextprotocol/node";
 import { z } from "zod/v4";
-import { run } from "../../toolkit/runners/runner-use-tool/runner-use-tool.ts";
 
 const inputSchema = z
   .object({
     query: z.string().trim().min(1).max(2000).optional(),
+    /** Choose substring matching or the existing hybrid search engine. */
+    search_mode: z.enum(["substring", "hybrid"]).optional(),
     id: z.number().int().positive().optional(),
     content: z.string().optional(),
   })
   .strict()
   .superRefine((input, context) => {
+    if (input.search_mode !== undefined && input.query === undefined)
+      context.addIssue({ code: "custom", message: "search_mode requires query." });
     if ((input.query !== undefined) === (input.id !== undefined))
       context.addIssue({
         code: "custom",
@@ -48,6 +52,10 @@ export async function createRequestHandler() {
 }
 
 async function buildRequestHandler(world) {
+  /** Reload the dispatcher with the handler so its advertised options stay in sync. */
+  const runnerUrl = pathToFileURL(resolve(world.path, "toolkit/runners/runner-use-tool/runner-use-tool.ts"));
+  runnerUrl.searchParams.set("v", String(Date.now()));
+  const { run } = await import(runnerUrl.href);
   const { host, port } = world.mcp;
   if (
     host !== "127.0.0.1" ||
@@ -294,7 +302,7 @@ async function buildRequestHandler(world) {
       {
         title: "Search, inspect and run registered tools and runners",
         description:
-          "query searches registered local tools and runners. id reads the current registration and adjacent usage skill. After inspection, id and content (a JSON settings object string) execute it. All execution goes through the master runner so every step is tracked with timing.",
+          "query searches registered local tools and runners with substring matching by default. Set search_mode to hybrid for semantic, BM25 and reranked search across the whole catalog, including records other than tools. id reads the current registration and adjacent usage skill. After inspection, id and content (a JSON settings object string) execute it. All execution goes through the master runner so every step is tracked with timing.",
         inputSchema,
         annotations: {
           readOnlyHint: false,
@@ -341,6 +349,7 @@ async function buildRequestHandler(world) {
             },
           },
         );
+        requestEvent.status = result.some((step) => step.status === "error") ? "error" : "complete";
         return {
           content: [{ type: "text", text: JSON.stringify(result) }],
           isError: result.some((step) => step.status === "error"),

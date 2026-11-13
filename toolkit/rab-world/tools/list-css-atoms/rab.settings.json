@@ -1,0 +1,59 @@
+{
+  "id": 1794610890789,
+  "name": "list-css-atoms",
+  "title": "list-css-atoms",
+  "description": "List available CSS atoms with their House metadata, category and CSS class names. Read only.",
+  "type": "tool",
+  "path": "X:/rraabbiitt-labs-control-center/toolkit/rab-world/tools/list-css-atoms",
+  "file": "list-css-atoms.ts",
+  "settings": [
+    {
+      "name": "path",
+      "type": "string",
+      "required": false,
+      "description": "Atoms directory; defaults to this project src/atoms."
+    },
+    {
+      "name": "query",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "options": [
+        "container",
+        "action",
+        "effect",
+        "grid"
+      ]
+    }
+  ],
+  "paths": [
+    {
+      "path": ".",
+      "file": "list-css-atoms.ts",
+      "type": "ts"
+    },
+    {
+      "path": ".",
+      "file": "rab.settings.json",
+      "type": "json"
+    },
+    {
+      "path": ".",
+      "file": "README.txt",
+      "type": "txt"
+    },
+    {
+      "path": ".",
+      "file": "list-css-atoms.types.ts",
+      "type": "ts"
+    }
+  ],
+  "tags": [
+    "rab-world-v2",
+    "scaffold"
+  ]
+}

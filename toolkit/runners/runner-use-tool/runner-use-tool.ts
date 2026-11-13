@@ -307,6 +307,28 @@ export const run = async (
     );
   }
 
+  /** Optional hybrid discovery searches the full catalog through the existing engine. */
+  const searchMode = settings.search_mode ?? "substring";
+  if (!["substring", "hybrid"].includes(String(searchMode)))
+    throw new Error("search_mode must be substring or hybrid.");
+  if (settings.search_mode !== undefined && !hasQuery)
+    throw new Error("search_mode requires query.");
+  if (hasQuery && searchMode === "hybrid") {
+    return runTools(
+      [{ type: "tool", name: "search-records", settings }],
+      async () => {
+        const { searchProject } = await import("../../hybrid-seat-ranking/tools/project-search.ts");
+        const result = await searchProject({ query: settings.query, path: projectRoot });
+        return {
+          ...result,
+          settings,
+          ...(result.response ? { response: { ...result.response, mode: "hybrid" } } : {}),
+        };
+      },
+      options,
+    );
+  }
+
   const registrations = await indexedRegistrations(settings.toolkits, hasId ? settings.id : undefined);
   if (hasQuery) {
     const query = settings.query!.trim().toLowerCase();

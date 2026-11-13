@@ -18,6 +18,7 @@ const attachMcp = async server => {
   const apiFiles = new Set([
     resolve(world.path, world.mcp.path, world.mcp.file),
     resolve(world.path, "api/file-system/read-file/read-file.mjs"),
+    resolve(world.path, "toolkit/runners/runner-use-tool/runner-use-tool.ts"),
   ]);
   const reloadApi = file => {
     if (apiFiles.has(resolve(file))) void server.restart();

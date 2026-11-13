@@ -42,6 +42,9 @@ export const McpViewer = () => {
               <div key={tool.name} className="mcp-viewer__tool container-outline pad" data-cols="1" data-gap="control">
                 <strong><code>{tool.name}</code></strong>
                 <p>{tool.description}</p>
+                <ToggleSection title="Input schema sent to clients" container_class="container-outline">
+                  <pre className="scroll-x"><code>{JSON.stringify(tool.inputSchema, null, 2)}</code></pre>
+                </ToggleSection>
               </div>
             )) : <p>Loading tool list…</p>}
             </section>

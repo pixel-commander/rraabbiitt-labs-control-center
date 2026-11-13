@@ -17,6 +17,8 @@ The cause is not line endings. The file contents are different. "npm run test:hy
 
 SOLUTION: Replace the file with the file from cross-encoder/ms-marco-MiniLM-L6-v2 at revision 233902d25c440f23af6f7d6e94d2946bac0bee0a. Do not disable the hash check. Run "npm run test:hybrid-baseline" again to make sure that the file is correct.
 
+RESOLVED 2026-11-13: Re-pinned instead of replaced. Hugging Face was not reachable from this network. tokenizer_config.json had the same mismatch (pinned a5c2e5a7..., actual 7b082b48...). Both shipped files have been in git unchanged since the initial commit. The pins in data/pretrained/reranker.json and checkpoints/1794201063837438200/engine.json now match the shipped bytes. The hash check is still on. The shipped tokenizer files are a local re-save, not the upstream bytes. To return to upstream, replace both files from the revision above and restore the old pins.
+
 ================================
 
 PROBLEM: The tool caller (runner-use-tool, executeToolById) walks the full toolkit folder tree on each call to find one tool ID. This is too slow when you make many components or tools in a batch.

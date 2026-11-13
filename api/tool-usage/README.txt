@@ -11,3 +11,6 @@ COUNT(*) counts uses and date records when. No invocation/parent ID is added.
 HTTP success/error returns use return_type api-call. The client makes no console
 output and appends a tracking error to the tool return on failure, preserving its
 status, settings and response. Missing API helper/service and timeouts are safe.
+
+finishToolUsage does not refresh the search database. After a scaffold creates
+files, run refresh-world-database (tool 1793210509222) to make them searchable.

@@ -63,8 +63,8 @@ try {
  assert.equal(created.path,"toolkit/tools/new-fixture");
  const prior=process.env.TOOL_LEARNER_PYTHON;process.env.TOOL_LEARNER_PYTHON=python;
  try {
-  const {finishToolUsage}=await moduleAt("api/tool-usage/finish-tool-usage.ts");
-  const saved=await finishToolUsage(id,{}, {status:"complete",return_type:"scaffold",response:skill});
+  const {executeTool:refreshDatabase}=await moduleAt("toolkit/tools/refresh-world-database/refresh-world-database.ts");
+  const saved=await refreshDatabase({path:root});
   assert.equal(saved.status,"complete",saved.error);
   assert.equal(db.prepare("SELECT id FROM records WHERE id=?").get(skill.id).id,skill.id);
  } finally {if(prior===undefined)delete process.env.TOOL_LEARNER_PYTHON;else process.env.TOOL_LEARNER_PYTHON=prior;}

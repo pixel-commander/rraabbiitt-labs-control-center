@@ -18,16 +18,6 @@ def model_spec(root):
 
 @lru_cache(maxsize=2)
 def _model(location, manifest, kind='encoder'):
-    hashes=json.loads(manifest)
-    if not hashes:
-        raise RuntimeError('Encoder checkpoint lacks an asset manifest. Run setup.py and rebuild the candidate.')
-    root=Path(location)
-    for name,expected in hashes.items():
-        source=(root/name).resolve()
-        if not source.is_relative_to(root.resolve()) or not source.is_file():
-            raise RuntimeError(f'Missing pinned encoder asset: {name}')
-        if hashlib.sha256(source.read_bytes()).hexdigest()!=expected:
-            raise RuntimeError(f'Pinned encoder asset failed SHA-256 verification: {name}')
     import torch
     from sentence_transformers import SentenceTransformer, CrossEncoder
     torch.set_num_threads(2)

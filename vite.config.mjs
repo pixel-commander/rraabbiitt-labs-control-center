@@ -16,6 +16,7 @@ const attachMcp = async server => {
   const handler = await createRequestHandler();
   // Native-imported API modules need a server restart rather than React HMR.
   const apiFiles = new Set([
+    resolve(world.path, "rab.world.json"),
     resolve(world.path, world.mcp.path, world.mcp.file),
     resolve(world.path, "api/file-system/read-file/read-file.mjs"),
     resolve(world.path, "toolkit/runners/runner-use-tool/runner-use-tool.ts"),
@@ -47,8 +48,9 @@ export default defineConfig({
   plugins: [react(), factorySavePlugin({ path: "src/components", projectRoot: world.path, toolkitRoot: resolve(world.path, world.toolkits[0].path) }), factoryCompositionsPlugin({ databasePath: resolve(world.path, database.path, database.file) }), { name: "labs-mcp", configureServer: attachMcp, configurePreviewServer: attachMcp }],
   server: {
     host: world.mcp.host, port: world.mcp.port, strictPort: true,
+    allowedHosts: world.mcp.allowed_hosts,
     fs: { allow: [world.path] },
     watch: { ignored: ["**/.tmp/**", "**/.venv/**"] },
   },
-  preview: { host: world.mcp.host, port: world.mcp.port, strictPort: true },
+  preview: { host: world.mcp.host, port: world.mcp.port, strictPort: true, allowedHosts: world.mcp.allowed_hosts },
 });

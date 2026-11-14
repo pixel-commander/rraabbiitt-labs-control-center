@@ -1,0 +1,10 @@
+schema: 1
+intent: use
+id: 1794613865461
+name: use-new-react-test
+owner:
+  id: 1794613688090
+implementation:
+  - id: 1794613688090
+instructions: >-
+  Supply name, save_path (existing parent), and test (evaluation-test schema_version 1). Creates name/test.json, README.md and runs/.gitkeep from template. Existing destinations are refused. Returns House scaffold response with paths, exact JSON and test_sha256. Does not run a model.

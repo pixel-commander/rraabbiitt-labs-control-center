@@ -7,8 +7,6 @@ import { pathToFileURL } from "node:url";
 import { McpServer } from "@modelcontextprotocol/server";
 import {
   NodeStreamableHTTPServerTransport,
-  hostHeaderValidation,
-  originValidation,
 } from "@modelcontextprotocol/node";
 import { z } from "zod/v4";
 
@@ -57,14 +55,20 @@ async function buildRequestHandler(world) {
   runnerUrl.searchParams.set("v", String(Date.now()));
   const { run } = await import(runnerUrl.href);
   const { host, port } = world.mcp;
+  /** Host and origin allowlists are owned by rab.world.json. */
+  const allowedHosts = world.mcp.allowed_hosts ?? ["localhost", "127.0.0.1", "[::1]"];
+  const allowedOrigins = world.mcp.allowed_origins ?? allowedHosts.map(host => `http://${host}:${port}`);
+  if (!Array.isArray(allowedHosts) || !allowedHosts.every(host => typeof host === "string") ||
+      !Array.isArray(allowedOrigins) || !allowedOrigins.every(origin => typeof origin === "string"))
+    throw new Error("mcp.allowed_hosts and mcp.allowed_origins must be arrays of strings.");
   if (
-    host !== "127.0.0.1" ||
+    !["127.0.0.1", "0.0.0.0"].includes(host) ||
     !Number.isInteger(port) ||
     port < 1 ||
     port > 65535
   )
     throw new Error(
-      "mcp.host must be 127.0.0.1 and mcp.port must be a valid port.",
+      "mcp.host must be 127.0.0.1 or 0.0.0.0 and mcp.port must be a valid port.",
     );
 
   const publicUrl = world.mcp.url ? new URL(world.mcp.url) : undefined;
@@ -77,7 +81,9 @@ async function buildRequestHandler(world) {
   const connections = new Set();
 
   function validateHost(req, res) {
-    if (!hostHeaderValidation(req, host, port)) {
+    const authority = req.headers.host?.toLowerCase();
+    if (!authority || !(allowedHosts.some(host => authority === `${host.toLowerCase()}:${port}` ||
+        (port === 80 && authority === host.toLowerCase())) || authority === publicUrl?.host.toLowerCase())) {
       send(res, 400, { error: "Invalid Host header." });
       return false;
     }
@@ -85,7 +91,8 @@ async function buildRequestHandler(world) {
   }
 
   function validateOrigin(req, res) {
-    if (!originValidation(req, publicUrl)) {
+    const origin = req.headers.origin;
+    if (origin !== undefined && !(allowedOrigins.includes(origin) || origin === publicUrl?.origin)) {
       send(res, 403, { error: "Origin not allowed." });
       return false;
     }

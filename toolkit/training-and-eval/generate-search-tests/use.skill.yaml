@@ -1,0 +1,19 @@
+schema: 1
+intent: use
+id: 1794620688815
+name: use-generate-search-tests
+owner:
+  id: 1794620688814
+implementation:
+  - id: 1794620688814
+instructions: >-
+  Supply save_path as an existing external test directory.
+  Optional count is 1 through 31. Optional seed controls catalog sampling.
+  Optional model and url select an installed local Ollama model for paraphrasing.
+  The generator samples components, tools, runners and skills from the world catalog.
+  It uses attached skills or explicit owner links for nearby guidance.
+  It creates shortened requests, expected-target checks, and selected query-style checks.
+  Return the standard House ToolReturn with output paths, manifest filename and count.
+  Source records and target IDs stay out of the tested model's prompt.
+  Review source.json for semantic drift before comparing model scores.
+  Do not execute the discovered capabilities. This tool generates tests only.

@@ -1,0 +1,54 @@
+{
+  "id": 1794613688090,
+  "name": "new-react-test",
+  "title": "new-react-test",
+  "description": "Scaffold a versioned evaluation test folder with test.json, runs and README. Requires save_path and refuses existing destinations.",
+  "type": "tool",
+  "path": "toolkit/training-and-eval/scaffolds/new-react-test",
+  "file": "new-react-test.ts",
+  "settings": [
+    {
+      "name": "name",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "save_path",
+      "type": "string",
+      "required": true,
+      "description": "Existing parent directory; output is save_path/name. Refuses existing folders."
+    },
+    {
+      "name": "test",
+      "type": "object",
+      "required": true
+    }
+  ],
+  "paths": [
+    {
+      "path": ".",
+      "file": "new-react-test.ts",
+      "type": "ts"
+    },
+    {
+      "path": ".",
+      "file": "rab.settings.json",
+      "type": "json"
+    },
+    {
+      "path": ".",
+      "file": "README.md",
+      "type": "txt"
+    },
+    {
+      "path": ".",
+      "file": "use.skill.yaml",
+      "type": "skill"
+    }
+  ],
+  "tags": [
+    "training",
+    "evaluation",
+    "scaffold"
+  ]
+}

@@ -15,6 +15,11 @@ export const ScaffoldContent = ({ response, className = "" }: ScaffoldContentPro
     (entry.path === undefined || typeof entry.path === "string") &&
     (entry.file === undefined || typeof entry.file === "string") &&
     (entry.name === undefined || typeof entry.name === "string")) : [];
+  const sourcePath = (item: FolderTreeNode) =>
+    typeof record.path === "string" &&
+    paths.some(entry => (entry.file ?? entry.name) === item.path && (!entry.path || entry.path === "."))
+      ? `${record.path.replace(/[\\/]$/, "")}/${item.path}`
+      : item.path;
   const items = settingsPathsToTree(paths);
   return (
     <div data-grid="side-right" data-collapse="1" className={["scaffold-content", className].filter(Boolean).join(" ")}>
@@ -33,7 +38,7 @@ export const ScaffoldContent = ({ response, className = "" }: ScaffoldContentPro
         {items.length ? <FolderTree items={items} start_state="open" auto_size={false} selected={selected?.path}
           handleClick={(item, type) => { if (item && type === "file") setSelected(item); }} /> : <p>No paths returned.</p>}
       </div>
-      {selected && <WorldCodeViewPopupLink key={selected.path} src_path={selected.path}
+      {selected && <WorldCodeViewPopupLink key={selected.path} src_path={sourcePath(selected)}
         open showLink={false} handleCancel={() => setSelected(undefined)} />}
     </div>
   );

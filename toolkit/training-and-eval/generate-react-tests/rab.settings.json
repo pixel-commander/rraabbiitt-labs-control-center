@@ -1,0 +1,99 @@
+{
+  "id": 1794613648645,
+  "name": "generate-react-tests",
+  "title": "Generate React evaluation tests",
+  "description": "Generate versioned React tool-use evaluation tests with fixed prompts, approved tool IDs, limits and objective checks. Does not execute tests.",
+  "type": "tool",
+  "path": "toolkit/training-and-eval/generate-react-tests",
+  "file": "generate-react-tests.ts",
+  "settings": [
+    {
+      "name": "name",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "save_path",
+      "type": "string",
+      "required": true,
+      "description": "Existing parent directory; output is save_path/name. Refuses existing folders."
+    },
+    {
+      "name": "id",
+      "type": "number",
+      "required": false
+    },
+    {
+      "name": "schema_version",
+      "type": "number",
+      "required": false
+    },
+    {
+      "name": "version",
+      "type": "number",
+      "required": false
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "description",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "tags",
+      "type": "array",
+      "required": false
+    },
+    {
+      "name": "prompt",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "setup",
+      "type": "object",
+      "required": false
+    },
+    {
+      "name": "limits",
+      "type": "object",
+      "required": false
+    },
+    {
+      "name": "checks",
+      "type": "array",
+      "required": false
+    }
+  ],
+  "paths": [
+    {
+      "path": ".",
+      "file": "generate-react-tests.ts",
+      "type": "ts"
+    },
+    {
+      "path": ".",
+      "file": "rab.settings.json",
+      "type": "json"
+    },
+    {
+      "path": ".",
+      "file": "README.md",
+      "type": "txt"
+    },
+    {
+      "path": ".",
+      "file": "use.skill.yaml",
+      "type": "skill"
+    }
+  ],
+  "tags": [
+    "training",
+    "evaluation",
+    "generator"
+  ]
+}

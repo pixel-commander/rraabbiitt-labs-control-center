@@ -1,3 +1,4 @@
+import { validateComposition } from "./validateComposition/validateComposition";
 import type { FactoryComposition, FactoryDocument, FactoryElement, FactoryNode, EditorFactoryDocument, EditorFactoryNode } from "../ComponentFactory.types";
 import { gridTypes } from "../../../../../components/GridLayoutDisplay/GridLayoutDisplay.types";
 import { elementTag } from "./renderStyles";
@@ -275,29 +276,17 @@ export function readComposition(input?: FactoryDocument | FactoryNode | FactoryC
     const legacy = (node: Record<string, unknown>): boolean => Boolean(node.kind || node.layout || node.style || node.atom_class || (Array.isArray(node.children) && node.children.some(legacy)));
     document = legacy(wrapped.root as unknown as Record<string, unknown>) ? fromEditorDocument(wrapped as unknown as EditorFactoryDocument) : wrapped as FactoryDocument;
   }
-  const seen = new Set<number>();
-  const names = new Set<string>();
-  const validate = (node: FactoryNode) => {
-    if (!node || typeof node.name !== "string" || !/^[a-zA-Z_][a-zA-Z0-9_-]*$/.test(node.name)) throw Error("Node names must be valid CSS class names.");
-    if (!/^(article|aside|div|footer|header|main|nav|section|span|h[1-6]|button|a|p|strong|em|small|ul|ol|li)$/.test(node.tag)) throw Error("Invalid composition node tag.");
-    node.id ??= id();
-    if (!Number.isSafeInteger(node.id) || seen.has(node.id)) throw Error("Composition node IDs must be unique integers.");
-    if (names.has(node.name)) throw Error(`Duplicate node name: ${node.name}. Names identify CSS rules and must be unique.`);
-    names.add(node.name); seen.add(node.id); nextId = Math.max(nextId, node.id);
-    if (node.grid_type && !(node.grid_type in gridTypes)) throw Error("Unknown composition grid.");
-    for (const count of [node.grid_rows, node.grid_cols]) if (count !== undefined && (!Number.isSafeInteger(count) || count < 1 || count > 12)) throw Error("Grid rows and cols must be integers from 1 to 12.");
-    for (const value of [node.scroll_x, node.scroll_y]) if (value !== undefined && typeof value !== "boolean") throw Error("Scroll fields must be booleans.");
-    if (node.css && (typeof node.css !== "object" || Array.isArray(node.css))) throw Error("css must be a property object.");
-    const fields = new Set(["tag", "name", "id", "container_class", "action_class", "effect_class", "grid_type", "grid_area", "grid_rows", "grid_cols", "scroll_x", "scroll_y", "padding", "gap", "css", "text", "href", "disabled", "grid_custom", "grid_spans", "states", "children"]);
-    for (const key of Object.keys(node)) if (!fields.has(key)) throw Error(`Unknown node field: ${key}.`);
-    if (node.grid_area !== undefined && (typeof node.grid_area !== "string" || !node.grid_area || node.grid_area.includes("/"))) throw Error("grid_area must be a local area name, without parent paths.");
-    for (const key of ["container_class", "action_class", "effect_class", "text", "href"] as const) if (node[key] !== undefined && typeof node[key] !== "string") throw Error(`${key} must be a string.`);
-    if (node.gap !== undefined && typeof node.gap !== "string" && typeof node.gap !== "number") throw Error("gap must be a token, CSS length, or number.");
-    if (node.children && !Array.isArray(node.children)) throw Error("Node children must be an array.");
-    const areas = node.children?.map(child => child.grid_area).filter(area => area !== undefined) ?? [];
-    if (new Set(areas).size !== areas.length) throw Error("Sibling grid_area values must be unique.");
-    node.children?.forEach(validate);
+  const { errors } = validateComposition(document);
+  if (errors.length) throw Error(errors[0].message);
+  const assignIds = (node: FactoryNode) => {
+    if (node.id !== undefined) nextId = Math.max(nextId, node.id);
+    node.children?.forEach(assignIds);
   };
-  validate(document.root);
+  assignIds(document.root);
+  const fillIds = (node: FactoryNode) => {
+    node.id ??= id();
+    node.children?.forEach(fillIds);
+  };
+  fillIds(document.root);
   return { ...document, version: 2 };
 }

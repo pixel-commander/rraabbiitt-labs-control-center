@@ -1,0 +1,10 @@
+schema: 1
+intent: use
+id: 1794613865460
+name: use-generate-react-tests
+owner:
+  id: 1794613648645
+implementation:
+  - id: 1794613648645
+instructions: >-
+  Supply name and save_path (existing parent). Optional prompt, setup, limits and checks replace complete template values. Uses the new-react-test scaffold template and shared v1 schemas. Returns House results envelope with response.path, file, code and test_sha256. Does not run tests, grade models, or overwrite an existing folder.

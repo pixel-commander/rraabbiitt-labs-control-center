@@ -1,0 +1,66 @@
+{
+  "id": 1794614819392,
+  "name": "run-react-tests",
+  "title": "run-react-tests",
+  "description": "Run fixed React evaluation tests against local models with fresh contexts, MCP tracking and external result files.",
+  "type": "runner",
+  "path": "toolkit/training-and-eval/runners/run-react-tests",
+  "file": "run-react-tests.ts",
+  "settings": [
+    {
+      "name": "path",
+      "type": "string",
+      "required": true,
+      "description": "External test folder or parent containing test folders."
+    },
+    {
+      "name": "models",
+      "type": "array",
+      "required": true,
+      "description": "Installed Ollama model names."
+    },
+    {
+      "name": "repetitions",
+      "type": "number",
+      "required": false
+    },
+    {
+      "name": "url",
+      "type": "string",
+      "required": false,
+      "description": "Local Ollama URL; defaults to http://127.0.0.1:11434."
+    },
+    {
+      "name": "options",
+      "type": "object",
+      "required": false
+    }
+  ],
+  "paths": [
+    {
+      "path": ".",
+      "file": "run-react-tests.ts",
+      "type": "ts"
+    },
+    {
+      "path": ".",
+      "file": "rab.settings.json",
+      "type": "json"
+    },
+    {
+      "path": ".",
+      "file": "README.md",
+      "type": "md"
+    },
+    {
+      "path": ".",
+      "file": "use.skill.yaml",
+      "type": "skill"
+    }
+  ],
+  "tags": [
+    "evaluation",
+    "runner",
+    "mcp"
+  ]
+}

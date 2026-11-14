@@ -1,0 +1,73 @@
+{
+  "id": 1794620688814,
+  "name": "generate-search-tests",
+  "title": "generate-search-tests",
+  "description": "Generate reproducible component, tool and nearby-skill search tests using shortened local-model paraphrases and varied query instructions.",
+  "type": "tool",
+  "path": "toolkit/training-and-eval/generate-search-tests",
+  "file": "generate-search-tests.ts",
+  "settings": [
+    {
+      "name": "save_path",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "seed",
+      "type": "number",
+      "required": false
+    },
+    {
+      "name": "count",
+      "type": "number",
+      "required": false
+    },
+    {
+      "name": "model",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "url",
+      "type": "string",
+      "required": false
+    }
+  ],
+  "paths": [
+    {
+      "path": ".",
+      "file": "generate-search-tests.ts",
+      "type": "ts"
+    },
+    {
+      "path": ".",
+      "file": "rab.settings.json",
+      "type": "json"
+    },
+    {
+      "path": ".",
+      "file": "README.md",
+      "type": "md"
+    },
+    {
+      "path": ".",
+      "file": "use.skill.yaml",
+      "type": "skill"
+    },
+    {
+      "path": ".",
+      "file": "implementation.ts",
+      "type": "ts"
+    },
+    {
+      "path": ".",
+      "file": "generate-search-tests.types.ts",
+      "type": "ts"
+    }
+  ],
+  "tags": [
+    "evaluation",
+    "search",
+    "generator"
+  ]
+}

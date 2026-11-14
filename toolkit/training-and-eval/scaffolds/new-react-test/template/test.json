@@ -1,0 +1,17 @@
+{
+  "type": "evaluation-test",
+  "schema_version": 1,
+  "version": 1,
+  "prompt": "Build and save a dashboard with a header, three summary cards, and recent activity. Use available atoms and a house grid. Return its URL.",
+  "setup": {
+    "fresh_chat": true,
+    "tool_ids": [1794610753145, 1794610755409, 1794610757634, 1794610890789]
+  },
+  "limits": { "seconds": 180, "tool_calls": 20, "human_interventions": 0 },
+  "checks": [
+    { "name": "atoms-discovered", "validator": "tool-succeeded", "settings": { "id": 1794610890789 } },
+    { "name": "composition-saved", "validator": "tool-succeeded", "settings": { "id": 1794610757634 } },
+    { "name": "layout-correct", "validator": "factory-layout", "settings": { "summary_cards": 3, "header": true, "activity": true, "registered_atoms": true, "valid_house_grid": true } },
+    { "name": "url-correct", "validator": "saved-composition-url" }
+  ]
+}

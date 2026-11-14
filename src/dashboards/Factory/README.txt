@@ -1,5 +1,10 @@
 Factory
 
+For step-by-step composition authoring, the complete public node contract, grid
+recipes, an LLM workflow and a ready-to-load example, start with
+components/ComponentFactory/README.txt. This file covers dashboard integration,
+artifact saving and the database API.
+
 The /factory dashboard uses the header-main house grid.
 The header contains TabNav with Component Factory selected.
 The main region renders the local components/ComponentFactory component.

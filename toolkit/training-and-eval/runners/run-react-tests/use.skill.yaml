@@ -1,0 +1,20 @@
+schema: 1
+intent: use
+id: 1794614819393
+name: use-run-react-tests
+owner:
+  id: 1794614819392
+implementation:
+  - id: 1794614819392
+instructions: >-
+  Supply path to an external test folder or a parent of test folders.
+  Supply models as an array of installed Ollama model names.
+  Optional repetitions is 1 through 20. Optional url selects a local Ollama server.
+  Optional options applies the same model settings to each attempt.
+  Each attempt uses fresh context, the fixed test prompt, and the MCP gateway.
+  Only test.setup.tool_ids can execute. Inspection is required before execution.
+  Results and full evidence go to each test folder's runs directory.
+  Return the House RunnerReturn array. Each response contains a typed result,
+  identity, output path and filename, and a count of passed checks.
+  A complete tool status does not imply a passed evaluation outcome.
+  Do not claim visual correctness from structural checks.

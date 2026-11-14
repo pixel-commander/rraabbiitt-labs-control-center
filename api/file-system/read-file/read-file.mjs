@@ -14,11 +14,17 @@ export const handleReadFile = async (world, req, res, url) => {
   };
   if (req.method !== "GET") return send(405, { error: "Use GET to read source." });
   try {
-    const root = await realpath(resolve(world.path, "src"));
+    const project = await realpath(world.path);
+    const roots = await Promise.all([
+      resolve(project, "src"),
+      ...(world.toolkits ?? []).map(entry => resolve(project, entry.path)),
+    ].map(folder => realpath(folder)));
+    if (roots.some(root => !inside(project, root) || root === project))
+      return send(403, { error: "Source roots must stay inside the project." });
     const candidate = resolve(world.path, url.searchParams.get("path") ?? "", url.searchParams.get("file") ?? "");
-    if (!inside(root, candidate)) return send(403, { error: "Only project source files can be viewed." });
+    if (!roots.some(root => inside(root, candidate))) return send(403, { error: "Only project source and registered toolkit files can be viewed." });
     const file = await realpath(candidate);
-    if (!inside(root, file)) return send(403, { error: "File resolves outside project source." });
+    if (!roots.some(root => inside(root, file))) return send(403, { error: "File resolves outside project source and registered toolkits." });
     if (basename(file) !== ".gitkeep" && !extensions.has(extname(file).toLowerCase())) return send(415, { error: "This file type cannot be previewed as source." });
     const info = await stat(file);
     if (!info.isFile()) return send(400, { error: "Select a file." });

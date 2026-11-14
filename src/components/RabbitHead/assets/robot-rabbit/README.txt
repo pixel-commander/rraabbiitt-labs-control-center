@@ -1,0 +1,1 @@
+robot_rabbit.glb stage preview. 263860 original triangles reduced to 2371 triangles / 937 vertices by vertex clustering (latest pass 4.25 units). Scene transforms applied; centered, scaled to 150 units, mirrored Z with reversed winding. See license.txt.

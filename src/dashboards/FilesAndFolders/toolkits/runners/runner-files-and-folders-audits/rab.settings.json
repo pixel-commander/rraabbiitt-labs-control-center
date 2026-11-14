@@ -1,0 +1,90 @@
+{
+  "id": 1794631064090,
+  "name": "runner-files-and-folders-audits",
+  "title": "runner-files-and-folders-audits",
+  "description": "Run selected filesystem audits with optional discovery refresh and preserve each tracked result.",
+  "type": "runner",
+  "path": "X:/rraabbiitt-labs-control-center/src/dashboards/FilesAndFolders/toolkits/runners/runner-files-and-folders-audits",
+  "file": "runner-files-and-folders-audits.ts",
+  "settings": [
+    {
+      "name": "root",
+      "type": "string",
+      "required": true,
+      "description": "Absolute starting folder."
+    },
+    {
+      "name": "path",
+      "type": "string",
+      "description": "Optional folder scope inside root; omitted means root."
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "description": "File extension with or without a dot, or folder for location finder."
+    },
+    {
+      "name": "db",
+      "type": "boolean",
+      "default": false,
+      "description": "Read saved discovery inventory instead of crawling folders."
+    },
+    {
+      "name": "limit",
+      "type": "number",
+      "default": 200
+    },
+    {
+      "name": "offset",
+      "type": "number",
+      "default": 0
+    },
+    {
+      "name": "save_path",
+      "type": "string",
+      "description": "Existing folder for optional JSON and text reports."
+    },
+    {
+      "name": "save_file",
+      "type": "string",
+      "description": "Optional report filename stem without extension."
+    },
+    {
+      "name": "refresh",
+      "type": "boolean",
+      "default": false
+    },
+    {
+      "name": "checks",
+      "type": "array",
+      "description": "Unique count-imports, count-file-types and/or list-orphaned-files."
+    }
+  ],
+  "paths": [
+    {
+      "path": ".",
+      "file": "runner-files-and-folders-audits.ts",
+      "type": "ts"
+    },
+    {
+      "path": ".",
+      "file": "rab.settings.json",
+      "type": "json"
+    },
+    {
+      "path": ".",
+      "file": "README.md",
+      "type": "md"
+    },
+    {
+      "path": ".",
+      "file": "use.skill.yaml",
+      "type": "yaml"
+    }
+  ],
+  "tags": [
+    "files-and-folders",
+    "runner",
+    "audit"
+  ]
+}

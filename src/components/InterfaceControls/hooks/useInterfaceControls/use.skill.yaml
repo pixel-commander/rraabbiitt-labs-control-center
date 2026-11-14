@@ -1,0 +1,9 @@
+schema: 1
+intent: use
+id: 1794625583560
+name: useInterfaceControls
+owner:
+  id: 1794625583558
+implementation:
+  - id: 1794625583558
+instructions: Generated starter; update with the implemented contract before use.

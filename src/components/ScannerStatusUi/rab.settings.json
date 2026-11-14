@@ -1,0 +1,13 @@
+{
+  "id": 1794630014447,
+  "name": "ScannerStatusUi",
+  "title": "Scanner Status",
+  "description": "Self-contained filesystem scanner dialog with folder timeline, live activity, stats and discovery inventory.",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "ScannerStatusUi.tsx",
+  "path": "src/components/ScannerStatusUi"
+}

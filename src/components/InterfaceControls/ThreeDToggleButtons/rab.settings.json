@@ -1,0 +1,13 @@
+{
+  "id": 1794625647571,
+  "name": "ThreeDToggleButtons",
+  "title": "3dToggleButtons",
+  "description": "",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "ThreeDToggleButtons.tsx",
+  "path": "src/components/InterfaceControls/ThreeDToggleButtons"
+}

@@ -24,6 +24,8 @@ import { Factory } from "./dashboards/Factory/Factory";
 import factorySettings from "./dashboards/Factory/rab.settings.json";
 import { WorldAudit } from "./dashboards/WorldAudit/WorldAudit";
 import worldAuditSettings from "./dashboards/WorldAudit/rab.settings.json";
+import { FilesAndFolders } from "./dashboards/FilesAndFolders/FilesAndFolders";
+import filesAndFoldersSettings from "./dashboards/FilesAndFolders/rab.settings.json";
 import { RabbitHead } from "./components/RabbitHead/RabbitHead";
 import { RabbitProvider, useRabbitContext } from "./components/RabbitHead/hooks/useRabbit/RabbitProvider";
 import type { HybridSearchProps } from "./components/HybridSearch/HybridSearch.types";
@@ -35,6 +37,7 @@ const SiteShell = () => {
     document.documentElement.dataset.theme = theme;
   }, [theme]);
   const VIEWS: VIEWProps[] = [
+    { id: filesAndFoldersSettings.id, name: "files-and-folders", title: "Files and Folders", path: "files-and-folders", View: FilesAndFolders },
     { id: factorySettings.id, name: "factory", title: "Factory", path: "factory", View: Factory, props: { path: "src/components" } },
     { id: worldAuditSettings.id, name: "world-audit", title: "World Audit", path: "world-audit", View: WorldAudit },
     { id: dumBotSettings.id, name: "dumbot", title: "DumBot", path: "dumbot", View: DumBotPage },

@@ -1,0 +1,12 @@
+id: 1794631626660
+schema: 1
+intent: use
+name: use-runner-refresh-discovery
+title: How to use runner-refresh-discovery
+type: skill
+owner:
+  id: 1794631061153
+implementation:
+  - id: 1794631061153
+instructions: >-
+  Supply root or House paths with absolute path values. The runner calls refresh-discovery-index for each root through the shared runTools owner. Returns a flat RunnerReturn with child timing and errors.

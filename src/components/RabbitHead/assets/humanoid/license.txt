@@ -1,0 +1,5 @@
+Low Poly Head by Andrew_F.
+Source: https://sketchfab.com/3d-models/low-poly-head-e6f0618b4a854202a3bdcd5cf5abdf82
+Author: https://sketchfab.com/Andrew_F.
+License: CC BY 4.0 https://creativecommons.org/licenses/by/4.0/
+Adaptation: transformed, centered, scaled and mirrored Z for RabbitStage. Original materials replaced with stage surface settings.

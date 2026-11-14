@@ -1,4 +1,13 @@
 @layer components {
+  .searchable-select-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgb(0 0 0 / 45%);
+    z-index: 200;
+  }
+  .searchable-select[data-open] {
+    z-index: 210;
+  }
   .searchable-select {
     position: relative;
     min-inline-size: 0;

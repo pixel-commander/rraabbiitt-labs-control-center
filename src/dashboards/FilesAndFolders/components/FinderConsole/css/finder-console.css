@@ -1,0 +1,11 @@
+.finder-console {display:grid;gap:var(--space-md);min-inline-size:0;}
+.finder-console h2,.finder-console p {margin:0;}
+.finder-console form {display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:var(--space-sm);align-items:end;}
+.finder-console label {display:grid;gap:var(--space-xs);font-size:.8rem;}
+.finder-console .finder-console__checkbox {display:flex;gap:var(--space-sm);align-items:center;align-self:center;}
+.finder-console button {padding:var(--space-sm) var(--space-md);}
+.finder-console__favorites,.finder-console__actions {display:flex;flex-wrap:wrap;gap:var(--space-sm);align-items:center;}
+.finder-console__favorites span {color:var(--color-muted);}
+.finder-console__actions {align-items:end;}
+.finder-console pre {max-height:24rem;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;background:var(--color-main-alt);padding:var(--space-md);}
+.finder-console summary {cursor:pointer;padding:var(--space-sm);}

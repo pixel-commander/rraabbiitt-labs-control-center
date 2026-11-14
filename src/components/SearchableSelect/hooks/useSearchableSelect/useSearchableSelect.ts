@@ -14,6 +14,7 @@ export const useSearchableSelect = (settings: SearchableSelectProps) => {
   settingsRef.current = settings;
   // Query state drives live list filtering; the input itself remains DOM-owned.
   const [query, setQuery] = useState("");
+  const [open, setOpen] = useState(false);
   const close = () => {
     const panel = root.current?.querySelector<HTMLElement>(
       "[data-select-panel]",
@@ -24,6 +25,7 @@ export const useSearchableSelect = (settings: SearchableSelectProps) => {
     if (!panel || !stage || panel.hidden) return;
     if (panel.contains(document.activeElement)) stage.focus();
     panel.hidden = true;
+    setOpen(false);
     stage.setAttribute("aria-expanded", "false");
     const input = panel.querySelector<HTMLInputElement>('input[type="search"]');
     const hadQuery = Boolean(input?.value);
@@ -104,6 +106,7 @@ export const useSearchableSelect = (settings: SearchableSelectProps) => {
       return;
     }
     panel.hidden = false;
+    setOpen(true);
     position();
     stage.setAttribute("aria-expanded", "true");
     panel
@@ -159,6 +162,8 @@ export const useSearchableSelect = (settings: SearchableSelectProps) => {
     root,
     id,
     matches,
+    open,
+    close,
     handleToggle,
     handleClick,
     handleInput,

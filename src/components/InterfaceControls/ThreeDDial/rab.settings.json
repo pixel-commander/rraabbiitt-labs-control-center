@@ -1,0 +1,13 @@
+{
+  "id": 1794625598598,
+  "name": "ThreeDDial",
+  "title": "3dDial",
+  "description": "",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "ThreeDDial.tsx",
+  "path": "src/components/InterfaceControls/ThreeDDial"
+}

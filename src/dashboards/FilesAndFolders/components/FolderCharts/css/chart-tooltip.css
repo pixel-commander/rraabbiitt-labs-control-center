@@ -1,0 +1,11 @@
+.folder-chart-tooltip {
+ --smart-tooltip-background:var(--color-main-alt);
+ --smart-tooltip-color:var(--color-main-neg);
+ --smart-tooltip-border:var(--border-default);
+ --smart-tooltip-title-border:var(--border-default);
+ max-inline-size:min(25rem,calc(100vw - 24px));
+}
+.folder-chart-tooltip dl {display:grid;gap:var(--space-xs);margin:0;font-size:.75rem;}
+.folder-chart-tooltip dl > div {display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--space-xs) var(--space-md);}
+.folder-chart-tooltip dt {color:var(--color-muted);}
+.folder-chart-tooltip dd {margin:0;overflow-wrap:anywhere;max-width:100%;}

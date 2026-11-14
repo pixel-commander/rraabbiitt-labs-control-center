@@ -1,0 +1,10 @@
+schema: 1
+intent: use
+id: 1794630014449
+name: ScannerStatusUi
+owner:
+  id: 1794630014447
+implementation:
+  - id: 1794630014447
+instructions: >-
+  Render ScannerStatusUi with required absolute root. Optional save defaults true; button_label customizes the trigger; handleComplete receives the tracked result. The component owns dialog, progress, timeline, stats and styles. It calls the project FilesAndFolders refresh-discovery-index tool through the shared runner. Closing hides without cancellation. Only complete error-free scans update discovery. See README.md.

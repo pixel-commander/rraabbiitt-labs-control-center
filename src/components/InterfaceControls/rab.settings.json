@@ -1,0 +1,13 @@
+{
+  "id": 1794625583557,
+  "name": "InterfaceControls",
+  "title": "InterfaceControls",
+  "description": "Molded hardware dial and press button controls.",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "InterfaceControls.tsx",
+  "path": "src/components/InterfaceControls"
+}

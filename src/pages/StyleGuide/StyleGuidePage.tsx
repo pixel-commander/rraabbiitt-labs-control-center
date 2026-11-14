@@ -21,6 +21,7 @@ import { Demo as HelpIconDemo } from "../../components/HelpIcon/demo/Demo";
 import { Demo as LoginBoxDemo } from "../../components/LoginBox/demo/Demo";
 import { Demo as McpViewerDemo } from "../../components/McpViewer/demo/Demo";
 import { Demo as MessageBoxDemo } from "../../components/MessageBox/demo/Demo";
+import { Demo as InterfaceControlsDemo } from "../../components/InterfaceControls/demo/Demo";
 import { Demo as ModalDemo } from "../../components/Modal/demo/Demo";
 import { Demo as NetworkGraphDemo } from "../../components/NetworkGraph/demo/Demo";
 import { Demo as PassPropsDemo } from "../../components/PassProps/demo/Demo";
@@ -29,6 +30,7 @@ import { Demo as ProgressBarDemo } from "../../components/ProgressBar/demo/Demo"
 import { Demo as RabbitHeadDemo } from "../../components/RabbitHead/demo/Demo";
 import { Demo as SearchableSelectDemo } from "../../components/SearchableSelect/demo/Demo";
 import { Demo as SearchBarDemo } from "../../components/SearchBar/demo/Demo";
+import { Demo as ScannerStatusDemo } from "../../components/ScannerStatusUi/demo/Demo";
 import { Demo as SearchResponsesDemo } from "../../components/SearchResponses/demo/Demo";
 import { Demo as SiteNavDemo } from "../../components/SiteNav/demo/Demo";
 import { Demo as SliderDemo } from "../../components/Slider/demo/Demo";
@@ -262,6 +264,10 @@ export const StyleGuidePage = () => {
         <h2>Modal</h2>
         <ModalDemo />
       </section>
+      <section id="interface-controls" data-cols="1" data-gap="content">
+        <h2>Interface controls</h2>
+        <InterfaceControlsDemo />
+      </section>
       <section id="network-graph" data-cols="1" data-gap="content">
         <h2>NetworkGraph</h2>
         <NetworkGraphDemo />
@@ -358,6 +364,7 @@ export const StyleGuidePage = () => {
         <h2>WorldComponents</h2>
         <WorldComponentsDemo />
       </section>
+      <section id="scanner-status" data-cols="1" data-gap="content"><h2>Scanner status</h2><ScannerStatusDemo /></section>
     </div>
   );
 };

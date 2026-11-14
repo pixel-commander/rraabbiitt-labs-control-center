@@ -1,0 +1,24 @@
+.scanner-status-demo__timeline { list-style: none; margin: 0; padding: 4px 0 4px 9px; }
+.scanner-status-demo__timeline li { position: relative; padding: 0 0 22px 18px; border-left: 2px solid var(--border-default); }
+.scanner-status-demo__timeline li:last-child { border-left-color: transparent; padding-bottom: 0; }
+.scanner-status-demo__timeline strong, .scanner-status-demo__timeline small { display: block; overflow-wrap: anywhere; }
+.scanner-status-demo__timeline strong { font-size: .85rem; font-weight: 400; }
+.scanner-status-demo__dot { position: absolute; left: -7px; top: 4px; width: 12px; height: 12px; border-radius: 50%; background: var(--color-muted); }
+.scanner-status-ui [data-state='complete'] > .scanner-status-demo__dot { background: var(--status-success); }
+.scanner-status-ui [data-state='error'] > .scanner-status-demo__dot { background: var(--status-error); }
+.scanner-status-ui [data-state='scanning'] > .scanner-status-demo__dot { outline: 2px solid currentColor; outline-offset: 3px; }
+.scanner-status-demo__heading { margin: 0 0 8px; font-size: .875rem; }
+.scanner-status-demo__events { list-style: none; padding: 0; margin: 0; font: var(--type-code); }
+.scanner-status-demo__events li { padding: 5px 0; border-bottom: 1px solid color-mix(in srgb, var(--border-default) 40%, transparent); }
+.scanner-status-demo__events p { margin: 3px 0 0; }
+
+.scanner-status-demo__timeline strong { display: flex; align-items: center; gap: var(--space-xs); }
+.scanner-status-demo__folder-icon { display: inline-flex; width: 16px; height: 16px; flex: 0 0 16px; color: var(--color-muted); }
+.scanner-status-demo__folder-icon svg { width: 100%; height: 100%; }
+
+/* The rolling feed uses natural row heights. */
+.scanner-status-virtual-activity > li { box-sizing: border-box; }
+.scanner-status-virtual-activity small { display: block; overflow-wrap: anywhere; }
+.scanner-status-virtual-activity p { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: 20px; }
+
+.scanner-status-demo__events .scanner-status-ui__meta { font-family: var(--font-mono); }

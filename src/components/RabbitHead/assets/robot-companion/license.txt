@@ -1,0 +1,5 @@
+Cute Robot Companion (GLB) by 3D Next Level Gen
+Source: https://sketchfab.com/3d-models/cute-robot-companion-glb-0f64197efce74fba8145b941efea323a
+Author: https://sketchfab.com/3dnextlevelgen
+Original metadata license: SKETCHFAB Standard https://sketchfab.com/licenses
+Adaptation: transforms applied, centered and scaled, mirrored Z, vertex-clustered. Materials replaced by stage surface settings.

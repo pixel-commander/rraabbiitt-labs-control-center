@@ -1,0 +1,85 @@
+{
+  "id": 1794629756361,
+  "name": "finder-presets",
+  "title": "finder-presets",
+  "description": "Save, update and list favorite Files and Folders finder settings in the project database.",
+  "type": "tool",
+  "path": "X:/rraabbiitt-labs-control-center/src/dashboards/FilesAndFolders/toolkits/tools/finder-presets",
+  "file": "finder-presets.ts",
+  "settings": [
+    {
+      "name": "action",
+      "type": "string",
+      "default": "list",
+      "options": [
+        "list",
+        "save"
+      ]
+    },
+    {
+      "name": "id",
+      "type": "number",
+      "description": "Existing preset ID for retrieval or update."
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "description": "Preset name; required for save."
+    },
+    {
+      "name": "title",
+      "type": "string"
+    },
+    {
+      "name": "description",
+      "type": "string"
+    },
+    {
+      "name": "tool",
+      "type": "string",
+      "description": "Finder/counter tool name; required for save."
+    },
+    {
+      "name": "settings",
+      "type": "object",
+      "description": "Finder settings including root; required for save."
+    },
+    {
+      "name": "root",
+      "type": "string",
+      "description": "Optional list filter."
+    },
+    {
+      "name": "favorite",
+      "type": "boolean"
+    }
+  ],
+  "paths": [
+    {
+      "path": ".",
+      "file": "finder-presets.ts",
+      "type": "ts"
+    },
+    {
+      "path": ".",
+      "file": "rab.settings.json",
+      "type": "json"
+    },
+    {
+      "path": ".",
+      "file": "README.md",
+      "type": "md"
+    },
+    {
+      "path": ".",
+      "file": "use.skill.yaml",
+      "type": "yaml"
+    }
+  ],
+  "tags": [
+    "files-and-folders",
+    "finder",
+    "preset",
+    "database"
+  ]
+}

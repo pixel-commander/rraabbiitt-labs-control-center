@@ -1,0 +1,13 @@
+{
+  "id": 1794627798754,
+  "name": "FilesAndFolders",
+  "title": "Files and Folders",
+  "description": "File and folder inventories and reusable auditing tools.",
+  "type": "dashboard",
+  "tags": [
+    "react",
+    "dashboard"
+  ],
+  "file": "FilesAndFolders.tsx",
+  "path": "src/dashboards/FilesAndFolders"
+}

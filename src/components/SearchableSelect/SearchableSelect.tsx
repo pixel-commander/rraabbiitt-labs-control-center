@@ -1,3 +1,4 @@
+import { createPortal } from "react-dom";
 import type { SearchableSelectProps } from "./SearchableSelect.types";
 import "./css/searchable-select.css";
 import { useSearchableSelect } from "./hooks/useSearchableSelect/useSearchableSelect";
@@ -29,6 +30,8 @@ export const SearchableSelect = (props: SearchableSelectProps) => {
     root,
     id,
     matches,
+    open,
+    close,
     handleToggle,
     handleClick,
     handleInput,
@@ -39,11 +42,23 @@ export const SearchableSelect = (props: SearchableSelectProps) => {
       ref={root}
       data-grid="shell"
       data-appearance={appearance}
+      data-open={open || undefined}
       className={["searchable-select", container_class, className]
         .filter(Boolean)
         .join(" ")}
       onKeyDown={handleKeyDown}
     >
+      {open && createPortal(
+        <div
+          className="searchable-select-overlay"
+          aria-hidden="true"
+          onPointerDown={(event) => {
+            event.preventDefault();
+            close();
+          }}
+        />,
+        document.body,
+      )}
       <header data-area="header">
         <button
           data-select-stage

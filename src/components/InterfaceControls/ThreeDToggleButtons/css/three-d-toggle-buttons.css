@@ -1,0 +1,37 @@
+.three-d-toggle-buttons{display:flex;flex-direction:column;align-items:center;gap:1em;}
+.three-d-toggle-buttons .selector{
+  display:flex; gap:0.25em; padding:0.6875em; border-radius:1.375em;
+  background:linear-gradient(180deg,var(--color-main-alt),var(--color-main));
+  box-shadow:
+    0 0.875em 1.375em -0.625em color-mix(in srgb, var(--color-main) 55.00000000000001%, transparent),
+    inset 0 0.125em 0.125em color-mix(in srgb, var(--color-main-neg) 16%, transparent),
+    inset 0 -0.1875em 0.3125em color-mix(in srgb, var(--color-main) 80%, transparent);
+}.three-d-toggle-buttons .pad{
+  width:7.5em; height:7.5em; border-radius:0.875em; border:0; cursor:pointer;
+  position:relative; display:grid; place-items:center;
+  background:linear-gradient(180deg,var(--color-secondary) 0%,var(--color-secondary-alt) 55%,var(--color-tertiary) 100%);
+  box-shadow:
+    inset 0 0.125em 0.1875em color-mix(in srgb, var(--color-main-neg) 40%, transparent),
+    inset 0 -0.375em 0.625em color-mix(in srgb, var(--color-main) 45%, transparent),
+    0 0.125em 0.1875em color-mix(in srgb, var(--color-main) 50%, transparent);
+  transition:box-shadow 90ms var(--ease);
+}.three-d-toggle-buttons .pad::before{
+  content:""; position:absolute; inset:0.5em; border-radius:50%;
+  background:radial-gradient(circle at 50% 120%, color-mix(in srgb, var(--color-main-neg) 50%, transparent), color-mix(in srgb, var(--color-main-neg) 0%, transparent) 62%);
+}.three-d-toggle-buttons .pad:active{ box-shadow:inset 0 0.3125em 0.625em color-mix(in srgb, var(--color-main) 65%, transparent), inset 0 -0.125em 0.25em color-mix(in srgb, var(--color-main-neg) 16%, transparent); }:is(.three-d-toggle-buttons, .three-d-press-button) .pad__lamp{
+  width:2.125em; height:2.125em; border-radius:50%; position:relative; z-index:1;
+  background:radial-gradient(circle at 50% 38%,var(--color-secondary-alt),var(--color-main-alt));
+  box-shadow:inset 0 0.1875em 0.3125em color-mix(in srgb, var(--color-main) 85%, transparent), 0 0.0625em 0 color-mix(in srgb, var(--color-main-neg) 22%, transparent);
+  transition:background 120ms var(--ease), box-shadow 160ms var(--ease);
+}:is(.three-d-toggle-buttons .pad, .three-d-press-button .pb)[aria-pressed="true"] .pad__lamp{
+  background:radial-gradient(circle at 50% 36%, var(--led-core) 0%, var(--led) 46%, color-mix(in srgb,var(--color-main) 30%,var(--led)) 100%);
+  box-shadow:
+    inset 0 0 0.25em color-mix(in srgb, var(--color-main-neg) 90%, transparent),
+    0 0 0.75em var(--led-glow),
+    0 0 1.875em var(--led-glow),
+    0 0 3.75em color-mix(in srgb,transparent 50%,var(--led-glow));
+}.three-d-toggle-buttons .pad:focus-visible{ outline:0.125em solid var(--led); outline-offset:0.25em; }.three-d-toggle-buttons .selector-labels{ display:flex; gap:0.25em; padding:0 0.6875em; }.three-d-toggle-buttons .selector-labels span{ width:7.5em; text-align:center; font-size:0.9375em; }
+
+
+.three-d-toggle-buttons .pad{font-size:inherit;padding:0;}
+.three-d-toggle-buttons .pad:disabled{cursor:default;opacity:.5;}

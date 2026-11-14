@@ -1,0 +1,942 @@
+{
+  "name": "audit-tool-inventory",
+  "title": "Audit tool inventory",
+  "date": "2026-11-13",
+  "description": "Read-only source inventory. Reuse assessments are not execution results.",
+  "summary": {
+    "count": 48,
+    "sources": 3
+  },
+  "sources": [
+    {
+      "name": "Audit Factory",
+      "path": "F:/f-backup/automation-factory/audit-factory",
+      "file_count": 87,
+      "empty_folders": [
+        "world-paths"
+      ]
+    },
+    {
+      "name": "World Toolkit",
+      "path": "L:/worlds-demo/toolkits/rab-world",
+      "file_count": 1133,
+      "empty_folders": []
+    },
+    {
+      "name": "Box Security",
+      "path": "B:/f-backup/RAB.Box/tools/security",
+      "file_count": 10,
+      "empty_folders": []
+    }
+  ],
+  "entries": [
+    {
+      "name": "components-check",
+      "title": "components-check",
+      "description": "reads every component settings.js and reports what the catalog should hold; prints to stdout (no output folder yet -- refit pending)",
+      "type": "audit",
+      "source": "Audit Factory",
+      "path": "F:/f-backup/automation-factory/audit-factory/components",
+      "file": "check.mjs",
+      "registration": "settings.js",
+      "decision": "Adapt",
+      "note": "Uses legacy settings.js, hidden flags and a fixed component root; switch to rab.settings.json and explicit path.",
+      "imports": [
+        "node:fs",
+        "node:path",
+        "node:url"
+      ],
+      "verified": "Source reviewed; not executed or installed"
+    },
+    {
+      "name": "check-for-comments",
+      "title": "check-for-comments",
+      "description": "finds comments left in source files; reads only, writes report to the given output folder",
+      "type": "audit",
+      "source": "Audit Factory",
+      "path": "F:/f-backup/automation-factory/audit-factory/file-system-audit/comments",
+      "file": "check.mjs",
+      "registration": "settings.js",
+      "decision": "Adapt",
+      "note": "Useful comment inventory; regex findings need review, not automatic deletion.",
+      "imports": [
+        "node:fs",
+        "node:path",
+        "node:url",
+        "./walk.mjs",
+        "./report.mjs"
+      ],
+      "verified": "Source reviewed; not executed or installed"
+    },
+    {
+      "name": "count-imports",
+      "title": "count-imports",
+      "description": "scans every file for imports and builds a reverse index for cross-ref; writes .json + .txt",
+      "type": "audit",
+      "source": "Audit Factory",
+      "path": "F:/f-backup/automation-factory/audit-factory/file-system-audit/exports",
+      "file": "check.mjs",
+      "registration": "settings.js",
+      "decision": "Consolidate",
+      "note": "Metadata and implementation both scan imports, despite the exports folder name. Consolidate with imports; do not register as an export checker.",
+      "imports": [
+        "node:path",
+        "node:url",
+        "./walk.mjs",
+        "./report.mjs",
+        "x",
+        "x",
+        "x"
+      ],
+      "verified": "Source reviewed; not executed or installed"
+    },
+    {
+      "name": "count-file-types",
+      "title": "count-file-types",
+      "description": "counts files by extension; writes .json + .txt",
+      "type": "audit",
+      "source": "Audit Factory",
+      "path": "F:/f-backup/automation-factory/audit-factory/file-system-audit/filetypes",
+      "file": "check.mjs",
+      "registration": "settings.js",
+      "decision": "Reuse with wrapper",
+      "note": "File counts and byte totals by extension. Add current House settings, return shape and recorder.",
+      "imports": [
+        "node:path",
+        "node:fs",
+        "node:url",
+        "./walk.mjs",
+        "./report.mjs"
+      ],
+      "verified": "Source reviewed; not executed or installed"
+    },
+    {
+      "name": "count-imports",
+      "title": "count-imports",
+      "description": "scans every file for imports and builds a reverse index for cross-ref; writes .json + .txt",
+      "type": "audit",
+      "source": "Audit Factory",
+      "path": "F:/f-backup/automation-factory/audit-factory/file-system-audit/imports",
+      "file": "check.mjs",
+      "registration": "settings.js",
+      "decision": "Adapt",
+      "note": "Useful import and reverse-reference inventory; regex analysis needs TypeScript parsing for reliable source relationships.",
+      "imports": [
+        "node:path",
+        "node:url",
+        "./walk.mjs",
+        "./report.mjs",
+        "x",
+        "x",
+        "x",
+        "x"
+      ],
+      "verified": "Source reviewed; not executed or installed"
+    },
+    {
+      "name": "guard-check",
+      "title": "guard-check",
+      "description": "checks house guard rules: unguarded member dots and non-optional interface keys; writes .json + .txt",
+      "type": "audit",
+      "source": "Audit Factory",
+      "path": "F:/f-backup/automation-factory/audit-factory/guard",
+      "file": "check.mjs",
+      "registration": "settings.js",
+      "decision": "Prefer newer checker",
+      "note": "Use World Toolkit check-data-guards instead of the old blanket guard rules.",
+      "imports": [
+        "node:path",
+        "node:url",
+        "./walk.mjs",
+        "./report.mjs",
+        ", "
+      ],
+      "verified": "Source reviewed; not executed or installed"
+    },
+    {
+      "name": "neuron-ids",
+      "title": "neuron-ids",
+      "description": "finds ID fields in SKILL.txt and RULES.txt and reports their values and validity",
+      "type": "audit",
+      "source": "Audit Factory",
+      "path": "F:/f-backup/automation-factory/audit-factory/neuron-ids",
+      "file": "check.mjs",
+      "registration": "settings.js",
+      "decision": "Legacy only",
+      "note": "Reads ID fields in SKILL.txt and RULES.txt; current JSON/YAML registrations need different parsing.",
+      "imports": [
+        "node:path",
+        "node:url",
+        "./walk.mjs",
+        "./report.mjs"
+      ],
+      "verified": "Source reviewed; not executed or installed"
+    },
+    {
+      "name": "root-path-names",
+      "title": "root-path-names",
+      "description": "every ROOT_PATH.txt name answers, and answers one path -- forked, malformed and mute names",
+      "type": "audit",
+      "source": "Audit Factory",
+      "path": "F:/f-backup/automation-factory/audit-factory/root-path-names",
+      "file": "check.mjs",
+      "registration": "settings.js",
+      "decision": "Legacy only",
+      "note": "Checks ROOT_PATH.txt naming; current worlds use JSON paths.",
+      "imports": [
+        "node:path",
+        "node:url",
+        "./walk.mjs",
+        "./report.mjs"
+      ],
+      "verified": "Source reviewed; not executed or installed"
+    },
+    {
+      "name": "count-rraabb-txt",
+      "title": "count-rraabb-txt",
+      "description": "counts RRAABB.txt files; writes .json + .txt",
+      "type": "audit",
+      "source": "Audit Factory",
+      "path": "F:/f-backup/automation-factory/audit-factory/rraabb",
+      "file": "check.mjs",
+      "registration": "settings.js",
+      "decision": "Legacy only",
+      "note": "Counts RRAABB.txt markers; keep only for old-world migration.",
+      "imports": [
+        "node:path",
+        "node:fs",
+        "node:url",
+        "./walk.mjs",
+        "./report.mjs"
+      ],
+      "verified": "Source reviewed; not executed or installed"
+    },
+    {
+      "name": "count-state-hooks",
+      "title": "count-state-hooks",
+      "description": "counts useState calls per file; writes .json + .txt",
+      "type": "audit",
+      "source": "Audit Factory",
+      "path": "F:/f-backup/automation-factory/audit-factory/state_hooks",
+      "file": "check.mjs",
+      "registration": "settings.js",
+      "decision": "Adapt",
+      "note": "Hook counts are useful metrics; newer check-state-hooks checks a different state-ownership rule.",
+      "imports": [
+        "node:path",
+        "node:url",
+        "./countHook.mjs",
+        "./report.mjs"
+      ],
+      "verified": "Source reviewed; not executed or installed"
+    },
+    {
+      "name": "get-names",
+      "title": "get-names",
+      "description": "reports the name of every svg; writes .json + .txt",
+      "type": "audit",
+      "source": "Audit Factory",
+      "path": "F:/f-backup/automation-factory/audit-factory/svg_names",
+      "file": "check.mjs",
+      "registration": "settings.js",
+      "decision": "Reuse with wrapper",
+      "note": "Useful SVG filename inventory; add current tool contract and recorder.",
+      "imports": [
+        "node:path",
+        "node:url",
+        "./walk.mjs",
+        "./report.mjs"
+      ],
+      "verified": "Source reviewed; not executed or installed"
+    },
+    {
+      "name": "get-stroke-styles",
+      "title": "get-stroke-styles",
+      "description": "reports the stroke styles used across svgs; writes .json + .txt",
+      "type": "audit",
+      "source": "Audit Factory",
+      "path": "F:/f-backup/automation-factory/audit-factory/svg_strokes",
+      "file": "check.mjs",
+      "registration": "settings.js",
+      "decision": "Reuse with wrapper",
+      "note": "Useful SVG stroke inventory; add current tool contract and recorder.",
+      "imports": [
+        "node:path",
+        "node:url",
+        "./walk.mjs",
+        "./report.mjs"
+      ],
+      "verified": "Source reviewed; not executed or installed"
+    },
+    {
+      "name": "get-viewboxes",
+      "title": "get-viewboxes",
+      "description": "reports the viewBox of every svg; writes .json + .txt",
+      "type": "audit",
+      "source": "Audit Factory",
+      "path": "F:/f-backup/automation-factory/audit-factory/svg_viewboxes",
+      "file": "check.mjs",
+      "registration": "settings.js",
+      "decision": "Reuse with wrapper",
+      "note": "Useful SVG viewBox inventory; add current tool contract and recorder.",
+      "imports": [
+        "node:path",
+        "node:url",
+        "./walk.mjs",
+        "./report.mjs"
+      ],
+      "verified": "Source reviewed; not executed or installed"
+    },
+    {
+      "name": "count-use-effects",
+      "title": "count-use-effects",
+      "description": "counts useEffect calls per file; writes .json + .txt",
+      "type": "audit",
+      "source": "Audit Factory",
+      "path": "F:/f-backup/automation-factory/audit-factory/use_effects",
+      "file": "check.mjs",
+      "registration": "settings.js",
+      "decision": "Adapt",
+      "note": "Useful hook metrics; retain as counts, not a blanket code-quality failure.",
+      "imports": [
+        "node:path",
+        "node:url",
+        "./countHook.mjs",
+        "./report.mjs"
+      ],
+      "verified": "Source reviewed; not executed or installed"
+    },
+    {
+      "name": "world-paths-checker",
+      "title": "world-paths-checker",
+      "description": "checks every path a world declares actually exists on disk",
+      "type": "audit",
+      "source": "Audit Factory",
+      "path": "F:/f-backup/automation-factory/audit-factory/world-paths-checker",
+      "file": "check.mjs",
+      "registration": "settings.js",
+      "decision": "Rewrite for current world",
+      "note": "Actual implementation classifies PATHS.txt formats in immediate child worlds. It does not verify every declared path despite its description.",
+      "imports": [
+        "node:path",
+        "node:url",
+        "./walk.mjs",
+        "node:fs",
+        "./report.mjs"
+      ],
+      "verified": "Source reviewed; not executed or installed"
+    },
+    {
+      "name": "icons-index",
+      "title": "icons-index",
+      "description": "indexes svgs not yet indexed; a WRITER, not a pure look-and-report audit",
+      "type": "writer",
+      "source": "Audit Factory",
+      "path": "F:/f-backup/automation-factory/audit-factory/writers/icons",
+      "file": "check.mjs",
+      "registration": "settings.js",
+      "decision": "Writer; exclude from audit",
+      "note": "Generates icon files and deletes source SVGs by default. Keep separate from read-only auditing.",
+      "imports": [
+        "node:fs",
+        "node:path",
+        "node:url",
+        "react"
+      ],
+      "verified": "Source reviewed; not executed or installed"
+    },
+    {
+      "id": 1790000001402,
+      "name": "check-component-files",
+      "title": "Check component files",
+      "description": "Check structural CSS and hook file placement for recognizable components.",
+      "type": "tool",
+      "source": "World Toolkit",
+      "path": "L:/worlds-demo/toolkits/rab-world/checkers/check-component-files",
+      "file": "check-component-files.ts",
+      "registration": "rab.settings.json",
+      "decision": "Reuse with adapter",
+      "note": "Standalone checker with shared helpers. Adapt shared type imports and recorder. Execution completion differs from report verdict.",
+      "imports": [
+        "node:path",
+        "node:fs/promises",
+        "../_shared/checker.ts",
+        "../_shared/checker.ts"
+      ],
+      "verified": "Source reviewed; not executed or installed"
+    },
+    {
+      "id": 1790000001406,
+      "name": "check-css-states",
+      "title": "Check CSS states",
+      "description": "Find repeated CSS state selectors and declarations within the same scope.",
+      "type": "tool",
+      "source": "World Toolkit",
+      "path": "L:/worlds-demo/toolkits/rab-world/checkers/check-css-states",
+      "file": "check-css-states.ts",
+      "registration": "rab.settings.json",
+      "decision": "Reuse with adapter",
+      "note": "Standalone checker with shared helpers. Adapt shared type imports and recorder. Execution completion differs from report verdict.",
+      "imports": [
+        "../_shared/checker.ts",
+        "../_shared/read-css.ts"
+      ],
+      "verified": "Source reviewed; not executed or installed"
+    },
+    {
+      "id": 1790000001407,
+      "name": "check-css-tokens",
+      "title": "Check CSS tokens",
+      "description": "Find visual CSS literals that may have an existing shared token.",
+      "type": "tool",
+      "source": "World Toolkit",
+      "path": "L:/worlds-demo/toolkits/rab-world/checkers/check-css-tokens",
+      "file": "check-css-tokens.ts",
+      "registration": "rab.settings.json",
+      "decision": "Reuse with adapter",
+      "note": "Standalone checker with shared helpers. Adapt shared type imports and recorder. Execution completion differs from report verdict.",
+      "imports": [
+        "../_shared/checker.ts",
+        "../_shared/read-css.ts"
+      ],
+      "verified": "Source reviewed; not executed or installed"
+    },
+    {
+      "id": 1790000001404,
+      "name": "check-data-guards",
+      "title": "Check data guards",
+      "description": "Find unsafe access to values that may be null or undefined using TypeScript.",
+      "type": "tool",
+      "source": "World Toolkit",
+      "path": "L:/worlds-demo/toolkits/rab-world/checkers/check-data-guards",
+      "file": "check-data-guards.ts",
+      "registration": "rab.settings.json",
+      "decision": "Reuse with adapter",
+      "note": "Standalone checker with shared helpers. Adapt shared type imports and recorder. Execution completion differs from report verdict.",
+      "imports": [
+        "node:path",
+        "../_shared/checker.ts",
+        "../_shared/checker.ts"
+      ],
+      "verified": "Source reviewed; not executed or installed"
+    },
+    {
+      "id": 1790000001512,
+      "name": "check-dependencies",
+      "title": "Check dependencies",
+      "description": "Check an explicit JSON dependency graph for missing nodes, duplicate edges, self edges and cycles.",
+      "type": "tool",
+      "source": "World Toolkit",
+      "path": "L:/worlds-demo/toolkits/rab-world/checkers/check-dependencies",
+      "file": "check-dependencies.ts",
+      "registration": "rab.settings.json",
+      "decision": "Reuse with adapter",
+      "note": "Standalone checker with shared helpers. Adapt shared type imports and recorder. Execution completion differs from report verdict.",
+      "imports": [
+        "../_shared/checker.ts"
+      ],
+      "verified": "Source reviewed; not executed or installed"
+    },
+    {
+      "id": 1790000001511,
+      "name": "check-form-fields",
+      "title": "Check form fields",
+      "description": "Compare native form names with FormData get/getAll keys and an optional field schema.",
+      "type": "tool",
+      "source": "World Toolkit",
+      "path": "L:/worlds-demo/toolkits/rab-world/checkers/check-form-fields",
+      "file": "check-form-fields.ts",
+      "registration": "rab.settings.json",
+      "decision": "Reuse with adapter",
+      "note": "Standalone checker with shared helpers. Adapt shared type imports and recorder. Execution completion differs from report verdict.",
+      "imports": [
+        "node:path",
+        "../_shared/checker.ts",
+        "../_shared/checker.ts"
+      ],
+      "verified": "Source reviewed; not executed or installed"
+    },
+    {
+      "id": 1790000001408,
+      "name": "check-grid",
+      "title": "Check grid counts",
+      "description": "Check numeric data-cols and data-rows track counts in JSX.",
+      "type": "tool",
+      "source": "World Toolkit",
+      "path": "L:/worlds-demo/toolkits/rab-world/checkers/check-grid",
+      "file": "check-grid.ts",
+      "registration": "rab.settings.json",
+      "decision": "Reuse with adapter",
+      "note": "Standalone checker with shared helpers. Adapt shared type imports and recorder. Execution completion differs from report verdict. Checks numeric track counts only, not full layout correctness.",
+      "imports": [
+        "../_shared/checker.ts",
+        "../_shared/checker.ts"
+      ],
+      "verified": "Source reviewed; not executed or installed"
+    },
+    {
+      "id": 1790000001403,
+      "name": "check-prop-names",
+      "title": "Check prop names",
+      "description": "Find aliases that change incoming prop names.",
+      "type": "tool",
+      "source": "World Toolkit",
+      "path": "L:/worlds-demo/toolkits/rab-world/checkers/check-prop-names",
+      "file": "check-prop-names.ts",
+      "registration": "rab.settings.json",
+      "decision": "Reuse with adapter",
+      "note": "Standalone checker with shared helpers. Adapt shared type imports and recorder. Execution completion differs from report verdict.",
+      "imports": [
+        "../_shared/checker.ts",
+        "../_shared/checker.ts",
+        "../_shared/source.ts"
+      ],
+      "verified": "Source reviewed; not executed or installed"
+    },
+    {
+      "id": 1790000001401,
+      "name": "check-state-hooks",
+      "title": "Check state hooks",
+      "description": "Find components with more than one state-owning hook.",
+      "type": "tool",
+      "source": "World Toolkit",
+      "path": "L:/worlds-demo/toolkits/rab-world/checkers/check-state-hooks",
+      "file": "check-state-hooks.ts",
+      "registration": "rab.settings.json",
+      "decision": "Reuse with adapter",
+      "note": "Standalone checker with shared helpers. Adapt shared type imports and recorder. Execution completion differs from report verdict.",
+      "imports": [
+        "../_shared/checker.ts",
+        "../_shared/checker.ts"
+      ],
+      "verified": "Source reviewed; not executed or installed"
+    },
+    {
+      "id": 1790000001405,
+      "name": "check-tool-keys",
+      "title": "Check tool keys",
+      "description": "Check supplied House key types and settings definitions in registration JSON.",
+      "type": "tool",
+      "source": "World Toolkit",
+      "path": "L:/worlds-demo/toolkits/rab-world/checkers/check-tool-keys",
+      "file": "check-tool-keys.ts",
+      "registration": "rab.settings.json",
+      "decision": "Reuse with adapter",
+      "note": "Standalone checker with shared helpers. Adapt shared type imports and recorder. Execution completion differs from report verdict.",
+      "imports": [
+        "../_shared/checker.ts"
+      ],
+      "verified": "Source reviewed; not executed or installed"
+    },
+    {
+      "id": 1793389686012,
+      "name": "runner-code-review",
+      "title": "Run code review and save reports",
+      "description": "Run selected standalone code review checkers and save JSON and text reports. Does not repair source files.",
+      "type": "runner",
+      "source": "World Toolkit",
+      "path": "L:/worlds-demo/toolkits/rab-world/runners/runner-code-review",
+      "file": "runner-code-review.ts",
+      "registration": "rab.settings.json",
+      "decision": "Adapt orchestrator",
+      "note": "Useful selection and report workflow, but imports the old tracking runner. Compose imported checkers through our current runner instead.",
+      "imports": [
+        "node:path",
+        "node:fs/promises",
+        "node:url",
+        "../../../Runner.types.ts",
+        "../../../Tooling.types.ts",
+        "../runner-tooling-and-tracking/runner-tooling-and-tracking.ts",
+        "../../checkers/check-data-guards/check-data-guards.ts",
+        "../../checkers/check-component-files/check-component-files.ts",
+        "../../checkers/check-state-hooks/check-state-hooks.ts",
+        "../../checkers/check-grid/check-grid.ts",
+        "../../checkers/check-form-fields/check-form-fields.ts",
+        "../../checkers/check-css-states/check-css-states.ts",
+        "../../checkers/check-css-tokens/check-css-tokens.ts",
+        "../../checkers/check-dependencies/check-dependencies.ts",
+        "../../checkers/check-tool-keys/check-tool-keys.ts",
+        "../../checkers/check-prop-names/check-prop-names.ts"
+      ],
+      "verified": "Source reviewed; not executed or installed"
+    },
+    {
+      "id": 1793210509224,
+      "name": "world records by type",
+      "title": "list all the world records by type",
+      "description": "Use to find, list and audit all world ui-atoms, components, APIs and endpoints, hooks, pages, dashboards, tools, runners, skills, models, projects and registered paths by record type. Find all components; list all pages; show me the tools; where are the APIs; where are the UI atoms; inventory the runners; audit the skills and their locations. Returns every matching indexed world item with path, file (filename) and id, marked response_type: list. Searches function records too when indexed; it does not discover unregistered source-code functions. Optional refresh rebuilds the index before lookup; default false.",
+      "type": "runner",
+      "source": "World Toolkit",
+      "path": "L:/worlds-demo/toolkits/rab-world/runners/runner-find-all-type",
+      "file": "runner-find-all-type.ts",
+      "registration": "rab.settings.json",
+      "decision": "Compare existing",
+      "note": "Infrastructure capability overlaps our toolkit. Compare contracts and behavior before copying; not a new audit by itself.",
+      "imports": [
+        "../../../Runner.types.ts",
+        "../run-tools.ts",
+        "../../tools/refresh-project-index/refresh-project-index.ts",
+        "../../tools/find-all-type/find-all-type.ts"
+      ],
+      "verified": "Source reviewed; not executed or installed"
+    },
+    {
+      "id": 1793143585579,
+      "name": "runner-project-records",
+      "title": "Project records runner",
+      "description": "Read project paths and run scan-path-records once for each registered folder.",
+      "type": "runner",
+      "source": "World Toolkit",
+      "path": "L:/worlds-demo/toolkits/rab-world/runners/runner-project-records",
+      "file": "runner-project-records.ts",
+      "registration": "rab.settings.json",
+      "decision": "Compare existing",
+      "note": "Infrastructure capability overlaps our toolkit. Compare contracts and behavior before copying; not a new audit by itself.",
+      "imports": [
+        "node:fs/promises",
+        "node:path",
+        "../../../Runner.types.ts",
+        "../run-tools.ts",
+        "../../tools/scan-path-records/scan-path-records.ts"
+      ],
+      "verified": "Source reviewed; not executed or installed"
+    },
+    {
+      "id": 1791828343162,
+      "name": "runner-tooling-and-tracking",
+      "title": "Tooling and tracking runner",
+      "description": "Recursively execute tool, LLM and runner plans through one tracking owner; return flat entries with invocation ancestry.",
+      "type": "runner",
+      "source": "World Toolkit",
+      "path": "L:/worlds-demo/toolkits/rab-world/runners/runner-tooling-and-tracking",
+      "file": "runner-tooling-and-tracking.ts",
+      "registration": "rab.settings.json",
+      "decision": "Compare existing",
+      "note": "Infrastructure capability overlaps our toolkit. Compare contracts and behavior before copying; not a new audit by itself.",
+      "imports": [
+        "../../../Runner.types.ts",
+        "../../../Tooling.types.ts"
+      ],
+      "verified": "Source reviewed; not executed or installed"
+    },
+    {
+      "id": 1793213000002,
+      "name": "runner-use-tool",
+      "title": "Search, load, and run a RAB World tool",
+      "description": "Searches registered tools and runners by query, loads a selected tool's current registration and adjacent skill instructions by House ID, or executes a selected registered tool or runner. Uses runner-tooling-and-tracking through runTools for flat ordered execution records.",
+      "type": "runner",
+      "source": "World Toolkit",
+      "path": "L:/worlds-demo/toolkits/rab-world/runners/runner-use-tool",
+      "file": "runner-use-tool.ts",
+      "registration": "rab.settings.json",
+      "decision": "Compare existing",
+      "note": "Infrastructure capability overlaps our toolkit. Compare contracts and behavior before copying; not a new audit by itself.",
+      "imports": [
+        "node:fs/promises",
+        "node:child_process",
+        "node:path",
+        "node:url",
+        "../../../Tooling.types.ts",
+        "../../../Runner.types.ts",
+        "../run-tools.ts",
+        "../../tools/tool-loader/tool-loader.ts",
+        "../../tools/search-records/search-records.ts",
+        "../../../rab-react/runners/run-react-scaffold.ts",
+        "../../../rab-hybrid-seat-ranking/tools/execute.ts"
+      ],
+      "verified": "Source reviewed; not executed or installed"
+    },
+    {
+      "id": 1793210227115,
+      "name": "find-all-type",
+      "title": "Find all records by type",
+      "description": "List all indexed database records matching an exact type: tools, APIs, components, runners, pages, skills and more. Takes only path and type; reads records and skill tables without ranking or a result limit.",
+      "type": "tool",
+      "source": "World Toolkit",
+      "path": "L:/worlds-demo/toolkits/rab-world/tools/find-all-type",
+      "file": "find-all-type.ts",
+      "registration": "rab.settings.json",
+      "decision": "Compare existing",
+      "note": "Infrastructure capability overlaps our toolkit. Compare contracts and behavior before copying; not a new audit by itself.",
+      "imports": [
+        "node:child_process",
+        "node:url",
+        "../../../Tooling.types.ts"
+      ],
+      "verified": "Source reviewed; not executed or installed"
+    },
+    {
+      "id": 1791834915266,
+      "name": "generate-world-database",
+      "title": "Generate world database",
+      "description": "Create catalog.sqlite from the local verified schema template.",
+      "type": "tool",
+      "source": "World Toolkit",
+      "path": "L:/worlds-demo/toolkits/rab-world/tools/generate-world-database",
+      "file": "generate-world-database.ts",
+      "registration": "rab.settings.json",
+      "decision": "Compare existing",
+      "note": "Infrastructure capability overlaps our toolkit. Compare contracts and behavior before copying; not a new audit by itself.",
+      "imports": [
+        "node:fs/promises",
+        "node:fs",
+        "node:path",
+        "node:sqlite",
+        "./generate-world-database.types.ts",
+        "../../../Tooling.types.ts"
+      ],
+      "verified": "Source reviewed; not executed or installed"
+    },
+    {
+      "id": 1793213000003,
+      "name": "world-demo-mcp-server",
+      "title": "World Demo tools MCP server",
+      "description": "Exposes one use_tool MCP endpoint for runner-use-tool: search tools and runners, load registered settings and adjacent usage skills by ID, then execute by ID with settings.",
+      "type": "mcp-server",
+      "source": "World Toolkit",
+      "path": "L:/worlds-demo/toolkits/rab-world/tools/mcp-server",
+      "file": "mcp-server.ts",
+      "registration": "rab.settings.json",
+      "decision": "Compare existing",
+      "note": "Infrastructure capability overlaps our toolkit. Compare contracts and behavior before copying; not a new audit by itself.",
+      "imports": [
+        "@modelcontextprotocol/server",
+        "@modelcontextprotocol/server/stdio",
+        "./use-tool.ts"
+      ],
+      "verified": "Source reviewed; not executed or installed"
+    },
+    {
+      "id": 1791766641356,
+      "name": "new-db-table",
+      "title": "new db table",
+      "description": "Creates one empty SQLite table using house-key columns in an existing database.",
+      "type": "tool",
+      "source": "World Toolkit",
+      "path": "L:/worlds-demo/toolkits/rab-world/tools/new-db-table",
+      "file": "new-db-table.mjs",
+      "registration": "rab.settings.json",
+      "decision": "Compare existing",
+      "note": "Infrastructure capability overlaps our toolkit. Compare contracts and behavior before copying; not a new audit by itself.",
+      "imports": [
+        "node:path",
+        "node:fs/promises",
+        "node:sqlite",
+        "../new-sqlite-db/database-tools.mjs"
+      ],
+      "verified": "Source reviewed; not executed or installed"
+    },
+    {
+      "id": 1791766641354,
+      "name": "new-sqlite-db",
+      "title": "new sqlite db",
+      "description": "Creates an empty SQLite file and folder layout without tables or records.",
+      "type": "tool",
+      "source": "World Toolkit",
+      "path": "L:/worlds-demo/toolkits/rab-world/tools/new-sqlite-db",
+      "file": "new-sqlite-db.mjs",
+      "registration": "rab.settings.json",
+      "decision": "Compare existing",
+      "note": "Infrastructure capability overlaps our toolkit. Compare contracts and behavior before copying; not a new audit by itself.",
+      "imports": [
+        "node:path",
+        "node:fs/promises",
+        "../new-sqlite-db/database-tools.mjs"
+      ],
+      "verified": "Source reviewed; not executed or installed"
+    },
+    {
+      "id": 1793210509222,
+      "name": "refresh-project-index",
+      "title": "Refresh project index",
+      "description": "Index registered project records and skills directly into the configured database.",
+      "type": "tool",
+      "source": "World Toolkit",
+      "path": "L:/worlds-demo/toolkits/rab-world/tools/refresh-project-index",
+      "file": "refresh-project-index.ts",
+      "registration": "rab.settings.json",
+      "decision": "Compare existing",
+      "note": "Infrastructure capability overlaps our toolkit. Compare contracts and behavior before copying; not a new audit by itself.",
+      "imports": [
+        "node:child_process",
+        "node:url",
+        "../../../Tooling.types.ts"
+      ],
+      "verified": "Source reviewed; not executed or installed"
+    },
+    {
+      "id": 1793143585581,
+      "name": "scan-path-records",
+      "title": "Scan path records",
+      "description": "Recursively collect rab.settings.json records from one folder.",
+      "type": "tool",
+      "source": "World Toolkit",
+      "path": "L:/worlds-demo/toolkits/rab-world/tools/scan-path-records",
+      "file": "scan-path-records.ts",
+      "registration": "rab.settings.json",
+      "decision": "Compare existing",
+      "note": "Infrastructure capability overlaps our toolkit. Compare contracts and behavior before copying; not a new audit by itself.",
+      "imports": [
+        "node:fs/promises",
+        "node:path",
+        "../../../Tooling.types.ts",
+        "../../../../src/HouseKeys.types"
+      ],
+      "verified": "Source reviewed; not executed or installed"
+    },
+    {
+      "id": 1793143585582,
+      "name": "search-records",
+      "title": "Search project records",
+      "description": "Finds records in the world demo database whose names, descriptions, paths, or tags match a search. Returns matching records in ranked order using default word and phrase scoring, with no trained weights.",
+      "type": "tool",
+      "source": "World Toolkit",
+      "path": "L:/worlds-demo/toolkits/rab-world/tools/search-records",
+      "file": "search-records.ts",
+      "registration": "rab.settings.json",
+      "decision": "Compare existing",
+      "note": "Infrastructure capability overlaps our toolkit. Compare contracts and behavior before copying; not a new audit by itself.",
+      "imports": [
+        "node:child_process",
+        "node:url",
+        "../../../Tooling.types.ts"
+      ],
+      "verified": "Source reviewed; not executed or installed"
+    },
+    {
+      "id": 1793213000001,
+      "name": "tool-loader",
+      "title": "Load a registered RAB World tool or runner",
+      "description": "Loads a tool or runner's current rab.settings.json from the indexed project record using its House ID. Verifies that the index and on-disk registration agree.",
+      "type": "tool",
+      "source": "World Toolkit",
+      "path": "L:/worlds-demo/toolkits/rab-world/tools/tool-loader",
+      "file": "tool_loader.py",
+      "registration": "rab.settings.json",
+      "decision": "Compare existing",
+      "note": "Infrastructure capability overlaps our toolkit. Compare contracts and behavior before copying; not a new audit by itself.",
+      "imports": [],
+      "verified": "Source reviewed; not executed or installed"
+    },
+    {
+      "id": 1790000000996,
+      "name": "control-plane-language",
+      "title": "Check Control-Plane Language",
+      "description": "Checks direct, mentioned and negated path-change language so descriptive text is not promoted into control-plane write authority.",
+      "type": "security-test",
+      "source": "Box Security",
+      "path": "B:/f-backup/RAB.Box/tools/security/check/control-plane-language",
+      "file": null,
+      "registration": "settings.json",
+      "decision": "Adapt security test",
+      "note": "Depends on the old Box server, bridge, Tool House and fixtures. Port the test intent to this project; not a standalone filesystem scanner. ",
+      "imports": [],
+      "verified": "Source reviewed; not executed or installed"
+    },
+    {
+      "id": 1800000000040,
+      "name": "control-plane-move",
+      "title": "Check Control-Plane Moves",
+      "description": "Actively verifies Tool/Stamp path mutation confirmation, traversal, collision, stable-ID preservation, PATHS update and post-move resolution in an isolated House copy.",
+      "type": "security-test",
+      "source": "Box Security",
+      "path": "B:/f-backup/RAB.Box/tools/security/check/control-plane-move",
+      "file": null,
+      "registration": "settings.json",
+      "decision": "Adapt security test",
+      "note": "Depends on the old Box server, bridge, Tool House and fixtures. Port the test intent to this project; not a standalone filesystem scanner. ",
+      "imports": [],
+      "verified": "Source reviewed; not executed or installed"
+    },
+    {
+      "id": 1800000000041,
+      "name": "dom-write-boundaries",
+      "title": "Check DOM Write Boundaries",
+      "description": "Builds an isolated project symlink fixture and verifies DOM mutation Tools cannot edit a file that resolves outside the loaded project.",
+      "type": "security-test",
+      "source": "Box Security",
+      "path": "B:/f-backup/RAB.Box/tools/security/check/dom-write-boundaries",
+      "file": null,
+      "registration": "settings.json",
+      "decision": "Adapt security test",
+      "note": "Depends on the old Box server, bridge, Tool House and fixtures. Port the test intent to this project; not a standalone filesystem scanner. ",
+      "imports": [],
+      "verified": "Source reviewed; not executed or installed"
+    },
+    {
+      "id": 1790000000993,
+      "name": "http-boundaries",
+      "title": "Check HTTP Boundaries",
+      "description": "Actively probes the local workbench HTTP boundary for token, Origin, Host, hidden-route, path traversal, stale revision, replay, receipt and malformed-body enforcement.",
+      "type": "security-test",
+      "source": "Box Security",
+      "path": "B:/f-backup/RAB.Box/tools/security/check/http-boundaries",
+      "file": null,
+      "registration": "settings.json",
+      "decision": "Adapt security test",
+      "note": "Depends on the old Box server, bridge, Tool House and fixtures. Port the test intent to this project; not a standalone filesystem scanner. ",
+      "imports": [],
+      "verified": "Source reviewed; not executed or installed"
+    },
+    {
+      "id": 1800000000042,
+      "name": "local-network",
+      "title": "Check Local Network Binding",
+      "description": "Starts an isolated ephemeral workbench and verifies the server is bound only to IPv4 loopback rather than a wildcard/LAN interface.",
+      "type": "security-test",
+      "source": "Box Security",
+      "path": "B:/f-backup/RAB.Box/tools/security/check/local-network",
+      "file": null,
+      "registration": "settings.json",
+      "decision": "Adapt security test",
+      "note": "Depends on the old Box server, bridge, Tool House and fixtures. Port the test intent to this project; not a standalone filesystem scanner. Current MCP intentionally binds 0.0.0.0; review that requirement before adopting loopback-only assertions.",
+      "imports": [],
+      "verified": "Source reviewed; not executed or installed"
+    },
+    {
+      "id": 1790000000995,
+      "name": "paths-registry",
+      "title": "Check PATHS Registry Guards",
+      "description": "Builds an isolated malicious PATHS fixture and verifies that absolute/dot-segment escape paths are rejected before Tool resolution.",
+      "type": "security-test",
+      "source": "Box Security",
+      "path": "B:/f-backup/RAB.Box/tools/security/check/paths-registry",
+      "file": null,
+      "registration": "settings.json",
+      "decision": "Adapt security test",
+      "note": "Depends on the old Box server, bridge, Tool House and fixtures. Port the test intent to this project; not a standalone filesystem scanner. ",
+      "imports": [],
+      "verified": "Source reviewed; not executed or installed"
+    },
+    {
+      "id": 1790000000994,
+      "name": "project-override",
+      "title": "Check Project Override Containment",
+      "description": "Builds an isolated project override symlink fixture and verifies that a project PATHS Tool cannot escape the loaded project through a symlink.",
+      "type": "security-test",
+      "source": "Box Security",
+      "path": "B:/f-backup/RAB.Box/tools/security/check/project-override",
+      "file": null,
+      "registration": "settings.json",
+      "decision": "Adapt security test",
+      "note": "Depends on the old Box server, bridge, Tool House and fixtures. Port the test intent to this project; not a standalone filesystem scanner. ",
+      "imports": [],
+      "verified": "Source reviewed; not executed or installed"
+    },
+    {
+      "id": 1790000000997,
+      "name": "workbench",
+      "title": "Check Workbench Security",
+      "description": "Runs the complete bounded local Magic Box security verification suite against isolated fixtures and a loopback-only ephemeral server.",
+      "type": "security-test",
+      "source": "Box Security",
+      "path": "B:/f-backup/RAB.Box/tools/security/check/workbench",
+      "file": null,
+      "registration": "settings.json",
+      "decision": "Suite; adapt",
+      "note": "Depends on the old Box server, bridge, Tool House and fixtures. Port the test intent to this project; not a standalone filesystem scanner. ",
+      "imports": [],
+      "verified": "Source reviewed; not executed or installed"
+    }
+  ]
+}

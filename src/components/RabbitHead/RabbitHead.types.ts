@@ -11,6 +11,10 @@ export type RabbitModel =
   | "skull"
   | "robot"
   | "brain"
+  | "humanoid"
+  | "robot-rabbit"
+  | "robot-companion"
+  | "low-poly-rabbit"
   | `custom:${number}`;
 
 export interface RabbitPulsesSettings {

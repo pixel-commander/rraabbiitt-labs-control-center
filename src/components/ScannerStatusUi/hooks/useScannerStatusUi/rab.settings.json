@@ -1,0 +1,13 @@
+{
+  "id": 1794630014448,
+  "name": "useScannerStatusUi",
+  "title": "useScannerStatusUi",
+  "description": "Own live filesystem scan requests, progress, worker events, status and errors for ScannerStatusUi.",
+  "type": "hook",
+  "tags": [
+    "react",
+    "hook"
+  ],
+  "file": "useScannerStatusUi.ts",
+  "path": "src/components/ScannerStatusUi/hooks/useScannerStatusUi"
+}

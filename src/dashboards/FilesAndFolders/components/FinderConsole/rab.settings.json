@@ -1,0 +1,13 @@
+{
+  "id": 1794631392212,
+  "name": "FinderConsole",
+  "title": "FinderConsole",
+  "description": "Project filesystem quick finds, favorite presets and audit runner controls.",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "FinderConsole.tsx",
+  "path": "src/dashboards/FilesAndFolders/components/FinderConsole"
+}

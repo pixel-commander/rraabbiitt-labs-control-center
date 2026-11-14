@@ -834,6 +834,61 @@
       "file": "HybridSearch.tsx"
     },
     {
+      "id": 1794625598598,
+      "name": "ThreeDDial",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "X:/rraabbiitt-labs-control-center/src/components/InterfaceControls/ThreeDDial",
+      "file": "ThreeDDial.tsx"
+    },
+    {
+      "id": 1794625600910,
+      "name": "ThreeDPressButton",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "X:/rraabbiitt-labs-control-center/src/components/InterfaceControls/ThreeDPressButton",
+      "file": "ThreeDPressButton.tsx"
+    },
+    {
+      "id": 1794625647571,
+      "name": "ThreeDToggleButtons",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "X:/rraabbiitt-labs-control-center/src/components/InterfaceControls/ThreeDToggleButtons",
+      "file": "ThreeDToggleButtons.tsx"
+    },
+    {
+      "id": 1794625583558,
+      "name": "useInterfaceControls",
+      "type": "hook",
+      "tags": [
+        "react",
+        "hook"
+      ],
+      "path": "X:/rraabbiitt-labs-control-center/src/components/InterfaceControls/hooks/useInterfaceControls",
+      "file": "useInterfaceControls.ts"
+    },
+    {
+      "id": 1794625583557,
+      "name": "InterfaceControls",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "X:/rraabbiitt-labs-control-center/src/components/InterfaceControls",
+      "file": "InterfaceControls.tsx"
+    },
+    {
       "id": 1794022535773,
       "name": "LoginBox",
       "type": "component",
@@ -1209,6 +1264,28 @@
       ],
       "path": "X:/rraabbiitt-labs-control-center/src/components/RabbitHead",
       "file": "RabbitHead.tsx"
+    },
+    {
+      "id": 1794630014448,
+      "name": "useScannerStatusUi",
+      "type": "hook",
+      "tags": [
+        "react",
+        "hook"
+      ],
+      "path": "X:/rraabbiitt-labs-control-center/src/components/ScannerStatusUi/hooks/useScannerStatusUi",
+      "file": "useScannerStatusUi.ts"
+    },
+    {
+      "id": 1794630014447,
+      "name": "ScannerStatusUi",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "X:/rraabbiitt-labs-control-center/src/components/ScannerStatusUi",
+      "file": "ScannerStatusUi.tsx"
     },
     {
       "id": 1793976287982,
@@ -1842,6 +1919,221 @@
       "file": "save-factory-composition.ts"
     },
     {
+      "id": 1794631028196,
+      "name": "DiscoveryExplorer",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "X:/rraabbiitt-labs-control-center/src/dashboards/FilesAndFolders/components/DiscoveryExplorer",
+      "file": "DiscoveryExplorer.tsx"
+    },
+    {
+      "id": 1794631392212,
+      "name": "FinderConsole",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "X:/rraabbiitt-labs-control-center/src/dashboards/FilesAndFolders/components/FinderConsole",
+      "file": "FinderConsole.tsx"
+    },
+    {
+      "id": 1794632445265,
+      "name": "FolderBars",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "X:/rraabbiitt-labs-control-center/src/dashboards/FilesAndFolders/components/FolderCharts/FolderBars",
+      "file": "FolderBars.tsx"
+    },
+    {
+      "id": 1794633836532,
+      "name": "FolderCluster3D",
+      "type": "component",
+      "tags": [
+        "react",
+        "component",
+        "canvas",
+        "webgl",
+        "filesystem",
+        "discovery",
+        "3d-force-graph"
+      ],
+      "path": "X:/rraabbiitt-labs-control-center/src/dashboards/FilesAndFolders/components/FolderCharts/FolderCluster3D",
+      "file": "FolderCluster3D.tsx"
+    },
+    {
+      "id": 1794632447497,
+      "name": "NeuralConnectors",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "X:/rraabbiitt-labs-control-center/src/dashboards/FilesAndFolders/components/FolderCharts/NeuralConnectors",
+      "file": "NeuralConnectors.tsx"
+    },
+    {
+      "id": 1794631032369,
+      "name": "FolderCharts",
+      "type": "component",
+      "tags": [
+        "react",
+        "component",
+        "canvas",
+        "webgl",
+        "charts",
+        "filesystem",
+        "city",
+        "bars",
+        "connections",
+        "3d-force-graph",
+        "discovery"
+      ],
+      "path": "X:/rraabbiitt-labs-control-center/src/dashboards/FilesAndFolders/components/FolderCharts",
+      "file": "FolderCharts.tsx"
+    },
+    {
+      "id": 1794631030270,
+      "name": "FolderRow",
+      "type": "component",
+      "tags": [
+        "react",
+        "component"
+      ],
+      "path": "X:/rraabbiitt-labs-control-center/src/dashboards/FilesAndFolders/components/FolderRow",
+      "file": "FolderRow.tsx"
+    },
+    {
+      "id": 1794627798754,
+      "name": "FilesAndFolders",
+      "type": "dashboard",
+      "tags": [
+        "react",
+        "dashboard"
+      ],
+      "path": "X:/rraabbiitt-labs-control-center/src/dashboards/FilesAndFolders",
+      "file": "FilesAndFolders.tsx"
+    },
+    {
+      "id": 1794631064090,
+      "name": "runner-files-and-folders-audits",
+      "type": "runner",
+      "tags": [
+        "files-and-folders",
+        "runner",
+        "audit"
+      ],
+      "path": "X:/rraabbiitt-labs-control-center/src/dashboards/FilesAndFolders/toolkits/runners/runner-files-and-folders-audits",
+      "file": "runner-files-and-folders-audits.ts"
+    },
+    {
+      "id": 1794631061153,
+      "name": "runner-refresh-discovery",
+      "type": "runner",
+      "tags": [
+        "files-and-folders",
+        "runner",
+        "audit"
+      ],
+      "path": "X:/rraabbiitt-labs-control-center/src/dashboards/FilesAndFolders/toolkits/runners/runner-refresh-discovery",
+      "file": "runner-refresh-discovery.ts"
+    },
+    {
+      "id": 1794630246272,
+      "name": "count-file-types",
+      "type": "tool",
+      "tags": [
+        "files-and-folders",
+        "filesystem",
+        "discovery",
+        "audit"
+      ],
+      "path": "X:/rraabbiitt-labs-control-center/src/dashboards/FilesAndFolders/toolkits/tools/count-file-types",
+      "file": "count-file-types.ts"
+    },
+    {
+      "id": 1794630244310,
+      "name": "count-imports",
+      "type": "tool",
+      "tags": [
+        "files-and-folders",
+        "filesystem",
+        "discovery",
+        "audit"
+      ],
+      "path": "X:/rraabbiitt-labs-control-center/src/dashboards/FilesAndFolders/toolkits/tools/count-imports",
+      "file": "count-imports.ts"
+    },
+    {
+      "id": 1794629751709,
+      "name": "find-files-and-folders",
+      "type": "tool",
+      "tags": [
+        "files-and-folders",
+        "filesystem",
+        "discovery",
+        "audit"
+      ],
+      "path": "X:/rraabbiitt-labs-control-center/src/dashboards/FilesAndFolders/toolkits/tools/find-files-and-folders",
+      "file": "find-files-and-folders.ts"
+    },
+    {
+      "id": 1794629753991,
+      "name": "find-in-files",
+      "type": "tool",
+      "tags": [
+        "files-and-folders",
+        "filesystem",
+        "discovery",
+        "audit"
+      ],
+      "path": "X:/rraabbiitt-labs-control-center/src/dashboards/FilesAndFolders/toolkits/tools/find-in-files",
+      "file": "find-in-files.ts"
+    },
+    {
+      "id": 1794629756361,
+      "name": "finder-presets",
+      "type": "tool",
+      "tags": [
+        "files-and-folders",
+        "finder",
+        "preset",
+        "database"
+      ],
+      "path": "X:/rraabbiitt-labs-control-center/src/dashboards/FilesAndFolders/toolkits/tools/finder-presets",
+      "file": "finder-presets.ts"
+    },
+    {
+      "id": 1794630248437,
+      "name": "list-orphaned-files",
+      "type": "tool",
+      "tags": [
+        "files-and-folders",
+        "filesystem",
+        "discovery",
+        "audit"
+      ],
+      "path": "X:/rraabbiitt-labs-control-center/src/dashboards/FilesAndFolders/toolkits/tools/list-orphaned-files",
+      "file": "list-orphaned-files.ts"
+    },
+    {
+      "id": 1794630039559,
+      "name": "refresh-discovery-index",
+      "type": "tool",
+      "tags": [
+        "rab-world-v2",
+        "scaffold"
+      ],
+      "path": "X:/rraabbiitt-labs-control-center/src/dashboards/FilesAndFolders/toolkits/tools/refresh-discovery-index",
+      "file": "refresh-discovery-index.ts"
+    },
+    {
       "id": 1794595343585,
       "name": "TestDb",
       "type": "dashboard",
@@ -2312,6 +2604,20 @@
       "file": "use.skill.yaml"
     },
     {
+      "id": 1794625583560,
+      "name": "useInterfaceControls",
+      "type": "skill",
+      "path": "X:/rraabbiitt-labs-control-center/src/components/InterfaceControls/hooks/useInterfaceControls",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794625583559,
+      "name": "InterfaceControls",
+      "type": "skill",
+      "path": "X:/rraabbiitt-labs-control-center/src/components/InterfaceControls",
+      "file": "use.skill.yaml"
+    },
+    {
       "name": "use-LoginBox",
       "type": "skill",
       "path": "X:/rraabbiitt-labs-control-center/src/components/LoginBox",
@@ -2466,6 +2772,20 @@
       "name": "use-rabbit-head",
       "type": "skill",
       "path": "X:/rraabbiitt-labs-control-center/src/components/RabbitHead",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794630014450,
+      "name": "useScannerStatusUi",
+      "type": "skill",
+      "path": "X:/rraabbiitt-labs-control-center/src/components/ScannerStatusUi/hooks/useScannerStatusUi",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794630014449,
+      "name": "ScannerStatusUi",
+      "type": "skill",
+      "path": "X:/rraabbiitt-labs-control-center/src/components/ScannerStatusUi",
       "file": "use.skill.yaml"
     },
     {
@@ -2740,6 +3060,69 @@
       "name": "Factory",
       "type": "skill",
       "path": "X:/rraabbiitt-labs-control-center/src/dashboards/Factory",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794631626659,
+      "name": "use-runner-files-and-folders-audits",
+      "type": "skill",
+      "path": "X:/rraabbiitt-labs-control-center/src/dashboards/FilesAndFolders/toolkits/runners/runner-files-and-folders-audits",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794631626660,
+      "name": "use-runner-refresh-discovery",
+      "type": "skill",
+      "path": "X:/rraabbiitt-labs-control-center/src/dashboards/FilesAndFolders/toolkits/runners/runner-refresh-discovery",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794631626652,
+      "name": "use-count-file-types",
+      "type": "skill",
+      "path": "X:/rraabbiitt-labs-control-center/src/dashboards/FilesAndFolders/toolkits/tools/count-file-types",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794631626653,
+      "name": "use-count-imports",
+      "type": "skill",
+      "path": "X:/rraabbiitt-labs-control-center/src/dashboards/FilesAndFolders/toolkits/tools/count-imports",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794631626654,
+      "name": "use-find-files-and-folders",
+      "type": "skill",
+      "path": "X:/rraabbiitt-labs-control-center/src/dashboards/FilesAndFolders/toolkits/tools/find-files-and-folders",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794631626655,
+      "name": "use-find-in-files",
+      "type": "skill",
+      "path": "X:/rraabbiitt-labs-control-center/src/dashboards/FilesAndFolders/toolkits/tools/find-in-files",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794631626656,
+      "name": "use-finder-presets",
+      "type": "skill",
+      "path": "X:/rraabbiitt-labs-control-center/src/dashboards/FilesAndFolders/toolkits/tools/finder-presets",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794631626657,
+      "name": "use-list-orphaned-files",
+      "type": "skill",
+      "path": "X:/rraabbiitt-labs-control-center/src/dashboards/FilesAndFolders/toolkits/tools/list-orphaned-files",
+      "file": "use.skill.yaml"
+    },
+    {
+      "id": 1794631626658,
+      "name": "use-refresh-discovery-index",
+      "type": "skill",
+      "path": "X:/rraabbiitt-labs-control-center/src/dashboards/FilesAndFolders/toolkits/tools/refresh-discovery-index",
       "file": "use.skill.yaml"
     },
     {

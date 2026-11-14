@@ -1,0 +1,13 @@
+{
+  "id": 1794632447497,
+  "name": "NeuralConnectors",
+  "title": "Neural Connectors",
+  "description": "Layered directional canvas module connector diagram from resolved import references.",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "NeuralConnectors.tsx",
+  "path": "src/dashboards/FilesAndFolders/components/FolderCharts/NeuralConnectors"
+}

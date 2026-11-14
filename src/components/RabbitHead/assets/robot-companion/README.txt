@@ -1,0 +1,1 @@
+cute_robot_companion_glb.glb preview. 14822 original triangles reduced to 1935 triangles / 910 vertices using vertex clustering (7.25 units). Scene transforms applied; centered, scaled to 150 units, mirrored Z with reversed winding. See license.txt.

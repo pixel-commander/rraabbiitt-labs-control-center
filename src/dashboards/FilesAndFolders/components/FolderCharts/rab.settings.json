@@ -1,0 +1,22 @@
+{
+  "id": 1794631032369,
+  "name": "FolderCharts",
+  "title": "Folder Charts",
+  "description": "Data-driven canvas and WebGL charts: glass file-type pies, thin extension bars, 3D stacked bars, layered folder cities, expandable 3d-force-graph clusters, gauges, elastic module connectors and import networks.",
+  "type": "component",
+  "tags": [
+    "react",
+    "component",
+    "canvas",
+    "webgl",
+    "charts",
+    "filesystem",
+    "city",
+    "bars",
+    "connections",
+    "3d-force-graph",
+    "discovery"
+  ],
+  "file": "FolderCharts.tsx",
+  "path": "src/dashboards/FilesAndFolders/components/FolderCharts"
+}

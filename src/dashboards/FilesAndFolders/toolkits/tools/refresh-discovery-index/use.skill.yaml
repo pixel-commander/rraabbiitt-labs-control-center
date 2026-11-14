@@ -1,0 +1,12 @@
+id: 1794631626658
+schema: 1
+intent: use
+name: use-refresh-discovery-index
+title: How to use refresh-discovery-index
+type: skill
+owner:
+  id: 1794630039559
+implementation:
+  - id: 1794630039559
+instructions: >-
+  Supply required absolute root and optional save (default true). First discovers all folders, then three asynchronous workers read direct files. Uses the shared ignored-folder list. Returns House paths and summary counts. Complete scans atomically replace only that root in discovery; partial scans keep previous rows. File name includes its extension; type is the extension without a dot. Run through the shared dispatcher.

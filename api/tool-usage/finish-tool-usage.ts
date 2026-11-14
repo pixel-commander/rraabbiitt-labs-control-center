@@ -24,7 +24,7 @@ export async function finishToolUsage(
       ...(settings.message !== undefined ? { message: settings.message } : {}),
     };
     const response = await fetch(
-      new URL("/api/tool-usage", `http://${world.mcp.host}:${world.mcp.port}`),
+      new URL("/api/tool-usage", `http://${world.mcp.host === "0.0.0.0" ? "127.0.0.1" : world.mcp.host}:${world.mcp.port}`),
       {
         method: "POST",
         headers: {

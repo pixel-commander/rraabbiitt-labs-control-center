@@ -1,0 +1,12 @@
+id: 1794631626657
+schema: 1
+intent: use
+name: use-list-orphaned-files
+title: How to use list-orphaned-files
+type: skill
+owner:
+  id: 1794630248437
+implementation:
+  - id: 1794630248437
+instructions: >-
+  Supply root and optional path, name, type and db. db true reads the saved discovery inventory; source parsing still reads the selected files. Missing path means root. Counts use response.summary.count and total; locations use response.paths. response.body contains JSON details, errors and state. Orphan results are candidates and are suppressed when evidence is incomplete. Use save_path and optional save_file for explicit JSON/text reports; existing report files are not overwritten.

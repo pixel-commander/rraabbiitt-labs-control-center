@@ -1,0 +1,10 @@
+schema: 1
+intent: use
+id: 1794630014450
+name: useScannerStatusUi
+owner:
+  id: 1794630014448
+implementation:
+  - id: 1794630014448
+instructions: >-
+  Internal scanner hook. Pass ScannerStatusUiProps; start initiates the NDJSON scan request, state owns phase progress, rolling events, errors, timing and the tool result. The visible component normally owns this hook. Closing its dialog does not unmount the hook. Unmount disconnects the client while server scan continues.

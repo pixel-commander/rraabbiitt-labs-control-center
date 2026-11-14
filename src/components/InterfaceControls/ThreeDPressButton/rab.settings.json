@@ -1,0 +1,13 @@
+{
+  "id": 1794625600910,
+  "name": "ThreeDPressButton",
+  "title": "3dPressButton",
+  "description": "",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "ThreeDPressButton.tsx",
+  "path": "src/components/InterfaceControls/ThreeDPressButton"
+}

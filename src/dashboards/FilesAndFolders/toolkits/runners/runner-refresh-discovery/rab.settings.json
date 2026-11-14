@@ -1,0 +1,53 @@
+{
+  "id": 1794631061153,
+  "name": "runner-refresh-discovery",
+  "title": "runner-refresh-discovery",
+  "description": "Refresh discovery for one or several root folders through the shared tracked execution owner.",
+  "type": "runner",
+  "path": "X:/rraabbiitt-labs-control-center/src/dashboards/FilesAndFolders/toolkits/runners/runner-refresh-discovery",
+  "file": "runner-refresh-discovery.ts",
+  "settings": [
+    {
+      "name": "root",
+      "type": "string",
+      "description": "One absolute root; use root or paths."
+    },
+    {
+      "name": "paths",
+      "type": "array",
+      "description": "Nonempty House path records for multiple roots; use root or paths."
+    },
+    {
+      "name": "save",
+      "type": "boolean",
+      "default": true
+    }
+  ],
+  "paths": [
+    {
+      "path": ".",
+      "file": "runner-refresh-discovery.ts",
+      "type": "ts"
+    },
+    {
+      "path": ".",
+      "file": "rab.settings.json",
+      "type": "json"
+    },
+    {
+      "path": ".",
+      "file": "README.md",
+      "type": "md"
+    },
+    {
+      "path": ".",
+      "file": "use.skill.yaml",
+      "type": "yaml"
+    }
+  ],
+  "tags": [
+    "files-and-folders",
+    "runner",
+    "audit"
+  ]
+}

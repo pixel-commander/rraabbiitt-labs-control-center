@@ -78,6 +78,9 @@
     },
     {
       "path": "src/dashboards/Factory/toolkit"
+    },
+    {
+      "path": "src/dashboards/FilesAndFolders/toolkits"
     }
   ],
   "mcp": {

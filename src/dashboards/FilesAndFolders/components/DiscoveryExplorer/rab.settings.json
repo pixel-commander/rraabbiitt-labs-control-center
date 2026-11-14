@@ -1,0 +1,13 @@
+{
+  "id": 1794631028196,
+  "name": "DiscoveryExplorer",
+  "title": "Discovery Explorer",
+  "description": "Explore the saved discovery filesystem with recursive folder layers and canvas charts.",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "DiscoveryExplorer.tsx",
+  "path": "src/dashboards/FilesAndFolders/components/DiscoveryExplorer"
+}

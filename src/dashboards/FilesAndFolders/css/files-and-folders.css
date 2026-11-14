@@ -1,0 +1,21 @@
+.files-and-folders {
+  gap: var(--space-lg);
+  min-inline-size: 0;
+}
+.files-and-folders__main { display: grid; gap: var(--space-md); min-inline-size: 0; }
+.files-and-folders__scan { display:flex; flex-wrap:wrap; gap:var(--space-md); align-items:center; }
+.files-and-folders__scan > div { flex:1 1 18rem; }
+.files-and-folders__scan label { display:grid; gap:var(--space-xs); flex:1 1 24rem; }
+.files-and-folders__reference > summary { cursor:pointer; padding:var(--space-md); }
+.files-and-folders__sources { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); gap: var(--space-md); }
+.files-and-folders__sources h2 { font-size: 1rem; }
+.files-and-folders code { display: block; overflow-wrap: anywhere; color: var(--color-muted); font-size: .75rem; }
+.files-and-folders__filters { display: flex; flex-wrap: wrap; gap: var(--space-md); align-items: center; }
+.files-and-folders__filters > .search-bar { flex: 1 1 18rem; }
+.files-and-folders__filters label { display: flex; gap: var(--space-sm); align-items: center; }
+.files-and-folders__table-wrap { overflow-x: auto; }
+.files-and-folders table { inline-size: 100%; border-collapse: collapse; text-align: start; }
+.files-and-folders caption { padding: var(--space-md); text-align: start; }
+.files-and-folders th, .files-and-folders td { padding: var(--space-md); vertical-align: top; border-block-end: 1px solid var(--border-default); }
+.files-and-folders td:first-child { min-inline-size: 16rem; }
+.files-and-folders td p { margin-block: var(--space-xs); }

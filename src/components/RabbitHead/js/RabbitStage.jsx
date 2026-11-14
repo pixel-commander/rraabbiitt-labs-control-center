@@ -145,6 +145,54 @@ export class RabbitStage extends Component {
 
   build() {
     const model = this.state.model || 'rabbit';
+    if (model === 'low-poly-rabbit') {
+      if (!this.lowPolyRabbitMesh) {
+        import('../assets/low-poly-rabbit/preview.json').then(({ default: mesh }) => {
+          this.lowPolyRabbitMesh = mesh;
+          if (this.mounted && this.state.model === 'low-poly-rabbit') this.build();
+        }).catch(error => { if (this.mounted) alert(`Could not load low-poly rabbit preview: ${error.message}`); });
+        return;
+      }
+      this.noseIdx = 0;
+      this.finishBuild(this.lowPolyRabbitMesh.v.map(([x, y, z]) => ({ x, y, z })), this.lowPolyRabbitMesh.f.map(face => face.slice()));
+      return;
+    }
+    if (model === 'robot-companion') {
+      if (!this.robotCompanionMesh) {
+        import('../assets/robot-companion/preview.json').then(({ default: mesh }) => {
+          this.robotCompanionMesh = mesh;
+          if (this.mounted && this.state.model === 'robot-companion') this.build();
+        }).catch(error => { if (this.mounted) alert(`Could not load robot companion preview: ${error.message}`); });
+        return;
+      }
+      this.noseIdx = 0;
+      this.finishBuild(this.robotCompanionMesh.v.map(([x, y, z]) => ({ x, y, z })), this.robotCompanionMesh.f.map(face => face.slice()));
+      return;
+    }
+    if (model === 'robot-rabbit') {
+      if (!this.robotRabbitMesh) {
+        import('../assets/robot-rabbit/preview.json').then(({ default: mesh }) => {
+          this.robotRabbitMesh = mesh;
+          if (this.mounted && this.state.model === 'robot-rabbit') this.build();
+        }).catch(error => { if (this.mounted) alert(`Could not load robot rabbit preview: ${error.message}`); });
+        return;
+      }
+      this.noseIdx = 0;
+      this.finishBuild(this.robotRabbitMesh.v.map(([x, y, z]) => ({ x, y, z })), this.robotRabbitMesh.f.map(face => face.slice()));
+      return;
+    }
+    if (model === 'humanoid') {
+      if (!this.humanoidMesh) {
+        import('../assets/humanoid/preview.json').then(({ default: mesh }) => {
+          this.humanoidMesh = mesh;
+          if (this.mounted && this.state.model === 'humanoid') this.build();
+        }).catch(error => { if (this.mounted) alert(`Could not load humanoid preview: ${error.message}`); });
+        return;
+      }
+      this.noseIdx = 0;
+      this.finishBuild(this.humanoidMesh.v.map(([x, y, z]) => ({ x, y, z })), this.humanoidMesh.f.map(face => face.slice()));
+      return;
+    }
     if (model.startsWith('custom:')) { // user model from the library
       const entry = this.library()[+model.slice(7)];
       if (entry) {
@@ -2309,7 +2357,7 @@ export class RabbitStage extends Component {
         this.setState({ model: 'custom:' + (lib.length - 1) }, () => this.build());
       },
       models: [
-        ...[['rabbit-lo', 'RAB·LO'], ['rabbit', 'RABBIT'], ['rabbit-hi', 'RAB·HI'], ['skull', 'SKULL'], ['robot', 'ROBOT'], ['brain', 'BRAIN']].map(([id, label]) => ({ id, label, del: null })),
+        ...[['rabbit-lo', 'RAB·LO'], ['rabbit', 'RABBIT'], ['rabbit-hi', 'RAB·HI'], ['skull', 'SKULL'], ['robot', 'ROBOT'], ['brain', 'BRAIN'], ['humanoid', 'LOW POLY HEAD'], ['robot-rabbit', 'ROBOT RABBIT'], ['robot-companion', 'COMPANION'], ['low-poly-rabbit', 'LOW POLY RABBIT']].map(([id, label]) => ({ id, label, del: null })),
         ...this.library().map((en, i) => ({ id: 'custom:' + i, label: en.name, del: i }))
       ].map(mo => ({
         label: mo.label,

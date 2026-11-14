@@ -1,0 +1,12 @@
+id: 1794631626652
+schema: 1
+intent: use
+name: use-count-file-types
+title: How to use count-file-types
+type: skill
+owner:
+  id: 1794630246272
+implementation:
+  - id: 1794630246272
+instructions: >-
+  Supply root and optional path, name, type and db. db true reads the saved discovery inventory; source parsing still reads the selected files. Missing path means root. Counts use response.summary.count and total; locations use response.paths. response.body contains JSON details, errors and state. Orphan results are candidates and are suppressed when evidence is incomplete. Use save_path and optional save_file for explicit JSON/text reports; existing report files are not overwritten.

@@ -1,0 +1,13 @@
+{
+  "id": 1794631030270,
+  "name": "FolderRow",
+  "title": "Folder Row",
+  "description": "Recursive dashboard folder row with descendant file-type canvas preview and folder state.",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "FolderRow.tsx",
+  "path": "src/dashboards/FilesAndFolders/components/FolderRow"
+}

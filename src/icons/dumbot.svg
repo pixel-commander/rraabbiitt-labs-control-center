@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 209 242" fill="none">
+  <title>Dumbot</title>
+  <g fill="#080a09">
+    <!-- Helmet shell and raised center panel. -->
+    <path d="M77 32C51 40 38 61 38 91v52l18 16 19 27 14 7h18l15-7 20-27 16-14V91c0-28-13-49-37-59l-5 31c22 5 36 19 36 42v29l-22 17-16 26H82l-17-26-21-16v-30c0-23 14-37 37-42z"/>
+    <path d="M79 31c12-4 25-4 38 0l-6 46c-.4 3-2 4-5 4H90c-3 0-4-1-5-4z"/>
+    <path d="M87 84h22l-3 5H90z"/>
+    <!-- Face visor. -->
+    <rect x="50" y="98" width="96" height="36" rx="16"/>
+    <rect x="85" y="159" width="26" height="5.5" rx="2.75"/>
+    <!-- Side receivers. -->
+    <path d="M35 87c-4 0-7 3-7 8v41c0 5 3 8 7 9zM25 97c-6 0-9 4-9 10v18c0 6 3 10 9 10zM161 87c4 0 7 3 7 8v41c0 5-3 8-7 9zM171 97c6 0 9 4 9 10v18c0 6-3 10-9 10z"/>
+    <!-- Lower armor. -->
+    <path d="m48 161 10 33 24 19-8-20-6-12zM148 161l-9 34-25 18 8-20 6-12zM78 194h40l-8 21H86z"/>
+  </g>
+  <g stroke="#080a09" stroke-width="4" stroke-linecap="round">
+    <path d="M26 96V52M170 96V52"/>
+  </g>
+  <g fill="#080a09"><circle cx="26" cy="51" r="6.5"/><circle cx="170" cy="51" r="6.5"/></g>
+  <g fill="#fff"><circle cx="71.5" cy="116" r="7.5"/><circle cx="124.5" cy="116" r="7.5"/></g>
+</svg>

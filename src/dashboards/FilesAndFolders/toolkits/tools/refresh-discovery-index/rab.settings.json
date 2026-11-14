@@ -1,0 +1,40 @@
+{
+  "id": 1794630039559,
+  "name": "refresh-discovery-index",
+  "title": "Refresh discovery index",
+  "description": "Collect all folders first, then use three asynchronous workers to read direct files and atomically refresh filesystem discovery rows.",
+  "type": "tool",
+  "path": "X:/rraabbiitt-labs-control-center/src/dashboards/FilesAndFolders/toolkits/tools/refresh-discovery-index",
+  "file": "refresh-discovery-index.ts",
+  "settings": [
+    {
+      "name": "root",
+      "type": "string",
+      "required": true,
+      "description": "Absolute starting directory."
+    },
+    {
+      "name": "save",
+      "type": "boolean",
+      "required": false,
+      "default": true,
+      "description": "Save a complete scan to discovery; false returns inventory only."
+    }
+  ],
+  "paths": [
+    {
+      "path": ".",
+      "file": "refresh-discovery-index.ts",
+      "type": "ts"
+    },
+    {
+      "path": ".",
+      "file": "rab.settings.json",
+      "type": "json"
+    }
+  ],
+  "tags": [
+    "rab-world-v2",
+    "scaffold"
+  ]
+}

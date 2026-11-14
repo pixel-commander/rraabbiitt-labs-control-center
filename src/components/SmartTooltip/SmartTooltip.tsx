@@ -62,7 +62,7 @@ const MountedSmartTooltip = ({
       tooltip.style.visibility = "hidden";
     };
     const position = (): void => {
-      const pointer = pointerRef.current;
+      const pointer = positionRef?.current ?? pointerRef.current;
       if (!pointer) return;
       const rect = tooltip.getBoundingClientRect();
       const width = rect.width;

@@ -104,6 +104,19 @@ async function buildRequestHandler(world) {
     res.end(JSON.stringify(body));
   }
 
+  // UI transports use the same runner; this is only the activity popup's live sink.
+  const trackedToolkitRun = async (settings, options = {}) => {
+    const event = {time:new Date().toISOString(),method:'POST',tool:'use_tool',toolId:settings.id,status:'running',runs:[]};
+    activity.push(event);
+    if(activity.length>50)activity.shift();
+    try {
+      const result=await run(settings,{...options,update:steps=>{event.runs=steps;options.update?.(steps);}});
+      event.runs=result;
+      event.status=result.some(step=>step.status==='error'||step.error)?'error':'complete';
+      return result;
+    } catch(error) {event.status='error';event.error=error.message;throw error;}
+  };
+
   return async function handle(req, res) {
     if (!validateHost(req, res) || !validateOrigin(req, res)) return;
 
@@ -120,6 +133,17 @@ async function buildRequestHandler(world) {
     }
 
     const pathname = new URL(req.url, `http://${host}:${port}`).pathname;
+
+    if (pathname === '/api/files-and-folders/scan') {
+      const { handleScan } = await import('../../src/components/ScannerStatusUi/api/scan.mjs');
+      await handleScan(world, req, res, trackedToolkitRun);
+      return;
+    }
+    if (pathname === '/api/files-and-folders/discovery' || pathname === '/api/files-and-folders/tools') {
+      const { handleToolkit } = await import('../../src/dashboards/FilesAndFolders/toolkits/_shared/http.mjs');
+      await handleToolkit(world, req, res, trackedToolkitRun);
+      return;
+    }
 
     // Domain routes the UI still calls. Each goes through the master runner.
     const domainRoutes = {

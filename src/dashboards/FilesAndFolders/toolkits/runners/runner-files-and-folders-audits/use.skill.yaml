@@ -1,0 +1,12 @@
+id: 1794631626659
+schema: 1
+intent: use
+name: use-runner-files-and-folders-audits
+title: How to use runner-files-and-folders-audits
+type: skill
+owner:
+  id: 1794631064090
+implementation:
+  - id: 1794631064090
+instructions: >-
+  Supply root. Optional refresh true saves a fresh discovery inventory first. db defaults true for the audits. Optional checks selects count-imports, count-file-types and list-orphaned-files. A failed or incomplete refresh prevents subsequent audits from using stale inventory. Returns flat RunnerReturn; inspect child errors even when execution completed.

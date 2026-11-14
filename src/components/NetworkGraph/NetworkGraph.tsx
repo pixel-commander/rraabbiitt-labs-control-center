@@ -1,22 +1,31 @@
-import { useEffect, useRef } from "react";
-import type { NetworkGraphProps, GraphNode } from "./NetworkGraph.types";
+import { useEffect, useRef, useState } from "react";
+import type { NetworkGraphProps, GraphNode, GraphEdge } from "./NetworkGraph.types";
 import "./css/network-graph.css";
+import { createFlowConnectors, curvePath, orthoPath, straightPath } from "../../js/flow-connectors.js";
+import { SmartTooltip } from "../SmartTooltip/SmartTooltip";
 
 export const NetworkGraph = ({
   className = "",
   data,
   selected,
+  selectedEffect = "crackle",
   handleSelect,
   handleClick,
   colors = {},
   lineStyle = {},
   initialZoom = 1,
   title = "Network graph",
+  tooltips = true,
 }: NetworkGraphProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const pointerRef = useRef<{x:number;y:number}|null>(null);
+  const tooltipKey = useRef<string|undefined>(undefined);
+  const [hoveredKey,setHoveredKey] = useState<string|undefined>(undefined);
+  const hoveredNode = data.nodes.find(node=>node.key===hoveredKey);
   const current = useRef({
     data,
     selected,
+    selectedEffect,
     handleSelect,
     handleClick,
     colors,
@@ -25,6 +34,7 @@ export const NetworkGraph = ({
   current.current = {
     data,
     selected,
+    selectedEffect,
     handleSelect,
     handleClick,
     colors,
@@ -44,6 +54,36 @@ export const NetworkGraph = ({
       | { x: number; y: number; ox: number; oy: number; moved: boolean }
       | undefined;
     let initialized = false;
+    const updateTooltip = (node?:GraphNode) => {
+      if (tooltipKey.current !== node?.key) {
+        tooltipKey.current=node?.key;
+        setHoveredKey(node?.key);
+      }
+    };
+    const motion = matchMedia('(prefers-reduced-motion: reduce)');
+    let visible = true, frame = 0;
+    let connectorData = current.current.data;
+    const token = (name:string) => {
+      const skin = getComputedStyle(canvas);
+      const mapped = name === '--board' ? '--color-main' : name === '--ink' ? '--color-main-neg' : name === '--shade' ? '--color-main' : name;
+      return skin.getPropertyValue(mapped).trim() || skin.color;
+    };
+    let connectors = createFlowConnectors(ctx, token);
+    let effectData = current.current.data;
+    let effectKeys = new Set(effectData.nodes.map(node=>node.key));
+    const wireEffect = (edge:GraphEdge) => {
+      const state=current.current;
+      if(effectData!==state.data){effectData=state.data;effectKeys=new Set(effectData.nodes.map(node=>node.key));}
+      const pinned=state.selected&&effectKeys.has(state.selected) ? state.selected : undefined;
+      const touchesPinned=!!pinned&&(edge.source===pinned||edge.target===pinned);
+      const touchesHover=!!hover&&(edge.source===hover.key||edge.target===hover.key);
+      if(edge.fx !== undefined) return edge.fxOn==='active'&&!touchesPinned&&!touchesHover ? 'none' : edge.fx;
+      return touchesPinned ? state.selectedEffect : 'none';
+    };
+    const canAnimate = () => !motion.matches && !document.hidden && visible && current.current.data.edges.some(edge =>
+      edge.route === 'elastic' || edge.route === 'bolt' ||
+      wireEffect(edge) !== 'none',
+    );
     const bounds = () => ({
       w: Math.max(400, ...current.current.data.nodes.map((n) => n.x)) + 275,
       h: Math.max(240, ...current.current.data.nodes.map((n) => n.y)) + 70,
@@ -57,8 +97,10 @@ export const NetworkGraph = ({
       offsetX = (rect.width - world.w * scale) / 2;
       offsetY = (rect.height - world.h * scale) / 2;
     };
-    const draw = () => {
+    const draw = (advance = false) => {
       const { data, selected, colors, lineStyle } = current.current;
+      if (data !== connectorData) { connectors = createFlowConnectors(ctx, token); connectorData = data; }
+      if (advance) connectors.step();
       const skin = getComputedStyle(canvas);
       const palette = {
         node: skin.getPropertyValue("--network-node").trim() || skin.color,
@@ -81,9 +123,12 @@ export const NetworkGraph = ({
       const focus =
         hover?.key ?? (selected && byKey.has(selected) ? selected : undefined);
       const related = new Set<string>(focus ? [focus] : []);
+      if(selected&&byKey.has(selected)) related.add(selected);
       data.edges.forEach((e) => {
         if (e.source === focus) related.add(e.target);
         if (e.target === focus) related.add(e.source);
+        if (e.source === selected) related.add(e.target);
+        if (e.target === selected) related.add(e.source);
       });
       ctx.save();
       ctx.translate(offsetX, offsetY);
@@ -100,30 +145,49 @@ export const NetworkGraph = ({
         ctx.stroke();
       });
       ctx.setLineDash([]);
-      for (const edge of data.edges) {
+      for (const [index, edge] of data.edges.entries()) {
         const a = byKey.get(edge.source),
           b = byKey.get(edge.target);
         if (!a || !b) continue;
         const active =
-          !!focus && (edge.source === focus || edge.target === focus);
+          (!!focus && (edge.source === focus || edge.target === focus)) ||
+          (!!selected && (edge.source === selected || edge.target === selected));
         ctx.globalAlpha = focus
           ? active
             ? lines.activeOpacity
             : lines.inactiveOpacity
           : lines.opacity;
-        ctx.strokeStyle = active
+        const color = active
           ? (edge.color ?? b.color ?? palette.edge)
           : (edge.color ?? palette.edge);
+        ctx.strokeStyle = color;
         ctx.lineWidth = (active ? lines.activeWidth : lines.width) / scale;
-        ctx.beginPath();
-        ctx.moveTo(a.x, a.y);
-        ctx.bezierCurveTo(a.x + 300, a.y, b.x - 300, b.y, b.x, b.y);
-        ctx.stroke();
+        const wire = { ...edge, id: edge.id ?? `${edge.source}\0${edge.target}\0${index}` };
+        const from = {x:a.x,y:a.y}, to = {x:b.x,y:b.y};
+        const points = edge.route === 'elastic'
+          ? motion.matches ? curvePath(from, to) : connectors.elasticPath(wire,a.x,a.y,b.x,b.y,!advance)
+          : edge.route === 'ortho' ? orthoPath(from,to)
+          : edge.route === 'straight' || edge.route === 'bolt' ? straightPath(from,to)
+          : edge.route === 'curve' ? curvePath(from,to)
+          : Array.from({length:25},(_,i)=>{const t=i/24,u=1-t;return{x:u*u*u*a.x+3*u*u*t*(a.x+300)+3*u*t*t*(b.x-300)+t*t*t*b.x,y:u*u*u*a.y+3*u*u*t*a.y+3*u*t*t*b.y+t*t*t*b.y};});
+        if (!edge.route) {
+          // Preserve the original NetworkGraph geometry when callers omit routing.
+          ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.bezierCurveTo(a.x+300,a.y,b.x-300,b.y,b.x,b.y);ctx.stroke();
+        } else if (edge.route === 'bolt' && !motion.matches && (!focus || active)) {
+          connectors.drawBolt(wire,a.x,a.y,b.x,b.y,color);
+        } else {
+          // Thin polyline uses the shared elastic geometry while retaining this graph's fade and scale.
+          ctx.beginPath();points.forEach((point,i)=>i?ctx.lineTo(point.x,point.y):ctx.moveTo(point.x,point.y));ctx.stroke();
+        }
+        const fx=wireEffect(edge);
+        if (!motion.matches && fx !== 'none') {
+          connectors.drawFx({...wire,fx},points,color);
+        }
       }
-      for (const [index, node] of data.nodes.entries()) {
+      for (const node of data.nodes) {
         const active = !focus || related.has(node.key),
           left = node.group === "components";
-        ctx.globalAlpha = active ? 1 : 0.15;
+        ctx.globalAlpha = active ? 1 : 0.35;
         ctx.fillStyle = node.color ?? palette.node;
         ctx.shadowColor = active ? (node.color ?? palette.node) : "transparent";
         ctx.shadowBlur = active ? 10 : 0;
@@ -137,7 +201,7 @@ export const NetworkGraph = ({
         );
         ctx.fill();
         ctx.shadowBlur = 0;
-        if ((scale > 0.3 && (left || index % 3 === 0)) || node.key === focus) {
+        if (scale > 0.3 || !!focus && related.has(node.key)) {
           ctx.font = `${Math.max(11, (left ? 12 : 11) / scale)}px Segoe UI`;
           ctx.textAlign = left ? "right" : "left";
           ctx.textBaseline = "middle";
@@ -146,13 +210,19 @@ export const NetworkGraph = ({
             node.name ?? node.key,
             node.x + (left ? -13 : 12),
             node.y,
-            260,
+            260 / scale,
           );
         }
       }
       ctx.restore();
     };
-    redraw.current = draw;
+    const syncAnimation = () => {
+      if (canAnimate()) { if (!frame) frame = requestAnimationFrame(animate); }
+      else { cancelAnimationFrame(frame); frame=0; }
+    };
+    const animate = () => {frame=0;if(!canAnimate())return;draw(true);syncAnimation();};
+    const repaint = () => {draw();syncAnimation();};
+    redraw.current = repaint;
     const resize = () => {
       const rect = canvas.getBoundingClientRect(),
         dpr = Math.min(2, window.devicePixelRatio || 1);
@@ -163,7 +233,7 @@ export const NetworkGraph = ({
         fit();
         initialized = true;
       }
-      draw();
+      repaint();
     };
     const nodeAt = (x: number, y: number) => {
       let best: GraphNode | undefined,
@@ -180,6 +250,8 @@ export const NetworkGraph = ({
       return best;
     };
     const down = (event: PointerEvent) => {
+      pointerRef.current=null;
+      updateTooltip();
       drag = {
         x: event.clientX,
         y: event.clientY,
@@ -192,6 +264,8 @@ export const NetworkGraph = ({
     const move = (event: PointerEvent) => {
       const rect = canvas.getBoundingClientRect();
       if (drag) {
+        pointerRef.current=null;
+        updateTooltip();
         const dx = event.clientX - drag.x,
           dy = event.clientY - drag.y;
         if (Math.abs(dx) + Math.abs(dy) > 3) drag.moved = true;
@@ -199,10 +273,12 @@ export const NetworkGraph = ({
         offsetY = drag.oy + dy;
         canvas.style.cursor = "grabbing";
       } else {
+        pointerRef.current={x:event.clientX,y:event.clientY};
         hover = nodeAt(event.clientX - rect.left, event.clientY - rect.top);
+        updateTooltip(hover);
         canvas.style.cursor = hover ? "pointer" : "grab";
       }
-      draw();
+      repaint();
     };
     const up = (event: PointerEvent) => {
       if (drag && !drag.moved) {
@@ -213,11 +289,13 @@ export const NetworkGraph = ({
       }
       drag = undefined;
       canvas.style.cursor = "grab";
-      draw();
+      repaint();
     };
     const leave = () => {
+      pointerRef.current=null;
+      updateTooltip();
       hover = undefined;
-      draw();
+      repaint();
     };
     const cancel = () => {
       drag = undefined;
@@ -235,11 +313,11 @@ export const NetworkGraph = ({
       );
       offsetX = x - (x - offsetX) * (scale / old);
       offsetY = y - (y - offsetY) * (scale / old);
-      draw();
+      repaint();
     };
     const reset = () => {
       fit();
-      draw();
+      repaint();
     };
     canvas.addEventListener("pointerdown", down);
     canvas.addEventListener("pointermove", move);
@@ -250,9 +328,18 @@ export const NetworkGraph = ({
     canvas.addEventListener("dblclick", reset);
     const observer = new ResizeObserver(resize);
     observer.observe(canvas);
+    const intersection = new IntersectionObserver(entries => {visible=entries.some(entry=>entry.isIntersecting);syncAnimation();});
+    intersection.observe(canvas);
+    const theme = new MutationObserver(repaint);
+    for (let parent:Element|null=canvas.parentElement;parent;parent=parent.parentElement) theme.observe(parent,{attributes:true,attributeFilter:['data-theme','class','style']});
+    document.addEventListener('visibilitychange',syncAnimation);
+    motion.addEventListener('change',repaint);
     resize();
     return () => {
       observer.disconnect();
+      intersection.disconnect();theme.disconnect();cancelAnimationFrame(frame);
+      document.removeEventListener('visibilitychange',syncAnimation);
+      motion.removeEventListener('change',repaint);
       canvas.removeEventListener("pointerdown", down);
       canvas.removeEventListener("pointermove", move);
       canvas.removeEventListener("pointerup", up);
@@ -261,11 +348,12 @@ export const NetworkGraph = ({
       canvas.removeEventListener("wheel", wheel);
       canvas.removeEventListener("dblclick", reset);
       redraw.current = () => {};
+      pointerRef.current=null;
     };
   }, [initialZoom]);
   useEffect(() => {
     redraw.current();
-  }, [data, selected, colors, lineStyle]);
+  }, [data, selected, selectedEffect, colors, lineStyle]);
   return (
     <div className={["network-graph", className].filter(Boolean).join(" ")}>
       <canvas
@@ -273,6 +361,15 @@ export const NetworkGraph = ({
         role="img"
         aria-label={`${title}. Drag to pan, scroll to zoom, double-click to reset.`}
       />
+      <SmartTooltip targetRef={canvasRef} positionRef={pointerRef}
+        disabled={!tooltips||!hoveredNode||!pointerRef.current}
+        title={hoveredNode?.title??hoveredNode?.name??hoveredNode?.key}
+        container_class="container-main" className="network-graph-tooltip"
+        content={hoveredNode&&<>
+          {hoveredNode.path&&<code>{hoveredNode.path}</code>}
+          {hoveredNode.description&&<p>{hoveredNode.description}</p>}
+          {hoveredNode.type&&<small>{hoveredNode.type}</small>}
+        </>} />
       {data.nodes.length === 0 && <p>No nodes to display.</p>}
     </div>
   );

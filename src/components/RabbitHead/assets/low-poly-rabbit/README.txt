@@ -1,0 +1,1 @@
+low-poly_rabbit_head.glb stage preview. 269134 triangles reduced to 1871 triangles / 895 vertices with 7.5-unit clustering. Scene transforms applied; centered, scaled to 150 units, mirrored Z with reversed winding. See license.txt.

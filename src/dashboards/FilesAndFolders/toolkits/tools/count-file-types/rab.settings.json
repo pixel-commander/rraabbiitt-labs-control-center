@@ -1,0 +1,86 @@
+{
+  "id": 1794630246272,
+  "name": "count-file-types",
+  "title": "count-file-types",
+  "description": "Count files and bytes by extension under a required root, using disk or discovery inventory.",
+  "type": "tool",
+  "path": "X:/rraabbiitt-labs-control-center/src/dashboards/FilesAndFolders/toolkits/tools/count-file-types",
+  "file": "count-file-types.ts",
+  "settings": [
+    {
+      "name": "root",
+      "type": "string",
+      "required": true,
+      "description": "Absolute starting folder."
+    },
+    {
+      "name": "path",
+      "type": "string",
+      "description": "Optional folder scope inside root; omitted means root."
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "description": "Text to match; filename for file finders, source text for content, module specifier for imports."
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "description": "File extension with or without a dot, or folder for location finder."
+    },
+    {
+      "name": "db",
+      "type": "boolean",
+      "default": false,
+      "description": "Read saved discovery inventory instead of crawling folders."
+    },
+    {
+      "name": "limit",
+      "type": "number",
+      "default": 200
+    },
+    {
+      "name": "offset",
+      "type": "number",
+      "default": 0
+    },
+    {
+      "name": "save_path",
+      "type": "string",
+      "description": "Existing folder for optional JSON and text reports."
+    },
+    {
+      "name": "save_file",
+      "type": "string",
+      "description": "Optional report filename stem without extension."
+    }
+  ],
+  "paths": [
+    {
+      "path": ".",
+      "file": "count-file-types.ts",
+      "type": "ts"
+    },
+    {
+      "path": ".",
+      "file": "rab.settings.json",
+      "type": "json"
+    },
+    {
+      "path": ".",
+      "file": "README.md",
+      "type": "md"
+    },
+    {
+      "path": ".",
+      "file": "use.skill.yaml",
+      "type": "yaml"
+    }
+  ],
+  "tags": [
+    "files-and-folders",
+    "filesystem",
+    "discovery",
+    "audit"
+  ]
+}

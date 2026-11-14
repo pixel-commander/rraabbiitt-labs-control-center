@@ -1,0 +1,5 @@
+Robot rabbit by Andres Zuluaga
+Source: https://sketchfab.com/3d-models/robot-rabbit-2c38882abfa74b27a7bfab630008dd93
+Author: https://sketchfab.com/afzmtm
+License: CC BY 4.0 https://creativecommons.org/licenses/by/4.0/
+Adaptation: transforms applied, centered and scaled, mirrored Z, vertex-clustered. Materials replaced by stage surface settings.

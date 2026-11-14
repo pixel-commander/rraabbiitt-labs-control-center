@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 208 148" fill="none">
+  <title>Robot icon</title>
+  <g stroke="#000" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M59 80c-15 0-15 28 0 28M149 80c15 0 15 28 0 28"/>
+    <path d="M104.5 34v23"/>
+    <circle cx="104.5" cy="25.5" r="9"/>
+    <rect x="59" y="57.5" width="90" height="73" rx="10.5"/>
+    <circle cx="83.5" cy="86.5" r="9"/>
+    <circle cx="125.5" cy="86.5" r="9"/>
+    <path d="M91 109h27"/>
+  </g>
+</svg>

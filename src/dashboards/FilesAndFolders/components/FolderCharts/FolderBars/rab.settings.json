@@ -1,0 +1,13 @@
+{
+  "id": 1794632445265,
+  "name": "FolderBars",
+  "title": "Folder Bars",
+  "description": "Interactive canvas folder and file-type bars with axis, sorting, hover counts and drill-down.",
+  "type": "component",
+  "tags": [
+    "react",
+    "component"
+  ],
+  "file": "FolderBars.tsx",
+  "path": "src/dashboards/FilesAndFolders/components/FolderCharts/FolderBars"
+}

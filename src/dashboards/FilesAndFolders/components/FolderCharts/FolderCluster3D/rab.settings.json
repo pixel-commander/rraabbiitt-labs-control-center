@@ -1,0 +1,18 @@
+{
+  "id": 1794633836532,
+  "name": "FolderCluster3D",
+  "title": "Folder Cluster 3D",
+  "description": "Real 3d-force-graph/Three.js WebGL discovery hierarchy with expand/collapse, force physics, bloom, particles, orbit and file-count folder inspection. Earlier projected-canvas variant is retained beside it.",
+  "type": "component",
+  "tags": [
+    "react",
+    "component",
+    "canvas",
+    "webgl",
+    "filesystem",
+    "discovery",
+    "3d-force-graph"
+  ],
+  "file": "FolderCluster3D.tsx",
+  "path": "src/dashboards/FilesAndFolders/components/FolderCharts/FolderCluster3D"
+}

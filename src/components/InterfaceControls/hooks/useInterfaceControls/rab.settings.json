@@ -1,0 +1,13 @@
+{
+  "id": 1794625583558,
+  "name": "useInterfaceControls",
+  "title": "useInterfaceControls",
+  "description": "",
+  "type": "hook",
+  "tags": [
+    "react",
+    "hook"
+  ],
+  "file": "useInterfaceControls.ts",
+  "path": "src/components/InterfaceControls/hooks/useInterfaceControls"
+}

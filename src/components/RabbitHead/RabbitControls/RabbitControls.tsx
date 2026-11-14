@@ -41,6 +41,14 @@ export const RabbitControls = (props: RabbitControlsProps = {}) => {
   return (
     <FloatWindow {...windowProps} rect={rect} open={open} handleChange={handleChange} handleClose={handleClose} title={props.title ?? "Rabbit controls"} className={["rabbit-controls", className].filter(Boolean).join(" ")}>
       <div className="rabbit-controls-actions">
+        {([['rabbit', 'Rabbit'], ['humanoid', 'Low Poly Head'], ['robot-rabbit', 'Robot Rabbit'], ['robot-companion', 'Robot Companion'], ['low-poly-rabbit', 'Low Poly Rabbit']] as const).map(([model, label]) => <button key={model} className="action-outline" type="button"
+          aria-pressed={(values.model ?? 'rabbit') === model} onClick={() => handleClick({ name: "model", value: model }, "rabbit-control", props)}>{label}</button>)}
+      </div>
+      {values.model === "humanoid" && <small><a href="https://sketchfab.com/3d-models/low-poly-head-e6f0618b4a854202a3bdcd5cf5abdf82" target="_blank" rel="noreferrer">Low Poly Head</a> by Andrew_F. · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a> · stage preview</small>}
+      {values.model === "robot-rabbit" && <small><a href="https://sketchfab.com/3d-models/robot-rabbit-2c38882abfa74b27a7bfab630008dd93" target="_blank" rel="noreferrer">Robot rabbit</a> by Andres Zuluaga · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a> · simplified stage preview</small>}
+      {values.model === "robot-companion" && <small><a href="https://sketchfab.com/3d-models/cute-robot-companion-glb-0f64197efce74fba8145b941efea323a" target="_blank" rel="noreferrer">Cute Robot Companion</a> by 3D Next Level Gen · Sketchfab Standard · simplified stage preview</small>}
+      {values.model === "low-poly-rabbit" && <small><a href="https://sketchfab.com/3d-models/low-poly-rabbit-head-4f15fc884d3a45888333d940b1b19a4b" target="_blank" rel="noreferrer">Low-Poly Rabbit Head</a> by sokol.tira · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a> · simplified stage preview</small>}
+      <div className="rabbit-controls-actions">
         {["lightning", "flood", "arcs", "glitch"].map(action => <button key={action} className="action-outline" type="button" onClick={() => handleClick(action, "rabbit-control", props)}>{action}</button>)}
       </div>
       <div className="rabbit-controls-actions">

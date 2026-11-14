@@ -18,4 +18,26 @@
     inset: var(--space-lg);
     pointer-events: none;
   }
+  .network-graph-tooltip {
+    max-inline-size: min(28rem, calc(100vw - 2rem));
+    padding: var(--space-sm) var(--space-md);
+    color: var(--color-main-neg);
+  }
+  .network-graph-tooltip code {
+    display: block;
+    overflow-wrap: anywhere;
+    color: var(--color-muted);
+    font-size: .75rem;
+  }
+  .network-graph-tooltip p { margin-block: var(--space-xs); }
+  .network-graph-tooltip small { color: var(--color-muted); }
+}
+
+@layer components {
+ .network-graph-tooltip {
+  --smart-tooltip-background:var(--color-main-alt);
+  --smart-tooltip-color:var(--color-main-neg);
+  --smart-tooltip-border:var(--border-default);
+  --smart-tooltip-title-border:var(--border-default);
+ }
 }

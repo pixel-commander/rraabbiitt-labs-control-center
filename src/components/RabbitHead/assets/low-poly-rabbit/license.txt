@@ -1,0 +1,5 @@
+Low-Poly Rabbit Head by sokol.tira
+Source: https://sketchfab.com/3d-models/low-poly-rabbit-head-4f15fc884d3a45888333d940b1b19a4b
+Author: https://sketchfab.com/sokol.tira
+License: CC BY 4.0 https://creativecommons.org/licenses/by/4.0/
+Adaptation: transformed, centered, scaled, Z mirrored and vertex-clustered. Materials replaced by stage surface settings.
